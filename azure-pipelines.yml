@@ -31,7 +31,8 @@ steps:
     projects: '**/*.Tests.csproj'
     arguments: '--configuration Release'
     
-- task: NuGetCommand@2
+- task: DotNetCoreCLI@2
+  displayName: Pack
   inputs:
     command: 'pack'
     packagesToPack: 'src/IdentityServer4.HttpClientService/IdentityServer4.HttpClientService.csproj'

@@ -4,10 +4,10 @@ An HttpClient service that makes it easy to make authenticated HTTP requests to 
 
 ## A simple approach
     var response = await _requestServiceFactory
-                    .CreateHttpClientService("name_of_service")			//Can also be .CreateHttpClientService(), 
-		    								// but read more about HttpClient and socket exhaustion issues
-                    .SetIdentityServerOptions("appsettings_section")		//Can also be typed with the Options patern
-                    .GetAsync<IEnumerable<Customers>>("https://api/customers");	//Make the request, return as IEnumerable<Customers>
+                    .CreateHttpClientService("name_of_service")                 //Can also be .CreateHttpClientService(), 
+                                                                                // but read more about HttpClient and socket exhaustion issues
+                    .SetIdentityServerOptions("appsettings_section")            //Can also be typed with the Options patern
+                    .GetAsync<IEnumerable<Customers>>("https://api/customers"); //Make the request, return as IEnumerable<Customers>
 					
 
 ## How to install

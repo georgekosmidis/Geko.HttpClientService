@@ -10,13 +10,15 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
-- task: DotNetCoreCLI@1
+- task: DotNetCoreCLI@2
+  displayName: Build
   inputs:
     command: 'build'
     projects: 'IdentityServer4.HttpClientService.sln'
     arguments: '--configuration Release'
 - task: DotNetCoreCLI@2
+  displayName: Test
   inputs:
     command: 'test'
-    projects: 'test/*.Tests.csproj'
+    projects: '**/test/*.Tests.csproj'
     arguments: '--configuration Release'

@@ -15,3 +15,8 @@ steps:
     command: 'build'
     projects: 'IdentityServer4.HttpClientService.sln'
     arguments: '--configuration Release'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'test'
+    projects: 'test/*.Tests.csproj'
+    arguments: '--configuration Release'

@@ -35,7 +35,7 @@ namespace IdentityServer4.HttpClientService.SampleProject.Controllers
             var responseObject = await _requestServiceFactory
                 .CreateHttpClientService()                                                          //Create a new unnamed service (prefer named instances to avoid socket exhaustion issues.
                                                                                                     // Read more about HttpClient issues here: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core
-                .PostAsync<int, int>("http://localhost:5000/dummy-data/post-integer", 19830426);    //Execute a GET request by setting the type of the result to int
+                .PostAsync<int, int>("http://localhost:5000/dummy-data/post-integer", 19830426);    //Execute a POST request by setting the type of the result to int
 
 
             if (!responseObject.HasError)                                                           //Check if there was an error in the process

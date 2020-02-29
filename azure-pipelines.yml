@@ -14,12 +14,12 @@ steps:
   displayName: Build
   inputs:
     command: 'build'
-    projects: 'IdentityServer4.HttpClientService.sln'
+    projects: '**/*.csproj'
     arguments: '--configuration Release'
 
 - task: DotNetCoreCLI@2
   displayName: Test
   inputs:
     command: 'test'
-    projects: '/test/IdentityServer4.HttpClientService.Tests.csproj'
+    projects: 'test/IdentityServer4.HttpClientService.Tests.csproj'
     arguments: '--configuration Release'

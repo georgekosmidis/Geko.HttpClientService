@@ -97,7 +97,7 @@ namespace IdentityServer4.HttpClientService.Extensions
         /// </returns>
         public static async Task<ResponseObject<TResponseBody>> PutAsync<TRequestBody, TResponseBody>(this HttpClientService httpClientService, string requestUri, TRequestBody requestBody)
         {
-            return await httpClientService.SendAsync<TResponseBody, TRequestBody>( new Uri(requestUri), HttpMethod.Put, requestBody);
+            return await httpClientService.SendAsync<TRequestBody, TResponseBody>( new Uri(requestUri), HttpMethod.Put, requestBody);
         }
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace IdentityServer4.HttpClientService.Extensions
         /// </returns>
         public static async Task<ResponseObject<string>> PutAsync<TRequestBody>(this HttpClientService httpClientService, string requestUri, TRequestBody requestBody)
         {
-            return await httpClientService.SendAsync<string, TRequestBody>(new Uri(requestUri), HttpMethod.Put, requestBody);
+            return await httpClientService.SendAsync<TRequestBody, string>(new Uri(requestUri), HttpMethod.Put, requestBody);
         }
 
         /// <summary>
@@ -167,7 +167,7 @@ namespace IdentityServer4.HttpClientService.Extensions
         /// </returns>
         public static async Task<ResponseObject<string>> PutAsync(this HttpClientService httpClientService, string requestUri, StringContent requestBody)
         {
-            return await httpClientService.SendAsync<string, StringContent>(new Uri(requestUri), HttpMethod.Put, requestBody);
+            return await httpClientService.SendAsync<StringContent, string>(new Uri(requestUri), HttpMethod.Put, requestBody);
         }
 
         /// <summary>
@@ -183,7 +183,7 @@ namespace IdentityServer4.HttpClientService.Extensions
         /// </returns>
         public static async Task<ResponseObject<string>> PutAsync(this HttpClientService httpClientService, string requestUri, Stream requestBody)
         {
-            return await httpClientService.SendAsync<string, Stream>(new Uri(requestUri), HttpMethod.Put, requestBody);
+            return await httpClientService.SendAsync<Stream, string>(new Uri(requestUri), HttpMethod.Put, requestBody);
         }        
     }
 }

@@ -43,7 +43,7 @@ namespace IdentityServer4.HttpClientService.Test
                 )
             ).CreateHttpClientService();
 
-            var result = await httpClientService.SendAsync<ComplexResponseTypeTest, object>(
+            var result = await httpClientService.SendAsync<object, ComplexResponseTypeTest>(
                     new Uri("http://localhost"),
                     HttpMethod.Get,
                     null
@@ -78,7 +78,7 @@ namespace IdentityServer4.HttpClientService.Test
                 )
             ).CreateHttpClientService();
 
-            var result = await httpClientService.SendAsync<string, object>(
+            var result = await httpClientService.SendAsync<object, string>(
                     new Uri("http://localhost"),
                     HttpMethod.Get,
                     null
@@ -108,7 +108,7 @@ namespace IdentityServer4.HttpClientService.Test
                 )
             ).CreateHttpClientService();
 
-            var result = await httpClientService.SendAsync<int, object>(
+            var result = await httpClientService.SendAsync<object, int>(
                     new Uri("http://localhost"),
                     HttpMethod.Get,
                     null
@@ -140,7 +140,7 @@ namespace IdentityServer4.HttpClientService.Test
 
             try
             {
-                await httpClientService.SendAsync<int, object>(
+                await httpClientService.SendAsync<object, int>(
                     new Uri("http://localhost"),
                     HttpMethod.Get,
                     null
@@ -178,7 +178,7 @@ namespace IdentityServer4.HttpClientService.Test
                     )
                 ).CreateHttpClientService();
 
-                result = await httpClientService.SendAsync<Stream, object>(
+                result = await httpClientService.SendAsync<object, Stream>(
                     new Uri("http://localhost"),
                     HttpMethod.Get,
                     null

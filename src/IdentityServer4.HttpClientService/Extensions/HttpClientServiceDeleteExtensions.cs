@@ -73,7 +73,7 @@ namespace IdentityServer4.HttpClientService.Extensions
         /// </returns>
         public static async Task<ResponseObject<TResponseBody>> DeleteAsync<TResponseBody>(this HttpClientService httpClientService, string requestUri)
         {
-            return await httpClientService.SendAsync<TResponseBody, object>( new Uri(requestUri), HttpMethod.Delete, null);
+            return await httpClientService.SendAsync<object, TResponseBody>( new Uri(requestUri), HttpMethod.Delete, null);
         }
 
 
@@ -88,7 +88,7 @@ namespace IdentityServer4.HttpClientService.Extensions
         /// </returns>
         public static async Task<ResponseObject<string>> DeleteAsync(this HttpClientService httpClientService, string requestUri)
         {
-            return await httpClientService.SendAsync<string, object>(new Uri(requestUri), HttpMethod.Delete, null);
+            return await httpClientService.SendAsync<object, string>(new Uri(requestUri), HttpMethod.Delete, null);
         }
 
     }

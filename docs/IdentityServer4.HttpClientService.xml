@@ -979,7 +979,7 @@
                 </list>
             </returns>
         </member>
-        <member name="M:IdentityServer4.HttpClientService.HttpClientService.SendAsync``2(System.Uri,System.Net.Http.HttpMethod,``1)">
+        <member name="M:IdentityServer4.HttpClientService.HttpClientService.SendAsync``2(System.Uri,System.Net.Http.HttpMethod,``0)">
             <summary>
             Creates and sends a request to the <paramref name="requestUri"/> using the HTTP verb from <paramref name="httpMethod"/> and the request body from <paramref name="requestBody"/>. 
             If <see cref="M:IdentityServer4.HttpClientService.HttpClientService.SetIdentityServerOptions``1(Microsoft.Extensions.Options.IOptions{``0})" /> is called before the <c>SendAsync</c>, 

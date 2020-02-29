@@ -38,7 +38,7 @@ namespace IdentityServer4.HttpClientService.Test
                 )
             ).CreateHttpClientService();
 
-            var result = await httpClientService.SendAsync<string, object>(
+            var result = await httpClientService.SendAsync<object, string>(
                 new Uri("http://localhost"),
                 HttpMethod.Get,
                 null
@@ -78,7 +78,7 @@ namespace IdentityServer4.HttpClientService.Test
                 )
             );
 
-            var result = await httpClientService.SendAsync<string, object>(
+            var result = await httpClientService.SendAsync<object, string>(
                 new Uri("http://localhost"),
                 HttpMethod.Get,
                 null

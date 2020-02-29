@@ -202,7 +202,7 @@ namespace IdentityServer4.HttpClientService
         /// </returns>
         public async Task<ResponseObject<TResponseBody>> SendAsync<TResponseBody>(Uri requestUri, HttpMethod httpMethod)
         {
-            return await SendAsync<TResponseBody, object>(requestUri, httpMethod, null);
+            return await SendAsync<object, TResponseBody>(requestUri, httpMethod, null);
         }
 
 
@@ -265,7 +265,7 @@ namespace IdentityServer4.HttpClientService
         /// </returns>
         public async Task<ResponseObject<TResponseBody>> SendAsync<TResponseBody>(Uri requestUri, HttpMethod httpMethod, StringContent requestBody)
         {
-            return await SendAsync<TResponseBody, StringContent>(requestUri, httpMethod, requestBody);
+            return await SendAsync<StringContent, TResponseBody>(requestUri, httpMethod, requestBody);
         }
 
         /// <summary>
@@ -326,7 +326,7 @@ namespace IdentityServer4.HttpClientService
         /// </returns>
         public async Task<ResponseObject<TResponseBody>> SendAsync<TResponseBody>(Uri requestUri, HttpMethod httpMethod, StreamContent requestBody)
         {
-            return await SendAsync<TResponseBody, StreamContent>(requestUri, httpMethod, requestBody);
+            return await SendAsync<StreamContent, TResponseBody>(requestUri, httpMethod, requestBody);
         }
 
         /// <summary>
@@ -406,7 +406,7 @@ namespace IdentityServer4.HttpClientService
         ///         </item>
         ///     </list>
         /// </returns>
-        public async Task<ResponseObject<TResponseBody>> SendAsync<TResponseBody, TRequestBody>(Uri requestUri, HttpMethod httpMethod, TRequestBody requestBody)
+        public async Task<ResponseObject<TResponseBody>> SendAsync<TRequestBody, TResponseBody>(Uri requestUri, HttpMethod httpMethod, TRequestBody requestBody)
         {
             // var request = _requestMessageFactory.CreateRequestMessage();
             httpRequestMessage.Method = httpMethod;

@@ -14,10 +14,10 @@ var responseObject = await _requestServiceFactory
 var responseObject = await _requestServiceFactory
                           .CreateHttpClientService("name_of_service")                 //Can also be .CreateHttpClientService(), but read more about HttpClient and socket exhaustion issues
                           .SetIdentityServerOptions("appsettings_section")            //Also supports IOptions
-                          .PostAsync<RequestCustomer, ResponseCustomer>(
-                             "https://api/customers", 
-                             customer_object_for_insert
-                          );                                                          //Execute a POST request by setting the type of the result to int
+                          .PostAsync<RequestCustomer, ResponseCustomer>(              //Execute a POST request
+                             "https://api/customers",                                 // to this URL
+                             customer_object_for_insert                               // sending this RequestCustomer instance for insert
+                          );                                                          // and get the results as a ResponseCustomer object
 ```	
 ## How to install
 tbd

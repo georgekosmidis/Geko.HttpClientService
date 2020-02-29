@@ -11,7 +11,7 @@ using IdentityServer4.HttpClientService.Models;
 using System.IO;
 using System.Collections.Generic;
 using Microsoft.Extensions.Configuration;
-
+test azure pipelines, failed build
 namespace IdentityServer4.HttpClientService
 {
     /// <summary>

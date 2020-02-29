@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'ubuntu-latest'
 
 steps:
 - task: DotNetCoreCLI@2
@@ -16,9 +16,10 @@ steps:
     command: 'build'
     projects: 'IdentityServer4.HttpClientService.sln'
     arguments: '--configuration Release'
+
 - task: DotNetCoreCLI@2
   displayName: Test
   inputs:
     command: 'test'
-    projects: '**/test/*.Tests.csproj'
+    projects: '/test/*.Tests.csproj'
     arguments: '--configuration Release'

@@ -5,6 +5,13 @@
 
 trigger:
 - master
+- release/*
+
+pr:
+  autoCancel: false
+  branches:
+    include:
+    - '*'
 
 pool:
   vmImage: 'ubuntu-latest'

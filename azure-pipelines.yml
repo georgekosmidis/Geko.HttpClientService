@@ -14,4 +14,4 @@ steps:
   inputs:
     command: 'build'
     projects: 'IdentityServer4.HttpClientService.sln'
-    arguments: '--configuration ''Release'''
+    arguments: '--configuration Release'

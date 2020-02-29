@@ -30,3 +30,10 @@ steps:
     command: 'test'
     projects: '**/*.Tests.csproj'
     arguments: '--configuration Release'
+
+- task: NuGetCommand@2
+  inputs:
+    command: 'pack'
+    packagesToPack: 'src/IdentityServer4.HttpClientService/IdentityServer4.HttpClientService.csproj'
+    configuration: 'Release'
+    versioningScheme: 'off'

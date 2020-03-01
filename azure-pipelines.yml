@@ -35,6 +35,6 @@ steps:
   displayName: Pack
   inputs:
     command: 'pack'
-    packagesToPack: 'src/IdentityServer4.HttpClientService/IdentityServer4.HttpClientService.csproj'
+    packagesToPack: 'src/IdentityServer4.Contrib.HttpClientService/IdentityServer4.Contrib.HttpClientService.csproj'
     configuration: 'Release'
     versioningScheme: 'off'

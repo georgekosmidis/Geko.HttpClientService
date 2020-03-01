@@ -1,0 +1,342 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/_Code/github/IdentityServer4.HttpClientService",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html",
+          "hash": "3MtVVgxoNQ7oURFFKB6Hlw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.html",
+          "hash": "XFchv6vplBChk3eBrpqrZA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceGetExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceGetExtensions.html",
+          "hash": "FK1WqjlYqQaeb8kdL8mcpQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceHeadExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceHeadExtensions.html",
+          "hash": "iw1R2unZ0QZ+zj8u6OvCug=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.html",
+          "hash": "mxhAcmPIvjXTe5gojjycGA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions.html",
+          "hash": "6qJPdVyOwpFkGlUaOGyJjw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions.html",
+          "hash": "8yMEodr1wwE+IQqzzjdocg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.ServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.ServiceCollectionExtensions.html",
+          "hash": "hWjg+E7XrNGprwnvfcT3hg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.html",
+          "hash": "DgLdg2HTpS1bymPoTYjm0A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.HttpClientService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html",
+          "hash": "kiGhRcYYSpguBi+Bi7aoBQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.html",
+          "hash": "SQh/jWN3g/pFdJ9tv8G2Ow=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.html",
+          "hash": "9fewj9JQGVeJozKoyMWzWg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.html",
+          "hash": "OZWCQVszQMIMuo5x9L19QQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.html",
+          "hash": "DF+aP0gAQBluSQx7dAVOOQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager.html",
+          "hash": "hPenG/ENhqq4erbBy8EHSg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.html",
+          "hash": "Yvp8HIV3Js0EqcOsLp2nZg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseCacheManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseCacheManager.html",
+          "hash": "7u9HQcnaS2CE/FdHSjf1wg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.html",
+          "hash": "CTS1hQ06ruU8p7gycQIWkQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.html",
+          "hash": "QvPOsEWxd4LzYmtCxvvOdg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions.html",
+          "hash": "xiGk88h4jlrF+vNoMkIo+w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html",
+          "hash": "PPkMtdG8fztWAXm/O385Ww=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.html",
+          "hash": "+gP/INOj7irHejkPwg8+cQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.html",
+          "hash": "tsEf1jgymHrmJyiAFGqlBw=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "TvKbo4rYeLAYEjRK7A8TbA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": true,
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 1,
+          "skipped_file_count": 1
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 22,
+          "skipped_file_count": 22
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

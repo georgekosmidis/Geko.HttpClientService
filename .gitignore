@@ -39,3 +39,4 @@ BenchmarkDotNet.Artifacts/
 dist/
 .dotnet/
 .packages
+_docfx/

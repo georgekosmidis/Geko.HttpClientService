@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\IdentityServer4.Contrib.HttpClientService\IdentityServer4.Contrib.HttpClientService.csproj" />
+    <ProjectReference Include="..\..\src\IdentityServer4.Contrib.HttpClientService\IdentityServer4.Contrib.HttpClientService.csproj" />
   </ItemGroup>
 
 

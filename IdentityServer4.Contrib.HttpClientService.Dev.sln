@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{FB18C886-0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{6C686197-3FE4-4A6C-B5F2-C54633C3124D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer4.Contrib.HttpClientService.CompleteSample", "IdentityServer4.Contrib.HttpClientService.CompleteSample\IdentityServer4.Contrib.HttpClientService.CompleteSample.csproj", "{078080E5-E009-4654-8855-88266A7048C9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer4.Contrib.HttpClientService.CompleteSample", "samples\IdentityServer4.Contrib.HttpClientService.CompleteSample\IdentityServer4.Contrib.HttpClientService.CompleteSample.csproj", "{078080E5-E009-4654-8855-88266A7048C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

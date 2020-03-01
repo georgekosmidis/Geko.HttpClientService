@@ -342,41 +342,6 @@
                 </list>
             </returns>
         </member>
-        <member name="M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,``0)">
-            <summary>
-            Sends a PATCH request to the specified <paramref name="requestUri"/> using <paramref name="requestBody"/> as the body of the request
-            with <typeparamref name="TRequestBody"/> as the type of the <paramref name="requestBody"/>.
-            Returns the response in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString"/> property.
-            </summary>
-            <typeparam name="TRequestBody">
-                The type of the request body. The type used can be one of the following:
-                <list type="bullet">
-                    <item>
-                        <term><see cref="T:System.Net.Http.StringContent"/></term>
-                        <description>Use <see cref="T:System.Net.Http.StringContent"/> to define Encoding and/or ContentType for an HTTP content based on string.</description>
-                    </item>
-                    <item>
-                        <term><see cref="T:System.Net.Http.StreamContent"/></term>
-                        <description>Use <see cref="T:System.Net.Http.StreamContent"/> to provide HTTP content based on a stream.</description>
-                    </item>
-                    <item>
-                        <term>A serializable complex type</term>
-                        <description>Any serializable object that will be serialized and sent in the body of the request.</description>
-                    </item>
-                    <item>
-                        <term>A simple type</term>
-                        <description>Any other simple type that will be sent in the body of the request.</description>
-                    </item>
-                </list>
-            </typeparam>
-            <param name="httpClientService">The <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> that gets extended.</param>
-            <param name="requestUri">A string representing the resource to be called.</param>
-            <param name="requestBody">The body of the request.</param>
-            <returns>
-            A <see cref="T:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1"/> containing the body of the response
-            as <c>String</c> in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString"/> property.
-            </returns>
-        </member>
         <member name="M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.String)">
             <summary>
             Sends a PATCH request to the specified <paramref name="requestUri"/> using <paramref name="requestBody"/> as the body of the request.
@@ -390,11 +355,34 @@
             as <c>String</c> in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString"/> property.
             </returns>
         </member>
-        <member name="M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.Net.Http.StringContent)">
+        <member name="M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.String)">
             <summary>
             Sends a PATCH request to the specified <paramref name="requestUri"/> using <paramref name="requestBody"/> as the body of the request.
             Returns the response in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString"/> property.
             </summary>
+            <typeparam name="TResponseBody">
+                The type of the property <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsType"/> of the <see cref="T:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1"/> object,
+                that will contain the body of the response deserialized or casted to type <typeparamref name="TResponseBody"/>. 
+                The type used can be one of the following:
+                <list type="bullet">
+                    <item>
+                        <term><see cref="T:System.Net.Http.StringContent"/></term>
+                        <description>Use <see cref="T:System.Net.Http.StringContent"/> to define Encoding and/or ContentType for an HTTP content based on string.</description>
+                    </item>
+                    <item>
+                        <term><see cref="T:System.Net.Http.StreamContent"/></term>
+                        <description>Use <see cref="T:System.Net.Http.StreamContent"/> to provide HTTP content based on a stream.</description>
+                    </item>
+                    <item>
+                        <term>A serializable complex type</term>
+                        <description>Any serializable object to attempt to deserialize the body of the response to it.</description>
+                    </item>
+                    <item>
+                        <term>A simple type</term>
+                        <description>Any other simple type to try convert the body of the response to it.</description>
+                    </item>
+                </list>
+            </typeparam>
             <param name="httpClientService">The <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> that gets extended.</param>
             <param name="requestUri">A string representing the resource to be called.</param>
             <param name="requestBody">The body of the request.</param>
@@ -403,11 +391,70 @@
             as <c>String</c> in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString"/> property.
             </returns>
         </member>
-        <member name="M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.IO.Stream)">
+        <member name="M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.Net.Http.StringContent)">
+            <summary>
+            Sends a PATCH request to the specified <paramref name="requestUri"/> using <paramref name="requestBody"/> as the body of the request.
+            Returns the response in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString"/> property.
+            </summary>
+            <typeparam name="TResponseBody">
+                The type of the property <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsType"/> of the <see cref="T:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1"/> object,
+                that will contain the body of the response deserialized or casted to type <typeparamref name="TResponseBody"/>. 
+                The type used can be one of the following:
+                <list type="bullet">
+                    <item>
+                        <term><see cref="T:System.Net.Http.StringContent"/></term>
+                        <description>Use <see cref="T:System.Net.Http.StringContent"/> to define Encoding and/or ContentType for an HTTP content based on string.</description>
+                    </item>
+                    <item>
+                        <term><see cref="T:System.Net.Http.StreamContent"/></term>
+                        <description>Use <see cref="T:System.Net.Http.StreamContent"/> to provide HTTP content based on a stream.</description>
+                    </item>
+                    <item>
+                        <term>A serializable complex type</term>
+                        <description>Any serializable object to attempt to deserialize the body of the response to it.</description>
+                    </item>
+                    <item>
+                        <term>A simple type</term>
+                        <description>Any other simple type to try convert the body of the response to it.</description>
+                    </item>
+                </list>
+            </typeparam>
+            <param name="httpClientService">The <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> that gets extended.</param>
+            <param name="requestUri">A string representing the resource to be called.</param>
+            <param name="requestBody">The body of the request.</param>
+            <returns>
+            A <see cref="T:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1"/> containing the body of the response
+            as <c>String</c> in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString"/> property.
+            </returns>
+        </member>
+        <member name="M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.Net.Http.StreamContent)">
             <summary>
             Sends a PATCH request to the specified <paramref name="requestUri"/> using <paramref name="requestBody"/> as the body of the request.
             Returns the response in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsType"/> property.
             </summary>
+            <typeparam name="TResponseBody">
+                The type of the property <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsType"/> of the <see cref="T:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1"/> object,
+                that will contain the body of the response deserialized or casted to type <typeparamref name="TResponseBody"/>. 
+                The type used can be one of the following:
+                <list type="bullet">
+                    <item>
+                        <term><see cref="T:System.Net.Http.StringContent"/></term>
+                        <description>Use <see cref="T:System.Net.Http.StringContent"/> to define Encoding and/or ContentType for an HTTP content based on string.</description>
+                    </item>
+                    <item>
+                        <term><see cref="T:System.Net.Http.StreamContent"/></term>
+                        <description>Use <see cref="T:System.Net.Http.StreamContent"/> to provide HTTP content based on a stream.</description>
+                    </item>
+                    <item>
+                        <term>A serializable complex type</term>
+                        <description>Any serializable object to attempt to deserialize the body of the response to it.</description>
+                    </item>
+                    <item>
+                        <term>A simple type</term>
+                        <description>Any other simple type to try convert the body of the response to it.</description>
+                    </item>
+                </list>
+            </typeparam>
             <param name="httpClientService">The <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> that gets extended.</param>
             <param name="requestUri">A string representing the resource to be called.</param>
             <param name="requestBody">The body of the request.</param>
@@ -506,41 +553,6 @@
                 </list>
             </returns>
         </member>
-        <member name="M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,``0)">
-            <summary>
-            Sends a POST request to the specified <paramref name="requestUri"/> using <paramref name="requestBody"/> as the body of the request
-            with <typeparamref name="TRequestBody"/> as the type of the <paramref name="requestBody"/>.
-            Returns the response in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString"/> property.
-            </summary>
-            <typeparam name="TRequestBody">
-                The type of the request body. The type used can be one of the following:
-                <list type="bullet">
-                    <item>
-                        <term><see cref="T:System.Net.Http.StringContent"/></term>
-                        <description>Use <see cref="T:System.Net.Http.StringContent"/> to define Encoding and/or ContentType for an HTTP content based on string.</description>
-                    </item>
-                    <item>
-                        <term><see cref="T:System.Net.Http.StreamContent"/></term>
-                        <description>Use <see cref="T:System.Net.Http.StreamContent"/> to provide HTTP content based on a stream.</description>
-                    </item>
-                    <item>
-                        <term>A serializable complex type</term>
-                        <description>Any serializable object that will be serialized and sent in the body of the request.</description>
-                    </item>
-                    <item>
-                        <term>A simple type</term>
-                        <description>Any other simple type that will be sent in the body of the request.</description>
-                    </item>
-                </list>
-            </typeparam>
-            <param name="httpClientService">The <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> that gets extended.</param>
-            <param name="requestUri">A string representing the resource to be called.</param>
-            <param name="requestBody">The body of the request.</param>
-            <returns>
-            A <see cref="T:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1"/> containing the body of the response
-            as <c>String</c> in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString"/> property.
-            </returns>
-        </member>
         <member name="M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.String)">
             <summary>
             Sends a POST request to the specified <paramref name="requestUri"/> using <paramref name="requestBody"/> as the body of the request.
@@ -554,11 +566,34 @@
             as <c>String</c> in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString"/> property.
             </returns>
         </member>
-        <member name="M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.Net.Http.StringContent)">
+        <member name="M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.String)">
             <summary>
             Sends a POST request to the specified <paramref name="requestUri"/> using <paramref name="requestBody"/> as the body of the request.
             Returns the response in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString"/> property.
             </summary>
+            <typeparam name="TResponseBody">
+                The type of the property <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsType"/> of the <see cref="T:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1"/> object,
+                that will contain the body of the response deserialized or casted to type <typeparamref name="TResponseBody"/>. 
+                The type used can be one of the following:
+                <list type="bullet">
+                    <item>
+                        <term><see cref="T:System.Net.Http.StringContent"/></term>
+                        <description>Use <see cref="T:System.Net.Http.StringContent"/> to define Encoding and/or ContentType for an HTTP content based on string.</description>
+                    </item>
+                    <item>
+                        <term><see cref="T:System.Net.Http.StreamContent"/></term>
+                        <description>Use <see cref="T:System.Net.Http.StreamContent"/> to provide HTTP content based on a stream.</description>
+                    </item>
+                    <item>
+                        <term>A serializable complex type</term>
+                        <description>Any serializable object to attempt to deserialize the body of the response to it.</description>
+                    </item>
+                    <item>
+                        <term>A simple type</term>
+                        <description>Any other simple type to try convert the body of the response to it.</description>
+                    </item>
+                </list>
+            </typeparam>
             <param name="httpClientService">The <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> that gets extended.</param>
             <param name="requestUri">A string representing the resource to be called.</param>
             <param name="requestBody">The body of the request.</param>
@@ -567,11 +602,70 @@
             as <c>String</c> in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString"/> property.
             </returns>
         </member>
-        <member name="M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.IO.Stream)">
+        <member name="M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.Net.Http.StringContent)">
+            <summary>
+            Sends a POST request to the specified <paramref name="requestUri"/> using <paramref name="requestBody"/> as the body of the request.
+            Returns the response in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString"/> property.
+            </summary>
+            <typeparam name="TResponseBody">
+                The type of the property <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsType"/> of the <see cref="T:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1"/> object,
+                that will contain the body of the response deserialized or casted to type <typeparamref name="TResponseBody"/>. 
+                The type used can be one of the following:
+                <list type="bullet">
+                    <item>
+                        <term><see cref="T:System.Net.Http.StringContent"/></term>
+                        <description>Use <see cref="T:System.Net.Http.StringContent"/> to define Encoding and/or ContentType for an HTTP content based on string.</description>
+                    </item>
+                    <item>
+                        <term><see cref="T:System.Net.Http.StreamContent"/></term>
+                        <description>Use <see cref="T:System.Net.Http.StreamContent"/> to provide HTTP content based on a stream.</description>
+                    </item>
+                    <item>
+                        <term>A serializable complex type</term>
+                        <description>Any serializable object to attempt to deserialize the body of the response to it.</description>
+                    </item>
+                    <item>
+                        <term>A simple type</term>
+                        <description>Any other simple type to try convert the body of the response to it.</description>
+                    </item>
+                </list>
+            </typeparam>
+            <param name="httpClientService">The <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> that gets extended.</param>
+            <param name="requestUri">A string representing the resource to be called.</param>
+            <param name="requestBody">The body of the request.</param>
+            <returns>
+            A <see cref="T:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1"/> containing the body of the response
+            as <c>String</c> in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString"/> property.
+            </returns>
+        </member>
+        <member name="M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.Net.Http.StreamContent)">
             <summary>
             Sends a POST request to the specified <paramref name="requestUri"/> using <paramref name="requestBody"/> as the body of the request.
             Returns the response in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsType"/> property.
             </summary>
+            <typeparam name="TResponseBody">
+                The type of the property <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsType"/> of the <see cref="T:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1"/> object,
+                that will contain the body of the response deserialized or casted to type <typeparamref name="TResponseBody"/>. 
+                The type used can be one of the following:
+                <list type="bullet">
+                    <item>
+                        <term><see cref="T:System.Net.Http.StringContent"/></term>
+                        <description>Use <see cref="T:System.Net.Http.StringContent"/> to define Encoding and/or ContentType for an HTTP content based on string.</description>
+                    </item>
+                    <item>
+                        <term><see cref="T:System.Net.Http.StreamContent"/></term>
+                        <description>Use <see cref="T:System.Net.Http.StreamContent"/> to provide HTTP content based on a stream.</description>
+                    </item>
+                    <item>
+                        <term>A serializable complex type</term>
+                        <description>Any serializable object to attempt to deserialize the body of the response to it.</description>
+                    </item>
+                    <item>
+                        <term>A simple type</term>
+                        <description>Any other simple type to try convert the body of the response to it.</description>
+                    </item>
+                </list>
+            </typeparam>
             <param name="httpClientService">The <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> that gets extended.</param>
             <param name="requestUri">A string representing the resource to be called.</param>
             <param name="requestBody">The body of the request.</param>
@@ -670,41 +764,6 @@
                 </list>
             </returns>
         </member>
-        <member name="M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,``0)">
-            <summary>
-            Sends a PUT request to the specified <paramref name="requestUri"/> using <paramref name="requestBody"/> as the body of the request
-            with <typeparamref name="TRequestBody"/> as the type of the <paramref name="requestBody"/>.
-            Returns the response in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString"/> property.
-            </summary>
-            <typeparam name="TRequestBody">
-                The type of the request body. The type used can be one of the following:
-                <list type="bullet">
-                    <item>
-                        <term><see cref="T:System.Net.Http.StringContent"/></term>
-                        <description>Use <see cref="T:System.Net.Http.StringContent"/> to define Encoding and/or ContentType for an HTTP content based on string.</description>
-                    </item>
-                    <item>
-                        <term><see cref="T:System.Net.Http.StreamContent"/></term>
-                        <description>Use <see cref="T:System.Net.Http.StreamContent"/> to provide HTTP content based on a stream.</description>
-                    </item>
-                    <item>
-                        <term>A serializable complex type</term>
-                        <description>Any serializable object that will be serialized and sent in the body of the request.</description>
-                    </item>
-                    <item>
-                        <term>A simple type</term>
-                        <description>Any other simple type that will be sent in the body of the request.</description>
-                    </item>
-                </list>
-            </typeparam>
-            <param name="httpClientService">The <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> that gets extended.</param>
-            <param name="requestUri">A string representing the resource to be called.</param>
-            <param name="requestBody">The body of the request.</param>
-            <returns>
-            A <see cref="T:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1"/> containing the body of the response
-            as <c>String</c> in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString"/> property.
-            </returns>
-        </member>
         <member name="M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.String)">
             <summary>
             Sends a PUT request to the specified <paramref name="requestUri"/> using <paramref name="requestBody"/> as the body of the request.
@@ -718,7 +777,7 @@
             as <c>String</c> in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString"/> property.
             </returns>
         </member>
-        <member name="M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.Net.Http.StringContent)">
+        <member name="M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.String)">
             <summary>
             Sends a PUT request to the specified <paramref name="requestUri"/> using <paramref name="requestBody"/> as the body of the request.
             Returns the response in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString"/> property.
@@ -731,7 +790,20 @@
             as <c>String</c> in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString"/> property.
             </returns>
         </member>
-        <member name="M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.IO.Stream)">
+        <member name="M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.Net.Http.StringContent)">
+            <summary>
+            Sends a PUT request to the specified <paramref name="requestUri"/> using <paramref name="requestBody"/> as the body of the request.
+            Returns the response in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString"/> property.
+            </summary>
+            <param name="httpClientService">The <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> that gets extended.</param>
+            <param name="requestUri">A string representing the resource to be called.</param>
+            <param name="requestBody">The body of the request.</param>
+            <returns>
+            A <see cref="T:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1"/> containing the body of the response
+            as <c>String</c> in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString"/> property.
+            </returns>
+        </member>
+        <member name="M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.Net.Http.StreamContent)">
             <summary>
             Sends a PUT request to the specified <paramref name="requestUri"/> using <paramref name="requestBody"/> as the body of the request.
             Returns the response in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsType"/> property.
@@ -803,181 +875,6 @@
             <param name="name">The name of the header.</param>
             <param name="value">The value of the header.</param>
             <returns>Returns the current instance of <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> for method chaining.</returns>
-        </member>
-        <member name="M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SendAsync``1(System.Uri,System.Net.Http.HttpMethod)">
-            <summary>
-            Creates and sends a request to the <paramref name="requestUri"/> using the HTTP verb from <paramref name="httpMethod"/> without a request body (only for GET, DELETE and HEAD)
-            (use <see cref="T:System.Net.Http.StringContent"/> as <typeparamref name="TResponseBody"/> to optionally set encoding and media type).
-            If <see cref="M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(Microsoft.Extensions.Options.IOptions{``0})" /> is called before the <c>SendAsync</c>, 
-            then a valid access token will be fetched by the <see cref="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService"/> and attached on this request. 
-            </summary>
-            <typeparam name="TResponseBody">
-                The type of the property <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsType"/> of the <see cref="T:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1"/> object,
-                that will contain the body of the response deserialized or casted to type <typeparamref name="TResponseBody"/>. 
-                The type used can be one of the following:
-                <list type="bullet">
-                    <item>
-                        <term><see cref="T:System.Net.Http.StringContent"/></term>
-                        <description>Use <see cref="T:System.Net.Http.StringContent"/> to define Encoding and/or ContentType for an HTTP content based on string.</description>
-                    </item>
-                    <item>
-                        <term><see cref="T:System.Net.Http.StreamContent"/></term>
-                        <description>Use <see cref="T:System.Net.Http.StreamContent"/> to provide HTTP content based on a stream.</description>
-                    </item>
-                    <item>
-                        <term>A serializable complex type</term>
-                        <description>Any serializable object to attempt to deserialize the body of the response to it.</description>
-                    </item>
-                    <item>
-                        <term>A simple type</term>
-                        <description>Any other simple type to try convert the body of the response to it.</description>
-                    </item>
-                </list>
-            </typeparam>
-            <param name="requestUri">The <see cref="T:System.Uri"/> of the request.</param>
-            <param name="httpMethod">The <see cref="T:System.Net.Http.HttpMethod"/> of the request.</param>
-            <returns>
-            A <see cref="T:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1"/> containing the body of the response 
-            as <c>String</c> in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString"/> property,
-            as <typeparamref name="TResponseBody"/> in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsType"/> and,
-            as <c>Stream</c> in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsStream"/> property.
-            The <typeparamref name="TResponseBody"/> can be of the following:
-                <list type="bullet">
-                    <item>
-                        <term><see cref="T:System.Net.Http.StringContent"/></term>
-                        <description>Use <see cref="T:System.Net.Http.StringContent"/> to define Encoding and/or ContentType for an HTTP content based on string.</description>
-                    </item>
-                    <item>
-                        <term><see cref="T:System.Net.Http.StreamContent"/></term>
-                        <description>Use <see cref="T:System.Net.Http.StreamContent"/> to provide HTTP content based on a stream.</description>
-                    </item>
-                    <item>
-                        <term>A serializable complex type</term>
-                        <description>Any serializable object to attempt to deserialize the body of the response to it.</description>
-                    </item>
-                    <item>
-                        <term>A simple type</term>
-                        <description>Any other simple type to try convert the body of the response to it.</description>
-                    </item>
-                </list>
-            </returns>
-        </member>
-        <member name="M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SendAsync``1(System.Uri,System.Net.Http.HttpMethod,System.Net.Http.StringContent)">
-            <summary>
-            Creates and sends a request to the <paramref name="requestUri"/> using the HTTP verb from <paramref name="httpMethod"/> and the <paramref name="requestBody"/> for HTTP content based on a string
-            (use <see cref="T:System.Net.Http.StringContent"/> as <typeparamref name="TResponseBody"/> to optionally set encoding and media type).
-            If <see cref="M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(Microsoft.Extensions.Options.IOptions{``0})" /> is called before the <c>SendAsync</c>, 
-            then a valid access token will be fetched by the <see cref="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService"/> and attached on this request. 
-            </summary>
-            <typeparam name="TResponseBody">
-                The type of the property <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsType"/> of the <see cref="T:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1"/> object,
-                that will contain the body of the response deserialized or casted to type <typeparamref name="TResponseBody"/>. 
-                The type used can be one of the following:
-                <list type="bullet">
-                    <item>
-                        <term><see cref="T:System.Net.Http.StringContent"/></term>
-                        <description>Use <see cref="T:System.Net.Http.StringContent"/> to define Encoding and/or ContentType for an HTTP content based on string.</description>
-                    </item>
-                    <item>
-                        <term><see cref="T:System.Net.Http.StreamContent"/></term>
-                        <description>Use <see cref="T:System.Net.Http.StreamContent"/> to provide HTTP content based on a stream.</description>
-                    </item>
-                    <item>
-                        <term>A serializable complex type</term>
-                        <description>Any serializable object to attempt to deserialize the body of the response to it.</description>
-                    </item>
-                    <item>
-                        <term>A simple type</term>
-                        <description>Any other simple type to try convert the body of the response to it.</description>
-                    </item>
-                </list>
-            </typeparam>
-            <param name="requestUri">The <see cref="T:System.Uri"/> of the request.</param>
-            <param name="httpMethod">The <see cref="T:System.Net.Http.HttpMethod"/> of the request.</param>
-            <param name="requestBody">The body of the request (available only in POST, PUT and PATCH).</param>
-            <returns>
-            A <see cref="T:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1"/> containing the body of the response 
-            as <c>String</c> in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString"/> property,
-            as <typeparamref name="TResponseBody"/> in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsType"/> and,
-            as <c>Stream</c> in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsStream"/> property.
-            The <typeparamref name="TResponseBody"/> can be of the following:
-                <list type="bullet">
-                    <item>
-                        <term><see cref="T:System.Net.Http.StringContent"/></term>
-                        <description>Use <see cref="T:System.Net.Http.StringContent"/> to define Encoding and/or ContentType for an HTTP content based on string.</description>
-                    </item>
-                    <item>
-                        <term><see cref="T:System.Net.Http.StreamContent"/></term>
-                        <description>Use <see cref="T:System.Net.Http.StreamContent"/> to provide HTTP content based on a stream.</description>
-                    </item>
-                    <item>
-                        <term>A serializable complex type</term>
-                        <description>Any serializable object to attempt to deserialize the body of the response to it.</description>
-                    </item>
-                    <item>
-                        <term>A simple type</term>
-                        <description>Any other simple type to try convert the body of the response to it.</description>
-                    </item>
-                </list>
-            </returns>
-        </member>
-        <member name="M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SendAsync``1(System.Uri,System.Net.Http.HttpMethod,System.Net.Http.StreamContent)">
-            <summary>
-            Creates and sends a request to the <paramref name="requestUri"/> using the HTTP verb from <paramref name="httpMethod"/> and the <paramref name="requestBody"/> as HTTP content based on a stream. 
-            If <see cref="M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(Microsoft.Extensions.Options.IOptions{``0})" /> is called before the <c>SendAsync</c>, 
-            then a valid access token will be fetched by the <see cref="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService"/> and attached on this request. 
-            </summary>
-            <typeparam name="TResponseBody">
-                The type of the property <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsType"/> of the <see cref="T:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1"/> object,
-                that will contain the body of the response deserialized or casted to type <typeparamref name="TResponseBody"/>. 
-                The type used can be one of the following:
-                <list type="bullet">
-                    <item>
-                        <term><see cref="T:System.Net.Http.StringContent"/></term>
-                        <description>Use <see cref="T:System.Net.Http.StringContent"/> to define Encoding and/or ContentType for an HTTP content based on string.</description>
-                    </item>
-                    <item>
-                        <term><see cref="T:System.Net.Http.StreamContent"/></term>
-                        <description>Use <see cref="T:System.Net.Http.StreamContent"/> to provide HTTP content based on a stream.</description>
-                    </item>
-                    <item>
-                        <term>A serializable complex type</term>
-                        <description>Any serializable object to attempt to deserialize the body of the response to it.</description>
-                    </item>
-                    <item>
-                        <term>A simple type</term>
-                        <description>Any other simple type to try convert the body of the response to it.</description>
-                    </item>
-                </list>
-            </typeparam>      
-            <param name="requestUri">The <see cref="T:System.Uri"/> of the request.</param>
-            <param name="httpMethod">The <see cref="T:System.Net.Http.HttpMethod"/> of the request.</param>
-            <param name="requestBody">The body of the request (available only in POST, PUT and PATCH).</param>
-            <returns>
-            A <see cref="T:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1"/> containing the body of the response 
-            as <c>String</c> in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString"/> property,
-            as <typeparamref name="TResponseBody"/> in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsType"/> and,
-            as <c>Stream</c> in the <see cref="P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsStream"/> property.
-            The <typeparamref name="TResponseBody"/> can be of the following:
-                <list type="bullet">
-                    <item>
-                        <term><see cref="T:System.Net.Http.StringContent"/></term>
-                        <description>Use <see cref="T:System.Net.Http.StringContent"/> to define Encoding and/or ContentType for an HTTP content based on string.</description>
-                    </item>
-                    <item>
-                        <term><see cref="T:System.Net.Http.StreamContent"/></term>
-                        <description>Use <see cref="T:System.Net.Http.StreamContent"/> to provide HTTP content based on a stream.</description>
-                    </item>
-                    <item>
-                        <term>A serializable complex type</term>
-                        <description>Any serializable object to attempt to deserialize the body of the response to it.</description>
-                    </item>
-                    <item>
-                        <term>A simple type</term>
-                        <description>Any other simple type to try convert the body of the response to it.</description>
-                    </item>
-                </list>
-            </returns>
         </member>
         <member name="M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SendAsync``2(System.Uri,System.Net.Http.HttpMethod,``0)">
             <summary>

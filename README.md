@@ -10,7 +10,7 @@ var responseObject = await _requestServiceFactory
                           .CreateHttpClientService("name_of_service")
                           //Also supports IOptions<>
                           .SetIdentityServerOptions("appsettings_section")     
-                          //GET and return as IEnumerable<Customers>
+                          //GET and deserialize the response body to IEnumerable<Customers>
                           .GetAsync<IEnumerable<Customers>>("https://api/customers");
 ```					
 > Equaly simple for all HTTP verbs, check the docs for [GET](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceGetExtensions.html), [POST](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions.html), [PUT](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions.html), [DELETE](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.html), [PATCH](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.html) and [HEAD](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceHeadExtensions.html) or the [samples](https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/tree/master/samples)

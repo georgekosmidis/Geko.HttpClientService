@@ -14,14 +14,14 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.ProtectedReso
     public class ProtectedResourceService
     {
         private readonly IHttpClientServiceFactory _requestServiceFactory;
-        private readonly IOptions<ProtectedResourceAccessTokenOptions> _identityServerOptions;
+        private readonly IOptions<ProtectedResourceClientCredentialsOptions> _identityServerOptions;
 
         /// <summary>
         /// Constructor for the <see cref="ProtectedResourceService"/>.
         /// </summary>
         /// <param name="requestServiceFactory">The <see cref="IHttpClientServiceFactory"/> implementation that will perform the request to the protected resource.</param>
         /// <param name="identityServerOptions">The identity server options that will used to retrieve an access token.</param>
-        public ProtectedResourceService(IHttpClientServiceFactory requestServiceFactory, IOptions<ProtectedResourceAccessTokenOptions> identityServerOptions)
+        public ProtectedResourceService(IHttpClientServiceFactory requestServiceFactory, IOptions<ProtectedResourceClientCredentialsOptions> identityServerOptions)
         {
             _requestServiceFactory = requestServiceFactory;
             _identityServerOptions = identityServerOptions;
@@ -31,17 +31,14 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.ProtectedReso
         /// Sample request that returns a typed response using GET
         /// </summary>
         /// <returns>An <see cref="IEnumerable{TestApiResponseDto}"/>. </returns>
-        public async Task<IEnumerable<ProtectedResourceResponseDto>> GetTestApiResults()
+        public async Task<IEnumerable<ProtectedResourceResponseDto>> GetProtectedResourceResults()
         {
             var response = await _requestServiceFactory
-                .CreateHttpClientService(nameof(ProtectedResourceService))                                                //Try to always use named HttpClients, read more here: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core
-                .SetIdentityServerOptions(_identityServerOptions)                                                            //Set the options to retrieve an access token
-                .GetAsync<IEnumerable<ProtectedResourceResponseDto>>("https://demo.identityserver.io/api/test");          //Execute the request
+                .CreateHttpClientService(nameof(ProtectedResourceService))                                          //Try to always use named HttpClients, read more here: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core
+                .SetIdentityServerOptions(_identityServerOptions)                                                   //Set the options to retrieve an access token
+                .GetAsync<IEnumerable<ProtectedResourceResponseDto>>("https://demo.identityserver.io/api/test");    //Execute the request
 
-            if (response.StatusCode == System.Net.HttpStatusCode.OK)
-                return response.BodyAsType;
-            else
-                throw new SystemException(response.StatusCode.ToString());
+            return response.BodyAsType;
         }
 
         /// <summary>
@@ -49,7 +46,7 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.ProtectedReso
         /// </summary>
         /// <param name="headers">A <see cref="Dictionary{TKey, TValue}"/> with the key representing the name of the header, and the value representing the value of the header.</param>
         /// <returns>The entire <see cref="ResponseObject{TResponseBody}"/> object produced.</returns>
-        public async Task<ResponseObject<IEnumerable<ProtectedResourceResponseDto>>> GetTestResponseObject(Dictionary<string, string> headers)
+        public async Task<ResponseObject<IEnumerable<ProtectedResourceResponseDto>>> GetProtectedResourceResponseObject(Dictionary<string, string> headers)
         {
             var response = await _requestServiceFactory
                 .CreateHttpClientService(nameof(ProtectedResourceService))                                       //Try to always use named HttpClients, read more here: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core

@@ -10,7 +10,7 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.ProtectedReso
     /// <summary>
     /// Client credential options for the <see cref="ProtectedResourceService"/>.
     /// </summary>
-    public class ProtectedResourceAccessTokenOptions : DefaultClientCredentialOptions
+    public class ProtectedResourceClientCredentialsOptions : DefaultClientCredentialOptions
     {
 
     }

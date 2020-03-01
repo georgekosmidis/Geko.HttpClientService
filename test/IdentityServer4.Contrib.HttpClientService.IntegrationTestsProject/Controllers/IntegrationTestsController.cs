@@ -32,7 +32,7 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ProtectedResourceResponseDto>>> Get()
         {
-            var result = await _protectedResourceService.GetTestApiResults();
+            var result = await _protectedResourceService.GetProtectedResourceResults();
 
             return Ok(result);
         }
@@ -45,7 +45,7 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.Controllers
         [HttpGet("test/request/headers/{header}")]
         public async Task<IActionResult> TestRequestHeaders(string header)
         {
-            var result = await _protectedResourceService.GetTestResponseObject(
+            var result = await _protectedResourceService.GetProtectedResourceResponseObject(
                 new Dictionary<string, string>
                 {
                     { "x-integration-test-header", header }

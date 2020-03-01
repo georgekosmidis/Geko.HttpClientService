@@ -53,7 +53,7 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.Controllers
             var responseObject = await _requestServiceFactory
                 .CreateHttpClientService()                                                  //Create a new unnamed service (prefer named instances to avoid socket exhaustion issues.
                                                                                             // read more about HttpClient issues here: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core
-                .SetIdentityServerOptions("ProtectedResourceAccessTokenOptions")            //Set the configuration section name that contain the credentials for IdentityServer4 (check appsettings.Development.json)
+                .SetIdentityServerOptions("ProtectedResourceClientCredentialsOptions")            //Set the configuration section name that contain the credentials for IdentityServer4 (check appsettings.Development.json)
                                                                                             // for typed configuration, check the CompleteSample
                 .GetAsync("https://demo.identityserver.io/api/test");                       //Execute a GET request to a protected resource.
 

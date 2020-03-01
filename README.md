@@ -1,23 +1,19 @@
 # An HttpClient service for IdentityServer4
 
-An HttpClient service that makes it easy to make authenticated HTTP requests to protected by IdentityServer4 resources. Complex types are automatically serialized for requests /  deserialized form responses, all with a fluent interface design.
+An HttpClient service that makes it easy to make authenticated HTTP requests to protected by IdentityServer4 resources. Complex types are automatically serialized for requests /  deserialized form responses, all with a fluent interface design:
 
-## A simple sample with GET
 ```csharp
 var responseObject = await _requestServiceFactory
-                          .CreateHttpClientService("name_of_service")                 //Can also be .CreateHttpClientService(), but read more about HttpClient and socket exhaustion issues
-                          .SetIdentityServerOptions("appsettings_section")            //Also supports IOptions
-                          .GetAsync<IEnumerable<Customers>>("https://api/customers"); //GET and return as IEnumerable<Customers>
+                          //Create a instance of the service
+                          // could also be .CreateHttpClientService(), but before you ommit the name
+                          // read more about HttpClient and socket exhaustion
+                          .CreateHttpClientService("name_of_service")
+                          //Also supports IOptions<>
+                          .SetIdentityServerOptions("appsettings_section")     
+                          //GET and return as IEnumerable<Customers>
+                          .GetAsync<IEnumerable<Customers>>("https://api/customers");
 ```					
-## Equaly simple with POST
-```csharp
-var responseObject = await _requestServiceFactory
-                          .CreateHttpClientService("name_of_service")                 //Can also be .CreateHttpClientService(), but read more about HttpClient and socket exhaustion issues
-                          .SetIdentityServerOptions("appsettings_section")            //Also supports IOptions
-                          .PostAsync<RequestCustomer, ResponseCustomer>(              //Execute a POST request
-                             "https://api/customers",                                 // to this URL
-                             customer_object_for_insert                               // sending this RequestCustomer instance for insert
-                          );                                                          // and get the results as a ResponseCustomer object
-```	
-## How to install
+> Equaly simple for all HTTP verbs, check the docs for [GET](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceGetExtensions.html), [POST](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions.html), [PUT](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions.html), [DELETE](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.html), [PATCH](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.html) and [HEAD](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceHeadExtensions.html) or the [samples](https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/tree/master/samples)
+
+## How to 
 tbd

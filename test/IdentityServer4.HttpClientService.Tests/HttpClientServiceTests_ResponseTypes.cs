@@ -17,21 +17,15 @@ using System.Collections.Generic;
 namespace IdentityServer4.HttpClientService.Test
 {
     [TestClass]
-    public class HttpClientServiceTests_ResponseTypes
+    public class HttpClientServiceTests_ResponseTypes : TestBase
     {
-        private class ComplexResponseTypeTest
-        {
-            public int TestInt { get; set; }
-            public bool TestBool { get; set; }
-        }
-
         [TestMethod]
         public async Task HttpClientServiceTests_ComplexResponseTypeAsType()
         {
 
             var httpClientService = new HttpClientServiceFactory(
                 IConfigurationMocks.Get("section_data"),
-                IHttpClientFactoryMocks.Get(HttpStatusCode.OK, "{testInt:1,testBool:true}"),
+                IHttpClientFactoryMocks.Get(HttpStatusCode.OK, this.ComplexTypeResponseString),
                 new HttpRequestMessageFactory(
                     IHttpContextAccessorMocks.Get()
                 ),
@@ -43,7 +37,7 @@ namespace IdentityServer4.HttpClientService.Test
                 )
             ).CreateHttpClientService();
 
-            var result = await httpClientService.SendAsync<object, ComplexResponseTypeTest>(
+            var result = await httpClientService.SendAsync<object, ComplexTypeResponse>(
                     new Uri("http://localhost"),
                     HttpMethod.Get,
                     null
@@ -54,10 +48,10 @@ namespace IdentityServer4.HttpClientService.Test
             Assert.AreEqual(HttpStatusCode.OK, result.StatusCode);
 
             Assert.IsInstanceOfType(result.BodyAsType.TestInt, typeof(int));
-            Assert.AreEqual(1, result.BodyAsType.TestInt);
+            Assert.AreEqual(new ComplexTypeResponse().TestInt, result.BodyAsType.TestInt);
 
             Assert.IsInstanceOfType(result.BodyAsType.TestBool, typeof(bool));
-            Assert.AreEqual(true, result.BodyAsType.TestBool);
+            Assert.AreEqual(new ComplexTypeResponse().TestBool, result.BodyAsType.TestBool);
         }
 
         [TestMethod]
@@ -66,7 +60,7 @@ namespace IdentityServer4.HttpClientService.Test
 
             var httpClientService = new HttpClientServiceFactory(
                 IConfigurationMocks.Get("section_data"),
-                IHttpClientFactoryMocks.Get(HttpStatusCode.OK, "{testInt:1,testBool:true}"),
+                IHttpClientFactoryMocks.Get(HttpStatusCode.OK, this.ComplexTypeResponseString),
                 new HttpRequestMessageFactory(
                     IHttpContextAccessorMocks.Get()
                 ),
@@ -87,7 +81,7 @@ namespace IdentityServer4.HttpClientService.Test
             httpClientService.Dispose();
 
             Assert.AreEqual(HttpStatusCode.OK, result.StatusCode);
-            Assert.AreEqual("{testInt:1,testBool:true}", result.BodyAsType);
+            Assert.AreEqual(this.ComplexTypeResponseString, result.BodyAsType);
 
         }
 

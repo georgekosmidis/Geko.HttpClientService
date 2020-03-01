@@ -19,13 +19,8 @@ using System.Collections.Generic;
 namespace IdentityServer4.HttpClientService.Test
 {
     [TestClass]
-    public class HttpClientServiceTests_RequestTypes
+    public class HttpClientServiceTests_RequestTypes : TestBase
     {
-        private class ComplexRequestTypeTest
-        {
-            public int TestInt { get; set; } = 1;
-            public bool TestBool { get; set; } = true;
-        }
 
         [TestMethod]
         public async Task HttpClientServiceTests_ComplexRequestType()
@@ -45,14 +40,10 @@ namespace IdentityServer4.HttpClientService.Test
                 )
             ).CreateHttpClientService();
 
-            var result = await httpClientService.SendAsync<ComplexRequestTypeTest, string>(
+            var result = await httpClientService.SendAsync<ComplexTypeRequest, string>(
                     new Uri("http://localhost"),
                     HttpMethod.Post,
-                    new ComplexRequestTypeTest()
-                    {
-                        TestInt = 1,
-                        TestBool = true
-                    }
+                    new ComplexTypeRequest()
                 );
 
             Assert.AreEqual(HttpStatusCode.Created, result.StatusCode);
@@ -60,7 +51,7 @@ namespace IdentityServer4.HttpClientService.Test
             var requestBody = await result.HttpRequestMessge.Content.ReadAsStringAsync();
             Assert.AreEqual("application/json", result.HttpRequestMessge.Content.Headers.ContentType.MediaType);
             Assert.AreEqual("utf-8", result.HttpRequestMessge.Content.Headers.ContentType.CharSet);
-            Assert.AreEqual("{\"TestInt\":1,\"TestBool\":true}", requestBody);
+            Assert.AreEqual(this.ComplexTypeRequestString.ToLower(), requestBody.ToLower());
         }
 
         [TestMethod]

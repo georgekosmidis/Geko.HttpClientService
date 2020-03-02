@@ -37,3 +37,11 @@ steps:
     targetPath: '$(Pipeline.Workspace)'
     artifact: 'IdentityServer4.Contrib.HttpClientService'
     publishLocation: 'pipeline'
+
+- task: NuGetCommand@2
+  displayName: 'NuGet push'
+  inputs:
+    command: push
+    packagesToPush: '$(System.ArtifactsDirectory)/**/*.nupkg'
+    nuGetFeedType: external
+    publishFeedCredentials: 'NuGet_IdentityServer4.Contrib.HttpClientService'

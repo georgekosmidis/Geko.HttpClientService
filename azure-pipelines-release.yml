@@ -33,13 +33,14 @@ steps:
     versioningScheme: 'off'
 
 - task: PublishPipelineArtifact@1
+  displayName: 'Artifacts'
   inputs:
     targetPath: '$(Pipeline.Workspace)'
     artifact: 'IdentityServer4.Contrib.HttpClientService'
     publishLocation: 'pipeline'
 
 - task: NuGetCommand@2
-  displayName: 'NuGet push'
+  displayName: 'NuGet Push'
   inputs:
     command: push
     packagesToPush: '$(System.ArtifactsDirectory)/**/*.nupkg'

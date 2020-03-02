@@ -20,7 +20,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HttpRequestMessageFactory
-    path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/HttpRequestMessageFactory.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/HttpRequestMessageFactory.cs
     startLine: 9
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -31,7 +31,6 @@ items:
     content: 'public class HttpRequestMessageFactory : IHttpRequestMessageFactory'
     content.vb: >-
       Public Class HttpRequestMessageFactory
-
           Implements IHttpRequestMessageFactory
   inheritance:
   - System.Object
@@ -68,7 +67,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: .ctor
-    path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/HttpRequestMessageFactory.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/HttpRequestMessageFactory.cs
     startLine: 17
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -104,7 +103,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: CreateRequestMessage
-    path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/HttpRequestMessageFactory.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/HttpRequestMessageFactory.cs
     startLine: 28
   assemblies:
   - IdentityServer4.Contrib.HttpClientService

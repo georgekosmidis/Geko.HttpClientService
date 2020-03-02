@@ -19,7 +19,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: ITokenResponseService
-    path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/ITokenResponseService.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/ITokenResponseService.cs
     startLine: 10
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -52,7 +52,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: GetTokenResponseAsync
-    path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/ITokenResponseService.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/ITokenResponseService.cs
     startLine: 18
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -62,7 +62,6 @@ items:
   syntax:
     content: >-
       Task<TokenResponse> GetTokenResponseAsync<TTokenServiceOptions>(IOptions<TTokenServiceOptions> options)
-
           where TTokenServiceOptions : DefaultClientCredentialOptions, new()
     parameters:
     - id: options

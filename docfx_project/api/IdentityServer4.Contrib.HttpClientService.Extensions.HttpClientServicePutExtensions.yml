@@ -23,7 +23,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HttpClientServicePutExtensions
-    path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
     startLine: 11
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -68,7 +68,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: PutAsync
-    path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
     startLine: 97
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -127,7 +127,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: PutAsync
-    path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
     startLine: 113
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -178,7 +178,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: PutAsync
-    path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
     startLine: 129
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -234,7 +234,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: PutAsync
-    path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
     startLine: 145
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -290,7 +290,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: PutAsync
-    path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
     startLine: 161
   assemblies:
   - IdentityServer4.Contrib.HttpClientService

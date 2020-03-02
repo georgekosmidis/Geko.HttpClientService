@@ -27,7 +27,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: ResponseObject
-    path: src/IdentityServer4.Contrib.HttpClientService/Models/ResponseObject.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Models/ResponseObject.cs
     startLine: 12
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -76,7 +76,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: Headers
-    path: src/IdentityServer4.Contrib.HttpClientService/Models/ResponseObject.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Models/ResponseObject.cs
     startLine: 17
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -115,7 +115,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: BodyAsType
-    path: src/IdentityServer4.Contrib.HttpClientService/Models/ResponseObject.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Models/ResponseObject.cs
     startLine: 22
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -154,7 +154,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: BodyAsString
-    path: src/IdentityServer4.Contrib.HttpClientService/Models/ResponseObject.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Models/ResponseObject.cs
     startLine: 27
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -193,7 +193,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: BodyAsStream
-    path: src/IdentityServer4.Contrib.HttpClientService/Models/ResponseObject.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Models/ResponseObject.cs
     startLine: 32
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -232,7 +232,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: StatusCode
-    path: src/IdentityServer4.Contrib.HttpClientService/Models/ResponseObject.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Models/ResponseObject.cs
     startLine: 37
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -271,7 +271,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HttpResponseMessage
-    path: src/IdentityServer4.Contrib.HttpClientService/Models/ResponseObject.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Models/ResponseObject.cs
     startLine: 42
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -310,7 +310,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HttpRequestMessge
-    path: src/IdentityServer4.Contrib.HttpClientService/Models/ResponseObject.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Models/ResponseObject.cs
     startLine: 50
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -350,7 +350,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HasError
-    path: src/IdentityServer4.Contrib.HttpClientService/Models/ResponseObject.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Models/ResponseObject.cs
     startLine: 55
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -389,7 +389,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: Error
-    path: src/IdentityServer4.Contrib.HttpClientService/Models/ResponseObject.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Models/ResponseObject.cs
     startLine: 60
   assemblies:
   - IdentityServer4.Contrib.HttpClientService

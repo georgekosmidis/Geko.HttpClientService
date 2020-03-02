@@ -23,7 +23,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HttpClientServicePatchExtensions
-    path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePatchExtensions.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePatchExtensions.cs
     startLine: 11
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -68,7 +68,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: PatchAsync
-    path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePatchExtensions.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePatchExtensions.cs
     startLine: 97
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -127,7 +127,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: PatchAsync
-    path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePatchExtensions.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePatchExtensions.cs
     startLine: 113
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -178,7 +178,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: PatchAsync
-    path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePatchExtensions.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePatchExtensions.cs
     startLine: 152
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -235,7 +235,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: PatchAsync
-    path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePatchExtensions.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePatchExtensions.cs
     startLine: 191
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -292,7 +292,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: PatchAsync
-    path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePatchExtensions.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePatchExtensions.cs
     startLine: 230
   assemblies:
   - IdentityServer4.Contrib.HttpClientService

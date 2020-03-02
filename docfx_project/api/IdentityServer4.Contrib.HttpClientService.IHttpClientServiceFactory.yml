@@ -20,7 +20,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: IHttpClientServiceFactory
-    path: src/IdentityServer4.Contrib.HttpClientService/IHttpClientServiceFactory.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/IHttpClientServiceFactory.cs
     startLine: 5
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -53,7 +53,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: CreateHttpClientService
-    path: src/IdentityServer4.Contrib.HttpClientService/IHttpClientServiceFactory.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/IHttpClientServiceFactory.cs
     startLine: 17
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -85,7 +85,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: CreateHttpClientService
-    path: src/IdentityServer4.Contrib.HttpClientService/IHttpClientServiceFactory.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/IHttpClientServiceFactory.cs
     startLine: 27
   assemblies:
   - IdentityServer4.Contrib.HttpClientService

@@ -19,7 +19,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: IHttpRequestMessageFactory
-    path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IHttpRequestMessageFactory.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IHttpRequestMessageFactory.cs
     startLine: 7
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -52,7 +52,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: CreateRequestMessage
-    path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IHttpRequestMessageFactory.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IHttpRequestMessageFactory.cs
     startLine: 13
   assemblies:
   - IdentityServer4.Contrib.HttpClientService

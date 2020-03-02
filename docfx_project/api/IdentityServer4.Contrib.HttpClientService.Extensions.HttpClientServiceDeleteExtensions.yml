@@ -20,7 +20,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HttpClientServiceDeleteExtensions
-    path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServiceDeleteExtensions.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServiceDeleteExtensions.cs
     startLine: 10
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -65,7 +65,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: DeleteAsync
-    path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServiceDeleteExtensions.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServiceDeleteExtensions.cs
     startLine: 73
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -119,7 +119,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: DeleteAsync
-    path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServiceDeleteExtensions.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServiceDeleteExtensions.cs
     startLine: 88
   assemblies:
   - IdentityServer4.Contrib.HttpClientService

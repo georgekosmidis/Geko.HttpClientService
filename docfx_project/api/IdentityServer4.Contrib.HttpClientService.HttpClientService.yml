@@ -25,7 +25,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HttpClientService
-    path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
     startLine: 19
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -90,7 +90,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: .ctor
-    path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
     startLine: 36
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -135,7 +135,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
-    path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
     startLine: 65
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -174,7 +174,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
-    path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
     startLine: 83
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -184,7 +184,6 @@ items:
   syntax:
     content: >-
       public HttpClientService SetIdentityServerOptions<TTokenServiceOptions>(IOptions<TTokenServiceOptions> options)
-
           where TTokenServiceOptions : DefaultClientCredentialOptions, new()
     parameters:
     - id: options
@@ -222,7 +221,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetHeaders
-    path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
     startLine: 112
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -264,7 +263,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: AddHeader
-    path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
     startLine: 134
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -306,7 +305,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SendAsync
-    path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
     startLine: 223
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -359,7 +358,7 @@ items:
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: Dispose
-    path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
     startLine: 319
   assemblies:
   - IdentityServer4.Contrib.HttpClientService

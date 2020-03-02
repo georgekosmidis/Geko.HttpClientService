@@ -45,4 +45,4 @@ steps:
     if ($lastexitcode -ne 0){
       throw ("Error generating document")
     }
-  displayName: "docfx"
+  displayName: "Documentation"

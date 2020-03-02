@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/IHttpClientServiceFactory.cs
-      branch: master
+      branch: release/1.0.1
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: IHttpClientServiceFactory
     path: ../src/IdentityServer4.Contrib.HttpClientService/IHttpClientServiceFactory.cs
@@ -50,7 +50,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/IHttpClientServiceFactory.cs
-      branch: master
+      branch: release/1.0.1
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: CreateHttpClientService
     path: ../src/IdentityServer4.Contrib.HttpClientService/IHttpClientServiceFactory.cs
@@ -82,7 +82,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/IHttpClientServiceFactory.cs
-      branch: master
+      branch: release/1.0.1
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: CreateHttpClientService
     path: ../src/IdentityServer4.Contrib.HttpClientService/IHttpClientServiceFactory.cs

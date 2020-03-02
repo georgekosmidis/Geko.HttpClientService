@@ -40,3 +40,4 @@ dist/
 .dotnet/
 .packages
 _docfx/
+docs/

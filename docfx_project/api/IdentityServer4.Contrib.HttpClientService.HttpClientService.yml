@@ -22,7 +22,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: master
+      branch: release/1.0.1
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HttpClientService
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
@@ -87,7 +87,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: master
+      branch: release/1.0.1
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: .ctor
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
@@ -132,7 +132,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: master
+      branch: release/1.0.1
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
@@ -171,7 +171,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: master
+      branch: release/1.0.1
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
@@ -218,7 +218,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: master
+      branch: release/1.0.1
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetHeaders
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
@@ -260,7 +260,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: master
+      branch: release/1.0.1
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: AddHeader
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
@@ -302,7 +302,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: master
+      branch: release/1.0.1
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SendAsync
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
@@ -355,7 +355,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: master
+      branch: release/1.0.1
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: Dispose
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs

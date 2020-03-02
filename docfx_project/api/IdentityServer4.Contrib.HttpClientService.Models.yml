@@ -1,0 +1,59 @@
+### YamlMime:ManagedReference
+items:
+- uid: IdentityServer4.Contrib.HttpClientService.Models
+  commentId: N:IdentityServer4.Contrib.HttpClientService.Models
+  id: IdentityServer4.Contrib.HttpClientService.Models
+  children:
+  - IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
+  - IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1
+  langs:
+  - csharp
+  - vb
+  name: IdentityServer4.Contrib.HttpClientService.Models
+  nameWithType: IdentityServer4.Contrib.HttpClientService.Models
+  fullName: IdentityServer4.Contrib.HttpClientService.Models
+  type: Namespace
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+references:
+- uid: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
+  name: DefaultClientCredentialOptions
+  nameWithType: DefaultClientCredentialOptions
+  fullName: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
+- uid: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1
+  name: ResponseObject<TResponseBody>
+  nameWithType: ResponseObject<TResponseBody>
+  fullName: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject<TResponseBody>
+  nameWithType.vb: ResponseObject(Of TResponseBody)
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject(Of TResponseBody)
+  name.vb: ResponseObject(Of TResponseBody)
+  spec.csharp:
+  - uid: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1
+    name: ResponseObject
+    nameWithType: ResponseObject
+    fullName: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResponseBody
+    nameWithType: TResponseBody
+    fullName: TResponseBody
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1
+    name: ResponseObject
+    nameWithType: ResponseObject
+    fullName: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResponseBody
+    nameWithType: TResponseBody
+    fullName: TResponseBody
+  - name: )
+    nameWithType: )
+    fullName: )

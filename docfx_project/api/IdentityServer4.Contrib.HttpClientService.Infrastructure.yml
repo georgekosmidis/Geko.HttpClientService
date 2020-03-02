@@ -1,0 +1,60 @@
+### YamlMime:ManagedReference
+items:
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  commentId: N:IdentityServer4.Contrib.HttpClientService.Infrastructure
+  id: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  children:
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseCacheManager
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
+  langs:
+  - csharp
+  - vb
+  name: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  nameWithType: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  type: Namespace
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+references:
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory
+  name: HttpRequestMessageFactory
+  nameWithType: HttpRequestMessageFactory
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  name: IHttpRequestMessageFactory
+  nameWithType: IHttpRequestMessageFactory
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  name: ITokenResponseCacheManager
+  nameWithType: ITokenResponseCacheManager
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  name: ITokenResponseService
+  nameWithType: ITokenResponseService
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseCacheManager
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseCacheManager
+  name: TokenResponseCacheManager
+  nameWithType: TokenResponseCacheManager
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseCacheManager
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
+  name: TokenResponseService
+  nameWithType: TokenResponseService
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  commentId: N:IdentityServer4.Contrib.HttpClientService.Infrastructure
+  name: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  nameWithType: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure

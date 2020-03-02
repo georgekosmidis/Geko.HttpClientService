@@ -1,0 +1,95 @@
+### YamlMime:ManagedReference
+items:
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+  id: IHttpRequestMessageFactory
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  children:
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage
+  langs:
+  - csharp
+  - vb
+  name: IHttpRequestMessageFactory
+  nameWithType: IHttpRequestMessageFactory
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+  type: Interface
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IHttpRequestMessageFactory.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: IHttpRequestMessageFactory
+    path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IHttpRequestMessageFactory.cs
+    startLine: 7
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  summary: "\nAbstraction for an <xref href=\"System.Net.Http.HttpRequestMessage\" data-throw-if-not-resolved=\"false\"></xref> factory.\n"
+  example: []
+  syntax:
+    content: public interface IHttpRequestMessageFactory
+    content.vb: Public Interface IHttpRequestMessageFactory
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage
+  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage
+  id: CreateRequestMessage
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateRequestMessage()
+  nameWithType: IHttpRequestMessageFactory.CreateRequestMessage()
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage()
+  type: Method
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IHttpRequestMessageFactory.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: CreateRequestMessage
+    path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IHttpRequestMessageFactory.cs
+    startLine: 13
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  summary: "\nCreates a new instance of an <xref href=\"System.Net.Http.HttpRequestMessage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: HttpRequestMessage CreateRequestMessage()
+    return:
+      type: System.Net.Http.HttpRequestMessage
+      description: An <xref href="System.Net.Http.HttpRequestMessage" data-throw-if-not-resolved="false"></xref> to be used by an <xref href="System.Net.Http.HttpClient" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Function CreateRequestMessage As HttpRequestMessage
+  overload: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage*
+references:
+- uid: System.Net.Http.HttpRequestMessage
+  commentId: T:System.Net.Http.HttpRequestMessage
+  parent: System.Net.Http
+  isExternal: true
+  name: HttpRequestMessage
+  nameWithType: HttpRequestMessage
+  fullName: System.Net.Http.HttpRequestMessage
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  commentId: N:IdentityServer4.Contrib.HttpClientService.Infrastructure
+  name: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  nameWithType: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure
+- uid: System.Net.Http
+  commentId: N:System.Net.Http
+  isExternal: true
+  name: System.Net.Http
+  nameWithType: System.Net.Http
+  fullName: System.Net.Http
+- uid: System.Net.Http.HttpClient
+  commentId: T:System.Net.Http.HttpClient
+  isExternal: true
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage*
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage
+  name: CreateRequestMessage
+  nameWithType: IHttpRequestMessageFactory.CreateRequestMessage
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage

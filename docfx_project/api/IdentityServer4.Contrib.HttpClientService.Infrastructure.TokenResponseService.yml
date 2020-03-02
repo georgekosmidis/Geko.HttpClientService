@@ -1,0 +1,787 @@
+### YamlMime:ManagedReference
+items:
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
+  id: TokenResponseService
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  children:
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager)
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.GetTokenResponseAsync``1(Microsoft.Extensions.Options.IOptions{``0})
+  langs:
+  - csharp
+  - vb
+  name: TokenResponseService
+  nameWithType: TokenResponseService
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
+  type: Class
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/TokenResponseService.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: TokenResponseService
+    path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/TokenResponseService.cs
+    startLine: 15
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  summary: "\nThe implementation of an access token service for client credentials based on IdentityServer4. \n"
+  example: []
+  syntax:
+    content: 'public class TokenResponseService : ITokenResponseService'
+    content.vb: >-
+      Public Class TokenResponseService
+
+          Implements ITokenResponseService
+  inheritance:
+  - System.Object
+  implements:
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager)
+  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager)
+  id: '#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager)'
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
+  langs:
+  - csharp
+  - vb
+  name: TokenResponseService(IHttpClientFactory, ITokenResponseCacheManager)
+  nameWithType: TokenResponseService.TokenResponseService(IHttpClientFactory, ITokenResponseCacheManager)
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.TokenResponseService(System.Net.Http.IHttpClientFactory, IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager)
+  type: Constructor
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/TokenResponseService.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: .ctor
+    path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/TokenResponseService.cs
+    startLine: 25
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  summary: "\nConstructor of the <xref href=\"IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public TokenResponseService(IHttpClientFactory httpClientFactory, ITokenResponseCacheManager cache)
+    parameters:
+    - id: httpClientFactory
+      type: System.Net.Http.IHttpClientFactory
+      description: An <xref href="System.Net.Http.HttpClientFactory" data-throw-if-not-resolved="false"></xref> to create an <xref href="System.Net.Http.HttpClient" data-throw-if-not-resolved="false"></xref>.
+    - id: cache
+      type: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager
+      description: A cache manager instance to cache handle the caching of the Identity Server response.
+    content.vb: Public Sub New(httpClientFactory As IHttpClientFactory, cache As ITokenResponseCacheManager)
+  overload: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.GetTokenResponseAsync``1(Microsoft.Extensions.Options.IOptions{``0})
+  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.GetTokenResponseAsync``1(Microsoft.Extensions.Options.IOptions{``0})
+  id: GetTokenResponseAsync``1(Microsoft.Extensions.Options.IOptions{``0})
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
+  langs:
+  - csharp
+  - vb
+  name: GetTokenResponseAsync<TTokenServiceOptions>(IOptions<TTokenServiceOptions>)
+  nameWithType: TokenResponseService.GetTokenResponseAsync<TTokenServiceOptions>(IOptions<TTokenServiceOptions>)
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.GetTokenResponseAsync<TTokenServiceOptions>(Microsoft.Extensions.Options.IOptions<TTokenServiceOptions>)
+  type: Method
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/TokenResponseService.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: GetTokenResponseAsync
+    path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/TokenResponseService.cs
+    startLine: 37
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  summary: "\nRetrieves either a new access token using client credentials or the last valid from the caching engine.\n"
+  example: []
+  syntax:
+    content: >-
+      public Task<TokenResponse> GetTokenResponseAsync<TTokenServiceOptions>(IOptions<TTokenServiceOptions> options)
+
+          where TTokenServiceOptions : DefaultClientCredentialOptions, new()
+    parameters:
+    - id: options
+      type: Microsoft.Extensions.Options.IOptions{{TTokenServiceOptions}}
+      description: The token service options
+    typeParameters:
+    - id: TTokenServiceOptions
+      description: A type that inherits from the <xref href="IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions" data-throw-if-not-resolved="false"></xref> onject
+    return:
+      type: System.Threading.Tasks.Task{IdentityModel.Client.TokenResponse}
+      description: A <xref href="IdentityModel.Client.TokenResponse" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Function GetTokenResponseAsync(Of TTokenServiceOptions As {DefaultClientCredentialOptions, New})(options As IOptions(Of TTokenServiceOptions)) As Task(Of TokenResponse)
+  overload: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.GetTokenResponseAsync*
+  implements:
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync``1(Microsoft.Extensions.Options.IOptions{{TTokenServiceOptions}})
+  nameWithType.vb: TokenResponseService.GetTokenResponseAsync(Of TTokenServiceOptions)(IOptions(Of TTokenServiceOptions))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.GetTokenResponseAsync(Of TTokenServiceOptions)(Microsoft.Extensions.Options.IOptions(Of TTokenServiceOptions))
+  name.vb: GetTokenResponseAsync(Of TTokenServiceOptions)(IOptions(Of TTokenServiceOptions))
+references:
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  commentId: N:IdentityServer4.Contrib.HttpClientService.Infrastructure
+  name: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  nameWithType: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  name: ITokenResponseService
+  nameWithType: ITokenResponseService
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
+  name: TokenResponseService
+  nameWithType: TokenResponseService
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
+- uid: System.Net.Http.HttpClientFactory
+  commentId: T:System.Net.Http.HttpClientFactory
+  isExternal: true
+- uid: System.Net.Http.HttpClient
+  commentId: T:System.Net.Http.HttpClient
+  isExternal: true
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.#ctor*
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.#ctor
+  name: TokenResponseService
+  nameWithType: TokenResponseService.TokenResponseService
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.TokenResponseService
+- uid: System.Net.Http.IHttpClientFactory
+  commentId: T:System.Net.Http.IHttpClientFactory
+  parent: System.Net.Http
+  isExternal: true
+  name: IHttpClientFactory
+  nameWithType: IHttpClientFactory
+  fullName: System.Net.Http.IHttpClientFactory
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  name: ITokenResponseCacheManager
+  nameWithType: ITokenResponseCacheManager
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager
+- uid: System.Net.Http
+  commentId: N:System.Net.Http
+  isExternal: true
+  name: System.Net.Http
+  nameWithType: System.Net.Http
+  fullName: System.Net.Http
+- uid: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
+  name: DefaultClientCredentialOptions
+  nameWithType: DefaultClientCredentialOptions
+  fullName: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
+- uid: IdentityModel.Client.TokenResponse
+  commentId: T:IdentityModel.Client.TokenResponse
+  isExternal: true
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.GetTokenResponseAsync*
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.GetTokenResponseAsync
+  name: GetTokenResponseAsync
+  nameWithType: TokenResponseService.GetTokenResponseAsync
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.GetTokenResponseAsync
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync``1(Microsoft.Extensions.Options.IOptions{{TTokenServiceOptions}})
+  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync``1(Microsoft.Extensions.Options.IOptions{``0})
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+  definition: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync``1(Microsoft.Extensions.Options.IOptions{``0})
+  name: GetTokenResponseAsync<TTokenServiceOptions>(IOptions<TTokenServiceOptions>)
+  nameWithType: ITokenResponseService.GetTokenResponseAsync<TTokenServiceOptions>(IOptions<TTokenServiceOptions>)
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync<TTokenServiceOptions>(Microsoft.Extensions.Options.IOptions<TTokenServiceOptions>)
+  nameWithType.vb: ITokenResponseService.GetTokenResponseAsync(Of TTokenServiceOptions)(IOptions(Of TTokenServiceOptions))
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync(Of TTokenServiceOptions)(Microsoft.Extensions.Options.IOptions(Of TTokenServiceOptions))
+  name.vb: GetTokenResponseAsync(Of TTokenServiceOptions)(IOptions(Of TTokenServiceOptions))
+  spec.csharp:
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync``1(Microsoft.Extensions.Options.IOptions{``0})
+    name: GetTokenResponseAsync<TTokenServiceOptions>
+    nameWithType: ITokenResponseService.GetTokenResponseAsync<TTokenServiceOptions>
+    fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync<TTokenServiceOptions>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTokenServiceOptions
+    nameWithType: TTokenServiceOptions
+    fullName: TTokenServiceOptions
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync``1(Microsoft.Extensions.Options.IOptions{``0})
+    name: GetTokenResponseAsync(Of TTokenServiceOptions)
+    nameWithType: ITokenResponseService.GetTokenResponseAsync(Of TTokenServiceOptions)
+    fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync(Of TTokenServiceOptions)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTokenServiceOptions
+    nameWithType: TTokenServiceOptions
+    fullName: TTokenServiceOptions
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.Extensions.Options.IOptions{{TTokenServiceOptions}}
+  commentId: T:Microsoft.Extensions.Options.IOptions{``0}
+  parent: Microsoft.Extensions.Options
+  definition: Microsoft.Extensions.Options.IOptions`1
+  name: IOptions<TTokenServiceOptions>
+  nameWithType: IOptions<TTokenServiceOptions>
+  fullName: Microsoft.Extensions.Options.IOptions<TTokenServiceOptions>
+  nameWithType.vb: IOptions(Of TTokenServiceOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TTokenServiceOptions)
+  name.vb: IOptions(Of TTokenServiceOptions)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTokenServiceOptions
+    nameWithType: TTokenServiceOptions
+    fullName: TTokenServiceOptions
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTokenServiceOptions
+    nameWithType: TTokenServiceOptions
+    fullName: TTokenServiceOptions
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task{IdentityModel.Client.TokenResponse}
+  commentId: T:System.Threading.Tasks.Task{IdentityModel.Client.TokenResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<TokenResponse>
+  nameWithType: Task<TokenResponse>
+  fullName: System.Threading.Tasks.Task<IdentityModel.Client.TokenResponse>
+  nameWithType.vb: Task(Of TokenResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of IdentityModel.Client.TokenResponse)
+  name.vb: Task(Of TokenResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IdentityModel.Client.TokenResponse
+    name: TokenResponse
+    nameWithType: TokenResponse
+    fullName: IdentityModel.Client.TokenResponse
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IdentityModel.Client.TokenResponse
+    name: TokenResponse
+    nameWithType: TokenResponse
+    fullName: IdentityModel.Client.TokenResponse
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync``1(Microsoft.Extensions.Options.IOptions{``0})
+  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync``1(Microsoft.Extensions.Options.IOptions{``0})
+  isExternal: true
+  name: GetTokenResponseAsync<TTokenServiceOptions>(IOptions<TTokenServiceOptions>)
+  nameWithType: ITokenResponseService.GetTokenResponseAsync<TTokenServiceOptions>(IOptions<TTokenServiceOptions>)
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync<TTokenServiceOptions>(Microsoft.Extensions.Options.IOptions<TTokenServiceOptions>)
+  nameWithType.vb: ITokenResponseService.GetTokenResponseAsync(Of TTokenServiceOptions)(IOptions(Of TTokenServiceOptions))
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync(Of TTokenServiceOptions)(Microsoft.Extensions.Options.IOptions(Of TTokenServiceOptions))
+  name.vb: GetTokenResponseAsync(Of TTokenServiceOptions)(IOptions(Of TTokenServiceOptions))
+  spec.csharp:
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync``1(Microsoft.Extensions.Options.IOptions{``0})
+    name: GetTokenResponseAsync<TTokenServiceOptions>
+    nameWithType: ITokenResponseService.GetTokenResponseAsync<TTokenServiceOptions>
+    fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync<TTokenServiceOptions>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTokenServiceOptions
+    nameWithType: TTokenServiceOptions
+    fullName: TTokenServiceOptions
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync``1(Microsoft.Extensions.Options.IOptions{``0})
+    name: GetTokenResponseAsync(Of TTokenServiceOptions)
+    nameWithType: ITokenResponseService.GetTokenResponseAsync(Of TTokenServiceOptions)
+    fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync(Of TTokenServiceOptions)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTokenServiceOptions
+    nameWithType: TTokenServiceOptions
+    fullName: TTokenServiceOptions
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.Extensions.Options.IOptions`1
+  commentId: T:Microsoft.Extensions.Options.IOptions`1
+  isExternal: true
+  name: IOptions<TOptions>
+  nameWithType: IOptions<TOptions>
+  fullName: Microsoft.Extensions.Options.IOptions<TOptions>
+  nameWithType.vb: IOptions(Of TOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TOptions)
+  name.vb: IOptions(Of TOptions)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TOptions
+    nameWithType: TOptions
+    fullName: TOptions
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TOptions
+    nameWithType: TOptions
+    fullName: TOptions
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.Extensions.Options
+  commentId: N:Microsoft.Extensions.Options
+  isExternal: true
+  name: Microsoft.Extensions.Options
+  nameWithType: Microsoft.Extensions.Options
+  fullName: Microsoft.Extensions.Options
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks

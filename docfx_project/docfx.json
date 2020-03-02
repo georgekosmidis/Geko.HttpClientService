@@ -3,6 +3,7 @@
     {
       "src": [
         {
+		  "src": "../",		
           "files": [
             "src/IdentityServer4.Contrib.HttpClientService/IdentityServer4.Contrib.HttpClientService.csproj"
           ]
@@ -39,6 +40,7 @@
     ],
     "overwrite": [
       {
+		"src": "../",
         "files": [
           "apidoc/**.md"
         ],
@@ -48,7 +50,7 @@
         ]
       }
     ],
-    "dest": "docs",
+    "dest": "../docs",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
@@ -58,7 +60,7 @@
     "markdownEngineName": "markdig",
     "noLangKeyword": false,
     "keepFileLink": false,
-    "cleanupCacheHistory": true,
+    "cleanupCacheHistory": false,
     "disableGitFeatures": false
   }
 }

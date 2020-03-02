@@ -1,0 +1,634 @@
+### YamlMime:ManagedReference
+items:
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
+  commentId: T:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
+  id: HttpClientServiceFactory
+  parent: IdentityServer4.Contrib.HttpClientService
+  children:
+  - IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
+  - IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService
+  - IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService(System.String)
+  langs:
+  - csharp
+  - vb
+  name: HttpClientServiceFactory
+  nameWithType: HttpClientServiceFactory
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
+  type: Class
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: HttpClientServiceFactory
+    path: src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs
+    startLine: 21
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService
+  summary: "\nA factory that creates <xref href=\"IdentityServer4.Contrib.HttpClientService.HttpClientService\" data-throw-if-not-resolved=\"false\"></xref> instances for a given logical name.\n"
+  example: []
+  syntax:
+    content: 'public class HttpClientServiceFactory : IHttpClientServiceFactory'
+    content.vb: >-
+      Public Class HttpClientServiceFactory
+
+          Implements IHttpClientServiceFactory
+  inheritance:
+  - System.Object
+  implements:
+  - IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
+  id: '#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)'
+  parent: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
+  langs:
+  - csharp
+  - vb
+  name: HttpClientServiceFactory(IConfiguration, IHttpClientFactory, IHttpRequestMessageFactory, ITokenResponseService)
+  nameWithType: HttpClientServiceFactory.HttpClientServiceFactory(IConfiguration, IHttpClientFactory, IHttpRequestMessageFactory, ITokenResponseService)
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.HttpClientServiceFactory(Microsoft.Extensions.Configuration.IConfiguration, System.Net.Http.IHttpClientFactory, IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory, IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
+  type: Constructor
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: .ctor
+    path: src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs
+    startLine: 35
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService
+  summary: "\nCconstructor of the <xref href=\"IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public HttpClientServiceFactory(IConfiguration configuration, IHttpClientFactory httpClientFactory, IHttpRequestMessageFactory requestMessageFactory, ITokenResponseService accessTokenService)
+    parameters:
+    - id: configuration
+      type: Microsoft.Extensions.Configuration.IConfiguration
+      description: Application configuration properties.
+    - id: httpClientFactory
+      type: System.Net.Http.IHttpClientFactory
+      description: The <xref href="System.Net.Http.IHttpClientFactory" data-throw-if-not-resolved="false"></xref> to create an <xref href="System.Net.Http.HttpClient" data-throw-if-not-resolved="false"></xref>.
+    - id: requestMessageFactory
+      type: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+      description: The <xref href="IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory" data-throw-if-not-resolved="false"></xref> to get a new <xref href="System.Net.Http.HttpRequestMessage" data-throw-if-not-resolved="false"></xref>.
+    - id: accessTokenService
+      type: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+      description: The <xref href="IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService" data-throw-if-not-resolved="false"></xref> to retrieve a token, if required.
+    content.vb: Public Sub New(configuration As IConfiguration, httpClientFactory As IHttpClientFactory, requestMessageFactory As IHttpRequestMessageFactory, accessTokenService As ITokenResponseService)
+  overload: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService
+  id: CreateHttpClientService
+  parent: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateHttpClientService()
+  nameWithType: HttpClientServiceFactory.CreateHttpClientService()
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService()
+  type: Method
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: CreateHttpClientService
+    path: src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs
+    startLine: 53
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService
+  summary: "\nCreates new <xref href=\"IdentityServer4.Contrib.HttpClientService.HttpClientService\" data-throw-if-not-resolved=\"false\"></xref> instances. \nPrefer <xref href=\"IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService(System.String)\" data-throw-if-not-resolved=\"false\"></xref> when possible, to avoid &apos;sockets exhaustion&apos; issues caused by HttpClient.\nRead more here https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core\n"
+  remarks: "\nPrefer <xref href=\"IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService(System.String)\" data-throw-if-not-resolved=\"false\"></xref> when possible, to avoid &apos;sockets exhaustion&apos;.\nRead more here https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core\n"
+  example: []
+  syntax:
+    content: public HttpClientService CreateHttpClientService()
+    return:
+      type: IdentityServer4.Contrib.HttpClientService.HttpClientService
+      description: An <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Function CreateHttpClientService As HttpClientService
+  overload: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService*
+  implements:
+  - IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService(System.String)
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService(System.String)
+  id: CreateHttpClientService(System.String)
+  parent: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateHttpClientService(String)
+  nameWithType: HttpClientServiceFactory.CreateHttpClientService(String)
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: CreateHttpClientService
+    path: src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs
+    startLine: 67
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService
+  summary: "\nCreates or returns <xref href=\"IdentityServer4.Contrib.HttpClientService.HttpClientService\" data-throw-if-not-resolved=\"false\"></xref> instances for the given logical name.\n"
+  remarks: "\nBy specifing a name, the HTTPClient will be reused to avoid &apos;sockets exhaustion&apos; issues caused by HttpClient.\nRead more here https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core\n"
+  example: []
+  syntax:
+    content: public HttpClientService CreateHttpClientService(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the <xref href="System.Net.Http.HttpClient" data-throw-if-not-resolved="false"></xref> that will be used.
+    return:
+      type: IdentityServer4.Contrib.HttpClientService.HttpClientService
+      description: An <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Function CreateHttpClientService(name As String) As HttpClientService
+  overload: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService*
+  implements:
+  - IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService
+  commentId: T:IdentityServer4.Contrib.HttpClientService.HttpClientService
+  parent: IdentityServer4.Contrib.HttpClientService
+  name: HttpClientService
+  nameWithType: HttpClientService
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService
+- uid: IdentityServer4.Contrib.HttpClientService
+  commentId: N:IdentityServer4.Contrib.HttpClientService
+  name: IdentityServer4.Contrib.HttpClientService
+  nameWithType: IdentityServer4.Contrib.HttpClientService
+  fullName: IdentityServer4.Contrib.HttpClientService
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory
+  commentId: T:IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory
+  parent: IdentityServer4.Contrib.HttpClientService
+  name: IHttpClientServiceFactory
+  nameWithType: IHttpClientServiceFactory
+  fullName: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
+  commentId: T:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
+  name: HttpClientServiceFactory
+  nameWithType: HttpClientServiceFactory
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
+- uid: System.Net.Http.IHttpClientFactory
+  commentId: T:System.Net.Http.IHttpClientFactory
+  parent: System.Net.Http
+  isExternal: true
+  name: IHttpClientFactory
+  nameWithType: IHttpClientFactory
+  fullName: System.Net.Http.IHttpClientFactory
+- uid: System.Net.Http.HttpClient
+  commentId: T:System.Net.Http.HttpClient
+  isExternal: true
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  name: IHttpRequestMessageFactory
+  nameWithType: IHttpRequestMessageFactory
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+- uid: System.Net.Http.HttpRequestMessage
+  commentId: T:System.Net.Http.HttpRequestMessage
+  parent: System.Net.Http
+  isExternal: true
+  name: HttpRequestMessage
+  nameWithType: HttpRequestMessage
+  fullName: System.Net.Http.HttpRequestMessage
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  name: ITokenResponseService
+  nameWithType: ITokenResponseService
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor*
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor
+  name: HttpClientServiceFactory
+  nameWithType: HttpClientServiceFactory.HttpClientServiceFactory
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.HttpClientServiceFactory
+- uid: Microsoft.Extensions.Configuration.IConfiguration
+  commentId: T:Microsoft.Extensions.Configuration.IConfiguration
+  parent: Microsoft.Extensions.Configuration
+  isExternal: true
+  name: IConfiguration
+  nameWithType: IConfiguration
+  fullName: Microsoft.Extensions.Configuration.IConfiguration
+- uid: System.Net.Http
+  commentId: N:System.Net.Http
+  isExternal: true
+  name: System.Net.Http
+  nameWithType: System.Net.Http
+  fullName: System.Net.Http
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  commentId: N:IdentityServer4.Contrib.HttpClientService.Infrastructure
+  name: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  nameWithType: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure
+- uid: Microsoft.Extensions.Configuration
+  commentId: N:Microsoft.Extensions.Configuration
+  isExternal: true
+  name: Microsoft.Extensions.Configuration
+  nameWithType: Microsoft.Extensions.Configuration
+  fullName: Microsoft.Extensions.Configuration
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService(System.String)
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService(System.String)
+  isExternal: true
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService*
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService
+  name: CreateHttpClientService
+  nameWithType: HttpClientServiceFactory.CreateHttpClientService
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService
+- uid: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService
+  commentId: M:IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService
+  parent: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory
+  name: CreateHttpClientService()
+  nameWithType: IHttpClientServiceFactory.CreateHttpClientService()
+  fullName: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService()
+  spec.csharp:
+  - uid: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService
+    name: CreateHttpClientService
+    nameWithType: IHttpClientServiceFactory.CreateHttpClientService
+    fullName: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService
+    name: CreateHttpClientService
+    nameWithType: IHttpClientServiceFactory.CreateHttpClientService
+    fullName: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)
+  commentId: M:IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)
+  parent: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory
+  isExternal: true
+  name: CreateHttpClientService(String)
+  nameWithType: IHttpClientServiceFactory.CreateHttpClientService(String)
+  fullName: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)
+  spec.csharp:
+  - uid: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)
+    name: CreateHttpClientService
+    nameWithType: IHttpClientServiceFactory.CreateHttpClientService
+    fullName: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)
+    name: CreateHttpClientService
+    nameWithType: IHttpClientServiceFactory.CreateHttpClientService
+    fullName: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

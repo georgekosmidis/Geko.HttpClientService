@@ -1,27 +1,15 @@
 {
   "homepages": [],
-  "source_base_path": "D:/_Code/github/IdentityServer4.HttpClientService",
+  "source_base_path": "D:/_Code/github/IdentityServer4.HttpClientService/docfx_project",
   "xrefmap": "xrefmap.yml",
   "files": [
-    {
-      "type": "Conceptual",
-      "source_relative_path": "README.md",
-      "output": {
-        ".html": {
-          "relative_path": "README.html",
-          "hash": "3MtVVgxoNQ7oURFFKB6Hlw=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
     {
       "type": "ManagedReference",
       "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.yml",
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.html",
-          "hash": "XFchv6vplBChk3eBrpqrZA=="
+          "hash": "NKJ/kK0OOkqNW1mob7+M3w=="
         }
       },
       "is_incremental": true,
@@ -33,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceGetExtensions.html",
-          "hash": "FK1WqjlYqQaeb8kdL8mcpQ=="
+          "hash": "1l6CSeaBPiVbNmBQdLkoZw=="
         }
       },
       "is_incremental": true,
@@ -45,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceHeadExtensions.html",
-          "hash": "iw1R2unZ0QZ+zj8u6OvCug=="
+          "hash": "jBlX1uvxXHZDJoF92ccEKQ=="
         }
       },
       "is_incremental": true,
@@ -57,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.html",
-          "hash": "mxhAcmPIvjXTe5gojjycGA=="
+          "hash": "5ehaRUcNOFWhwXjqfsOJnA=="
         }
       },
       "is_incremental": true,
@@ -69,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions.html",
-          "hash": "6qJPdVyOwpFkGlUaOGyJjw=="
+          "hash": "paZ4X1uuXmzSF8z8LfnVZw=="
         }
       },
       "is_incremental": true,
@@ -81,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions.html",
-          "hash": "8yMEodr1wwE+IQqzzjdocg=="
+          "hash": "3WCRPFhwpC4GFKj8D6nqqA=="
         }
       },
       "is_incremental": true,
@@ -93,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.ServiceCollectionExtensions.html",
-          "hash": "hWjg+E7XrNGprwnvfcT3hg=="
+          "hash": "21wpuMH2mQh+ALXQDEljSg=="
         }
       },
       "is_incremental": true,
@@ -105,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.html",
-          "hash": "DgLdg2HTpS1bymPoTYjm0A=="
+          "hash": "7aOqJ1vBmq0bHToO1LqfXg=="
         }
       },
       "is_incremental": true,
@@ -117,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html",
-          "hash": "kiGhRcYYSpguBi+Bi7aoBQ=="
+          "hash": "c2i5kEfsQyMxon7SOsEpsw=="
         }
       },
       "is_incremental": true,
@@ -129,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.html",
-          "hash": "SQh/jWN3g/pFdJ9tv8G2Ow=="
+          "hash": "KoztJ+uayzeUj3hg5olJFA=="
         }
       },
       "is_incremental": true,
@@ -141,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.html",
-          "hash": "9fewj9JQGVeJozKoyMWzWg=="
+          "hash": "1xT5WbYS6qxe50WIZcLFTA=="
         }
       },
       "is_incremental": true,
@@ -153,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.html",
-          "hash": "OZWCQVszQMIMuo5x9L19QQ=="
+          "hash": "CWJWLFLZTx/ACxHYnEFHiQ=="
         }
       },
       "is_incremental": true,
@@ -165,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.html",
-          "hash": "DF+aP0gAQBluSQx7dAVOOQ=="
+          "hash": "nLemWp5MSC7RfMtVPETcVw=="
         }
       },
       "is_incremental": true,
@@ -177,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager.html",
-          "hash": "hPenG/ENhqq4erbBy8EHSg=="
+          "hash": "roF15aD644OYsQ2f1kz28Q=="
         }
       },
       "is_incremental": true,
@@ -189,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.html",
-          "hash": "Yvp8HIV3Js0EqcOsLp2nZg=="
+          "hash": "pI6GnQMRmOGZjsPx1XT/0g=="
         }
       },
       "is_incremental": true,
@@ -201,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseCacheManager.html",
-          "hash": "7u9HQcnaS2CE/FdHSjf1wg=="
+          "hash": "wycCA+sW1NnnqudLtWuPOQ=="
         }
       },
       "is_incremental": true,
@@ -213,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.html",
-          "hash": "CTS1hQ06ruU8p7gycQIWkQ=="
+          "hash": "0OlRTXYOhXq4wo82y175dw=="
         }
       },
       "is_incremental": true,
@@ -225,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.html",
-          "hash": "QvPOsEWxd4LzYmtCxvvOdg=="
+          "hash": "AR0hiWDQHd9y8jUcaSUEvg=="
         }
       },
       "is_incremental": true,
@@ -237,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions.html",
-          "hash": "xiGk88h4jlrF+vNoMkIo+w=="
+          "hash": "CnGvyyk85t56X/Mkq/pnWQ=="
         }
       },
       "is_incremental": true,
@@ -249,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html",
-          "hash": "PPkMtdG8fztWAXm/O385Ww=="
+          "hash": "ZUnDltARvXkPFikBLAQk8A=="
         }
       },
       "is_incremental": true,
@@ -261,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.html",
-          "hash": "+gP/INOj7irHejkPwg8+cQ=="
+          "hash": "sv7J2LqjcNd2vc6F931ZFA=="
         }
       },
       "is_incremental": true,
@@ -273,7 +261,19 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.html",
-          "hash": "tsEf1jgymHrmJyiAFGqlBw=="
+          "hash": "pqyaS2nk4joNnrWt0dS6Dg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "wHms3NSrj2zt8ygf80pRHw=="
         }
       },
       "is_incremental": true,
@@ -286,6 +286,66 @@
         ".html": {
           "relative_path": "api/toc.html",
           "hash": "TvKbo4rYeLAYEjRK7A8TbA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "UalW1dPOY3yB4gSjvTYkAA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "gB8AESyvNru97tzIZofEEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "getting_started.md",
+      "output": {
+        ".html": {
+          "relative_path": "getting_started.html",
+          "hash": "6wAUspuzJ+tCsvvo7ALDug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "LitrW9OiD9mlDcZ24quRPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "oO9xvudh89pDzwM76kSv5A=="
         }
       },
       "is_incremental": false,
@@ -311,8 +371,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 1,
-          "skipped_file_count": 1
+          "total_file_count": 4,
+          "skipped_file_count": 4
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,

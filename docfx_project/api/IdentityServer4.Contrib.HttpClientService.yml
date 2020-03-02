@@ -1,0 +1,41 @@
+### YamlMime:ManagedReference
+items:
+- uid: IdentityServer4.Contrib.HttpClientService
+  commentId: N:IdentityServer4.Contrib.HttpClientService
+  id: IdentityServer4.Contrib.HttpClientService
+  children:
+  - IdentityServer4.Contrib.HttpClientService.HttpClientService
+  - IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
+  - IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory
+  langs:
+  - csharp
+  - vb
+  name: IdentityServer4.Contrib.HttpClientService
+  nameWithType: IdentityServer4.Contrib.HttpClientService
+  fullName: IdentityServer4.Contrib.HttpClientService
+  type: Namespace
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+references:
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService
+  commentId: T:IdentityServer4.Contrib.HttpClientService.HttpClientService
+  parent: IdentityServer4.Contrib.HttpClientService
+  name: HttpClientService
+  nameWithType: HttpClientService
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
+  commentId: T:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
+  name: HttpClientServiceFactory
+  nameWithType: HttpClientServiceFactory
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
+- uid: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory
+  commentId: T:IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory
+  parent: IdentityServer4.Contrib.HttpClientService
+  name: IHttpClientServiceFactory
+  nameWithType: IHttpClientServiceFactory
+  fullName: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory
+- uid: IdentityServer4.Contrib.HttpClientService
+  commentId: N:IdentityServer4.Contrib.HttpClientService
+  name: IdentityServer4.Contrib.HttpClientService
+  nameWithType: IdentityServer4.Contrib.HttpClientService
+  fullName: IdentityServer4.Contrib.HttpClientService

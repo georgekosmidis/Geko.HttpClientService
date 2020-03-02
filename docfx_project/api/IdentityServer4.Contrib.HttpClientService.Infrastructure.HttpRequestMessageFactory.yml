@@ -1,0 +1,509 @@
+### YamlMime:ManagedReference
+items:
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory
+  id: HttpRequestMessageFactory
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  children:
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.CreateRequestMessage
+  langs:
+  - csharp
+  - vb
+  name: HttpRequestMessageFactory
+  nameWithType: HttpRequestMessageFactory
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory
+  type: Class
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/HttpRequestMessageFactory.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: HttpRequestMessageFactory
+    path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/HttpRequestMessageFactory.cs
+    startLine: 9
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  summary: "\nA <xref href=\"System.Net.Http.HttpRequestMessage\" data-throw-if-not-resolved=\"false\"></xref> factory.\n"
+  example: []
+  syntax:
+    content: 'public class HttpRequestMessageFactory : IHttpRequestMessageFactory'
+    content.vb: >-
+      Public Class HttpRequestMessageFactory
+
+          Implements IHttpRequestMessageFactory
+  inheritance:
+  - System.Object
+  implements:
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)
+  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)
+  id: '#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)'
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory
+  langs:
+  - csharp
+  - vb
+  name: HttpRequestMessageFactory(IHttpContextAccessor)
+  nameWithType: HttpRequestMessageFactory.HttpRequestMessageFactory(IHttpContextAccessor)
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.HttpRequestMessageFactory(Microsoft.AspNetCore.Http.IHttpContextAccessor)
+  type: Constructor
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/HttpRequestMessageFactory.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: .ctor
+    path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/HttpRequestMessageFactory.cs
+    startLine: 17
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  summary: "\nConstructor of the  <xref href=\"IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public HttpRequestMessageFactory(IHttpContextAccessor httpContextAccessor)
+    parameters:
+    - id: httpContextAccessor
+      type: Microsoft.AspNetCore.Http.IHttpContextAccessor
+      description: 'The <xref href="Microsoft.AspNetCore.Http.HttpContextAccessor" data-throw-if-not-resolved="false"></xref> object to access <xref href="Microsoft.AspNetCore.Http.HttpContext" data-throw-if-not-resolved="false"></xref>. '
+    content.vb: Public Sub New(httpContextAccessor As IHttpContextAccessor)
+  overload: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.CreateRequestMessage
+  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.CreateRequestMessage
+  id: CreateRequestMessage
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateRequestMessage()
+  nameWithType: HttpRequestMessageFactory.CreateRequestMessage()
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.CreateRequestMessage()
+  type: Method
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/HttpRequestMessageFactory.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: CreateRequestMessage
+    path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/HttpRequestMessageFactory.cs
+    startLine: 28
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  summary: "\nAdds an <code>X-HttpClientService</code> header in the newly created <xref href=\"System.Net.Http.HttpRequestMessage\" data-throw-if-not-resolved=\"false\"></xref> by copying the <code>X-HttpClientService</code> of the current request.\nIf there is no current request or the current request does not contain a <code>X-HttpClientService</code> header, it creates a new one.\n"
+  remarks: This is useful to track in the logs a series of cascading requests between services.
+  example: []
+  syntax:
+    content: public HttpRequestMessage CreateRequestMessage()
+    return:
+      type: System.Net.Http.HttpRequestMessage
+      description: An <xref href="System.Net.Http.HttpRequestMessage" data-throw-if-not-resolved="false"></xref> to be used by an <xref href="System.Net.Http.HttpClient" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function CreateRequestMessage As HttpRequestMessage
+  overload: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.CreateRequestMessage*
+  implements:
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: System.Net.Http.HttpRequestMessage
+  commentId: T:System.Net.Http.HttpRequestMessage
+  parent: System.Net.Http
+  isExternal: true
+  name: HttpRequestMessage
+  nameWithType: HttpRequestMessage
+  fullName: System.Net.Http.HttpRequestMessage
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  commentId: N:IdentityServer4.Contrib.HttpClientService.Infrastructure
+  name: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  nameWithType: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  name: IHttpRequestMessageFactory
+  nameWithType: IHttpRequestMessageFactory
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Net.Http
+  commentId: N:System.Net.Http
+  isExternal: true
+  name: System.Net.Http
+  nameWithType: System.Net.Http
+  fullName: System.Net.Http
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory
+  name: HttpRequestMessageFactory
+  nameWithType: HttpRequestMessageFactory
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory
+- uid: Microsoft.AspNetCore.Http.HttpContextAccessor
+  commentId: T:Microsoft.AspNetCore.Http.HttpContextAccessor
+  isExternal: true
+- uid: Microsoft.AspNetCore.Http.HttpContext
+  commentId: T:Microsoft.AspNetCore.Http.HttpContext
+  isExternal: true
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor*
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor
+  name: HttpRequestMessageFactory
+  nameWithType: HttpRequestMessageFactory.HttpRequestMessageFactory
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.HttpRequestMessageFactory
+- uid: Microsoft.AspNetCore.Http.IHttpContextAccessor
+  commentId: T:Microsoft.AspNetCore.Http.IHttpContextAccessor
+  parent: Microsoft.AspNetCore.Http
+  isExternal: true
+  name: IHttpContextAccessor
+  nameWithType: IHttpContextAccessor
+  fullName: Microsoft.AspNetCore.Http.IHttpContextAccessor
+- uid: Microsoft.AspNetCore.Http
+  commentId: N:Microsoft.AspNetCore.Http
+  isExternal: true
+  name: Microsoft.AspNetCore.Http
+  nameWithType: Microsoft.AspNetCore.Http
+  fullName: Microsoft.AspNetCore.Http
+- uid: System.Net.Http.HttpClient
+  commentId: T:System.Net.Http.HttpClient
+  isExternal: true
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.CreateRequestMessage*
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.CreateRequestMessage
+  name: CreateRequestMessage
+  nameWithType: HttpRequestMessageFactory.CreateRequestMessage
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.CreateRequestMessage
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage
+  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+  name: CreateRequestMessage()
+  nameWithType: IHttpRequestMessageFactory.CreateRequestMessage()
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage()
+  spec.csharp:
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage
+    name: CreateRequestMessage
+    nameWithType: IHttpRequestMessageFactory.CreateRequestMessage
+    fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage
+    name: CreateRequestMessage
+    nameWithType: IHttpRequestMessageFactory.CreateRequestMessage
+    fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )

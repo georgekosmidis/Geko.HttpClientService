@@ -1,0 +1,274 @@
+### YamlMime:ManagedReference
+items:
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+  id: ITokenResponseService
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  children:
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync``1(Microsoft.Extensions.Options.IOptions{``0})
+  langs:
+  - csharp
+  - vb
+  name: ITokenResponseService
+  nameWithType: ITokenResponseService
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+  type: Interface
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/ITokenResponseService.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: ITokenResponseService
+    path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/ITokenResponseService.cs
+    startLine: 10
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  summary: "\nAbstraction for an access token service.\n"
+  example: []
+  syntax:
+    content: public interface ITokenResponseService
+    content.vb: Public Interface ITokenResponseService
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync``1(Microsoft.Extensions.Options.IOptions{``0})
+  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync``1(Microsoft.Extensions.Options.IOptions{``0})
+  id: GetTokenResponseAsync``1(Microsoft.Extensions.Options.IOptions{``0})
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+  langs:
+  - csharp
+  - vb
+  name: GetTokenResponseAsync<TTokenServiceOptions>(IOptions<TTokenServiceOptions>)
+  nameWithType: ITokenResponseService.GetTokenResponseAsync<TTokenServiceOptions>(IOptions<TTokenServiceOptions>)
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync<TTokenServiceOptions>(Microsoft.Extensions.Options.IOptions<TTokenServiceOptions>)
+  type: Method
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/ITokenResponseService.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: GetTokenResponseAsync
+    path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/ITokenResponseService.cs
+    startLine: 18
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  summary: "\nRetrieves a <xref href=\"IdentityModel.Client.TokenResponse\" data-throw-if-not-resolved=\"false\"></xref>  from the configured Identity Server\n"
+  example: []
+  syntax:
+    content: >-
+      Task<TokenResponse> GetTokenResponseAsync<TTokenServiceOptions>(IOptions<TTokenServiceOptions> options)
+
+          where TTokenServiceOptions : DefaultClientCredentialOptions, new()
+    parameters:
+    - id: options
+      type: Microsoft.Extensions.Options.IOptions{{TTokenServiceOptions}}
+      description: The token service options
+    typeParameters:
+    - id: TTokenServiceOptions
+      description: A type that inherits from the <xref href="IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions" data-throw-if-not-resolved="false"></xref> onject
+    return:
+      type: System.Threading.Tasks.Task{IdentityModel.Client.TokenResponse}
+      description: A <xref href="IdentityModel.Client.TokenResponse" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Function GetTokenResponseAsync(Of TTokenServiceOptions As {DefaultClientCredentialOptions, New})(options As IOptions(Of TTokenServiceOptions)) As Task(Of TokenResponse)
+  overload: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync*
+  nameWithType.vb: ITokenResponseService.GetTokenResponseAsync(Of TTokenServiceOptions)(IOptions(Of TTokenServiceOptions))
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync(Of TTokenServiceOptions)(Microsoft.Extensions.Options.IOptions(Of TTokenServiceOptions))
+  name.vb: GetTokenResponseAsync(Of TTokenServiceOptions)(IOptions(Of TTokenServiceOptions))
+references:
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  commentId: N:IdentityServer4.Contrib.HttpClientService.Infrastructure
+  name: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  nameWithType: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure
+- uid: IdentityModel.Client.TokenResponse
+  commentId: T:IdentityModel.Client.TokenResponse
+  isExternal: true
+- uid: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
+  name: DefaultClientCredentialOptions
+  nameWithType: DefaultClientCredentialOptions
+  fullName: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync*
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync
+  name: GetTokenResponseAsync
+  nameWithType: ITokenResponseService.GetTokenResponseAsync
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync
+- uid: Microsoft.Extensions.Options.IOptions{{TTokenServiceOptions}}
+  commentId: T:Microsoft.Extensions.Options.IOptions{``0}
+  parent: Microsoft.Extensions.Options
+  definition: Microsoft.Extensions.Options.IOptions`1
+  name: IOptions<TTokenServiceOptions>
+  nameWithType: IOptions<TTokenServiceOptions>
+  fullName: Microsoft.Extensions.Options.IOptions<TTokenServiceOptions>
+  nameWithType.vb: IOptions(Of TTokenServiceOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TTokenServiceOptions)
+  name.vb: IOptions(Of TTokenServiceOptions)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TTokenServiceOptions
+    nameWithType: TTokenServiceOptions
+    fullName: TTokenServiceOptions
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TTokenServiceOptions
+    nameWithType: TTokenServiceOptions
+    fullName: TTokenServiceOptions
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task{IdentityModel.Client.TokenResponse}
+  commentId: T:System.Threading.Tasks.Task{IdentityModel.Client.TokenResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<TokenResponse>
+  nameWithType: Task<TokenResponse>
+  fullName: System.Threading.Tasks.Task<IdentityModel.Client.TokenResponse>
+  nameWithType.vb: Task(Of TokenResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of IdentityModel.Client.TokenResponse)
+  name.vb: Task(Of TokenResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IdentityModel.Client.TokenResponse
+    name: TokenResponse
+    nameWithType: TokenResponse
+    fullName: IdentityModel.Client.TokenResponse
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IdentityModel.Client.TokenResponse
+    name: TokenResponse
+    nameWithType: TokenResponse
+    fullName: IdentityModel.Client.TokenResponse
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.Extensions.Options.IOptions`1
+  commentId: T:Microsoft.Extensions.Options.IOptions`1
+  isExternal: true
+  name: IOptions<TOptions>
+  nameWithType: IOptions<TOptions>
+  fullName: Microsoft.Extensions.Options.IOptions<TOptions>
+  nameWithType.vb: IOptions(Of TOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TOptions)
+  name.vb: IOptions(Of TOptions)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TOptions
+    nameWithType: TOptions
+    fullName: TOptions
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TOptions
+    nameWithType: TOptions
+    fullName: TOptions
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.Extensions.Options
+  commentId: N:Microsoft.Extensions.Options
+  isExternal: true
+  name: Microsoft.Extensions.Options
+  nameWithType: Microsoft.Extensions.Options
+  fullName: Microsoft.Extensions.Options
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks

@@ -1,0 +1,50 @@
+### YamlMime:TableOfContent
+- uid: IdentityServer4.Contrib.HttpClientService
+  name: IdentityServer4.Contrib.HttpClientService
+  items:
+  - uid: IdentityServer4.Contrib.HttpClientService.HttpClientService
+    name: HttpClientService
+  - uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
+    name: HttpClientServiceFactory
+  - uid: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory
+    name: IHttpClientServiceFactory
+- uid: IdentityServer4.Contrib.HttpClientService.Extensions
+  name: IdentityServer4.Contrib.HttpClientService.Extensions
+  items:
+  - uid: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceDeleteExtensions
+    name: HttpClientServiceDeleteExtensions
+  - uid: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceGetExtensions
+    name: HttpClientServiceGetExtensions
+  - uid: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceHeadExtensions
+    name: HttpClientServiceHeadExtensions
+  - uid: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions
+    name: HttpClientServicePatchExtensions
+  - uid: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions
+    name: HttpClientServicePostExtensions
+  - uid: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions
+    name: HttpClientServicePutExtensions
+  - uid: IdentityServer4.Contrib.HttpClientService.Extensions.ServiceCollectionExtensions
+    name: ServiceCollectionExtensions
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  name: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  items:
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory
+    name: HttpRequestMessageFactory
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+    name: IHttpRequestMessageFactory
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager
+    name: ITokenResponseCacheManager
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+    name: ITokenResponseService
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseCacheManager
+    name: TokenResponseCacheManager
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
+    name: TokenResponseService
+- uid: IdentityServer4.Contrib.HttpClientService.Models
+  name: IdentityServer4.Contrib.HttpClientService.Models
+  items:
+  - uid: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
+    name: DefaultClientCredentialOptions
+  - uid: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1
+    name: ResponseObject<TResponseBody>
+    name.vb: ResponseObject(Of TResponseBody)

@@ -1,0 +1,898 @@
+### YamlMime:ManagedReference
+items:
+- uid: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions
+  id: HttpClientServicePatchExtensions
+  parent: IdentityServer4.Contrib.HttpClientService.Extensions
+  children:
+  - IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.String)
+  - IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.Net.Http.StreamContent)
+  - IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.Net.Http.StringContent)
+  - IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.String)
+  - IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``2(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,``0)
+  langs:
+  - csharp
+  - vb
+  name: HttpClientServicePatchExtensions
+  nameWithType: HttpClientServicePatchExtensions
+  fullName: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions
+  type: Class
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePatchExtensions.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: HttpClientServicePatchExtensions
+    path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePatchExtensions.cs
+    startLine: 11
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService.Extensions
+  summary: "\nStatic object for <xref href=\"IdentityServer4.Contrib.HttpClientService.HttpClientService\" data-throw-if-not-resolved=\"false\"></xref> extensions.\n"
+  example: []
+  syntax:
+    content: public static class HttpClientServicePatchExtensions
+    content.vb: Public Module HttpClientServicePatchExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``2(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,``0)
+  commentId: M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``2(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,``0)
+  id: PatchAsync``2(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,``0)
+  isExtensionMethod: true
+  parent: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions
+  langs:
+  - csharp
+  - vb
+  name: PatchAsync<TRequestBody, TResponseBody>(HttpClientService, String, TRequestBody)
+  nameWithType: HttpClientServicePatchExtensions.PatchAsync<TRequestBody, TResponseBody>(HttpClientService, String, TRequestBody)
+  fullName: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync<TRequestBody, TResponseBody>(IdentityServer4.Contrib.HttpClientService.HttpClientService, System.String, TRequestBody)
+  type: Method
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePatchExtensions.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: PatchAsync
+    path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePatchExtensions.cs
+    startLine: 97
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService.Extensions
+  summary: "\nSends a PATCH request to the specified <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestUri</code> using <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestBody</code> as the body of the request\nwith <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TRequestBody</code> as the type of the <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestBody</code>.\nReturns the response wrapped in a <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601\" data-throw-if-not-resolved=\"false\"></xref>.\n<table><thead><tr><th></th><th></th></tr></thead><tbody><tr><td><code>String</code></td><td> in the <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601.BodyAsString\" data-throw-if-not-resolved=\"false\"></xref> property</td></tr><tr><td><code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TResponseBody</code></td><td> in the <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601.BodyAsType\" data-throw-if-not-resolved=\"false\"></xref> property</td></tr><tr><td><code>Stream</code></td><td> in the <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601.BodyAsStream\" data-throw-if-not-resolved=\"false\"></xref> property</td></tr></tbody></table>\n"
+  example: []
+  syntax:
+    content: public static Task<ResponseObject<TResponseBody>> PatchAsync<TRequestBody, TResponseBody>(this HttpClientService httpClientService, string requestUri, TRequestBody requestBody)
+    parameters:
+    - id: httpClientService
+      type: IdentityServer4.Contrib.HttpClientService.HttpClientService
+      description: The <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> that gets extended.
+    - id: requestUri
+      type: System.String
+      description: A string representing the resource to be called.
+    - id: requestBody
+      type: '{TRequestBody}'
+      description: The body of the request.
+    typeParameters:
+    - id: TRequestBody
+      description: "\nThe type of the request body. The type used can be one of the following:\n<ul><li><xref href=\"System.Net.Http.StringContent\" data-throw-if-not-resolved=\"false\"></xref>Use <xref href=\"System.Net.Http.StringContent\" data-throw-if-not-resolved=\"false\"></xref> to define Encoding and/or ContentType for an HTTP content based on string.</li><li><xref href=\"System.Net.Http.StreamContent\" data-throw-if-not-resolved=\"false\"></xref>Use <xref href=\"System.Net.Http.StreamContent\" data-throw-if-not-resolved=\"false\"></xref> to provide HTTP content based on a stream.</li><li>A serializable complex typeAny serializable object that will be serialized and sent in the body of the request.</li><li>A simple typeAny other simple type that will be sent in the body of the request.</li></ul>\n"
+    - id: TResponseBody
+      description: "\nThe type of the property <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601.BodyAsType\" data-throw-if-not-resolved=\"false\"></xref> of the <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601\" data-throw-if-not-resolved=\"false\"></xref> object,\nthat will contain the body of the response deserialized or casted to type <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TResponseBody</code>. \nThe type used can be one of the following:\n<ul><li><xref href=\"System.Net.Http.StringContent\" data-throw-if-not-resolved=\"false\"></xref>Use <xref href=\"System.Net.Http.StringContent\" data-throw-if-not-resolved=\"false\"></xref> to define Encoding and/or ContentType for an HTTP content based on string.</li><li><xref href=\"System.Net.Http.StreamContent\" data-throw-if-not-resolved=\"false\"></xref>Use <xref href=\"System.Net.Http.StreamContent\" data-throw-if-not-resolved=\"false\"></xref> to provide HTTP content based on a stream.</li><li>A serializable complex typeAny serializable object to attempt to deserialize the body of the response to it.</li><li>A simple typeAny other simple type to try convert the body of the response to it.</li></ul>\n"
+    return:
+      type: System.Threading.Tasks.Task{IdentityServer4.Contrib.HttpClientService.Models.ResponseObject{{TResponseBody}}}
+      description: "\nA <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601\" data-throw-if-not-resolved=\"false\"></xref> containing the body of the response \nas <code>String</code> in the <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601.BodyAsString\" data-throw-if-not-resolved=\"false\"></xref> property,\nas <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TResponseBody</code> in the <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601.BodyAsType\" data-throw-if-not-resolved=\"false\"></xref> and,\nas <code>Stream</code> in the <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601.BodyAsStream\" data-throw-if-not-resolved=\"false\"></xref> property.\nThe <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TResponseBody</code> can be of the following:\n<ul><li><xref href=\"System.Net.Http.StringContent\" data-throw-if-not-resolved=\"false\"></xref>Use <xref href=\"System.Net.Http.StringContent\" data-throw-if-not-resolved=\"false\"></xref> to define Encoding and/or ContentType for an HTTP content based on string.</li><li><xref href=\"System.Net.Http.StreamContent\" data-throw-if-not-resolved=\"false\"></xref>Use <xref href=\"System.Net.Http.StreamContent\" data-throw-if-not-resolved=\"false\"></xref> to provide HTTP content based on a stream.</li><li>A serializable complex typeAny serializable object to attempt to deserialize the body of the response to it.</li><li>A simple typeAny other simple type to try convert the body of the response to it.</li></ul>\n"
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function PatchAsync(Of TRequestBody, TResponseBody)(httpClientService As HttpClientService, requestUri As String, requestBody As TRequestBody) As Task(Of ResponseObject(Of TResponseBody))
+  overload: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync*
+  nameWithType.vb: HttpClientServicePatchExtensions.PatchAsync(Of TRequestBody, TResponseBody)(HttpClientService, String, TRequestBody)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Of TRequestBody, TResponseBody)(IdentityServer4.Contrib.HttpClientService.HttpClientService, System.String, TRequestBody)
+  name.vb: PatchAsync(Of TRequestBody, TResponseBody)(HttpClientService, String, TRequestBody)
+- uid: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.String)
+  commentId: M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.String)
+  id: PatchAsync(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.String)
+  isExtensionMethod: true
+  parent: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions
+  langs:
+  - csharp
+  - vb
+  name: PatchAsync(HttpClientService, String, String)
+  nameWithType: HttpClientServicePatchExtensions.PatchAsync(HttpClientService, String, String)
+  fullName: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(IdentityServer4.Contrib.HttpClientService.HttpClientService, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePatchExtensions.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: PatchAsync
+    path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePatchExtensions.cs
+    startLine: 113
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService.Extensions
+  summary: "\nSends a PATCH request to the specified <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestUri</code> using <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestBody</code> as the body of the request.\nReturns the response in the <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601.BodyAsString\" data-throw-if-not-resolved=\"false\"></xref> property.\n"
+  example: []
+  syntax:
+    content: public static Task<ResponseObject<string>> PatchAsync(this HttpClientService httpClientService, string requestUri, string requestBody)
+    parameters:
+    - id: httpClientService
+      type: IdentityServer4.Contrib.HttpClientService.HttpClientService
+      description: The <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> that gets extended.
+    - id: requestUri
+      type: System.String
+      description: A string representing the resource to be called.
+    - id: requestBody
+      type: System.String
+      description: The body of the request.
+    return:
+      type: System.Threading.Tasks.Task{IdentityServer4.Contrib.HttpClientService.Models.ResponseObject{System.String}}
+      description: "\nA <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601\" data-throw-if-not-resolved=\"false\"></xref> containing the body of the response\nas <code>String</code> in the <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601.BodyAsString\" data-throw-if-not-resolved=\"false\"></xref> property.\n"
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function PatchAsync(httpClientService As HttpClientService, requestUri As String, requestBody As String) As Task(Of ResponseObject(Of String))
+  overload: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.String)
+  commentId: M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.String)
+  id: PatchAsync``1(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.String)
+  isExtensionMethod: true
+  parent: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions
+  langs:
+  - csharp
+  - vb
+  name: PatchAsync<TResponseBody>(HttpClientService, String, String)
+  nameWithType: HttpClientServicePatchExtensions.PatchAsync<TResponseBody>(HttpClientService, String, String)
+  fullName: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync<TResponseBody>(IdentityServer4.Contrib.HttpClientService.HttpClientService, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePatchExtensions.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: PatchAsync
+    path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePatchExtensions.cs
+    startLine: 152
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService.Extensions
+  summary: "\nSends a PATCH request to the specified <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestUri</code> using <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestBody</code> as the body of the request.\nReturns the response in the <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601.BodyAsString\" data-throw-if-not-resolved=\"false\"></xref> property.\n"
+  example: []
+  syntax:
+    content: public static Task<ResponseObject<TResponseBody>> PatchAsync<TResponseBody>(this HttpClientService httpClientService, string requestUri, string requestBody)
+    parameters:
+    - id: httpClientService
+      type: IdentityServer4.Contrib.HttpClientService.HttpClientService
+      description: The <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> that gets extended.
+    - id: requestUri
+      type: System.String
+      description: A string representing the resource to be called.
+    - id: requestBody
+      type: System.String
+      description: The body of the request.
+    typeParameters:
+    - id: TResponseBody
+      description: "\nThe type of the property <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601.BodyAsType\" data-throw-if-not-resolved=\"false\"></xref> of the <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601\" data-throw-if-not-resolved=\"false\"></xref> object,\nthat will contain the body of the response deserialized or casted to type <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TResponseBody</code>. \nThe type used can be one of the following:\n<ul><li><xref href=\"System.Net.Http.StringContent\" data-throw-if-not-resolved=\"false\"></xref>Use <xref href=\"System.Net.Http.StringContent\" data-throw-if-not-resolved=\"false\"></xref> to define Encoding and/or ContentType for an HTTP content based on string.</li><li><xref href=\"System.Net.Http.StreamContent\" data-throw-if-not-resolved=\"false\"></xref>Use <xref href=\"System.Net.Http.StreamContent\" data-throw-if-not-resolved=\"false\"></xref> to provide HTTP content based on a stream.</li><li>A serializable complex typeAny serializable object to attempt to deserialize the body of the response to it.</li><li>A simple typeAny other simple type to try convert the body of the response to it.</li></ul>\n"
+    return:
+      type: System.Threading.Tasks.Task{IdentityServer4.Contrib.HttpClientService.Models.ResponseObject{{TResponseBody}}}
+      description: "\nA <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601\" data-throw-if-not-resolved=\"false\"></xref> containing the body of the response\nas <code>String</code> in the <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601.BodyAsString\" data-throw-if-not-resolved=\"false\"></xref> property.\n"
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function PatchAsync(Of TResponseBody)(httpClientService As HttpClientService, requestUri As String, requestBody As String) As Task(Of ResponseObject(Of TResponseBody))
+  overload: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync*
+  nameWithType.vb: HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)(HttpClientService, String, String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)(IdentityServer4.Contrib.HttpClientService.HttpClientService, System.String, System.String)
+  name.vb: PatchAsync(Of TResponseBody)(HttpClientService, String, String)
+- uid: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.Net.Http.StringContent)
+  commentId: M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.Net.Http.StringContent)
+  id: PatchAsync``1(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.Net.Http.StringContent)
+  isExtensionMethod: true
+  parent: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions
+  langs:
+  - csharp
+  - vb
+  name: PatchAsync<TResponseBody>(HttpClientService, String, StringContent)
+  nameWithType: HttpClientServicePatchExtensions.PatchAsync<TResponseBody>(HttpClientService, String, StringContent)
+  fullName: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync<TResponseBody>(IdentityServer4.Contrib.HttpClientService.HttpClientService, System.String, System.Net.Http.StringContent)
+  type: Method
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePatchExtensions.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: PatchAsync
+    path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePatchExtensions.cs
+    startLine: 191
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService.Extensions
+  summary: "\nSends a PATCH request to the specified <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestUri</code> using <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestBody</code> as the body of the request.\nReturns the response in the <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601.BodyAsString\" data-throw-if-not-resolved=\"false\"></xref> property.\n"
+  example: []
+  syntax:
+    content: public static Task<ResponseObject<TResponseBody>> PatchAsync<TResponseBody>(this HttpClientService httpClientService, string requestUri, StringContent requestBody)
+    parameters:
+    - id: httpClientService
+      type: IdentityServer4.Contrib.HttpClientService.HttpClientService
+      description: The <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> that gets extended.
+    - id: requestUri
+      type: System.String
+      description: A string representing the resource to be called.
+    - id: requestBody
+      type: System.Net.Http.StringContent
+      description: The body of the request.
+    typeParameters:
+    - id: TResponseBody
+      description: "\nThe type of the property <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601.BodyAsType\" data-throw-if-not-resolved=\"false\"></xref> of the <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601\" data-throw-if-not-resolved=\"false\"></xref> object,\nthat will contain the body of the response deserialized or casted to type <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TResponseBody</code>. \nThe type used can be one of the following:\n<ul><li><xref href=\"System.Net.Http.StringContent\" data-throw-if-not-resolved=\"false\"></xref>Use <xref href=\"System.Net.Http.StringContent\" data-throw-if-not-resolved=\"false\"></xref> to define Encoding and/or ContentType for an HTTP content based on string.</li><li><xref href=\"System.Net.Http.StreamContent\" data-throw-if-not-resolved=\"false\"></xref>Use <xref href=\"System.Net.Http.StreamContent\" data-throw-if-not-resolved=\"false\"></xref> to provide HTTP content based on a stream.</li><li>A serializable complex typeAny serializable object to attempt to deserialize the body of the response to it.</li><li>A simple typeAny other simple type to try convert the body of the response to it.</li></ul>\n"
+    return:
+      type: System.Threading.Tasks.Task{IdentityServer4.Contrib.HttpClientService.Models.ResponseObject{{TResponseBody}}}
+      description: "\nA <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601\" data-throw-if-not-resolved=\"false\"></xref> containing the body of the response\nas <code>String</code> in the <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601.BodyAsString\" data-throw-if-not-resolved=\"false\"></xref> property.\n"
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function PatchAsync(Of TResponseBody)(httpClientService As HttpClientService, requestUri As String, requestBody As StringContent) As Task(Of ResponseObject(Of TResponseBody))
+  overload: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync*
+  nameWithType.vb: HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)(HttpClientService, String, StringContent)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)(IdentityServer4.Contrib.HttpClientService.HttpClientService, System.String, System.Net.Http.StringContent)
+  name.vb: PatchAsync(Of TResponseBody)(HttpClientService, String, StringContent)
+- uid: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.Net.Http.StreamContent)
+  commentId: M:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.Net.Http.StreamContent)
+  id: PatchAsync``1(IdentityServer4.Contrib.HttpClientService.HttpClientService,System.String,System.Net.Http.StreamContent)
+  isExtensionMethod: true
+  parent: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions
+  langs:
+  - csharp
+  - vb
+  name: PatchAsync<TResponseBody>(HttpClientService, String, StreamContent)
+  nameWithType: HttpClientServicePatchExtensions.PatchAsync<TResponseBody>(HttpClientService, String, StreamContent)
+  fullName: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync<TResponseBody>(IdentityServer4.Contrib.HttpClientService.HttpClientService, System.String, System.Net.Http.StreamContent)
+  type: Method
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePatchExtensions.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: PatchAsync
+    path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePatchExtensions.cs
+    startLine: 230
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService.Extensions
+  summary: "\nSends a PATCH request to the specified <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestUri</code> using <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestBody</code> as the body of the request.\nReturns the response in the <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601.BodyAsType\" data-throw-if-not-resolved=\"false\"></xref> property.\n"
+  example: []
+  syntax:
+    content: public static Task<ResponseObject<TResponseBody>> PatchAsync<TResponseBody>(this HttpClientService httpClientService, string requestUri, StreamContent requestBody)
+    parameters:
+    - id: httpClientService
+      type: IdentityServer4.Contrib.HttpClientService.HttpClientService
+      description: The <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> that gets extended.
+    - id: requestUri
+      type: System.String
+      description: A string representing the resource to be called.
+    - id: requestBody
+      type: System.Net.Http.StreamContent
+      description: The body of the request.
+    typeParameters:
+    - id: TResponseBody
+      description: "\nThe type of the property <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601.BodyAsType\" data-throw-if-not-resolved=\"false\"></xref> of the <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601\" data-throw-if-not-resolved=\"false\"></xref> object,\nthat will contain the body of the response deserialized or casted to type <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TResponseBody</code>. \nThe type used can be one of the following:\n<ul><li><xref href=\"System.Net.Http.StringContent\" data-throw-if-not-resolved=\"false\"></xref>Use <xref href=\"System.Net.Http.StringContent\" data-throw-if-not-resolved=\"false\"></xref> to define Encoding and/or ContentType for an HTTP content based on string.</li><li><xref href=\"System.Net.Http.StreamContent\" data-throw-if-not-resolved=\"false\"></xref>Use <xref href=\"System.Net.Http.StreamContent\" data-throw-if-not-resolved=\"false\"></xref> to provide HTTP content based on a stream.</li><li>A serializable complex typeAny serializable object to attempt to deserialize the body of the response to it.</li><li>A simple typeAny other simple type to try convert the body of the response to it.</li></ul>\n"
+    return:
+      type: System.Threading.Tasks.Task{IdentityServer4.Contrib.HttpClientService.Models.ResponseObject{{TResponseBody}}}
+      description: "\nA <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601\" data-throw-if-not-resolved=\"false\"></xref> containing the body of the response\nas <code>String</code> in the <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601.BodyAsString\" data-throw-if-not-resolved=\"false\"></xref> property.\n"
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function PatchAsync(Of TResponseBody)(httpClientService As HttpClientService, requestUri As String, requestBody As StreamContent) As Task(Of ResponseObject(Of TResponseBody))
+  overload: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync*
+  nameWithType.vb: HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)(HttpClientService, String, StreamContent)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)(IdentityServer4.Contrib.HttpClientService.HttpClientService, System.String, System.Net.Http.StreamContent)
+  name.vb: PatchAsync(Of TResponseBody)(HttpClientService, String, StreamContent)
+references:
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService
+  commentId: T:IdentityServer4.Contrib.HttpClientService.HttpClientService
+  parent: IdentityServer4.Contrib.HttpClientService
+  name: HttpClientService
+  nameWithType: HttpClientService
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService
+- uid: IdentityServer4.Contrib.HttpClientService.Extensions
+  commentId: N:IdentityServer4.Contrib.HttpClientService.Extensions
+  name: IdentityServer4.Contrib.HttpClientService.Extensions
+  nameWithType: IdentityServer4.Contrib.HttpClientService.Extensions
+  fullName: IdentityServer4.Contrib.HttpClientService.Extensions
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IdentityServer4.Contrib.HttpClientService
+  commentId: N:IdentityServer4.Contrib.HttpClientService
+  name: IdentityServer4.Contrib.HttpClientService
+  nameWithType: IdentityServer4.Contrib.HttpClientService
+  fullName: IdentityServer4.Contrib.HttpClientService
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1
+  name: ResponseObject<TResponseBody>
+  nameWithType: ResponseObject<TResponseBody>
+  fullName: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject<TResponseBody>
+  nameWithType.vb: ResponseObject(Of TResponseBody)
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject(Of TResponseBody)
+  name.vb: ResponseObject(Of TResponseBody)
+  spec.csharp:
+  - uid: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1
+    name: ResponseObject
+    nameWithType: ResponseObject
+    fullName: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResponseBody
+    nameWithType: TResponseBody
+    fullName: TResponseBody
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1
+    name: ResponseObject
+    nameWithType: ResponseObject
+    fullName: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResponseBody
+    nameWithType: TResponseBody
+    fullName: TResponseBody
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString
+  commentId: P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsString
+  isExternal: true
+- uid: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsType
+  commentId: P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsType
+  isExternal: true
+- uid: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsStream
+  commentId: P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsStream
+  isExternal: true
+- uid: System.Net.Http.StringContent
+  commentId: T:System.Net.Http.StringContent
+  parent: System.Net.Http
+  isExternal: true
+  name: StringContent
+  nameWithType: StringContent
+  fullName: System.Net.Http.StringContent
+- uid: System.Net.Http.StreamContent
+  commentId: T:System.Net.Http.StreamContent
+  parent: System.Net.Http
+  isExternal: true
+  name: StreamContent
+  nameWithType: StreamContent
+  fullName: System.Net.Http.StreamContent
+- uid: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync*
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync
+  name: PatchAsync
+  nameWithType: HttpClientServicePatchExtensions.PatchAsync
+  fullName: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: '{TRequestBody}'
+  commentId: '!:TRequestBody'
+  definition: TRequestBody
+  name: TRequestBody
+  nameWithType: TRequestBody
+  fullName: TRequestBody
+- uid: System.Threading.Tasks.Task{IdentityServer4.Contrib.HttpClientService.Models.ResponseObject{{TResponseBody}}}
+  commentId: T:System.Threading.Tasks.Task{IdentityServer4.Contrib.HttpClientService.Models.ResponseObject{``1}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<ResponseObject<TResponseBody>>
+  nameWithType: Task<ResponseObject<TResponseBody>>
+  fullName: System.Threading.Tasks.Task<IdentityServer4.Contrib.HttpClientService.Models.ResponseObject<TResponseBody>>
+  nameWithType.vb: Task(Of ResponseObject(Of TResponseBody))
+  fullName.vb: System.Threading.Tasks.Task(Of IdentityServer4.Contrib.HttpClientService.Models.ResponseObject(Of TResponseBody))
+  name.vb: Task(Of ResponseObject(Of TResponseBody))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1
+    name: ResponseObject
+    nameWithType: ResponseObject
+    fullName: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResponseBody
+    nameWithType: TResponseBody
+    fullName: TResponseBody
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1
+    name: ResponseObject
+    nameWithType: ResponseObject
+    fullName: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResponseBody
+    nameWithType: TResponseBody
+    fullName: TResponseBody
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Net.Http
+  commentId: N:System.Net.Http
+  isExternal: true
+  name: System.Net.Http
+  nameWithType: System.Net.Http
+  fullName: System.Net.Http
+- uid: TRequestBody
+  name: TRequestBody
+  nameWithType: TRequestBody
+  fullName: TRequestBody
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: System.Threading.Tasks.Task{IdentityServer4.Contrib.HttpClientService.Models.ResponseObject{System.String}}
+  commentId: T:System.Threading.Tasks.Task{IdentityServer4.Contrib.HttpClientService.Models.ResponseObject{System.String}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<ResponseObject<String>>
+  nameWithType: Task<ResponseObject<String>>
+  fullName: System.Threading.Tasks.Task<IdentityServer4.Contrib.HttpClientService.Models.ResponseObject<System.String>>
+  nameWithType.vb: Task(Of ResponseObject(Of String))
+  fullName.vb: System.Threading.Tasks.Task(Of IdentityServer4.Contrib.HttpClientService.Models.ResponseObject(Of System.String))
+  name.vb: Task(Of ResponseObject(Of String))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1
+    name: ResponseObject
+    nameWithType: ResponseObject
+    fullName: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1
+    name: ResponseObject
+    nameWithType: ResponseObject
+    fullName: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )

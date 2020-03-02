@@ -32,9 +32,8 @@ steps:
     configuration: 'Release'
     versioningScheme: 'off'
 
-- task: PublishBuildArtifacts@1
-  displayName: 'Artifacts'
+- task: PublishPipelineArtifact@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'drop'
-    publishLocation: 'Container'
+    targetPath: '$(Pipeline.Workspace)'
+    artifact: 'IdentityServer4.Contrib.HttpClientService'
+    publishLocation: 'pipeline'

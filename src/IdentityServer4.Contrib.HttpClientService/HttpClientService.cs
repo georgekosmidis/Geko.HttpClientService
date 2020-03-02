@@ -96,10 +96,10 @@ namespace IdentityServer4.Contrib.HttpClientService
         /// <summary>
         /// Sets the IdentityServer4 options for retrieving an access token using client credentials.
         /// </summary>
-        /// <typeparam name="TIdentityServiceOptions">A type that inherits from the <see cref="DefaultClientCredentialOptions"/> onject.</typeparam>
+        /// <typeparam name="TIdentityServerOptions">A type that inherits from the <see cref="DefaultClientCredentialOptions"/> onject.</typeparam>
         /// <param name="options">The token service options.</param>
         /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
-        public HttpClientService SetIdentityServerOptions<TIdentityServiceOptions>(IOptions<TIdentityServiceOptions> options) where TIdentityServiceOptions : DefaultClientCredentialOptions, new()
+        public HttpClientService SetIdentityServerOptions<TIdentityServerOptions>(IOptions<TIdentityServerOptions> options) where TIdentityServerOptions : DefaultClientCredentialOptions, new()
         {
             if (options == null)
             {
@@ -107,15 +107,15 @@ namespace IdentityServer4.Contrib.HttpClientService
             }
             if (options.Value.Address == null)
             {
-                throw new ArgumentNullException(nameof(options.Value.Address), "Is there an " + typeof(TIdentityServiceOptions).Name + " section in the appsettings.json?");
+                throw new ArgumentNullException(nameof(options.Value.Address), "Is there an " + typeof(TIdentityServerOptions).Name + " section in the appsettings.json?");
             }
             if (options.Value.ClientId == null)
             {
-                throw new ArgumentNullException(nameof(options.Value.ClientId), "Is there a " + typeof(TIdentityServiceOptions).Name + " section in the appsettings.json?");
+                throw new ArgumentNullException(nameof(options.Value.ClientId), "Is there a " + typeof(TIdentityServerOptions).Name + " section in the appsettings.json?");
             }
             if (options.Value.ClientSecret == null)
             {
-                throw new ArgumentNullException(nameof(options.Value.ClientSecret), "Is there a " + typeof(TIdentityServiceOptions).Name + " section in the appsettings.json?");
+                throw new ArgumentNullException(nameof(options.Value.ClientSecret), "Is there a " + typeof(TIdentityServerOptions).Name + " section in the appsettings.json?");
             }
 
             _options = options;

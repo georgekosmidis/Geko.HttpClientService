@@ -42,6 +42,21 @@ namespace IdentityServer4.Contrib.HttpClientService
             httpRequestMessage = requestMessageFactory.CreateRequestMessage();
         }
 
+        /// <summary>
+        /// Constructor for the <see cref="HttpClientService"/> without the <see cref="IConfiguration" />  dependency.
+        /// The <see cref="HttpClientService.SetIdentityServerOptions(string)" /> will throw an <see cref="InvalidOperationException" /> with this constructor,
+        /// please use the <see cref="HttpClientService.SetIdentityServerOptions{TTokenServiceOptions}(IOptions{TTokenServiceOptions})".
+        /// </summary>
+        /// <param name="httpClientFactory">The <see cref="IHttpClientFactory"/> to create an <see cref="HttpClient"/>.</param>
+        /// <param name="requestMessageFactory">The <see cref="IHttpRequestMessageFactory"/> to get a new <see cref="HttpRequestMessage"/>.</param>
+        /// <param name="accessTokenService">The <see cref="ITokenResponseService"/> to retrieve a token, if required.</param>
+        public HttpClientService(IHttpClientFactory httpClientFactory, IHttpRequestMessageFactory requestMessageFactory, ITokenResponseService accessTokenService)
+        {
+            _httpClientFactory = httpClientFactory;
+            _accessTokenService = accessTokenService;
+            httpRequestMessage = requestMessageFactory.CreateRequestMessage();
+        }
+
         internal HttpClientService CreateHttpClient(string name)
         {
             httpClient = _httpClientFactory.CreateClient(name);
@@ -65,6 +80,9 @@ namespace IdentityServer4.Contrib.HttpClientService
         /// <returns></returns>
         public HttpClientService SetIdentityServerOptions(string configurationSection)
         {
+            if (_configuration == null)
+                throw new InvalidOperationException("String configuration can only be used with the HttpClientService(IConfiguration configuration,...) constructor");
+
             var sectionExists = _configuration.GetChildren().Any(item => item.Key == configurationSection);
             if (!sectionExists)
                 throw new ArgumentException("The configuration section '" + configurationSection + "' cannot be found!", nameof(configurationSection));

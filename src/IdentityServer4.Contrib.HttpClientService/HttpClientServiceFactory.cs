@@ -27,7 +27,7 @@ namespace IdentityServer4.Contrib.HttpClientService
         private readonly IConfiguration _configuration;
 
         /// <summary>
-        /// Cconstructor of the <see cref="HttpClientServiceFactory" />
+        /// Constructor of the <see cref="HttpClientServiceFactory" />.
         /// </summary>
         /// <param name="configuration">Application configuration properties.</param>
         /// <param name="httpClientFactory">The <see cref="IHttpClientFactory"/> to create an <see cref="HttpClient"/>.</param>
@@ -36,6 +36,21 @@ namespace IdentityServer4.Contrib.HttpClientService
         public HttpClientServiceFactory(IConfiguration configuration, IHttpClientFactory httpClientFactory, IHttpRequestMessageFactory requestMessageFactory, ITokenResponseService accessTokenService)
         {
             _configuration = configuration;
+            _httpClientFactory = httpClientFactory;
+            _accessTokenService = accessTokenService;
+            _requestMessageFactory = requestMessageFactory;
+        }
+
+        /// <summary>
+        /// Constructor of the <see cref="HttpClientServiceFactory" /> without the<see cref= "IConfiguration" /> dependency.
+        /// The <see cref="HttpClientService.SetIdentityServerOptions(string)" /> will throw an <see cref="InvalidOperationException" /> with this constructor,
+        /// please use the <see cref="HttpClientService.SetIdentityServerOptions{TTokenServiceOptions}(IOptions{TTokenServiceOptions})".
+        /// </summary>
+        /// <param name="httpClientFactory"></param>
+        /// <param name="requestMessageFactory"></param>
+        /// <param name="accessTokenService"></param>
+        public HttpClientServiceFactory(IHttpClientFactory httpClientFactory, IHttpRequestMessageFactory requestMessageFactory, ITokenResponseService accessTokenService)
+        {
             _httpClientFactory = httpClientFactory;
             _accessTokenService = accessTokenService;
             _requestMessageFactory = requestMessageFactory;
@@ -53,7 +68,8 @@ namespace IdentityServer4.Contrib.HttpClientService
         /// <returns>An <see cref="HttpClientService"/> instance.</returns>
         public HttpClientService CreateHttpClientService()
         {
-            return new HttpClientService(_configuration, _httpClientFactory, _requestMessageFactory, _accessTokenService).CreateHttpClient();
+            return new HttpClientService(_configuration, _httpClientFactory, _requestMessageFactory, _accessTokenService)
+                .CreateHttpClient();
         }
 
         /// <summary>
@@ -68,7 +84,8 @@ namespace IdentityServer4.Contrib.HttpClientService
         public HttpClientService CreateHttpClientService(string name)
         {
 
-            return new HttpClientService(_configuration, _httpClientFactory, _requestMessageFactory, _accessTokenService).CreateHttpClient(name);
+            return new HttpClientService(_configuration, _httpClientFactory, _requestMessageFactory, _accessTokenService)
+                .CreateHttpClient(name);
         }
     }
 }

@@ -842,6 +842,7 @@
             <param name="requestMessageFactory">The <see cref="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory"/> to get a new <see cref="T:System.Net.Http.HttpRequestMessage"/>.</param>
             <param name="accessTokenService">The <see cref="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService"/> to retrieve a token, if required.</param>
         </member>
+        <!-- Badly formed XML comment ignored for member "M:IdentityServer4.Contrib.HttpClientService.HttpClientService.#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)" -->
         <member name="M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.String)">
             <summary>
             Sets the IdentityServer4 options for retrieving an access token using client credentials by passing the appsettings configuration section 
@@ -970,13 +971,14 @@
         </member>
         <member name="M:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)">
             <summary>
-            Cconstructor of the <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory" />
+            Constructor of the <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory" />.
             </summary>
             <param name="configuration">Application configuration properties.</param>
             <param name="httpClientFactory">The <see cref="T:System.Net.Http.IHttpClientFactory"/> to create an <see cref="T:System.Net.Http.HttpClient"/>.</param>
             <param name="requestMessageFactory">The <see cref="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory"/> to get a new <see cref="T:System.Net.Http.HttpRequestMessage"/>.</param>
             <param name="accessTokenService">The <see cref="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService"/> to retrieve a token, if required.</param>
         </member>
+        <!-- Badly formed XML comment ignored for member "M:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)" -->
         <member name="M:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService">
             <summary>
             Creates new <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> instances. 

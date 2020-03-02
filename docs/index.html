@@ -62,7 +62,7 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="an-httpclient-service-for-identityserver4">An HttpClient service for IdentityServer4</h1>
 
-<p><a href="https://dev.azure.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/_build/latest?definitionId=5&amp;branchName=master"><img src="https://dev.azure.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/_apis/build/status/georgekosmidis.IdentityServer4.Contrib.HttpClientService?branchName=master" alt="Build Status"></a></p>
+<p><a href="https://dev.azure.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/_build/latest?definitionId=5&amp;branchName=master"><img src="https://dev.azure.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/_apis/build/status/georgekosmidis.IdentityServer4.Contrib.HttpClientService?branchName=master" alt="Build Status"></a> <img src="https://img.shields.io/nuget/v/IdentityServer4.Contrib.HttpClientService" alt="Nuget"></p>
 <p>An HttpClient service that makes it easy to make authenticated HTTP requests to protected by IdentityServer4 resources. Complex types are automatically serialized for requests /  deserialized form responses, all with a fluent interface design:</p>
 <pre><code class="lang-csharp">var responseObject = await _requestServiceFactory
                           //Create a instance of the service
@@ -78,88 +78,7 @@
 <p>The variable <a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html">responseObject</a> contains multiple properties: from the entire <code>HttpResponseMessage</code> and <code>HttpRequestMessage</code>, to <code>HttpStatusCode</code> and <code>HttpResponseHeaders</code>. The most exciting feature though is the <code>TResponseBody BodyAsType</code> property, which will contain deserializabled complex types from JSON responses. (in the example above <code>IEnumerable&lt;Customers&gt;</code>). Check the <a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html">ResponseObject<tresponsebody></tresponsebody></a> in the docs.</p>
 </blockquote>
 <p>HTTP verbs supported are: <a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceGetExtensions.html">GET</a>, <a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions.html">POST</a>, <a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions.html">PUT</a>, <a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.html">DELETE</a>, <a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.html">PATCH</a> and <a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceHeadExtensions.html">HEAD</a></p>
-<p>You can start by reading the <a href="#getting-started">Getting Started</a> guide, check the <a href="https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/tree/master/samples/IdentityServer4.Contrib.HttpClientService.FeaturesSample">feature sample</a> or a more <a href="https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/tree/master/samples/IdentityServer4.Contrib.HttpClientService.CompleteSample">complete one</a>.</p>
-<h2 id="getting-started">Getting started</h2>
-<p>Getting started with IdentityServer4.Contrib.HttpClientService is rather easy, you only need three things:</p>
-<ol>
-<li>Install the nuget package <a href="https://www.nuget.org/packages/IdentityServer4.Contrib.HttpClientService">IdentityServer4.Contrib.HttpClientService</a></li>
-<li>Provide the options to authenticate in <code>appsettings.json</code></li>
-<li>Register the service in <code>Startup.cs</code></li>
-</ol>
-<h3 id="its-a-nuget-package">It's a nuget package!</h3>
-<p>Install the <a href="https://www.nuget.org/packages/IdentityServer4.Contrib.HttpClientService">IdentityServer4.Contrib.HttpClientService</a> nuget package, using your favorite way.</p>
-<h3 id="identityserver4-client-credentials-options">IdentityServer4 client credentials options</h3>
-<p>Add the IdentityServer4 client credentials options to your appsettings.json</p>
-<pre><code>&quot;ProtectedResourceClientCredentialsOptions&quot;: {
-    &quot;Address&quot;: &quot;https://demo.identityserver.io/connect/token&quot;,
-    &quot;ClientId&quot;: &quot;m2m&quot;,
-    &quot;ClientSecret&quot;: &quot;secret&quot;,
-    &quot;Scopes&quot;: &quot;api&quot;
-  }
-</code></pre>
-<p><em>The values above are part of the demo offered in <a href="https://demo.identityserver.io/">https://demo.identityserver.io/</a></em></p>
-<h3 id="register-the-service">Register the service</h3>
-<p>Register the service In <code>StartUp.cs</code> in <code>ConfigureServices(IServiceCollection services)</code>:</p>
-<pre><code class="lang-csharp">services.AddHttpClientService();
-</code></pre>
-<p>If you want to use the <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options">Options pattern</a>, create a <code>ProtectedResourceClientCredentialsOptions</code> class with the client credential options or inherits from <code>DefaultClientCredentialOptions</code>:</p>
-<pre><code class="lang-csharp">public class ProtectedResourceClientCredentialsOptions : DefaultClientCredentialOptions
-{
-}
-</code></pre>
-<p>and then use <code>.Configure&lt;TOptions&gt;(...)</code>:</p>
-<pre><code class="lang-csharp">services.AddHttpClientService()
-        .Configure&lt;ProtectedResourceClientCredentialsOptions&gt;(Configuration.GetSection(nameof(ProtectedResourceClientCredentialsOptions)));
-</code></pre>
-<h3 id="you-are-done">You are done!</h3>
-<p>Inject the <code>IHttpClientServiceFactory</code> wherever you want to make the an authenticated requests:</p>
-<pre><code class="lang-csharp">public class ProtectedResourceService {
-
-  private readonly IHttpClientServiceFactory _requestServiceFactory;
-  
-  public ProtectedResourceService(IHttpClientServiceFactory requestServiceFactory)
-  {
-    _requestServiceFactory = requestServiceFactory;
-  }  
-  
-  public async Task&lt;IEnumerable&lt;Customer&gt;&gt; GetCustomers(){
-    var response = await _requestServiceFactory
-      .CreateHttpClientService(nameof(ProtectedResourceService))
-      .SetIdentityServerOptions(&quot;ProtectedResourceClientCredentialsOptions&quot;)
-      .GetAsync&lt;IEnumerable&lt;Customer&gt;&gt;(&quot;https://protected_resource_that_returns_customers_in_json&quot;); 
-  }
-}
-</code></pre>
-<p>Or if you used the <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options">Options pattern</a> approach</p>
-<pre><code class="lang-csharp">public class ProtectedResourceService {
-
-  private readonly IHttpClientServiceFactory _requestServiceFactory;
-  private readonly IOptions&lt;ProtectedResourceClientCredentialsOptions&gt; _identityServerOptions;
-  
-  public ProtectedResourceService(IHttpClientServiceFactory requestServiceFactory, IOptions&lt;ProtectedResourceClientCredentialsOptions&gt; identityServerOptions)
-  {
-    _requestServiceFactory = requestServiceFactory;
-    _identityServerOptions = identityServerOptions;
-  }  
-  public async Task&lt;IEnumerable&lt;Customer&gt;&gt; GetCustomers(){
-    var response = await _requestServiceFactory
-      .CreateHttpClientService(nameof(ProtectedResourceService))
-      .SetIdentityServerOptions(_identityServerOptions)
-      .GetAsync&lt;IEnumerable&lt;Customer&gt;&gt;(&quot;https://protected_resource_that_returns_customers_in_json&quot;); 
-  }
-}
-</code></pre>
-<h2 id="contributing">Contributing</h2>
-<p>Feedback and contibution is more than welcome, as there are many more things to be done!
-Just as a sample:</p>
-<ol>
-<li>Expand the <a href="https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/tree/master/samples/IdentityServer4.Contrib.HttpClientService.CompleteSample">IdentityServer4.Contrib.HttpClientService.CompleteSample</a> with more functionalities</li>
-<li>Support <code>JsonSerializerSettings</code> for <code>JsonConvert.DeserializeObject&lt;TResponseBody&gt;(apiResponse.BodyAsString)</code> in <a href="https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/blob/86262f016173bafd2c9ec4fbe70ac9eb1406042a/src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs#L300">HttpClientService</a></li>
-<li>Remove hard coded values for <code>StringContent(JsonConvert.SerializeObject(requestBody), Encoding.UTF8, &quot;application/json&quot;);</code> in <a href="https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/blob/86262f016173bafd2c9ec4fbe70ac9eb1406042a/src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs#L252">HttpClientService</a></li>
-<li>Support more than <code>ClientCredentials</code></li>
-<li>Add logging</li>
-</ol>
-<p>Many more are coming soon and all of them should be issues here, so feel free to open one and let's start discussing solutions!</p>
+<p>You can start by reading the <a href="getting_started.html">Getting Started</a> guide, check the <a href="https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/tree/master/samples/IdentityServer4.Contrib.HttpClientService.FeaturesSample">feature sample</a> or a more <a href="https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/tree/master/samples/IdentityServer4.Contrib.HttpClientService.CompleteSample">complete one</a>.</p>
 </article>
           </div>
           

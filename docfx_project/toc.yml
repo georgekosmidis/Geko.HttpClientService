@@ -1,5 +1,5 @@
 - name: Home
-  href: /
+  href: index.md
 - name: Getting Started
   href: getting_started.md
 - name: Contribution

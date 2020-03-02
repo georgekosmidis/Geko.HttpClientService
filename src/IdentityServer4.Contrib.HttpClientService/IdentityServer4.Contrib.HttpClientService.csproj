@@ -5,20 +5,20 @@
     <PackageProjectUrl>https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService</RepositoryUrl>
     <PackageTags>IdentityServer4, HttpClient, AspNet, WebApi, AspNetWebApi</PackageTags>
-    <Description>An easy way to make authenticated HTTP requests to protected by IdentityServer4 resources</Description>
+    <Description>An HttpClient service that makes it easy to make authenticated HTTP requests to protected by IdentityServer4 resources.</Description>
     <Copyright>George Kosmidis</Copyright>
     <PackageReleaseNotes></PackageReleaseNotes>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <PackageId />
     <Product />
     <Company />
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
     <Authors>George Kosmidis</Authors>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageIcon>logo.png</PackageIcon>
+    <PackageIcon>logo.jpg</PackageIcon>
     <PackageIconUrl />
   </PropertyGroup>
 
@@ -44,7 +44,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\docfx_project\images\logo.png">
+    <None Include="..\..\docfx_project\images\logo.jpg">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>

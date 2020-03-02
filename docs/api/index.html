@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>An HttpClient service for IdentityServer4 </title>
+    <title>Documentation Common methods/properties </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="An HttpClient service for IdentityServer4 ">
+    <meta name="title" content="Documentation Common methods/properties ">
     <meta name="generator" content="docfx 2.49.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,9 +67,57 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="an-httpclient-service-for-identityserver4">An HttpClient service for IdentityServer4</h1>
+<h1 id="documentation-common-methodsproperties">Documentation Common methods/properties</h1>
 
-<p>api index</p>
+<h3 id="class-httpclientservice">Class HttpClientService</h3>
+<ul>
+<li><p><a href="http://localhost:8080/api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html#IdentityServer4_Contrib_HttpClientService_HttpClientService_SetIdentityServerOptions_System_String_">SetIdentityServerOptions(String)</a>
+Sets the IdentityServer4 options for retrieving an access token using client credentials by passing the appsettings configuration section that contain the necessary configuration keys.</p>
+</li>
+<li><p><a href="http://localhost:8080/api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html#IdentityServer4_Contrib_HttpClientService_HttpClientService_SetIdentityServerOptions__1_Microsoft_Extensions_Options_IOptions___0__">SetIdentityServerOptions<ttokenserviceoptions>(IOptions<ttokenserviceoptions>)</ttokenserviceoptions></ttokenserviceoptions></a>
+Sets the IdentityServer4 options for retrieving an access token using client credentials.</p>
+</li>
+<li><p><a href="http://localhost:8080/api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html#IdentityServer4_Contrib_HttpClientService_HttpClientService_AddHeader_System_String_System_String_">AddHeader(String, String)</a>
+Adds a header to the request.</p>
+</li>
+</ul>
+<h3 id="class-httpclientservicefactory">Class HttpClientServiceFactory</h3>
+<ul>
+<li>[CreateHttpClientService(String)]
+Creates or returns HttpClientService instances for the given logical name.</li>
+</ul>
+<h3 id="class-responseobjecttresponsebody">Class ResponseObject&lt;TResponseBody&gt;</h3>
+<ul>
+<li><a href="http://localhost:8080/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html#IdentityServer4_Contrib_HttpClientService_Models_ResponseObject_1_BodyAsStream">BodyAsStream</a>
+The body of the response as <code>System.IO.Stream</code>.</li>
+<li><a href="http://localhost:8080/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html#IdentityServer4_Contrib_HttpClientService_Models_ResponseObject_1_BodyAsString">BodyAsString</a>
+The body of the response as <code>System.String</code>.</li>
+<li><a href="http://localhost:8080/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html#IdentityServer4_Contrib_HttpClientService_Models_ResponseObject_1_BodyAsType">BodyAsType</a>
+The body of the response converted to <code>TResponseBody</code>.</li>
+<li><a href="http://localhost:8080/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html#IdentityServer4_Contrib_HttpClientService_Models_ResponseObject_1_Error">Error</a>
+A description of the error, if any.</li>
+<li><a href="http://localhost:8080/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html#IdentityServer4_Contrib_HttpClientService_Models_ResponseObject_1_HasError">HasError</a>
+A boolean indicating if there is an error in the current request.</li>
+<li><a href="http://localhost:8080/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html#IdentityServer4_Contrib_HttpClientService_Models_ResponseObject_1_Headers">Headers</a>
+The <code>System.Net.Http.Headers.HttpResponseHeaders</code>.</li>
+<li><a href="http://localhost:8080/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html#IdentityServer4_Contrib_HttpClientService_Models_ResponseObject_1_HttpRequestMessge">HttpRequestMessge</a>
+The entire <code>System.Net.Http.HttpRequestMessage</code> object for debugging purposes.</li>
+<li><a href="http://localhost:8080/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html#IdentityServer4_Contrib_HttpClientService_Models_ResponseObject_1_HttpResponseMessage">HttpResponseMessge</a>
+The entire <code>System.Net.Http.HttpResponseMessage</code> object.</li>
+<li><a href="http://localhost:8080/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html#IdentityServer4_Contrib_HttpClientService_Models_ResponseObject_1_StatusCode">StatusCode</a>
+The <code>System.Net.HttpStatusCode</code> of the response.</li>
+</ul>
+<h3 id="extension-methods-for-get-post-put-and-delete">Extension methods for GET, POST, PUT and DELETE</h3>
+<ul>
+<li><a href="http://localhost:8080/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceGetExtensions.html#IdentityServer4_Contrib_HttpClientService_Extensions_HttpClientServiceGetExtensions_GetAsync__1_IdentityServer4_Contrib_HttpClientService_HttpClientService_System_String_">GetAsync&lt;TResponseBody&gt;(HttpClientService, String)</a>
+Sends a GET request to the specified requestUri and returns the response wrapped in a <code>ResponseObject&amp;lt;TResponseBody&amp;gt;</code> in an asynchronous operation.</li>
+<li><a href="http://localhost:8080/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions.html#IdentityServer4_Contrib_HttpClientService_Extensions_HttpClientServicePostExtensions_PostAsync__2_IdentityServer4_Contrib_HttpClientService_HttpClientService_System_String___0_">PostAsync&lt;TRequestBody, TResponseBody&gt;(HttpClientService, String, TRequestBody)</a>
+Sends a POST request to the specified requestUri using requestBody as the body of the request with <code>TRequestBody</code> as the type of the requestBody. Returns the response wrapped in a <code>ResponseObject&amp;lt;TResponseBody&amp;gt;</code>.</li>
+<li><a href="http://localhost:8080/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions.html#IdentityServer4_Contrib_HttpClientService_Extensions_HttpClientServicePutExtensions_PutAsync__2_IdentityServer4_Contrib_HttpClientService_HttpClientService_System_String___0_">PutAsync&lt;TRequestBody, TResponseBody&gt;(HttpClientService, String, TRequestBody</a>
+Sends a PUT request to the specified requestUri using requestBody as the body of the request with TRequestBody as the type of the requestBody. Returns the response wrapped in a <code>ResponseObject&amp;lt;TResponseBody&amp;gt;</code>.</li>
+<li><a href="http://localhost:8080/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.html#IdentityServer4_Contrib_HttpClientService_Extensions_HttpClientServiceDeleteExtensions_DeleteAsync__1_IdentityServer4_Contrib_HttpClientService_HttpClientService_System_String_">DeleteAsync&lt;TResponseBody&gt;(HttpClientService, String)</a>
+Sends a DELETE request to the specified requestUri and returns the response wrapped in a <code>ResponseObject&amp;lt;TResponseBody&amp;gt;</code> in an asynchronous operation.</li>
+</ul>
 </article>
           </div>
           

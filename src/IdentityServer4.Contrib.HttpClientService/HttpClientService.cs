@@ -45,7 +45,7 @@ namespace IdentityServer4.Contrib.HttpClientService
         /// <summary>
         /// Constructor for the <see cref="HttpClientService"/> without the <see cref="IConfiguration" />  dependency.
         /// The <see cref="HttpClientService.SetIdentityServerOptions(string)" /> will throw an <see cref="InvalidOperationException" /> with this constructor,
-        /// please use the <see cref="HttpClientService.SetIdentityServerOptions{TTokenServiceOptions}(IOptions{TTokenServiceOptions})".
+        /// please use the <see cref="HttpClientService.SetIdentityServerOptions{TTokenServiceOptions}(IOptions{TTokenServiceOptions})"/>.
         /// </summary>
         /// <param name="httpClientFactory">The <see cref="IHttpClientFactory"/> to create an <see cref="HttpClient"/>.</param>
         /// <param name="requestMessageFactory">The <see cref="IHttpRequestMessageFactory"/> to get a new <see cref="HttpRequestMessage"/>.</param>

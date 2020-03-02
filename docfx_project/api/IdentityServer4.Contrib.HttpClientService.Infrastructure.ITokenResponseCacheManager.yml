@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/ITokenResponseCacheManager.cs
-      branch: release/1.0.1
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: ITokenResponseCacheManager
     path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/ITokenResponseCacheManager.cs
@@ -51,7 +51,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/ITokenResponseCacheManager.cs
-      branch: release/1.0.1
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: AddOrGetExistingAsync
     path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/ITokenResponseCacheManager.cs
@@ -92,7 +92,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/ITokenResponseCacheManager.cs
-      branch: release/1.0.1
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: Remove
     path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/ITokenResponseCacheManager.cs

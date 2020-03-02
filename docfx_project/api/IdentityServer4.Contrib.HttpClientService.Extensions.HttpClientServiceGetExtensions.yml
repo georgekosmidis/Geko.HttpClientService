@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServiceGetExtensions.cs
-      branch: release/1.0.1
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HttpClientServiceGetExtensions
     path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServiceGetExtensions.cs
@@ -62,7 +62,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServiceGetExtensions.cs
-      branch: release/1.0.1
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: GetAsync
     path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServiceGetExtensions.cs
@@ -116,7 +116,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServiceGetExtensions.cs
-      branch: release/1.0.1
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: GetAsync
     path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServiceGetExtensions.cs

@@ -293,6 +293,12 @@ references:
   commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
   fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.HttpClientService(Microsoft.Extensions.Configuration.IConfiguration, System.Net.Http.IHttpClientFactory, IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory, IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
   nameWithType: HttpClientService.HttpClientService(IConfiguration, IHttpClientFactory, IHttpRequestMessageFactory, ITokenResponseService)
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
+  name: HttpClientService(IHttpClientFactory, IHttpRequestMessageFactory, ITokenResponseService)
+  href: api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html#IdentityServer4_Contrib_HttpClientService_HttpClientService__ctor_System_Net_Http_IHttpClientFactory_IdentityServer4_Contrib_HttpClientService_Infrastructure_IHttpRequestMessageFactory_IdentityServer4_Contrib_HttpClientService_Infrastructure_ITokenResponseService_
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.HttpClientService(System.Net.Http.IHttpClientFactory, IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory, IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
+  nameWithType: HttpClientService.HttpClientService(IHttpClientFactory, IHttpRequestMessageFactory, ITokenResponseService)
 - uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.#ctor*
   name: HttpClientService
   href: api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html#IdentityServer4_Contrib_HttpClientService_HttpClientService__ctor_
@@ -372,14 +378,14 @@ references:
   fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions
   nameWithType: HttpClientService.SetIdentityServerOptions
 - uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(Microsoft.Extensions.Options.IOptions{``0})
-  name: SetIdentityServerOptions<TTokenServiceOptions>(IOptions<TTokenServiceOptions>)
+  name: SetIdentityServerOptions<TIdentityServerOptions>(IOptions<TIdentityServerOptions>)
   href: api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html#IdentityServer4_Contrib_HttpClientService_HttpClientService_SetIdentityServerOptions__1_Microsoft_Extensions_Options_IOptions___0__
   commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(Microsoft.Extensions.Options.IOptions{``0})
-  name.vb: SetIdentityServerOptions(Of TTokenServiceOptions)(IOptions(Of TTokenServiceOptions))
-  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions<TTokenServiceOptions>(Microsoft.Extensions.Options.IOptions<TTokenServiceOptions>)
-  fullName.vb: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(Of TTokenServiceOptions)(Microsoft.Extensions.Options.IOptions(Of TTokenServiceOptions))
-  nameWithType: HttpClientService.SetIdentityServerOptions<TTokenServiceOptions>(IOptions<TTokenServiceOptions>)
-  nameWithType.vb: HttpClientService.SetIdentityServerOptions(Of TTokenServiceOptions)(IOptions(Of TTokenServiceOptions))
+  name.vb: SetIdentityServerOptions(Of TIdentityServerOptions)(IOptions(Of TIdentityServerOptions))
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions<TIdentityServerOptions>(Microsoft.Extensions.Options.IOptions<TIdentityServerOptions>)
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(Of TIdentityServerOptions)(Microsoft.Extensions.Options.IOptions(Of TIdentityServerOptions))
+  nameWithType: HttpClientService.SetIdentityServerOptions<TIdentityServerOptions>(IOptions<TIdentityServerOptions>)
+  nameWithType.vb: HttpClientService.SetIdentityServerOptions(Of TIdentityServerOptions)(IOptions(Of TIdentityServerOptions))
 - uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
   name: HttpClientServiceFactory
   href: api/IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.html
@@ -392,6 +398,12 @@ references:
   commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
   fullName: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.HttpClientServiceFactory(Microsoft.Extensions.Configuration.IConfiguration, System.Net.Http.IHttpClientFactory, IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory, IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
   nameWithType: HttpClientServiceFactory.HttpClientServiceFactory(IConfiguration, IHttpClientFactory, IHttpRequestMessageFactory, ITokenResponseService)
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
+  name: HttpClientServiceFactory(IHttpClientFactory, IHttpRequestMessageFactory, ITokenResponseService)
+  href: api/IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.html#IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory__ctor_System_Net_Http_IHttpClientFactory_IdentityServer4_Contrib_HttpClientService_Infrastructure_IHttpRequestMessageFactory_IdentityServer4_Contrib_HttpClientService_Infrastructure_ITokenResponseService_
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.HttpClientServiceFactory(System.Net.Http.IHttpClientFactory, IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory, IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
+  nameWithType: HttpClientServiceFactory.HttpClientServiceFactory(IHttpClientFactory, IHttpRequestMessageFactory, ITokenResponseService)
 - uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor*
   name: HttpClientServiceFactory
   href: api/IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.html#IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory__ctor_

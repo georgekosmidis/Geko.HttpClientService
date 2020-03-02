@@ -6,6 +6,7 @@ items:
   parent: IdentityServer4.Contrib.HttpClientService
   children:
   - IdentityServer4.Contrib.HttpClientService.HttpClientService.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
+  - IdentityServer4.Contrib.HttpClientService.HttpClientService.#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
   - IdentityServer4.Contrib.HttpClientService.HttpClientService.AddHeader(System.String,System.String)
   - IdentityServer4.Contrib.HttpClientService.HttpClientService.Dispose
   - IdentityServer4.Contrib.HttpClientService.HttpClientService.SendAsync``2(System.Uri,System.Net.Http.HttpMethod,``0)
@@ -22,7 +23,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: release/1.0.1
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HttpClientService
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
@@ -87,7 +88,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: release/1.0.1
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: .ctor
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
@@ -118,6 +119,43 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
+  id: '#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)'
+  parent: IdentityServer4.Contrib.HttpClientService.HttpClientService
+  langs:
+  - csharp
+  - vb
+  name: HttpClientService(IHttpClientFactory, IHttpRequestMessageFactory, ITokenResponseService)
+  nameWithType: HttpClientService.HttpClientService(IHttpClientFactory, IHttpRequestMessageFactory, ITokenResponseService)
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.HttpClientService(System.Net.Http.IHttpClientFactory, IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory, IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
+  type: Constructor
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: .ctor
+    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+    startLine: 52
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService
+  syntax:
+    content: public HttpClientService(IHttpClientFactory httpClientFactory, IHttpRequestMessageFactory requestMessageFactory, ITokenResponseService accessTokenService)
+    parameters:
+    - id: httpClientFactory
+      type: System.Net.Http.IHttpClientFactory
+    - id: requestMessageFactory
+      type: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+    - id: accessTokenService
+      type: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+    content.vb: Public Sub New(httpClientFactory As IHttpClientFactory, requestMessageFactory As IHttpRequestMessageFactory, accessTokenService As ITokenResponseService)
+  overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.String)
   commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.String)
   id: SetIdentityServerOptions(System.String)
@@ -132,11 +170,11 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: release/1.0.1
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 65
+    startLine: 80
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -164,18 +202,18 @@ items:
   langs:
   - csharp
   - vb
-  name: SetIdentityServerOptions<TTokenServiceOptions>(IOptions<TTokenServiceOptions>)
-  nameWithType: HttpClientService.SetIdentityServerOptions<TTokenServiceOptions>(IOptions<TTokenServiceOptions>)
-  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions<TTokenServiceOptions>(Microsoft.Extensions.Options.IOptions<TTokenServiceOptions>)
+  name: SetIdentityServerOptions<TIdentityServerOptions>(IOptions<TIdentityServerOptions>)
+  nameWithType: HttpClientService.SetIdentityServerOptions<TIdentityServerOptions>(IOptions<TIdentityServerOptions>)
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions<TIdentityServerOptions>(Microsoft.Extensions.Options.IOptions<TIdentityServerOptions>)
   type: Method
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: release/1.0.1
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 83
+    startLine: 101
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -183,27 +221,27 @@ items:
   example: []
   syntax:
     content: >-
-      public HttpClientService SetIdentityServerOptions<TTokenServiceOptions>(IOptions<TTokenServiceOptions> options)
-          where TTokenServiceOptions : DefaultClientCredentialOptions, new()
+      public HttpClientService SetIdentityServerOptions<TIdentityServerOptions>(IOptions<TIdentityServerOptions> options)
+          where TIdentityServerOptions : DefaultClientCredentialOptions, new()
     parameters:
     - id: options
-      type: Microsoft.Extensions.Options.IOptions{{TTokenServiceOptions}}
+      type: Microsoft.Extensions.Options.IOptions{{TIdentityServerOptions}}
       description: The token service options.
     typeParameters:
-    - id: TTokenServiceOptions
+    - id: TIdentityServerOptions
       description: A type that inherits from the <xref href="IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions" data-throw-if-not-resolved="false"></xref> onject.
     return:
       type: IdentityServer4.Contrib.HttpClientService.HttpClientService
       description: Returns the current instance of <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
-    content.vb: Public Function SetIdentityServerOptions(Of TTokenServiceOptions As {DefaultClientCredentialOptions, New})(options As IOptions(Of TTokenServiceOptions)) As HttpClientService
+    content.vb: Public Function SetIdentityServerOptions(Of TIdentityServerOptions As {DefaultClientCredentialOptions, New})(options As IOptions(Of TIdentityServerOptions)) As HttpClientService
   overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions*
-  nameWithType.vb: HttpClientService.SetIdentityServerOptions(Of TTokenServiceOptions)(IOptions(Of TTokenServiceOptions))
+  nameWithType.vb: HttpClientService.SetIdentityServerOptions(Of TIdentityServerOptions)(IOptions(Of TIdentityServerOptions))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(Of TTokenServiceOptions)(Microsoft.Extensions.Options.IOptions(Of TTokenServiceOptions))
-  name.vb: SetIdentityServerOptions(Of TTokenServiceOptions)(IOptions(Of TTokenServiceOptions))
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(Of TIdentityServerOptions)(Microsoft.Extensions.Options.IOptions(Of TIdentityServerOptions))
+  name.vb: SetIdentityServerOptions(Of TIdentityServerOptions)(IOptions(Of TIdentityServerOptions))
 - uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetHeaders(System.Collections.Generic.Dictionary{System.String,System.String})
   commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetHeaders(System.Collections.Generic.Dictionary{System.String,System.String})
   id: SetHeaders(System.Collections.Generic.Dictionary{System.String,System.String})
@@ -218,11 +256,11 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: release/1.0.1
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetHeaders
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 112
+    startLine: 130
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -260,11 +298,11 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: release/1.0.1
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: AddHeader
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 134
+    startLine: 152
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -302,11 +340,11 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: release/1.0.1
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SendAsync
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 223
+    startLine: 241
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -355,11 +393,11 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: release/1.0.1
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: Dispose
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 319
+    startLine: 337
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -3251,16 +3289,16 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: Microsoft.Extensions.Options.IOptions{{TTokenServiceOptions}}
+- uid: Microsoft.Extensions.Options.IOptions{{TIdentityServerOptions}}
   commentId: T:Microsoft.Extensions.Options.IOptions{``0}
   parent: Microsoft.Extensions.Options
   definition: Microsoft.Extensions.Options.IOptions`1
-  name: IOptions<TTokenServiceOptions>
-  nameWithType: IOptions<TTokenServiceOptions>
-  fullName: Microsoft.Extensions.Options.IOptions<TTokenServiceOptions>
-  nameWithType.vb: IOptions(Of TTokenServiceOptions)
-  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TTokenServiceOptions)
-  name.vb: IOptions(Of TTokenServiceOptions)
+  name: IOptions<TIdentityServerOptions>
+  nameWithType: IOptions<TIdentityServerOptions>
+  fullName: Microsoft.Extensions.Options.IOptions<TIdentityServerOptions>
+  nameWithType.vb: IOptions(Of TIdentityServerOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TIdentityServerOptions)
+  name.vb: IOptions(Of TIdentityServerOptions)
   spec.csharp:
   - uid: Microsoft.Extensions.Options.IOptions`1
     name: IOptions
@@ -3270,9 +3308,9 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - name: TTokenServiceOptions
-    nameWithType: TTokenServiceOptions
-    fullName: TTokenServiceOptions
+  - name: TIdentityServerOptions
+    nameWithType: TIdentityServerOptions
+    fullName: TIdentityServerOptions
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -3285,9 +3323,9 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: TTokenServiceOptions
-    nameWithType: TTokenServiceOptions
-    fullName: TTokenServiceOptions
+  - name: TIdentityServerOptions
+    nameWithType: TIdentityServerOptions
+    fullName: TIdentityServerOptions
   - name: )
     nameWithType: )
     fullName: )

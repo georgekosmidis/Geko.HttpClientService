@@ -858,7 +858,7 @@
             <summary>
             Sets the IdentityServer4 options for retrieving an access token using client credentials.
             </summary>
-            <typeparam name="TTokenServiceOptions">A type that inherits from the <see cref="T:IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions"/> onject.</typeparam>
+            <typeparam name="TIdentityServerOptions">A type that inherits from the <see cref="T:IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions"/> onject.</typeparam>
             <param name="options">The token service options.</param>
             <returns>Returns the current instance of <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> for method chaining.</returns>
         </member>

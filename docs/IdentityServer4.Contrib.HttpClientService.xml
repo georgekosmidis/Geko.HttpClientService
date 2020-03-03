@@ -833,16 +833,6 @@
             The request service implemantation
             </summary>
         </member>
-        <member name="M:IdentityServer4.Contrib.HttpClientService.HttpClientService.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)">
-            <summary>
-            Constructor for the <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/>.
-            </summary>
-            <param name="configuration">Application configuration properties.</param>
-            <param name="httpClientFactory">The <see cref="T:System.Net.Http.IHttpClientFactory"/> to create an <see cref="T:System.Net.Http.HttpClient"/>.</param>
-            <param name="requestMessageFactory">The <see cref="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory"/> to get a new <see cref="T:System.Net.Http.HttpRequestMessage"/>.</param>
-            <param name="accessTokenService">The <see cref="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService"/> to retrieve a token, if required.</param>
-        </member>
-        <!-- Badly formed XML comment ignored for member "M:IdentityServer4.Contrib.HttpClientService.HttpClientService.#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)" -->
         <member name="M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.String)">
             <summary>
             Sets the IdentityServer4 options for retrieving an access token using client credentials by passing the appsettings configuration section 
@@ -969,37 +959,19 @@
             A factory that creates <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> instances for a given logical name.
             </summary>
         </member>
-        <member name="M:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)">
+        <member name="M:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(Microsoft.Extensions.Configuration.IConfiguration,IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)">
             <summary>
             Constructor of the <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory" />.
             </summary>
             <param name="configuration">Application configuration properties.</param>
-            <param name="httpClientFactory">The <see cref="T:System.Net.Http.IHttpClientFactory"/> to create an <see cref="T:System.Net.Http.HttpClient"/>.</param>
+            <param name="coreHttpClient">An <see cref="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient"/> implementation that will execute the HTTP requests.</param>
             <param name="requestMessageFactory">The <see cref="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory"/> to get a new <see cref="T:System.Net.Http.HttpRequestMessage"/>.</param>
-            <param name="accessTokenService">The <see cref="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService"/> to retrieve a token, if required.</param>
+            <param name="tokenResponseService">The <see cref="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService"/> to retrieve a token, if required.</param>
         </member>
-        <!-- Badly formed XML comment ignored for member "M:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)" -->
         <member name="M:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService">
             <summary>
             Creates new <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> instances. 
-            Prefer <see cref="M:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService(System.String)"/> when possible, to avoid 'sockets exhaustion' issues caused by HttpClient.
-            Read more here https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core
             </summary>
-            <remarks>
-            Prefer <see cref="M:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService(System.String)"/> when possible, to avoid 'sockets exhaustion'.
-            Read more here https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core
-            </remarks>
-            <returns>An <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> instance.</returns>
-        </member>
-        <member name="M:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService(System.String)">
-            <summary>
-            Creates or returns <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> instances for the given logical name.
-            </summary>
-            <remarks>
-            By specifing a name, the HTTPClient will be reused to avoid 'sockets exhaustion' issues caused by HttpClient.
-            Read more here https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core
-            </remarks>
-            <param name="name">The name of the <see cref="T:System.Net.Http.HttpClient"/> that will be used.</param>
             <returns>An <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> instance.</returns>
         </member>
         <member name="T:IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory">
@@ -1010,24 +982,62 @@
         <member name="M:IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService">
             <summary>
             Creates new <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> instances. 
-            Prefer <see cref="M:IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)"/> when possible, to avoid 'sockets exhaustion' issues caused by HttpClient.
-            Read more here https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core
             </summary>
-            <remarks>
-            Prefer <see cref="M:IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)"/> when possible, to avoid 'sockets exhaustion'.
-            Read more here https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core
-            </remarks>
             <returns>An <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> instance.</returns>
         </member>
-        <member name="M:IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)">
+        <member name="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient">
             <summary>
-            Creates new <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> instances.
+            Abstraction for a typed <see cref="T:System.Net.Http.HttpClient"/>.
             </summary>
-            <remarks>
-            Prefer <see cref="M:IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)"/> when possible, to avoid 'sockets exhaustion'.
-            Read more here https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core
-            </remarks>
-            <returns>An <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> instance.</returns>
+        </member>
+        <member name="M:IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient.SendAsync(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Sends an <see cref="T:System.Net.Http.HttpResponseMessage"/>.
+            </summary>
+            <param name="httpRequestMessage">The <see cref="T:System.Net.Http.HttpResponseMessage"/> to be sent</param>
+            <returns>An <see cref="T:System.Net.Http.HttpResponseMessage"/>.</returns>
+        </member>
+        <member name="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory">
+            <summary>
+            Abstraction for an <see cref="T:System.Net.Http.HttpRequestMessage"/> factory.
+            </summary>    
+        </member>
+        <member name="M:IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage">
+            <summary>
+            Creates a new instance of an <see cref="T:System.Net.Http.HttpRequestMessage"/>.
+            </summary>
+            <returns>An <see cref="T:System.Net.Http.HttpRequestMessage"/> to be used by an <see cref="T:System.Net.Http.HttpClient"/>.</returns>
+        </member>
+        <member name="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient">
+            <summary>
+            Abstraction for a typed <see cref="T:System.Net.Http.HttpClient"/> that will execute the request to the IdentityServer4.
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient.GetTokenResponseAsync``1(Microsoft.Extensions.Options.IOptions{``0})">
+            <summary>
+            Retrieves a <see cref="T:IdentityModel.Client.TokenResponse"/> from the configured by the <paramref name="options"/>.
+            </summary>
+            <typeparam name="TTokenServiceOptions">The type of the configuration options for the IdentityServer4.</typeparam>
+            <param name="options">The configuration options for the IdentityServer4.</param>
+            <returns>A <see cref="T:IdentityModel.Client.TokenResponse"/> object.</returns>
+        </member>
+        <member name="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.CoreHttpClient">
+            <summary>
+            Implementation for a typed <see cref="T:System.Net.Http.HttpClient"/>.
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Contrib.HttpClientService.Infrastructure.CoreHttpClient.#ctor(System.Net.Http.HttpClient)">
+            <summary>
+            Constructor of the <see cref="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.CoreHttpClient"/>.
+            </summary>
+            <param name="httpClient">An <see cref="T:System.Net.Http.HttpClient"/> that will execute the request</param>
+        </member>
+        <member name="M:IdentityServer4.Contrib.HttpClientService.Infrastructure.CoreHttpClient.SendAsync(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Sends an <see cref="T:System.Net.Http.HttpResponseMessage"/>.
+            </summary>
+            <param name="httpRequestMessage">The <see cref="T:System.Net.Http.HttpResponseMessage"/> to be sent.</param>
+            <returns>An <see cref="T:System.Net.Http.HttpResponseMessage"/>.</returns>
         </member>
         <member name="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory">
             <summary>
@@ -1048,51 +1058,24 @@
             <remarks>This is useful to track in the logs a series of cascading requests between services.</remarks>
             <returns>An <see cref="T:System.Net.Http.HttpRequestMessage"/> to be used by an <see cref="T:System.Net.Http.HttpClient"/>.</returns>
         </member>
-        <member name="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory">
+        <member name="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerHttpClient">
             <summary>
-            Abstraction for an <see cref="T:System.Net.Http.HttpRequestMessage"/> factory.
-            </summary>    
-        </member>
-        <member name="M:IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage">
-            <summary>
-            Creates a new instance of an <see cref="T:System.Net.Http.HttpRequestMessage"/>.
-            </summary>
-            <returns>An <see cref="T:System.Net.Http.HttpRequestMessage"/> to be used by an <see cref="T:System.Net.Http.HttpClient"/>.</returns>
-        </member>
-        <member name="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager">
-            <summary>
-            Interface for the cache manager for the access token service. 
-            </summary>
-            <remarks>
-            It caches a successful response for the 75% of the expiration time define in the <see cref="T:IdentityModel.Client.TokenResponse"/>. 
-            </remarks>
-        </member>
-        <member name="M:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager.AddOrGetExistingAsync(System.String,System.Func{System.Threading.Tasks.Task{IdentityModel.Client.TokenResponse}})">
-            <summary>
-            Adds a new <see cref="T:IdentityModel.Client.TokenResponse"/> in the cache by executing the <paramref name="call"/> parameter, or returns an existing cached response.
-            </summary>
-            <param name="key">The key of the cache entry.</param>
-            <param name="call">The delegate the returns a <see cref="T:IdentityModel.Client.TokenResponse"/>.</param>
-            <returns>A <see cref="T:IdentityModel.Client.TokenResponse"/>, either just aqcuired or from the cache</returns>
-        </member>
-        <member name="M:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager.Remove(System.String)">
-            <summary>
-            Removes an entry from the cache
-            </summary>
-            <param name="key">The key of the cache entry.</param>
-        </member>
-        <member name="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService">
-            <summary>
-            Abstraction for an access token service.
+            The implementation of an access token service for client credentials based on IdentityServer4. 
             </summary>
         </member>
-        <member name="M:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync``1(Microsoft.Extensions.Options.IOptions{``0})">
+        <member name="M:IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerHttpClient.#ctor(System.Net.Http.HttpClient)">
             <summary>
-            Retrieves a <see cref="T:IdentityModel.Client.TokenResponse"/>  from the configured Identity Server
+            Constructor of the <see cref="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerHttpClient"/>.
             </summary>
-            <typeparam name="TTokenServiceOptions">A type that inherits from the <see cref="T:IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions"/> onject</typeparam>
-            <param name="options">The token service options</param>
-            <returns>A <see cref="T:IdentityModel.Client.TokenResponse"/> instance.</returns>
+            <param name="httpClient">An <see cref="T:System.Net.Http.HttpClient"/> that will execute the request</param>
+        </member>
+        <member name="M:IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerHttpClient.GetTokenResponseAsync``1(Microsoft.Extensions.Options.IOptions{``0})">
+            <summary>
+            Retrieves a <see cref="T:IdentityModel.Client.TokenResponse"/> from the configured by the <paramref name="options"/>.
+            </summary>
+            <typeparam name="TTokenServiceOptions">The type of the configuration options for the IdentityServer4.</typeparam>
+            <param name="options">The configuration options for the IdentityServer4.</param>
+            <returns>A <see cref="T:IdentityModel.Client.TokenResponse"/> object.</returns>
         </member>
         <member name="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseCacheManager">
             <summary>
@@ -1127,16 +1110,51 @@
             The implementation of an access token service for client credentials based on IdentityServer4. 
             </summary>
         </member>
-        <member name="M:IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager)">
+        <member name="M:IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.#ctor(IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager)">
             <summary>
-            Constructor of the <see cref="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService" />
+            Constructor of the <see cref="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService"/>.
             </summary>
-            <param name="httpClientFactory">An <see cref="T:System.Net.Http.HttpClientFactory"/> to create an <see cref="T:System.Net.Http.HttpClient"/>.</param>
-            <param name="cache">A cache manager instance to cache handle the caching of the Identity Server response.</param>
+            <param name="identityServerHttpClient">A typed <see cref="T:System.Net.Http.HttpClient"/> for the token service.</param>
+            <param name="cache">A cache engine imlementation, to cache the token response.</param>
         </member>
         <member name="M:IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.GetTokenResponseAsync``1(Microsoft.Extensions.Options.IOptions{``0})">
             <summary>
             Retrieves either a new access token using client credentials or the last valid from the caching engine.
+            </summary>
+            <typeparam name="TTokenServiceOptions">A type that inherits from the <see cref="T:IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions"/> onject</typeparam>
+            <param name="options">The token service options</param>
+            <returns>A <see cref="T:IdentityModel.Client.TokenResponse"/> instance.</returns>
+        </member>
+        <member name="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager">
+            <summary>
+            Interface for the cache manager for the access token service. 
+            </summary>
+            <remarks>
+            It caches a successful response for the 75% of the expiration time define in the <see cref="T:IdentityModel.Client.TokenResponse"/>. 
+            </remarks>
+        </member>
+        <member name="M:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager.AddOrGetExistingAsync(System.String,System.Func{System.Threading.Tasks.Task{IdentityModel.Client.TokenResponse}})">
+            <summary>
+            Adds a new <see cref="T:IdentityModel.Client.TokenResponse"/> in the cache by executing the <paramref name="call"/> parameter, or returns an existing cached response.
+            </summary>
+            <param name="key">The key of the cache entry.</param>
+            <param name="call">The delegate the returns a <see cref="T:IdentityModel.Client.TokenResponse"/>.</param>
+            <returns>A <see cref="T:IdentityModel.Client.TokenResponse"/>, either just aqcuired or from the cache</returns>
+        </member>
+        <member name="M:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager.Remove(System.String)">
+            <summary>
+            Removes an entry from the cache
+            </summary>
+            <param name="key">The key of the cache entry.</param>
+        </member>
+        <member name="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService">
+            <summary>
+            Abstraction for an access token service.
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync``1(Microsoft.Extensions.Options.IOptions{``0})">
+            <summary>
+            Retrieves a <see cref="T:IdentityModel.Client.TokenResponse"/>  from the configured Identity Server
             </summary>
             <typeparam name="TTokenServiceOptions">A type that inherits from the <see cref="T:IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions"/> onject</typeparam>
             <param name="options">The token service options</param>

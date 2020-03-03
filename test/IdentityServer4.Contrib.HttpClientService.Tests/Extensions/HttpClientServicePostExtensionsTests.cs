@@ -28,12 +28,16 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
 
             var httpClientService = new HttpClientServiceFactory(
                 IConfigurationMocks.Get("section_data"),
-                IHttpClientFactoryMocks.Get(HttpStatusCode.Created, this.ComplexTypeResponseString),
+                new CoreHttpClient(
+                    IHttpClientFactoryMocks.Get(HttpStatusCode.Created, this.ComplexTypeResponseString).CreateClient()
+                ),
                 new HttpRequestMessageFactory(
                     IHttpContextAccessorMocks.Get()
                 ),
                 new TokenResponseService(
-                    IHttpClientFactoryMocks.Get(HttpStatusCode.OK),
+                    new IdentityServerHttpClient(
+                        IHttpClientFactoryMocks.Get(HttpStatusCode.OK).CreateClient()
+                    ),
                     IAccessTokenCacheManagerMocks.Get(
                         await TokenResponseMock.GetValidResponseAsync("access_token", 3600)
                     )
@@ -77,12 +81,16 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
 
             var httpClientService = new HttpClientServiceFactory(
                 IConfigurationMocks.Get("section_data"),
-                IHttpClientFactoryMocks.Get(HttpStatusCode.OK, this.ComplexTypeResponseString),
+                new CoreHttpClient(
+                    IHttpClientFactoryMocks.Get(HttpStatusCode.OK, this.ComplexTypeResponseString).CreateClient()
+                ),
                 new HttpRequestMessageFactory(
                     IHttpContextAccessorMocks.Get()
                 ),
                 new TokenResponseService(
-                    IHttpClientFactoryMocks.Get(HttpStatusCode.OK),
+                    new IdentityServerHttpClient(
+                        IHttpClientFactoryMocks.Get(HttpStatusCode.OK).CreateClient()
+                    ),
                     IAccessTokenCacheManagerMocks.Get(
                         await TokenResponseMock.GetValidResponseAsync("access_token", 3600)
                     )
@@ -117,12 +125,16 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
 
             var httpClientService = new HttpClientServiceFactory(
                 IConfigurationMocks.Get("section_data"),
-                IHttpClientFactoryMocks.Get(HttpStatusCode.Created, this.ComplexTypeResponseString),
+                new CoreHttpClient(
+                    IHttpClientFactoryMocks.Get(HttpStatusCode.Created, this.ComplexTypeResponseString).CreateClient()
+                ),
                 new HttpRequestMessageFactory(
                     IHttpContextAccessorMocks.Get()
                 ),
                 new TokenResponseService(
-                    IHttpClientFactoryMocks.Get(HttpStatusCode.OK),
+                    new IdentityServerHttpClient(
+                        IHttpClientFactoryMocks.Get(HttpStatusCode.OK).CreateClient()
+                    ),
                     IAccessTokenCacheManagerMocks.Get(
                         await TokenResponseMock.GetValidResponseAsync("access_token", 3600)
                     )
@@ -157,12 +169,16 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
 
             var httpClientService = new HttpClientServiceFactory(
                 IConfigurationMocks.Get("section_data"),
-                IHttpClientFactoryMocks.Get(HttpStatusCode.Created, this.ComplexTypeResponseString),
+                new CoreHttpClient(
+                    IHttpClientFactoryMocks.Get(HttpStatusCode.Created, this.ComplexTypeResponseString).CreateClient()
+                ),
                 new HttpRequestMessageFactory(
                     IHttpContextAccessorMocks.Get()
                 ),
                 new TokenResponseService(
-                    IHttpClientFactoryMocks.Get(HttpStatusCode.OK),
+                    new IdentityServerHttpClient(
+                        IHttpClientFactoryMocks.Get(HttpStatusCode.OK).CreateClient()
+                    ),
                     IAccessTokenCacheManagerMocks.Get(
                         await TokenResponseMock.GetValidResponseAsync("access_token", 3600)
                     )
@@ -199,12 +215,16 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
         {
             var httpClientService = new HttpClientServiceFactory(
                 IConfigurationMocks.Get("section_data"),
-                IHttpClientFactoryMocks.Get(HttpStatusCode.Created, this.ComplexTypeResponseString),
+                new CoreHttpClient(
+                    IHttpClientFactoryMocks.Get(HttpStatusCode.Created, this.ComplexTypeResponseString).CreateClient()
+                ),
                 new HttpRequestMessageFactory(
                     IHttpContextAccessorMocks.Get()
                 ),
                 new TokenResponseService(
-                    IHttpClientFactoryMocks.Get(HttpStatusCode.OK),
+                    new IdentityServerHttpClient(
+                        IHttpClientFactoryMocks.Get(HttpStatusCode.OK).CreateClient()
+                    ),
                     IAccessTokenCacheManagerMocks.Get(
                         await TokenResponseMock.GetValidResponseAsync("access_token", 3600)
                     )

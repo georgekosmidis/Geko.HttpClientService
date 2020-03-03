@@ -15,17 +15,17 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure
     /// </summary>
     public class TokenResponseService : ITokenResponseService
     {
-        private readonly HttpClient _httpClient;
+        private readonly IIdentityServerHttpClient _identityServerHttpClient;
         private readonly ITokenResponseCacheManager _cache;
 
         /// <summary>
-        /// Constructor of the <see cref="TokenResponseService" />
+        /// Constructor of the <see cref="TokenResponseService"/>.
         /// </summary>
-        /// <param name="httpClientFactory">An <see cref="HttpClientFactory"/> to create an <see cref="HttpClient"/>.</param>
-        /// <param name="cache">A cache manager instance to cache handle the caching of the Identity Server response.</param>
-        public TokenResponseService(IHttpClientFactory httpClientFactory, ITokenResponseCacheManager cache)
+        /// <param name="identityServerHttpClient">A typed <see cref="HttpClient"/> for the token service.</param>
+        /// <param name="cache">A cache engine imlementation, to cache the token response.</param>
+        public TokenResponseService(IIdentityServerHttpClient identityServerHttpClient, ITokenResponseCacheManager cache)
         {
-            _httpClient = httpClientFactory.CreateClient();
+            _identityServerHttpClient = identityServerHttpClient;
             _cache = cache;
         }
 
@@ -44,13 +44,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure
                 options.GetCacheKey(),
                 async () =>
                 {
-                    return await _httpClient.RequestClientCredentialsTokenAsync(new ClientCredentialsTokenRequest
-                    {
-                        Address = options.Value.Address,
-                        ClientId = options.Value.ClientId,
-                        ClientSecret = options.Value.ClientSecret,
-                        Scope = options.Value.Scopes
-                    });
+                    return await _identityServerHttpClient.GetTokenResponseAsync(options);
                 }
              );
 

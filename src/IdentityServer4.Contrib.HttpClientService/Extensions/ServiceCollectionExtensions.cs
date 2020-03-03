@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using IdentityServer4.Contrib.HttpClientService.Infrastructure;
+using System;
 
 namespace IdentityServer4.Contrib.HttpClientService.Extensions
 {
@@ -16,12 +17,16 @@ namespace IdentityServer4.Contrib.HttpClientService.Extensions
         /// <returns>An <see cref="IServiceCollection"/> that can be used to further configure the MVC services.</returns>
         public static IServiceCollection AddHttpClientService(this IServiceCollection services)
         {
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddHttpClient();
-            services.AddMemoryCache();
-            services.AddSingleton<IHttpRequestMessageFactory, HttpRequestMessageFactory>();
-            services.AddSingleton<ITokenResponseCacheManager, TokenResponseCacheManager>();
+            services.AddHttpClient<IIdentityServerHttpClient, IdentityServerHttpClient>()
+                    .SetHandlerLifetime(TimeSpan.FromMinutes(5));
             services.AddSingleton<ITokenResponseService, TokenResponseService>();
+            services.AddMemoryCache();
+            services.AddSingleton<ITokenResponseCacheManager, TokenResponseCacheManager>();
+
+            services.AddHttpClient<ICoreHttpClient, CoreHttpClient>()
+                    .SetHandlerLifetime(TimeSpan.FromMinutes(5));
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddSingleton<IHttpRequestMessageFactory, HttpRequestMessageFactory>();
             services.AddSingleton<IHttpClientServiceFactory, HttpClientServiceFactory>();
 
             return services;

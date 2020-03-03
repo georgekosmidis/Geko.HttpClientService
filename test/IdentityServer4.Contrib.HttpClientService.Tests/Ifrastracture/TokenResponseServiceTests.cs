@@ -17,13 +17,15 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure.Test
         {
             var cachedTokenResponse = await TokenResponseMock.GetValidResponseAsync("cached_access_token", 0);
             var request = new TokenResponseService(
-                IHttpClientFactoryMocks.Get(HttpStatusCode.OK,
-                @"{
-                    ""access_token"": ""live_access_token"",
-                    ""expires_in"": 10,
-                    ""token_type"": ""Bearer"",
-                    ""custom"":  ""liveObject""
-                }"),
+                  new IdentityServerHttpClient(
+                    IHttpClientFactoryMocks.Get(HttpStatusCode.OK,
+                    @"{
+                        ""access_token"": ""live_access_token"",
+                        ""expires_in"": 10,
+                        ""token_type"": ""Bearer"",
+                        ""custom"":  ""liveObject""
+                    }").CreateClient("test")
+                 ),
                 IAccessTokenCacheManagerMocks.Get(cachedTokenResponse)
             );
 

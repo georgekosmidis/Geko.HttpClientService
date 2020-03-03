@@ -39,7 +39,7 @@ namespace IdentityServer4.Contrib.HttpClientService.CompleteSample.ProtectedReso
         public async Task<IEnumerable<ProtectedResourceResponseDto>> GetProtectedResourceResults()
         {
             var response = await _requestServiceFactory
-                .CreateHttpClientService(nameof(ProtectedResourceService))                                          //Try to always use named HttpClients, read more here: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core
+                .CreateHttpClientService()
                 .SetIdentityServerOptions(_identityServerOptions)                                                   //Set the options to retrieve an access token
                 .AddHeader("X-Request-Client", "IdentityServer4.Contrib.HttpClientService")                         //Set custom headers for this request
                 .GetAsync<IEnumerable<ProtectedResourceResponseDto>>("https://demo.identityserver.io/api/test");    //Execute the request

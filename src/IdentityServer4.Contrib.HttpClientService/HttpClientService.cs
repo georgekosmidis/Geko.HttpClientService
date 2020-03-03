@@ -19,54 +19,19 @@ namespace IdentityServer4.Contrib.HttpClientService
     /// </summary>
     public class HttpClientService
     {
-        private readonly IHttpClientFactory _httpClientFactory;
         private readonly ITokenResponseService _accessTokenService;
         private readonly IConfiguration _configuration;
         private HttpRequestMessage httpRequestMessage;
 
-        private HttpClient httpClient;
+        private readonly ICoreHttpClient _coreHttpClient;
         private IOptions<DefaultClientCredentialOptions> _options;
 
-        /// <summary>
-        /// Constructor for the <see cref="HttpClientService"/>.
-        /// </summary>
-        /// <param name="configuration">Application configuration properties.</param>
-        /// <param name="httpClientFactory">The <see cref="IHttpClientFactory"/> to create an <see cref="HttpClient"/>.</param>
-        /// <param name="requestMessageFactory">The <see cref="IHttpRequestMessageFactory"/> to get a new <see cref="HttpRequestMessage"/>.</param>
-        /// <param name="accessTokenService">The <see cref="ITokenResponseService"/> to retrieve a token, if required.</param>
-        public HttpClientService(IConfiguration configuration, IHttpClientFactory httpClientFactory, IHttpRequestMessageFactory requestMessageFactory, ITokenResponseService accessTokenService)
+        internal HttpClientService(IConfiguration configuration, ICoreHttpClient coreHttpClient, IHttpRequestMessageFactory requestMessageFactory, ITokenResponseService accessTokenService)
         {
             _configuration = configuration;
-            _httpClientFactory = httpClientFactory;
+            _coreHttpClient = coreHttpClient;
             _accessTokenService = accessTokenService;
             httpRequestMessage = requestMessageFactory.CreateRequestMessage();
-        }
-
-        /// <summary>
-        /// Constructor for the <see cref="HttpClientService"/> without the <see cref="IConfiguration" />  dependency.
-        /// The <see cref="HttpClientService.SetIdentityServerOptions(string)" /> will throw an <see cref="InvalidOperationException" /> with this constructor,
-        /// please use the <see cref="HttpClientService.SetIdentityServerOptions{TTokenServiceOptions}(IOptions{TTokenServiceOptions})"/>.
-        /// </summary>
-        /// <param name="httpClientFactory">The <see cref="IHttpClientFactory"/> to create an <see cref="HttpClient"/>.</param>
-        /// <param name="requestMessageFactory">The <see cref="IHttpRequestMessageFactory"/> to get a new <see cref="HttpRequestMessage"/>.</param>
-        /// <param name="accessTokenService">The <see cref="ITokenResponseService"/> to retrieve a token, if required.</param>
-        public HttpClientService(IHttpClientFactory httpClientFactory, IHttpRequestMessageFactory requestMessageFactory, ITokenResponseService accessTokenService)
-        {
-            _httpClientFactory = httpClientFactory;
-            _accessTokenService = accessTokenService;
-            httpRequestMessage = requestMessageFactory.CreateRequestMessage();
-        }
-
-        internal HttpClientService CreateHttpClient(string name)
-        {
-            httpClient = _httpClientFactory.CreateClient(name);
-            return this;
-        }
-
-        internal HttpClientService CreateHttpClient()
-        {
-            httpClient = _httpClientFactory.CreateClient();
-            return this;
         }
 
         /// <summary>
@@ -81,7 +46,7 @@ namespace IdentityServer4.Contrib.HttpClientService
         public HttpClientService SetIdentityServerOptions(string configurationSection)
         {
             if (_configuration == null)
-                throw new InvalidOperationException("String configuration can only be used with the HttpClientService(IConfiguration configuration,...) constructor");
+                throw new InvalidOperationException("String configuration can only be used with the HttpClientService(IConfiguration configuration,...) constructors.");
 
             var sectionExists = _configuration.GetChildren().Any(item => item.Key == configurationSection);
             if (!sectionExists)
@@ -292,7 +257,7 @@ namespace IdentityServer4.Contrib.HttpClientService
             }
 
             //make the call            
-            var response = await httpClient.SendAsync(httpRequestMessage);
+            var response = await _coreHttpClient.SendAsync(httpRequestMessage);
             var apiResponse = new ResponseObject<TResponseBody>
             {
                 Headers = response.Headers,

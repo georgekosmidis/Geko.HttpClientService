@@ -35,8 +35,7 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.Controllers
         public async Task<IActionResult> CustomHeaders()
         {
             var responseObject = await _requestServiceFactory
-                .CreateHttpClientService()                                                  //Create a new unnamed service (prefer named instances to avoid socket exhaustion issues.
-                                                                                            // read more about HttpClient issues here: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core
+                .CreateHttpClientService()
                 .AddHeader("X-Custom-Header","Header-Value")                                //Add one header at a time 
                 .SetHeaders(new Dictionary<string, string>                                  // or set a dictionary with all headers 
                 {
@@ -60,8 +59,7 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.Controllers
         {
             
             var responseObject = await _requestServiceFactory
-                .CreateHttpClientService()                                                  //Create a new unnamed service (prefer named instances to avoid socket exhaustion issues.
-                                                                                            // read more about HttpClient issues here: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core
+                .CreateHttpClientService()
                 .PostAsync<string>(                                                         //Execute a POST request, retrieve results as string
                     "http://localhost:5000/dummy-data/complex-type",                        //URL for the request
                     new StringContent("request_content", Encoding.UTF8, "text/plain")       //StringContent with encoding and mediatype

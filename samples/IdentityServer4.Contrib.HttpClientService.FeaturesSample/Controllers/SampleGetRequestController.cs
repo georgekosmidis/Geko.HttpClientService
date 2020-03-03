@@ -33,8 +33,7 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.Controllers
         public async Task<IActionResult> SimpleGet()
         {
             var responseObject = await _requestServiceFactory
-                .CreateHttpClientService()                                                  //Create a new unnamed service (prefer named instances to avoid socket exhaustion issues,
-                                                                                            // read more about HttpClient issues here: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core)
+                .CreateHttpClientService()
                 .GetAsync("https://www.google.com");                                        //Execute the GET request
 
 
@@ -52,8 +51,7 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.Controllers
         public async Task<IActionResult> SimpleGetWithTypeCasting1()
         {
             var responseObject = await _requestServiceFactory
-                .CreateHttpClientService()                                                  //Create a new unnamed service (prefer named instances to avoid socket exhaustion issues,
-                                                                                            // read more about HttpClient issues here: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core)
+                .CreateHttpClientService()
                 .GetAsync<int>("http://localhost:5000/dummy-data/random-integer");          //Execute a GET request and set the type of the result to int
 
 
@@ -71,8 +69,7 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.Controllers
         public async Task<IActionResult> SimpleGetWithTypeCasting2()
         {
             var responseObject = await _requestServiceFactory
-                .CreateHttpClientService()                                                                          //Create a new unnamed service (prefer named instances to avoid socket exhaustion issues,
-                                                                                                                    // read more about HttpClient issues here: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core)
+                .CreateHttpClientService()
                 .GetAsync<IEnumerable<ComplexTypeSampleModel>>("http://localhost:5000/dummy-data/complex-type");    //Execute a GET request and set the type of the result to a list of ComplexTypeSampleModel
 
 

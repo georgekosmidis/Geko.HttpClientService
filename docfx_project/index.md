@@ -6,9 +6,7 @@ An HttpClient service that makes it easy to make authenticated HTTP requests to 
 ```csharp
 var responseObject = await _requestServiceFactory
                           //Create a instance of the service
-                          // could also be .CreateHttpClientService(), but before you ommit the name
-                          // read more about HttpClient and socket exhaustion
-                          .CreateHttpClientService("name_of_service")
+                          .CreateHttpClientService()
                           //Also supports IOptions<>
                           .SetIdentityServerOptions("appsettings_section")     
                           //GET and deserialize the response body to IEnumerable<Customers>

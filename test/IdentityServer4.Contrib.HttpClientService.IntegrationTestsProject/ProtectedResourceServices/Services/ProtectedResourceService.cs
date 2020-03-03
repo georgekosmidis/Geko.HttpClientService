@@ -34,7 +34,7 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.ProtectedReso
         public async Task<IEnumerable<ProtectedResourceResponseDto>> GetProtectedResourceResults()
         {
             var response = await _requestServiceFactory
-                .CreateHttpClientService(nameof(ProtectedResourceService))                                          //Try to always use named HttpClients, read more here: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core
+                .CreateHttpClientService()
                 .SetIdentityServerOptions(_identityServerOptions)                                                   //Set the options to retrieve an access token
                 .GetAsync<IEnumerable<ProtectedResourceResponseDto>>("https://demo.identityserver.io/api/test");    //Execute the request
 
@@ -49,7 +49,7 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.ProtectedReso
         public async Task<ResponseObject<IEnumerable<ProtectedResourceResponseDto>>> GetProtectedResourceResponseObject(Dictionary<string, string> headers)
         {
             var response = await _requestServiceFactory
-                .CreateHttpClientService(nameof(ProtectedResourceService))                                       //Try to always use named HttpClients, read more here: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core
+                .CreateHttpClientService()
                 .SetIdentityServerOptions(_identityServerOptions)                                                   //Set the options to retrieve an access token
                 .SetHeaders(headers)                                                                             //Set custom headers
                 .GetAsync<IEnumerable<ProtectedResourceResponseDto>>("https://demo.identityserver.io/api/test"); //Execute the request

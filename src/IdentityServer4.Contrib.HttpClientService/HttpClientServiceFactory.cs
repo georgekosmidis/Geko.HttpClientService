@@ -13,18 +13,59 @@ using System.IO;
 using System.Collections.Generic;
 using System.Configuration;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace IdentityServer4.Contrib.HttpClientService
 {
     /// <summary>
     /// A factory that creates <see cref="HttpClientService"/> instances for a given logical name.
     /// </summary>
-    public class HttpClientServiceFactory : IHttpClientServiceFactory
+    public sealed class HttpClientServiceFactory : IHttpClientServiceFactory
     {
         private readonly ICoreHttpClient _coreHttpClient;
         private readonly ITokenResponseService _tokenResponseService;
         private readonly IHttpRequestMessageFactory _requestMessageFactory;
         private readonly IConfiguration _configuration;
+
+        private static readonly Lazy<HttpClientServiceFactory> lazyInstance
+            = new Lazy<HttpClientServiceFactory>(() => new HttpClientServiceFactory());
+        private static readonly object syncLock = new object();
+
+        /// <summary>
+        /// Lazy Singleton instantiation for use outside of a DI container.
+        /// </summary>
+        public static HttpClientServiceFactory Instance
+        {
+            get
+            {
+                return lazyInstance.Value;
+            }
+        }
+
+        private HttpClientServiceFactory()
+        {
+            //no configuration for Dektop
+            _configuration = null;
+
+            _coreHttpClient = new CoreHttpClient(
+                                new HttpClient()
+                              );
+
+            _tokenResponseService = new TokenResponseService(
+                                        new IdentityServerHttpClient(
+                                            new HttpClient()
+                                        ),
+                                        new TokenResponseCacheManager(
+                                            new MemoryCache(
+                                                Options.Create(
+                                                    new MemoryCacheOptions()
+                                                )
+                                            )
+                                        )
+                                    );
+
+            _requestMessageFactory = new HttpRequestMessageFactoryDesktop();
+        }
 
         /// <summary>
         /// Constructor of the <see cref="HttpClientServiceFactory" />.
@@ -35,6 +76,26 @@ namespace IdentityServer4.Contrib.HttpClientService
         /// <param name="tokenResponseService">The <see cref="ITokenResponseService"/> to retrieve a token, if required.</param>
         public HttpClientServiceFactory(IConfiguration configuration, ICoreHttpClient coreHttpClient, IHttpRequestMessageFactory requestMessageFactory, ITokenResponseService tokenResponseService)
         {
+            if (configuration == null)
+            {
+                throw new ArgumentNullException(nameof(configuration));
+            }
+
+            if (coreHttpClient == null)
+            {
+                throw new ArgumentNullException(nameof(coreHttpClient));
+            }
+
+            if (requestMessageFactory == null)
+            {
+                throw new ArgumentNullException(nameof(requestMessageFactory));
+            }
+
+            if (tokenResponseService == null)
+            {
+                throw new ArgumentNullException(nameof(tokenResponseService));
+            }
+
             _configuration = configuration;
             _coreHttpClient = coreHttpClient;
             _tokenResponseService = tokenResponseService;

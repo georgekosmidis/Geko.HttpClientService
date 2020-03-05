@@ -23,11 +23,11 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
     {
 
         [TestMethod]
-        public async Task HttpClientServiceTests_ComplexRequestType()
+        public async Task HttpClientServiceTests_ComplexRequestType_ShouldSerializeAndSent()
         {
 
             var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("section_data"),
+                IConfigurationMocks.Get("key", "section_data"),
                 new CoreHttpClient(
                     IHttpClientFactoryMocks.Get(HttpStatusCode.Created, "body_of_response").CreateClient()
                 ),
@@ -59,11 +59,11 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
         }
 
         [TestMethod]
-        public async Task HttpClientServiceTests_PrimitiveRequestType()
+        public async Task HttpClientServiceTests_PrimitiveRequestType_ShouldSerializeAndSent()
         {
 
             var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("section_data"),
+                IConfigurationMocks.Get("key", "section_data"),
                 new CoreHttpClient(
                     IHttpClientFactoryMocks.Get(HttpStatusCode.Created, "body_of_response").CreateClient()
                 ),
@@ -95,11 +95,11 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
         }
 
         [TestMethod]
-        public async Task HttpClientServiceTests_StringContentRequestType()
+        public async Task HttpClientServiceTests_StringContentRequestType_ShouldSerializeAndSent()
         {
 
             var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("section_data"),
+                IConfigurationMocks.Get("key", "section_data"),
                 new CoreHttpClient(
                     IHttpClientFactoryMocks.Get(HttpStatusCode.Created, "body_of_response").CreateClient()
                 ),
@@ -128,16 +128,14 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
             Assert.AreEqual("some/type", result.HttpRequestMessge.Content.Headers.ContentType.MediaType);
             Assert.AreEqual("utf-32", result.HttpRequestMessge.Content.Headers.ContentType.CharSet);
             Assert.AreEqual("request_body", requestBody);
-
-            httpClientService.Dispose();
         }
 
         [TestMethod]
-        public async Task HttpClientServiceTests_StreamContentRequestType()
+        public async Task HttpClientServiceTests_StreamContentRequestType_ShouldSentAsStream()
         {
 
             var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("section_data"),
+                IConfigurationMocks.Get("key", "section_data"),
                 new CoreHttpClient(
                     IHttpClientFactoryMocks.Get(HttpStatusCode.Created, "body_of_response").CreateClient()
                 ),
@@ -172,7 +170,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
                 var requestBody = await result.HttpRequestMessge.Content.ReadAsStringAsync();
                 Assert.AreEqual("test_body_as_stream", requestBody);
 
-                httpClientService.Dispose();
+                result.HttpRequestMessge.Dispose();
             }
         }
     }

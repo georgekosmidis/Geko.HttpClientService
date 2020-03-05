@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample
+namespace IdentityServer4.Contrib.HttpClientService.IntegrationTestsProject
 {
     /// <summary>
     /// ASP.NET Core web application is actually a console project.

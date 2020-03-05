@@ -41,7 +41,7 @@ namespace IdentityServer4.Contrib.HttpClientService.CompleteSample.ProtectedReso
             var response = await _requestServiceFactory
                 .CreateHttpClientService()
                 .SetIdentityServerOptions(_identityServerOptions)                                                   //Set the options to retrieve an access token
-                .AddHeader("X-Request-Client", "IdentityServer4.Contrib.HttpClientService")                         //Set custom headers for this request
+                .HeadersAdd("X-Request-Client", "IdentityServer4.Contrib.HttpClientService")                        //Set custom headers for this request
                 .GetAsync<IEnumerable<ProtectedResourceResponseDto>>("https://demo.identityserver.io/api/test");    //Execute the request
 
             if (response.StatusCode == System.Net.HttpStatusCode.OK)

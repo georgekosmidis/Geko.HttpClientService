@@ -17,6 +17,6 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure
         /// <typeparam name="TTokenServiceOptions">The type of the configuration options for the IdentityServer4.</typeparam>
         /// <param name="options">The configuration options for the IdentityServer4.</param>
         /// <returns>A <see cref="TokenResponse"/> object.</returns>
-        Task<TokenResponse> GetTokenResponseAsync<TTokenServiceOptions>(IOptions<TTokenServiceOptions> options) where TTokenServiceOptions : DefaultClientCredentialOptions, new();
+        Task<TokenResponse> GetTokenResponseAsync<TTokenServiceOptions>(TTokenServiceOptions options) where TTokenServiceOptions : DefaultClientCredentialOptions, new();
     }
 }

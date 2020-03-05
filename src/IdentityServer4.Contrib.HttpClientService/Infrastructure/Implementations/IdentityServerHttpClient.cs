@@ -32,17 +32,17 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure
         /// <typeparam name="TTokenServiceOptions">The type of the configuration options for the IdentityServer4.</typeparam>
         /// <param name="options">The configuration options for the IdentityServer4.</param>
         /// <returns>A <see cref="TokenResponse"/> object.</returns>
-        public async Task<TokenResponse> GetTokenResponseAsync<TTokenServiceOptions>(IOptions<TTokenServiceOptions> options) where TTokenServiceOptions : DefaultClientCredentialOptions, new()
+        public async Task<TokenResponse> GetTokenResponseAsync<TTokenServiceOptions>(TTokenServiceOptions options) where TTokenServiceOptions : DefaultClientCredentialOptions, new()
         {
             if (options == default)
                 throw new ArgumentNullException(nameof(options));
 
             return await _httpClient.RequestClientCredentialsTokenAsync(new ClientCredentialsTokenRequest
             {
-                Address = options.Value.Address,
-                ClientId = options.Value.ClientId,
-                ClientSecret = options.Value.ClientSecret,
-                Scope = options.Value.Scopes
+                Address = options.Address,
+                ClientId = options.ClientId,
+                ClientSecret = options.ClientSecret,
+                Scope = options.Scope
             });
         }
     }

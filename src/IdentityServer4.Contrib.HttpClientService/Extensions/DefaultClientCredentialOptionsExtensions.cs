@@ -15,9 +15,9 @@ namespace IdentityServer4.Contrib.HttpClientService.Extensions
         /// <typeparam name="TTokenServiceOptions">A type that inherits from the <see cref="DefaultClientCredentialOptions"/> onject</typeparam>
         /// <param name="options">The token service options</param>
         /// <returns>Returns a string representing a unique identifier to be used as the caching key, by getting the hashcode of the address, the client and scopes.</returns>
-        internal static string GetCacheKey<TTokenServiceOptions>(this IOptions<TTokenServiceOptions> options) where TTokenServiceOptions : DefaultClientCredentialOptions, new()
+        internal static string GetCacheKey<TTokenServiceOptions>(this TTokenServiceOptions options) where TTokenServiceOptions : DefaultClientCredentialOptions, new()
         {
-            return (options.Value.Address + options.Value.ClientId + options.Value.Scopes).GetHashCode().ToString();
+            return (options.Address + options.ClientId + options.Scope).GetHashCode().ToString();
         }
     }
 }

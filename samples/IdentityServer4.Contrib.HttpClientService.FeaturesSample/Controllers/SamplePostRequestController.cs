@@ -33,7 +33,7 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.Controllers
         public async Task<IActionResult> SimplePost()
         {
             var responseObject = await _requestServiceFactory
-                .CreateHttpClientService()
+                .CreateHttpClientService()                                                  //Create a new instance of the HttpClientService
                 .PostAsync(                                                                 //Execute a POST request, send the body as string, expect the results as string
                     "http://localhost:5000/dummy-data/post-integer", 
                     "request_body"
@@ -54,8 +54,8 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.Controllers
         public async Task<IActionResult> SimpleTypedPost()
         {
             var responseObject = await _requestServiceFactory
-                .CreateHttpClientService()
-                //.PostAsync<TRequestBody,TResponseBody>(...)
+                .CreateHttpClientService()                                                          //Create a new instance of the HttpClientService
+              //.PostAsync<TRequestBody,TResponseBody>(...)
                 .PostAsync<int, string>(                                                            //Execute a POST request, sent an integer, expect a string
                     "http://localhost:5000/dummy-data/post-integer",                                //URL for the request
                     19830426                                                                        //Integer to be sent
@@ -78,8 +78,8 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.Controllers
         {
             
             var responseObject = await _requestServiceFactory
-                .CreateHttpClientService()                                                          //Create a new unnamed service (prefer named instances to avoid socket exhaustion issues,
-                //.PostAsync<TRequestBody,TResponseBody>(...)                                       // read more about HttpClient issues here: https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core)
+                .CreateHttpClientService()                                                          //Create a new instance of the HttpClientService
+              //.PostAsync<TRequestBody,TResponseBody>(...)                                       
                 .PostAsync<ComplexTypeSampleModel, ComplexTypeSampleModel>(                         //Execute a POST request by setting the type of the RequestBody and ResposeBody to ComplexTypeSampleModel
                     "http://localhost:5000/dummy-data/complex-type",                                //URL for the request
                     new ComplexTypeSampleModel                                                      //Object to be sent

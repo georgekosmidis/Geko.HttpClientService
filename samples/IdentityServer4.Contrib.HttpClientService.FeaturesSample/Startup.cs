@@ -37,7 +37,7 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample
             /********************************************************************************************/
             services.AddHttpClientService();    //Adds the HTTP client service to the service collection
             // For typed configuration, use: .Configure<ProtectedResourceAccessTokenOptions>(Configuration.GetSection(nameof(ProtectedResourceAccessTokenOptions)));
-            // Check the CompleteSample for more
+            // Check the CompleteSample for more details
             /********************************************************************************************/
         }
 

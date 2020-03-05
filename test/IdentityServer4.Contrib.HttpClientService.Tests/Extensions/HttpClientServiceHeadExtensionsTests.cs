@@ -22,11 +22,11 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
     {
 
         [TestMethod]
-        public async Task HttpClientServiceHead_NoTypedResponse()
+        public async Task HttpClientServiceHead_NoTypedResponse_ShouldBeResponseString()
         {
 
             var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("section_data"),
+                IConfigurationMocks.Get("key", "section_data"),
                 new CoreHttpClient(
                     IHttpClientFactoryMocks.Get(HttpStatusCode.OK, this.ComplexTypeResponseString).CreateClient()
                 ),
@@ -45,8 +45,6 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
 
             var result = await httpClientService.HeadAsync("http://localhost");
 
-            httpClientService.Dispose();
-
             //Status/HttpResponseMessage
             Assert.AreEqual(HttpStatusCode.OK, result.StatusCode);
             Assert.AreEqual(HttpStatusCode.OK, result.HttpResponseMessage.StatusCode);
@@ -57,17 +55,17 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
 
             //Body
             Assert.AreEqual(this.ComplexTypeResponseString, result.BodyAsString);
-            var sr = new StreamReader(result.BodyAsStream);
-            Assert.AreEqual(this.ComplexTypeResponseString, sr.ReadToEnd());
+            //var sr = new StreamReader(result.BodyAsStream);
+            //Assert.AreEqual(this.ComplexTypeResponseString, sr.ReadToEnd());
             Assert.AreEqual(this.ComplexTypeResponseString, result.BodyAsType);
         }
 
         [TestMethod]
-        public async Task HttpClientServiceHead_TypedResponse()
+        public async Task HttpClientServiceHead_TypedResponse_ShouldBeResponseType()
         {
 
             var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("section_data"),
+                IConfigurationMocks.Get("key", "section_data"),
                 new CoreHttpClient(
                     IHttpClientFactoryMocks.Get(HttpStatusCode.OK, this.ComplexTypeResponseString).CreateClient()
                 ),
@@ -86,8 +84,6 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
 
             var result = await httpClientService.HeadAsync<ComplexTypeResponse>("http://localhost");
 
-            httpClientService.Dispose();
-
             //Status/HttpResponseMessage
             Assert.AreEqual(HttpStatusCode.OK, result.StatusCode);
             Assert.AreEqual(HttpStatusCode.OK, result.HttpResponseMessage.StatusCode);
@@ -98,8 +94,8 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
 
             //Body
             Assert.AreEqual(this.ComplexTypeResponseString, result.BodyAsString);
-            var sr = new StreamReader(result.BodyAsStream);
-            Assert.AreEqual(this.ComplexTypeResponseString, sr.ReadToEnd());
+            //var sr = new StreamReader(result.BodyAsStream);
+            //Assert.AreEqual(this.ComplexTypeResponseString, sr.ReadToEnd());
 
             Assert.IsInstanceOfType(result.BodyAsType.TestInt, typeof(int));
             Assert.AreEqual(new ComplexTypeResponse().TestInt, result.BodyAsType.TestInt);

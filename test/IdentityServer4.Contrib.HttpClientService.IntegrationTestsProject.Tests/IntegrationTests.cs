@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc.Testing;
-using IdentityServer4.Contrib.HttpClientService.FeaturesSample;
 using System;
 using System.Diagnostics;
 using System.Net.Http;
@@ -7,22 +6,26 @@ using System.Threading.Tasks;
 using System.Threading.Tasks.Dataflow;
 using Xunit;
 using System.Linq;
+using IdentityServer4.Contrib.HttpClientService.IntegrationTestsProject;
 
 namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.Tests
 {
-    public class IntegrationTestsControllerTests
+    public class IntegrationTests
         : IClassFixture<WebApplicationFactory<Startup>>
     {
         private readonly WebApplicationFactory<Startup> _factory;
 
-        public IntegrationTestsControllerTests(WebApplicationFactory<Startup> factory)
+        public IntegrationTests(WebApplicationFactory<Startup> factory)
         {
             _factory = factory;
         }
 
         [Fact]
-        public async Task SampleController_GetTestApiResults_Parallelism()
+        public async Task SampleController_GetTestApiResults_Concurrency_ShouldContainCorrectHeader()
         {
+            if (Environment.ProcessorCount == 1)
+                throw new InvalidOperationException("Concurreny test with 1 processor are not possible!");
+
             // Arrange
             var client = _factory.CreateClient();
 
@@ -53,5 +56,6 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.Tests
             actionBlock.Complete();
             actionBlock.Completion.Wait();
         }
+        
     }
 }

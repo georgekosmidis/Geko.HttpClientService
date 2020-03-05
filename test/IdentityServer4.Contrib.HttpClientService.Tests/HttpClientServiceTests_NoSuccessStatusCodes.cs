@@ -23,11 +23,11 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
     {
 
         [TestMethod]
-        public async Task HttpClientServiceTests_Returns400()
+        public async Task HttpClientServiceTests_ServerReturns400_ShouldHave400Error()
         {
 
             var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("section_data"),
+                IConfigurationMocks.Get("key", "section_data"),
                 new CoreHttpClient(
                     IHttpClientFactoryMocks.Get(HttpStatusCode.BadRequest, "body_of_response").CreateClient()
                 ),
@@ -57,11 +57,11 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
         }
 
         [TestMethod]
-        public async Task HttpClientServiceTests_Returns404()
+        public async Task HttpClientServiceTests_ServerReturns404_ShouldHave404Error()
         {
 
             var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("section_data"),
+                IConfigurationMocks.Get("key", "section_data"),
                 new CoreHttpClient(
                     IHttpClientFactoryMocks.Get(HttpStatusCode.NotFound, "body_of_response").CreateClient()
                 ),
@@ -91,11 +91,11 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
         }
 
         [TestMethod]
-        public async Task HttpClientServiceTests_Returns500()
+        public async Task HttpClientServiceTests_ServerReturns500_ShouldHave500Error()
         {
 
             var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("section_data"),
+                IConfigurationMocks.Get("key", "section_data"),
                 new CoreHttpClient(
                     IHttpClientFactoryMocks.Get(HttpStatusCode.InternalServerError, "body_of_response").CreateClient()
                 ),

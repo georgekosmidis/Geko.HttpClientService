@@ -6,14 +6,14 @@ using IdentityServer4.Contrib.HttpClientService.Tests.Helpers;
 using System.Net;
 using System;
 
-namespace IdentityServer4.Contrib.HttpClientService.Infrastructure.Test
+namespace IdentityServer4.Contrib.HttpClientService.Infrastructure.Tests
 {
     [TestClass]
     public class TokenResponseServiceTests
     {
 
         [TestMethod]
-        public async Task AccessTokenService_GetAccessToken()
+        public async Task AccessTokenService_GetAccessToken_ShouldReturnAccessToken()
         {
             var cachedTokenResponse = await TokenResponseMock.GetValidResponseAsync("cached_access_token", 0);
             var request = new TokenResponseService(
@@ -29,10 +29,10 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure.Test
                 IAccessTokenCacheManagerMocks.Get(cachedTokenResponse)
             );
 
-            var tokenServiceOptions = Options.Create(new DefaultClientCredentialOptions
+            var tokenServiceOptions = new DefaultClientCredentialOptions
             {
                 Address = "http://localhost/" + Guid.NewGuid()
-            });
+            };
 
             var accessToken = await request.GetTokenResponseAsync(tokenServiceOptions);
             Assert.AreEqual("cached_access_token", accessToken.AccessToken);

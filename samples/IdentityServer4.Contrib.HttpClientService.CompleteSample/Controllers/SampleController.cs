@@ -8,19 +8,28 @@ using Microsoft.Extensions.Logging;
 
 namespace IdentityServer4.Contrib.HttpClientService.CompleteSample.Controllers
 {
+    /// <summary>
+    /// Sample controller for the <see cref="HttpClientService"/>
+    /// </summary>
     [ApiController]
     [Route("[controller]")]
     public class SampleController : ControllerBase
     {
-        private readonly ILogger<SampleController> _logger;
         private readonly IProtectedResourceService _protectedResourceService;
 
-        public SampleController(ILogger<SampleController> logger, IProtectedResourceService protectedResourceService)
+        /// <summary>
+        /// Constructor of the <see cref="SampleController"/>
+        /// </summary>
+        /// <param name="protectedResourceService"></param>
+        public SampleController(IProtectedResourceService protectedResourceService)
         {
-            _logger = logger;
             _protectedResourceService = protectedResourceService;
         }
 
+        /// <summary>
+        /// Sample on how to use a custom service to get typed data from a protected resource
+        /// </summary>
+        /// <returns>An <see cref="IActionResult"/></returns>
         [HttpGet]
         public async Task<IActionResult> Get()
         {

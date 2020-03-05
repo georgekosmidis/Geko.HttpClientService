@@ -1,22 +1,11 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using IdentityServer4.Contrib.HttpClientService;
 using IdentityServer4.Contrib.HttpClientService.Extensions;
-using IdentityServer4.Contrib.HttpClientService.Models;
-using IdentityServer4.Contrib.HttpClientService.FeaturesSample.ProtectedResourceServices;
-using IdentityServer4.Contrib.HttpClientService.FeaturesSample.ProtectedResourceServices.Services;
 
-namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample
+namespace IdentityServer4.Contrib.HttpClientService.IntegrationTestsProject
 {
     /// <summary>
     /// The Startup class configures services and the app's request pipeline.
@@ -45,12 +34,8 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample
         {
             services.AddControllers();
 
-            //Adds the HTTP client service to the service collection,
-            // ads as singleton a custom service for HTTP calls (ProtectedResourceService),
-            // and registers a configuration instance with the client credentials options that will be used the ProtectedResourceService
-            services.AddHttpClientService()
-                    .AddSingleton<ProtectedResourceService>()
-                    .Configure<ProtectedResourceClientCredentialsOptions>(Configuration.GetSection(nameof(ProtectedResourceClientCredentialsOptions)));
+            //Adds the HTTP client service to the service collection
+            services.AddHttpClientService();
         }
 
         /// <summary>

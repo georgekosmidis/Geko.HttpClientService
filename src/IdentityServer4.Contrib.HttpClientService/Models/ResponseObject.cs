@@ -45,9 +45,6 @@ namespace IdentityServer4.Contrib.HttpClientService.Models
         /// <summary>
         /// The entire <see cref="HttpRequestMessage"/> object for debugging purposes.
         /// </summary>
-        /// <remarks>
-        /// It will be null if <see cref="HttpClientService.Dispose" /> is called for cleanup.
-        /// </remarks>
         public HttpRequestMessage HttpRequestMessge { get; internal set; }
 
         /// <summary>

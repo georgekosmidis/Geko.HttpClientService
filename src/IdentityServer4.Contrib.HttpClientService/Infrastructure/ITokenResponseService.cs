@@ -16,6 +16,6 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure
         /// <typeparam name="TTokenServiceOptions">A type that inherits from the <see cref="DefaultClientCredentialOptions"/> onject</typeparam>
         /// <param name="options">The token service options</param>
         /// <returns>A <see cref="TokenResponse"/> instance.</returns>
-        Task<TokenResponse> GetTokenResponseAsync<TTokenServiceOptions>(IOptions<TTokenServiceOptions> options) where TTokenServiceOptions : DefaultClientCredentialOptions, new();
+        Task<TokenResponse> GetTokenResponseAsync<TTokenServiceOptions>(TTokenServiceOptions options) where TTokenServiceOptions : DefaultClientCredentialOptions, new();
     }
 }

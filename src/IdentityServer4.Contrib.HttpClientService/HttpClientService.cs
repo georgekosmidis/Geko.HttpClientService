@@ -20,18 +20,145 @@ namespace IdentityServer4.Contrib.HttpClientService
     public class HttpClientService
     {
         private readonly ITokenResponseService _accessTokenService;
-        private readonly IConfiguration _configuration;
-        private HttpRequestMessage httpRequestMessage;
-
         private readonly ICoreHttpClient _coreHttpClient;
-        private IOptions<DefaultClientCredentialOptions> _options;
+        private readonly IHttpRequestMessageFactory _requestMessageFactory;
+
+        internal HttpClientServiceHeaders Headers { get; }
+        internal AccessTokenOptions AccessTokenOptions { get; }
 
         internal HttpClientService(IConfiguration configuration, ICoreHttpClient coreHttpClient, IHttpRequestMessageFactory requestMessageFactory, ITokenResponseService accessTokenService)
         {
-            _configuration = configuration;
             _coreHttpClient = coreHttpClient;
+            _requestMessageFactory = requestMessageFactory;
             _accessTokenService = accessTokenService;
-            httpRequestMessage = requestMessageFactory.CreateRequestMessage();
+
+            Headers = new HttpClientServiceHeaders();
+            AccessTokenOptions = new AccessTokenOptions(configuration);
+
+        }
+
+        #region Headers
+        /// <summary>
+        /// Adds a header to the request. If a second header with the same name is added, then their values will be aggregated to one <see cref="List{String}"/>.
+        /// </summary>
+        /// <param name="name">The name of the header.</param>
+        /// <param name="value">The value of the header.</param>
+        /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
+
+        public HttpClientService HeadersAdd(string name, string value)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                throw new ArgumentNullException(nameof(name));
+            }
+
+            Headers.Add(name, value);
+
+            return this;
+        }
+
+        /// <summary>
+        /// Adds a header to the request. If a second header with the same name is added, then their values will be aggregated to one <see cref="List{TString}"/>.
+        /// </summary>
+        /// <param name="name">The name of the header.</param>
+        /// <param name="value">The list of values of the header.</param>
+        /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
+        public HttpClientService HeadersAdd(string name, List<string> value)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                throw new ArgumentNullException(nameof(name));
+            }
+
+            Headers.Add(name, value);
+
+            return this;
+        }
+
+        /// <summary>
+        /// Clears all current headers, and sets the <paramref name="headers"/> as the headers for the request.
+        /// </summary>
+        /// <param name="headers">A <see cref="Dictionary{TKey, TValue}"/> with the key representing the name of the header, and the value representing the value of the header.</param>
+        /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
+
+        public HttpClientService HeadersSet(Dictionary<string, List<string>> headers)
+        {
+            if (headers == null)
+            {
+                throw new ArgumentNullException(nameof(headers));
+            }
+
+            HeadersClear();
+
+            foreach (var kv in headers)
+            {
+                Headers.Add(kv.Key, kv.Value);
+            }
+
+            return this;
+        }
+
+        /// <summary>
+        /// Clears all current headers, and sets the <paramref name="headers"/> as the headers for the request.
+        /// </summary>
+        /// <param name="headers">A <see cref="Dictionary{TKey, TValue}"/> where value is a <see cref="List{TString}"/> with the key representing the name of the header, and the values representing the values of the header.</param>
+        /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
+        public HttpClientService HeadersSet(Dictionary<string, string> headers)
+        {
+            if (headers == null)
+            {
+                throw new ArgumentNullException(nameof(headers));
+            }
+
+            HeadersClear();
+
+            foreach (var kv in headers)
+            {
+                Headers.Add(kv.Key, kv.Value);
+            }
+
+            return this;
+        }
+
+        /// <summary>
+        /// Clears all headers from the <see cref="HttpHeaders"/> collection.
+        /// </summary>
+        /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
+        public HttpClientService HeadersClear()
+        {
+            Headers.Clear();
+            return this;
+        }
+
+        /// <summary>
+        /// Removes the <paramref name="name"/> header from the <see cref="HttpHeaders"/> collection.
+        /// </summary>
+        /// <param name="name">The header to be removed</param>
+        /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
+        public HttpClientService HeadersRemove(string name)
+        {
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                throw new ArgumentNullException(nameof(name));
+            }
+            Headers.Remove(name);
+            return this;
+        }
+
+        #endregion
+
+        #region IdentityServer
+        /// <summary>
+        /// Sets the IdentityServer4 options for retrieving an access token using client credentials.
+        /// </summary>
+        /// <typeparam name="TIdentityServerOptions">The type of the <paramref name="options"/>.</typeparam>
+        /// <param name="options">The token service options.</param>
+        /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
+        public HttpClientService SetIdentityServerOptions<TIdentityServerOptions>(IOptions<TIdentityServerOptions> options) where TIdentityServerOptions : DefaultClientCredentialOptions, new()
+        {
+            AccessTokenOptions.Set(options);
+
+            return this;
         }
 
         /// <summary>
@@ -42,94 +169,43 @@ namespace IdentityServer4.Contrib.HttpClientService
         /// The name of the configuration section that contains the information for requesting an access token. 
         /// See <see cref="DefaultClientCredentialOptions"/> for the property names.
         /// </param>
-        /// <returns></returns>
+        /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
         public HttpClientService SetIdentityServerOptions(string configurationSection)
         {
-            if (_configuration == null)
-                throw new InvalidOperationException("String configuration can only be used with the HttpClientService(IConfiguration configuration,...) constructors.");
-
-            var sectionExists = _configuration.GetChildren().Any(item => item.Key == configurationSection);
-            if (!sectionExists)
-                throw new ArgumentException("The configuration section '" + configurationSection + "' cannot be found!", nameof(configurationSection));
-
-            var options = _configuration.GetSection(configurationSection).Get(typeof(DefaultClientCredentialOptions)) as DefaultClientCredentialOptions;
-            SetIdentityServerOptions(Options.Create(options));
+            AccessTokenOptions.Set(configurationSection);
 
             return this;
         }
 
         /// <summary>
-        /// Sets the IdentityServer4 options for retrieving an access token using client credentials.
+        /// Sets the IdentityServer4 options for retrieving an access token using client credentials by using a delegate.
         /// </summary>
-        /// <typeparam name="TIdentityServerOptions">A type that inherits from the <see cref="DefaultClientCredentialOptions"/> onject.</typeparam>
-        /// <param name="options">The token service options.</param>
-        /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
-        public HttpClientService SetIdentityServerOptions<TIdentityServerOptions>(IOptions<TIdentityServerOptions> options) where TIdentityServerOptions : DefaultClientCredentialOptions, new()
-        {
-            if (options == null)
-            {
-                throw new ArgumentNullException(nameof(options));
-            }
-            if (options.Value.Address == null)
-            {
-                throw new ArgumentNullException(nameof(options.Value.Address), "Is there an " + typeof(TIdentityServerOptions).Name + " section in the appsettings.json?");
-            }
-            if (options.Value.ClientId == null)
-            {
-                throw new ArgumentNullException(nameof(options.Value.ClientId), "Is there a " + typeof(TIdentityServerOptions).Name + " section in the appsettings.json?");
-            }
-            if (options.Value.ClientSecret == null)
-            {
-                throw new ArgumentNullException(nameof(options.Value.ClientSecret), "Is there a " + typeof(TIdentityServerOptions).Name + " section in the appsettings.json?");
-            }
+        /// <param name="optionsDelegate">The <see cref="Action{T}"/> delegate.</param>
 
-            _options = options;
+        /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
+        public HttpClientService SetIdentityServerOptions(Action<DefaultClientCredentialOptions> optionsDelegate)
+        {
+            AccessTokenOptions.Set(optionsDelegate);
 
             return this;
         }
 
         /// <summary>
-        /// Sets a collection of headers to the request.
+        /// Sets the IdentityServer4 options by passing an object that inherits from <see cref="DefaultClientCredentialOptions"/>
         /// </summary>
-        /// <param name="headers">A <see cref="Dictionary{TKey, TValue}"/> with the key representing the name of the header, and the value representing the value of the header.</param>
-        /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
-        public HttpClientService SetHeaders(Dictionary<string, string> headers)
+        /// <typeparam name="TIdentityServerOptions">The type of the <paramref name="options"/>.</typeparam>
+        /// <param name="options">The <see cref="DefaultClientCredentialOptions"/> that contains the options.</param>
+        public HttpClientService SetIdentityServerOptions<TIdentityServerOptions>(TIdentityServerOptions options) where TIdentityServerOptions : DefaultClientCredentialOptions, new()
         {
-            if (headers == null)
-            {
-                throw new ArgumentNullException(nameof(headers));
-            }
-
-            foreach (var kv in headers)
-            {
-                httpRequestMessage.Headers.Add(kv.Key, kv.Value);
-            }
+            AccessTokenOptions.Set(options);
 
             return this;
         }
-
-
-        /// <summary>
-        /// Adds a header to the request.
-        /// </summary>
-        /// <param name="name">The name of the header.</param>
-        /// <param name="value">The value of the header.</param>
-        /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
-        public HttpClientService AddHeader(string name, string value)
-        {
-            if (String.IsNullOrWhiteSpace(name))
-            {
-                throw new ArgumentNullException(nameof(name));
-            }
-
-            httpRequestMessage.Headers.Add(name, value);
-
-            return this;
-        }
+        #endregion
 
         /// <summary>
         /// Creates and sends a request to the <paramref name="requestUri"/> using the HTTP verb from <paramref name="httpMethod"/> and the request body from <paramref name="requestBody"/>. 
-        /// If <see cref="SetIdentityServerOptions{TTokenServiceOptions}(IOptions{TTokenServiceOptions})" /> is called before the <c>SendAsync</c>, 
+        /// If <see cref="SetIdentityServerOptions{TTokenServiceOptions}(IOptions{TTokenServiceOptions})" /> is called before this method, 
         /// then a valid access token will be fetched by the <see cref="ITokenResponseService"/> and attached on this request. 
         /// </summary>
         /// <typeparam name="TResponseBody">
@@ -206,7 +282,8 @@ namespace IdentityServer4.Contrib.HttpClientService
         /// </returns>
         public async Task<ResponseObject<TResponseBody>> SendAsync<TRequestBody, TResponseBody>(Uri requestUri, HttpMethod httpMethod, TRequestBody requestBody)
         {
-            // var request = _requestMessageFactory.CreateRequestMessage();
+            var httpRequestMessage = _requestMessageFactory.CreateRequestMessage();
+
             httpRequestMessage.Method = httpMethod;
             httpRequestMessage.RequestUri = requestUri;
 
@@ -214,6 +291,12 @@ namespace IdentityServer4.Contrib.HttpClientService
             if ((httpMethod == HttpMethod.Get || httpMethod == HttpMethod.Head || httpMethod == HttpMethod.Delete)
                 && requestBody != null)
                 throw new ArgumentException(nameof(requestBody), "HTTP method " + httpMethod.Method + " does not support a request body.");
+
+            //headers
+            foreach (var kv in Headers)
+            {
+                httpRequestMessage.Headers.Add(kv.Key, kv.Value);
+            }
 
             //handle request body
             if (requestBody != null)
@@ -237,9 +320,9 @@ namespace IdentityServer4.Contrib.HttpClientService
             }
 
             //handle authentication
-            if (_options != default)
+            if (AccessTokenOptions.HasOptions)
             {
-                var tokenResponse = await _accessTokenService.GetTokenResponseAsync(_options);
+                var tokenResponse = await _accessTokenService.GetTokenResponseAsync(AccessTokenOptions.Get());
                 if (tokenResponse.IsError)
                 {
                     return new ResponseObject<TResponseBody>
@@ -269,7 +352,6 @@ namespace IdentityServer4.Contrib.HttpClientService
             //handle response body
             if (response.IsSuccessStatusCode)
             {
-                apiResponse.BodyAsStream = await response.Content.ReadAsStreamAsync();
                 if (!typeof(TResponseBody).IsAssignableFrom(typeof(Stream)))
                 {
                     apiResponse.BodyAsString = await response.Content.ReadAsStringAsync();
@@ -283,6 +365,10 @@ namespace IdentityServer4.Contrib.HttpClientService
                         apiResponse.BodyAsType = JsonConvert.DeserializeObject<TResponseBody>(apiResponse.BodyAsString);
                     }
                 }
+                else
+                {
+                    apiResponse.BodyAsStream = await response.Content.ReadAsStreamAsync();
+                }
             }
             else
             {
@@ -294,16 +380,16 @@ namespace IdentityServer4.Contrib.HttpClientService
             return apiResponse;
         }
 
-        /// <summary>
-        /// Disposes the HTTP request message used for the request.
-        /// </summary>
-        /// <remarks>
-        /// The <see cref="ResponseObject{TResponseBody}.HttpRequestMessge"/> will not be available after disposing.
-        /// </remarks>
-        public void Dispose()
-        {
-            httpRequestMessage.Dispose();
-        }
+        ///// <summary>
+        ///// Disposes the HTTP request message used for the request.
+        ///// </summary>
+        ///// <remarks>
+        ///// The <see cref="ResponseObject{TResponseBody}.HttpRequestMessge"/> will not be available after disposing.
+        ///// </remarks>
+        //public void Dispose()
+        //{
+        //    httpRequestMessage.Dispose();
+        //}
 
 
         private static bool IsSimpleType(Type type)

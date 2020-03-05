@@ -13,14 +13,14 @@ using Microsoft.Extensions.Options;
 using IdentityServer4.Contrib.HttpClientService.Models;
 using System;
 
-namespace IdentityServer4.Contrib.HttpClientService.Tests.Infrastructure
+namespace IdentityServer4.Contrib.HttpClientService.Infrastructure.Tests
 {
     [TestClass]
     public class AccessTokenCacheManagerTests
     {
 
         [TestMethod]
-        public async Task AccessTokenCacheManager_AddOrGet_RetrieveNew()
+        public async Task AccessTokenCacheManager_AddOrGet_ShouldRetrieveNew()
         {
             var cachedTokenResponse = await TokenResponseMock.GetValidResponseAsync("cached_access_token", 3600);
             var liveTokenResponse = await TokenResponseMock.GetValidResponseAsync("live_access_token", 3600);
@@ -37,7 +37,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Tests.Infrastructure
         }
 
         [TestMethod]
-        public async Task AccessTokenCacheManager_AddOrGet_ReturneCached()
+        public async Task AccessTokenCacheManager_AddOrGet_ShouldReturneCached()
         {
             var cachedTokenResponse = await TokenResponseMock.GetValidResponseAsync("cached_access_token", 3600);
             var liveTokenResponse = await TokenResponseMock.GetValidResponseAsync("live_access_token", 3600);

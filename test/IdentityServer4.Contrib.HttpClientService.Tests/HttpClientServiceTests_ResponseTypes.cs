@@ -24,7 +24,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
         {
 
             var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("section_data"),
+                IConfigurationMocks.Get("key", "section_data"),
                 new CoreHttpClient(
                     IHttpClientFactoryMocks.Get(HttpStatusCode.OK, this.ComplexTypeResponseString).CreateClient()
                 ),
@@ -47,7 +47,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
                     null
                 );
 
-            httpClientService.Dispose();
+            result.HttpRequestMessge.Dispose();
 
             Assert.AreEqual(HttpStatusCode.OK, result.StatusCode);
 
@@ -63,7 +63,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
         {
 
             var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("section_data"),
+                IConfigurationMocks.Get("key", "section_data"),
                 new CoreHttpClient(
                     IHttpClientFactoryMocks.Get(HttpStatusCode.OK, this.ComplexTypeResponseString).CreateClient()
                 ),
@@ -86,7 +86,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
                     null
                 );
 
-            httpClientService.Dispose();
+            result.HttpRequestMessge.Dispose();
 
             Assert.AreEqual(HttpStatusCode.OK, result.StatusCode);
             Assert.AreEqual(this.ComplexTypeResponseString, result.BodyAsType);
@@ -97,7 +97,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
         public async Task HttpClientServiceTests_PrimitiveResponseTypeAsType()
         {
             var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("section_data"),
+                IConfigurationMocks.Get("key", "section_data"),
                 new CoreHttpClient(
                     IHttpClientFactoryMocks.Get(HttpStatusCode.OK, "-123").CreateClient()
                 ),
@@ -120,7 +120,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
                     null
                 );
 
-            httpClientService.Dispose();
+            result.HttpRequestMessge.Dispose();
 
             Assert.AreEqual(HttpStatusCode.OK, result.StatusCode);
             Assert.AreEqual(-123, result.BodyAsType);
@@ -131,7 +131,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
         public async Task HttpClientServiceTests_WrongType()
         {
             var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("section_data"),
+                IConfigurationMocks.Get("key", "section_data"),
                 new CoreHttpClient(
                     IHttpClientFactoryMocks.Get(HttpStatusCode.OK, "string_as_body").CreateClient()
                 ),
@@ -148,18 +148,13 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
                 )
             ).CreateHttpClientService();
 
-            try
-            {
-                await httpClientService.SendAsync<object, int>(
-                    new Uri("http://localhost"),
-                    HttpMethod.Get,
-                    null
-                );
-            }
-            finally
-            {
-                httpClientService.Dispose();
-            }
+
+            await httpClientService.SendAsync<object, int>(
+                new Uri("http://localhost"),
+                HttpMethod.Get,
+                null
+            );
+
 
         }
 
@@ -175,7 +170,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
                 memoryStream.Position = 0;
 
                 var httpClientService = new HttpClientServiceFactory(
-                    IConfigurationMocks.Get("section_data"),
+                    IConfigurationMocks.Get("key", "section_data"),
                     new CoreHttpClient(
                         IHttpClientFactoryMocks.Get(HttpStatusCode.OK, memoryStream).CreateClient()
                     ),
@@ -198,7 +193,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
                     null
                 );
 
-                httpClientService.Dispose();
+                result.HttpRequestMessge.Dispose();
             }
 
             Assert.AreEqual(HttpStatusCode.OK, result.StatusCode);

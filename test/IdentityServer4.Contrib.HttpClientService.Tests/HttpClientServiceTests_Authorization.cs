@@ -21,11 +21,11 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
     {
 
         [TestMethod]
-        public async Task HttpClientServiceTests_Authorization_NoIdentityServerOptions()
+        public async Task HttpClientServiceTests_Authorization_NoIdentityServerOptions_ShouldRequestWitnNoAuth()
         {
 
             var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("section_data"),
+                IConfigurationMocks.Get("key", "section_data"),
                 new CoreHttpClient(
                     IHttpClientFactoryMocks.Get(HttpStatusCode.OK, "body_of_response").CreateClient()
                 ),
@@ -54,11 +54,11 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
         }
 
         [TestMethod]
-        public async Task HttpClientServiceTests_Authorization_WithIdentityServerOptions()
+        public async Task HttpClientServiceTests_Authorization_WithIdentityServerOptions_ShouldRequestWitnAuth()
         {
 
             var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("section_data"),
+                IConfigurationMocks.Get("key", "section_data"),
                 new CoreHttpClient(
                     IHttpClientFactoryMocks.Get(HttpStatusCode.OK, "body_of_response").CreateClient()
                 ),
@@ -68,7 +68,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
                 new TokenResponseService(
                     new IdentityServerHttpClient(
                         IHttpClientFactoryMocks.Get(HttpStatusCode.OK).CreateClient()
-                    ), 
+                    ),
                     IAccessTokenCacheManagerMocks.Get(
                         await TokenResponseMock.GetValidResponseAsync("access_token", 3600)
                     )
@@ -92,7 +92,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
                 null
             );
 
-            httpClientService.Dispose();
+            result.HttpRequestMessge.Dispose();
 
             Assert.IsTrue(result.HttpRequestMessge.Headers.Contains("Authorization"));
             Assert.AreEqual("Bearer", result.HttpRequestMessge.Headers.Authorization.Scheme);
@@ -103,11 +103,11 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
         }
 
         [TestMethod]
-        public async Task HttpClientServiceTests_Authorization_WithWrongIdentityServerOptions()
+        public async Task HttpClientServiceTests_Authorization_WithWrongIdentityServerOptions_ShouldHaveError()
         {
 
             var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("section_data"),
+                IConfigurationMocks.Get("key", "section_data"),
                 new CoreHttpClient(
                     IHttpClientFactoryMocks.Get(HttpStatusCode.OK, "body_of_response").CreateClient()
                 ),
@@ -141,11 +141,10 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
                 null
             );
 
-            httpClientService.Dispose();
-
             Assert.AreEqual(HttpStatusCode.OK, result.StatusCode);
             Assert.IsTrue(result.HasError);
             Assert.AreEqual("invalid_client", result.Error.Trim());
         }
+        
     }
 }

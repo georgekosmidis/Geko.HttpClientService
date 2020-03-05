@@ -13,7 +13,7 @@ using Microsoft.Extensions.Options;
 using IdentityServer4.Contrib.HttpClientService.Models;
 using System;
 
-namespace IdentityServer4.Contrib.HttpClientService.Tests.Infrastructure
+namespace IdentityServer4.Contrib.HttpClientService.Infrastructure.Tests
 {
     [TestClass]
     public class AccessTokenCacheManagerIntegrationTests

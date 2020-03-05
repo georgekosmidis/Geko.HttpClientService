@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using IdentityServer4.Contrib.HttpClientService.FeaturesSample.ProtectedResourceServices.Dto;
-using IdentityServer4.Contrib.HttpClientService.FeaturesSample.ProtectedResourceServices.Services;
+using System;
+using Microsoft.Extensions.Options;
+using IdentityServer4.Contrib.HttpClientService.Extensions;
 
-namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.Controllers
+namespace IdentityServer4.Contrib.HttpClientService.IntegrationTestsProject.Controllers
 {
     /// <summary>
     /// Sample controller for the <see cref="HttpClientService"/>
@@ -13,46 +14,42 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.Controllers
     [Route("[controller]")]
     public class IntegrationTestsController : ControllerBase
     {
-        private ProtectedResourceService _protectedResourceService;
+        private readonly HttpClientService httpClientService;
 
         /// <summary>
         /// Constructor of the <see cref="IntegrationTestsController"/>
         /// </summary>
         /// <param name="protectedResourceService"></param>
-        public IntegrationTestsController(ProtectedResourceService protectedResourceService)
+        public IntegrationTestsController(IHttpClientServiceFactory requestServiceFactory)
         {
-            _protectedResourceService = protectedResourceService;
+            httpClientService = requestServiceFactory
+                .CreateHttpClientService()
+                .SetIdentityServerOptions("ProtectedResourceClientCredentialsOptions");
         }
 
-
         /// <summary>
-        /// Performs a GET request using a custom <see cref="ProtectedResourceService"/>.
+        /// Outputs the id of the request.
         /// </summary>
         /// <returns>An ActionResult with the typed result returned by the <see cref="ProtectedResourceService"/>.</returns>
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<ProtectedResourceResponseDto>>> Get()
+        [HttpGet("test/response-from-request/{id}")]
+        public ActionResult<Guid> GetResponseFromRequest(Guid id)
         {
-            var result = await _protectedResourceService.GetProtectedResourceResults();
-
-            return Ok(result);
+            return Ok(id);
         }
 
         /// <summary>
-        /// Performs a GET request using a custom <see cref="ProtectedResourceService"/> and passing a custom header.
+        /// Performs a GET request to a protected resouse, and adds a custom header.
         /// </summary>
         /// <returns>An ActionResult with the request headersfor testing purposes</returns>
 
         [HttpGet("test/request/headers/{header}")]
         public async Task<IActionResult> TestRequestHeaders(string header)
         {
-            var result = await _protectedResourceService.GetProtectedResourceResponseObject(
-                new Dictionary<string, string>
-                {
-                    { "x-integration-test-header", header }
-                }
-            );
-
-            return Ok(result.HttpRequestMessge.Headers);
+            var response = await httpClientService
+                .HeadersAdd("x-integration-test-header", header)
+                .GetAsync("https://demo.identityserver.io/api/test");
+           
+            return Ok(response.HttpRequestMessge.Headers);
         }
 
     }

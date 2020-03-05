@@ -35,12 +35,8 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.Controllers
         public async Task<IActionResult> CustomHeaders()
         {
             var responseObject = await _requestServiceFactory
-                .CreateHttpClientService()
-                .AddHeader("X-Custom-Header","Header-Value")                                //Add one header at a time 
-                .SetHeaders(new Dictionary<string, string>                                  // or set a dictionary with all headers 
-                {
-                    { "X-Custom-Header-2", "Header-Value-2" }
-                })
+                .CreateHttpClientService()                                                  //Create a new instance of the HttpClientService
+                .HeadersAdd("X-Custom-Header","Header-Value")                               //Add one header at a time 
                 .GetAsync("http://localhost:5000/dummy-data/random-integer");               //Request
 
 
@@ -59,12 +55,11 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.Controllers
         {
             
             var responseObject = await _requestServiceFactory
-                .CreateHttpClientService()
+                .CreateHttpClientService()                                                  //Create a new instance of the HttpClientService
                 .PostAsync<string>(                                                         //Execute a POST request, retrieve results as string
                     "http://localhost:5000/dummy-data/complex-type",                        //URL for the request
                     new StringContent("request_content", Encoding.UTF8, "text/plain")       //StringContent with encoding and mediatype
                  );    
-
 
             if (!responseObject.HasError)                                                   //Check if there was an error in the process
                 return Ok(responseObject.BodyAsString);                                     //If not, get the body as type and divide by two

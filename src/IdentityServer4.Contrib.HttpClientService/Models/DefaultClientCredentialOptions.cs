@@ -23,8 +23,8 @@
         public string ClientSecret { get; set; }
 
         /// <summary>
-        /// The scopes.
+        /// A space seperated list of scopes.
         /// </summary>
-        public string Scopes { get; set; }
+        public string Scope { get; set; }
     }
 }

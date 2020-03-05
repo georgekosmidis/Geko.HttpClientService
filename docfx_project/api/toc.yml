@@ -28,10 +28,24 @@
 - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure
   name: IdentityServer4.Contrib.HttpClientService.Infrastructure
   items:
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.AccessTokenOptions
+    name: AccessTokenOptions
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.CoreHttpClient
+    name: CoreHttpClient
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpClientServiceHeaders
+    name: HttpClientServiceHeaders
   - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory
     name: HttpRequestMessageFactory
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop
+    name: HttpRequestMessageFactoryDesktop
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient
+    name: ICoreHttpClient
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerHttpClient
+    name: IdentityServerHttpClient
   - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
     name: IHttpRequestMessageFactory
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient
+    name: IIdentityServerHttpClient
   - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager
     name: ITokenResponseCacheManager
   - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService

@@ -17,11 +17,11 @@ items:
   type: Class
   source:
     remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/TokenResponseCacheManager.cs
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/TokenResponseCacheManager.cs
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: TokenResponseCacheManager
-    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/TokenResponseCacheManager.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/TokenResponseCacheManager.cs
     startLine: 14
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -33,6 +33,7 @@ items:
     content: 'public class TokenResponseCacheManager : ITokenResponseCacheManager'
     content.vb: >-
       Public Class TokenResponseCacheManager
+
           Implements ITokenResponseCacheManager
   inheritance:
   - System.Object
@@ -65,11 +66,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/TokenResponseCacheManager.cs
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/TokenResponseCacheManager.cs
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: .ctor
-    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/TokenResponseCacheManager.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/TokenResponseCacheManager.cs
     startLine: 23
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -101,11 +102,11 @@ items:
   type: Method
   source:
     remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/TokenResponseCacheManager.cs
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/TokenResponseCacheManager.cs
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: AddOrGetExistingAsync
-    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/TokenResponseCacheManager.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/TokenResponseCacheManager.cs
     startLine: 34
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -148,11 +149,11 @@ items:
   type: Method
   source:
     remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/TokenResponseCacheManager.cs
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/TokenResponseCacheManager.cs
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: Remove
-    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/TokenResponseCacheManager.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/TokenResponseCacheManager.cs
     startLine: 69
   assemblies:
   - IdentityServer4.Contrib.HttpClientService

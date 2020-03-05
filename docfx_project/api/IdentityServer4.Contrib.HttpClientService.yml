@@ -25,6 +25,7 @@ references:
   fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService
 - uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
   commentId: T:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
+  parent: IdentityServer4.Contrib.HttpClientService
   name: HttpClientServiceFactory
   nameWithType: HttpClientServiceFactory
   fullName: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory

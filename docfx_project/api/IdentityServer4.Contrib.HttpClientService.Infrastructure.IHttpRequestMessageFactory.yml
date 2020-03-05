@@ -87,7 +87,11 @@ references:
   fullName: System.Net.Http
 - uid: System.Net.Http.HttpClient
   commentId: T:System.Net.Http.HttpClient
+  parent: System.Net.Http
   isExternal: true
+  name: HttpClient
+  nameWithType: HttpClient
+  fullName: System.Net.Http.HttpClient
 - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage*
   commentId: Overload:IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage
   name: CreateRequestMessage

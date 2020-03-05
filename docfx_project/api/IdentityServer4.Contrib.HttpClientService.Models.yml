@@ -18,6 +18,7 @@ items:
 references:
 - uid: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
   commentId: T:IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
+  parent: IdentityServer4.Contrib.HttpClientService.Models
   name: DefaultClientCredentialOptions
   nameWithType: DefaultClientCredentialOptions
   fullName: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
@@ -57,3 +58,8 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: IdentityServer4.Contrib.HttpClientService.Models
+  commentId: N:IdentityServer4.Contrib.HttpClientService.Models
+  name: IdentityServer4.Contrib.HttpClientService.Models
+  nameWithType: IdentityServer4.Contrib.HttpClientService.Models
+  fullName: IdentityServer4.Contrib.HttpClientService.Models

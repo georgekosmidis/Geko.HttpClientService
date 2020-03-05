@@ -1,13 +1,12 @@
 # Documentation common methods/properties
 
 ### Class HttpClientService
-https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html#IdentityServer4_Contrib_HttpClientService_HttpClientService_SetIdentityServerOptions__1_Microsoft_Extensions_Options_IOptions___0__
 - [SetIdentityServerOptions(String)](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html#IdentityServer4_Contrib_HttpClientService_HttpClientService_SetIdentityServerOptions_System_String_)
 Sets the IdentityServer4 options for retrieving an access token using client credentials by passing the appsettings configuration section that contain the necessary configuration keys.
 - [SetIdentityServerOptions<TTokenServiceOptions>(IOptions<TTokenServiceOptions>)](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html#IdentityServer4_Contrib_HttpClientService_HttpClientService_SetIdentityServerOptions__1_Microsoft_Extensions_Options_IOptions___0__)
 Sets the IdentityServer4 options for retrieving an access token using client credentials.
 
-- [AddHeader(String, String)](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html#IdentityServer4_Contrib_HttpClientService_HttpClientService_AddHeader_System_String_System_String_)
+- [HeadersAdd(String, String)](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html#IdentityServer4_Contrib_HttpClientService_HttpClientService_HeadersAdd_System_String_System_String_)
 Adds a header to the request.
 
 ### Class HttpClientServiceFactory

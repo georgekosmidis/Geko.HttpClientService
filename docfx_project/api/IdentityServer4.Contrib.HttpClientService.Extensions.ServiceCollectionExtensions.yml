@@ -20,7 +20,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: ServiceCollectionExtensions
     path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/ServiceCollectionExtensions.cs
-    startLine: 9
+    startLine: 10
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService.Extensions
@@ -65,7 +65,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: AddHttpClientService
     path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/ServiceCollectionExtensions.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService.Extensions

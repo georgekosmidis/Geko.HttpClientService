@@ -106,7 +106,7 @@
   
   public async Task&lt;IEnumerable&lt;Customer&gt;&gt; GetCustomers(){
     var response = await _requestServiceFactory
-      .CreateHttpClientService(nameof(ProtectedResourceService))
+      .CreateHttpClientService()
       .SetIdentityServerOptions(&quot;ProtectedResourceClientCredentialsOptions&quot;)
       .GetAsync&lt;IEnumerable&lt;Customer&gt;&gt;(&quot;https://protected_resource_that_returns_customers_in_json&quot;); 
   }
@@ -125,7 +125,7 @@
   }  
   public async Task&lt;IEnumerable&lt;Customer&gt;&gt; GetCustomers(){
     var response = await _requestServiceFactory
-      .CreateHttpClientService(nameof(ProtectedResourceService))
+      .CreateHttpClientService()
       .SetIdentityServerOptions(_identityServerOptions)
       .GetAsync&lt;IEnumerable&lt;Customer&gt;&gt;(&quot;https://protected_resource_that_returns_customers_in_json&quot;); 
   }

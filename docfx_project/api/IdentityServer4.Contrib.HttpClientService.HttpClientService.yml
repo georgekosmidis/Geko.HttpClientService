@@ -5,13 +5,16 @@ items:
   id: HttpClientService
   parent: IdentityServer4.Contrib.HttpClientService
   children:
-  - IdentityServer4.Contrib.HttpClientService.HttpClientService.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
-  - IdentityServer4.Contrib.HttpClientService.HttpClientService.#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
-  - IdentityServer4.Contrib.HttpClientService.HttpClientService.AddHeader(System.String,System.String)
-  - IdentityServer4.Contrib.HttpClientService.HttpClientService.Dispose
+  - IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.String,System.Collections.Generic.List{System.String})
+  - IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.String,System.String)
+  - IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersClear
+  - IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersRemove(System.String)
+  - IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})
+  - IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet(System.Collections.Generic.Dictionary{System.String,System.String})
   - IdentityServer4.Contrib.HttpClientService.HttpClientService.SendAsync``2(System.Uri,System.Net.Http.HttpMethod,``0)
-  - IdentityServer4.Contrib.HttpClientService.HttpClientService.SetHeaders(System.Collections.Generic.Dictionary{System.String,System.String})
+  - IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.Action{IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions})
   - IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.String)
+  - IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(``0)
   - IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(Microsoft.Extensions.Options.IOptions{``0})
   langs:
   - csharp
@@ -74,123 +77,247 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
-  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
-  id: '#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)'
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.String,System.String)
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.String,System.String)
+  id: HeadersAdd(System.String,System.String)
   parent: IdentityServer4.Contrib.HttpClientService.HttpClientService
   langs:
   - csharp
   - vb
-  name: HttpClientService(IConfiguration, IHttpClientFactory, IHttpRequestMessageFactory, ITokenResponseService)
-  nameWithType: HttpClientService.HttpClientService(IConfiguration, IHttpClientFactory, IHttpRequestMessageFactory, ITokenResponseService)
-  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.HttpClientService(Microsoft.Extensions.Configuration.IConfiguration, System.Net.Http.IHttpClientFactory, IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory, IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
-  type: Constructor
-  source:
-    remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: master
-      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
-    id: .ctor
-    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 36
-  assemblies:
-  - IdentityServer4.Contrib.HttpClientService
-  namespace: IdentityServer4.Contrib.HttpClientService
-  summary: "\nConstructor for the <xref href=\"IdentityServer4.Contrib.HttpClientService.HttpClientService\" data-throw-if-not-resolved=\"false\"></xref>.\n"
-  example: []
-  syntax:
-    content: public HttpClientService(IConfiguration configuration, IHttpClientFactory httpClientFactory, IHttpRequestMessageFactory requestMessageFactory, ITokenResponseService accessTokenService)
-    parameters:
-    - id: configuration
-      type: Microsoft.Extensions.Configuration.IConfiguration
-      description: Application configuration properties.
-    - id: httpClientFactory
-      type: System.Net.Http.IHttpClientFactory
-      description: The <xref href="System.Net.Http.IHttpClientFactory" data-throw-if-not-resolved="false"></xref> to create an <xref href="System.Net.Http.HttpClient" data-throw-if-not-resolved="false"></xref>.
-    - id: requestMessageFactory
-      type: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
-      description: The <xref href="IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory" data-throw-if-not-resolved="false"></xref> to get a new <xref href="System.Net.Http.HttpRequestMessage" data-throw-if-not-resolved="false"></xref>.
-    - id: accessTokenService
-      type: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
-      description: The <xref href="IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService" data-throw-if-not-resolved="false"></xref> to retrieve a token, if required.
-    content.vb: Public Sub New(configuration As IConfiguration, httpClientFactory As IHttpClientFactory, requestMessageFactory As IHttpRequestMessageFactory, accessTokenService As ITokenResponseService)
-  overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
-  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
-  id: '#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)'
-  parent: IdentityServer4.Contrib.HttpClientService.HttpClientService
-  langs:
-  - csharp
-  - vb
-  name: HttpClientService(IHttpClientFactory, IHttpRequestMessageFactory, ITokenResponseService)
-  nameWithType: HttpClientService.HttpClientService(IHttpClientFactory, IHttpRequestMessageFactory, ITokenResponseService)
-  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.HttpClientService(System.Net.Http.IHttpClientFactory, IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory, IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
-  type: Constructor
-  source:
-    remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: master
-      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
-    id: .ctor
-    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 52
-  assemblies:
-  - IdentityServer4.Contrib.HttpClientService
-  namespace: IdentityServer4.Contrib.HttpClientService
-  syntax:
-    content: public HttpClientService(IHttpClientFactory httpClientFactory, IHttpRequestMessageFactory requestMessageFactory, ITokenResponseService accessTokenService)
-    parameters:
-    - id: httpClientFactory
-      type: System.Net.Http.IHttpClientFactory
-    - id: requestMessageFactory
-      type: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
-    - id: accessTokenService
-      type: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
-    content.vb: Public Sub New(httpClientFactory As IHttpClientFactory, requestMessageFactory As IHttpRequestMessageFactory, accessTokenService As ITokenResponseService)
-  overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.String)
-  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.String)
-  id: SetIdentityServerOptions(System.String)
-  parent: IdentityServer4.Contrib.HttpClientService.HttpClientService
-  langs:
-  - csharp
-  - vb
-  name: SetIdentityServerOptions(String)
-  nameWithType: HttpClientService.SetIdentityServerOptions(String)
-  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.String)
+  name: HeadersAdd(String, String)
+  nameWithType: HttpClientService.HeadersAdd(String, String)
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.String, System.String)
   type: Method
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
-    id: SetIdentityServerOptions
+    id: HeadersAdd
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 80
+    startLine: 47
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
-  summary: "\nSets the IdentityServer4 options for retrieving an access token using client credentials by passing the appsettings configuration section \nthat contain the necessary configuration keys.\n"
+  summary: "\nAdds a header to the request. If a second header with the same name is added, then their values will be aggregated to one <xref href=\"System.Collections.Generic.List%601\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
-    content: public HttpClientService SetIdentityServerOptions(string configurationSection)
+    content: public HttpClientService HeadersAdd(string name, string value)
     parameters:
-    - id: configurationSection
+    - id: name
       type: System.String
-      description: "\nThe name of the configuration section that contains the information for requesting an access token. \nSee <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions\" data-throw-if-not-resolved=\"false\"></xref> for the property names.\n"
+      description: The name of the header.
+    - id: value
+      type: System.String
+      description: The value of the header.
     return:
       type: IdentityServer4.Contrib.HttpClientService.HttpClientService
-      description: ''
-    content.vb: Public Function SetIdentityServerOptions(configurationSection As String) As HttpClientService
-  overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions*
+      description: Returns the current instance of <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
+    content.vb: Public Function HeadersAdd(name As String, value As String) As HttpClientService
+  overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.String,System.Collections.Generic.List{System.String})
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.String,System.Collections.Generic.List{System.String})
+  id: HeadersAdd(System.String,System.Collections.Generic.List{System.String})
+  parent: IdentityServer4.Contrib.HttpClientService.HttpClientService
+  langs:
+  - csharp
+  - vb
+  name: HeadersAdd(String, List<String>)
+  nameWithType: HttpClientService.HeadersAdd(String, List<String>)
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.String, System.Collections.Generic.List<System.String>)
+  type: Method
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: HeadersAdd
+    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+    startLine: 65
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService
+  summary: "\nAdds a header to the request. If a second header with the same name is added, then their values will be aggregated to one <xref href=\"System.Collections.Generic.List%601\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public HttpClientService HeadersAdd(string name, List<string> value)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the header.
+    - id: value
+      type: System.Collections.Generic.List{System.String}
+      description: The list of values of the header.
+    return:
+      type: IdentityServer4.Contrib.HttpClientService.HttpClientService
+      description: Returns the current instance of <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
+    content.vb: Public Function HeadersAdd(name As String, value As List(Of String)) As HttpClientService
+  overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd*
+  nameWithType.vb: HttpClientService.HeadersAdd(String, List(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.String, System.Collections.Generic.List(Of System.String))
+  name.vb: HeadersAdd(String, List(Of String))
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})
+  id: HeadersSet(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})
+  parent: IdentityServer4.Contrib.HttpClientService.HttpClientService
+  langs:
+  - csharp
+  - vb
+  name: HeadersSet(Dictionary<String, List<String>>)
+  nameWithType: HttpClientService.HeadersSet(Dictionary<String, List<String>>)
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet(System.Collections.Generic.Dictionary<System.String, System.Collections.Generic.List<System.String>>)
+  type: Method
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: HeadersSet
+    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+    startLine: 83
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService
+  summary: "\nClears all current headers, and sets the <code data-dev-comment-type=\"paramref\" class=\"paramref\">headers</code> as the headers for the request.\n"
+  example: []
+  syntax:
+    content: public HttpClientService HeadersSet(Dictionary<string, List<string>> headers)
+    parameters:
+    - id: headers
+      type: System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}}
+      description: A <xref href="System.Collections.Generic.Dictionary%602" data-throw-if-not-resolved="false"></xref> with the key representing the name of the header, and the value representing the value of the header.
+    return:
+      type: IdentityServer4.Contrib.HttpClientService.HttpClientService
+      description: Returns the current instance of <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
+    content.vb: Public Function HeadersSet(headers As Dictionary(Of String, List(Of String))) As HttpClientService
+  overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet*
+  nameWithType.vb: HttpClientService.HeadersSet(Dictionary(Of String, List(Of String)))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet(System.Collections.Generic.Dictionary(Of System.String, System.Collections.Generic.List(Of System.String)))
+  name.vb: HeadersSet(Dictionary(Of String, List(Of String)))
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet(System.Collections.Generic.Dictionary{System.String,System.String})
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet(System.Collections.Generic.Dictionary{System.String,System.String})
+  id: HeadersSet(System.Collections.Generic.Dictionary{System.String,System.String})
+  parent: IdentityServer4.Contrib.HttpClientService.HttpClientService
+  langs:
+  - csharp
+  - vb
+  name: HeadersSet(Dictionary<String, String>)
+  nameWithType: HttpClientService.HeadersSet(Dictionary<String, String>)
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet(System.Collections.Generic.Dictionary<System.String, System.String>)
+  type: Method
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: HeadersSet
+    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+    startLine: 105
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService
+  summary: "\nClears all current headers, and sets the <code data-dev-comment-type=\"paramref\" class=\"paramref\">headers</code> as the headers for the request.\n"
+  example: []
+  syntax:
+    content: public HttpClientService HeadersSet(Dictionary<string, string> headers)
+    parameters:
+    - id: headers
+      type: System.Collections.Generic.Dictionary{System.String,System.String}
+      description: A <xref href="System.Collections.Generic.Dictionary%602" data-throw-if-not-resolved="false"></xref> where value is a <xref href="System.Collections.Generic.List%601" data-throw-if-not-resolved="false"></xref> with the key representing the name of the header, and the values representing the values of the header.
+    return:
+      type: IdentityServer4.Contrib.HttpClientService.HttpClientService
+      description: Returns the current instance of <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
+    content.vb: Public Function HeadersSet(headers As Dictionary(Of String, String)) As HttpClientService
+  overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet*
+  nameWithType.vb: HttpClientService.HeadersSet(Dictionary(Of String, String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet(System.Collections.Generic.Dictionary(Of System.String, System.String))
+  name.vb: HeadersSet(Dictionary(Of String, String))
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersClear
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersClear
+  id: HeadersClear
+  parent: IdentityServer4.Contrib.HttpClientService.HttpClientService
+  langs:
+  - csharp
+  - vb
+  name: HeadersClear()
+  nameWithType: HttpClientService.HeadersClear()
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersClear()
+  type: Method
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: HeadersClear
+    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+    startLine: 126
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService
+  summary: "\nClears all headers from the <xref href=\"System.Net.Http.Headers.HttpHeaders\" data-throw-if-not-resolved=\"false\"></xref> collection.\n"
+  example: []
+  syntax:
+    content: public HttpClientService HeadersClear()
+    return:
+      type: IdentityServer4.Contrib.HttpClientService.HttpClientService
+      description: Returns the current instance of <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
+    content.vb: Public Function HeadersClear As HttpClientService
+  overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersClear*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersRemove(System.String)
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersRemove(System.String)
+  id: HeadersRemove(System.String)
+  parent: IdentityServer4.Contrib.HttpClientService.HttpClientService
+  langs:
+  - csharp
+  - vb
+  name: HeadersRemove(String)
+  nameWithType: HttpClientService.HeadersRemove(String)
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersRemove(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: HeadersRemove
+    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+    startLine: 137
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService
+  summary: "\nRemoves the <code data-dev-comment-type=\"paramref\" class=\"paramref\">name</code> header from the <xref href=\"System.Net.Http.Headers.HttpHeaders\" data-throw-if-not-resolved=\"false\"></xref> collection.\n"
+  example: []
+  syntax:
+    content: public HttpClientService HeadersRemove(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The header to be removed
+    return:
+      type: IdentityServer4.Contrib.HttpClientService.HttpClientService
+      description: Returns the current instance of <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
+    content.vb: Public Function HeadersRemove(name As String) As HttpClientService
+  overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersRemove*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -213,7 +340,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 101
+    startLine: 156
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -222,6 +349,7 @@ items:
   syntax:
     content: >-
       public HttpClientService SetIdentityServerOptions<TIdentityServerOptions>(IOptions<TIdentityServerOptions> options)
+
           where TIdentityServerOptions : DefaultClientCredentialOptions, new()
     parameters:
     - id: options
@@ -229,7 +357,7 @@ items:
       description: The token service options.
     typeParameters:
     - id: TIdentityServerOptions
-      description: A type that inherits from the <xref href="IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions" data-throw-if-not-resolved="false"></xref> onject.
+      description: The type of the <code data-dev-comment-type="paramref" class="paramref">options</code>.
     return:
       type: IdentityServer4.Contrib.HttpClientService.HttpClientService
       description: Returns the current instance of <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
@@ -242,90 +370,134 @@ items:
   - Public
   fullName.vb: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(Of TIdentityServerOptions)(Microsoft.Extensions.Options.IOptions(Of TIdentityServerOptions))
   name.vb: SetIdentityServerOptions(Of TIdentityServerOptions)(IOptions(Of TIdentityServerOptions))
-- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetHeaders(System.Collections.Generic.Dictionary{System.String,System.String})
-  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetHeaders(System.Collections.Generic.Dictionary{System.String,System.String})
-  id: SetHeaders(System.Collections.Generic.Dictionary{System.String,System.String})
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.String)
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.String)
+  id: SetIdentityServerOptions(System.String)
   parent: IdentityServer4.Contrib.HttpClientService.HttpClientService
   langs:
   - csharp
   - vb
-  name: SetHeaders(Dictionary<String, String>)
-  nameWithType: HttpClientService.SetHeaders(Dictionary<String, String>)
-  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetHeaders(System.Collections.Generic.Dictionary<System.String, System.String>)
+  name: SetIdentityServerOptions(String)
+  nameWithType: HttpClientService.SetIdentityServerOptions(String)
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.String)
   type: Method
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
-    id: SetHeaders
+    id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 130
+    startLine: 172
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
-  summary: "\nSets a collection of headers to the request.\n"
+  summary: "\nSets the IdentityServer4 options for retrieving an access token using client credentials by passing the appsettings configuration section \nthat contain the necessary configuration keys.\n"
   example: []
   syntax:
-    content: public HttpClientService SetHeaders(Dictionary<string, string> headers)
+    content: public HttpClientService SetIdentityServerOptions(string configurationSection)
     parameters:
-    - id: headers
-      type: System.Collections.Generic.Dictionary{System.String,System.String}
-      description: A <xref href="System.Collections.Generic.Dictionary%602" data-throw-if-not-resolved="false"></xref> with the key representing the name of the header, and the value representing the value of the header.
+    - id: configurationSection
+      type: System.String
+      description: "\nThe name of the configuration section that contains the information for requesting an access token. \nSee <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions\" data-throw-if-not-resolved=\"false\"></xref> for the property names.\n"
     return:
       type: IdentityServer4.Contrib.HttpClientService.HttpClientService
       description: Returns the current instance of <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
-    content.vb: Public Function SetHeaders(headers As Dictionary(Of String, String)) As HttpClientService
-  overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetHeaders*
-  nameWithType.vb: HttpClientService.SetHeaders(Dictionary(Of String, String))
+    content.vb: Public Function SetIdentityServerOptions(configurationSection As String) As HttpClientService
+  overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetHeaders(System.Collections.Generic.Dictionary(Of System.String, System.String))
-  name.vb: SetHeaders(Dictionary(Of String, String))
-- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.AddHeader(System.String,System.String)
-  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.AddHeader(System.String,System.String)
-  id: AddHeader(System.String,System.String)
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.Action{IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions})
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.Action{IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions})
+  id: SetIdentityServerOptions(System.Action{IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions})
   parent: IdentityServer4.Contrib.HttpClientService.HttpClientService
   langs:
   - csharp
   - vb
-  name: AddHeader(String, String)
-  nameWithType: HttpClientService.AddHeader(String, String)
-  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.AddHeader(System.String, System.String)
+  name: SetIdentityServerOptions(Action<DefaultClientCredentialOptions>)
+  nameWithType: HttpClientService.SetIdentityServerOptions(Action<DefaultClientCredentialOptions>)
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.Action<IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions>)
   type: Method
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
-    id: AddHeader
+    id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 152
+    startLine: 185
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
-  summary: "\nAdds a header to the request.\n"
+  summary: "\nSets the IdentityServer4 options for retrieving an access token using client credentials by using a delegate.\n"
   example: []
   syntax:
-    content: public HttpClientService AddHeader(string name, string value)
+    content: public HttpClientService SetIdentityServerOptions(Action<DefaultClientCredentialOptions> optionsDelegate)
     parameters:
-    - id: name
-      type: System.String
-      description: The name of the header.
-    - id: value
-      type: System.String
-      description: The value of the header.
+    - id: optionsDelegate
+      type: System.Action{IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions}
+      description: The <xref href="System.Action%601" data-throw-if-not-resolved="false"></xref> delegate.
     return:
       type: IdentityServer4.Contrib.HttpClientService.HttpClientService
       description: Returns the current instance of <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
-    content.vb: Public Function AddHeader(name As String, value As String) As HttpClientService
-  overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.AddHeader*
+    content.vb: Public Function SetIdentityServerOptions(optionsDelegate As Action(Of DefaultClientCredentialOptions)) As HttpClientService
+  overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions*
+  nameWithType.vb: HttpClientService.SetIdentityServerOptions(Action(Of DefaultClientCredentialOptions))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.Action(Of IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions))
+  name.vb: SetIdentityServerOptions(Action(Of DefaultClientCredentialOptions))
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(``0)
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(``0)
+  id: SetIdentityServerOptions``1(``0)
+  parent: IdentityServer4.Contrib.HttpClientService.HttpClientService
+  langs:
+  - csharp
+  - vb
+  name: SetIdentityServerOptions<TIdentityServerOptions>(TIdentityServerOptions)
+  nameWithType: HttpClientService.SetIdentityServerOptions<TIdentityServerOptions>(TIdentityServerOptions)
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions<TIdentityServerOptions>(TIdentityServerOptions)
+  type: Method
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: SetIdentityServerOptions
+    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+    startLine: 197
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService
+  summary: "\nSets the IdentityServer4 options by passing an object that inherits from <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: >-
+      public HttpClientService SetIdentityServerOptions<TIdentityServerOptions>(TIdentityServerOptions options)
+
+          where TIdentityServerOptions : DefaultClientCredentialOptions, new()
+    parameters:
+    - id: options
+      type: '{TIdentityServerOptions}'
+      description: The <xref href="IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions" data-throw-if-not-resolved="false"></xref> that contains the options.
+    typeParameters:
+    - id: TIdentityServerOptions
+      description: The type of the <code data-dev-comment-type="paramref" class="paramref">options</code>.
+    return:
+      type: IdentityServer4.Contrib.HttpClientService.HttpClientService
+    content.vb: Public Function SetIdentityServerOptions(Of TIdentityServerOptions As {DefaultClientCredentialOptions, New})(options As TIdentityServerOptions) As HttpClientService
+  overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions*
+  nameWithType.vb: HttpClientService.SetIdentityServerOptions(Of TIdentityServerOptions)(TIdentityServerOptions)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(Of TIdentityServerOptions)(TIdentityServerOptions)
+  name.vb: SetIdentityServerOptions(Of TIdentityServerOptions)(TIdentityServerOptions)
 - uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SendAsync``2(System.Uri,System.Net.Http.HttpMethod,``0)
   commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SendAsync``2(System.Uri,System.Net.Http.HttpMethod,``0)
   id: SendAsync``2(System.Uri,System.Net.Http.HttpMethod,``0)
@@ -344,11 +516,11 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SendAsync
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 241
+    startLine: 282
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
-  summary: "\nCreates and sends a request to the <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestUri</code> using the HTTP verb from <code data-dev-comment-type=\"paramref\" class=\"paramref\">httpMethod</code> and the request body from <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestBody</code>. \nIf <xref href=\"IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions%60%601(Microsoft.Extensions.Options.IOptions%7b%60%600%7d)\" data-throw-if-not-resolved=\"false\"></xref> is called before the <code>SendAsync</code>, \nthen a valid access token will be fetched by the <xref href=\"IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService\" data-throw-if-not-resolved=\"false\"></xref> and attached on this request. \n"
+  summary: "\nCreates and sends a request to the <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestUri</code> using the HTTP verb from <code data-dev-comment-type=\"paramref\" class=\"paramref\">httpMethod</code> and the request body from <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestBody</code>. \nIf <xref href=\"IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions%60%601(Microsoft.Extensions.Options.IOptions%7b%60%600%7d)\" data-throw-if-not-resolved=\"false\"></xref> is called before this method, \nthen a valid access token will be fetched by the <xref href=\"IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService\" data-throw-if-not-resolved=\"false\"></xref> and attached on this request. \n"
   example: []
   syntax:
     content: public Task<ResponseObject<TResponseBody>> SendAsync<TRequestBody, TResponseBody>(Uri requestUri, HttpMethod httpMethod, TRequestBody requestBody)
@@ -379,39 +551,6 @@ items:
   - Public
   fullName.vb: IdentityServer4.Contrib.HttpClientService.HttpClientService.SendAsync(Of TRequestBody, TResponseBody)(System.Uri, System.Net.Http.HttpMethod, TRequestBody)
   name.vb: SendAsync(Of TRequestBody, TResponseBody)(Uri, HttpMethod, TRequestBody)
-- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.Dispose
-  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.Dispose
-  id: Dispose
-  parent: IdentityServer4.Contrib.HttpClientService.HttpClientService
-  langs:
-  - csharp
-  - vb
-  name: Dispose()
-  nameWithType: HttpClientService.Dispose()
-  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.Dispose()
-  type: Method
-  source:
-    remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: master
-      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
-    id: Dispose
-    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 337
-  assemblies:
-  - IdentityServer4.Contrib.HttpClientService
-  namespace: IdentityServer4.Contrib.HttpClientService
-  summary: "\nDisposes the HTTP request message used for the request.\n"
-  remarks: "\nThe <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ResponseObject%601.HttpRequestMessge\" data-throw-if-not-resolved=\"false\"></xref> will not be available after disposing.\n"
-  example: []
-  syntax:
-    content: public void Dispose()
-    content.vb: Public Sub Dispose
-  overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.Dispose*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
 references:
 - uid: IdentityServer4.Contrib.HttpClientService
   commentId: N:IdentityServer4.Contrib.HttpClientService
@@ -3208,80 +3347,56 @@ references:
   name: IdentityServer4.Contrib.HttpClientService.Extensions
   nameWithType: IdentityServer4.Contrib.HttpClientService.Extensions
   fullName: IdentityServer4.Contrib.HttpClientService.Extensions
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: IdentityServer4.Contrib.HttpClientService.HttpClientService
   commentId: T:IdentityServer4.Contrib.HttpClientService.HttpClientService
   parent: IdentityServer4.Contrib.HttpClientService
   name: HttpClientService
   nameWithType: HttpClientService
   fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService
-- uid: System.Net.Http.IHttpClientFactory
-  commentId: T:System.Net.Http.IHttpClientFactory
-  parent: System.Net.Http
-  isExternal: true
-  name: IHttpClientFactory
-  nameWithType: IHttpClientFactory
-  fullName: System.Net.Http.IHttpClientFactory
-- uid: System.Net.Http.HttpClient
-  commentId: T:System.Net.Http.HttpClient
-  isExternal: true
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
-  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
-  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
-  name: IHttpRequestMessageFactory
-  nameWithType: IHttpRequestMessageFactory
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
-- uid: System.Net.Http.HttpRequestMessage
-  commentId: T:System.Net.Http.HttpRequestMessage
-  parent: System.Net.Http
-  isExternal: true
-  name: HttpRequestMessage
-  nameWithType: HttpRequestMessage
-  fullName: System.Net.Http.HttpRequestMessage
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
-  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
-  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
-  name: ITokenResponseService
-  nameWithType: ITokenResponseService
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
-- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.#ctor*
-  commentId: Overload:IdentityServer4.Contrib.HttpClientService.HttpClientService.#ctor
-  name: HttpClientService
-  nameWithType: HttpClientService.HttpClientService
-  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.HttpClientService
-- uid: Microsoft.Extensions.Configuration.IConfiguration
-  commentId: T:Microsoft.Extensions.Configuration.IConfiguration
-  parent: Microsoft.Extensions.Configuration
-  isExternal: true
-  name: IConfiguration
-  nameWithType: IConfiguration
-  fullName: Microsoft.Extensions.Configuration.IConfiguration
-- uid: System.Net.Http
-  commentId: N:System.Net.Http
-  isExternal: true
-  name: System.Net.Http
-  nameWithType: System.Net.Http
-  fullName: System.Net.Http
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure
-  commentId: N:IdentityServer4.Contrib.HttpClientService.Infrastructure
-  name: IdentityServer4.Contrib.HttpClientService.Infrastructure
-  nameWithType: IdentityServer4.Contrib.HttpClientService.Infrastructure
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure
-- uid: Microsoft.Extensions.Configuration
-  commentId: N:Microsoft.Extensions.Configuration
-  isExternal: true
-  name: Microsoft.Extensions.Configuration
-  nameWithType: Microsoft.Extensions.Configuration
-  fullName: Microsoft.Extensions.Configuration
-- uid: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
-  commentId: T:IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
-  name: DefaultClientCredentialOptions
-  nameWithType: DefaultClientCredentialOptions
-  fullName: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
-- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions*
-  commentId: Overload:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions
-  name: SetIdentityServerOptions
-  nameWithType: HttpClientService.SetIdentityServerOptions
-  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd*
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd
+  name: HeadersAdd
+  nameWithType: HttpClientService.HeadersAdd
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -3289,6 +3404,282 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: System.Collections.Generic.List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet*
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet
+  name: HeadersSet
+  nameWithType: HttpClientService.HeadersSet
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet
+- uid: System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<String, List<String>>
+  nameWithType: Dictionary<String, List<String>>
+  fullName: System.Collections.Generic.Dictionary<System.String, System.Collections.Generic.List<System.String>>
+  nameWithType.vb: Dictionary(Of String, List(Of String))
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, System.Collections.Generic.List(Of System.String))
+  name.vb: Dictionary(Of String, List(Of String))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<String, String>
+  nameWithType: Dictionary<String, String>
+  fullName: System.Collections.Generic.Dictionary<System.String, System.String>
+  nameWithType.vb: Dictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, System.String)
+  name.vb: Dictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Net.Http.Headers.HttpHeaders
+  commentId: T:System.Net.Http.Headers.HttpHeaders
+  parent: System.Net.Http.Headers
+  isExternal: true
+  name: HttpHeaders
+  nameWithType: HttpHeaders
+  fullName: System.Net.Http.Headers.HttpHeaders
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersClear*
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersClear
+  name: HeadersClear
+  nameWithType: HttpClientService.HeadersClear
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersClear
+- uid: System.Net.Http.Headers
+  commentId: N:System.Net.Http.Headers
+  isExternal: true
+  name: System.Net.Http.Headers
+  nameWithType: System.Net.Http.Headers
+  fullName: System.Net.Http.Headers
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersRemove*
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersRemove
+  name: HeadersRemove
+  nameWithType: HttpClientService.HeadersRemove
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersRemove
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions*
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions
+  name: SetIdentityServerOptions
+  nameWithType: HttpClientService.SetIdentityServerOptions
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions
 - uid: Microsoft.Extensions.Options.IOptions{{TIdentityServerOptions}}
   commentId: T:Microsoft.Extensions.Options.IOptions{``0}
   parent: Microsoft.Extensions.Options
@@ -3374,136 +3765,117 @@ references:
   name: Microsoft.Extensions.Options
   nameWithType: Microsoft.Extensions.Options
   fullName: Microsoft.Extensions.Options
-- uid: System.Collections.Generic.Dictionary`2
-  commentId: T:System.Collections.Generic.Dictionary`2
+- uid: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
+  parent: IdentityServer4.Contrib.HttpClientService.Models
+  name: DefaultClientCredentialOptions
+  nameWithType: DefaultClientCredentialOptions
+  fullName: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
+- uid: IdentityServer4.Contrib.HttpClientService.Models
+  commentId: N:IdentityServer4.Contrib.HttpClientService.Models
+  name: IdentityServer4.Contrib.HttpClientService.Models
+  nameWithType: IdentityServer4.Contrib.HttpClientService.Models
+  fullName: IdentityServer4.Contrib.HttpClientService.Models
+- uid: System.Action`1
+  commentId: T:System.Action`1
   isExternal: true
-  name: Dictionary<TKey, TValue>
-  nameWithType: Dictionary<TKey, TValue>
-  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
-  nameWithType.vb: Dictionary(Of TKey, TValue)
-  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
-  name.vb: Dictionary(Of TKey, TValue)
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
   spec.csharp:
-  - uid: System.Collections.Generic.Dictionary`2
-    name: Dictionary
-    nameWithType: Dictionary
-    fullName: System.Collections.Generic.Dictionary
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: TKey
-    nameWithType: TKey
-    fullName: TKey
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: TValue
-    nameWithType: TValue
-    fullName: TValue
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.Dictionary`2
-    name: Dictionary
-    nameWithType: Dictionary
-    fullName: System.Collections.Generic.Dictionary
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: TKey
-    nameWithType: TKey
-    fullName: TKey
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: TValue
-    nameWithType: TValue
-    fullName: TValue
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
-- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetHeaders*
-  commentId: Overload:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetHeaders
-  name: SetHeaders
-  nameWithType: HttpClientService.SetHeaders
-  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetHeaders
-- uid: System.Collections.Generic.Dictionary{System.String,System.String}
-  commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.Dictionary`2
-  name: Dictionary<String, String>
-  nameWithType: Dictionary<String, String>
-  fullName: System.Collections.Generic.Dictionary<System.String, System.String>
-  nameWithType.vb: Dictionary(Of String, String)
-  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, System.String)
-  name.vb: Dictionary(Of String, String)
+- uid: System.Action{IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions}
+  commentId: T:System.Action{IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions}
+  parent: System
+  definition: System.Action`1
+  name: Action<DefaultClientCredentialOptions>
+  nameWithType: Action<DefaultClientCredentialOptions>
+  fullName: System.Action<IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions>
+  nameWithType.vb: Action(Of DefaultClientCredentialOptions)
+  fullName.vb: System.Action(Of IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions)
+  name.vb: Action(Of DefaultClientCredentialOptions)
   spec.csharp:
-  - uid: System.Collections.Generic.Dictionary`2
-    name: Dictionary
-    nameWithType: Dictionary
-    fullName: System.Collections.Generic.Dictionary
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
+  - uid: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
+    name: DefaultClientCredentialOptions
+    nameWithType: DefaultClientCredentialOptions
+    fullName: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.Dictionary`2
-    name: Dictionary
-    nameWithType: Dictionary
-    fullName: System.Collections.Generic.Dictionary
+  - uid: System.Action`1
+    name: Action
+    nameWithType: Action
+    fullName: System.Action
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
+  - uid: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
+    name: DefaultClientCredentialOptions
+    nameWithType: DefaultClientCredentialOptions
+    fullName: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: true
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
-- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.AddHeader*
-  commentId: Overload:IdentityServer4.Contrib.HttpClientService.HttpClientService.AddHeader
-  name: AddHeader
-  nameWithType: HttpClientService.AddHeader
-  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.AddHeader
+- uid: '{TIdentityServerOptions}'
+  commentId: '!:TIdentityServerOptions'
+  definition: TIdentityServerOptions
+  name: TIdentityServerOptions
+  nameWithType: TIdentityServerOptions
+  fullName: TIdentityServerOptions
+- uid: TIdentityServerOptions
+  name: TIdentityServerOptions
+  nameWithType: TIdentityServerOptions
+  fullName: TIdentityServerOptions
 - uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(Microsoft.Extensions.Options.IOptions{``0})
   commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(Microsoft.Extensions.Options.IOptions{``0})
   isExternal: true
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  name: ITokenResponseService
+  nameWithType: ITokenResponseService
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
 - uid: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsType
   commentId: P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsType
   isExternal: true
@@ -3648,6 +4020,17 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  commentId: N:IdentityServer4.Contrib.HttpClientService.Infrastructure
+  name: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  nameWithType: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure
+- uid: System.Net.Http
+  commentId: N:System.Net.Http
+  isExternal: true
+  name: System.Net.Http
+  nameWithType: System.Net.Http
+  fullName: System.Net.Http
 - uid: TRequestBody
   name: TRequestBody
   nameWithType: TRequestBody
@@ -3697,11 +4080,3 @@ references:
   name: System.Threading.Tasks
   nameWithType: System.Threading.Tasks
   fullName: System.Threading.Tasks
-- uid: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.HttpRequestMessge
-  commentId: P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.HttpRequestMessge
-  isExternal: true
-- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.Dispose*
-  commentId: Overload:IdentityServer4.Contrib.HttpClientService.HttpClientService.Dispose
-  name: Dispose
-  nameWithType: HttpClientService.Dispose
-  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.Dispose

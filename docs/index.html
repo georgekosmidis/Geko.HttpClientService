@@ -66,9 +66,7 @@
 <p>An HttpClient service that makes it easy to make authenticated HTTP requests to protected by IdentityServer4 resources. Complex types are automatically serialized for requests /  deserialized form responses, all with a fluent interface design:</p>
 <pre><code class="lang-csharp">var responseObject = await _requestServiceFactory
                           //Create a instance of the service
-                          // could also be .CreateHttpClientService(), but before you ommit the name
-                          // read more about HttpClient and socket exhaustion
-                          .CreateHttpClientService(&quot;name_of_service&quot;)
+                          .CreateHttpClientService()
                           //Also supports IOptions&lt;&gt;
                           .SetIdentityServerOptions(&quot;appsettings_section&quot;)     
                           //GET and deserialize the response body to IEnumerable&lt;Customers&gt;

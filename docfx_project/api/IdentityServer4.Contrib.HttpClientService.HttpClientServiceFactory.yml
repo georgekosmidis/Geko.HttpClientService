@@ -5,10 +5,9 @@ items:
   id: HttpClientServiceFactory
   parent: IdentityServer4.Contrib.HttpClientService
   children:
-  - IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
-  - IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
+  - IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(Microsoft.Extensions.Configuration.IConfiguration,IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
   - IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService
-  - IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService(System.String)
+  - IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.Instance
   langs:
   - csharp
   - vb
@@ -23,16 +22,17 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HttpClientServiceFactory
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs
-    startLine: 21
+    startLine: 22
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
   summary: "\nA factory that creates <xref href=\"IdentityServer4.Contrib.HttpClientService.HttpClientService\" data-throw-if-not-resolved=\"false\"></xref> instances for a given logical name.\n"
   example: []
   syntax:
-    content: 'public class HttpClientServiceFactory : IHttpClientServiceFactory'
+    content: 'public sealed class HttpClientServiceFactory : IHttpClientServiceFactory'
     content.vb: >-
-      Public Class HttpClientServiceFactory
+      Public NotInheritable Class HttpClientServiceFactory
+
           Implements IHttpClientServiceFactory
   inheritance:
   - System.Object
@@ -48,20 +48,61 @@ items:
   - System.Object.ToString
   modifiers.csharp:
   - public
+  - sealed
   - class
   modifiers.vb:
   - Public
+  - NotInheritable
   - Class
-- uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
-  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
-  id: '#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)'
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.Instance
+  commentId: P:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.Instance
+  id: Instance
   parent: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
   langs:
   - csharp
   - vb
-  name: HttpClientServiceFactory(IConfiguration, IHttpClientFactory, IHttpRequestMessageFactory, ITokenResponseService)
-  nameWithType: HttpClientServiceFactory.HttpClientServiceFactory(IConfiguration, IHttpClientFactory, IHttpRequestMessageFactory, ITokenResponseService)
-  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.HttpClientServiceFactory(Microsoft.Extensions.Configuration.IConfiguration, System.Net.Http.IHttpClientFactory, IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory, IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
+  name: Instance
+  nameWithType: HttpClientServiceFactory.Instance
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.Instance
+  type: Property
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: Instance
+    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs
+    startLine: 36
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService
+  summary: "\nLazy Singleton instantiation for use outside of a DI container.\n"
+  example: []
+  syntax:
+    content: public static HttpClientServiceFactory Instance { get; }
+    parameters: []
+    return:
+      type: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
+    content.vb: Public Shared ReadOnly Property Instance As HttpClientServiceFactory
+  overload: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.Instance*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(Microsoft.Extensions.Configuration.IConfiguration,IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(Microsoft.Extensions.Configuration.IConfiguration,IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
+  id: '#ctor(Microsoft.Extensions.Configuration.IConfiguration,IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)'
+  parent: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
+  langs:
+  - csharp
+  - vb
+  name: HttpClientServiceFactory(IConfiguration, ICoreHttpClient, IHttpRequestMessageFactory, ITokenResponseService)
+  nameWithType: HttpClientServiceFactory.HttpClientServiceFactory(IConfiguration, ICoreHttpClient, IHttpRequestMessageFactory, ITokenResponseService)
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.HttpClientServiceFactory(Microsoft.Extensions.Configuration.IConfiguration, IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient, IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory, IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
   type: Constructor
   source:
     remote:
@@ -70,65 +111,28 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: .ctor
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs
-    startLine: 35
+    startLine: 76
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
   summary: "\nConstructor of the <xref href=\"IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
-    content: public HttpClientServiceFactory(IConfiguration configuration, IHttpClientFactory httpClientFactory, IHttpRequestMessageFactory requestMessageFactory, ITokenResponseService accessTokenService)
+    content: public HttpClientServiceFactory(IConfiguration configuration, ICoreHttpClient coreHttpClient, IHttpRequestMessageFactory requestMessageFactory, ITokenResponseService tokenResponseService)
     parameters:
     - id: configuration
       type: Microsoft.Extensions.Configuration.IConfiguration
       description: Application configuration properties.
-    - id: httpClientFactory
-      type: System.Net.Http.IHttpClientFactory
-      description: The <xref href="System.Net.Http.IHttpClientFactory" data-throw-if-not-resolved="false"></xref> to create an <xref href="System.Net.Http.HttpClient" data-throw-if-not-resolved="false"></xref>.
+    - id: coreHttpClient
+      type: IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient
+      description: An <xref href="IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient" data-throw-if-not-resolved="false"></xref> implementation that will execute the HTTP requests.
     - id: requestMessageFactory
       type: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
       description: The <xref href="IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory" data-throw-if-not-resolved="false"></xref> to get a new <xref href="System.Net.Http.HttpRequestMessage" data-throw-if-not-resolved="false"></xref>.
-    - id: accessTokenService
+    - id: tokenResponseService
       type: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
       description: The <xref href="IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService" data-throw-if-not-resolved="false"></xref> to retrieve a token, if required.
-    content.vb: Public Sub New(configuration As IConfiguration, httpClientFactory As IHttpClientFactory, requestMessageFactory As IHttpRequestMessageFactory, accessTokenService As ITokenResponseService)
-  overload: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor*
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
-  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
-  id: '#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)'
-  parent: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
-  langs:
-  - csharp
-  - vb
-  name: HttpClientServiceFactory(IHttpClientFactory, IHttpRequestMessageFactory, ITokenResponseService)
-  nameWithType: HttpClientServiceFactory.HttpClientServiceFactory(IHttpClientFactory, IHttpRequestMessageFactory, ITokenResponseService)
-  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.HttpClientServiceFactory(System.Net.Http.IHttpClientFactory, IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory, IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
-  type: Constructor
-  source:
-    remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs
-      branch: master
-      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
-    id: .ctor
-    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs
-    startLine: 51
-  assemblies:
-  - IdentityServer4.Contrib.HttpClientService
-  namespace: IdentityServer4.Contrib.HttpClientService
-  syntax:
-    content: public HttpClientServiceFactory(IHttpClientFactory httpClientFactory, IHttpRequestMessageFactory requestMessageFactory, ITokenResponseService accessTokenService)
-    parameters:
-    - id: httpClientFactory
-      type: System.Net.Http.IHttpClientFactory
-    - id: requestMessageFactory
-      type: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
-    - id: accessTokenService
-      type: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
-    content.vb: Public Sub New(httpClientFactory As IHttpClientFactory, requestMessageFactory As IHttpRequestMessageFactory, accessTokenService As ITokenResponseService)
+    content.vb: Public Sub New(configuration As IConfiguration, coreHttpClient As ICoreHttpClient, requestMessageFactory As IHttpRequestMessageFactory, tokenResponseService As ITokenResponseService)
   overload: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor*
   modifiers.csharp:
   - public
@@ -152,12 +156,11 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: CreateHttpClientService
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs
-    startLine: 68
+    startLine: 108
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
-  summary: "\nCreates new <xref href=\"IdentityServer4.Contrib.HttpClientService.HttpClientService\" data-throw-if-not-resolved=\"false\"></xref> instances. \nPrefer <xref href=\"IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService(System.String)\" data-throw-if-not-resolved=\"false\"></xref> when possible, to avoid &apos;sockets exhaustion&apos; issues caused by HttpClient.\nRead more here https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core\n"
-  remarks: "\nPrefer <xref href=\"IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService(System.String)\" data-throw-if-not-resolved=\"false\"></xref> when possible, to avoid &apos;sockets exhaustion&apos;.\nRead more here https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core\n"
+  summary: "\nCreates new <xref href=\"IdentityServer4.Contrib.HttpClientService.HttpClientService\" data-throw-if-not-resolved=\"false\"></xref> instances. \n"
   example: []
   syntax:
     content: public HttpClientService CreateHttpClientService()
@@ -168,48 +171,6 @@ items:
   overload: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService*
   implements:
   - IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-- uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService(System.String)
-  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService(System.String)
-  id: CreateHttpClientService(System.String)
-  parent: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
-  langs:
-  - csharp
-  - vb
-  name: CreateHttpClientService(String)
-  nameWithType: HttpClientServiceFactory.CreateHttpClientService(String)
-  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService(System.String)
-  type: Method
-  source:
-    remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs
-      branch: master
-      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
-    id: CreateHttpClientService
-    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs
-    startLine: 83
-  assemblies:
-  - IdentityServer4.Contrib.HttpClientService
-  namespace: IdentityServer4.Contrib.HttpClientService
-  summary: "\nCreates or returns <xref href=\"IdentityServer4.Contrib.HttpClientService.HttpClientService\" data-throw-if-not-resolved=\"false\"></xref> instances for the given logical name.\n"
-  remarks: "\nBy specifing a name, the HTTPClient will be reused to avoid &apos;sockets exhaustion&apos; issues caused by HttpClient.\nRead more here https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core\n"
-  example: []
-  syntax:
-    content: public HttpClientService CreateHttpClientService(string name)
-    parameters:
-    - id: name
-      type: System.String
-      description: The name of the <xref href="System.Net.Http.HttpClient" data-throw-if-not-resolved="false"></xref> that will be used.
-    return:
-      type: IdentityServer4.Contrib.HttpClientService.HttpClientService
-      description: An <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> instance.
-    content.vb: Public Function CreateHttpClientService(name As String) As HttpClientService
-  overload: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService*
-  implements:
-  - IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -524,21 +485,23 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.Instance*
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.Instance
+  name: Instance
+  nameWithType: HttpClientServiceFactory.Instance
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.Instance
 - uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
   commentId: T:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
+  parent: IdentityServer4.Contrib.HttpClientService
   name: HttpClientServiceFactory
   nameWithType: HttpClientServiceFactory
   fullName: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
-- uid: System.Net.Http.IHttpClientFactory
-  commentId: T:System.Net.Http.IHttpClientFactory
-  parent: System.Net.Http
-  isExternal: true
-  name: IHttpClientFactory
-  nameWithType: IHttpClientFactory
-  fullName: System.Net.Http.IHttpClientFactory
-- uid: System.Net.Http.HttpClient
-  commentId: T:System.Net.Http.HttpClient
-  isExternal: true
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  name: ICoreHttpClient
+  nameWithType: ICoreHttpClient
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient
 - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
   commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
   parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
@@ -570,26 +533,23 @@ references:
   name: IConfiguration
   nameWithType: IConfiguration
   fullName: Microsoft.Extensions.Configuration.IConfiguration
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  commentId: N:IdentityServer4.Contrib.HttpClientService.Infrastructure
+  name: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  nameWithType: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure
 - uid: System.Net.Http
   commentId: N:System.Net.Http
   isExternal: true
   name: System.Net.Http
   nameWithType: System.Net.Http
   fullName: System.Net.Http
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure
-  commentId: N:IdentityServer4.Contrib.HttpClientService.Infrastructure
-  name: IdentityServer4.Contrib.HttpClientService.Infrastructure
-  nameWithType: IdentityServer4.Contrib.HttpClientService.Infrastructure
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure
 - uid: Microsoft.Extensions.Configuration
   commentId: N:Microsoft.Extensions.Configuration
   isExternal: true
   name: Microsoft.Extensions.Configuration
   nameWithType: Microsoft.Extensions.Configuration
   fullName: Microsoft.Extensions.Configuration
-- uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService(System.String)
-  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService(System.String)
-  isExternal: true
 - uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService*
   commentId: Overload:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService
   name: CreateHttpClientService
@@ -623,49 +583,3 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)
-  commentId: M:IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)
-  parent: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory
-  isExternal: true
-  name: CreateHttpClientService(String)
-  nameWithType: IHttpClientServiceFactory.CreateHttpClientService(String)
-  fullName: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)
-  spec.csharp:
-  - uid: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)
-    name: CreateHttpClientService
-    nameWithType: IHttpClientServiceFactory.CreateHttpClientService
-    fullName: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)
-    name: CreateHttpClientService
-    nameWithType: IHttpClientServiceFactory.CreateHttpClientService
-    fullName: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String

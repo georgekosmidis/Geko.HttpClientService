@@ -113,25 +113,25 @@
   <h6><strong>Assembly</strong>: IdentityServer4.Contrib.HttpClientService.dll</h6>
   <h5 id="IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class HttpClientServiceFactory : IHttpClientServiceFactory</code></pre>
+    <pre><code class="lang-csharp hljs">public sealed class HttpClientServiceFactory : IHttpClientServiceFactory</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/new/master/apiSpec/new?filename=IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory__ctor_Microsoft_Extensions_Configuration_IConfiguration_System_Net_Http_IHttpClientFactory_IdentityServer4_Contrib_HttpClientService_Infrastructure_IHttpRequestMessageFactory_IdentityServer4_Contrib_HttpClientService_Infrastructure_ITokenResponseService_.md&amp;value=---%0Auid%3A%20IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.%23ctor(Microsoft.Extensions.Configuration.IConfiguration%2CSystem.Net.Http.IHttpClientFactory%2CIdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory%2CIdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/new/master/apiSpec/new?filename=IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory__ctor_Microsoft_Extensions_Configuration_IConfiguration_IdentityServer4_Contrib_HttpClientService_Infrastructure_ICoreHttpClient_IdentityServer4_Contrib_HttpClientService_Infrastructure_IHttpRequestMessageFactory_IdentityServer4_Contrib_HttpClientService_Infrastructure_ITokenResponseService_.md&amp;value=---%0Auid%3A%20IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.%23ctor(Microsoft.Extensions.Configuration.IConfiguration%2CIdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient%2CIdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory%2CIdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs/#L36">View Source</a>
+    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs/#L77">View Source</a>
   </span>
   <a id="IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory__ctor_" data-uid="IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor*"></a>
-  <h4 id="IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory__ctor_Microsoft_Extensions_Configuration_IConfiguration_System_Net_Http_IHttpClientFactory_IdentityServer4_Contrib_HttpClientService_Infrastructure_IHttpRequestMessageFactory_IdentityServer4_Contrib_HttpClientService_Infrastructure_ITokenResponseService_" data-uid="IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)">HttpClientServiceFactory(IConfiguration, IHttpClientFactory, IHttpRequestMessageFactory, ITokenResponseService)</h4>
+  <h4 id="IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory__ctor_Microsoft_Extensions_Configuration_IConfiguration_IdentityServer4_Contrib_HttpClientService_Infrastructure_ICoreHttpClient_IdentityServer4_Contrib_HttpClientService_Infrastructure_IHttpRequestMessageFactory_IdentityServer4_Contrib_HttpClientService_Infrastructure_ITokenResponseService_" data-uid="IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(Microsoft.Extensions.Configuration.IConfiguration,IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)">HttpClientServiceFactory(IConfiguration, ICoreHttpClient, IHttpRequestMessageFactory, ITokenResponseService)</h4>
   <div class="markdown level1 summary"><p>Constructor of the <a class="xref" href="IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.html">HttpClientServiceFactory</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HttpClientServiceFactory(IConfiguration configuration, IHttpClientFactory httpClientFactory, IHttpRequestMessageFactory requestMessageFactory, ITokenResponseService accessTokenService)</code></pre>
+    <pre><code class="lang-csharp hljs">public HttpClientServiceFactory(IConfiguration configuration, ICoreHttpClient coreHttpClient, IHttpRequestMessageFactory requestMessageFactory, ITokenResponseService tokenResponseService)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,9 +150,9 @@
 </td>
       </tr>
       <tr>
-        <td><span class="xref">System.Net.Http.IHttpClientFactory</span></td>
-        <td><span class="parametername">httpClientFactory</span></td>
-        <td><p>The <span class="xref">System.Net.Http.IHttpClientFactory</span> to create an <span class="xref">System.Net.Http.HttpClient</span>.</p>
+        <td><a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient.html">ICoreHttpClient</a></td>
+        <td><span class="parametername">coreHttpClient</span></td>
+        <td><p>An <a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient.html">ICoreHttpClient</a> implementation that will execute the HTTP requests.</p>
 </td>
       </tr>
       <tr>
@@ -163,50 +163,41 @@
       </tr>
       <tr>
         <td><a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.html">ITokenResponseService</a></td>
-        <td><span class="parametername">accessTokenService</span></td>
+        <td><span class="parametername">tokenResponseService</span></td>
         <td><p>The <a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.html">ITokenResponseService</a> to retrieve a token, if required.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h3 id="properties">Properties
+  </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/new/master/apiSpec/new?filename=IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory__ctor_System_Net_Http_IHttpClientFactory_IdentityServer4_Contrib_HttpClientService_Infrastructure_IHttpRequestMessageFactory_IdentityServer4_Contrib_HttpClientService_Infrastructure_ITokenResponseService_.md&amp;value=---%0Auid%3A%20IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.%23ctor(System.Net.Http.IHttpClientFactory%2CIdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory%2CIdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/new/master/apiSpec/new?filename=IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory_Instance.md&amp;value=---%0Auid%3A%20IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.Instance%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs/#L52">View Source</a>
+    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs/#L37">View Source</a>
   </span>
-  <a id="IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory__ctor_" data-uid="IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor*"></a>
-  <h4 id="IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory__ctor_System_Net_Http_IHttpClientFactory_IdentityServer4_Contrib_HttpClientService_Infrastructure_IHttpRequestMessageFactory_IdentityServer4_Contrib_HttpClientService_Infrastructure_ITokenResponseService_" data-uid="IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)">HttpClientServiceFactory(IHttpClientFactory, IHttpRequestMessageFactory, ITokenResponseService)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory_Instance_" data-uid="IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.Instance*"></a>
+  <h4 id="IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory_Instance" data-uid="IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.Instance">Instance</h4>
+  <div class="markdown level1 summary"><p>Lazy Singleton instantiation for use outside of a DI container.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HttpClientServiceFactory(IHttpClientFactory httpClientFactory, IHttpRequestMessageFactory requestMessageFactory, ITokenResponseService accessTokenService)</code></pre>
+    <pre><code class="lang-csharp hljs">public static HttpClientServiceFactory Instance { get; }</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
         <th>Type</th>
-        <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Net.Http.IHttpClientFactory</span></td>
-        <td><span class="parametername">httpClientFactory</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.html">IHttpRequestMessageFactory</a></td>
-        <td><span class="parametername">requestMessageFactory</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.html">ITokenResponseService</a></td>
-        <td><span class="parametername">accessTokenService</span></td>
+        <td><a class="xref" href="IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.html">HttpClientServiceFactory</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -218,13 +209,11 @@
     <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/new/master/apiSpec/new?filename=IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory_CreateHttpClientService.md&amp;value=---%0Auid%3A%20IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs/#L69">View Source</a>
+    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs/#L109">View Source</a>
   </span>
   <a id="IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory_CreateHttpClientService_" data-uid="IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService*"></a>
   <h4 id="IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory_CreateHttpClientService" data-uid="IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService">CreateHttpClientService()</h4>
-  <div class="markdown level1 summary"><p>Creates new <a class="xref" href="IdentityServer4.Contrib.HttpClientService.HttpClientService.html">HttpClientService</a> instances.
-Prefer <a class="xref" href="IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.html#IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory_CreateHttpClientService_System_String_">CreateHttpClientService(String)</a> when possible, to avoid 'sockets exhaustion' issues caused by HttpClient.
-Read more here <a href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core">https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core</a></p>
+  <div class="markdown level1 summary"><p>Creates new <a class="xref" href="IdentityServer4.Contrib.HttpClientService.HttpClientService.html">HttpClientService</a> instances.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -247,64 +236,6 @@ Read more here <a href="https://docs.microsoft.com/en-us/dotnet/architecture/mic
       </tr>
     </tbody>
   </table>
-  <h5 id="IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory_CreateHttpClientService_remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>Prefer <a class="xref" href="IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.html#IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory_CreateHttpClientService_System_String_">CreateHttpClientService(String)</a> when possible, to avoid 'sockets exhaustion'.
-Read more here <a href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core">https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core</a></p>
-</div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/new/master/apiSpec/new?filename=IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory_CreateHttpClientService_System_String_.md&amp;value=---%0Auid%3A%20IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs/#L84">View Source</a>
-  </span>
-  <a id="IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory_CreateHttpClientService_" data-uid="IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService*"></a>
-  <h4 id="IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory_CreateHttpClientService_System_String_" data-uid="IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService(System.String)">CreateHttpClientService(String)</h4>
-  <div class="markdown level1 summary"><p>Creates or returns <a class="xref" href="IdentityServer4.Contrib.HttpClientService.HttpClientService.html">HttpClientService</a> instances for the given logical name.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HttpClientService CreateHttpClientService(string name)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td><span class="parametername">name</span></td>
-        <td><p>The name of the <span class="xref">System.Net.Http.HttpClient</span> that will be used.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="IdentityServer4.Contrib.HttpClientService.HttpClientService.html">HttpClientService</a></td>
-        <td><p>An <a class="xref" href="IdentityServer4.Contrib.HttpClientService.HttpClientService.html">HttpClientService</a> instance.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 id="IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory_CreateHttpClientService_System_String__remarks">Remarks</h5>
-  <div class="markdown level1 remarks"><p>By specifing a name, the HTTPClient will be reused to avoid 'sockets exhaustion' issues caused by HttpClient.
-Read more here <a href="https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core">https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core</a></p>
-</div>
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.html">IHttpClientServiceFactory</a>
@@ -320,7 +251,7 @@ Read more here <a href="https://docs.microsoft.com/en-us/dotnet/architecture/mic
                     <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/new/master/apiSpec/new?filename=IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory.md&amp;value=---%0Auid%3A%20IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs/#L22" class="contribution-link">View Source</a>
+                    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs/#L23" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

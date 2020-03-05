@@ -1,0 +1,199 @@
+### YamlMime:ManagedReference
+items:
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient
+  id: ICoreHttpClient
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  children:
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient.SendAsync(System.Net.Http.HttpRequestMessage)
+  langs:
+  - csharp
+  - vb
+  name: ICoreHttpClient
+  nameWithType: ICoreHttpClient
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient
+  type: Interface
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/ICoreHttpClient.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: ICoreHttpClient
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/ICoreHttpClient.cs
+    startLine: 8
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  summary: "\nAbstraction for a typed <xref href=\"System.Net.Http.HttpClient\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public interface ICoreHttpClient
+    content.vb: Public Interface ICoreHttpClient
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient.SendAsync(System.Net.Http.HttpRequestMessage)
+  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient.SendAsync(System.Net.Http.HttpRequestMessage)
+  id: SendAsync(System.Net.Http.HttpRequestMessage)
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient
+  langs:
+  - csharp
+  - vb
+  name: SendAsync(HttpRequestMessage)
+  nameWithType: ICoreHttpClient.SendAsync(HttpRequestMessage)
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient.SendAsync(System.Net.Http.HttpRequestMessage)
+  type: Method
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/ICoreHttpClient.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: SendAsync
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/ICoreHttpClient.cs
+    startLine: 15
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  summary: "\nSends an <xref href=\"System.Net.Http.HttpResponseMessage\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: Task<HttpResponseMessage> SendAsync(HttpRequestMessage httpRequestMessage)
+    parameters:
+    - id: httpRequestMessage
+      type: System.Net.Http.HttpRequestMessage
+      description: The <xref href="System.Net.Http.HttpResponseMessage" data-throw-if-not-resolved="false"></xref> to be sent
+    return:
+      type: System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage}
+      description: An <xref href="System.Net.Http.HttpResponseMessage" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Function SendAsync(httpRequestMessage As HttpRequestMessage) As Task(Of HttpResponseMessage)
+  overload: IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient.SendAsync*
+references:
+- uid: System.Net.Http.HttpClient
+  commentId: T:System.Net.Http.HttpClient
+  parent: System.Net.Http
+  isExternal: true
+  name: HttpClient
+  nameWithType: HttpClient
+  fullName: System.Net.Http.HttpClient
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  commentId: N:IdentityServer4.Contrib.HttpClientService.Infrastructure
+  name: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  nameWithType: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure
+- uid: System.Net.Http
+  commentId: N:System.Net.Http
+  isExternal: true
+  name: System.Net.Http
+  nameWithType: System.Net.Http
+  fullName: System.Net.Http
+- uid: System.Net.Http.HttpResponseMessage
+  commentId: T:System.Net.Http.HttpResponseMessage
+  parent: System.Net.Http
+  isExternal: true
+  name: HttpResponseMessage
+  nameWithType: HttpResponseMessage
+  fullName: System.Net.Http.HttpResponseMessage
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient.SendAsync*
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient.SendAsync
+  name: SendAsync
+  nameWithType: ICoreHttpClient.SendAsync
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient.SendAsync
+- uid: System.Net.Http.HttpRequestMessage
+  commentId: T:System.Net.Http.HttpRequestMessage
+  parent: System.Net.Http
+  isExternal: true
+  name: HttpRequestMessage
+  nameWithType: HttpRequestMessage
+  fullName: System.Net.Http.HttpRequestMessage
+- uid: System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage}
+  commentId: T:System.Threading.Tasks.Task{System.Net.Http.HttpResponseMessage}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<HttpResponseMessage>
+  nameWithType: Task<HttpResponseMessage>
+  fullName: System.Threading.Tasks.Task<System.Net.Http.HttpResponseMessage>
+  nameWithType.vb: Task(Of HttpResponseMessage)
+  fullName.vb: System.Threading.Tasks.Task(Of System.Net.Http.HttpResponseMessage)
+  name.vb: Task(Of HttpResponseMessage)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Net.Http.HttpResponseMessage
+    name: HttpResponseMessage
+    nameWithType: HttpResponseMessage
+    fullName: System.Net.Http.HttpResponseMessage
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Net.Http.HttpResponseMessage
+    name: HttpResponseMessage
+    nameWithType: HttpResponseMessage
+    fullName: System.Net.Http.HttpResponseMessage
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks

@@ -6,7 +6,6 @@ items:
   parent: IdentityServer4.Contrib.HttpClientService
   children:
   - IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService
-  - IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)
   langs:
   - csharp
   - vb
@@ -54,12 +53,11 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: CreateHttpClientService
     path: ../src/IdentityServer4.Contrib.HttpClientService/IHttpClientServiceFactory.cs
-    startLine: 17
+    startLine: 11
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
-  summary: "\nCreates new <xref href=\"IdentityServer4.Contrib.HttpClientService.HttpClientService\" data-throw-if-not-resolved=\"false\"></xref> instances. \nPrefer <xref href=\"IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)\" data-throw-if-not-resolved=\"false\"></xref> when possible, to avoid &apos;sockets exhaustion&apos; issues caused by HttpClient.\nRead more here https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core\n"
-  remarks: "\nPrefer <xref href=\"IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)\" data-throw-if-not-resolved=\"false\"></xref> when possible, to avoid &apos;sockets exhaustion&apos;.\nRead more here https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core\n"
+  summary: "\nCreates new <xref href=\"IdentityServer4.Contrib.HttpClientService.HttpClientService\" data-throw-if-not-resolved=\"false\"></xref> instances. \n"
   example: []
   syntax:
     content: HttpClientService CreateHttpClientService()
@@ -67,41 +65,6 @@ items:
       type: IdentityServer4.Contrib.HttpClientService.HttpClientService
       description: An <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> instance.
     content.vb: Function CreateHttpClientService As HttpClientService
-  overload: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService*
-- uid: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)
-  commentId: M:IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)
-  id: CreateHttpClientService(System.String)
-  parent: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory
-  langs:
-  - csharp
-  - vb
-  name: CreateHttpClientService(String)
-  nameWithType: IHttpClientServiceFactory.CreateHttpClientService(String)
-  fullName: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)
-  type: Method
-  source:
-    remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/IHttpClientServiceFactory.cs
-      branch: master
-      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
-    id: CreateHttpClientService
-    path: ../src/IdentityServer4.Contrib.HttpClientService/IHttpClientServiceFactory.cs
-    startLine: 27
-  assemblies:
-  - IdentityServer4.Contrib.HttpClientService
-  namespace: IdentityServer4.Contrib.HttpClientService
-  summary: "\nCreates new <xref href=\"IdentityServer4.Contrib.HttpClientService.HttpClientService\" data-throw-if-not-resolved=\"false\"></xref> instances.\n"
-  remarks: "\nPrefer <xref href=\"IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)\" data-throw-if-not-resolved=\"false\"></xref> when possible, to avoid &apos;sockets exhaustion&apos;.\nRead more here https://docs.microsoft.com/en-us/dotnet/architecture/microservices/implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests#issues-with-the-original-httpclient-class-available-in-net-core\n"
-  example: []
-  syntax:
-    content: HttpClientService CreateHttpClientService(string name)
-    parameters:
-    - id: name
-      type: System.String
-    return:
-      type: IdentityServer4.Contrib.HttpClientService.HttpClientService
-      description: An <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> instance.
-    content.vb: Function CreateHttpClientService(name As String) As HttpClientService
   overload: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService*
 references:
 - uid: IdentityServer4.Contrib.HttpClientService.HttpClientService
@@ -115,66 +78,8 @@ references:
   name: IdentityServer4.Contrib.HttpClientService
   nameWithType: IdentityServer4.Contrib.HttpClientService
   fullName: IdentityServer4.Contrib.HttpClientService
-- uid: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)
-  commentId: M:IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)
-  parent: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory
-  isExternal: true
-  name: CreateHttpClientService(String)
-  nameWithType: IHttpClientServiceFactory.CreateHttpClientService(String)
-  fullName: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)
-  spec.csharp:
-  - uid: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)
-    name: CreateHttpClientService
-    nameWithType: IHttpClientServiceFactory.CreateHttpClientService
-    fullName: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService(System.String)
-    name: CreateHttpClientService
-    nameWithType: IHttpClientServiceFactory.CreateHttpClientService
-    fullName: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService*
   commentId: Overload:IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService
   name: CreateHttpClientService
   nameWithType: IHttpClientServiceFactory.CreateHttpClientService
   fullName: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService
-- uid: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory
-  commentId: T:IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory
-  parent: IdentityServer4.Contrib.HttpClientService
-  name: IHttpClientServiceFactory
-  nameWithType: IHttpClientServiceFactory
-  fullName: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory
-- uid: System.String
-  commentId: T:System.String
-  parent: System
-  isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
-- uid: System
-  commentId: N:System
-  isExternal: true
-  name: System
-  nameWithType: System
-  fullName: System

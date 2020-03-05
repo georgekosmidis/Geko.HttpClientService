@@ -119,19 +119,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/new/master/apiSpec/new?filename=IdentityServer4_Contrib_HttpClientService_Infrastructure_TokenResponseService__ctor_System_Net_Http_IHttpClientFactory_IdentityServer4_Contrib_HttpClientService_Infrastructure_ITokenResponseCacheManager_.md&amp;value=---%0Auid%3A%20IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.%23ctor(System.Net.Http.IHttpClientFactory%2CIdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/new/master/apiSpec/new?filename=IdentityServer4_Contrib_HttpClientService_Infrastructure_TokenResponseService__ctor_IdentityServer4_Contrib_HttpClientService_Infrastructure_IIdentityServerHttpClient_IdentityServer4_Contrib_HttpClientService_Infrastructure_ITokenResponseCacheManager_.md&amp;value=---%0Auid%3A%20IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.%23ctor(IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient%2CIdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/src/IdentityServer4.Contrib.HttpClientService/Infrastructure/TokenResponseService.cs/#L26">View Source</a>
+    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/TokenResponseService.cs/#L26">View Source</a>
   </span>
   <a id="IdentityServer4_Contrib_HttpClientService_Infrastructure_TokenResponseService__ctor_" data-uid="IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.#ctor*"></a>
-  <h4 id="IdentityServer4_Contrib_HttpClientService_Infrastructure_TokenResponseService__ctor_System_Net_Http_IHttpClientFactory_IdentityServer4_Contrib_HttpClientService_Infrastructure_ITokenResponseCacheManager_" data-uid="IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.#ctor(System.Net.Http.IHttpClientFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager)">TokenResponseService(IHttpClientFactory, ITokenResponseCacheManager)</h4>
-  <div class="markdown level1 summary"><p>Constructor of the <a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.html">TokenResponseService</a></p>
+  <h4 id="IdentityServer4_Contrib_HttpClientService_Infrastructure_TokenResponseService__ctor_IdentityServer4_Contrib_HttpClientService_Infrastructure_IIdentityServerHttpClient_IdentityServer4_Contrib_HttpClientService_Infrastructure_ITokenResponseCacheManager_" data-uid="IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.#ctor(IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager)">TokenResponseService(IIdentityServerHttpClient, ITokenResponseCacheManager)</h4>
+  <div class="markdown level1 summary"><p>Constructor of the <a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.html">TokenResponseService</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public TokenResponseService(IHttpClientFactory httpClientFactory, ITokenResponseCacheManager cache)</code></pre>
+    <pre><code class="lang-csharp hljs">public TokenResponseService(IIdentityServerHttpClient identityServerHttpClient, ITokenResponseCacheManager cache)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -144,15 +144,15 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Net.Http.IHttpClientFactory</span></td>
-        <td><span class="parametername">httpClientFactory</span></td>
-        <td><p>An <span class="xref">System.Net.Http.HttpClientFactory</span> to create an <span class="xref">System.Net.Http.HttpClient</span>.</p>
+        <td><a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient.html">IIdentityServerHttpClient</a></td>
+        <td><span class="parametername">identityServerHttpClient</span></td>
+        <td><p>A typed <span class="xref">System.Net.Http.HttpClient</span> for the token service.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager.html">ITokenResponseCacheManager</a></td>
         <td><span class="parametername">cache</span></td>
-        <td><p>A cache manager instance to cache handle the caching of the Identity Server response.</p>
+        <td><p>A cache engine imlementation, to cache the token response.</p>
 </td>
       </tr>
     </tbody>
@@ -161,19 +161,20 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/new/master/apiSpec/new?filename=IdentityServer4_Contrib_HttpClientService_Infrastructure_TokenResponseService_GetTokenResponseAsync__1_Microsoft_Extensions_Options_IOptions___0__.md&amp;value=---%0Auid%3A%20IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.GetTokenResponseAsync%60%601(Microsoft.Extensions.Options.IOptions%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/new/master/apiSpec/new?filename=IdentityServer4_Contrib_HttpClientService_Infrastructure_TokenResponseService_GetTokenResponseAsync__1___0_.md&amp;value=---%0Auid%3A%20IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.GetTokenResponseAsync%60%601(%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/src/IdentityServer4.Contrib.HttpClientService/Infrastructure/TokenResponseService.cs/#L38">View Source</a>
+    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/TokenResponseService.cs/#L38">View Source</a>
   </span>
   <a id="IdentityServer4_Contrib_HttpClientService_Infrastructure_TokenResponseService_GetTokenResponseAsync_" data-uid="IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.GetTokenResponseAsync*"></a>
-  <h4 id="IdentityServer4_Contrib_HttpClientService_Infrastructure_TokenResponseService_GetTokenResponseAsync__1_Microsoft_Extensions_Options_IOptions___0__" data-uid="IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.GetTokenResponseAsync``1(Microsoft.Extensions.Options.IOptions{``0})">GetTokenResponseAsync&lt;TTokenServiceOptions&gt;(IOptions&lt;TTokenServiceOptions&gt;)</h4>
+  <h4 id="IdentityServer4_Contrib_HttpClientService_Infrastructure_TokenResponseService_GetTokenResponseAsync__1___0_" data-uid="IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.GetTokenResponseAsync``1(``0)">GetTokenResponseAsync&lt;TTokenServiceOptions&gt;(TTokenServiceOptions)</h4>
   <div class="markdown level1 summary"><p>Retrieves either a new access token using client credentials or the last valid from the caching engine.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Task&lt;TokenResponse&gt; GetTokenResponseAsync&lt;TTokenServiceOptions&gt;(IOptions&lt;TTokenServiceOptions&gt; options)
+    <pre><code class="lang-csharp hljs">public Task&lt;TokenResponse&gt; GetTokenResponseAsync&lt;TTokenServiceOptions&gt;(TTokenServiceOptions options)
+
     where TTokenServiceOptions : DefaultClientCredentialOptions, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -187,7 +188,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Microsoft.Extensions.Options.IOptions</span>&lt;TTokenServiceOptions&gt;</td>
+        <td><span class="xref">TTokenServiceOptions</span></td>
         <td><span class="parametername">options</span></td>
         <td><p>The token service options</p>
 </td>
@@ -241,7 +242,7 @@
                     <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/new/master/apiSpec/new?filename=IdentityServer4_Contrib_HttpClientService_Infrastructure_TokenResponseService.md&amp;value=---%0Auid%3A%20IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/src/IdentityServer4.Contrib.HttpClientService/Infrastructure/TokenResponseService.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/TokenResponseService.cs/#L16" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

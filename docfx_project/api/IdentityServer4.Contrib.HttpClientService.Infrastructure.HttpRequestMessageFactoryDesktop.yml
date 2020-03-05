@@ -1,26 +1,26 @@
 ### YamlMime:ManagedReference
 items:
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory
-  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory
-  id: HttpRequestMessageFactory
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop
+  id: HttpRequestMessageFactoryDesktop
   parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
   children:
-  - IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)
-  - IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.CreateRequestMessage
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop.#ctor
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop.CreateRequestMessage
   langs:
   - csharp
   - vb
-  name: HttpRequestMessageFactory
-  nameWithType: HttpRequestMessageFactory
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory
+  name: HttpRequestMessageFactoryDesktop
+  nameWithType: HttpRequestMessageFactoryDesktop
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop
   type: Class
   source:
     remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/HttpRequestMessageFactory.cs
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/HttpRequestMessageFactoryDesktop.cs
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
-    id: HttpRequestMessageFactory
-    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/HttpRequestMessageFactory.cs
+    id: HttpRequestMessageFactoryDesktop
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/HttpRequestMessageFactoryDesktop.cs
     startLine: 9
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -28,9 +28,9 @@ items:
   summary: "\nA <xref href=\"System.Net.Http.HttpRequestMessage\" data-throw-if-not-resolved=\"false\"></xref> factory.\n"
   example: []
   syntax:
-    content: 'public class HttpRequestMessageFactory : IHttpRequestMessageFactory'
+    content: 'public class HttpRequestMessageFactoryDesktop : IHttpRequestMessageFactory'
     content.vb: >-
-      Public Class HttpRequestMessageFactory
+      Public Class HttpRequestMessageFactoryDesktop
 
           Implements IHttpRequestMessageFactory
   inheritance:
@@ -51,66 +51,61 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)
-  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)
-  id: '#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)'
-  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop.#ctor
+  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop.#ctor
+  id: '#ctor'
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop
   langs:
   - csharp
   - vb
-  name: HttpRequestMessageFactory(IHttpContextAccessor)
-  nameWithType: HttpRequestMessageFactory.HttpRequestMessageFactory(IHttpContextAccessor)
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.HttpRequestMessageFactory(Microsoft.AspNetCore.Http.IHttpContextAccessor)
+  name: HttpRequestMessageFactoryDesktop()
+  nameWithType: HttpRequestMessageFactoryDesktop.HttpRequestMessageFactoryDesktop()
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop.HttpRequestMessageFactoryDesktop()
   type: Constructor
   source:
     remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/HttpRequestMessageFactory.cs
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/HttpRequestMessageFactoryDesktop.cs
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: .ctor
-    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/HttpRequestMessageFactory.cs
-    startLine: 17
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/HttpRequestMessageFactoryDesktop.cs
+    startLine: 15
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService.Infrastructure
   summary: "\nConstructor of the  <xref href=\"IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory\" data-throw-if-not-resolved=\"false\"></xref>\n"
   example: []
   syntax:
-    content: public HttpRequestMessageFactory(IHttpContextAccessor httpContextAccessor)
-    parameters:
-    - id: httpContextAccessor
-      type: Microsoft.AspNetCore.Http.IHttpContextAccessor
-      description: 'The <xref href="Microsoft.AspNetCore.Http.HttpContextAccessor" data-throw-if-not-resolved="false"></xref> object to access <xref href="Microsoft.AspNetCore.Http.HttpContext" data-throw-if-not-resolved="false"></xref>. '
-    content.vb: Public Sub New(httpContextAccessor As IHttpContextAccessor)
-  overload: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor*
+    content: public HttpRequestMessageFactoryDesktop()
+    content.vb: Public Sub New
+  overload: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.CreateRequestMessage
-  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.CreateRequestMessage
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop.CreateRequestMessage
+  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop.CreateRequestMessage
   id: CreateRequestMessage
-  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop
   langs:
   - csharp
   - vb
   name: CreateRequestMessage()
-  nameWithType: HttpRequestMessageFactory.CreateRequestMessage()
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.CreateRequestMessage()
+  nameWithType: HttpRequestMessageFactoryDesktop.CreateRequestMessage()
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop.CreateRequestMessage()
   type: Method
   source:
     remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/HttpRequestMessageFactory.cs
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/HttpRequestMessageFactoryDesktop.cs
       branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: CreateRequestMessage
-    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/HttpRequestMessageFactory.cs
-    startLine: 28
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/HttpRequestMessageFactoryDesktop.cs
+    startLine: 23
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService.Infrastructure
-  summary: "\nAdds an <code>X-HttpClientService</code> header in the newly created <xref href=\"System.Net.Http.HttpRequestMessage\" data-throw-if-not-resolved=\"false\"></xref> by copying the <code>X-HttpClientService</code> of the current request.\nIf there is no current request or the current request does not contain a <code>X-HttpClientService</code> header, it creates a new one.\n"
-  remarks: This is useful to track in the logs a series of cascading requests between services.
+  summary: "\nCreates and returns a new <xref href=\"System.Net.Http.HttpRequestMessage\" data-throw-if-not-resolved=\"false\"></xref>\n"
   example: []
   syntax:
     content: public HttpRequestMessage CreateRequestMessage()
@@ -118,7 +113,7 @@ items:
       type: System.Net.Http.HttpRequestMessage
       description: An <xref href="System.Net.Http.HttpRequestMessage" data-throw-if-not-resolved="false"></xref> to be used by an <xref href="System.Net.Http.HttpClient" data-throw-if-not-resolved="false"></xref>.
     content.vb: Public Function CreateRequestMessage As HttpRequestMessage
-  overload: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.CreateRequestMessage*
+  overload: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop.CreateRequestMessage*
   implements:
   - IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage
   modifiers.csharp:
@@ -447,30 +442,11 @@ references:
   name: HttpRequestMessageFactory
   nameWithType: HttpRequestMessageFactory
   fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory
-- uid: Microsoft.AspNetCore.Http.HttpContextAccessor
-  commentId: T:Microsoft.AspNetCore.Http.HttpContextAccessor
-  isExternal: true
-- uid: Microsoft.AspNetCore.Http.HttpContext
-  commentId: T:Microsoft.AspNetCore.Http.HttpContext
-  isExternal: true
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor*
-  commentId: Overload:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor
-  name: HttpRequestMessageFactory
-  nameWithType: HttpRequestMessageFactory.HttpRequestMessageFactory
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.HttpRequestMessageFactory
-- uid: Microsoft.AspNetCore.Http.IHttpContextAccessor
-  commentId: T:Microsoft.AspNetCore.Http.IHttpContextAccessor
-  parent: Microsoft.AspNetCore.Http
-  isExternal: true
-  name: IHttpContextAccessor
-  nameWithType: IHttpContextAccessor
-  fullName: Microsoft.AspNetCore.Http.IHttpContextAccessor
-- uid: Microsoft.AspNetCore.Http
-  commentId: N:Microsoft.AspNetCore.Http
-  isExternal: true
-  name: Microsoft.AspNetCore.Http
-  nameWithType: Microsoft.AspNetCore.Http
-  fullName: Microsoft.AspNetCore.Http
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop.#ctor*
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop.#ctor
+  name: HttpRequestMessageFactoryDesktop
+  nameWithType: HttpRequestMessageFactoryDesktop.HttpRequestMessageFactoryDesktop
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop.HttpRequestMessageFactoryDesktop
 - uid: System.Net.Http.HttpClient
   commentId: T:System.Net.Http.HttpClient
   parent: System.Net.Http
@@ -478,11 +454,11 @@ references:
   name: HttpClient
   nameWithType: HttpClient
   fullName: System.Net.Http.HttpClient
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.CreateRequestMessage*
-  commentId: Overload:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.CreateRequestMessage
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop.CreateRequestMessage*
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop.CreateRequestMessage
   name: CreateRequestMessage
-  nameWithType: HttpRequestMessageFactory.CreateRequestMessage
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.CreateRequestMessage
+  nameWithType: HttpRequestMessageFactoryDesktop.CreateRequestMessage
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop.CreateRequestMessage
 - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage
   commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage
   parent: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory

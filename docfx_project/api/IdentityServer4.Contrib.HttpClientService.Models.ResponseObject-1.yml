@@ -311,12 +311,11 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HttpRequestMessge
     path: ../src/IdentityServer4.Contrib.HttpClientService/Models/ResponseObject.cs
-    startLine: 50
+    startLine: 47
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService.Models
   summary: "\nThe entire <xref href=\"System.Net.Http.HttpRequestMessage\" data-throw-if-not-resolved=\"false\"></xref> object for debugging purposes.\n"
-  remarks: "\nIt will be null if <xref href=\"IdentityServer4.Contrib.HttpClientService.HttpClientService.Dispose\" data-throw-if-not-resolved=\"false\"></xref> is called for cleanup.\n"
   example: []
   syntax:
     content: public HttpRequestMessage HttpRequestMessge { get; }
@@ -351,7 +350,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HasError
     path: ../src/IdentityServer4.Contrib.HttpClientService/Models/ResponseObject.cs
-    startLine: 55
+    startLine: 52
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService.Models
@@ -390,7 +389,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: Error
     path: ../src/IdentityServer4.Contrib.HttpClientService/Models/ResponseObject.cs
-    startLine: 60
+    startLine: 57
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService.Models
@@ -828,9 +827,6 @@ references:
   name: HttpRequestMessage
   nameWithType: HttpRequestMessage
   fullName: System.Net.Http.HttpRequestMessage
-- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.Dispose
-  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.Dispose
-  isExternal: true
 - uid: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.HttpRequestMessge*
   commentId: Overload:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.HttpRequestMessge
   name: HttpRequestMessge

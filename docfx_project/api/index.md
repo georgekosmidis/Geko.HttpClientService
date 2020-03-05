@@ -10,8 +10,11 @@ Sets the IdentityServer4 options for retrieving an access token using client cre
 Adds a header to the request.
 
 ### Class HttpClientServiceFactory
-- [CreateHttpClientService(String)]
+- [CreateHttpClientService()](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.html#IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory_CreateHttpClientService)
 Creates or returns HttpClientService instances for the given logical name.
+
+- [HttpClientServiceFactory.Instance](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.html#IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory_Instance)
+A lazy singleton instantiation for use outside of a DI container (e.g. a Desktop app)
 
 ### Class ResponseObject<TResponseBody>
 - [BodyAsStream](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html#IdentityServer4_Contrib_HttpClientService_Models_ResponseObject_1_BodyAsStream)

@@ -31,7 +31,6 @@ items:
     content: 'public class TokenResponseService : ITokenResponseService'
     content.vb: >-
       Public Class TokenResponseService
-
           Implements ITokenResponseService
   inheritance:
   - System.Object
@@ -117,7 +116,6 @@ items:
   syntax:
     content: >-
       public Task<TokenResponse> GetTokenResponseAsync<TTokenServiceOptions>(TTokenServiceOptions options)
-
           where TTokenServiceOptions : DefaultClientCredentialOptions, new()
     parameters:
     - id: options

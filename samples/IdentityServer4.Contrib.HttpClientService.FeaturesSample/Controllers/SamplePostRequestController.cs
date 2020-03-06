@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 using IdentityServer4.Contrib.HttpClientService.Extensions;
 using System;
 using System.Linq;
+using IdentityServer4.Contrib.HttpClientService.Infrastructure;
+using System.Text;
 
 namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.Controllers
 {
@@ -29,7 +31,7 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.Controllers
         /// A POST request that sends a string and reads a string from the response body
         /// </summary>
         /// <returns></returns>
-        [HttpGet("int")]
+        [HttpGet("string")]
         public async Task<IActionResult> SimplePost()
         {
             var responseObject = await _requestServiceFactory
@@ -80,7 +82,7 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.Controllers
             var responseObject = await _requestServiceFactory
                 .CreateHttpClientService()                                                          //Create a new instance of the HttpClientService
               //.PostAsync<TRequestBody,TResponseBody>(...)                                       
-                .PostAsync<ComplexTypeSampleModel, ComplexTypeSampleModel>(                         //Execute a POST request by setting the type of the RequestBody and ResposeBody to ComplexTypeSampleModel
+                .PostAsync<ComplexTypeSampleModel, ComplexTypeSampleModel>(                         //Execute a POST request by setting the type of the RequestBody and Response to ComplexTypeSampleModel
                     "http://localhost:5000/dummy-data/complex-type",                                //URL for the request
                     new ComplexTypeSampleModel                                                      //Object to be sent
                     {
@@ -96,6 +98,41 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.Controllers
             else
                 return StatusCode((int)responseObject.StatusCode, responseObject.Error);            //If an error is found, return the status code and the error description
         }
+
+        /// <summary>
+        /// A POST request to a resource that accepts a JSON request (a ComplexTypeSampleModel) with additional content-type headers,
+        /// and responds with a JSON (represented again by ComplexTypeSampleModel)
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet("complex-type-2")]
+        public async Task<IActionResult> ComplexType2()
+        {
+
+            var responseObject = await _requestServiceFactory
+                .CreateHttpClientService()                                                          //Create a new instance of the HttpClientService
+                                                                                                    //.PostAsync<TRequestBody,TResponseBody>(...)                                       
+                .PostAsync<TypeContent<ComplexTypeSampleModel>, ComplexTypeSampleModel>(            //Execute a POST request by setting the type of the RequestBody to TypeContent<ComplexTypeSampleModel> and ResponseBody to ComplexTypeSampleModel
+                    "http://localhost:5000/dummy-data/complex-type",                                //URL for the request
+                    new TypeContent<ComplexTypeSampleModel>(                                        //A TypeContent, similar to StringContent
+                        new ComplexTypeSampleModel                                                  //Object to be sent
+                        {
+                            Id = 19830426,
+                            Date = DateTime.Now,
+                            Firstname = "George",
+                            Lastname = "Kosmidis"
+                        },
+                        Encoding.UTF8,                                                             //Set custom encoding
+                        "application/json"                                                         //Set custom Content-Type
+                    )
+                );
+
+
+            if (!responseObject.HasError)                                                           //Check if there was an error in the process
+                return Ok(responseObject.BodyAsType.Date);                                          //If not, get the body as type (outputs the Date as proof of concept)
+            else
+                return StatusCode((int)responseObject.StatusCode, responseObject.Error);            //If an error is found, return the status code and the error description
+        }
+
         /// <summary>
         /// A sample model for the POST request to the http://localhost:5000/dummy-data/complex-type
         /// </summary>

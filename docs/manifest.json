@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html",
-          "hash": "LweCHaZcTIrVcNyxG5FmkQ=="
+          "hash": "nln1Q2YRlWpgepCY4Rgttw=="
         }
       },
       "is_incremental": true,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.AccessTokenOptions.html",
-          "hash": "QuBJSC10x9ibHzxIjDc9Hw=="
+          "hash": "snmnY3rTDUbkUQqEnyefsg=="
         }
       },
       "is_incremental": true,
@@ -225,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient.html",
-          "hash": "b4KdBCGBckLp52wN9GAYJA=="
+          "hash": "YQwSVzOt10y06kHFTiGrcQ=="
         }
       },
       "is_incremental": true,
@@ -249,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.html",
-          "hash": "u0S7W1AtmehXGpUAScur0A=="
+          "hash": "bjtexgnPrtCWyPyNJ4biRA=="
         }
       },
       "is_incremental": true,
@@ -261,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerHttpClient.html",
-          "hash": "dGIZp7iX4ggcqGmBhGPv+g=="
+          "hash": "T4yJJVYIrdr6x9S7ezvMjg=="
         }
       },
       "is_incremental": true,
@@ -285,7 +285,19 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.html",
-          "hash": "6/qW4COPEM+4Bs7VPNHkpw=="
+          "hash": "HTN43aE8AhxoSMbQRTNUJg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent-1.html",
+          "hash": "EU/L8/FwZAjpB9gyvwQbUw=="
         }
       },
       "is_incremental": true,
@@ -297,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.html",
-          "hash": "YDEhytEKtjniG2+8owjxSg=="
+          "hash": "bVzcmwK/wEJZEXYEmpgLZQ=="
         }
       },
       "is_incremental": true,
@@ -357,10 +369,10 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "G+gcZL3zoRnBg+YPCIiRrQ=="
+          "hash": "ArF0EN9Au3Dnlp8Ip8mUaw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -369,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "YZL+Uum6VS9dfah9E3bJsQ=="
+          "hash": "2Ub+D2ZFh4IkfBPjCBmBnQ=="
         }
       },
       "is_incremental": false,
@@ -405,10 +417,10 @@
       "output": {
         ".html": {
           "relative_path": "contribution.html",
-          "hash": "uJugvsCen+2DnYf5vp6l5g=="
+          "hash": "etXvtyNWms2ZjxJoFGuEMA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -451,7 +463,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "qR5TdDBrTc6drT4hoiek8A=="
+          "hash": "3ckDVCKr+5uTtUA8/lVLzw=="
         }
       },
       "is_incremental": false,
@@ -479,13 +491,6 @@
         "skipped_file_count": 0
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -493,17 +498,24 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
-          "total_file_count": 5,
-          "skipped_file_count": 4
+          "total_file_count": 0,
+          "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 29,
-          "skipped_file_count": 29
+          "total_file_count": 30,
+          "skipped_file_count": 30
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 5,
+          "skipped_file_count": 3
         }
       }
     },

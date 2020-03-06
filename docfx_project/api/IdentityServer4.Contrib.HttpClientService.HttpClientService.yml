@@ -30,7 +30,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HttpClientService
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 19
+    startLine: 20
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -95,7 +95,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersAdd
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 47
+    startLine: 48
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -137,7 +137,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersAdd
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 65
+    startLine: 66
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -182,7 +182,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersSet
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 83
+    startLine: 84
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -224,7 +224,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersSet
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 105
+    startLine: 106
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -266,7 +266,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersClear
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 126
+    startLine: 127
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -301,7 +301,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersRemove
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 137
+    startLine: 138
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -340,7 +340,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 156
+    startLine: 157
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -349,7 +349,6 @@ items:
   syntax:
     content: >-
       public HttpClientService SetIdentityServerOptions<TIdentityServerOptions>(IOptions<TIdentityServerOptions> options)
-
           where TIdentityServerOptions : DefaultClientCredentialOptions, new()
     parameters:
     - id: options
@@ -388,7 +387,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 172
+    startLine: 173
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -427,7 +426,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 185
+    startLine: 186
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -469,7 +468,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 197
+    startLine: 198
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -478,7 +477,6 @@ items:
   syntax:
     content: >-
       public HttpClientService SetIdentityServerOptions<TIdentityServerOptions>(TIdentityServerOptions options)
-
           where TIdentityServerOptions : DefaultClientCredentialOptions, new()
     parameters:
     - id: options
@@ -516,7 +514,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SendAsync
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 282
+    startLine: 283
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService

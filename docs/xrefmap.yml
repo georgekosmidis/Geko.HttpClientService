@@ -908,6 +908,48 @@ references:
   fullName.vb: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.GetTokenResponseAsync(Of TTokenServiceOptions)(TTokenServiceOptions)
   nameWithType: TokenResponseService.GetTokenResponseAsync<TTokenServiceOptions>(TTokenServiceOptions)
   nameWithType.vb: TokenResponseService.GetTokenResponseAsync(Of TTokenServiceOptions)(TTokenServiceOptions)
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent`1
+  name: TypeContent<TRequestBody>
+  href: api/IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent-1.html
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent`1
+  name.vb: TypeContent(Of TRequestBody)
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent<TRequestBody>
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent(Of TRequestBody)
+  nameWithType: TypeContent<TRequestBody>
+  nameWithType.vb: TypeContent(Of TRequestBody)
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent`1.#ctor(`0)
+  name: TypeContent(TRequestBody)
+  href: api/IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent-1.html#IdentityServer4_Contrib_HttpClientService_Infrastructure_TypeContent_1__ctor__0_
+  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent`1.#ctor(`0)
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent<TRequestBody>.TypeContent(TRequestBody)
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent(Of TRequestBody).TypeContent(TRequestBody)
+  nameWithType: TypeContent<TRequestBody>.TypeContent(TRequestBody)
+  nameWithType.vb: TypeContent(Of TRequestBody).TypeContent(TRequestBody)
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent`1.#ctor(`0,System.Text.Encoding)
+  name: TypeContent(TRequestBody, Encoding)
+  href: api/IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent-1.html#IdentityServer4_Contrib_HttpClientService_Infrastructure_TypeContent_1__ctor__0_System_Text_Encoding_
+  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent`1.#ctor(`0,System.Text.Encoding)
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent<TRequestBody>.TypeContent(TRequestBody, System.Text.Encoding)
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent(Of TRequestBody).TypeContent(TRequestBody, System.Text.Encoding)
+  nameWithType: TypeContent<TRequestBody>.TypeContent(TRequestBody, Encoding)
+  nameWithType.vb: TypeContent(Of TRequestBody).TypeContent(TRequestBody, Encoding)
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent`1.#ctor(`0,System.Text.Encoding,System.String)
+  name: TypeContent(TRequestBody, Encoding, String)
+  href: api/IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent-1.html#IdentityServer4_Contrib_HttpClientService_Infrastructure_TypeContent_1__ctor__0_System_Text_Encoding_System_String_
+  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent`1.#ctor(`0,System.Text.Encoding,System.String)
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent<TRequestBody>.TypeContent(TRequestBody, System.Text.Encoding, System.String)
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent(Of TRequestBody).TypeContent(TRequestBody, System.Text.Encoding, System.String)
+  nameWithType: TypeContent<TRequestBody>.TypeContent(TRequestBody, Encoding, String)
+  nameWithType.vb: TypeContent(Of TRequestBody).TypeContent(TRequestBody, Encoding, String)
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent`1.#ctor*
+  name: TypeContent
+  href: api/IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent-1.html#IdentityServer4_Contrib_HttpClientService_Infrastructure_TypeContent_1__ctor_
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent`1.#ctor
+  isSpec: "True"
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent<TRequestBody>.TypeContent
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent(Of TRequestBody).TypeContent
+  nameWithType: TypeContent<TRequestBody>.TypeContent
+  nameWithType.vb: TypeContent(Of TRequestBody).TypeContent
 - uid: IdentityServer4.Contrib.HttpClientService.Models
   name: IdentityServer4.Contrib.HttpClientService.Models
   href: api/IdentityServer4.Contrib.HttpClientService.Models.html

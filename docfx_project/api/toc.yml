@@ -54,6 +54,9 @@
     name: TokenResponseCacheManager
   - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
     name: TokenResponseService
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent`1
+    name: TypeContent<TRequestBody>
+    name.vb: TypeContent(Of TRequestBody)
 - uid: IdentityServer4.Contrib.HttpClientService.Models
   name: IdentityServer4.Contrib.HttpClientService.Models
   items:

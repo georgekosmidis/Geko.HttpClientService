@@ -69,7 +69,16 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="documentation-common-methodsproperties">Documentation common methods/properties</h1>
 
-<h3 id="class-httpclientservice">Class HttpClientService</h3>
+<h2 id="creating-an-httpclientservice-or-using-the-singleton">Creating an HttpClientService, or using the singleton</h2>
+<ul>
+<li><p><a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.html#IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory_CreateHttpClientService">CreateHttpClientService()</a>
+Creates or returns HttpClientService instances for the given logical name.</p>
+</li>
+<li><p><a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.html#IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory_Instance">HttpClientServiceFactory.Instance</a>
+A lazy singleton instantiation for use outside of a DI container (e.g. a Desktop app)</p>
+</li>
+</ul>
+<h2 id="setting-identityserver-options-and-headers-httpclientservice">Setting IdentityServer options and Headers (HttpClientService)</h2>
 <ul>
 <li><p><a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html#IdentityServer4_Contrib_HttpClientService_HttpClientService_SetIdentityServerOptions_System_String_">SetIdentityServerOptions(String)</a>
 Sets the IdentityServer4 options for retrieving an access token using client credentials by passing the appsettings configuration section that contain the necessary configuration keys.</p>
@@ -81,16 +90,25 @@ Sets the IdentityServer4 options for retrieving an access token using client cre
 Adds a header to the request.</p>
 </li>
 </ul>
-<h3 id="class-httpclientservicefactory">Class HttpClientServiceFactory</h3>
+<p>The <code>System.Net.HttpStatusCode</code> of the response.</p>
+<h2 id="extension-methods-for-get-post-put-and-delete">Extension methods for GET, POST, PUT and DELETE</h2>
 <ul>
-<li><p><a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.html#IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory_CreateHttpClientService">CreateHttpClientService()</a>
-Creates or returns HttpClientService instances for the given logical name.</p>
-</li>
-<li><p><a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.html#IdentityServer4_Contrib_HttpClientService_HttpClientServiceFactory_Instance">HttpClientServiceFactory.Instance</a>
-A lazy Singleton instantiation for use outside of a DI container (e.g. a Desktop app)</p>
-</li>
+<li><a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceGetExtensions.html#IdentityServer4_Contrib_HttpClientService_Extensions_HttpClientServiceGetExtensions_GetAsync__1_IdentityServer4_Contrib_HttpClientService_HttpClientService_System_String_">GetAsync<tresponsebody>(HttpClientService, String)</tresponsebody></a>
+Sends a GET request to the specified requestUri and returns the response wrapped in a <code>ResponseObject&lt;TResponseBody&gt;</code> in an asynchronous operation.</li>
+<li><a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions.html#IdentityServer4_Contrib_HttpClientService_Extensions_HttpClientServicePostExtensions_PostAsync__2_IdentityServer4_Contrib_HttpClientService_HttpClientService_System_String___0_">PostAsync&lt;TRequestBody, TResponseBody&gt;(HttpClientService, String, TRequestBody)</a>
+Sends a POST request to the specified requestUri using requestBody as the body of the request with <code>TRequestBody</code> as the type of the requestBody. Returns the response wrapped in a <code>ResponseObject&lt;TResponseBody&gt;</code>.</li>
+<li><a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions.html#IdentityServer4_Contrib_HttpClientService_Extensions_HttpClientServicePutExtensions_PutAsync__2_IdentityServer4_Contrib_HttpClientService_HttpClientService_System_String___0_">PutAsync&lt;TRequestBody, TResponseBody&gt;(HttpClientService, String, TRequestBody</a>
+Sends a PUT request to the specified requestUri using requestBody as the body of the request with TRequestBody as the type of the requestBody. Returns the response wrapped in a <code>ResponseObject&lt;TResponseBody&gt;</code>.</li>
+<li><a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.html#IdentityServer4_Contrib_HttpClientService_Extensions_HttpClientServiceDeleteExtensions_DeleteAsync__1_IdentityServer4_Contrib_HttpClientService_HttpClientService_System_String_">DeleteAsync<tresponsebody>(HttpClientService, String)</tresponsebody></a>
+Sends a DELETE request to the specified requestUri and returns the response wrapped in a <code>ResponseObject&lt;TResponseBody&gt;</code> in an asynchronous operation.</li>
 </ul>
-<h3 id="class-responseobject">Class ResponseObject<tresponsebody></tresponsebody></h3>
+<h2 id="defining-a-typed-request-body-with-content-type">Defining a typed request body with content-type</h2>
+<ul>
+<li><a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent-1.html">TypeContent<trequestbody></trequestbody></a>
+TypeContent is following the implementation of <code>StringContent</code>.
+e.g. <code>new TypeContent(your-complex-type, Encoding.UTF8, &quot;application/json&quot;)</code>;</li>
+</ul>
+<h2 id="responseobject-properties">ResponseObject properties</h2>
 <ul>
 <li><a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html#IdentityServer4_Contrib_HttpClientService_Models_ResponseObject_1_BodyAsStream">BodyAsStream</a>
 The body of the response as <code>System.IO.Stream</code>.</li>
@@ -108,19 +126,7 @@ The <code>System.Net.Http.Headers.HttpResponseHeaders</code>.</li>
 The entire <code>System.Net.Http.HttpRequestMessage</code> object for debugging purposes.</li>
 <li><a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html#IdentityServer4_Contrib_HttpClientService_Models_ResponseObject_1_HttpResponseMessage">HttpResponseMessge</a>
 The entire <code>System.Net.Http.HttpResponseMessage</code> object.</li>
-<li><a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html#IdentityServer4_Contrib_HttpClientService_Models_ResponseObject_1_StatusCode">StatusCode</a>
-The <code>System.Net.HttpStatusCode</code> of the response.</li>
-</ul>
-<h3 id="extension-methods-for-get-post-put-and-delete">Extension methods for GET, POST, PUT and DELETE</h3>
-<ul>
-<li><a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceGetExtensions.html#IdentityServer4_Contrib_HttpClientService_Extensions_HttpClientServiceGetExtensions_GetAsync__1_IdentityServer4_Contrib_HttpClientService_HttpClientService_System_String_">GetAsync<tresponsebody>(HttpClientService, String)</tresponsebody></a>
-Sends a GET request to the specified requestUri and returns the response wrapped in a <code>ResponseObject&lt;TResponseBody&gt;</code> in an asynchronous operation.</li>
-<li><a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions.html#IdentityServer4_Contrib_HttpClientService_Extensions_HttpClientServicePostExtensions_PostAsync__2_IdentityServer4_Contrib_HttpClientService_HttpClientService_System_String___0_">PostAsync&lt;TRequestBody, TResponseBody&gt;(HttpClientService, String, TRequestBody)</a>
-Sends a POST request to the specified requestUri using requestBody as the body of the request with <code>TRequestBody</code> as the type of the requestBody. Returns the response wrapped in a <code>ResponseObject&lt;TResponseBody&gt;</code>.</li>
-<li><a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions.html#IdentityServer4_Contrib_HttpClientService_Extensions_HttpClientServicePutExtensions_PutAsync__2_IdentityServer4_Contrib_HttpClientService_HttpClientService_System_String___0_">PutAsync&lt;TRequestBody, TResponseBody&gt;(HttpClientService, String, TRequestBody</a>
-Sends a PUT request to the specified requestUri using requestBody as the body of the request with TRequestBody as the type of the requestBody. Returns the response wrapped in a <code>ResponseObject&lt;TResponseBody&gt;</code>.</li>
-<li><a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.html#IdentityServer4_Contrib_HttpClientService_Extensions_HttpClientServiceDeleteExtensions_DeleteAsync__1_IdentityServer4_Contrib_HttpClientService_HttpClientService_System_String_">DeleteAsync<tresponsebody>(HttpClientService, String)</tresponsebody></a>
-Sends a DELETE request to the specified requestUri and returns the response wrapped in a <code>ResponseObject&lt;TResponseBody&gt;</code> in an asynchronous operation.</li>
+<li><a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html#IdentityServer4_Contrib_HttpClientService_Models_ResponseObject_1_StatusCode">StatusCode</a></li>
 </ul>
 </article>
           </div>

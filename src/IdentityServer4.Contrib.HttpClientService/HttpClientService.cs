@@ -11,6 +11,7 @@ using IdentityServer4.Contrib.HttpClientService.Models;
 using System.IO;
 using System.Collections.Generic;
 using Microsoft.Extensions.Configuration;
+using System.Runtime.Serialization;
 
 namespace IdentityServer4.Contrib.HttpClientService
 {
@@ -301,21 +302,24 @@ namespace IdentityServer4.Contrib.HttpClientService
             //handle request body
             if (requestBody != null)
             {
-                if (typeof(TRequestBody) == typeof(StringContent))
+                //HttpContent types
+                if (requestBody as HttpContent != null)
                 {
-                    httpRequestMessage.Content = requestBody as StringContent;
+                    httpRequestMessage.Content = requestBody as HttpContent;
                 }
-                else if (typeof(TRequestBody) == typeof(StreamContent))
-                {
-                    httpRequestMessage.Content = requestBody as StreamContent;
-                }
-                else if (IsSimpleType(typeof(TRequestBody)))
-                {
-                    httpRequestMessage.Content = new StringContent(requestBody.ToString());
-                }
+                //no HttpContent types, wrap in an HttpContent type with default encoding and content-type
                 else
                 {
-                    httpRequestMessage.Content = new StringContent(JsonConvert.SerializeObject(requestBody), Encoding.UTF8, "application/json");
+                    //utf-8, text/plain
+                    if (IsSimpleType(typeof(TRequestBody)))
+                    {
+                        httpRequestMessage.Content = new StringContent(requestBody.ToString());
+                    }
+                    //utf-8, application/json
+                    else
+                    {
+                        httpRequestMessage.Content = new TypeContent<TRequestBody>(requestBody);
+                    }
                 }
             }
 
@@ -379,17 +383,6 @@ namespace IdentityServer4.Contrib.HttpClientService
 
             return apiResponse;
         }
-
-        ///// <summary>
-        ///// Disposes the HTTP request message used for the request.
-        ///// </summary>
-        ///// <remarks>
-        ///// The <see cref="ResponseObject{TResponseBody}.HttpRequestMessge"/> will not be available after disposing.
-        ///// </remarks>
-        //public void Dispose()
-        //{
-        //    httpRequestMessage.Dispose();
-        //}
 
 
         private static bool IsSimpleType(Type type)

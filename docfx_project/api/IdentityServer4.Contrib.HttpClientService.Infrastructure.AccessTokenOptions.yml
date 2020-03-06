@@ -186,7 +186,6 @@ items:
   syntax:
     content: >-
       public void Set<TIdentityServerOptions>(IOptions<TIdentityServerOptions> options)
-
           where TIdentityServerOptions : DefaultClientCredentialOptions, new()
     parameters:
     - id: options
@@ -267,7 +266,6 @@ items:
   syntax:
     content: >-
       public void Set<TIdentityServerOptions>(Action<TIdentityServerOptions> optionsDelegate)
-
           where TIdentityServerOptions : DefaultClientCredentialOptions, new()
     parameters:
     - id: optionsDelegate
@@ -312,7 +310,6 @@ items:
   syntax:
     content: >-
       public void Set<TIdentityServerOptions>(TIdentityServerOptions options)
-
           where TIdentityServerOptions : DefaultClientCredentialOptions, new()
     parameters:
     - id: options

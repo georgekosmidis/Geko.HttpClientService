@@ -299,13 +299,13 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
                 )
             ).CreateHttpClientService();
 
-            var result = await httpClientService
-                .HeadersAdd("Content-Type", "application/json; charset=utf-8")
-                .SendAsync<StringContent, string>(
-                new Uri("http://localhost"),
-                HttpMethod.Post,
-                new StringContent("request_content", Encoding.UTF8, "application/json")
-            );
+            await httpClientService
+                 .HeadersAdd("Content-Type", "application/json; charset=utf-8")
+                 .SendAsync<StringContent, string>(
+                 new Uri("http://localhost"),
+                 HttpMethod.Post,
+                 new StringContent("request_content", Encoding.UTF8, "application/json")
+             );
         }
     }
 }

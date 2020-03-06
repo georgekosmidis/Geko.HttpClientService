@@ -17,6 +17,7 @@ items:
   - IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
   - IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseCacheManager
   - IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent`1
   langs:
   - csharp
   - vb
@@ -85,6 +86,42 @@ references:
   name: TokenResponseService
   nameWithType: TokenResponseService
   fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent`1
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent`1
+  name: TypeContent<TRequestBody>
+  nameWithType: TypeContent<TRequestBody>
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent<TRequestBody>
+  nameWithType.vb: TypeContent(Of TRequestBody)
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent(Of TRequestBody)
+  name.vb: TypeContent(Of TRequestBody)
+  spec.csharp:
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent`1
+    name: TypeContent
+    nameWithType: TypeContent
+    fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequestBody
+    nameWithType: TRequestBody
+    fullName: TRequestBody
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent`1
+    name: TypeContent
+    nameWithType: TypeContent
+    fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequestBody
+    nameWithType: TRequestBody
+    fullName: TRequestBody
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager
   commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager
   parent: IdentityServer4.Contrib.HttpClientService.Infrastructure

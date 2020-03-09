@@ -29,9 +29,7 @@ items:
     content: 'public class HttpClientServiceHeaders : HttpHeaders, IEnumerable<KeyValuePair<string, IEnumerable<string>>>, IEnumerable'
     content.vb: >-
       Public Class HttpClientServiceHeaders
-
           Inherits HttpHeaders
-
           Implements IEnumerable(Of KeyValuePair(Of String, IEnumerable(Of String))), IEnumerable
   inheritance:
   - System.Object

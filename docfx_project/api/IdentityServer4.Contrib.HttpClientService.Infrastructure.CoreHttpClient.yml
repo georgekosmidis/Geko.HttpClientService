@@ -31,7 +31,6 @@ items:
     content: 'public class CoreHttpClient : ICoreHttpClient'
     content.vb: >-
       Public Class CoreHttpClient
-
           Implements ICoreHttpClient
   inheritance:
   - System.Object

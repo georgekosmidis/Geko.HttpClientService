@@ -31,7 +31,6 @@ items:
     content: 'public class IdentityServerService : IIdentityServerService'
     content.vb: >-
       Public Class IdentityServerService
-
           Implements IIdentityServerService
   inheritance:
   - System.Object

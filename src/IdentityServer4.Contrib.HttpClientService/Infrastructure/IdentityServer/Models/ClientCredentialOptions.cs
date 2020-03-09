@@ -4,7 +4,7 @@
     /// <summary>
     /// Model for the client credentials options for IdentityServer4
     /// </summary>
-    public class ClientCredentialOptions : IIdentityServerOptions
+    public class ClientCredentialsOptions : IIdentityServerOptions
     {
         /// <summary>
         /// The address of the access token service.

@@ -43,7 +43,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
 
             httpClientService.SetIdentityServerOptions(
                 Options.Create(
-                    new ClientCredentialOptions
+                    new ClientCredentialsOptions
                     {
                         Address = "http://localhost",
                         ClientId = "ClientId",
@@ -76,7 +76,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
 
             httpClientService.SetIdentityServerOptions(
                 Options.Create(
-                    new ClientCredentialOptions
+                    new ClientCredentialsOptions
                     {
                         Address = "http://localhost",
                         ClientId = "ClientId",

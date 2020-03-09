@@ -155,7 +155,7 @@ namespace IdentityServer4.Contrib.HttpClientService
         /// </summary>
         /// <param name="configurationSection">
         /// The name of the configuration section that contains the information for requesting an access token. 
-        /// See <see cref="ClientCredentialOptions"/> for the property names.
+        /// See <see cref="ClientCredentialsOptions"/> for the property names.
         /// </param>
         /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
         public HttpClientService SetIdentityServerOptions(string configurationSection)
@@ -170,7 +170,7 @@ namespace IdentityServer4.Contrib.HttpClientService
             //todo: find better way
             identityServerOptions = _configuration.GetSection(configurationSection).Get<PasswordOptions>();
             if ((identityServerOptions as PasswordOptions).Username == null)
-                identityServerOptions = _configuration.GetSection(configurationSection).Get<ClientCredentialOptions>();
+                identityServerOptions = _configuration.GetSection(configurationSection).Get<ClientCredentialsOptions>();
 
             return this;
         }
@@ -206,7 +206,7 @@ namespace IdentityServer4.Contrib.HttpClientService
         }
 
         /// <summary>
-        /// Sets the IdentityServer4 options by passing an object that inherits from <see cref="ClientCredentialOptions"/>
+        /// Sets the IdentityServer4 options by passing an object that inherits from <see cref="ClientCredentialsOptions"/>
         /// </summary>
         /// <param name="options">The <see cref="IIdentityServerOptions"/> that contains the options.</param>
         public HttpClientService SetIdentityServerOptions<TOptions>(TOptions options)

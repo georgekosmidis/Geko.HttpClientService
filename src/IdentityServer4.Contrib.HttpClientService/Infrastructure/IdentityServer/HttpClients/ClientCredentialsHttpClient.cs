@@ -19,7 +19,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure
         /// <summary>
         /// The type of the <see cref="IIdentityServerOptions"/> implementation that this HttpClient needs
         /// </summary>
-        public Type HttpClientOptionsType => typeof(ClientCredentialOptions);
+        public Type HttpClientOptionsType => typeof(ClientCredentialsOptions);
         private readonly HttpClient _httpClient;
 
         /// <summary>
@@ -33,7 +33,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure
 
         /// <summary>
         /// Creates a unique key to be used as the cache key of the Identity Server access token, by combining infomration from the access token options object.
-        /// See <see cref="ClientCredentialOptions"/> for the access token options.
+        /// See <see cref="ClientCredentialsOptions"/> for the access token options.
         /// </summary>
         /// <param name="options">The token service options</param>
         /// <returns>Returns a string representing a unique identifier to be used as the caching key, by getting the hashcode of the address, the client and scopes.</returns>
@@ -42,11 +42,11 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure
             if (options == null)
                 throw new ArgumentNullException(nameof(options));
 
-            var clientCredentialOptions = options as ClientCredentialOptions;
+            var clientCredentialOptions = options as ClientCredentialsOptions;
 
             if (clientCredentialOptions == null)
             {
-                throw new InvalidOperationException("The '" + nameof(options) + "' argument cannot be expicitly converted to " + nameof(ClientCredentialOptions) + ".");
+                throw new InvalidOperationException("The '" + nameof(options) + "' argument cannot be expicitly converted to " + nameof(ClientCredentialsOptions) + ".");
             }
 
             if (clientCredentialOptions.Address == null)
@@ -70,18 +70,18 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure
         /// <summary>
         /// Retrieves a <see cref="TokenResponse"/> from the configured by the <paramref name="options"/>.
         /// </summary>
-        /// <param name="options">The <see cref="ClientCredentialOptions"/> for the IdentityServer4.</param>
+        /// <param name="options">The <see cref="ClientCredentialsOptions"/> for the IdentityServer4.</param>
         /// <returns>A <see cref="TokenResponse"/> object.</returns>
         public async Task<TokenResponse> GetTokenResponseAsync(IIdentityServerOptions options)
         {
             if (options == null)
                 throw new ArgumentNullException(nameof(options));
 
-            var clientCredentialOptions = options as ClientCredentialOptions;
+            var clientCredentialOptions = options as ClientCredentialsOptions;
 
             if (clientCredentialOptions == null)
             {
-                throw new InvalidOperationException("The '" + nameof(options) + "' argument cannot be expicitly converted to " + nameof(ClientCredentialOptions) + ".");
+                throw new InvalidOperationException("The '" + nameof(options) + "' argument cannot be expicitly converted to " + nameof(ClientCredentialsOptions) + ".");
             }
 
             if (clientCredentialOptions.Address == null)

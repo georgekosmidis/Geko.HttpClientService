@@ -36,7 +36,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure.Tests
                     )
             );
 
-            var tokenServiceOptions = new ClientCredentialOptions
+            var tokenServiceOptions = new ClientCredentialsOptions
             {
                 Address = "http://localhost/" + Guid.NewGuid(),
                 ClientId = "ClientId",

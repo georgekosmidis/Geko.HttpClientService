@@ -23,7 +23,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Tests.Ifrastracture.Core
                 ).CreateClient("test")
             );
 
-            var clientCredentialOptions = new ClientCredentialOptions
+            var clientCredentialOptions = new ClientCredentialsOptions
             {
                 Address = "http://localhost/" + Guid.NewGuid(),
                 ClientId = "ClientId",
@@ -43,7 +43,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Tests.Ifrastracture.Core
                 IHttpClientFactoryMocks.Get(HttpStatusCode.OK).CreateClient("test")
             );
 
-            var clientCredentialOptions = new ClientCredentialOptions
+            var clientCredentialOptions = new ClientCredentialsOptions
             {
                 Address = "http://localhost/" + Guid.NewGuid(),
                 ClientId = "ClientId",
@@ -67,7 +67,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Tests.Ifrastracture.Core
                 ).CreateClient("test")
             );
 
-            Assert.AreEqual(typeof(ClientCredentialOptions), httpClient.HttpClientOptionsType);
+            Assert.AreEqual(typeof(ClientCredentialsOptions), httpClient.HttpClientOptionsType);
         }
     }
 }

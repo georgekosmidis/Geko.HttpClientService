@@ -51,7 +51,7 @@ Install the [IdentityServer4.Contrib.HttpClientService](https://www.nuget.org/pa
 Add the IdentityServer4 client credentials options to your appsettings.json
 
 ```json
-"ProtectedResourceClientCredentialsOptions": {
+"SomeClientCredentialsOptions": {
     "Address": "https://demo.identityserver.io/connect/token",
     "ClientId": "m2m",
     "ClientSecret": "secret",
@@ -67,21 +67,6 @@ Register the service In `StartUp.cs` in `ConfigureServices(IServiceCollection se
 
 ```csharp
 services.AddHttpClientService();
-```
-
-If you want to use the [Options pattern](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options), create a `ProtectedResourceClientCredentialsOptions` class with the client credential options or inherits from `DefaultClientCredentialOptions`:
-
-```csharp
-public class ProtectedResourceClientCredentialsOptions : DefaultClientCredentialOptions
-{
-}
-```
-
-and then use `.Configure<TOptions>(...)`:
-
-```csharp
-services.AddHttpClientService()
-        .Configure<ProtectedResourceClientCredentialsOptions>(Configuration.GetSection(nameof(ProtectedResourceClientCredentialsOptions)));
 ```
 
 ### You are done!
@@ -101,33 +86,13 @@ public class ProtectedResourceService {
   public async Task<IEnumerable<Customer>> GetCustomers(){
     var response = await _requestServiceFactory
       .CreateHttpClientService()
-      .SetIdentityServerOptions("ProtectedResourceClientCredentialsOptions")
+      .SetIdentityServerOptions("SomeClientCredentialsOptions")
       .GetAsync<IEnumerable<Customer>>("https://protected_resource_that_returns_customers_in_json");
   }
 }
 ```
 
-Or if you used the [Options pattern](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options) approach
-
-```csharp
-public class ProtectedResourceService {
-
-  private readonly IHttpClientServiceFactory _requestServiceFactory;
-  private readonly IOptions<ProtectedResourceClientCredentialsOptions> _identityServerOptions;
-
-  public ProtectedResourceService(IHttpClientServiceFactory requestServiceFactory, IOptions<ProtectedResourceClientCredentialsOptions> identityServerOptions)
-  {
-    _requestServiceFactory = requestServiceFactory;
-    _identityServerOptions = identityServerOptions;
-  }
-  public async Task<IEnumerable<Customer>> GetCustomers(){
-    var response = await _requestServiceFactory
-      .CreateHttpClientService()
-      .SetIdentityServerOptions(_identityServerOptions)
-      .GetAsync<IEnumerable<Customer>>("https://protected_resource_that_returns_customers_in_json");
-  }
-}
-```
+> The `.SetIdentityServerOptions("SomeClientCredentialsOptions")` might be simplest way of setting up an [Access Token Request](#how-to-setup-an-access-token-request), the [options pattern](#setidentityserveroptionsioptions) though is the most common one.
 
 ___
 
@@ -135,11 +100,11 @@ ___
 
 The library supports multiple ways for setting up the necessary options for retrieving an access token. Upon success of retrieving one, the result is cached until the token expires; that means that a new request to a protected resource does not necessarily means a new request for an access token.
 
-> Currently, the library supports ´ClientCredentialsTokenRequest´ and ´PasswordTokenRequest´.
+> Currently, the library supports `ClientCredentialsTokenRequest` and `PasswordTokenRequest`.
 
 ### .SetIdentityServerOptions(String)
 
-Setup IdentityServer options by defining the configuration section. The type of the options (´ClientCredentialsTokenRequest´ or ´PasswordTokenRequest´) will be determined based on the contents of this section:
+Setup IdentityServer options by defining the configuration section. The type of the options (`ClientCredentialsTokenRequest` or `PasswordTokenRequest`) will be determined based on the contents of this section:
 
 ```csharp
 //...
@@ -149,7 +114,7 @@ Setup IdentityServer options by defining the configuration section. The type of 
 
 ### .SetIdentityServerOptions&lt;TOptions&gt;(TOptions)
 
-Setup IdentityServer options by passing a ´ClientCredentialsOptions´ or ´PasswordOptions´ directly to the `SetIdentityServerOptions`:
+Setup IdentityServer options by passing a `ClientCredentialsOptions` or `PasswordOptions` directly to the `SetIdentityServerOptions`:
 
 ```csharp
 //...
@@ -267,7 +232,7 @@ Just as a sample:
 
 1. Expand the [IdentityServer4.Contrib.HttpClientService.CompleteSample](https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/tree/master/samples/IdentityServer4.Contrib.HttpClientService.CompleteSample) with more functionality.
 2. Support `JsonSerializerSettings` for `JsonConvert.DeserializeObject<TResponseBody>(apiResponse.BodyAsString)` in [HttpClientService]( https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/blob/86262f016173bafd2c9ec4fbe70ac9eb1406042a/src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs#L300).
-3. Support more than `ClientCredentialsOptions` and ´PasswordOptions´.
+3. Support more than `ClientCredentialsOptions` and `PasswordOptions`.
 4. Set options for changing the x-header name
 5. Add logging.
 

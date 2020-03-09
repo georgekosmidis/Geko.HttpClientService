@@ -16,11 +16,11 @@ items:
   type: Class
   source:
     remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/CoreHttpClient.cs
-      branch: master
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/CoreHttpClient.cs
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: CoreHttpClient
-    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/CoreHttpClient.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/CoreHttpClient.cs
     startLine: 19
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -31,6 +31,7 @@ items:
     content: 'public class CoreHttpClient : ICoreHttpClient'
     content.vb: >-
       Public Class CoreHttpClient
+
           Implements ICoreHttpClient
   inheritance:
   - System.Object
@@ -63,11 +64,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/CoreHttpClient.cs
-      branch: master
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/CoreHttpClient.cs
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: .ctor
-    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/CoreHttpClient.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/CoreHttpClient.cs
     startLine: 27
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -99,11 +100,11 @@ items:
   type: Method
   source:
     remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/CoreHttpClient.cs
-      branch: master
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/CoreHttpClient.cs
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SendAsync
-    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/CoreHttpClient.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/CoreHttpClient.cs
     startLine: 37
   assemblies:
   - IdentityServer4.Contrib.HttpClientService

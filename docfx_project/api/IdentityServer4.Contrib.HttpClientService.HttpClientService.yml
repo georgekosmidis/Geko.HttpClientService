@@ -12,10 +12,10 @@ items:
   - IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})
   - IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet(System.Collections.Generic.Dictionary{System.String,System.String})
   - IdentityServer4.Contrib.HttpClientService.HttpClientService.SendAsync``2(System.Uri,System.Net.Http.HttpMethod,``0)
-  - IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.Action{IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions})
   - IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.String)
   - IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(``0)
   - IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(Microsoft.Extensions.Options.IOptions{``0})
+  - IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(System.Action{``0})
   langs:
   - csharp
   - vb
@@ -26,7 +26,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: master
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HttpClientService
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
@@ -91,7 +91,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: master
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersAdd
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
@@ -133,7 +133,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: master
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersAdd
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
@@ -178,7 +178,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: master
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersSet
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
@@ -220,7 +220,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: master
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersSet
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
@@ -262,7 +262,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: master
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersClear
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
@@ -297,7 +297,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: master
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersRemove
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
@@ -322,53 +322,6 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(Microsoft.Extensions.Options.IOptions{``0})
-  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(Microsoft.Extensions.Options.IOptions{``0})
-  id: SetIdentityServerOptions``1(Microsoft.Extensions.Options.IOptions{``0})
-  parent: IdentityServer4.Contrib.HttpClientService.HttpClientService
-  langs:
-  - csharp
-  - vb
-  name: SetIdentityServerOptions<TIdentityServerOptions>(IOptions<TIdentityServerOptions>)
-  nameWithType: HttpClientService.SetIdentityServerOptions<TIdentityServerOptions>(IOptions<TIdentityServerOptions>)
-  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions<TIdentityServerOptions>(Microsoft.Extensions.Options.IOptions<TIdentityServerOptions>)
-  type: Method
-  source:
-    remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: master
-      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
-    id: SetIdentityServerOptions
-    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 157
-  assemblies:
-  - IdentityServer4.Contrib.HttpClientService
-  namespace: IdentityServer4.Contrib.HttpClientService
-  summary: "\nSets the IdentityServer4 options for retrieving an access token using client credentials.\n"
-  example: []
-  syntax:
-    content: >-
-      public HttpClientService SetIdentityServerOptions<TIdentityServerOptions>(IOptions<TIdentityServerOptions> options)
-          where TIdentityServerOptions : DefaultClientCredentialOptions, new()
-    parameters:
-    - id: options
-      type: Microsoft.Extensions.Options.IOptions{{TIdentityServerOptions}}
-      description: The token service options.
-    typeParameters:
-    - id: TIdentityServerOptions
-      description: The type of the <code data-dev-comment-type="paramref" class="paramref">options</code>.
-    return:
-      type: IdentityServer4.Contrib.HttpClientService.HttpClientService
-      description: Returns the current instance of <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
-    content.vb: Public Function SetIdentityServerOptions(Of TIdentityServerOptions As {DefaultClientCredentialOptions, New})(options As IOptions(Of TIdentityServerOptions)) As HttpClientService
-  overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions*
-  nameWithType.vb: HttpClientService.SetIdentityServerOptions(Of TIdentityServerOptions)(IOptions(Of TIdentityServerOptions))
-  modifiers.csharp:
-  - public
-  modifiers.vb:
-  - Public
-  fullName.vb: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(Of TIdentityServerOptions)(Microsoft.Extensions.Options.IOptions(Of TIdentityServerOptions))
-  name.vb: SetIdentityServerOptions(Of TIdentityServerOptions)(IOptions(Of TIdentityServerOptions))
 - uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.String)
   commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.String)
   id: SetIdentityServerOptions(System.String)
@@ -383,11 +336,11 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: master
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 173
+    startLine: 160
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -398,7 +351,7 @@ items:
     parameters:
     - id: configurationSection
       type: System.String
-      description: "\nThe name of the configuration section that contains the information for requesting an access token. \nSee <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions\" data-throw-if-not-resolved=\"false\"></xref> for the property names.\n"
+      description: "\nThe name of the configuration section that contains the information for requesting an access token. \nSee <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ClientCredentialsOptions\" data-throw-if-not-resolved=\"false\"></xref> for the property names.\n"
     return:
       type: IdentityServer4.Contrib.HttpClientService.HttpClientService
       description: Returns the current instance of <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
@@ -408,48 +361,101 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.Action{IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions})
-  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.Action{IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions})
-  id: SetIdentityServerOptions(System.Action{IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions})
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(Microsoft.Extensions.Options.IOptions{``0})
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(Microsoft.Extensions.Options.IOptions{``0})
+  id: SetIdentityServerOptions``1(Microsoft.Extensions.Options.IOptions{``0})
   parent: IdentityServer4.Contrib.HttpClientService.HttpClientService
   langs:
   - csharp
   - vb
-  name: SetIdentityServerOptions(Action<DefaultClientCredentialOptions>)
-  nameWithType: HttpClientService.SetIdentityServerOptions(Action<DefaultClientCredentialOptions>)
-  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.Action<IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions>)
+  name: SetIdentityServerOptions<TOptions>(IOptions<TOptions>)
+  nameWithType: HttpClientService.SetIdentityServerOptions<TOptions>(IOptions<TOptions>)
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions<TOptions>(Microsoft.Extensions.Options.IOptions<TOptions>)
   type: Method
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: master
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 186
+    startLine: 183
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService
+  summary: "\nSets the IdentityServer4 options for retrieving an access token using client credentials.\n"
+  example: []
+  syntax:
+    content: >-
+      public HttpClientService SetIdentityServerOptions<TOptions>(IOptions<TOptions> options)
+
+          where TOptions : class, IIdentityServerOptions, new()
+    parameters:
+    - id: options
+      type: Microsoft.Extensions.Options.IOptions{{TOptions}}
+      description: The token service options.
+    typeParameters:
+    - id: TOptions
+      description: The type of the <code data-dev-comment-type="paramref" class="paramref">options</code>.
+    return:
+      type: IdentityServer4.Contrib.HttpClientService.HttpClientService
+      description: Returns the current instance of <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
+    content.vb: Public Function SetIdentityServerOptions(Of TOptions As {Class, IIdentityServerOptions, New})(options As IOptions(Of TOptions)) As HttpClientService
+  overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions*
+  nameWithType.vb: HttpClientService.SetIdentityServerOptions(Of TOptions)(IOptions(Of TOptions))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(Of TOptions)(Microsoft.Extensions.Options.IOptions(Of TOptions))
+  name.vb: SetIdentityServerOptions(Of TOptions)(IOptions(Of TOptions))
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(System.Action{``0})
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(System.Action{``0})
+  id: SetIdentityServerOptions``1(System.Action{``0})
+  parent: IdentityServer4.Contrib.HttpClientService.HttpClientService
+  langs:
+  - csharp
+  - vb
+  name: SetIdentityServerOptions<TOptions>(Action<TOptions>)
+  nameWithType: HttpClientService.SetIdentityServerOptions<TOptions>(Action<TOptions>)
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions<TOptions>(System.Action<TOptions>)
+  type: Method
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+      branch: feature/PasswordTokenRequest
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: SetIdentityServerOptions
+    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+    startLine: 200
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
   summary: "\nSets the IdentityServer4 options for retrieving an access token using client credentials by using a delegate.\n"
   example: []
   syntax:
-    content: public HttpClientService SetIdentityServerOptions(Action<DefaultClientCredentialOptions> optionsDelegate)
+    content: >-
+      public HttpClientService SetIdentityServerOptions<TOptions>(Action<TOptions> optionsDelegate)
+
+          where TOptions : class, IIdentityServerOptions
     parameters:
     - id: optionsDelegate
-      type: System.Action{IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions}
+      type: System.Action{{TOptions}}
       description: The <xref href="System.Action%601" data-throw-if-not-resolved="false"></xref> delegate.
+    typeParameters:
+    - id: TOptions
     return:
       type: IdentityServer4.Contrib.HttpClientService.HttpClientService
       description: Returns the current instance of <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
-    content.vb: Public Function SetIdentityServerOptions(optionsDelegate As Action(Of DefaultClientCredentialOptions)) As HttpClientService
+    content.vb: Public Function SetIdentityServerOptions(Of TOptions As {Class, IIdentityServerOptions})(optionsDelegate As Action(Of TOptions)) As HttpClientService
   overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions*
-  nameWithType.vb: HttpClientService.SetIdentityServerOptions(Action(Of DefaultClientCredentialOptions))
+  nameWithType.vb: HttpClientService.SetIdentityServerOptions(Of TOptions)(Action(Of TOptions))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.Action(Of IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions))
-  name.vb: SetIdentityServerOptions(Action(Of DefaultClientCredentialOptions))
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(Of TOptions)(System.Action(Of TOptions))
+  name.vb: SetIdentityServerOptions(Of TOptions)(Action(Of TOptions))
 - uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(``0)
   commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(``0)
   id: SetIdentityServerOptions``1(``0)
@@ -457,45 +463,45 @@ items:
   langs:
   - csharp
   - vb
-  name: SetIdentityServerOptions<TIdentityServerOptions>(TIdentityServerOptions)
-  nameWithType: HttpClientService.SetIdentityServerOptions<TIdentityServerOptions>(TIdentityServerOptions)
-  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions<TIdentityServerOptions>(TIdentityServerOptions)
+  name: SetIdentityServerOptions<TOptions>(TOptions)
+  nameWithType: HttpClientService.SetIdentityServerOptions<TOptions>(TOptions)
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions<TOptions>(TOptions)
   type: Method
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: master
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 198
+    startLine: 211
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
-  summary: "\nSets the IdentityServer4 options by passing an object that inherits from <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  summary: "\nSets the IdentityServer4 options by passing an object that inherits from <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ClientCredentialsOptions\" data-throw-if-not-resolved=\"false\"></xref>\n"
   example: []
   syntax:
     content: >-
-      public HttpClientService SetIdentityServerOptions<TIdentityServerOptions>(TIdentityServerOptions options)
-          where TIdentityServerOptions : DefaultClientCredentialOptions, new()
+      public HttpClientService SetIdentityServerOptions<TOptions>(TOptions options)
+
+          where TOptions : class, IIdentityServerOptions
     parameters:
     - id: options
-      type: '{TIdentityServerOptions}'
-      description: The <xref href="IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions" data-throw-if-not-resolved="false"></xref> that contains the options.
+      type: '{TOptions}'
+      description: The <xref href="IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions" data-throw-if-not-resolved="false"></xref> that contains the options.
     typeParameters:
-    - id: TIdentityServerOptions
-      description: The type of the <code data-dev-comment-type="paramref" class="paramref">options</code>.
+    - id: TOptions
     return:
       type: IdentityServer4.Contrib.HttpClientService.HttpClientService
-    content.vb: Public Function SetIdentityServerOptions(Of TIdentityServerOptions As {DefaultClientCredentialOptions, New})(options As TIdentityServerOptions) As HttpClientService
+    content.vb: Public Function SetIdentityServerOptions(Of TOptions As {Class, IIdentityServerOptions})(options As TOptions) As HttpClientService
   overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions*
-  nameWithType.vb: HttpClientService.SetIdentityServerOptions(Of TIdentityServerOptions)(TIdentityServerOptions)
+  nameWithType.vb: HttpClientService.SetIdentityServerOptions(Of TOptions)(TOptions)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(Of TIdentityServerOptions)(TIdentityServerOptions)
-  name.vb: SetIdentityServerOptions(Of TIdentityServerOptions)(TIdentityServerOptions)
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(Of TOptions)(TOptions)
+  name.vb: SetIdentityServerOptions(Of TOptions)(TOptions)
 - uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SendAsync``2(System.Uri,System.Net.Http.HttpMethod,``0)
   commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SendAsync``2(System.Uri,System.Net.Http.HttpMethod,``0)
   id: SendAsync``2(System.Uri,System.Net.Http.HttpMethod,``0)
@@ -510,15 +516,15 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: master
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SendAsync
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 283
+    startLine: 302
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
-  summary: "\nCreates and sends a request to the <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestUri</code> using the HTTP verb from <code data-dev-comment-type=\"paramref\" class=\"paramref\">httpMethod</code> and the request body from <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestBody</code>. \nIf <xref href=\"IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions%60%601(Microsoft.Extensions.Options.IOptions%7b%60%600%7d)\" data-throw-if-not-resolved=\"false\"></xref> is called before this method, \nthen a valid access token will be fetched by the <xref href=\"IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService\" data-throw-if-not-resolved=\"false\"></xref> and attached on this request. \n"
+  summary: "\nCreates and sends a request to the <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestUri</code> using the HTTP verb \nfrom <code data-dev-comment-type=\"paramref\" class=\"paramref\">httpMethod</code> and the request body from <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestBody</code>. \nIf IdentityServerOptions are set (using the <xref href=\"IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions%60%601(%60%600)\" data-throw-if-not-resolved=\"false\"></xref> or one of the overloads), \nthen a valid access token will be fetched by the <xref href=\"IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService\" data-throw-if-not-resolved=\"false\"></xref> and attached to this request. \n"
   example: []
   syntax:
     content: public Task<ResponseObject<TResponseBody>> SendAsync<TRequestBody, TResponseBody>(Uri requestUri, HttpMethod httpMethod, TRequestBody requestBody)
@@ -3673,21 +3679,26 @@ references:
   name: HeadersRemove
   nameWithType: HttpClientService.HeadersRemove
   fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersRemove
+- uid: IdentityServer4.Contrib.HttpClientService.Models.ClientCredentialsOptions
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Models.ClientCredentialsOptions
+  name: ClientCredentialsOptions
+  nameWithType: ClientCredentialsOptions
+  fullName: IdentityServer4.Contrib.HttpClientService.Models.ClientCredentialsOptions
 - uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions*
   commentId: Overload:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions
   name: SetIdentityServerOptions
   nameWithType: HttpClientService.SetIdentityServerOptions
   fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions
-- uid: Microsoft.Extensions.Options.IOptions{{TIdentityServerOptions}}
+- uid: Microsoft.Extensions.Options.IOptions{{TOptions}}
   commentId: T:Microsoft.Extensions.Options.IOptions{``0}
   parent: Microsoft.Extensions.Options
   definition: Microsoft.Extensions.Options.IOptions`1
-  name: IOptions<TIdentityServerOptions>
-  nameWithType: IOptions<TIdentityServerOptions>
-  fullName: Microsoft.Extensions.Options.IOptions<TIdentityServerOptions>
-  nameWithType.vb: IOptions(Of TIdentityServerOptions)
-  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TIdentityServerOptions)
-  name.vb: IOptions(Of TIdentityServerOptions)
+  name: IOptions<TOptions>
+  nameWithType: IOptions<TOptions>
+  fullName: Microsoft.Extensions.Options.IOptions<TOptions>
+  nameWithType.vb: IOptions(Of TOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TOptions)
+  name.vb: IOptions(Of TOptions)
   spec.csharp:
   - uid: Microsoft.Extensions.Options.IOptions`1
     name: IOptions
@@ -3697,9 +3708,9 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - name: TIdentityServerOptions
-    nameWithType: TIdentityServerOptions
-    fullName: TIdentityServerOptions
+  - name: TOptions
+    nameWithType: TOptions
+    fullName: TOptions
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -3712,9 +3723,9 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: TIdentityServerOptions
-    nameWithType: TIdentityServerOptions
-    fullName: TIdentityServerOptions
+  - name: TOptions
+    nameWithType: TOptions
+    fullName: TOptions
   - name: )
     nameWithType: )
     fullName: )
@@ -3763,17 +3774,6 @@ references:
   name: Microsoft.Extensions.Options
   nameWithType: Microsoft.Extensions.Options
   fullName: Microsoft.Extensions.Options
-- uid: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
-  commentId: T:IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
-  parent: IdentityServer4.Contrib.HttpClientService.Models
-  name: DefaultClientCredentialOptions
-  nameWithType: DefaultClientCredentialOptions
-  fullName: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
-- uid: IdentityServer4.Contrib.HttpClientService.Models
-  commentId: N:IdentityServer4.Contrib.HttpClientService.Models
-  name: IdentityServer4.Contrib.HttpClientService.Models
-  nameWithType: IdentityServer4.Contrib.HttpClientService.Models
-  fullName: IdentityServer4.Contrib.HttpClientService.Models
 - uid: System.Action`1
   commentId: T:System.Action`1
   isExternal: true
@@ -3813,16 +3813,16 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Action{IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions}
-  commentId: T:System.Action{IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions}
+- uid: System.Action{{TOptions}}
+  commentId: T:System.Action{``0}
   parent: System
   definition: System.Action`1
-  name: Action<DefaultClientCredentialOptions>
-  nameWithType: Action<DefaultClientCredentialOptions>
-  fullName: System.Action<IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions>
-  nameWithType.vb: Action(Of DefaultClientCredentialOptions)
-  fullName.vb: System.Action(Of IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions)
-  name.vb: Action(Of DefaultClientCredentialOptions)
+  name: Action<TOptions>
+  nameWithType: Action<TOptions>
+  fullName: System.Action<TOptions>
+  nameWithType.vb: Action(Of TOptions)
+  fullName.vb: System.Action(Of TOptions)
+  name.vb: Action(Of TOptions)
   spec.csharp:
   - uid: System.Action`1
     name: Action
@@ -3832,10 +3832,9 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
-    name: DefaultClientCredentialOptions
-    nameWithType: DefaultClientCredentialOptions
-    fullName: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
+  - name: TOptions
+    nameWithType: TOptions
+    fullName: TOptions
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -3848,32 +3847,43 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
-    name: DefaultClientCredentialOptions
-    nameWithType: DefaultClientCredentialOptions
-    fullName: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
+  - name: TOptions
+    nameWithType: TOptions
+    fullName: TOptions
   - name: )
     nameWithType: )
     fullName: )
-- uid: '{TIdentityServerOptions}'
-  commentId: '!:TIdentityServerOptions'
-  definition: TIdentityServerOptions
-  name: TIdentityServerOptions
-  nameWithType: TIdentityServerOptions
-  fullName: TIdentityServerOptions
-- uid: TIdentityServerOptions
-  name: TIdentityServerOptions
-  nameWithType: TIdentityServerOptions
-  fullName: TIdentityServerOptions
-- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(Microsoft.Extensions.Options.IOptions{``0})
-  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(Microsoft.Extensions.Options.IOptions{``0})
+- uid: IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions
+  parent: IdentityServer4.Contrib.HttpClientService.Models
+  name: IIdentityServerOptions
+  nameWithType: IIdentityServerOptions
+  fullName: IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions
+- uid: '{TOptions}'
+  commentId: '!:TOptions'
+  definition: TOptions
+  name: TOptions
+  nameWithType: TOptions
+  fullName: TOptions
+- uid: IdentityServer4.Contrib.HttpClientService.Models
+  commentId: N:IdentityServer4.Contrib.HttpClientService.Models
+  name: IdentityServer4.Contrib.HttpClientService.Models
+  nameWithType: IdentityServer4.Contrib.HttpClientService.Models
+  fullName: IdentityServer4.Contrib.HttpClientService.Models
+- uid: TOptions
+  commentId: '!:TOptions'
+  name: TOptions
+  nameWithType: TOptions
+  fullName: TOptions
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(``0)
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(``0)
   isExternal: true
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
-  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService
   parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
-  name: ITokenResponseService
-  nameWithType: ITokenResponseService
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+  name: IIdentityServerService
+  nameWithType: IIdentityServerService
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService
 - uid: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsType
   commentId: P:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1.BodyAsType
   isExternal: true

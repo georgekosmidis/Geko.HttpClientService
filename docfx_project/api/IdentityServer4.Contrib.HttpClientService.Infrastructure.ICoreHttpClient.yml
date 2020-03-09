@@ -15,11 +15,11 @@ items:
   type: Interface
   source:
     remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/ICoreHttpClient.cs
-      branch: master
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/Interfaces/ICoreHttpClient.cs
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: ICoreHttpClient
-    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/ICoreHttpClient.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/Interfaces/ICoreHttpClient.cs
     startLine: 8
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -48,11 +48,11 @@ items:
   type: Method
   source:
     remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/ICoreHttpClient.cs
-      branch: master
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/Interfaces/ICoreHttpClient.cs
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SendAsync
-    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/ICoreHttpClient.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/Interfaces/ICoreHttpClient.cs
     startLine: 15
   assemblies:
   - IdentityServer4.Contrib.HttpClientService

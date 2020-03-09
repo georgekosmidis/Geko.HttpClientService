@@ -1,11 +1,13 @@
 - name: Home
   href: index.md
+- name: Github Repo
+  href: https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService
 - name: Getting Started
   href: getting_started.md
+- name: More Details
+  href: more_details.md  
 - name: Contribution
   href: contribution.md  
 - name: Api Documentation
   href: api/
   homepage: api/index.md
-- name: Github Repo
-  href: https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService

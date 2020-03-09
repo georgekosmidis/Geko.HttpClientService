@@ -4,19 +4,21 @@ items:
   commentId: N:IdentityServer4.Contrib.HttpClientService.Infrastructure
   id: IdentityServer4.Contrib.HttpClientService.Infrastructure
   children:
-  - IdentityServer4.Contrib.HttpClientService.Infrastructure.AccessTokenOptions
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.ClientCredentialsHttpClient
   - IdentityServer4.Contrib.HttpClientService.Infrastructure.CoreHttpClient
   - IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpClientServiceHeaders
   - IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory
   - IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop
   - IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient
-  - IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerHttpClient
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerHttpClientSelector
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService
   - IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
   - IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService
   - IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager
-  - IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.PasswordHttpClient
   - IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseCacheManager
-  - IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
   - IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent`1
   langs:
   - csharp
@@ -28,29 +30,6 @@ items:
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
 references:
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient
-  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient
-  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
-  name: ICoreHttpClient
-  nameWithType: ICoreHttpClient
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
-  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
-  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
-  name: IHttpRequestMessageFactory
-  nameWithType: IHttpRequestMessageFactory
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient
-  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient
-  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
-  name: IIdentityServerHttpClient
-  nameWithType: IIdentityServerHttpClient
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.AccessTokenOptions
-  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.AccessTokenOptions
-  name: AccessTokenOptions
-  nameWithType: AccessTokenOptions
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.AccessTokenOptions
 - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.CoreHttpClient
   commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.CoreHttpClient
   name: CoreHttpClient
@@ -71,21 +50,18 @@ references:
   name: HttpRequestMessageFactoryDesktop
   nameWithType: HttpRequestMessageFactoryDesktop
   fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerHttpClient
-  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerHttpClient
-  name: IdentityServerHttpClient
-  nameWithType: IdentityServerHttpClient
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerHttpClient
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseCacheManager
-  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseCacheManager
-  name: TokenResponseCacheManager
-  nameWithType: TokenResponseCacheManager
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseCacheManager
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
-  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
-  name: TokenResponseService
-  nameWithType: TokenResponseService
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  name: ICoreHttpClient
+  nameWithType: ICoreHttpClient
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  name: IHttpRequestMessageFactory
+  nameWithType: IHttpRequestMessageFactory
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
 - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent`1
   commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent`1
   name: TypeContent<TRequestBody>
@@ -122,18 +98,55 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ClientCredentialsHttpClient
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ClientCredentialsHttpClient
+  name: ClientCredentialsHttpClient
+  nameWithType: ClientCredentialsHttpClient
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ClientCredentialsHttpClient
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.PasswordHttpClient
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.PasswordHttpClient
+  name: PasswordHttpClient
+  nameWithType: PasswordHttpClient
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.PasswordHttpClient
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerHttpClientSelector
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerHttpClientSelector
+  name: IdentityServerHttpClientSelector
+  nameWithType: IdentityServerHttpClientSelector
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerHttpClientSelector
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService
+  name: IdentityServerService
+  nameWithType: IdentityServerService
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  name: IIdentityServerHttpClient
+  nameWithType: IIdentityServerHttpClient
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  name: IIdentityServerHttpClientSelector
+  nameWithType: IIdentityServerHttpClientSelector
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
+  name: IIdentityServerService
+  nameWithType: IIdentityServerService
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService
 - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager
   commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager
   parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
   name: ITokenResponseCacheManager
   nameWithType: ITokenResponseCacheManager
   fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
-  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
-  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
-  name: ITokenResponseService
-  nameWithType: ITokenResponseService
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseCacheManager
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseCacheManager
+  name: TokenResponseCacheManager
+  nameWithType: TokenResponseCacheManager
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseCacheManager
 - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure
   commentId: N:IdentityServer4.Contrib.HttpClientService.Infrastructure
   name: IdentityServer4.Contrib.HttpClientService.Infrastructure

@@ -17,11 +17,11 @@ items:
   type: Class
   source:
     remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/TypeContent.cs
-      branch: master
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/TypeContent.cs
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: TypeContent
-    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/TypeContent.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/TypeContent.cs
     startLine: 14
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -34,7 +34,9 @@ items:
     - id: TRequestBody
     content.vb: >-
       Public Class TypeContent(Of TRequestBody)
+
           Inherits ByteArrayContent
+
           Implements IDisposable
   inheritance:
   - System.Object
@@ -85,11 +87,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/TypeContent.cs
-      branch: master
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/TypeContent.cs
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: .ctor
-    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/TypeContent.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/TypeContent.cs
     startLine: 24
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -123,11 +125,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/TypeContent.cs
-      branch: master
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/TypeContent.cs
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: .ctor
-    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/TypeContent.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/TypeContent.cs
     startLine: 35
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -164,11 +166,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/TypeContent.cs
-      branch: master
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/TypeContent.cs
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: .ctor
-    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/TypeContent.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/TypeContent.cs
     startLine: 46
   assemblies:
   - IdentityServer4.Contrib.HttpClientService

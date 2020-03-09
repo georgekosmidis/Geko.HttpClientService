@@ -77,8 +77,8 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
-      <h4><a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.AccessTokenOptions.html">AccessTokenOptions</a></h4>
-      <section><p>An object that handles the IdentityServer4 client credentials registration</p>
+      <h4><a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.ClientCredentialsHttpClient.html">ClientCredentialsHttpClient</a></h4>
+      <section><p>The implementation of an access token service for client credentials based on IdentityServer4.</p>
 </section>
       <h4><a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.CoreHttpClient.html">CoreHttpClient</a></h4>
       <section><p>Implementation for a typed <span class="xref">System.Net.Http.HttpClient</span>.</p>
@@ -92,14 +92,17 @@
       <h4><a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop.html">HttpRequestMessageFactoryDesktop</a></h4>
       <section><p>A <span class="xref">System.Net.Http.HttpRequestMessage</span> factory.</p>
 </section>
-      <h4><a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerHttpClient.html">IdentityServerHttpClient</a></h4>
+      <h4><a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerHttpClientSelector.html">IdentityServerHttpClientSelector</a></h4>
+      <section><p>Selects the correct <a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient.html">IIdentityServerHttpClient</a> based on <a class="xref" href="IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions.html">IIdentityServerOptions</a>.</p>
+</section>
+      <h4><a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService.html">IdentityServerService</a></h4>
+      <section><p>The implementation of an access token service for client credentials based on IdentityServer4.</p>
+</section>
+      <h4><a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.PasswordHttpClient.html">PasswordHttpClient</a></h4>
       <section><p>The implementation of an access token service for client credentials based on IdentityServer4.</p>
 </section>
       <h4><a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseCacheManager.html">TokenResponseCacheManager</a></h4>
       <section><p>Cache manager for the IdentityServer4 <span class="xref">IdentityModel.Client.TokenResponse</span>.</p>
-</section>
-      <h4><a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.html">TokenResponseService</a></h4>
-      <section><p>The implementation of an access token service for client credentials based on IdentityServer4.</p>
 </section>
       <h4><a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent-1.html">TypeContent&lt;TRequestBody&gt;</a></h4>
       <section><p>TypeContent is following the implementation of <span class="xref">System.Net.Http.StringContent</span>.
@@ -116,11 +119,15 @@ Copied from from <a href="https://github.com/microsoft/referencesource/blob/mast
       <h4><a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient.html">IIdentityServerHttpClient</a></h4>
       <section><p>Abstraction for a typed <span class="xref">System.Net.Http.HttpClient</span> that will execute the request to the IdentityServer4.</p>
 </section>
+      <h4><a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector.html">IIdentityServerHttpClientSelector</a></h4>
+      <section><p>Abstraction for an <a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient.html">IIdentityServerHttpClient</a> selector.
+The correct client is selected based on <a class="xref" href="IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions.html">IIdentityServerOptions</a>.</p>
+</section>
+      <h4><a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService.html">IIdentityServerService</a></h4>
+      <section><p>Abstraction for an access token service.</p>
+</section>
       <h4><a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager.html">ITokenResponseCacheManager</a></h4>
       <section><p>Interface for the cache manager for the access token service.</p>
-</section>
-      <h4><a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.html">ITokenResponseService</a></h4>
-      <section><p>Abstraction for an access token service.</p>
 </section>
 </article>
           </div>

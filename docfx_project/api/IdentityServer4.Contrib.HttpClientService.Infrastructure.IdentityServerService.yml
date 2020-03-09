@@ -1,26 +1,26 @@
 ### YamlMime:ManagedReference
 items:
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
-  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
-  id: TokenResponseService
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService
+  id: IdentityServerService
   parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
   children:
-  - IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.#ctor(IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager)
-  - IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.GetTokenResponseAsync``1(``0)
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService.#ctor(IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager)
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService.GetTokenResponseAsync(IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions)
   langs:
   - csharp
   - vb
-  name: TokenResponseService
-  nameWithType: TokenResponseService
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
+  name: IdentityServerService
+  nameWithType: IdentityServerService
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService
   type: Class
   source:
     remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/TokenResponseService.cs
-      branch: master
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IdentityServer/IdentityServerService.cs
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
-    id: TokenResponseService
-    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/TokenResponseService.cs
+    id: IdentityServerService
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IdentityServer/IdentityServerService.cs
     startLine: 15
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -28,14 +28,15 @@ items:
   summary: "\nThe implementation of an access token service for client credentials based on IdentityServer4. \n"
   example: []
   syntax:
-    content: 'public class TokenResponseService : ITokenResponseService'
+    content: 'public class IdentityServerService : IIdentityServerService'
     content.vb: >-
-      Public Class TokenResponseService
-          Implements ITokenResponseService
+      Public Class IdentityServerService
+
+          Implements IIdentityServerService
   inheritance:
   - System.Object
   implements:
-  - IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService
   inheritedMembers:
   - System.Object.Equals(System.Object)
   - System.Object.Equals(System.Object,System.Object)
@@ -50,94 +51,86 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.#ctor(IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager)
-  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.#ctor(IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager)
-  id: '#ctor(IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager)'
-  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService.#ctor(IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager)
+  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService.#ctor(IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager)
+  id: '#ctor(IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager)'
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService
   langs:
   - csharp
   - vb
-  name: TokenResponseService(IIdentityServerHttpClient, ITokenResponseCacheManager)
-  nameWithType: TokenResponseService.TokenResponseService(IIdentityServerHttpClient, ITokenResponseCacheManager)
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.TokenResponseService(IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient, IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager)
+  name: IdentityServerService(IIdentityServerHttpClientSelector, ITokenResponseCacheManager)
+  nameWithType: IdentityServerService.IdentityServerService(IIdentityServerHttpClientSelector, ITokenResponseCacheManager)
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService.IdentityServerService(IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector, IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager)
   type: Constructor
   source:
     remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/TokenResponseService.cs
-      branch: master
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IdentityServer/IdentityServerService.cs
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: .ctor
-    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/TokenResponseService.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IdentityServer/IdentityServerService.cs
     startLine: 25
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService.Infrastructure
-  summary: "\nConstructor of the <xref href=\"IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  summary: "\nConstructor of the <xref href=\"IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
-    content: public TokenResponseService(IIdentityServerHttpClient identityServerHttpClient, ITokenResponseCacheManager cache)
+    content: public IdentityServerService(IIdentityServerHttpClientSelector identityServerHttpClientSelector, ITokenResponseCacheManager cache)
     parameters:
-    - id: identityServerHttpClient
-      type: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient
-      description: A typed <xref href="System.Net.Http.HttpClient" data-throw-if-not-resolved="false"></xref> for the token service.
+    - id: identityServerHttpClientSelector
+      type: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector
+      description: An Identity Server HTTP client selected that will fetch the correct HTTP client.
     - id: cache
       type: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager
       description: A cache engine imlementation, to cache the token response.
-    content.vb: Public Sub New(identityServerHttpClient As IIdentityServerHttpClient, cache As ITokenResponseCacheManager)
-  overload: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.#ctor*
+    content.vb: Public Sub New(identityServerHttpClientSelector As IIdentityServerHttpClientSelector, cache As ITokenResponseCacheManager)
+  overload: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.GetTokenResponseAsync``1(``0)
-  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.GetTokenResponseAsync``1(``0)
-  id: GetTokenResponseAsync``1(``0)
-  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService.GetTokenResponseAsync(IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions)
+  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService.GetTokenResponseAsync(IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions)
+  id: GetTokenResponseAsync(IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions)
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService
   langs:
   - csharp
   - vb
-  name: GetTokenResponseAsync<TTokenServiceOptions>(TTokenServiceOptions)
-  nameWithType: TokenResponseService.GetTokenResponseAsync<TTokenServiceOptions>(TTokenServiceOptions)
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.GetTokenResponseAsync<TTokenServiceOptions>(TTokenServiceOptions)
+  name: GetTokenResponseAsync(IIdentityServerOptions)
+  nameWithType: IdentityServerService.GetTokenResponseAsync(IIdentityServerOptions)
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService.GetTokenResponseAsync(IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions)
   type: Method
   source:
     remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/TokenResponseService.cs
-      branch: master
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IdentityServer/IdentityServerService.cs
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: GetTokenResponseAsync
-    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/TokenResponseService.cs
-    startLine: 37
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IdentityServer/IdentityServerService.cs
+    startLine: 36
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService.Infrastructure
   summary: "\nRetrieves either a new access token using client credentials or the last valid from the caching engine.\n"
   example: []
   syntax:
-    content: >-
-      public Task<TokenResponse> GetTokenResponseAsync<TTokenServiceOptions>(TTokenServiceOptions options)
-          where TTokenServiceOptions : DefaultClientCredentialOptions, new()
+    content: public Task<TokenResponse> GetTokenResponseAsync(IIdentityServerOptions options)
     parameters:
     - id: options
-      type: '{TTokenServiceOptions}'
-      description: The token service options
-    typeParameters:
-    - id: TTokenServiceOptions
-      description: A type that inherits from the <xref href="IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions" data-throw-if-not-resolved="false"></xref> onject
+      type: IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions
+      description: The token service options.
     return:
       type: System.Threading.Tasks.Task{IdentityModel.Client.TokenResponse}
       description: A <xref href="IdentityModel.Client.TokenResponse" data-throw-if-not-resolved="false"></xref> instance.
-    content.vb: Public Function GetTokenResponseAsync(Of TTokenServiceOptions As {DefaultClientCredentialOptions, New})(options As TTokenServiceOptions) As Task(Of TokenResponse)
-  overload: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.GetTokenResponseAsync*
+    content.vb: Public Function GetTokenResponseAsync(options As IIdentityServerOptions) As Task(Of TokenResponse)
+  overload: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService.GetTokenResponseAsync*
   implements:
-  - IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync``1({TTokenServiceOptions})
-  nameWithType.vb: TokenResponseService.GetTokenResponseAsync(Of TTokenServiceOptions)(TTokenServiceOptions)
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService.GetTokenResponseAsync(IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.GetTokenResponseAsync(Of TTokenServiceOptions)(TTokenServiceOptions)
-  name.vb: GetTokenResponseAsync(Of TTokenServiceOptions)(TTokenServiceOptions)
 references:
 - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure
   commentId: N:IdentityServer4.Contrib.HttpClientService.Infrastructure
@@ -151,12 +144,12 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
-  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService
   parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
-  name: ITokenResponseService
-  nameWithType: ITokenResponseService
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+  name: IIdentityServerService
+  nameWithType: IIdentityServerService
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService
 - uid: System.Object.Equals(System.Object)
   commentId: M:System.Object.Equals(System.Object)
   parent: System.Object
@@ -442,99 +435,78 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
-  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
-  name: TokenResponseService
-  nameWithType: TokenResponseService
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
-- uid: System.Net.Http.HttpClient
-  commentId: T:System.Net.Http.HttpClient
-  parent: System.Net.Http
-  isExternal: true
-  name: HttpClient
-  nameWithType: HttpClient
-  fullName: System.Net.Http.HttpClient
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.#ctor*
-  commentId: Overload:IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.#ctor
-  name: TokenResponseService
-  nameWithType: TokenResponseService.TokenResponseService
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.TokenResponseService
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient
-  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService
+  name: IdentityServerService
+  nameWithType: IdentityServerService
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService.#ctor*
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService.#ctor
+  name: IdentityServerService
+  nameWithType: IdentityServerService.IdentityServerService
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService.IdentityServerService
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector
   parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
-  name: IIdentityServerHttpClient
-  nameWithType: IIdentityServerHttpClient
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient
+  name: IIdentityServerHttpClientSelector
+  nameWithType: IIdentityServerHttpClientSelector
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector
 - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager
   commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager
   parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
   name: ITokenResponseCacheManager
   nameWithType: ITokenResponseCacheManager
   fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager
-- uid: System.Net.Http
-  commentId: N:System.Net.Http
-  isExternal: true
-  name: System.Net.Http
-  nameWithType: System.Net.Http
-  fullName: System.Net.Http
-- uid: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
-  commentId: T:IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
-  parent: IdentityServer4.Contrib.HttpClientService.Models
-  name: DefaultClientCredentialOptions
-  nameWithType: DefaultClientCredentialOptions
-  fullName: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
 - uid: IdentityModel.Client.TokenResponse
   commentId: T:IdentityModel.Client.TokenResponse
   isExternal: true
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.GetTokenResponseAsync*
-  commentId: Overload:IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.GetTokenResponseAsync
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService.GetTokenResponseAsync*
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService.GetTokenResponseAsync
   name: GetTokenResponseAsync
-  nameWithType: TokenResponseService.GetTokenResponseAsync
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService.GetTokenResponseAsync
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync``1({TTokenServiceOptions})
-  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync``1(``0)
-  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
-  definition: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync``1(``0)
-  name: GetTokenResponseAsync<TTokenServiceOptions>(TTokenServiceOptions)
-  nameWithType: ITokenResponseService.GetTokenResponseAsync<TTokenServiceOptions>(TTokenServiceOptions)
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync<TTokenServiceOptions>(TTokenServiceOptions)
-  nameWithType.vb: ITokenResponseService.GetTokenResponseAsync(Of TTokenServiceOptions)(TTokenServiceOptions)
-  fullName.vb: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync(Of TTokenServiceOptions)(TTokenServiceOptions)
-  name.vb: GetTokenResponseAsync(Of TTokenServiceOptions)(TTokenServiceOptions)
+  nameWithType: IdentityServerService.GetTokenResponseAsync
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService.GetTokenResponseAsync
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService.GetTokenResponseAsync(IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions)
+  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService.GetTokenResponseAsync(IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions)
+  parent: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService
+  name: GetTokenResponseAsync(IIdentityServerOptions)
+  nameWithType: IIdentityServerService.GetTokenResponseAsync(IIdentityServerOptions)
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService.GetTokenResponseAsync(IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions)
   spec.csharp:
-  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync``1(``0)
-    name: GetTokenResponseAsync<TTokenServiceOptions>
-    nameWithType: ITokenResponseService.GetTokenResponseAsync<TTokenServiceOptions>
-    fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync<TTokenServiceOptions>
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService.GetTokenResponseAsync(IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions)
+    name: GetTokenResponseAsync
+    nameWithType: IIdentityServerService.GetTokenResponseAsync
+    fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService.GetTokenResponseAsync
   - name: (
     nameWithType: (
     fullName: (
-  - name: TTokenServiceOptions
-    nameWithType: TTokenServiceOptions
-    fullName: TTokenServiceOptions
+  - uid: IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions
+    name: IIdentityServerOptions
+    nameWithType: IIdentityServerOptions
+    fullName: IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync``1(``0)
-    name: GetTokenResponseAsync(Of TTokenServiceOptions)
-    nameWithType: ITokenResponseService.GetTokenResponseAsync(Of TTokenServiceOptions)
-    fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync(Of TTokenServiceOptions)
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService.GetTokenResponseAsync(IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions)
+    name: GetTokenResponseAsync
+    nameWithType: IIdentityServerService.GetTokenResponseAsync
+    fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService.GetTokenResponseAsync
   - name: (
     nameWithType: (
     fullName: (
-  - name: TTokenServiceOptions
-    nameWithType: TTokenServiceOptions
-    fullName: TTokenServiceOptions
+  - uid: IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions
+    name: IIdentityServerOptions
+    nameWithType: IIdentityServerOptions
+    fullName: IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions
   - name: )
     nameWithType: )
     fullName: )
-- uid: '{TTokenServiceOptions}'
-  commentId: '!:TTokenServiceOptions'
-  definition: TTokenServiceOptions
-  name: TTokenServiceOptions
-  nameWithType: TTokenServiceOptions
-  fullName: TTokenServiceOptions
+- uid: IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions
+  parent: IdentityServer4.Contrib.HttpClientService.Models
+  name: IIdentityServerOptions
+  nameWithType: IIdentityServerOptions
+  fullName: IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions
 - uid: System.Threading.Tasks.Task{IdentityModel.Client.TokenResponse}
   commentId: T:System.Threading.Tasks.Task{IdentityModel.Client.TokenResponse}
   parent: System.Threading.Tasks
@@ -584,46 +556,6 @@ references:
   name: IdentityServer4.Contrib.HttpClientService.Models
   nameWithType: IdentityServer4.Contrib.HttpClientService.Models
   fullName: IdentityServer4.Contrib.HttpClientService.Models
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync``1(``0)
-  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync``1(``0)
-  name: GetTokenResponseAsync<TTokenServiceOptions>(TTokenServiceOptions)
-  nameWithType: ITokenResponseService.GetTokenResponseAsync<TTokenServiceOptions>(TTokenServiceOptions)
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync<TTokenServiceOptions>(TTokenServiceOptions)
-  nameWithType.vb: ITokenResponseService.GetTokenResponseAsync(Of TTokenServiceOptions)(TTokenServiceOptions)
-  fullName.vb: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync(Of TTokenServiceOptions)(TTokenServiceOptions)
-  name.vb: GetTokenResponseAsync(Of TTokenServiceOptions)(TTokenServiceOptions)
-  spec.csharp:
-  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync``1(``0)
-    name: GetTokenResponseAsync<TTokenServiceOptions>
-    nameWithType: ITokenResponseService.GetTokenResponseAsync<TTokenServiceOptions>
-    fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync<TTokenServiceOptions>
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: TTokenServiceOptions
-    nameWithType: TTokenServiceOptions
-    fullName: TTokenServiceOptions
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync``1(``0)
-    name: GetTokenResponseAsync(Of TTokenServiceOptions)
-    nameWithType: ITokenResponseService.GetTokenResponseAsync(Of TTokenServiceOptions)
-    fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService.GetTokenResponseAsync(Of TTokenServiceOptions)
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: TTokenServiceOptions
-    nameWithType: TTokenServiceOptions
-    fullName: TTokenServiceOptions
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: TTokenServiceOptions
-  name: TTokenServiceOptions
-  nameWithType: TTokenServiceOptions
-  fullName: TTokenServiceOptions
 - uid: System.Threading.Tasks.Task`1
   commentId: T:System.Threading.Tasks.Task`1
   isExternal: true

@@ -28,8 +28,8 @@
 - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure
   name: IdentityServer4.Contrib.HttpClientService.Infrastructure
   items:
-  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.AccessTokenOptions
-    name: AccessTokenOptions
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ClientCredentialsHttpClient
+    name: ClientCredentialsHttpClient
   - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.CoreHttpClient
     name: CoreHttpClient
   - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpClientServiceHeaders
@@ -40,28 +40,36 @@
     name: HttpRequestMessageFactoryDesktop
   - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient
     name: ICoreHttpClient
-  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerHttpClient
-    name: IdentityServerHttpClient
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerHttpClientSelector
+    name: IdentityServerHttpClientSelector
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService
+    name: IdentityServerService
   - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
     name: IHttpRequestMessageFactory
   - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient
     name: IIdentityServerHttpClient
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector
+    name: IIdentityServerHttpClientSelector
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService
+    name: IIdentityServerService
   - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager
     name: ITokenResponseCacheManager
-  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
-    name: ITokenResponseService
+  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.PasswordHttpClient
+    name: PasswordHttpClient
   - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseCacheManager
     name: TokenResponseCacheManager
-  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseService
-    name: TokenResponseService
   - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent`1
     name: TypeContent<TRequestBody>
     name.vb: TypeContent(Of TRequestBody)
 - uid: IdentityServer4.Contrib.HttpClientService.Models
   name: IdentityServer4.Contrib.HttpClientService.Models
   items:
-  - uid: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
-    name: DefaultClientCredentialOptions
+  - uid: IdentityServer4.Contrib.HttpClientService.Models.ClientCredentialsOptions
+    name: ClientCredentialsOptions
+  - uid: IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions
+    name: IIdentityServerOptions
+  - uid: IdentityServer4.Contrib.HttpClientService.Models.PasswordOptions
+    name: PasswordOptions
   - uid: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1
     name: ResponseObject<TResponseBody>
     name.vb: ResponseObject(Of TResponseBody)

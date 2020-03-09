@@ -63,7 +63,7 @@
 <h1 id="an-httpclient-service-for-identityserver4">An HttpClient service for IdentityServer4</h1>
 
 <p><a href="https://dev.azure.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/_build/latest?definitionId=5&amp;branchName=master"><img src="https://dev.azure.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/_apis/build/status/georgekosmidis.IdentityServer4.Contrib.HttpClientService?branchName=master" alt="Build Status"></a> <img src="https://img.shields.io/nuget/v/IdentityServer4.Contrib.HttpClientService" alt="Nuget"></p>
-<p>An HttpClient service that makes it easy to make authenticated HTTP requests to protected by IdentityServer4 resources. Complex types are automatically serialized for requests /  deserialized form responses, all with a fluent interface design:</p>
+<p>An HttpClient service that makes it easy to make authenticated HTTP requests to protected by IdentityServer4 resources. Complex types are automatically serialized for requests /  deserialized for responses, all with a fluent interface design:</p>
 <pre><code class="lang-csharp">var responseObject = await _requestServiceFactory
                           //Create a instance of the service
                           .CreateHttpClientService()
@@ -72,36 +72,22 @@
                           //GET and deserialize the response body to IEnumerable&lt;Customers&gt;
                           .GetAsync&lt;IEnumerable&lt;Customers&gt;&gt;(&quot;https://api/customers&quot;);
 </code></pre>
-<p>The variable <strong><a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html">responseObject</a></strong> contains multiple properties: from the entire <code>HttpResponseMessage</code> and <code>HttpRequestMessage</code>, to <code>HttpStatusCode</code> and <code>HttpResponseHeaders</code>. The most <em>exciting</em> feature though, is the <code>TResponseBody BodyAsType</code> property which will contain deserializabled complex types from JSON responses (in the example above the <code>BodyAsType</code> will be of type <code>IEnumerable&lt;Customers&gt;</code>). Check the <a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html">ResponseObject&lt;TResponseBody&gt;</a> in the docs.</p>
-<p>Setting up complex request body for POST, PUT and PATCH requests is also very easy! Here are some examples:</p>
-<pre><code class="lang-csharp">var responseObject = await _requestServiceFactory
-                          //Create a instance of the service
-                          .CreateHttpClientService()
-                          //.PostAsync&lt;TRequestBody,TResponseBody&gt;(URL, customer of type Customer1)
-                          .PostAsync&lt;Customer1,Customer2&gt;(&quot;https://api/customers&quot;, customer);
-</code></pre>
-<p>You can also fine tune encoding and media-type by using the <code>TypeContent(TRequestBody model, Encoding encoding, string mediaType)</code> like this:</p>
-<pre><code class="lang-csharp">var responseObject = await _requestServiceFactory
-                          //Create a instance of the service
-                          .CreateHttpClientService()
-                          //.PostAsync&lt;TRequestBody,TResponseBody&gt;(URL, customer of type Customer1)
-                          .PostAsync&lt;TypeContent&lt;Customer1&gt;,Customer2&gt;(&quot;https://api/customers&quot;, new TypeContent(customer, Encoding.UTF8, &quot;application/json&quot;));
-</code></pre>
-<p>HTTP verbs supported are: <a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceGetExtensions.html">GET</a>, <a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions.html">POST</a>, <a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions.html">PUT</a>, <a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.html">DELETE</a>, <a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.html">PATCH</a> and <a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceHeadExtensions.html">HEAD</a>. Read the <a href="api/index.html">Documentation</a> for technical details, check the <a href="https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/tree/master/samples/IdentityServer4.Contrib.HttpClientService.FeaturesSample">features sample</a> or a more <a href="https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/tree/master/samples/IdentityServer4.Contrib.HttpClientService.CompleteSample">complete one</a>.</p>
 <h2 id="getting-started">Getting Started</h2>
 <p>Getting started with IdentityServer4.Contrib.HttpClientService is easy; you only need three things:</p>
 <ol>
 <li>Install the nuget package <a href="https://www.nuget.org/packages/IdentityServer4.Contrib.HttpClientService">IdentityServer4.Contrib.HttpClientService</a></li>
-<li>Provide the options to authenticate in <code>appsettings.json</code></li>
+<li>Provide the options to request an access token in the <code>appsettings.json</code></li>
 <li>Register the service in <code>Startup.cs</code></li>
 </ol>
 <p>Read the entire <strong><a href="getting_started.html">Getting Started</a></strong> guide for a quick start. You can also take a look at the <a href="api/index.html">Documentation</a>, check the <a href="https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/tree/master/samples/IdentityServer4.Contrib.HttpClientService.FeaturesSample">features sample</a> or a more <a href="https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/tree/master/samples/IdentityServer4.Contrib.HttpClientService.CompleteSample">complete one</a>.</p>
+<h2 id="more-details">More Details</h2>
+<p>Read the '<a href="more_details.html">More Details</a>' section for a more detailed explanation on some of the features of this library, like the <code>SetIdentityServerOptions</code> overloads, the <code>ResponseObject</code> and the <code>TypeContent(TRequestBody, Encoding, string)</code> class</p>
 <h2 id="contributing">Contributing</h2>
 <p>Feedback and contibution is more than welcome, as there are many more things to do!</p>
 <p>Just as a sample:</p>
 <ol>
 <li>Expand the <a href="https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/tree/master/samples/IdentityServer4.Contrib.HttpClientService.CompleteSample">IdentityServer4.Contrib.HttpClientService.CompleteSample</a> with more functionality.</li>
-<li>Support <code>JsonSerializerSettings</code> for <code>JsonConvert.DeserializeObject&lt;TResponseBody&gt;(apiResponse.BodyAsString)</code> in <a href="https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/blob/86262f016173bafd2c9ec4fbe70ac9eb1406042a/src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs#L300">HttpClientService</a>.</li>
+<li>Support <code>JsonSerializerSettings</code> for <code>JsonConvert.DeserializeObject&lt;TResponseBody&gt;(apiResponse.BodyAsString)</code> in <a href="https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/blob/86262f016173bafd2c9ec4fbe70ac9eb1406042a/src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs">HttpClientService</a>.</li>
 <li>Support more than <code>ClientCredentials</code>.</li>
 <li>Add logging.</li>
 </ol>
@@ -114,7 +100,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/docfx_project/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/feature/PasswordTokenRequest/docfx_project/index.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

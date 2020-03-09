@@ -17,20 +17,20 @@ var responseObject = await _requestServiceFactory
 ___
 
 ##### Table of Contents
-1. Getting started
-   1. It’s a nuget package!
-   2. IdentityServer4 client credentials options
-   3. Register the service
-   4. You are done!
-2. [How to setup an Access Token Request](#access-token-request)
-   1. [.SetIdentityServerOptions(String)]
-   2. [.SetIdentityServerOptions<TOptions>(TOptions)]
-   3. [.SetIdentityServerOptions<TOptions>(IOptions<TOptions>)]
-   4. [.SetIdentityServerOptions<TOptions>(Action<TOptions>)]
-3. [More info on how to serialize request, deserialize response]
-   1. ResponseObject
-   2. TypeContent(TRequestBody, Encoding, string)
-4. Contributing
+1. [Getting started](#getting-started)
+   1. [It’s a nuget package!](#its-a-nuget-package)
+   2. [IdentityServer4 client credentials options](#identityserver4-client-credentials-options)
+   3. [Register the service](#register-the-service)
+   4. [You are done!](#you-are-done)
+2. [How to setup an Access Token Request](#how-to-setup-an-access-token-request)
+   1. [.SetIdentityServerOptions(String)](#setidentityserveroptionsstring)
+   2. [.SetIdentityServerOptions<TOptions>(TOptions)](#setidentityserveroptionstoptions)
+   3. [.SetIdentityServerOptions<TOptions>(IOptions&lt;TOptions&gt;)](#setidentityserveroptionsioptions)
+   4. [.SetIdentityServerOptions<TOptions>(Action&lt;TOptions&gt;)](#setidentityserveroptionsaction)
+3. [More info on how to serialize request, deserialize response](#more-info-on-how-to-serialize-request-deserialize-response)
+   1. [ResponseObject](#responseobject)
+   2. [TypeContent(TRequestBody, Encoding, string)](#typecontenttrequestbody-encoding-string)
+4. [Contributing](#contributing)
 
 ___
 

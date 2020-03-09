@@ -107,26 +107,5 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure
                 Scope = clientCredentialOptions.Scope
             });
         }
-
-        ///// <summary>
-        ///// Retrieves a <see cref="TokenResponse"/> from the configured by the <paramref name="options"/>.
-        ///// </summary>
-        ///// <param name="options">The <see cref="PasswordTokenRequestOptions"/> for the IdentityServer4.</param>
-        ///// <returns>A <see cref="TokenResponse"/> object.</returns>
-        //public async Task<TokenResponse> GetTokenResponseAsync(PasswordTokenRequestOptions options)
-        //{
-        //    if (options == default)
-        //        throw new ArgumentNullException(nameof(options));
-
-        //    return await _httpClient.RequestPasswordTokenAsync(new PasswordTokenRequest
-        //    {
-        //        Address = options.Address,
-        //        ClientId = options.ClientId,
-        //        ClientSecret = options.ClientSecret,
-        //        Scope = options.Scope,
-        //        UserName = options.Username,
-        //        Password = options.Password
-        //    });
-        //}
     }
 }

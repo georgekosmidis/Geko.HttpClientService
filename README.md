@@ -24,9 +24,9 @@ ___
    4. [You are done!](#you-are-done)
 2. [How to setup an Access Token Request](#how-to-setup-an-access-token-request)
    1. [.SetIdentityServerOptions(String)](#setidentityserveroptionsstring)
-   2. [.SetIdentityServerOptions<TOptions>(TOptions)](#setidentityserveroptionstoptions)
-   3. [.SetIdentityServerOptions<TOptions>(IOptions&lt;TOptions&gt;)](#setidentityserveroptionsioptions)
-   4. [.SetIdentityServerOptions<TOptions>(Action&lt;TOptions&gt;)](#setidentityserveroptionsaction)
+   2. [.SetIdentityServerOptions&lt;TOptions&gt;(TOptions)](#setidentityserveroptionstoptions)
+   3. [.SetIdentityServerOptions&lt;TOptions&gt;(IOptions&lt;TOptions&gt;)](#setidentityserveroptionsioptions)
+   4. [.SetIdentityServerOptions&lt;TOptions&gt;(Action&lt;TOptions&gt;)](#setidentityserveroptionsaction)
 3. [More info on how to serialize request, deserialize response](#more-info-on-how-to-serialize-request-deserialize-response)
    1. [ResponseObject](#responseobject)
    2. [TypeContent(TRequestBody, Encoding, string)](#typecontenttrequestbody-encoding-string)
@@ -147,7 +147,7 @@ Setup IdentityServer options by defining the configuration section. The type of 
 //...
 ```
 
-### .SetIdentityServerOptions<TOptions>(TOptions)
+### .SetIdentityServerOptions&lt;TOptions&gt;(TOptions)
 
 Setup IdentityServer options by passing a ´ClientCredentialsOptions´ or ´PasswordOptions´ directly to the `SetIdentityServerOptions`:
 
@@ -167,7 +167,7 @@ Setup IdentityServer options by passing a ´ClientCredentialsOptions´ or ´Pass
 //...
 ```
 
-### .SetIdentityServerOptions<TOptions>(IOptions<TOptions>)
+### .SetIdentityServerOptions&lt;TOptions&gt;(IOptions&lt;TOptions&gt;)
 
 Setup IdentityServer options using the [options pattern](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options):
 
@@ -194,7 +194,7 @@ public class ProtectedResourceService
 //...
 ```
 
-### .SetIdentityServerOptions<TOptions>(Action<TOptions>)
+### .SetIdentityServerOptions&lt;TOptions&gt;(Action&lt;TOptions&gt;)
 Setup IdentityServer options using a delegate:
 
 ```csharp

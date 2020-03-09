@@ -19,7 +19,7 @@ ___
 ##### Table of Contents
 1. [Getting started](#getting-started)
    1. [It’s a nuget package!](#its-a-nuget-package)
-   2. [IdentityServer4 client credentials options](#identityserver4-client-credentials-options)
+   2. [IdentityServer4 access token request options](#identityserver4-access-token-request-options)
    3. [Register the service](#register-the-service)
    4. [You are done!](#you-are-done)
 2. [How to setup an Access Token Request](#how-to-setup-an-access-token-request)
@@ -46,9 +46,9 @@ Getting started with IdentityServer4.Contrib.HttpClientService is rather easy, y
 
 Install the [IdentityServer4.Contrib.HttpClientService](https://www.nuget.org/packages/IdentityServer4.Contrib.HttpClientService) nuget package, using your favorite way.
 
-### IdentityServer4 client credentials options
+### IdentityServer4 access token request options
 
-Add the IdentityServer4 client credentials options to your appsettings.json
+Add the IdentityServer4 client credentials options to your `appsettings.json` (you could very well skip this step if you use one of [the other ways of setting up an access token request](#how-to-setup-an-access-token-request))
 
 ```json
 "SomeClientCredentialsOptions": {

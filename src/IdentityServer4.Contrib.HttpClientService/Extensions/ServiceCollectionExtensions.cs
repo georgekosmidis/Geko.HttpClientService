@@ -17,9 +17,13 @@ namespace IdentityServer4.Contrib.HttpClientService.Extensions
         /// <returns>An <see cref="IServiceCollection"/> that can be used to further configure the MVC services.</returns>
         public static IServiceCollection AddHttpClientService(this IServiceCollection services)
         {
-            services.AddHttpClient<IIdentityServerHttpClient, IdentityServerHttpClient>()
+            services.AddHttpClient<IIdentityServerHttpClient, ClientCredentialsHttpClient>()
                     .SetHandlerLifetime(TimeSpan.FromMinutes(5));
-            services.AddSingleton<ITokenResponseService, TokenResponseService>();
+            services.AddHttpClient<IIdentityServerHttpClient, PasswordHttpClient>()
+                    .SetHandlerLifetime(TimeSpan.FromMinutes(5));
+            services.AddSingleton<IIdentityServerHttpClientSelector, IdentityServerHttpClientSelector>();
+
+            services.AddSingleton<IIdentityServerService, IdentityServerService>();
             services.AddMemoryCache();
             services.AddSingleton<ITokenResponseCacheManager, TokenResponseCacheManager>();
 

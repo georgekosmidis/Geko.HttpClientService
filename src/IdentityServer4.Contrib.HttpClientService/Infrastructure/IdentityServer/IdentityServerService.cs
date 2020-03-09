@@ -13,42 +13,46 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure
     /// <summary>
     /// The implementation of an access token service for client credentials based on IdentityServer4. 
     /// </summary>
-    public class TokenResponseService : ITokenResponseService
+    public class IdentityServerService : IIdentityServerService
     {
-        private readonly IIdentityServerHttpClient _identityServerHttpClient;
+        private readonly IIdentityServerHttpClientSelector _identityServerHttpClientSelector;
         private readonly ITokenResponseCacheManager _cache;
 
         /// <summary>
-        /// Constructor of the <see cref="TokenResponseService"/>.
+        /// Constructor of the <see cref="IdentityServerService"/>.
         /// </summary>
-        /// <param name="identityServerHttpClient">A typed <see cref="HttpClient"/> for the token service.</param>
+        /// <param name="identityServerHttpClientSelector">An Identity Server HTTP client selected that will fetch the correct HTTP client.</param>
         /// <param name="cache">A cache engine imlementation, to cache the token response.</param>
-        public TokenResponseService(IIdentityServerHttpClient identityServerHttpClient, ITokenResponseCacheManager cache)
+        public IdentityServerService(IIdentityServerHttpClientSelector identityServerHttpClientSelector, ITokenResponseCacheManager cache)
         {
-            _identityServerHttpClient = identityServerHttpClient;
+            _identityServerHttpClientSelector = identityServerHttpClientSelector;
             _cache = cache;
         }
 
         /// <summary>
         /// Retrieves either a new access token using client credentials or the last valid from the caching engine.
         /// </summary>
-        /// <typeparam name="TTokenServiceOptions">A type that inherits from the <see cref="DefaultClientCredentialOptions"/> onject</typeparam>
-        /// <param name="options">The token service options</param>
+        /// <param name="options">The token service options.</param>
         /// <returns>A <see cref="TokenResponse"/> instance.</returns>
-        public async Task<TokenResponse> GetTokenResponseAsync<TTokenServiceOptions>(TTokenServiceOptions options) where TTokenServiceOptions : DefaultClientCredentialOptions, new()
+        public async Task<TokenResponse> GetTokenResponseAsync(IIdentityServerOptions options)
         {
             if (options == default)
+            {
                 throw new ArgumentNullException(nameof(options));
+            }
+
+            var httpClient = _identityServerHttpClientSelector.Get(options);
 
             var tokenResponse = await _cache.AddOrGetExistingAsync(
-                options.GetCacheKey(),
+                httpClient.GetCacheKey(options),
                 async () =>
                 {
-                    return await _identityServerHttpClient.GetTokenResponseAsync(options);
+                    return await httpClient.GetTokenResponseAsync(options);
                 }
              );
 
             return tokenResponse;
         }
+
     }
 }

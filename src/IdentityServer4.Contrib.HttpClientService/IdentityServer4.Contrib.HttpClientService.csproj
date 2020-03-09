@@ -27,8 +27,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Extensions\IdentityServer4OptionsExtensions.cs" />
     <Compile Remove="HttpClientMessageHandler.cs" />
     <Compile Remove="IHttpClientService.cs" />
+    <Compile Remove="Infrastructure\IdentityServer\IdentityServerOptionsHandler.cs" />
     <Compile Remove="Models\AuthenticationErrorEventArgs.cs" />
   </ItemGroup>
 
@@ -45,7 +47,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\docfx_project\images\logo.jpg">
+    <None Include="..\..\docfx_project\images\logo.jpg" Link="logo.jpg">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>

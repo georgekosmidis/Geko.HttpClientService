@@ -20,22 +20,22 @@ namespace IdentityServer4.Contrib.HttpClientService
     /// </summary>
     public class HttpClientService
     {
-        private readonly ITokenResponseService _accessTokenService;
+        private readonly IConfiguration _configuration;
+        private readonly IIdentityServerService _accessTokenService;
         private readonly ICoreHttpClient _coreHttpClient;
         private readonly IHttpRequestMessageFactory _requestMessageFactory;
 
-        internal HttpClientServiceHeaders Headers { get; }
-        internal AccessTokenOptions AccessTokenOptions { get; }
+        private IIdentityServerOptions identityServerOptions;
+        private HttpClientServiceHeaders headers { get; }
 
-        internal HttpClientService(IConfiguration configuration, ICoreHttpClient coreHttpClient, IHttpRequestMessageFactory requestMessageFactory, ITokenResponseService accessTokenService)
+        internal HttpClientService(IConfiguration configuration, ICoreHttpClient coreHttpClient, IHttpRequestMessageFactory requestMessageFactory, IIdentityServerService accessTokenService)
         {
+            _configuration = configuration;
             _coreHttpClient = coreHttpClient;
             _requestMessageFactory = requestMessageFactory;
             _accessTokenService = accessTokenService;
 
-            Headers = new HttpClientServiceHeaders();
-            AccessTokenOptions = new AccessTokenOptions(configuration);
-
+            headers = new HttpClientServiceHeaders();
         }
 
         #region Headers
@@ -53,7 +53,7 @@ namespace IdentityServer4.Contrib.HttpClientService
                 throw new ArgumentNullException(nameof(name));
             }
 
-            Headers.Add(name, value);
+            headers.Add(name, value);
 
             return this;
         }
@@ -71,7 +71,7 @@ namespace IdentityServer4.Contrib.HttpClientService
                 throw new ArgumentNullException(nameof(name));
             }
 
-            Headers.Add(name, value);
+            headers.Add(name, value);
 
             return this;
         }
@@ -93,7 +93,7 @@ namespace IdentityServer4.Contrib.HttpClientService
 
             foreach (var kv in headers)
             {
-                Headers.Add(kv.Key, kv.Value);
+                this.headers.Add(kv.Key, kv.Value);
             }
 
             return this;
@@ -115,7 +115,7 @@ namespace IdentityServer4.Contrib.HttpClientService
 
             foreach (var kv in headers)
             {
-                Headers.Add(kv.Key, kv.Value);
+                this.headers.Add(kv.Key, kv.Value);
             }
 
             return this;
@@ -127,7 +127,7 @@ namespace IdentityServer4.Contrib.HttpClientService
         /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
         public HttpClientService HeadersClear()
         {
-            Headers.Clear();
+            headers.Clear();
             return this;
         }
 
@@ -142,7 +142,7 @@ namespace IdentityServer4.Contrib.HttpClientService
             {
                 throw new ArgumentNullException(nameof(name));
             }
-            Headers.Remove(name);
+            headers.Remove(name);
             return this;
         }
 
@@ -150,31 +150,46 @@ namespace IdentityServer4.Contrib.HttpClientService
 
         #region IdentityServer
         /// <summary>
-        /// Sets the IdentityServer4 options for retrieving an access token using client credentials.
-        /// </summary>
-        /// <typeparam name="TIdentityServerOptions">The type of the <paramref name="options"/>.</typeparam>
-        /// <param name="options">The token service options.</param>
-        /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
-        public HttpClientService SetIdentityServerOptions<TIdentityServerOptions>(IOptions<TIdentityServerOptions> options) where TIdentityServerOptions : DefaultClientCredentialOptions, new()
-        {
-            AccessTokenOptions.Set(options);
-
-            return this;
-        }
-
-        /// <summary>
         /// Sets the IdentityServer4 options for retrieving an access token using client credentials by passing the appsettings configuration section 
         /// that contain the necessary configuration keys.
         /// </summary>
         /// <param name="configurationSection">
         /// The name of the configuration section that contains the information for requesting an access token. 
-        /// See <see cref="DefaultClientCredentialOptions"/> for the property names.
+        /// See <see cref="ClientCredentialOptions"/> for the property names.
         /// </param>
         /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
         public HttpClientService SetIdentityServerOptions(string configurationSection)
         {
-            AccessTokenOptions.Set(configurationSection);
+            if (_configuration == null)
+                throw new InvalidOperationException("The string configuraton cannot be used with the the lazy singleton instance of " + nameof(HttpClientService) + " (" + nameof(HttpClientServiceFactory) + "." + nameof(HttpClientServiceFactory.Instance) + ")");
 
+            var sectionExists = _configuration.GetChildren().Any(item => item.Key == configurationSection);
+            if (!sectionExists)
+                throw new ArgumentException("The configuration section '" + configurationSection + "' cannot be found!", nameof(configurationSection));
+
+            //todo: find better way
+            identityServerOptions = _configuration.GetSection(configurationSection).Get<PasswordOptions>();
+            if ((identityServerOptions as PasswordOptions).Username == null)
+                identityServerOptions = _configuration.GetSection(configurationSection).Get<ClientCredentialOptions>();
+
+            return this;
+        }
+
+        /// <summary>
+        /// Sets the IdentityServer4 options for retrieving an access token using client credentials.
+        /// </summary>
+        /// <typeparam name="TOptions">The type of the <paramref name="options"/>.</typeparam>
+        /// <param name="options">The token service options.</param>
+        /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
+        public HttpClientService SetIdentityServerOptions<TOptions>(IOptions<TOptions> options)
+            where TOptions : class, IIdentityServerOptions, new()
+        {
+            if (options == null)
+            {
+                throw new ArgumentNullException(nameof(options));
+            }
+
+            identityServerOptions = options.Value;
             return this;
         }
 
@@ -182,32 +197,36 @@ namespace IdentityServer4.Contrib.HttpClientService
         /// Sets the IdentityServer4 options for retrieving an access token using client credentials by using a delegate.
         /// </summary>
         /// <param name="optionsDelegate">The <see cref="Action{T}"/> delegate.</param>
-
         /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
-        public HttpClientService SetIdentityServerOptions(Action<DefaultClientCredentialOptions> optionsDelegate)
+        public HttpClientService SetIdentityServerOptions<TOptions>(Action<TOptions> optionsDelegate)
+            where TOptions : class, IIdentityServerOptions
         {
-            AccessTokenOptions.Set(optionsDelegate);
-
+            optionsDelegate(identityServerOptions as TOptions);
             return this;
         }
 
         /// <summary>
-        /// Sets the IdentityServer4 options by passing an object that inherits from <see cref="DefaultClientCredentialOptions"/>
+        /// Sets the IdentityServer4 options by passing an object that inherits from <see cref="ClientCredentialOptions"/>
         /// </summary>
-        /// <typeparam name="TIdentityServerOptions">The type of the <paramref name="options"/>.</typeparam>
-        /// <param name="options">The <see cref="DefaultClientCredentialOptions"/> that contains the options.</param>
-        public HttpClientService SetIdentityServerOptions<TIdentityServerOptions>(TIdentityServerOptions options) where TIdentityServerOptions : DefaultClientCredentialOptions, new()
+        /// <param name="options">The <see cref="IIdentityServerOptions"/> that contains the options.</param>
+        public HttpClientService SetIdentityServerOptions<TOptions>(TOptions options)
+            where TOptions : class, IIdentityServerOptions
         {
-            AccessTokenOptions.Set(options);
+            if (options == null)
+            {
+                throw new ArgumentNullException(nameof(options));
+            }
 
+            identityServerOptions = options;
             return this;
         }
         #endregion
 
         /// <summary>
-        /// Creates and sends a request to the <paramref name="requestUri"/> using the HTTP verb from <paramref name="httpMethod"/> and the request body from <paramref name="requestBody"/>. 
-        /// If <see cref="SetIdentityServerOptions{TTokenServiceOptions}(IOptions{TTokenServiceOptions})" /> is called before this method, 
-        /// then a valid access token will be fetched by the <see cref="ITokenResponseService"/> and attached on this request. 
+        /// Creates and sends a request to the <paramref name="requestUri"/> using the HTTP verb 
+        ///  from <paramref name="httpMethod"/> and the request body from <paramref name="requestBody"/>. 
+        /// If IdentityServerOptions are set (using the <see cref="SetIdentityServerOptions{TOptions}(TOptions)"/> or one of the overloads), 
+        /// then a valid access token will be fetched by the <see cref="IIdentityServerService"/> and attached to this request. 
         /// </summary>
         /// <typeparam name="TResponseBody">
         ///     The type of the property <see cref="ResponseObject{TResponseBody}.BodyAsType"/> of the <see cref="ResponseObject{TResponseBody}"/> object,
@@ -294,7 +313,7 @@ namespace IdentityServer4.Contrib.HttpClientService
                 throw new ArgumentException(nameof(requestBody), "HTTP method " + httpMethod.Method + " does not support a request body.");
 
             //headers
-            foreach (var kv in Headers)
+            foreach (var kv in headers)
             {
                 httpRequestMessage.Headers.Add(kv.Key, kv.Value);
             }
@@ -324,9 +343,9 @@ namespace IdentityServer4.Contrib.HttpClientService
             }
 
             //handle authentication
-            if (AccessTokenOptions.HasOptions)
+            if (identityServerOptions != null)
             {
-                var tokenResponse = await _accessTokenService.GetTokenResponseAsync(AccessTokenOptions.Get());
+                var tokenResponse = await _accessTokenService.GetTokenResponseAsync(identityServerOptions);
                 if (tokenResponse.IsError)
                 {
                     return new ResponseObject<TResponseBody>

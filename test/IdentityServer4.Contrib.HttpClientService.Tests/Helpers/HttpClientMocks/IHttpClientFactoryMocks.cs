@@ -13,20 +13,20 @@ namespace IdentityServer4.Contrib.HttpClientService.Tests.Helpers
     {
         public static IHttpClientFactory Get(HttpStatusCode httpStatusCode)
         {
-            return _GetStringContent(httpStatusCode, new StringContent(""));
+            return GetHttpClientFactory(httpStatusCode, new StringContent(""));
         }
 
         public static IHttpClientFactory Get(HttpStatusCode httpStatusCode, Stream responseBody)
         {
-            return _GetStringContent(httpStatusCode, new StreamContent(responseBody));
+            return GetHttpClientFactory(httpStatusCode, new StreamContent(responseBody));
         }
 
         public static IHttpClientFactory Get(HttpStatusCode httpStatusCode, string responseBody)
         {
-            return _GetStringContent(httpStatusCode, new StringContent(responseBody));
+            return GetHttpClientFactory(httpStatusCode, new StringContent(responseBody));
         }
 
-        private static IHttpClientFactory _GetStringContent(HttpStatusCode httpStatusCode, HttpContent responseBody)
+        private static IHttpClientFactory GetHttpClientFactory(HttpStatusCode httpStatusCode, HttpContent responseBody)
         {
             var mockFactory = new Mock<IHttpClientFactory>();
             var clientHandlerStub = new DelegatingHandlerStub(httpStatusCode, responseBody);

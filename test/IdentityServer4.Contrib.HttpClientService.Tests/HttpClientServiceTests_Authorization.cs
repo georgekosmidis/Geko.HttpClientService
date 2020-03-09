@@ -23,24 +23,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
         [TestMethod]
         public async Task HttpClientServiceTests_Authorization_NoIdentityServerOptions_ShouldRequestWitnNoAuth()
         {
-
-            var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("key", "section_data"),
-                new CoreHttpClient(
-                    IHttpClientFactoryMocks.Get(HttpStatusCode.OK, "body_of_response").CreateClient()
-                ),
-                new HttpRequestMessageFactory(
-                    IHttpContextAccessorMocks.Get()
-                ),
-                new TokenResponseService(
-                    new IdentityServerHttpClient(
-                        IHttpClientFactoryMocks.Get(HttpStatusCode.OK).CreateClient()
-                    ),
-                    IAccessTokenCacheManagerMocks.Get(
-                        await TokenResponseMock.GetValidResponseAsync("access_token", 3600)
-                    )
-                )
-            ).CreateHttpClientService();
+            var httpClientService = await Tests.Helpers.HttpClientServiceInstances.GetNew(HttpStatusCode.OK, "body_of_response", true);
 
             var result = await httpClientService.SendAsync<object, string>(
                 new Uri("http://localhost"),
@@ -56,32 +39,16 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
         [TestMethod]
         public async Task HttpClientServiceTests_Authorization_WithIdentityServerOptions_ShouldRequestWitnAuth()
         {
-
-            var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("key", "section_data"),
-                new CoreHttpClient(
-                    IHttpClientFactoryMocks.Get(HttpStatusCode.OK, "body_of_response").CreateClient()
-                ),
-                new HttpRequestMessageFactory(
-                    IHttpContextAccessorMocks.Get()
-                ),
-                new TokenResponseService(
-                    new IdentityServerHttpClient(
-                        IHttpClientFactoryMocks.Get(HttpStatusCode.OK).CreateClient()
-                    ),
-                    IAccessTokenCacheManagerMocks.Get(
-                        await TokenResponseMock.GetValidResponseAsync("access_token", 3600)
-                    )
-                )
-            ).CreateHttpClientService();
+            var httpClientService = await Tests.Helpers.HttpClientServiceInstances.GetNew(HttpStatusCode.OK, "body_of_response", true);
 
             httpClientService.SetIdentityServerOptions(
                 Options.Create(
-                    new DefaultClientCredentialOptions
+                    new ClientCredentialOptions
                     {
                         Address = "http://localhost",
                         ClientId = "ClientId",
-                        ClientSecret = "ClientSecret"
+                        ClientSecret = "ClientSecret",
+                        Scope = "scope"
                     }
                 )
             );
@@ -105,32 +72,16 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
         [TestMethod]
         public async Task HttpClientServiceTests_Authorization_WithWrongIdentityServerOptions_ShouldHaveError()
         {
-
-            var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("key", "section_data"),
-                new CoreHttpClient(
-                    IHttpClientFactoryMocks.Get(HttpStatusCode.OK, "body_of_response").CreateClient()
-                ),
-                new HttpRequestMessageFactory(
-                    IHttpContextAccessorMocks.Get()
-                ),
-                new TokenResponseService(
-                    new IdentityServerHttpClient(
-                        IHttpClientFactoryMocks.Get(HttpStatusCode.OK).CreateClient()
-                    ),
-                    IAccessTokenCacheManagerMocks.Get(
-                        await TokenResponseMock.GetErrorResponseAsync("invalid_client")
-                    )
-                )
-            ).CreateHttpClientService();
+            var httpClientService = await Tests.Helpers.HttpClientServiceInstances.GetNew(HttpStatusCode.OK, "body_of_response", false);
 
             httpClientService.SetIdentityServerOptions(
                 Options.Create(
-                    new DefaultClientCredentialOptions
+                    new ClientCredentialOptions
                     {
                         Address = "http://localhost",
                         ClientId = "ClientId",
-                        ClientSecret = "ClientSecret"
+                        ClientSecret = "ClientSecret",
+                        Scope = "scope"
                     }
                 )
             );

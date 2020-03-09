@@ -36,7 +36,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure.Tests
         }
 
         [TestMethod]
-        public void HttpRequestMessageFactory_CreateRequestMessage_ShouldUseSameXHeaderForEachRequestMessage()
+        public void HttpRequestMessageFactory_CreateRequestMessage_ShouldUseSameXHeaderForSameInsance()
         {
             var message = new HttpRequestMessageFactory(
                 IHttpContextAccessorMocks.Get()

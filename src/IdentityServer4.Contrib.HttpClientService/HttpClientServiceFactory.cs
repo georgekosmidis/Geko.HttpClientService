@@ -23,7 +23,7 @@ namespace IdentityServer4.Contrib.HttpClientService
     public sealed class HttpClientServiceFactory : IHttpClientServiceFactory
     {
         private readonly ICoreHttpClient _coreHttpClient;
-        private readonly ITokenResponseService _tokenResponseService;
+        private readonly IIdentityServerService _tokenResponseService;
         private readonly IHttpRequestMessageFactory _requestMessageFactory;
         private readonly IConfiguration _configuration;
 
@@ -46,14 +46,19 @@ namespace IdentityServer4.Contrib.HttpClientService
         {
             //no configuration for Dektop
             _configuration = null;
+            var identityServerHttpClient = new HttpClient();
 
             _coreHttpClient = new CoreHttpClient(
                                 new HttpClient()
                               );
 
-            _tokenResponseService = new TokenResponseService(
-                                        new IdentityServerHttpClient(
-                                            new HttpClient()
+            _tokenResponseService = new IdentityServerService(
+                                        new IdentityServerHttpClientSelector(
+                                            new List<IIdentityServerHttpClient>
+                                            {
+                                                { new ClientCredentialsHttpClient(identityServerHttpClient) },
+                                                { new PasswordHttpClient(identityServerHttpClient) }
+                                            }
                                         ),
                                         new TokenResponseCacheManager(
                                             new MemoryCache(
@@ -73,8 +78,8 @@ namespace IdentityServer4.Contrib.HttpClientService
         /// <param name="configuration">Application configuration properties.</param>
         /// <param name="coreHttpClient">An <see cref="ICoreHttpClient"/> implementation that will execute the HTTP requests.</param>
         /// <param name="requestMessageFactory">The <see cref="IHttpRequestMessageFactory"/> to get a new <see cref="HttpRequestMessage"/>.</param>
-        /// <param name="tokenResponseService">The <see cref="ITokenResponseService"/> to retrieve a token, if required.</param>
-        public HttpClientServiceFactory(IConfiguration configuration, ICoreHttpClient coreHttpClient, IHttpRequestMessageFactory requestMessageFactory, ITokenResponseService tokenResponseService)
+        /// <param name="tokenResponseService">The <see cref="IIdentityServerService"/> to retrieve a token, if required.</param>
+        public HttpClientServiceFactory(IConfiguration configuration, ICoreHttpClient coreHttpClient, IHttpRequestMessageFactory requestMessageFactory, IIdentityServerService tokenResponseService)
         {
             if (configuration == null)
             {

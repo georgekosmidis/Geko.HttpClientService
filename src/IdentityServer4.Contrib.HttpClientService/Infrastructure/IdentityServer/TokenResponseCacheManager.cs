@@ -73,7 +73,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure
                 throw new ArgumentNullException(nameof(key));
 
             if (string.IsNullOrWhiteSpace(key))
-                throw new ArgumentOutOfRangeException(nameof(key), "Cache keys cannot be empty or whitespace");
+                throw new ArgumentException("Cache keys cannot be empty or whitespace", nameof(key));
 
             _cache.Remove(key);
         }

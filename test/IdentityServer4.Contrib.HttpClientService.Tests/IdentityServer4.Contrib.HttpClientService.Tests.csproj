@@ -12,6 +12,10 @@
 
   <ItemGroup>
     <Compile Remove="Extensions\HttpClientServiceExtensionsTestsBase.cs" />
+    <Compile Remove="Helpers\CacheMocks\CacheEntryStub.cs" />
+    <Compile Remove="Helpers\CacheMocks\IMemoryCacheMocks.cs" />
+    <Compile Remove="Helpers\IConfigurationMocks.cs" />
+    <Compile Remove="Ifrastracture\AccessTokenOptionsTests.cs" />
   </ItemGroup>
 
   <ItemGroup>

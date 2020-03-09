@@ -9,25 +9,25 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure
     /// <summary>
     /// An object that handles the IdentityServer4 client credentials registration
     /// </summary>
-    public class AccessTokenOptions
+    public class IdentityServerOptionsHandler
     {
         private readonly IConfiguration _configuration;
-        private DefaultClientCredentialOptions defaultClientCredentialOptions;
+        private ClientCredentialOptions defaultClientCredentialOptions;
 
         /// <summary>
-        /// Constructor for the <see cref="AccessTokenOptions"/>
+        /// Constructor for the <see cref="IdentityServerOptionsHandler"/>
         /// </summary>
         /// <param name="configuration">Represents a set of key/value application configuration properties.</param>
-        public AccessTokenOptions(IConfiguration configuration)
+        public IdentityServerOptionsHandler(IConfiguration configuration)
         {
             _configuration = configuration;
         }
 
         /// <summary>
-        /// Gets the <see cref="DefaultClientCredentialOptions"/> set for this instance
+        /// Gets the <see cref="ClientCredentialOptions"/> set for this instance
         /// </summary>
-        /// <returns>The <see cref="DefaultClientCredentialOptions"/> of this instance</returns>
-        public DefaultClientCredentialOptions Get()
+        /// <returns>The <see cref="ClientCredentialOptions"/> of this instance</returns>
+        public ClientCredentialOptions Get()
         {
             return defaultClientCredentialOptions;
         }
@@ -42,24 +42,13 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure
                 return defaultClientCredentialOptions != null;
             }
         }
-
-        /// <summary>
-        /// Sets the IdentityServer4 options for retrieving an access token using client credentials.
-        /// </summary>
-        /// <typeparam name="TIdentityServerOptions">The type of the <paramref name="options"/>.</typeparam>
-        /// <param name="options">The token service options.</param>
-        public void Set<TIdentityServerOptions>(IOptions<TIdentityServerOptions> options) where TIdentityServerOptions : DefaultClientCredentialOptions, new()
-        {
-            Set(options.Value);
-        }
-
         /// <summary>
         /// Sets the IdentityServer4 options for retrieving an access token using client credentials by passing the appsettings configuration section 
         /// that contain the necessary configuration keys.
         /// </summary>
         /// <param name="configurationSection">
         /// The name of the configuration section that contains the information for requesting an access token. 
-        /// See <see cref="DefaultClientCredentialOptions"/> for the property names.
+        /// See <see cref="ClientCredentialOptions"/> for the property names.
         /// </param>
         public void Set(string configurationSection)
         {
@@ -70,30 +59,44 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure
             if (!sectionExists)
                 throw new ArgumentException("The configuration section '" + configurationSection + "' cannot be found!", nameof(configurationSection));
 
-            var options = _configuration.GetSection(configurationSection).Get<DefaultClientCredentialOptions>();
+#warning Select correct options based on configuration section contents
+            var options = _configuration.GetSection(configurationSection).Get<ClientCredentialOptions>();
 
             Set(options);
 
         }
 
         /// <summary>
+        /// Sets the IdentityServer4 options for retrieving an access token using client credentials.
+        /// </summary>
+        /// <typeparam name="TOptions">The type of the <paramref name="options"/>.</typeparam>
+        /// <param name="options">The token service options.</param>
+        public void Set<TOptions>(IOptions<TOptions> options)
+            where TOptions : class, IIdentityServerOptionsConstrain, new()
+        {
+            Set(options.Value);
+        }
+
+        /// <summary>
         /// Sets the IdentityServer4 options for retrieving an access token using client credentials by using a delegate.
         /// </summary>
-        /// <typeparam name="TIdentityServerOptions">The type of the <paramref name="optionsDelegate"/>.</typeparam>
+        /// <typeparam name="TOptions">The type of the <paramref name="optionsDelegate"/>.</typeparam>
         /// <param name="optionsDelegate">The <see cref="Action{T}"/> delegate.</param>
-        public void Set<TIdentityServerOptions>(Action<TIdentityServerOptions> optionsDelegate) where TIdentityServerOptions : DefaultClientCredentialOptions, new()
+        public void Set<TOptions>(Action<TOptions> optionsDelegate) 
+            where TOptions : class, IIdentityServerOptionsConstrain
         {
-            var obj = new DefaultClientCredentialOptions();
-            optionsDelegate(obj as TIdentityServerOptions);
+            var obj = new ClientCredentialOptions();
+            optionsDelegate(obj as TOptions);
 
             Set(obj);
         }
 
         /// <summary>
-        /// Sets the IdentityServer4 options by passing an object that inherits from <see cref="DefaultClientCredentialOptions"/>
+        /// Sets the IdentityServer4 options by passing an object that inherits from <see cref="IIdentityServerOptionsConstrain"/>
         /// </summary>
-        /// <param name="options">The <see cref="DefaultClientCredentialOptions"/> that contains the options.</param>
-        public void Set<TIdentityServerOptions>(TIdentityServerOptions options) where TIdentityServerOptions : DefaultClientCredentialOptions, new()
+        /// <param name="options">The <see cref="IIdentityServerOptionsConstrain"/> that contains the options.</param>
+        public void Set<TOptions>(TOptions options) 
+            where TOptions : IIdentityServerOptionsConstrain
         {
             if (options == null)
             {
@@ -115,7 +118,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure
                 throw new ArgumentNullException(nameof(options.ClientSecret));
             }
 
-            defaultClientCredentialOptions = new DefaultClientCredentialOptions
+            defaultClientCredentialOptions = new ClientCredentialOptions
             {
                 Address = options.Address,
                 ClientId = options.ClientId,

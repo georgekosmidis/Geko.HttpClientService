@@ -47,7 +47,6 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure
         public TypeContent(TRequestBody model, Encoding encoding, string mediaType)
             : base(GetContentByteArray(model, encoding))
         {
-
             // Initialize the 'Content-Type' header with information provided by parameters. 
             var headerValue = new MediaTypeHeaderValue((mediaType == null) ? defaultMediaType : mediaType);
             headerValue.CharSet = (encoding == null) ? defaultStringEncoding.WebName : encoding.WebName;

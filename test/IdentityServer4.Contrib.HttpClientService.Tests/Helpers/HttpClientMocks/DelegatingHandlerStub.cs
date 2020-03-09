@@ -16,13 +16,6 @@ namespace IdentityServer4.Contrib.HttpClientService.Tests.Helpers
             _handlerFunc = (request, cancellationToken) => Task.FromResult(new HttpResponseMessage(httpStatusCode));
         }
 
-        //public DelegatingHandlerStub(HttpStatusCode httpStatusCode, StreamContent streamContent)
-        //{
-        //    var httpResponseMessage = new HttpResponseMessage(httpStatusCode);
-        //    httpResponseMessage.Content = streamContent;
-        //    _handlerFunc = (request, cancellationToken) => Task.FromResult(httpResponseMessage);
-        //}
-
         public DelegatingHandlerStub(HttpStatusCode httpStatusCode, HttpContent httpContent)
         {
             var httpResponseMessage = new HttpResponseMessage(httpStatusCode);

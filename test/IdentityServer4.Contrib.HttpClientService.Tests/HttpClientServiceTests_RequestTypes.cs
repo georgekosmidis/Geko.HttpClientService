@@ -19,35 +19,18 @@ using System.Collections.Generic;
 namespace IdentityServer4.Contrib.HttpClientService.Test
 {
     [TestClass]
-    public class HttpClientServiceTests_RequestTypes : TestBase
+    public class HttpClientServiceTests_RequestTypes
     {
 
         [TestMethod]
         public async Task HttpClientServiceTests_ComplexRequestType_ShouldSerializeAndSent()
         {
+            var httpClientService = await Tests.Helpers.HttpClientServiceInstances.GetNew(HttpStatusCode.Created, "body_of_response", true);
 
-            var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("key", "section_data"),
-                new CoreHttpClient(
-                    IHttpClientFactoryMocks.Get(HttpStatusCode.Created, "body_of_response").CreateClient()
-                ),
-                new HttpRequestMessageFactory(
-                    IHttpContextAccessorMocks.Get()
-                ),
-                new TokenResponseService(
-                    new IdentityServerHttpClient(
-                        IHttpClientFactoryMocks.Get(HttpStatusCode.OK).CreateClient()
-                    ),
-                    IAccessTokenCacheManagerMocks.Get(
-                        await TokenResponseMock.GetValidResponseAsync("access_token", 3600)
-                    )
-                )
-            ).CreateHttpClientService();
-
-            var result = await httpClientService.SendAsync<ComplexTypeRequest, string>(
+            var result = await httpClientService.SendAsync<ComplexTypes.ComplexTypeRequest, string>(
                     new Uri("http://localhost"),
                     HttpMethod.Post,
-                    new ComplexTypeRequest()
+                    ComplexTypes.ComplexTypeRequestInstance
                 );
 
             Assert.AreEqual(HttpStatusCode.Created, result.StatusCode);
@@ -55,36 +38,18 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
             var requestBody = await result.HttpRequestMessge.Content.ReadAsStringAsync();
             Assert.AreEqual("application/json", result.HttpRequestMessge.Content.Headers.ContentType.MediaType);
             Assert.AreEqual("utf-8", result.HttpRequestMessge.Content.Headers.ContentType.CharSet);
-            Assert.AreEqual(this.ComplexTypeRequestString.ToLower(), requestBody.ToLower());
+            Assert.AreEqual(ComplexTypes.ComplexTypeRequestString.ToLower(), requestBody.ToLower());
         }
 
         [TestMethod]
         public async Task HttpClientServiceTests_TypeContentRequestTypeDefault_ShouldSerializeAndSent()
         {
+            var httpClientService = await Tests.Helpers.HttpClientServiceInstances.GetNew(HttpStatusCode.Created, "body_of_response", true);
 
-            var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("key", "section_data"),
-                new CoreHttpClient(
-                    IHttpClientFactoryMocks.Get(HttpStatusCode.Created, "body_of_response").CreateClient()
-                ),
-                new HttpRequestMessageFactory(
-                    IHttpContextAccessorMocks.Get()
-                ),
-                new TokenResponseService(
-                    new IdentityServerHttpClient(
-                        IHttpClientFactoryMocks.Get(HttpStatusCode.OK).CreateClient()
-                    ),
-                    IAccessTokenCacheManagerMocks.Get(
-                        await TokenResponseMock.GetValidResponseAsync("access_token", 3600)
-                    )
-                )
-            ).CreateHttpClientService();
-
-            var complexTypeRequest = new ComplexTypeRequest();
-            var result = await httpClientService.SendAsync<TypeContent<ComplexTypeRequest>, string>(
+            var result = await httpClientService.SendAsync<TypeContent<ComplexTypes.ComplexTypeRequest>, string>(
                     new Uri("http://localhost"),
                     HttpMethod.Post,
-                    new TypeContent<ComplexTypeRequest>(complexTypeRequest)
+                    new TypeContent<ComplexTypes.ComplexTypeRequest>(ComplexTypes.ComplexTypeRequestInstance)
                 );
 
             Assert.AreEqual(HttpStatusCode.Created, result.StatusCode);
@@ -92,37 +57,19 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
             var requestBody = await result.HttpRequestMessge.Content.ReadAsStringAsync();
             Assert.AreEqual("application/json", result.HttpRequestMessge.Content.Headers.ContentType.MediaType);
             Assert.AreEqual("utf-8", result.HttpRequestMessge.Content.Headers.ContentType.CharSet);
-            Assert.AreEqual(this.ComplexTypeRequestString.ToLower(), requestBody.ToLower());
+            Assert.AreEqual(ComplexTypes.ComplexTypeRequestString.ToLower(), requestBody.ToLower());
         }
 
 
         [TestMethod]
         public async Task HttpClientServiceTests_TypeContentRequestTypeWithHeaders_ShouldSerializeAndSent()
         {
+            var httpClientService = await Tests.Helpers.HttpClientServiceInstances.GetNew(HttpStatusCode.Created, "body_of_response", true);
 
-            var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("key", "section_data"),
-                new CoreHttpClient(
-                    IHttpClientFactoryMocks.Get(HttpStatusCode.Created, "body_of_response").CreateClient()
-                ),
-                new HttpRequestMessageFactory(
-                    IHttpContextAccessorMocks.Get()
-                ),
-                new TokenResponseService(
-                    new IdentityServerHttpClient(
-                        IHttpClientFactoryMocks.Get(HttpStatusCode.OK).CreateClient()
-                    ),
-                    IAccessTokenCacheManagerMocks.Get(
-                        await TokenResponseMock.GetValidResponseAsync("access_token", 3600)
-                    )
-                )
-            ).CreateHttpClientService();
-
-            var complexTypeRequest = new ComplexTypeRequest();
-            var result = await httpClientService.SendAsync<TypeContent<ComplexTypeRequest>, string>(
+            var result = await httpClientService.SendAsync<TypeContent<ComplexTypes.ComplexTypeRequest>, string>(
                     new Uri("http://localhost"),
                     HttpMethod.Post,
-                    new TypeContent<ComplexTypeRequest>(complexTypeRequest, Encoding.UTF32, "some/type")
+                    new TypeContent<ComplexTypes.ComplexTypeRequest>(ComplexTypes.ComplexTypeRequestInstance, Encoding.UTF32, "some/type")
                 );
 
             Assert.AreEqual(HttpStatusCode.Created, result.StatusCode);
@@ -130,30 +77,13 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
             var requestBody = await result.HttpRequestMessge.Content.ReadAsStringAsync();
             Assert.AreEqual("some/type", result.HttpRequestMessge.Content.Headers.ContentType.MediaType);
             Assert.AreEqual("utf-32", result.HttpRequestMessge.Content.Headers.ContentType.CharSet);
-            Assert.AreEqual(this.ComplexTypeRequestString.ToLower(), requestBody.ToLower());
+            Assert.AreEqual(ComplexTypes.ComplexTypeRequestString.ToLower(), requestBody.ToLower());
         }
 
         [TestMethod]
         public async Task HttpClientServiceTests_PrimitiveRequestType_ShouldSerializeAndSent()
         {
-
-            var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("key", "section_data"),
-                new CoreHttpClient(
-                    IHttpClientFactoryMocks.Get(HttpStatusCode.Created, "body_of_response").CreateClient()
-                ),
-                new HttpRequestMessageFactory(
-                    IHttpContextAccessorMocks.Get()
-                ),
-                new TokenResponseService(
-                    new IdentityServerHttpClient(
-                        IHttpClientFactoryMocks.Get(HttpStatusCode.OK).CreateClient()
-                    ),
-                    IAccessTokenCacheManagerMocks.Get(
-                        await TokenResponseMock.GetValidResponseAsync("access_token", 3600)
-                    )
-                )
-            ).CreateHttpClientService();
+            var httpClientService = await Tests.Helpers.HttpClientServiceInstances.GetNew(HttpStatusCode.Created, "body_of_response", true);
 
             var result = await httpClientService.SendAsync<int, string>(
                     new Uri("http://localhost"),
@@ -172,24 +102,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
         [TestMethod]
         public async Task HttpClientServiceTests_StringContentRequestTypeWithHeaders_ShouldSerializeAndSent()
         {
-
-            var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("key", "section_data"),
-                new CoreHttpClient(
-                    IHttpClientFactoryMocks.Get(HttpStatusCode.Created, "body_of_response").CreateClient()
-                ),
-                new HttpRequestMessageFactory(
-                    IHttpContextAccessorMocks.Get()
-                ),
-                new TokenResponseService(
-                    new IdentityServerHttpClient(
-                        IHttpClientFactoryMocks.Get(HttpStatusCode.OK).CreateClient()
-                    ),
-                    IAccessTokenCacheManagerMocks.Get(
-                        await TokenResponseMock.GetValidResponseAsync("access_token", 3600)
-                    )
-                )
-            ).CreateHttpClientService();
+            var httpClientService = await Tests.Helpers.HttpClientServiceInstances.GetNew(HttpStatusCode.Created, "body_of_response", true);
 
             var result = await httpClientService.SendAsync<StringContent, string>(
                     new Uri("http://localhost"),
@@ -208,24 +121,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
         [TestMethod]
         public async Task HttpClientServiceTests_StreamContentRequestType_ShouldSentAsStream()
         {
-
-            var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("key", "section_data"),
-                new CoreHttpClient(
-                    IHttpClientFactoryMocks.Get(HttpStatusCode.Created, "body_of_response").CreateClient()
-                ),
-                new HttpRequestMessageFactory(
-                    IHttpContextAccessorMocks.Get()
-                ),
-                new TokenResponseService(
-                    new IdentityServerHttpClient(
-                        IHttpClientFactoryMocks.Get(HttpStatusCode.OK).CreateClient()
-                    ),
-                    IAccessTokenCacheManagerMocks.Get(
-                        await TokenResponseMock.GetValidResponseAsync("access_token", 3600)
-                    )
-                )
-            ).CreateHttpClientService();
+            var httpClientService = await Tests.Helpers.HttpClientServiceInstances.GetNew(HttpStatusCode.Created, "body_of_response", true);
 
             using (var memoryStream = new MemoryStream())
             using (var writer = new StreamWriter(memoryStream))

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace IdentityServer4.Contrib.HttpClientService.Tests.Helpers
 {
-    public static class IAccessTokenCacheManagerMocks
+    public static class ITokenResponseCacheManagerMocks
     {
         public static ITokenResponseCacheManager Get(TokenResponse expectedValue)
         {

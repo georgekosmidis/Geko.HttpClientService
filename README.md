@@ -19,14 +19,14 @@ ___
 ##### Table of Contents
 1. [Getting started](#getting-started)
    1. [It’s a nuget package!](#its-a-nuget-package)
-   2. [IdentityServer4 access token request options](#identityserver4-access-token-request-options)
+   2. [IdentityServer4 Access Token Request Options](#identityserver4-access-token-request-options)
    3. [Register the service](#register-the-service)
    4. [You are done!](#you-are-done)
 2. [How to setup an Access Token Request](#how-to-setup-an-access-token-request)
    1. [.SetIdentityServerOptions(String)](#setidentityserveroptionsstring)
-   2. [.SetIdentityServerOptions&lt;TOptions&gt;(TOptions)](#setidentityserveroptionstoptions)
-   3. [.SetIdentityServerOptions&lt;TOptions&gt;(IOptions&lt;TOptions&gt;)](#setidentityserveroptionsioptions)
-   4. [.SetIdentityServerOptions&lt;TOptions&gt;(Action&lt;TOptions&gt;)](#setidentityserveroptionsaction)
+   2. [.SetIdentityServerOptions&lt;TOptions&gt;(TOptions)](#setidentityserveroptionstoptionstoptions)
+   3. [.SetIdentityServerOptions&lt;TOptions&gt;(IOptions&lt;TOptions&gt;)](#setidentityserveroptionstoptionsioptionstoptions)
+   4. [.SetIdentityServerOptions&lt;TOptions&gt;(Action&lt;TOptions&gt;)](#setidentityserveroptionstoptionsactiontoptions)
 3. [More info on how to serialize request, deserialize response](#more-info-on-how-to-serialize-request-deserialize-response)
    1. [ResponseObject](#responseobject)
    2. [TypeContent(TRequestBody, Encoding, string)](#typecontenttrequestbody-encoding-string)
@@ -36,19 +36,19 @@ ___
 
 ## Getting started
 
-Getting started with IdentityServer4.Contrib.HttpClientService is rather easy, you only need three things:
+Getting started with `IdentityServer4.Contrib.HttpClientService` is rather easy, you only need three things:
 
  1. Install the nuget package [IdentityServer4.Contrib.HttpClientService](https://www.nuget.org/packages/IdentityServer4.Contrib.HttpClientService)
- 2. Provide the options to authenticate in `appsettings.json`
+ 2. Provide the options to request an access token in the `appsettings.json`
  3. Register the service in `Startup.cs`
 
 ### It's a nuget package!
 
 Install the [IdentityServer4.Contrib.HttpClientService](https://www.nuget.org/packages/IdentityServer4.Contrib.HttpClientService) nuget package, using your favorite way.
 
-### IdentityServer4 access token request options
+### IdentityServer4 Access Token Request Options
 
-Add the IdentityServer4 client credentials options to your `appsettings.json` (you could very well skip this step if you use one of [the other ways of setting up an access token request](#how-to-setup-an-access-token-request))
+Add the IdentityServer4 Access Token Request Options to your `appsettings.json` (here `ClientCredentialsOptions`):
 
 ```json
 "SomeClientCredentialsOptions": {
@@ -57,9 +57,10 @@ Add the IdentityServer4 client credentials options to your `appsettings.json` (y
     "ClientSecret": "secret",
     "Scopes": "api"
   }
+ // The values above are part of the demo offered in https://demo.identityserver.io/
 ```
 
-*The values above are part of the demo offered in <https://demo.identityserver.io/>*
+> You could very well skip this step if you use one of [the other ways of setting up an Access Token Request](#how-to-setup-an-access-token-request).
 
 ### Register the service
 
@@ -68,12 +69,15 @@ Register the service In `StartUp.cs` in `ConfigureServices(IServiceCollection se
 ```csharp
 services.AddHttpClientService();
 ```
+> You would also need to configure the service if you plan to use the [options pattern](#setidentityserveroptionstoptionsioptionstoptions).
 
 ### You are done!
 
-Inject the `IHttpClientServiceFactory` wherever you want to make the an authenticated requests:
+Inject the `IHttpClientServiceFactory` wherever you want to make the authenticated requests:
 
 ```csharp
+using IdentityServer4.Contrib.HttpClientService.Extensions
+
 public class ProtectedResourceService {
 
   private readonly IHttpClientServiceFactory _requestServiceFactory;
@@ -92,7 +96,11 @@ public class ProtectedResourceService {
 }
 ```
 
-> The `.SetIdentityServerOptions("SomeClientCredentialsOptions")` might be simplest way of setting up an [Access Token Request](#how-to-setup-an-access-token-request), the [options pattern](#setidentityserveroptionsioptions) though is the most common one.
+> The `.SetIdentityServerOptions("SomeClientCredentialsOptions")` might be the simplest way of setting up an [Access Token Request](#how-to-setup-an-access-token-request), the [Options Pattern](#setidentityserveroptionsioptions) though is the suggested one. 
+> HTTP verbs supported are: [GET](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceGetExtensions.html), [POST](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions.html), [PUT](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions.html), [DELETE](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.html), [PATCH](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.html) and [HEAD](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceHeadExtensions.html). 
+
+Continue reading for more details!
+You can also take a look at the [Documentation](api/index.md) for technical details, check the [features sample](https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/tree/master/samples/IdentityServer4.Contrib.HttpClientService.FeaturesSample) or a more [complete one](https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/tree/master/samples/IdentityServer4.Contrib.HttpClientService.CompleteSample).
 
 ___
 
@@ -100,17 +108,18 @@ ___
 
 The library supports multiple ways for setting up the necessary options for retrieving an access token. Upon success of retrieving one, the result is cached until the token expires; that means that a new request to a protected resource does not necessarily means a new request for an access token.
 
-> Currently, the library supports `ClientCredentialsTokenRequest` and `PasswordTokenRequest`.
+> Currently, the library only supports `ClientCredentialsTokenRequest` and `PasswordTokenRequest`.
 
 ### .SetIdentityServerOptions(String)
 
-Setup IdentityServer options by defining the configuration section. The type of the options (`ClientCredentialsTokenRequest` or `PasswordTokenRequest`) will be determined based on the contents of this section:
+Setup IdentityServer options by defining the configuration section where you have your settings. The type of the options (`ClientCredentialsTokenRequest` or `PasswordTokenRequest`) will be determined based on the contents of this section:
 
 ```csharp
 //...
 .SetIdentityServerOptions("appsettings_section")
 //...
 ```
+Although this option is not adviced for `PasswordTokenRequest`, the section should contain the properties of either the `ClientCredentialsTokenRequest` or `PasswordTokenRequest` objects.
 
 ### .SetIdentityServerOptions&lt;TOptions&gt;(TOptions)
 
@@ -134,16 +143,33 @@ Setup IdentityServer options by passing a `ClientCredentialsOptions` or `Passwor
 
 ### .SetIdentityServerOptions&lt;TOptions&gt;(IOptions&lt;TOptions&gt;)
 
-Setup IdentityServer options using the [options pattern](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options):
+Setup IdentityServer options using the options pattern (read more about the options pattern in [Microsoft Docs](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options)):
+
+**Startup.cs**
 
 ```csharp
 //...
-public class ProtectedResourceService
+    public void ConfigureServices(IServiceCollection services)
+    {
+        //...
+        services.AddHttpClientService()
+            .AddSingleton<IProtectedResourceService, ProtectedResourceService>()
+            .Configure<ClientCredentialsOptions>(Configuration.GetSection(nameof(ClientCredentialsOptions)));    
+        //...
+    }
+//...
+```
+
+**ProtectedResourceService.cs**
+
+```csharp
+//...
+public class ProtectedResourceService : IProtectedResourceService
 {
   private readonly IHttpClientServiceFactory _requestServiceFactory;
-  private readonly IOptions<ProtectedResourceClientCredentialsOptions> _identityServerOptions;
+  private readonly IOptions<ClientCredentialsOptions> _identityServerOptions;
 
-  public ProtectedResourceService(IHttpClientServiceFactory requestServiceFactory, IOptions<ProtectedResourceClientCredentialsOptions> identityServerOptions)
+  public ProtectedResourceService(IHttpClientServiceFactory requestServiceFactory, IOptions<ClientCredentialsOptions> identityServerOptions)
   {
     _requestServiceFactory = requestServiceFactory;
     _identityServerOptions = identityServerOptions;
@@ -180,7 +206,7 @@ ___
 
 ## More info on how to serialize request, deserialize response
 
-Responses can always be deserialized to the typed defined in, for example, `GetAsync`:
+Responses can always be deserialized to the type `TResponseBody` defined in, for example, `GetAsync<TResponseBody>`:
 
 ```csharp
 //...
@@ -188,26 +214,18 @@ Responses can always be deserialized to the typed defined in, for example, `GetA
 //...
 ```
 
-Setting up complex request body for POST, PUT and PATCH requests is also very easy:
+Using a complex type as a request body for POST, PUT and PATCH requests is also very easy. In the example that follows the type `TRequestBody` of the `PostAsync<TRequestBody,TResponseBody>` sets the type of the `requestPoco` object. This will be serialized using `JsonConvert.SerializeObject(requestPoco, Formatting.None)`:
 
 ```csharp
 //...
-.PostAsync<RequestPoco,ResponsePoco>("https://url_that_accepts_RequestPoco_and_responds_with_ResponsePoco", responsePoco);
+.PostAsync<RequestPoco,ResponsePoco>("https://url_that_accepts_RequestPoco_and_responds_with_ResponsePoco", requestPoco);
 //...
 ```
+> If you want to fine tune how the `requestPoco` object is sent, please use the [TypeContent(TRequestBody, Encoding, string)](#typecontenttrequestbody-encoding-string). Without using `TypeContent(...)` to explitily set media-type and encoding, the defaults will be used: 'application/json' and 'UTF-8'.
 
 ### ResponseObject
 
-The variable **[responseObject](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html)** contains multiple properties: from the entire `HttpResponseMessage` and `HttpRequestMessage`, to the `HttpStatusCode` and `HttpResponseHeaders`. The most *exciting* feature though, is the `TResponseBody BodyAsType` property which will contain deserializabled complex types from JSON responses (in the example above the `BodyAsType` will be of type `IEnumerable<Customers>`). Check the [ResponseObject&lt;TResponseBody&gt;](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html) in the docs.
-
-```csharp
-var responseObject = await _requestServiceFactory
-                          //Create a instance of the service
-                          .CreateHttpClientService()
-                          //.PostAsync<TRequestBody,TResponseBody>(URL, customer of type Customer1)
-                          .PostAsync<Customer1,Customer2>("https://api/customers", customer);
-```
-> Without using `TypeContent(...)` to explitily set media-type and encoding, the defaults will be used: 'application/json' and 'UTF-8'
+The variable **[responseObject](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html)** contains multiple properties: from the entire `HttpResponseMessage` and `HttpRequestMessage`, to the `HttpStatusCode` and `HttpResponseHeaders`. The most *exciting* feature though, is the `TResponseBody BodyAsType` property which will contain the deserializabled complex types from JSON responses. For a complete list of all the properties, check the [ResponseObject&lt;TResponseBody&gt;](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html) in the docs.
 
 ### TypeContent(TRequestBody, Encoding, string)
 You can also fine tune encoding and media-type by using the `TypeContent(TRequestBody model, Encoding encoding, string mediaType)` like this:
@@ -219,8 +237,6 @@ var responseObject = await _requestServiceFactory
                           //.PostAsync<TRequestBody,TResponseBody>(URL, customer of type Customer1)
                           .PostAsync<TypeContent<Customer1>,Customer2>("https://api/customers", new TypeContent(customer, Encoding.UTF8, "application/json"));
 ```
-
-HTTP verbs supported are: [GET](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceGetExtensions.html), [POST](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions.html), [PUT](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions.html), [DELETE](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.html), [PATCH](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.html) and [HEAD](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceHeadExtensions.html). Read the [Documentation](api/index.md) for technical details, check the [features sample](https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/tree/master/samples/IdentityServer4.Contrib.HttpClientService.FeaturesSample) or a more [complete one](https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/tree/master/samples/IdentityServer4.Contrib.HttpClientService.CompleteSample).
 
 ___
 

@@ -12,6 +12,7 @@ using System.IO;
 using System.Collections.Generic;
 using Microsoft.Extensions.Configuration;
 using System.Runtime.Serialization;
+using IdentityModel.Client;
 
 namespace IdentityServer4.Contrib.HttpClientService
 {
@@ -230,6 +231,19 @@ namespace IdentityServer4.Contrib.HttpClientService
 
             identityServerOptions = options;
             return this;
+        }
+
+        /// <summary>
+        /// Retrieves the TokenResponse from the IdentityServer
+        /// </summary>
+        /// <returns>A <see cref="TokenResponse"/></returns>
+        public async Task<TokenResponse> GetTokenResponse()
+        {
+            if (identityServerOptions == null)
+                throw new InvalidOperationException("IdentityServerOptions have not been set. Please set the options with one of the SetIdentityServerOptions overloads first.");
+
+            return await _accessTokenService.GetTokenResponseAsync(identityServerOptions);
+
         }
         #endregion
 

@@ -26,7 +26,7 @@ namespace IdentityServer4.Contrib.HttpClientService.CompleteSample.Controllers
         /// </summary>
         /// <param name="protectedResourceService"></param>
         public SampleController(
-            IClientCredentials2ProtectedResourceService clientCredentials2ProtectedResourceService, 
+            IClientCredentials2ProtectedResourceService clientCredentials2ProtectedResourceService,
             IClientCredentialsProtectedResourceService clientCredentialsProtectedResourceService,
             IPasswordProtectedResourceService passwordProtectedResourceService)
         {
@@ -54,7 +54,10 @@ namespace IdentityServer4.Contrib.HttpClientService.CompleteSample.Controllers
         [HttpGet("password")]
         public async Task<IActionResult> GetPassword()
         {
-            return Ok(await _passwordProtectedResourceService.GetProtectedResourceResults("username","password"));
+            if (await _passwordProtectedResourceService.TrySettingPasswordOptions("username", "password"))
+                return Ok(await _passwordProtectedResourceService.GetProtectedResourceResults());
+            else
+                return BadRequest("Username or password is wrong");
         }
     }
 }

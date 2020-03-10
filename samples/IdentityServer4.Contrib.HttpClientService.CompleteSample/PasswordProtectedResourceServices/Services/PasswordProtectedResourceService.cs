@@ -16,7 +16,7 @@ namespace IdentityServer4.Contrib.HttpClientService.CompleteSample.PasswordProte
     public class PasswordProtectedResourceService : IPasswordProtectedResourceService
     {
         private readonly ILogger<PasswordProtectedResourceService> _logger;
-        private readonly IHttpClientServiceFactory _requestServiceFactory;
+        private readonly HttpClientService _requestService;
         private readonly IOptions<SomePasswordOptions> _identityServerOptions;
 
         /// <summary>
@@ -28,20 +28,20 @@ namespace IdentityServer4.Contrib.HttpClientService.CompleteSample.PasswordProte
         public PasswordProtectedResourceService(ILogger<PasswordProtectedResourceService> logger, IHttpClientServiceFactory requestServiceFactory, IOptions<SomePasswordOptions> identityServerOptions)
         {
             _logger = logger;
-            _requestServiceFactory = requestServiceFactory;
+            _requestService = requestServiceFactory.CreateHttpClientService();
             _identityServerOptions = identityServerOptions;
         }
 
         /// <summary>
-        /// Sample request that returns a typed response using GET
+        /// Returns true if an access token is succesfully retrieved
         /// </summary>
-        /// <returns>An <see cref="IEnumerable{ProtectedResourceResponseDto}"/>. </returns>
-        public async Task<IEnumerable<PasswordProtectedResourceResponseDto>> GetProtectedResourceResults(string username, string password)
+        /// <param name="username">The username</param>
+        /// <param name="password">The username</param>
+        /// <returns>A boolean indicating if the access token has benn succesfully retrieved.</returns>
+        public async Task<bool> TrySettingPasswordOptions(string username, string password)
         {
-            
-            var response = await _requestServiceFactory
-                .CreateHttpClientService()
-                .SetIdentityServerOptions<SomePasswordOptions>(x =>                                                 //Set the options to retrieve an access token
+            var response = await _requestService
+                .SetIdentityServerOptions<SomePasswordOptions>(x =>
                 {
                     x.Address = _identityServerOptions.Value.Address;
                     x.ClientId = _identityServerOptions.Value.ClientId;
@@ -49,7 +49,19 @@ namespace IdentityServer4.Contrib.HttpClientService.CompleteSample.PasswordProte
                     x.Scope = _identityServerOptions.Value.Scope;
                     x.Username = username;
                     x.Password = password;
-                })                                                                                                  
+                })
+                .GetTokenResponse();
+
+            return response.HttpStatusCode == System.Net.HttpStatusCode.OK;
+        }
+
+        /// <summary>
+        /// Sample request that returns a typed response using GET
+        /// </summary>
+        /// <returns>An <see cref="IEnumerable{ProtectedResourceResponseDto}"/>. </returns>
+        public async Task<IEnumerable<PasswordProtectedResourceResponseDto>> GetProtectedResourceResults()
+        {
+            var response = await _requestService
                 .HeadersAdd("X-Request-Client", "IdentityServer4.Contrib.HttpClientService")                        //Set custom headers for this request
                 .GetAsync<IEnumerable<PasswordProtectedResourceResponseDto>>("https://demo.identityserver.io/api/test");    //Execute the request
 
@@ -59,9 +71,7 @@ namespace IdentityServer4.Contrib.HttpClientService.CompleteSample.PasswordProte
             }
             else
             {
-                //log, error handle, etc
-                _logger.LogError(response.StatusCode + " " + response.Error);
-                return new List<PasswordProtectedResourceResponseDto>();
+                throw new InvalidOperationException("No PasswordOptions set. Please use 'TrySettingPasswordOptions(string, string)' before calling this method");
             }
         }
 

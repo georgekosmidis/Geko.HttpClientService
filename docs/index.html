@@ -68,7 +68,7 @@
                           //Create a instance of the service
                           .CreateHttpClientService()
                           //Also supports IOptions&lt;&gt;
-                          .SetIdentityServerOptions(&quot;appsettings_section&quot;)
+                          .SetIdentityServerOptions(&quot;ClientCredentialsOptions&quot;)
                           //GET and deserialize the response body to IEnumerable&lt;Customers&gt;
                           .GetAsync&lt;IEnumerable&lt;Customers&gt;&gt;(&quot;https://api/customers&quot;);
 </code></pre>

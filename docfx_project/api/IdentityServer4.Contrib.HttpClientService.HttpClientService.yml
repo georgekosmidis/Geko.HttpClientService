@@ -340,18 +340,18 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 160
+    startLine: 161
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
-  summary: "\nSets the IdentityServer4 options for retrieving an access token using client credentials by passing the appsettings configuration section \nthat contain the necessary configuration keys.\n"
+  summary: "\nSets the IdentityServer4 options for retrieving an access token s by passing the appsettings configuration section \nthat contain the necessary configuration keys. The section name should be or end with \neither <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ClientCredentialsOptions\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.PasswordOptions\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public HttpClientService SetIdentityServerOptions(string configurationSection)
     parameters:
     - id: configurationSection
       type: System.String
-      description: "\nThe name of the configuration section that contains the information for requesting an access token. \nSee <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ClientCredentialsOptions\" data-throw-if-not-resolved=\"false\"></xref> for the property names.\n"
+      description: "\nThe name of the configuration section that contains the information for requesting an access token. \nIt should be or end with either <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ClientCredentialsOptions\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.PasswordOptions\" data-throw-if-not-resolved=\"false\"></xref>.\n"
     return:
       type: IdentityServer4.Contrib.HttpClientService.HttpClientService
       description: Returns the current instance of <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
@@ -379,7 +379,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 183
+    startLine: 193
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -426,7 +426,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 200
+    startLine: 210
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -472,7 +472,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 211
+    startLine: 222
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -517,7 +517,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SendAsync
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 302
+    startLine: 313
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -3681,6 +3681,11 @@ references:
   name: ClientCredentialsOptions
   nameWithType: ClientCredentialsOptions
   fullName: IdentityServer4.Contrib.HttpClientService.Models.ClientCredentialsOptions
+- uid: IdentityServer4.Contrib.HttpClientService.Models.PasswordOptions
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Models.PasswordOptions
+  name: PasswordOptions
+  nameWithType: PasswordOptions
+  fullName: IdentityServer4.Contrib.HttpClientService.Models.PasswordOptions
 - uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions*
   commentId: Overload:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions
   name: SetIdentityServerOptions

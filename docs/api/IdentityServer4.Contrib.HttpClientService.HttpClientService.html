@@ -412,7 +412,7 @@
     <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/new/feature/PasswordTokenRequest/apiSpec/new?filename=IdentityServer4_Contrib_HttpClientService_HttpClientService_SendAsync__2_System_Uri_System_Net_Http_HttpMethod___0_.md&amp;value=---%0Auid%3A%20IdentityServer4.Contrib.HttpClientService.HttpClientService.SendAsync%60%602(System.Uri%2CSystem.Net.Http.HttpMethod%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/feature/PasswordTokenRequest/src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs/#L303">View Source</a>
+    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/feature/PasswordTokenRequest/src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs/#L314">View Source</a>
   </span>
   <a id="IdentityServer4_Contrib_HttpClientService_HttpClientService_SendAsync_" data-uid="IdentityServer4.Contrib.HttpClientService.HttpClientService.SendAsync*"></a>
   <h4 id="IdentityServer4_Contrib_HttpClientService_HttpClientService_SendAsync__2_System_Uri_System_Net_Http_HttpMethod___0_" data-uid="IdentityServer4.Contrib.HttpClientService.HttpClientService.SendAsync``2(System.Uri,System.Net.Http.HttpMethod,``0)">SendAsync&lt;TRequestBody, TResponseBody&gt;(Uri, HttpMethod, TRequestBody)</h4>
@@ -507,12 +507,13 @@ The type used can be one of the following:</p>
     <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/new/feature/PasswordTokenRequest/apiSpec/new?filename=IdentityServer4_Contrib_HttpClientService_HttpClientService_SetIdentityServerOptions_System_String_.md&amp;value=---%0Auid%3A%20IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/feature/PasswordTokenRequest/src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs/#L161">View Source</a>
+    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/feature/PasswordTokenRequest/src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs/#L162">View Source</a>
   </span>
   <a id="IdentityServer4_Contrib_HttpClientService_HttpClientService_SetIdentityServerOptions_" data-uid="IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions*"></a>
   <h4 id="IdentityServer4_Contrib_HttpClientService_HttpClientService_SetIdentityServerOptions_System_String_" data-uid="IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(System.String)">SetIdentityServerOptions(String)</h4>
-  <div class="markdown level1 summary"><p>Sets the IdentityServer4 options for retrieving an access token using client credentials by passing the appsettings configuration section
-that contain the necessary configuration keys.</p>
+  <div class="markdown level1 summary"><p>Sets the IdentityServer4 options for retrieving an access token s by passing the appsettings configuration section
+that contain the necessary configuration keys. The section name should be or end with
+either <a class="xref" href="IdentityServer4.Contrib.HttpClientService.Models.ClientCredentialsOptions.html">ClientCredentialsOptions</a> or <a class="xref" href="IdentityServer4.Contrib.HttpClientService.Models.PasswordOptions.html">PasswordOptions</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -533,7 +534,7 @@ that contain the necessary configuration keys.</p>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">configurationSection</span></td>
         <td><p>The name of the configuration section that contains the information for requesting an access token.
-See <a class="xref" href="IdentityServer4.Contrib.HttpClientService.Models.ClientCredentialsOptions.html">ClientCredentialsOptions</a> for the property names.</p>
+It should be or end with either <a class="xref" href="IdentityServer4.Contrib.HttpClientService.Models.ClientCredentialsOptions.html">ClientCredentialsOptions</a> or <a class="xref" href="IdentityServer4.Contrib.HttpClientService.Models.PasswordOptions.html">PasswordOptions</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -559,7 +560,7 @@ See <a class="xref" href="IdentityServer4.Contrib.HttpClientService.Models.Clien
     <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/new/feature/PasswordTokenRequest/apiSpec/new?filename=IdentityServer4_Contrib_HttpClientService_HttpClientService_SetIdentityServerOptions__1___0_.md&amp;value=---%0Auid%3A%20IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions%60%601(%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/feature/PasswordTokenRequest/src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs/#L212">View Source</a>
+    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/feature/PasswordTokenRequest/src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs/#L223">View Source</a>
   </span>
   <a id="IdentityServer4_Contrib_HttpClientService_HttpClientService_SetIdentityServerOptions_" data-uid="IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions*"></a>
   <h4 id="IdentityServer4_Contrib_HttpClientService_HttpClientService_SetIdentityServerOptions__1___0_" data-uid="IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(``0)">SetIdentityServerOptions&lt;TOptions&gt;(TOptions)</h4>
@@ -624,7 +625,7 @@ See <a class="xref" href="IdentityServer4.Contrib.HttpClientService.Models.Clien
     <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/new/feature/PasswordTokenRequest/apiSpec/new?filename=IdentityServer4_Contrib_HttpClientService_HttpClientService_SetIdentityServerOptions__1_Microsoft_Extensions_Options_IOptions___0__.md&amp;value=---%0Auid%3A%20IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions%60%601(Microsoft.Extensions.Options.IOptions%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/feature/PasswordTokenRequest/src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs/#L184">View Source</a>
+    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/feature/PasswordTokenRequest/src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs/#L194">View Source</a>
   </span>
   <a id="IdentityServer4_Contrib_HttpClientService_HttpClientService_SetIdentityServerOptions_" data-uid="IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions*"></a>
   <h4 id="IdentityServer4_Contrib_HttpClientService_HttpClientService_SetIdentityServerOptions__1_Microsoft_Extensions_Options_IOptions___0__" data-uid="IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(Microsoft.Extensions.Options.IOptions{``0})">SetIdentityServerOptions&lt;TOptions&gt;(IOptions&lt;TOptions&gt;)</h4>
@@ -691,7 +692,7 @@ See <a class="xref" href="IdentityServer4.Contrib.HttpClientService.Models.Clien
     <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/new/feature/PasswordTokenRequest/apiSpec/new?filename=IdentityServer4_Contrib_HttpClientService_HttpClientService_SetIdentityServerOptions__1_System_Action___0__.md&amp;value=---%0Auid%3A%20IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions%60%601(System.Action%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/feature/PasswordTokenRequest/src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs/#L201">View Source</a>
+    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/feature/PasswordTokenRequest/src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs/#L211">View Source</a>
   </span>
   <a id="IdentityServer4_Contrib_HttpClientService_HttpClientService_SetIdentityServerOptions_" data-uid="IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions*"></a>
   <h4 id="IdentityServer4_Contrib_HttpClientService_HttpClientService_SetIdentityServerOptions__1_System_Action___0__" data-uid="IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(System.Action{``0})">SetIdentityServerOptions&lt;TOptions&gt;(Action&lt;TOptions&gt;)</h4>

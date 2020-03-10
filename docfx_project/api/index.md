@@ -11,7 +11,7 @@ A lazy singleton instantiation for use outside of a DI container (e.g. a Desktop
 ## Setting IdentityServer options and Headers (HttpClientService)
 
 - [SetIdentityServerOptions(String)](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html#IdentityServer4_Contrib_HttpClientService_HttpClientService_SetIdentityServerOptions_System_String_)
-Sets the IdentityServer4 options for retrieving an access token using client credentials by passing the appsettings configuration section that contain the necessary configuration keys.
+Sets the IdentityServer4 options for retrieving an access token s by passing the appsettings configuration section that contain the necessary configuration keys. The section name should be or end with either `ClientCredentialsOptions` or `PasswordOptions`.
 - [SetIdentityServerOptions<TTokenServiceOptions>(IOptions<TTokenServiceOptions>)](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html#IdentityServer4_Contrib_HttpClientService_HttpClientService_SetIdentityServerOptions__1_Microsoft_Extensions_Options_IOptions___0__)
 Sets the IdentityServer4 options for retrieving an access token using client credentials.
 

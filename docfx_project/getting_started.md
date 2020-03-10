@@ -12,7 +12,7 @@ Install the [IdentityServer4.Contrib.HttpClientService](https://www.nuget.org/pa
 
 ### IdentityServer4 Access Token Request Options
 
-Add the IdentityServer4 Access Token Request Options to your `appsettings.json` (here `ClientCredentialsOptions`):
+Add the IdentityServer4 Access Token Request Options to your `appsettings.json` (the configuration section should always be or end with `ClientCredentialsOptions`):
 
 ```json
 "SomeClientCredentialsOptions": {

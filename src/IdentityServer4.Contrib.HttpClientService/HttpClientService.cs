@@ -150,12 +150,13 @@ namespace IdentityServer4.Contrib.HttpClientService
 
         #region IdentityServer
         /// <summary>
-        /// Sets the IdentityServer4 options for retrieving an access token using client credentials by passing the appsettings configuration section 
-        /// that contain the necessary configuration keys.
+        /// Sets the IdentityServer4 options for retrieving an access token s by passing the appsettings configuration section 
+        /// that contain the necessary configuration keys. The section name should be or end with 
+        /// either <see cref="ClientCredentialsOptions"/> or <see cref="PasswordOptions"/>.
         /// </summary>
         /// <param name="configurationSection">
         /// The name of the configuration section that contains the information for requesting an access token. 
-        /// See <see cref="ClientCredentialsOptions"/> for the property names.
+        /// It should be or end with either <see cref="ClientCredentialsOptions"/> or <see cref="PasswordOptions"/>.
         /// </param>
         /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
         public HttpClientService SetIdentityServerOptions(string configurationSection)
@@ -168,9 +169,18 @@ namespace IdentityServer4.Contrib.HttpClientService
                 throw new ArgumentException("The configuration section '" + configurationSection + "' cannot be found!", nameof(configurationSection));
 
             //todo: find better way
-            identityServerOptions = _configuration.GetSection(configurationSection).Get<PasswordOptions>();
-            if ((identityServerOptions as PasswordOptions).Username == null)
+            if (configurationSection.ToLower().EndsWith(nameof(ClientCredentialsOptions).ToLower()))
+            {
                 identityServerOptions = _configuration.GetSection(configurationSection).Get<ClientCredentialsOptions>();
+            }
+            else if (configurationSection.ToLower().EndsWith(nameof(PasswordOptions).ToLower()))
+            {
+                identityServerOptions = _configuration.GetSection(configurationSection).Get<PasswordOptions>();
+            }
+            else
+            {
+                throw new InvalidOperationException("The name or the suffix of the cofiguration section must be either '" + nameof(ClientCredentialsOptions) + "' or '" + nameof(PasswordOptions) + "'.");
+            }
 
             return this;
         }
@@ -201,6 +211,7 @@ namespace IdentityServer4.Contrib.HttpClientService
         public HttpClientService SetIdentityServerOptions<TOptions>(Action<TOptions> optionsDelegate)
             where TOptions : class, IIdentityServerOptions
         {
+            identityServerOptions = Activator.CreateInstance(typeof(TOptions)) as TOptions;
             optionsDelegate(identityServerOptions as TOptions);
             return this;
         }

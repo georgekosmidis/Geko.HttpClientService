@@ -6,14 +6,15 @@ The library supports multiple ways for setting up the necessary options for retr
 
 ### .SetIdentityServerOptions(String)
 
-Setup IdentityServer options by defining the configuration section where you have your settings. The type of the options (`ClientCredentialsTokenRequest` or `PasswordTokenRequest`) will be determined based on the contents of this section:
+Setup IdentityServer options by defining the configuration section where you have your settings. The type of the options (`ClientCredentialsOptions` or `PasswordOptions`) will be determined based on the name of the section:
 
 ```csharp
 //...
-.SetIdentityServerOptions("appsettings_section")
+.SetIdentityServerOptions("SomeClientCredentialsOptions")
 //...
 ```
-Although this option is not adviced for `PasswordTokenRequest`, the section should contain the properties of either the `ClientCredentialsTokenRequest` or `PasswordTokenRequest` objects.
+
+Although this option is not adviced for `PasswordTokenRequest`, the section can contain the properties of either the `ClientCredentialsOptions` or `PasswordOptions` objects. Keep in mind, that if you use the `.SetIdentityServerOptions("ClientCredentialsOptions")` approach, the configuration section should either be or end with `ClientCredentialsOptions`.
 
 ### .SetIdentityServerOptions&lt;TOptions&gt;(TOptions)
 

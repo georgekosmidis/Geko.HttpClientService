@@ -9,7 +9,7 @@ var responseObject = await _requestServiceFactory
                           //Create a instance of the service
                           .CreateHttpClientService()
                           //Also supports IOptions<>
-                          .SetIdentityServerOptions("appsettings_section")
+                          .SetIdentityServerOptions("ClientCredentialsOptions")
                           //GET and deserialize the response body to IEnumerable<Customers>
                           .GetAsync<IEnumerable<Customers>>("https://api/customers");
 ```
@@ -48,7 +48,7 @@ Install the [IdentityServer4.Contrib.HttpClientService](https://www.nuget.org/pa
 
 ### IdentityServer4 Access Token Request Options
 
-Add the IdentityServer4 Access Token Request Options to your `appsettings.json` (here `ClientCredentialsOptions`):
+Add the IdentityServer4 Access Token Request Options to your `appsettings.json` (the configuration section should always be or end with `ClientCredentialsOptions`):
 
 ```json
 "SomeClientCredentialsOptions": {
@@ -69,6 +69,7 @@ Register the service In `StartUp.cs` in `ConfigureServices(IServiceCollection se
 ```csharp
 services.AddHttpClientService();
 ```
+
 > You would also need to configure the service if you plan to use the [options pattern](#setidentityserveroptionstoptionsioptionstoptions).
 
 ### You are done!
@@ -90,13 +91,14 @@ public class ProtectedResourceService {
   public async Task<IEnumerable<Customer>> GetCustomers(){
     var response = await _requestServiceFactory
       .CreateHttpClientService()
+	  //Configuration section should always be or end with `ClientCredentialsOptions`
       .SetIdentityServerOptions("SomeClientCredentialsOptions")
       .GetAsync<IEnumerable<Customer>>("https://protected_resource_that_returns_customers_in_json");
   }
 }
 ```
 
-> The `.SetIdentityServerOptions("SomeClientCredentialsOptions")` might be the simplest way of setting up an [Access Token Request](#how-to-setup-an-access-token-request), the [Options Pattern](#setidentityserveroptionstoptionsioptionstoptions) though is the suggested one. 
+> The `.SetIdentityServerOptions("SomeClientCredentialsOptions")` might be the simplest way of setting up an [Access Token Request](#how-to-setup-an-access-token-request), the [Options Pattern](#setidentityserveroptionstoptionsioptionstoptions) though is the suggested one. Keep in mind, that if you use the `.SetIdentityServerOptions("SomeClientCredentialsOptions")` approach, the configuration section should either be or end with `ClientCredentialsOptions`.
 > HTTP verbs supported are: [GET](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceGetExtensions.html), [POST](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions.html), [PUT](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions.html), [DELETE](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.html), [PATCH](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.html) and [HEAD](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceHeadExtensions.html). 
 
 Continue reading for more details!
@@ -112,14 +114,15 @@ The library supports multiple ways for setting up the necessary options for retr
 
 ### .SetIdentityServerOptions(String)
 
-Setup IdentityServer options by defining the configuration section where you have your settings. The type of the options (`ClientCredentialsTokenRequest` or `PasswordTokenRequest`) will be determined based on the contents of this section:
+Setup IdentityServer options by defining the configuration section where you have your settings. The type of the options (`ClientCredentialsOptions` or `PasswordOptions`) will be determined based on the name of the section:
 
 ```csharp
 //...
-.SetIdentityServerOptions("appsettings_section")
+.SetIdentityServerOptions("SomeClientCredentialsOptions")
 //...
 ```
-Although this option is not adviced for `PasswordTokenRequest`, the section should contain the properties of either the `ClientCredentialsTokenRequest` or `PasswordTokenRequest` objects.
+
+Although this option is not adviced for `PasswordTokenRequest`, the section can contain the properties of either the `ClientCredentialsOptions` or `PasswordOptions` objects. Keep in mind, that if you use the `.SetIdentityServerOptions("SomeClientCredentialsOptions")` approach, the configuration section should either be or end with `ClientCredentialsOptions`.
 
 ### .SetIdentityServerOptions&lt;TOptions&gt;(TOptions)
 

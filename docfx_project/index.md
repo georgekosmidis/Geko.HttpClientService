@@ -9,7 +9,7 @@ var responseObject = await _requestServiceFactory
                           //Create a instance of the service
                           .CreateHttpClientService()
                           //Also supports IOptions<>
-                          .SetIdentityServerOptions("appsettings_section")
+                          .SetIdentityServerOptions("ClientCredentialsOptions")
                           //GET and deserialize the response body to IEnumerable<Customers>
                           .GetAsync<IEnumerable<Customers>>("https://api/customers");
 ```

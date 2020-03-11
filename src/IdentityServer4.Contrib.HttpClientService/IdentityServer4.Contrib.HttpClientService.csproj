@@ -4,17 +4,17 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <PackageProjectUrl>https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService</RepositoryUrl>
-    <PackageTags>IdentityServer4, HttpClient, AspNet, WebApi, AspNetWebApi</PackageTags>
+    <PackageTags>IdentityServer4, HttpClient, AspNet, WebApi, AspNetWebApi, IdentityModel</PackageTags>
     <Description>An HttpClient service that makes it easy to make authenticated HTTP requests to protected by IdentityServer4 resources.</Description>
     <Copyright>George Kosmidis</Copyright>
     <PackageReleaseNotes></PackageReleaseNotes>
-    <Version>2.1.0</Version>
+    <Version>2.2.0</Version>
     <PackageId />
     <Product />
     <Company />
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <AssemblyVersion>2.1.0.0</AssemblyVersion>
-    <FileVersion>2.1.0.0</FileVersion>
+    <AssemblyVersion>2.2.0.0</AssemblyVersion>
+    <FileVersion>2.2.0.0</FileVersion>
     <Authors>George Kosmidis</Authors>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>

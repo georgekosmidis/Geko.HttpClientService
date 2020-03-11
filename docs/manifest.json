@@ -9,10 +9,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.html",
-          "hash": "/GGMXqoSs9pMTTer1qtQfw=="
+          "hash": "NKJ/kK0OOkqNW1mob7+M3w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -21,10 +21,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceGetExtensions.html",
-          "hash": "KMevBrnG1+tjtcCDc82PEQ=="
+          "hash": "1l6CSeaBPiVbNmBQdLkoZw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -33,10 +33,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceHeadExtensions.html",
-          "hash": "Szs9IuTH38FBSReJnDNqyQ=="
+          "hash": "jBlX1uvxXHZDJoF92ccEKQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -45,10 +45,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.html",
-          "hash": "BpuB7VrHnYGMRRbNUmnnkA=="
+          "hash": "5ehaRUcNOFWhwXjqfsOJnA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -57,10 +57,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions.html",
-          "hash": "lf1JrrBcn4imnfwzKSpdcw=="
+          "hash": "paZ4X1uuXmzSF8z8LfnVZw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -69,10 +69,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions.html",
-          "hash": "aJymLBbJHXHMB0g+ES4qnw=="
+          "hash": "3WCRPFhwpC4GFKj8D6nqqA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -81,10 +81,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.ServiceCollectionExtensions.html",
-          "hash": "LwcHs/pghsy86N+gpoiGNw=="
+          "hash": "dHaDdJlgdEj1+qa9tNlhAA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -96,7 +96,7 @@
           "hash": "7aOqJ1vBmq0bHToO1LqfXg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -105,10 +105,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html",
-          "hash": "Ojn+EHT9rIEUUaowDhedkQ=="
+          "hash": "OSAcjNxTfU3yvZAiAEPkCg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -117,10 +117,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.html",
-          "hash": "AgQfSurpSB0R0vBUQQ64PA=="
+          "hash": "AtwzsQx6mS3TCuGbD4mxEQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -129,10 +129,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.html",
-          "hash": "hQfUcy22BtL8jEQugHeMpg=="
+          "hash": "YPPoW5yIbK7UXqUV09IeRA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -141,10 +141,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.ClientCredentialsHttpClient.html",
-          "hash": "3O0Y61TGbSlwWV55uG88Eg=="
+          "hash": "NdLFJcHpWJ7gFmgJVUhKJg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -153,10 +153,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.CoreHttpClient.html",
-          "hash": "CJpPrkpZPq8lHh9DysWSpA=="
+          "hash": "O7K5Jz2/yJ45fuvWmDaFGQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -165,10 +165,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpClientServiceHeaders.html",
-          "hash": "8uTsnsnRoqjrLL7cyS4h7A=="
+          "hash": "eVvc87ORlPwGIxmtyZ7LPA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -177,10 +177,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.html",
-          "hash": "kVpG2jmuZPCf+ptqqNzVpw=="
+          "hash": "+bKQ0R1RAIhBOyTilmNmaA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -189,10 +189,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop.html",
-          "hash": "7HmTjD5w5KhO1dkClo6F1A=="
+          "hash": "kOkvPZBERn6wEtUlTuaLUA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -201,10 +201,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient.html",
-          "hash": "WH/BJ2d2WifgxcYv0HcskA=="
+          "hash": "zjdHNn+7wftPcbrn0bYTVA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -213,10 +213,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.html",
-          "hash": "XYHZ/k+rH0ViCI7lP+ZcNQ=="
+          "hash": "swzNn4hivLfrQD1o/tM6Cw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -225,10 +225,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient.html",
-          "hash": "H3lju0gKoKzd7CPl9IzxrQ=="
+          "hash": "UTVw8AsR9b+yNsn2S97TdA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -237,10 +237,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector.html",
-          "hash": "I0854sPKPKtWyZr15zB71g=="
+          "hash": "hn7m2o5xHKFoeo59Vzr5Ug=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -249,10 +249,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService.html",
-          "hash": "HpHdhpewn0QVLFn8HbqPXw=="
+          "hash": "jce0GU1k6FC0P6AKdKj7bw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -261,10 +261,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager.html",
-          "hash": "uczAGi/lAbFgpenLfT5x6g=="
+          "hash": "Lh3vpQtU7KM2AUFoyK1eQg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -273,10 +273,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerHttpClientSelector.html",
-          "hash": "tgGcZ+EVWd16SnZYmDC3Dg=="
+          "hash": "QNpq9duC8An1DVqoEVQinA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -285,10 +285,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService.html",
-          "hash": "Ov8nxAI6CcNV6aLvanwl6A=="
+          "hash": "N/QruseWcyIFfGnCcqplig=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -297,10 +297,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.PasswordHttpClient.html",
-          "hash": "pcxxKyaNWLC6uCpCROr7yQ=="
+          "hash": "zpsDHImqY8lM1Snx8ggeaA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -309,10 +309,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseCacheManager.html",
-          "hash": "itqjsrUPGa265U9E/PF9WQ=="
+          "hash": "SyKYcx7+RZXTO3cbhp3byQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -321,10 +321,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent-1.html",
-          "hash": "zEv+eTJyT+UuC/79fHajTg=="
+          "hash": "ghRQQMMnl3jALuykLfTmZA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -336,7 +336,7 @@
           "hash": "hS2LwuPl3nkko+DOAaC1rA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -345,10 +345,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.ClientCredentialsOptions.html",
-          "hash": "JOQMexCE8oMxA0rUD+JYsg=="
+          "hash": "lyWhSfYDBeuGwoJu8wUAHg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -357,10 +357,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions.html",
-          "hash": "9b3X+ahHPAXFGkbiruOZsg=="
+          "hash": "BN/qzn7a+O9jPBPSRkPVJw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -369,10 +369,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.PasswordOptions.html",
-          "hash": "UJjILCcNNf8/slKG4PHClA=="
+          "hash": "Rfw+Z808HbhwYgSJoh91DQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -381,10 +381,10 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html",
-          "hash": "D/IqSFcp7sPW7Gf9mgYM9g=="
+          "hash": "rreLQJFZOLkmyNgOWvUqrA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -396,7 +396,7 @@
           "hash": "m9VTtoTSTK/RJUznyX0amg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -408,7 +408,7 @@
           "hash": "pqyaS2nk4joNnrWt0dS6Dg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -514,7 +514,7 @@
           "hash": "RLyEJPAe1CusyhNWx165sw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -551,6 +551,13 @@
         "skipped_file_count": 0
       },
       "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -558,24 +565,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 6,
-          "skipped_file_count": 5
-        },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 34,
-          "skipped_file_count": 34
+          "skipped_file_count": 4
         },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
+          "total_file_count": 6,
+          "skipped_file_count": 6
         }
       }
     },

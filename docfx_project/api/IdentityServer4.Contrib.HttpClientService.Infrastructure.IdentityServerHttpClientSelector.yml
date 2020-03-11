@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IdentityServer/IdentityServerHttpClientSelector.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: IdentityServerHttpClientSelector
     path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IdentityServer/IdentityServerHttpClientSelector.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IdentityServer/IdentityServerHttpClientSelector.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: .ctor
     path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IdentityServer/IdentityServerHttpClientSelector.cs
@@ -102,7 +102,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IdentityServer/IdentityServerHttpClientSelector.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: Get
     path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IdentityServer/IdentityServerHttpClientSelector.cs

@@ -17,7 +17,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/HttpRequestMessageFactoryDesktop.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HttpRequestMessageFactoryDesktop
     path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/HttpRequestMessageFactoryDesktop.cs
@@ -64,7 +64,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/HttpRequestMessageFactoryDesktop.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: .ctor
     path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/HttpRequestMessageFactoryDesktop.cs
@@ -96,7 +96,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/HttpRequestMessageFactoryDesktop.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: CreateRequestMessage
     path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/HttpRequestMessageFactoryDesktop.cs

@@ -16,7 +16,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/Extensions/ServiceCollectionExtensions.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: ServiceCollectionExtensions
     path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/ServiceCollectionExtensions.cs
@@ -61,7 +61,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/Extensions/ServiceCollectionExtensions.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: AddHttpClientService
     path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/ServiceCollectionExtensions.cs

@@ -20,7 +20,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HttpClientServicePutExtensions
     path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
@@ -65,7 +65,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: PutAsync
     path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
@@ -124,7 +124,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: PutAsync
     path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
@@ -175,7 +175,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: PutAsync
     path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
@@ -231,7 +231,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: PutAsync
     path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
@@ -287,7 +287,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: PutAsync
     path: ../src/IdentityServer4.Contrib.HttpClientService/Extensions/HttpClientServicePutExtensions.cs

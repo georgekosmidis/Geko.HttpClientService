@@ -1,8 +1,6 @@
-﻿using IdentityModel.Client;
-using IdentityServer4.Contrib.HttpClientService.Models;
+﻿using IdentityServer4.Contrib.HttpClientService.Models;
 using IdentityServer4.Contrib.HttpClientService.Extensions;
 using System;
-using System.Net.Http;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,6 +33,11 @@ namespace IdentityServer4.Contrib.HttpClientService.ConsoleApp
                 var httpStatusCode = responseObject.StatusCode;
                 var errorMessage = responseObject.Error;
                 //Do something with the error
+            }
+
+            foreach (var result in responseObject.BodyAsType)
+            {
+                Console.WriteLine(result.Type + ":" + result.Value);
             }
             Console.WriteLine(responseObject.BodyAsType.Count() + " results");
             Console.ReadKey();

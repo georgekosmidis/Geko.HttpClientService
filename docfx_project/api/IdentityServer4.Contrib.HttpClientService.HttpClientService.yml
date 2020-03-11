@@ -27,7 +27,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HttpClientService
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
@@ -92,7 +92,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersAdd
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
@@ -134,7 +134,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersAdd
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
@@ -179,7 +179,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersSet
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
@@ -221,7 +221,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersSet
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
@@ -263,7 +263,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersClear
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
@@ -298,7 +298,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersRemove
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
@@ -337,7 +337,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
@@ -348,7 +348,10 @@ items:
   summary: "\nSets the IdentityServer4 options for retrieving an access token s by passing the appsettings configuration section \nthat contain the necessary configuration keys. The section name should be or end with \neither <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.ClientCredentialsOptions\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"IdentityServer4.Contrib.HttpClientService.Models.PasswordOptions\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
-    content: public HttpClientService SetIdentityServerOptions(string configurationSection)
+    content: >-
+      [Obsolete("Configuration section name should always be or end with 'ClientCredentialsOptions' or 'PasswordOptions'. Version 3.0.0 will not support random configuration section names any more.")]
+
+      public HttpClientService SetIdentityServerOptions(string configurationSection)
     parameters:
     - id: configurationSection
       type: System.String
@@ -356,8 +359,17 @@ items:
     return:
       type: IdentityServer4.Contrib.HttpClientService.HttpClientService
       description: Returns the current instance of <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
-    content.vb: Public Function SetIdentityServerOptions(configurationSection As String) As HttpClientService
+    content.vb: >-
+      <Obsolete("Configuration section name should always be or end with 'ClientCredentialsOptions' or 'PasswordOptions'. Version 3.0.0 will not support random configuration section names any more.")>
+
+      Public Function SetIdentityServerOptions(configurationSection As String) As HttpClientService
   overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Configuration section name should always be or end with 'ClientCredentialsOptions' or 'PasswordOptions'. Version 3.0.0 will not support random configuration section names any more.
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -376,11 +388,11 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 194
+    startLine: 201
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -423,11 +435,11 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 211
+    startLine: 218
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -469,11 +481,11 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 223
+    startLine: 230
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -514,11 +526,11 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: GetTokenResponse
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 239
+    startLine: 246
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -549,11 +561,11 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SendAsync
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 328
+    startLine: 335
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService

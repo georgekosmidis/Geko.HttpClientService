@@ -15,7 +15,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IdentityServer/Interfaces/IIdentityServerOptions.cs
-      branch: feature/PasswordTokenRequest
+      branch: master
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: IIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IdentityServer/Interfaces/IIdentityServerOptions.cs

@@ -401,6 +401,7 @@ items:
   syntax:
     content: >-
       public HttpClientService SetIdentityServerOptions<TOptions>(IOptions<TOptions> options)
+
           where TOptions : class, IIdentityServerOptions, new()
     parameters:
     - id: options
@@ -448,6 +449,7 @@ items:
   syntax:
     content: >-
       public HttpClientService SetIdentityServerOptions<TOptions>(Action<TOptions> optionsDelegate)
+
           where TOptions : class, IIdentityServerOptions
     parameters:
     - id: optionsDelegate
@@ -494,6 +496,7 @@ items:
   syntax:
     content: >-
       public HttpClientService SetIdentityServerOptions<TOptions>(TOptions options)
+
           where TOptions : class, IIdentityServerOptions
     parameters:
     - id: options

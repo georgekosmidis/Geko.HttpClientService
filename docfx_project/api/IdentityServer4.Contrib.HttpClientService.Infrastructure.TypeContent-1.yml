@@ -34,7 +34,9 @@ items:
     - id: TRequestBody
     content.vb: >-
       Public Class TypeContent(Of TRequestBody)
+
           Inherits ByteArrayContent
+
           Implements IDisposable
   inheritance:
   - System.Object

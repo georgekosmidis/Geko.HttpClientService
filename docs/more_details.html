@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>How to setup an Access Token Request </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="How to setup an Access Token Request ">
+    <meta name="generator" content="docfx 2.49.0.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h2 id="how-to-setup-an-access-token-request">How to setup an Access Token Request</h2>
+
+<p>The library supports multiple ways for setting up the necessary options for retrieving an access token. Upon success of retrieving one, the result is cached until the token expires; that means that a new request to a protected resource does not necessarily means a new request for an access token.</p>
+<blockquote>
+<p>Currently, the library only supports <code>ClientCredentialsTokenRequest</code> and <code>PasswordTokenRequest</code>.</p>
+</blockquote>
+<h3 id="setidentityserveroptionsstring">.SetIdentityServerOptions(String)</h3>
+<p>Setup IdentityServer options by defining the configuration section where you have your settings. The type of the options (<code>ClientCredentialsOptions</code> or <code>PasswordOptions</code>) will be determined based on the name of the section:</p>
+<pre><code class="lang-csharp">//...
+.SetIdentityServerOptions(&quot;SomeClientCredentialsOptions&quot;)
+//...
+</code></pre>
+<p>Although this option is not adviced for <code>PasswordTokenRequest</code>, the section can contain the properties of either the <code>ClientCredentialsOptions</code> or <code>PasswordOptions</code> objects. Keep in mind, that if you use the <code>.SetIdentityServerOptions(&quot;ClientCredentialsOptions&quot;)</code> approach, the configuration section should either be or end with <code>ClientCredentialsOptions</code>.</p>
+<h3 id="setidentityserveroptionstoptionstoptions">.SetIdentityServerOptions&lt;TOptions&gt;(TOptions)</h3>
+<p>Setup IdentityServer options by passing a <code>ClientCredentialsOptions</code> or <code>PasswordOptions</code> directly to the <code>SetIdentityServerOptions</code>:</p>
+<pre><code class="lang-csharp">//...
+.SetIdentityServerOptions(
+  new PasswordOptions
+  {
+    Address = &quot;https://demo.identityserver.io/connect/token&quot;,
+    ClientId = &quot;ClientId&quot;,
+    ClientSecret = &quot;ClientSecret&quot;,
+    Scope = &quot;Scope&quot;,
+    Username = &quot;Username&quot;,
+    Password = &quot;Password&quot;
+  }
+)
+//...
+</code></pre>
+<h3 id="setidentityserveroptionstoptionsioptionstoptions">.SetIdentityServerOptions&lt;TOptions&gt;(IOptions&lt;TOptions&gt;)</h3>
+<p>Setup IdentityServer options using the options pattern (read more about the options pattern in <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options">Microsoft Docs</a>):</p>
+<p><strong>Startup.cs</strong></p>
+<pre><code class="lang-csharp">//...
+    public void ConfigureServices(IServiceCollection services)
+    {
+        //...
+        services.AddHttpClientService()
+            .AddSingleton&lt;IProtectedResourceService, ProtectedResourceService&gt;()
+            .Configure&lt;ClientCredentialsOptions&gt;(Configuration.GetSection(nameof(ClientCredentialsOptions)));    
+        //...
+    }
+//...
+</code></pre>
+<p><strong>ProtectedResourceService.cs</strong></p>
+<pre><code class="lang-csharp">//...
+public class ProtectedResourceService : IProtectedResourceService
+{
+  private readonly IHttpClientServiceFactory _requestServiceFactory;
+  private readonly IOptions&lt;ClientCredentialsOptions&gt; _identityServerOptions;
+
+  public ProtectedResourceService(IHttpClientServiceFactory requestServiceFactory, IOptions&lt;ClientCredentialsOptions&gt; identityServerOptions)
+  {
+    _requestServiceFactory = requestServiceFactory;
+    _identityServerOptions = identityServerOptions;
+  }
+
+  public async Task&lt;YourObject&gt; Get(){
+    _requestServiceFactory
+    .CreateHttpClientService()
+    .SetIdentityServerOptions(_identityServerOptions)
+    .GetAsync&lt;YourObject&gt;(&quot;https://url_that_returns_YourObject&quot;);
+  }
+)
+//...
+</code></pre>
+<h3 id="setidentityserveroptionstoptionsactiontoptions">.SetIdentityServerOptions&lt;TOptions&gt;(Action&lt;TOptions&gt;)</h3>
+<p>Setup IdentityServer options using a delegate:</p>
+<pre><code class="lang-csharp">//...
+.SetIdentityServerOptions&lt;PasswordOptions&gt;( x =&gt; {
+    x.Address = &quot;https://demo.identityserver.io/connect/token&quot;;
+    x.ClientId = &quot;ClientId&quot;;
+    x.ClientSecret = &quot;ClientSecret&quot;;
+    x.Scope = &quot;Scope&quot;;
+    x.Username = &quot;Username&quot;;
+    x.Password = &quot;Password&quot;;
+  }
+)
+//...
+</code></pre>
+<hr>
+<h2 id="more-info-on-how-to-serialize-request-deserialize-response">More info on how to serialize request, deserialize response</h2>
+<p>Responses can always be deserialized to the type <code>TResponseBody</code> defined in, for example, <code>GetAsync&lt;TResponseBody&gt;</code>:</p>
+<pre><code class="lang-csharp">//...
+.GetAsync&lt;ResponsePoco&gt;(&quot;https://url_that_returns_ResponsePoco_in_json&quot;);
+//...
+</code></pre>
+<p>Using a complex type as a request body for POST, PUT and PATCH requests is also very easy. In the example that follows the type <code>TRequestBody</code> of the <code>PostAsync&lt;TRequestBody,TResponseBody&gt;</code> sets the type of the <code>requestPoco</code> object. This will be serialized using <code>JsonConvert.SerializeObject(requestPoco, Formatting.None)</code>:</p>
+<pre><code class="lang-csharp">//...
+.PostAsync&lt;RequestPoco,ResponsePoco&gt;(&quot;https://url_that_accepts_RequestPoco_and_responds_with_ResponsePoco&quot;, requestPoco);
+//...
+</code></pre>
+<blockquote>
+<p>If you want to fine tune how the <code>requestPoco</code> object is sent, please use the <a href="#typecontenttrequestbody-encoding-string">TypeContent(TRequestBody, Encoding, string)</a>. Without using <code>TypeContent(...)</code> to explitily set media-type and encoding, the defaults will be used: 'application/json' and 'UTF-8'.</p>
+</blockquote>
+<h3 id="responseobject">ResponseObject</h3>
+<p>The variable <strong><a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html">responseObject</a></strong> contains multiple properties: from the entire <code>HttpResponseMessage</code> and <code>HttpRequestMessage</code>, to the <code>HttpStatusCode</code> and <code>HttpResponseHeaders</code>. The most <em>exciting</em> feature though, is the <code>TResponseBody BodyAsType</code> property which will contain the deserializabled complex types from JSON responses. For a complete list of all the properties, check the <a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html">ResponseObject&lt;TResponseBody&gt;</a> in the docs.</p>
+<h3 id="typecontenttrequestbody-encoding-string">TypeContent(TRequestBody, Encoding, string)</h3>
+<p>You can also fine tune encoding and media-type by using the <code>TypeContent(TRequestBody model, Encoding encoding, string mediaType)</code> like this:</p>
+<pre><code class="lang-csharp">var responseObject = await _requestServiceFactory
+                          //Create a instance of the service
+                          .CreateHttpClientService()
+                          //.PostAsync&lt;TRequestBody,TResponseBody&gt;(URL, customer of type Customer1)
+                          .PostAsync&lt;TypeContent&lt;Customer1&gt;,Customer2&gt;(&quot;https://api/customers&quot;, new TypeContent(customer, Encoding.UTF8, &quot;application/json&quot;));
+</code></pre>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/feature/PasswordTokenRequest/docfx_project/more_details.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>

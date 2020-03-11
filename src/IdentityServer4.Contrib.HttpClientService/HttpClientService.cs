@@ -240,10 +240,11 @@ namespace IdentityServer4.Contrib.HttpClientService
         public async Task<TokenResponse> GetTokenResponse()
         {
             if (identityServerOptions == null)
+            {
                 throw new InvalidOperationException("IdentityServerOptions have not been set. Please set the options with one of the SetIdentityServerOptions overloads first.");
+            }
 
             return await _accessTokenService.GetTokenResponseAsync(identityServerOptions);
-
         }
         #endregion
 

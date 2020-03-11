@@ -4,61 +4,17 @@
 
 An HttpClient service that makes it easy to make authenticated HTTP requests to protected by IdentityServer4 resources. Complex types are automatically serialized for requests /  deserialized for responses, all with a fluent interface design:
 
-**appsettings.json**
-```json  
-"ClientCredentialsOptions": {
-    "Address": "https://demo.identityserver.io/connect/token",
-    "ClientId": "m2m",
-    "ClientSecret": "secret",
-    "Scope": "api"
-}
-```
-
-**Startup.cs**
 ```csharp
-//Add the service in Startup.cs
-services.AddHttpClientService();
+var responseObject = await _requestServiceFactory
+	//Create a instance of the service
+	.CreateHttpClientService()
+	//Supports many ways of setting IdentityServer options
+	.SetIdentityServerOptions("ClientCredentialsOptions")
+	//GET and deserialize the response body to IEnumerable<Customers>
+	.GetAsync<IEnumerable<Customers>>("https://api/customers");
 ```
 
-**CustomerController.cs**
-```csharp
-[ApiController]
-[Route("customers")]
-public class CustomerController : ControllerBase
-{
-	//Request the IHttpClientServiceFactory instance in your controller or service
-	private readonly IHttpClientServiceFactory _requestServiceFactory;
-	public CustomerController(IHttpClientServiceFactory requestServiceFactory){
-		_requestServiceFactory = requestServiceFactory;
-	}
-
-	[HttpGet]
-	public async Task<IActionResult> Get(){
-		//Make the request
-		var responseObject = await _requestServiceFactory
-			//Create a instance of the service
-			.CreateHttpClientService()
-			//Supports many ways of setting IdentityServer options
-			.SetIdentityServerOptions("ClientCredentialsOptions")
-			//GET and deserialize the response body to IEnumerable<Customers>
-			.GetAsync<IEnumerable<Customers>>("https://api/customers");
-
-		//Do something with the results					  
-		if (!responseObject.HasError)
-		{
-			var customers = responseObject.BodyAsType;
-			return Ok(customers);
-		}
-		else
-		{
-			var httpStatusCode = responseObject.StatusCode;
-			var errorMessage = responseObject.Error;           
-			return StatusCode((int)httpStatusCode, errorMessage);
-		}
-	}
-}	
-```
-
+**Check the [Getting started](#getting-started) guide for more details!**
 ___
 
 ##### Table of Contents
@@ -96,12 +52,12 @@ Install the [IdentityServer4.Contrib.HttpClientService](https://www.nuget.org/pa
 Add the IdentityServer4 Access Token Request Options to your `appsettings.json` (the configuration section should always be or end with `ClientCredentialsOptions`):
 
 ```json
-"SomeClientCredentialsOptions": {
+"ClientCredentialsOptions": {
     "Address": "https://demo.identityserver.io/connect/token",
     "ClientId": "m2m",
     "ClientSecret": "secret",
     "Scopes": "api"
-  }
+}
  // The values above are part of the demo offered in https://demo.identityserver.io/
 ```
 
@@ -119,28 +75,46 @@ services.AddHttpClientService();
 
 ### You are done!
 
-Inject the `IHttpClientServiceFactory` wherever you want to make the authenticated requests:
+Request the `IHttpClientServiceFactory` wherever you want to make the authenticated requests:
 
 ```csharp
-using IdentityServer4.Contrib.HttpClientService.Extensions
+using IdentityServer4.Contrib.HttpClientService.Extensions;
 
-public class ProtectedResourceService {
+[ApiController]
+[Route("customers")]
+public class CustomerController : ControllerBase
+{
+	//Request the IHttpClientServiceFactory instance in your controller or service
+	private readonly IHttpClientServiceFactory _requestServiceFactory;
+	public CustomerController(IHttpClientServiceFactory requestServiceFactory){
+		_requestServiceFactory = requestServiceFactory;
+	}
 
-  private readonly IHttpClientServiceFactory _requestServiceFactory;
+	[HttpGet]
+	public async Task<IActionResult> Get(){
+		//Make the request
+		var responseObject = await _requestServiceFactory
+			//Create a instance of the service
+			.CreateHttpClientService()
+			//Supports many ways of setting IdentityServer options
+			.SetIdentityServerOptions("ClientCredentialsOptions")
+			//GET and deserialize the response body to IEnumerable<Customers>
+			.GetAsync<IEnumerable<Customers>>("https://api/customers");
 
-  public ProtectedResourceService(IHttpClientServiceFactory requestServiceFactory)
-  {
-    _requestServiceFactory = requestServiceFactory;
-  }
-
-  public async Task<IEnumerable<Customer>> GetCustomers(){
-    var response = await _requestServiceFactory
-      .CreateHttpClientService()
-	  //Configuration section should always be or end with `ClientCredentialsOptions`
-      .SetIdentityServerOptions("SomeClientCredentialsOptions")
-      .GetAsync<IEnumerable<Customer>>("https://protected_resource_that_returns_customers_in_json");
-  }
-}
+		//Do something with the results					  
+		if (!responseObject.HasError)
+		{
+			var customers = responseObject.BodyAsType;
+			return Ok(customers);
+		}
+		else
+		{
+			var httpStatusCode = responseObject.StatusCode;
+			var errorMessage = responseObject.Error;           
+			return StatusCode((int)httpStatusCode, errorMessage);
+		}
+	}
+}	
 ```
 
 > The `.SetIdentityServerOptions("SomeClientCredentialsOptions")` might be the simplest way of setting up an [Access Token Request](#how-to-setup-an-access-token-request), the [Options Pattern](#setidentityserveroptionstoptionsioptionstoptions) though is the suggested one. Keep in mind, that if you use the `.SetIdentityServerOptions("SomeClientCredentialsOptions")` approach, the configuration section should either be or end with `ClientCredentialsOptions`.

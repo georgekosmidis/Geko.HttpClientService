@@ -4,60 +4,17 @@
 
 An HttpClient service that makes it easy to make authenticated HTTP requests to protected by IdentityServer4 resources. Complex types are automatically serialized for requests /  deserialized for responses, all with a fluent interface design:
 
-**appsettings.json**
-```json  
-"ClientCredentialsOptions": {
-    "Address": "https://demo.identityserver.io/connect/token",
-    "ClientId": "m2m",
-    "ClientSecret": "secret",
-    "Scope": "api"
-}
-```
-
-**Startup.cs**
 ```csharp
-//Add the service in Startup.cs
-services.AddHttpClientService();
+var responseObject = await _requestServiceFactory
+	//Create a instance of the service
+	.CreateHttpClientService()
+	//Supports many ways of setting IdentityServer options
+	.SetIdentityServerOptions("ClientCredentialsOptions")
+	//GET and deserialize the response body to IEnumerable<Customers>
+	.GetAsync<IEnumerable<Customers>>("https://api/customers");
 ```
 
-**CustomerController.cs**
-```csharp
-[ApiController]
-[Route("customers")]
-public class CustomerController : ControllerBase
-{
-	//Request the IHttpClientServiceFactory instance in your controller or service
-	private readonly IHttpClientServiceFactory _requestServiceFactory;
-	public CustomerController(IHttpClientServiceFactory requestServiceFactory){
-		_requestServiceFactory = requestServiceFactory;
-	}
-
-	[HttpGet]
-	public async Task<IActionResult> Get(){
-		//Make the request
-		var responseObject = await _requestServiceFactory
-			//Create a instance of the service
-			.CreateHttpClientService()
-			//Supports many ways of setting IdentityServer options
-			.SetIdentityServerOptions("ClientCredentialsOptions")
-			//GET and deserialize the response body to IEnumerable<Customers>
-			.GetAsync<IEnumerable<Customers>>("https://api/customers");
-
-		//Do something with the results					  
-		if (!responseObject.HasError)
-		{
-			var customers = responseObject.BodyAsType;
-			return Ok(customers);
-		}
-		else
-		{
-			var httpStatusCode = responseObject.StatusCode;
-			var errorMessage = responseObject.Error;           
-			return StatusCode((int)httpStatusCode, errorMessage);
-		}
-	}
-}	
-```
+**Check the [Getting started](getting_started.md) guide for more details!**
 
 ## Getting Started
 

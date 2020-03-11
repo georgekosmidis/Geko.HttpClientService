@@ -5,6 +5,7 @@ items:
   id: HttpClientService
   parent: IdentityServer4.Contrib.HttpClientService
   children:
+  - IdentityServer4.Contrib.HttpClientService.HttpClientService.GetTokenResponse
   - IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.String,System.Collections.Generic.List{System.String})
   - IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.String,System.String)
   - IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersClear
@@ -30,7 +31,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HttpClientService
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 20
+    startLine: 21
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -95,7 +96,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersAdd
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 48
+    startLine: 49
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -137,7 +138,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersAdd
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 66
+    startLine: 67
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -182,7 +183,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersSet
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 84
+    startLine: 85
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -224,7 +225,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersSet
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 106
+    startLine: 107
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -266,7 +267,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersClear
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 127
+    startLine: 128
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -301,7 +302,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersRemove
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 138
+    startLine: 139
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -340,7 +341,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 161
+    startLine: 162
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -379,7 +380,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 193
+    startLine: 194
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -426,7 +427,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 210
+    startLine: 211
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -472,7 +473,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 222
+    startLine: 223
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -499,6 +500,41 @@ items:
   - Public
   fullName.vb: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions(Of TOptions)(TOptions)
   name.vb: SetIdentityServerOptions(Of TOptions)(TOptions)
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.GetTokenResponse
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.GetTokenResponse
+  id: GetTokenResponse
+  parent: IdentityServer4.Contrib.HttpClientService.HttpClientService
+  langs:
+  - csharp
+  - vb
+  name: GetTokenResponse()
+  nameWithType: HttpClientService.GetTokenResponse()
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.GetTokenResponse()
+  type: Method
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+      branch: feature/PasswordTokenRequest
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: GetTokenResponse
+    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+    startLine: 239
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService
+  summary: "\nRetrieves the TokenResponse from the IdentityServer\n"
+  example: []
+  syntax:
+    content: public Task<TokenResponse> GetTokenResponse()
+    return:
+      type: System.Threading.Tasks.Task{IdentityModel.Client.TokenResponse}
+      description: A <xref href="IdentityModel.Client.TokenResponse" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Function GetTokenResponse As Task(Of TokenResponse)
+  overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.GetTokenResponse*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SendAsync``2(System.Uri,System.Net.Http.HttpMethod,``0)
   commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SendAsync``2(System.Uri,System.Net.Http.HttpMethod,``0)
   id: SendAsync``2(System.Uri,System.Net.Http.HttpMethod,``0)
@@ -517,7 +553,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SendAsync
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 313
+    startLine: 328
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -3877,6 +3913,103 @@ references:
   name: TOptions
   nameWithType: TOptions
   fullName: TOptions
+- uid: IdentityModel.Client.TokenResponse
+  commentId: T:IdentityModel.Client.TokenResponse
+  isExternal: true
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.GetTokenResponse*
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.HttpClientService.GetTokenResponse
+  name: GetTokenResponse
+  nameWithType: HttpClientService.GetTokenResponse
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.GetTokenResponse
+- uid: System.Threading.Tasks.Task{IdentityModel.Client.TokenResponse}
+  commentId: T:System.Threading.Tasks.Task{IdentityModel.Client.TokenResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<TokenResponse>
+  nameWithType: Task<TokenResponse>
+  fullName: System.Threading.Tasks.Task<IdentityModel.Client.TokenResponse>
+  nameWithType.vb: Task(Of TokenResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of IdentityModel.Client.TokenResponse)
+  name.vb: Task(Of TokenResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IdentityModel.Client.TokenResponse
+    name: TokenResponse
+    nameWithType: TokenResponse
+    fullName: IdentityModel.Client.TokenResponse
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IdentityModel.Client.TokenResponse
+    name: TokenResponse
+    nameWithType: TokenResponse
+    fullName: IdentityModel.Client.TokenResponse
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
 - uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(``0)
   commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetIdentityServerOptions``1(``0)
   isExternal: true
@@ -4045,48 +4178,3 @@ references:
   name: TRequestBody
   nameWithType: TRequestBody
   fullName: TRequestBody
-- uid: System.Threading.Tasks.Task`1
-  commentId: T:System.Threading.Tasks.Task`1
-  isExternal: true
-  name: Task<TResult>
-  nameWithType: Task<TResult>
-  fullName: System.Threading.Tasks.Task<TResult>
-  nameWithType.vb: Task(Of TResult)
-  fullName.vb: System.Threading.Tasks.Task(Of TResult)
-  name.vb: Task(Of TResult)
-  spec.csharp:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
-    nameWithType: Task
-    fullName: System.Threading.Tasks.Task
-    isExternal: true
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: TResult
-    nameWithType: TResult
-    fullName: TResult
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: System.Threading.Tasks.Task`1
-    name: Task
-    nameWithType: Task
-    fullName: System.Threading.Tasks.Task
-    isExternal: true
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: TResult
-    nameWithType: TResult
-    fullName: TResult
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Threading.Tasks
-  commentId: N:System.Threading.Tasks
-  isExternal: true
-  name: System.Threading.Tasks
-  nameWithType: System.Threading.Tasks
-  fullName: System.Threading.Tasks

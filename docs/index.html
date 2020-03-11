@@ -65,13 +65,14 @@
 <p><a href="https://dev.azure.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/_build/latest?definitionId=5&amp;branchName=master"><img src="https://dev.azure.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/_apis/build/status/georgekosmidis.IdentityServer4.Contrib.HttpClientService?branchName=master" alt="Build Status"></a> <img src="https://img.shields.io/nuget/v/IdentityServer4.Contrib.HttpClientService" alt="Nuget"></p>
 <p>An HttpClient service that makes it easy to make authenticated HTTP requests to protected by IdentityServer4 resources. Complex types are automatically serialized for requests /  deserialized for responses, all with a fluent interface design:</p>
 <pre><code class="lang-csharp">var responseObject = await _requestServiceFactory
-                          //Create a instance of the service
-                          .CreateHttpClientService()
-                          //Also supports IOptions&lt;&gt;
-                          .SetIdentityServerOptions(&quot;ClientCredentialsOptions&quot;)
-                          //GET and deserialize the response body to IEnumerable&lt;Customers&gt;
-                          .GetAsync&lt;IEnumerable&lt;Customers&gt;&gt;(&quot;https://api/customers&quot;);
+	//Create a instance of the service
+	.CreateHttpClientService()
+	//Supports many ways of setting IdentityServer options
+	.SetIdentityServerOptions(&quot;ClientCredentialsOptions&quot;)
+	//GET and deserialize the response body to IEnumerable&lt;Customers&gt;
+	.GetAsync&lt;IEnumerable&lt;Customers&gt;&gt;(&quot;https://api/customers&quot;);
 </code></pre>
+<p><strong>Check the <a href="getting_started.html">Getting started</a> guide for more details!</strong></p>
 <h2 id="getting-started">Getting Started</h2>
 <p>Getting started with IdentityServer4.Contrib.HttpClientService is easy; you only need three things:</p>
 <ol>

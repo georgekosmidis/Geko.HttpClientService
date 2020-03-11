@@ -287,6 +287,19 @@ references:
   commentId: T:IdentityServer4.Contrib.HttpClientService.HttpClientService
   fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService
   nameWithType: HttpClientService
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.GetTokenResponse
+  name: GetTokenResponse()
+  href: api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html#IdentityServer4_Contrib_HttpClientService_HttpClientService_GetTokenResponse
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.GetTokenResponse
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.GetTokenResponse()
+  nameWithType: HttpClientService.GetTokenResponse()
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.GetTokenResponse*
+  name: GetTokenResponse
+  href: api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html#IdentityServer4_Contrib_HttpClientService_HttpClientService_GetTokenResponse_
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.HttpClientService.GetTokenResponse
+  isSpec: "True"
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.GetTokenResponse
+  nameWithType: HttpClientService.GetTokenResponse
 - uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.String,System.Collections.Generic.List{System.String})
   name: HeadersAdd(String, List<String>)
   href: api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html#IdentityServer4_Contrib_HttpClientService_HttpClientService_HeadersAdd_System_String_System_Collections_Generic_List_System_String__

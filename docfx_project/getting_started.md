@@ -37,27 +37,46 @@ services.AddHttpClientService();
 
 ### You are done!
 
-Inject the `IHttpClientServiceFactory` wherever you want to make the authenticated requests:
+Request the `IHttpClientServiceFactory` instance wherever you want to make the authenticated requests:
 
 ```csharp
-using IdentityServer4.Contrib.HttpClientService.Extensions
+using IdentityServer4.Contrib.HttpClientService.Extensions;
 
-public class ProtectedResourceService {
+[ApiController]
+[Route("customers")]
+public class CustomerController : ControllerBase
+{
+	//Request the IHttpClientServiceFactory instance in your controller or service
+	private readonly IHttpClientServiceFactory _requestServiceFactory;
+	public CustomerController(IHttpClientServiceFactory requestServiceFactory){
+		_requestServiceFactory = requestServiceFactory;
+	}
 
-  private readonly IHttpClientServiceFactory _requestServiceFactory;
+	[HttpGet]
+	public async Task<IActionResult> Get(){
+		//Make the request
+		var responseObject = await _requestServiceFactory
+			//Create a instance of the service
+			.CreateHttpClientService()
+			//Supports many ways of setting IdentityServer options
+			.SetIdentityServerOptions("ClientCredentialsOptions")
+			//GET and deserialize the response body to IEnumerable<Customers>
+			.GetAsync<IEnumerable<Customers>>("https://api/customers");
 
-  public ProtectedResourceService(IHttpClientServiceFactory requestServiceFactory)
-  {
-    _requestServiceFactory = requestServiceFactory;
-  }
-
-  public async Task<IEnumerable<Customer>> GetCustomers(){
-    var response = await _requestServiceFactory
-      .CreateHttpClientService()
-      .SetIdentityServerOptions("SomeClientCredentialsOptions")
-      .GetAsync<IEnumerable<Customer>>("https://protected_resource_that_returns_customers_in_json");
-  }
-}
+		//Do something with the results					  
+		if (!responseObject.HasError)
+		{
+			var customers = responseObject.BodyAsType;
+			return Ok(customers);
+		}
+		else
+		{
+			var httpStatusCode = responseObject.StatusCode;
+			var errorMessage = responseObject.Error;           
+			return StatusCode((int)httpStatusCode, errorMessage);
+		}
+	}
+}	
 ```
 
 > The `.SetIdentityServerOptions("SomeClientCredentialsOptions")` might be the simplest way of setting up an [Access Token Request](more_details.md#how-to-setup-an-access-token-request), the [Options Pattern](more_details.md#setidentityserveroptionstoptionsioptionstoptions) though is the suggested one. 

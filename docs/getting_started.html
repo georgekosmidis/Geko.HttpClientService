@@ -91,25 +91,44 @@
 <p>You would also need to configure the service if you plan to use the <a href="more_details.html#setidentityserveroptionstoptionsioptionstoptions">options pattern</a>.</p>
 </blockquote>
 <h3 id="you-are-done">You are done!</h3>
-<p>Inject the <code>IHttpClientServiceFactory</code> wherever you want to make the authenticated requests:</p>
-<pre><code class="lang-csharp">using IdentityServer4.Contrib.HttpClientService.Extensions
+<p>Request the <code>IHttpClientServiceFactory</code> instance wherever you want to make the authenticated requests:</p>
+<pre><code class="lang-csharp">using IdentityServer4.Contrib.HttpClientService.Extensions;
 
-public class ProtectedResourceService {
+[ApiController]
+[Route(&quot;customers&quot;)]
+public class CustomerController : ControllerBase
+{
+	//Request the IHttpClientServiceFactory instance in your controller or service
+	private readonly IHttpClientServiceFactory _requestServiceFactory;
+	public CustomerController(IHttpClientServiceFactory requestServiceFactory){
+		_requestServiceFactory = requestServiceFactory;
+	}
 
-  private readonly IHttpClientServiceFactory _requestServiceFactory;
+	[HttpGet]
+	public async Task&lt;IActionResult&gt; Get(){
+		//Make the request
+		var responseObject = await _requestServiceFactory
+			//Create a instance of the service
+			.CreateHttpClientService()
+			//Supports many ways of setting IdentityServer options
+			.SetIdentityServerOptions(&quot;ClientCredentialsOptions&quot;)
+			//GET and deserialize the response body to IEnumerable&lt;Customers&gt;
+			.GetAsync&lt;IEnumerable&lt;Customers&gt;&gt;(&quot;https://api/customers&quot;);
 
-  public ProtectedResourceService(IHttpClientServiceFactory requestServiceFactory)
-  {
-    _requestServiceFactory = requestServiceFactory;
-  }
-
-  public async Task&lt;IEnumerable&lt;Customer&gt;&gt; GetCustomers(){
-    var response = await _requestServiceFactory
-      .CreateHttpClientService()
-      .SetIdentityServerOptions(&quot;SomeClientCredentialsOptions&quot;)
-      .GetAsync&lt;IEnumerable&lt;Customer&gt;&gt;(&quot;https://protected_resource_that_returns_customers_in_json&quot;);
-  }
-}
+		//Do something with the results					  
+		if (!responseObject.HasError)
+		{
+			var customers = responseObject.BodyAsType;
+			return Ok(customers);
+		}
+		else
+		{
+			var httpStatusCode = responseObject.StatusCode;
+			var errorMessage = responseObject.Error;           
+			return StatusCode((int)httpStatusCode, errorMessage);
+		}
+	}
+}	
 </code></pre>
 <blockquote>
 <p>The <code>.SetIdentityServerOptions(&quot;SomeClientCredentialsOptions&quot;)</code> might be the simplest way of setting up an <a href="more_details.html#how-to-setup-an-access-token-request">Access Token Request</a>, the <a href="more_details.html#setidentityserveroptionstoptionsioptionstoptions">Options Pattern</a> though is the suggested one.

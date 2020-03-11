@@ -4,7 +4,9 @@ items:
   commentId: N:IdentityServer4.Contrib.HttpClientService.Models
   id: IdentityServer4.Contrib.HttpClientService.Models
   children:
-  - IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
+  - IdentityServer4.Contrib.HttpClientService.Models.ClientCredentialsOptions
+  - IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions
+  - IdentityServer4.Contrib.HttpClientService.Models.PasswordOptions
   - IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1
   langs:
   - csharp
@@ -16,12 +18,22 @@ items:
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
 references:
-- uid: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
-  commentId: T:IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
+- uid: IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions
   parent: IdentityServer4.Contrib.HttpClientService.Models
-  name: DefaultClientCredentialOptions
-  nameWithType: DefaultClientCredentialOptions
-  fullName: IdentityServer4.Contrib.HttpClientService.Models.DefaultClientCredentialOptions
+  name: IIdentityServerOptions
+  nameWithType: IIdentityServerOptions
+  fullName: IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions
+- uid: IdentityServer4.Contrib.HttpClientService.Models.ClientCredentialsOptions
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Models.ClientCredentialsOptions
+  name: ClientCredentialsOptions
+  nameWithType: ClientCredentialsOptions
+  fullName: IdentityServer4.Contrib.HttpClientService.Models.ClientCredentialsOptions
+- uid: IdentityServer4.Contrib.HttpClientService.Models.PasswordOptions
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Models.PasswordOptions
+  name: PasswordOptions
+  nameWithType: PasswordOptions
+  fullName: IdentityServer4.Contrib.HttpClientService.Models.PasswordOptions
 - uid: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1
   commentId: T:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1
   name: ResponseObject<TResponseBody>

@@ -15,11 +15,11 @@ items:
   type: Interface
   source:
     remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IHttpRequestMessageFactory.cs
-      branch: master
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/Interfaces/IHttpRequestMessageFactory.cs
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: IHttpRequestMessageFactory
-    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IHttpRequestMessageFactory.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/Interfaces/IHttpRequestMessageFactory.cs
     startLine: 7
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -48,11 +48,11 @@ items:
   type: Method
   source:
     remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IHttpRequestMessageFactory.cs
-      branch: master
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/Interfaces/IHttpRequestMessageFactory.cs
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: CreateRequestMessage
-    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/IHttpRequestMessageFactory.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/Interfaces/IHttpRequestMessageFactory.cs
     startLine: 13
   assemblies:
   - IdentityServer4.Contrib.HttpClientService

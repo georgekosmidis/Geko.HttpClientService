@@ -18,30 +18,13 @@ using IdentityServer4.Contrib.HttpClientService.Extensions;
 namespace IdentityServer4.Contrib.HttpClientService.Test
 {
     [TestClass]
-    public class HttpClientServiceHeadExtensionsTests : TestBase
+    public class HttpClientServiceHeadExtensionsTests
     {
 
         [TestMethod]
         public async Task HttpClientServiceHead_NoTypedResponse_ShouldBeResponseString()
         {
-
-            var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("key", "section_data"),
-                new CoreHttpClient(
-                    IHttpClientFactoryMocks.Get(HttpStatusCode.OK, this.ComplexTypeResponseString).CreateClient()
-                ),
-                new HttpRequestMessageFactory(
-                    IHttpContextAccessorMocks.Get()
-                ),
-                new TokenResponseService(
-                    new IdentityServerHttpClient(
-                        IHttpClientFactoryMocks.Get(HttpStatusCode.OK).CreateClient()
-                    ),
-                    IAccessTokenCacheManagerMocks.Get(
-                        await TokenResponseMock.GetValidResponseAsync("access_token", 3600)
-                    )
-                )
-            ).CreateHttpClientService();
+            var httpClientService = await Tests.Helpers.HttpClientServiceInstances.GetNew(HttpStatusCode.OK, ComplexTypes.ComplexTypeResponseString, true);
 
             var result = await httpClientService.HeadAsync("http://localhost");
 
@@ -54,35 +37,16 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
             Assert.IsNull(result.HttpRequestMessge.Content);
 
             //Body
-            Assert.AreEqual(this.ComplexTypeResponseString, result.BodyAsString);
-            //var sr = new StreamReader(result.BodyAsStream);
-            //Assert.AreEqual(this.ComplexTypeResponseString, sr.ReadToEnd());
-            Assert.AreEqual(this.ComplexTypeResponseString, result.BodyAsType);
+            Assert.AreEqual(ComplexTypes.ComplexTypeResponseString, result.BodyAsString);
+            Assert.AreEqual(ComplexTypes.ComplexTypeResponseString, result.BodyAsType);
         }
 
         [TestMethod]
         public async Task HttpClientServiceHead_TypedResponse_ShouldBeResponseType()
         {
+            var httpClientService = await Tests.Helpers.HttpClientServiceInstances.GetNew(HttpStatusCode.OK, ComplexTypes.ComplexTypeResponseString, true);
 
-            var httpClientService = new HttpClientServiceFactory(
-                IConfigurationMocks.Get("key", "section_data"),
-                new CoreHttpClient(
-                    IHttpClientFactoryMocks.Get(HttpStatusCode.OK, this.ComplexTypeResponseString).CreateClient()
-                ),
-                new HttpRequestMessageFactory(
-                    IHttpContextAccessorMocks.Get()
-                ),
-                new TokenResponseService(
-                    new IdentityServerHttpClient(
-                        IHttpClientFactoryMocks.Get(HttpStatusCode.OK).CreateClient()
-                    ),
-                    IAccessTokenCacheManagerMocks.Get(
-                        await TokenResponseMock.GetValidResponseAsync("access_token", 3600)
-                    )
-                )
-            ).CreateHttpClientService();
-
-            var result = await httpClientService.HeadAsync<ComplexTypeResponse>("http://localhost");
+            var result = await httpClientService.HeadAsync<ComplexTypes.ComplexTypeResponse>("http://localhost");
 
             //Status/HttpResponseMessage
             Assert.AreEqual(HttpStatusCode.OK, result.StatusCode);
@@ -93,15 +57,13 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
             Assert.IsNull(result.HttpRequestMessge.Content);
 
             //Body
-            Assert.AreEqual(this.ComplexTypeResponseString, result.BodyAsString);
-            //var sr = new StreamReader(result.BodyAsStream);
-            //Assert.AreEqual(this.ComplexTypeResponseString, sr.ReadToEnd());
+            Assert.AreEqual(ComplexTypes.ComplexTypeResponseString, result.BodyAsString);
 
             Assert.IsInstanceOfType(result.BodyAsType.TestInt, typeof(int));
-            Assert.AreEqual(new ComplexTypeResponse().TestInt, result.BodyAsType.TestInt);
+            Assert.AreEqual(ComplexTypes.ComplexTypeResponseInstance.TestInt, result.BodyAsType.TestInt);
 
             Assert.IsInstanceOfType(result.BodyAsType.TestBool, typeof(bool));
-            Assert.AreEqual(new ComplexTypeResponse().TestBool, result.BodyAsType.TestBool);
+            Assert.AreEqual(ComplexTypes.ComplexTypeResponseInstance.TestBool, result.BodyAsType.TestBool);
         }
 
     }

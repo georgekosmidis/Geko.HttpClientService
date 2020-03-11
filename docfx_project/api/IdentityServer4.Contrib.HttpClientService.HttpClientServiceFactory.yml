@@ -5,7 +5,7 @@ items:
   id: HttpClientServiceFactory
   parent: IdentityServer4.Contrib.HttpClientService
   children:
-  - IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(Microsoft.Extensions.Configuration.IConfiguration,IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
+  - IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(Microsoft.Extensions.Configuration.IConfiguration,IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService)
   - IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.CreateHttpClientService
   - IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.Instance
   langs:
@@ -18,7 +18,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs
-      branch: master
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HttpClientServiceFactory
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs
@@ -67,7 +67,7 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs
-      branch: master
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: Instance
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs
@@ -92,32 +92,32 @@ items:
   - Public
   - Shared
   - ReadOnly
-- uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(Microsoft.Extensions.Configuration.IConfiguration,IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
-  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(Microsoft.Extensions.Configuration.IConfiguration,IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
-  id: '#ctor(Microsoft.Extensions.Configuration.IConfiguration,IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)'
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(Microsoft.Extensions.Configuration.IConfiguration,IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService)
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor(Microsoft.Extensions.Configuration.IConfiguration,IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService)
+  id: '#ctor(Microsoft.Extensions.Configuration.IConfiguration,IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient,IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory,IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService)'
   parent: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
   langs:
   - csharp
   - vb
-  name: HttpClientServiceFactory(IConfiguration, ICoreHttpClient, IHttpRequestMessageFactory, ITokenResponseService)
-  nameWithType: HttpClientServiceFactory.HttpClientServiceFactory(IConfiguration, ICoreHttpClient, IHttpRequestMessageFactory, ITokenResponseService)
-  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.HttpClientServiceFactory(Microsoft.Extensions.Configuration.IConfiguration, IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient, IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory, IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService)
+  name: HttpClientServiceFactory(IConfiguration, ICoreHttpClient, IHttpRequestMessageFactory, IIdentityServerService)
+  nameWithType: HttpClientServiceFactory.HttpClientServiceFactory(IConfiguration, ICoreHttpClient, IHttpRequestMessageFactory, IIdentityServerService)
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.HttpClientServiceFactory(Microsoft.Extensions.Configuration.IConfiguration, IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient, IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory, IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService)
   type: Constructor
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs
-      branch: master
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: .ctor
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs
-    startLine: 76
+    startLine: 81
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
   summary: "\nConstructor of the <xref href=\"IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
-    content: public HttpClientServiceFactory(IConfiguration configuration, ICoreHttpClient coreHttpClient, IHttpRequestMessageFactory requestMessageFactory, ITokenResponseService tokenResponseService)
+    content: public HttpClientServiceFactory(IConfiguration configuration, ICoreHttpClient coreHttpClient, IHttpRequestMessageFactory requestMessageFactory, IIdentityServerService tokenResponseService)
     parameters:
     - id: configuration
       type: Microsoft.Extensions.Configuration.IConfiguration
@@ -129,9 +129,9 @@ items:
       type: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
       description: The <xref href="IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory" data-throw-if-not-resolved="false"></xref> to get a new <xref href="System.Net.Http.HttpRequestMessage" data-throw-if-not-resolved="false"></xref>.
     - id: tokenResponseService
-      type: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
-      description: The <xref href="IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService" data-throw-if-not-resolved="false"></xref> to retrieve a token, if required.
-    content.vb: Public Sub New(configuration As IConfiguration, coreHttpClient As ICoreHttpClient, requestMessageFactory As IHttpRequestMessageFactory, tokenResponseService As ITokenResponseService)
+      type: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService
+      description: The <xref href="IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService" data-throw-if-not-resolved="false"></xref> to retrieve a token, if required.
+    content.vb: Public Sub New(configuration As IConfiguration, coreHttpClient As ICoreHttpClient, requestMessageFactory As IHttpRequestMessageFactory, tokenResponseService As IIdentityServerService)
   overload: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor*
   modifiers.csharp:
   - public
@@ -151,11 +151,11 @@ items:
   source:
     remote:
       path: src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs
-      branch: master
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: CreateHttpClientService
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientServiceFactory.cs
-    startLine: 108
+    startLine: 113
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -514,12 +514,12 @@ references:
   name: HttpRequestMessage
   nameWithType: HttpRequestMessage
   fullName: System.Net.Http.HttpRequestMessage
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
-  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService
   parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
-  name: ITokenResponseService
-  nameWithType: ITokenResponseService
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseService
+  name: IIdentityServerService
+  nameWithType: IIdentityServerService
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService
 - uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor*
   commentId: Overload:IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.#ctor
   name: HttpClientServiceFactory

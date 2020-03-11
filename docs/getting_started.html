@@ -62,75 +62,80 @@
             <article class="content wrap" id="_content" data-uid="">
 <h2 id="getting-started">Getting started</h2>
 
-<p>Getting started with IdentityServer4.Contrib.HttpClientService is rather easy, you only need three things:</p>
+<p>Getting started with <code>IdentityServer4.Contrib.HttpClientService</code> is rather easy, you only need three things:</p>
 <ol>
 <li>Install the nuget package <a href="https://www.nuget.org/packages/IdentityServer4.Contrib.HttpClientService">IdentityServer4.Contrib.HttpClientService</a></li>
-<li>Provide the options to authenticate in <code>appsettings.json</code></li>
+<li>Provide the options to request an access token in the <code>appsettings.json</code></li>
 <li>Register the service in <code>Startup.cs</code></li>
 </ol>
 <h3 id="its-a-nuget-package">It's a nuget package!</h3>
 <p>Install the <a href="https://www.nuget.org/packages/IdentityServer4.Contrib.HttpClientService">IdentityServer4.Contrib.HttpClientService</a> nuget package, using your favorite way.</p>
-<h3 id="identityserver4-client-credentials-options">IdentityServer4 client credentials options</h3>
-<p>Add the IdentityServer4 client credentials options to your appsettings.json</p>
-<pre><code>&quot;ProtectedResourceClientCredentialsOptions&quot;: {
+<h3 id="identityserver4-access-token-request-options">IdentityServer4 Access Token Request Options</h3>
+<p>Add the IdentityServer4 Access Token Request Options to your <code>appsettings.json</code> (the configuration section should always be or end with <code>ClientCredentialsOptions</code>):</p>
+<pre><code class="lang-json">&quot;SomeClientCredentialsOptions&quot;: {
     &quot;Address&quot;: &quot;https://demo.identityserver.io/connect/token&quot;,
     &quot;ClientId&quot;: &quot;m2m&quot;,
     &quot;ClientSecret&quot;: &quot;secret&quot;,
     &quot;Scopes&quot;: &quot;api&quot;
   }
+ // The values above are part of the demo offered in https://demo.identityserver.io/
 </code></pre>
-<p><em>The values above are part of the demo offered in <a href="https://demo.identityserver.io/">https://demo.identityserver.io/</a></em></p>
+<blockquote>
+<p>You could very well skip this step if you use one of <a href="more_details.html#how-to-setup-an-access-token-request">the other ways of setting up an Access Token Request</a>.</p>
+</blockquote>
 <h3 id="register-the-service">Register the service</h3>
 <p>Register the service In <code>StartUp.cs</code> in <code>ConfigureServices(IServiceCollection services)</code>:</p>
 <pre><code class="lang-csharp">services.AddHttpClientService();
 </code></pre>
-<p>If you want to use the <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options">Options pattern</a>, create a <code>ProtectedResourceClientCredentialsOptions</code> class with the client credential options or inherits from <code>DefaultClientCredentialOptions</code>:</p>
-<pre><code class="lang-csharp">public class ProtectedResourceClientCredentialsOptions : DefaultClientCredentialOptions
-{
-}
-</code></pre>
-<p>and then use <code>.Configure&lt;TOptions&gt;(...)</code>:</p>
-<pre><code class="lang-csharp">services.AddHttpClientService()
-        .Configure&lt;ProtectedResourceClientCredentialsOptions&gt;(Configuration.GetSection(nameof(ProtectedResourceClientCredentialsOptions)));
-</code></pre>
+<blockquote>
+<p>You would also need to configure the service if you plan to use the <a href="more_details.html#setidentityserveroptionstoptionsioptionstoptions">options pattern</a>.</p>
+</blockquote>
 <h3 id="you-are-done">You are done!</h3>
-<p>Inject the <code>IHttpClientServiceFactory</code> wherever you want to make the an authenticated requests:</p>
-<pre><code class="lang-csharp">public class ProtectedResourceService {
+<p>Request the <code>IHttpClientServiceFactory</code> instance wherever you want to make the authenticated requests:</p>
+<pre><code class="lang-csharp">using IdentityServer4.Contrib.HttpClientService.Extensions;
 
-  private readonly IHttpClientServiceFactory _requestServiceFactory;
-  
-  public ProtectedResourceService(IHttpClientServiceFactory requestServiceFactory)
-  {
-    _requestServiceFactory = requestServiceFactory;
-  }  
-  
-  public async Task&lt;IEnumerable&lt;Customer&gt;&gt; GetCustomers(){
-    var response = await _requestServiceFactory
-      .CreateHttpClientService()
-      .SetIdentityServerOptions(&quot;ProtectedResourceClientCredentialsOptions&quot;)
-      .GetAsync&lt;IEnumerable&lt;Customer&gt;&gt;(&quot;https://protected_resource_that_returns_customers_in_json&quot;); 
-  }
-}
-</code></pre>
-<p>Or if you used the <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options">Options pattern</a> approach</p>
-<pre><code class="lang-csharp">public class ProtectedResourceService {
+[ApiController]
+[Route(&quot;customers&quot;)]
+public class CustomerController : ControllerBase
+{
+	//Request the IHttpClientServiceFactory instance in your controller or service
+	private readonly IHttpClientServiceFactory _requestServiceFactory;
+	public CustomerController(IHttpClientServiceFactory requestServiceFactory){
+		_requestServiceFactory = requestServiceFactory;
+	}
 
-  private readonly IHttpClientServiceFactory _requestServiceFactory;
-  private readonly IOptions&lt;ProtectedResourceClientCredentialsOptions&gt; _identityServerOptions;
-  
-  public ProtectedResourceService(IHttpClientServiceFactory requestServiceFactory, IOptions&lt;ProtectedResourceClientCredentialsOptions&gt; identityServerOptions)
-  {
-    _requestServiceFactory = requestServiceFactory;
-    _identityServerOptions = identityServerOptions;
-  }  
-  public async Task&lt;IEnumerable&lt;Customer&gt;&gt; GetCustomers(){
-    var response = await _requestServiceFactory
-      .CreateHttpClientService()
-      .SetIdentityServerOptions(_identityServerOptions)
-      .GetAsync&lt;IEnumerable&lt;Customer&gt;&gt;(&quot;https://protected_resource_that_returns_customers_in_json&quot;); 
-  }
-}
+	[HttpGet]
+	public async Task&lt;IActionResult&gt; Get(){
+		//Make the request
+		var responseObject = await _requestServiceFactory
+			//Create a instance of the service
+			.CreateHttpClientService()
+			//Supports many ways of setting IdentityServer options
+			.SetIdentityServerOptions(&quot;ClientCredentialsOptions&quot;)
+			//GET and deserialize the response body to IEnumerable&lt;Customers&gt;
+			.GetAsync&lt;IEnumerable&lt;Customers&gt;&gt;(&quot;https://api/customers&quot;);
+
+		//Do something with the results					  
+		if (!responseObject.HasError)
+		{
+			var customers = responseObject.BodyAsType;
+			return Ok(customers);
+		}
+		else
+		{
+			var httpStatusCode = responseObject.StatusCode;
+			var errorMessage = responseObject.Error;           
+			return StatusCode((int)httpStatusCode, errorMessage);
+		}
+	}
+}	
 </code></pre>
+<blockquote>
+<p>The <code>.SetIdentityServerOptions(&quot;SomeClientCredentialsOptions&quot;)</code> might be the simplest way of setting up an <a href="more_details.html#how-to-setup-an-access-token-request">Access Token Request</a>, the <a href="more_details.html#setidentityserveroptionstoptionsioptionstoptions">Options Pattern</a> though is the suggested one.
+HTTP verbs supported are: <a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceGetExtensions.html">GET</a>, <a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions.html">POST</a>, <a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions.html">PUT</a>, <a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.html">DELETE</a>, <a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.html">PATCH</a> and <a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceHeadExtensions.html">HEAD</a>.</p>
+</blockquote>
+<p>Continue reading for more details!
+You can also take a look at the <a href="api/index.html">Documentation</a> for technical details, check the <a href="https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/tree/master/samples/IdentityServer4.Contrib.HttpClientService.FeaturesSample">features sample</a> or a more <a href="https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/tree/master/samples/IdentityServer4.Contrib.HttpClientService.CompleteSample">complete one</a>.</p>
 </article>
           </div>
           
@@ -139,7 +144,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/docfx_project/getting_started.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/feature/PasswordTokenRequest/docfx_project/getting_started.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

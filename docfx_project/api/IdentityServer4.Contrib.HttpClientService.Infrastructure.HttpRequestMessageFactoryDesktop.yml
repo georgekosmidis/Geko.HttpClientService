@@ -16,11 +16,11 @@ items:
   type: Class
   source:
     remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/HttpRequestMessageFactoryDesktop.cs
-      branch: master
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/HttpRequestMessageFactoryDesktop.cs
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HttpRequestMessageFactoryDesktop
-    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/HttpRequestMessageFactoryDesktop.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/HttpRequestMessageFactoryDesktop.cs
     startLine: 9
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -63,11 +63,11 @@ items:
   type: Constructor
   source:
     remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/HttpRequestMessageFactoryDesktop.cs
-      branch: master
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/HttpRequestMessageFactoryDesktop.cs
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: .ctor
-    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/HttpRequestMessageFactoryDesktop.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/HttpRequestMessageFactoryDesktop.cs
     startLine: 15
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
@@ -95,11 +95,11 @@ items:
   type: Method
   source:
     remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/HttpRequestMessageFactoryDesktop.cs
-      branch: master
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/HttpRequestMessageFactoryDesktop.cs
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: CreateRequestMessage
-    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/HttpRequestMessageFactoryDesktop.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/HttpRequestMessageFactoryDesktop.cs
     startLine: 23
   assemblies:
   - IdentityServer4.Contrib.HttpClientService

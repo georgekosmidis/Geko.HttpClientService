@@ -2,8 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using IdentityServer4.Contrib.HttpClientService.CompleteSample.ProtectedResourceServices;
-using IdentityServer4.Contrib.HttpClientService.CompleteSample.ProtectedResourceServices.Services;
+using IdentityServer4.Contrib.HttpClientService.CompleteSample.ClientCredentials2ProtectedResourceServices;
+using IdentityServer4.Contrib.HttpClientService.CompleteSample.ClientCredentials2ProtectedResourceServices.Services;
+using IdentityServer4.Contrib.HttpClientService.CompleteSample.ClientCredentialsProtectedResourceServices;
+using IdentityServer4.Contrib.HttpClientService.CompleteSample.ClientCredentialsProtectedResourceServices.Services;
+using IdentityServer4.Contrib.HttpClientService.CompleteSample.PasswordProtectedResourceServices;
+using IdentityServer4.Contrib.HttpClientService.CompleteSample.PasswordProtectedResourceServices.Services;
 using IdentityServer4.Contrib.HttpClientService.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -45,11 +49,16 @@ namespace IdentityServer4.Contrib.HttpClientService.CompleteSample
 
             /********************************************************************************************/
             //Adds the HTTP client service factory to the service collection,
-            // ads as singleton a custom service for HTTP calls (ProtectedResourceService),
-            // and registers a configuration instance with the client credentials options that will be used the ProtectedResourceService
+            // adds as singleton the custom services for HTTP calls,
+            // and registers configuration instances with the options that will be used for the protected resouce
             services.AddHttpClientService()
-                    .AddSingleton<IProtectedResourceService, ProtectedResourceService>()
-                    .Configure<ProtectedResourceClientCredentialsOptions>(Configuration.GetSection(nameof(ProtectedResourceClientCredentialsOptions)));
+                    .AddSingleton<IClientCredentialsProtectedResourceService, ClientCredentialsProtectedResourceService>()
+                    .Configure<OtherClientCredentialsOptions>(Configuration.GetSection(nameof(OtherClientCredentialsOptions)))
+                    .AddSingleton<IClientCredentials2ProtectedResourceService, ClientCredentials2ProtectedResourceService>()
+                    .Configure<SomeClientCredentialsOptions>(Configuration.GetSection(nameof(SomeClientCredentialsOptions)));
+
+            services.AddSingleton<IPasswordProtectedResourceService, PasswordProtectedResourceService>()
+                    .Configure<SomePasswordOptions>(Configuration.GetSection(nameof(SomePasswordOptions)));
             /********************************************************************************************/
 
         }

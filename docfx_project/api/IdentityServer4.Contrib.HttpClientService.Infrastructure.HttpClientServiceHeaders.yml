@@ -14,11 +14,11 @@ items:
   type: Class
   source:
     remote:
-      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/HttpClientServiceHeaders.cs
-      branch: master
+      path: src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/HttpClientServiceHeaders.cs
+      branch: feature/PasswordTokenRequest
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HttpClientServiceHeaders
-    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Implementations/HttpClientServiceHeaders.cs
+    path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/HttpClientServiceHeaders.cs
     startLine: 10
   assemblies:
   - IdentityServer4.Contrib.HttpClientService

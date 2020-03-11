@@ -10,6 +10,5 @@
         /// </summary>
         /// <returns>An <see cref="HttpClientService"/> instance.</returns>
         HttpClientService CreateHttpClientService();
-
     }
 }

@@ -14,7 +14,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Tests.Ifrastracture
         [TestMethod]
         public void AccessTokenOptions_NewInstance_ShouldBeClean()
         {
-            var accessTokenOptions = new AccessTokenOptions(
+            var accessTokenOptions = new IdentityServerOptionsHandler(
                 IConfigurationMocks.Get("key", "section_data")
             );
 
@@ -25,13 +25,13 @@ namespace IdentityServer4.Contrib.HttpClientService.Tests.Ifrastracture
         [TestMethod]
         public void AccessTokenOptions_SetIOptions_ShouldSetOptions()
         {
-            var accessTokenOptions = new AccessTokenOptions(
+            var accessTokenOptions = new IdentityServerOptionsHandler(
                 IConfigurationMocks.Get("key", "section_data")
             );
 
             accessTokenOptions.Set(
                 Options.Create(
-                    new DefaultClientCredentialOptions
+                    new ClientCredentialOptions
                     {
                         Address = "address",
                         ClientId = "clientid",
@@ -53,11 +53,11 @@ namespace IdentityServer4.Contrib.HttpClientService.Tests.Ifrastracture
         [TestMethod]
         public void AccessTokenOptions_SetDelegage_ShouldSetOptions()
         {
-            var accessTokenOptions = new AccessTokenOptions(
+            var accessTokenOptions = new IdentityServerOptionsHandler(
                 IConfigurationMocks.Get("key", "section_data")
             );
 
-            accessTokenOptions.Set<DefaultClientCredentialOptions>(
+            accessTokenOptions.Set<ClientCredentialOptions>(
                 x =>
                 {
                     x.Address = "address";
@@ -79,12 +79,12 @@ namespace IdentityServer4.Contrib.HttpClientService.Tests.Ifrastracture
         [TestMethod]
         public void AccessTokenOptions_SetObject_ShouldSetOptions()
         {
-            var accessTokenOptions = new AccessTokenOptions(
+            var accessTokenOptions = new IdentityServerOptionsHandler(
                 IConfigurationMocks.Get("key", "section_data")
             );
 
             accessTokenOptions.Set(
-                new DefaultClientCredentialOptions
+                new ClientCredentialOptions
                 {
                     Address = "address",
                     ClientId = "clientid",

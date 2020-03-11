@@ -160,14 +160,19 @@ namespace IdentityServer4.Contrib.HttpClientService
         /// It should be or end with either <see cref="ClientCredentialsOptions"/> or <see cref="PasswordOptions"/>.
         /// </param>
         /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
+        [Obsolete("Configuration section name should always be or end with '" + nameof(ClientCredentialsOptions) + "' or '" + nameof(PasswordOptions) + "'. Version 3.0.0 will not support random configuration section names any more.")]
         public HttpClientService SetIdentityServerOptions(string configurationSection)
         {
             if (_configuration == null)
+            {
                 throw new InvalidOperationException("The string configuraton cannot be used with the the lazy singleton instance of " + nameof(HttpClientService) + " (" + nameof(HttpClientServiceFactory) + "." + nameof(HttpClientServiceFactory.Instance) + ")");
+            }
 
             var sectionExists = _configuration.GetChildren().Any(item => item.Key == configurationSection);
             if (!sectionExists)
+            {
                 throw new ArgumentException("The configuration section '" + configurationSection + "' cannot be found!", nameof(configurationSection));
+            }
 
             //todo: find better way
             if (configurationSection.ToLower().EndsWith(nameof(ClientCredentialsOptions).ToLower()))
@@ -180,7 +185,9 @@ namespace IdentityServer4.Contrib.HttpClientService
             }
             else
             {
-                throw new InvalidOperationException("The name or the suffix of the cofiguration section must be either '" + nameof(ClientCredentialsOptions) + "' or '" + nameof(PasswordOptions) + "'.");
+                //backward compatibility, v3 should eliminate this
+                identityServerOptions = _configuration.GetSection(configurationSection).Get<ClientCredentialsOptions>();
+                //throw new InvalidOperationException("The name or the suffix of the cofiguration section must be either '" + nameof(ClientCredentialsOptions) + "' or '" + nameof(PasswordOptions) + "'.");
             }
 
             return this;
@@ -334,9 +341,10 @@ namespace IdentityServer4.Contrib.HttpClientService
             httpRequestMessage.RequestUri = requestUri;
 
             //todo: unit test that
-            if ((httpMethod == HttpMethod.Get || httpMethod == HttpMethod.Head || httpMethod == HttpMethod.Delete)
-                && requestBody != null)
+            if ((httpMethod == HttpMethod.Get || httpMethod == HttpMethod.Head || httpMethod == HttpMethod.Delete) && requestBody != null)
+            {
                 throw new ArgumentException(nameof(requestBody), "HTTP method " + httpMethod.Method + " does not support a request body.");
+            }
 
             //headers
             foreach (var kv in headers)

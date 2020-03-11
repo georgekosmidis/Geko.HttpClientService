@@ -1,13 +1,5 @@
 trigger:
-  branches:
-    include:
-    - '*'
-
-pr:
-  autoCancel: false
-  branches:
-    include:
-    - '*'
+  - none
 
 pool:
   vmImage: 'ubuntu-latest'

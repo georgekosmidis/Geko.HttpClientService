@@ -99,7 +99,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
         }
 
         [TestMethod]
-        public async Task HttpClientServiceTests_Headers_HeadersSetList_ShouldReset()
+        public async Task HttpClientServiceTests_Headers_HeadersSetList_ShouldNotReset()
         {
             var httpClientService = await Tests.Helpers.HttpClientServiceInstances.GetNew(HttpStatusCode.OK, "body_of_response", true);
 
@@ -116,8 +116,8 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
             );
 
             Assert.IsTrue(result.HttpRequestMessge.Headers.Contains("x-test-header"));
-            Assert.AreEqual(2, result.HttpRequestMessge.Headers.First(x => x.Key == "x-test-header").Value.Count());
-            Assert.AreEqual("x-test-value-2", result.HttpRequestMessge.Headers.First(x => x.Key == "x-test-header").Value.First());
+            Assert.AreEqual(3, result.HttpRequestMessge.Headers.First(x => x.Key == "x-test-header").Value.Count());
+            Assert.AreEqual("x-test-value-1", result.HttpRequestMessge.Headers.First(x => x.Key == "x-test-header").Value.First());
             Assert.AreEqual("x-test-value-3", result.HttpRequestMessge.Headers.First(x => x.Key == "x-test-header").Value.Last());
         }
 

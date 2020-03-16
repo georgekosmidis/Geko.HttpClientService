@@ -78,19 +78,17 @@ namespace IdentityServer4.Contrib.HttpClientService
         }
 
         /// <summary>
-        /// Clears all current headers, and sets the <paramref name="headers"/> as the headers for the request.
+        /// Adds the <paramref name="headers"/> as the headers for the request.
         /// </summary>
         /// <param name="headers">A <see cref="Dictionary{TKey, TValue}"/> with the key representing the name of the header, and the value representing the value of the header.</param>
         /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
 
-        public HttpClientService HeadersSet(Dictionary<string, List<string>> headers)
+        public HttpClientService HeadersAdd(Dictionary<string, List<string>> headers)
         {
             if (headers == null)
             {
                 throw new ArgumentNullException(nameof(headers));
             }
-
-            HeadersClear();
 
             foreach (var kv in headers)
             {
@@ -101,11 +99,33 @@ namespace IdentityServer4.Contrib.HttpClientService
         }
 
         /// <summary>
-        /// Clears all current headers, and sets the <paramref name="headers"/> as the headers for the request.
+        /// Adds the <paramref name="headers"/> as the headers for the request.
         /// </summary>
         /// <param name="headers">A <see cref="Dictionary{TKey, TValue}"/> where value is a <see cref="List{TString}"/> with the key representing the name of the header, and the values representing the values of the header.</param>
         /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
-        public HttpClientService HeadersSet(Dictionary<string, string> headers)
+        public HttpClientService HeadersAdd(Dictionary<string, string> headers)
+        {
+            if (headers == null)
+            {
+                throw new ArgumentNullException(nameof(headers));
+            }
+
+            foreach (var kv in headers)
+            {
+                this.headers.Add(kv.Key, kv.Value);
+            }
+
+            return this;
+        }
+
+
+        /// <summary>
+        /// Clears all headers and sets new
+        /// </summary>
+        /// <param name="headers">A <see cref="Dictionary{TKey, TValue}"/> with the key representing the name of the header, and the value representing the value of the header.</param>
+        /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
+        [Obsolete("HeadersSet will be removed in version 3.0.0. Please combine 'HeadersClear()' and 'HeadersSet(Dictionary<string, List<string>>)' to get the same result.")]
+        public HttpClientService HeadersSet(Dictionary<string, List<string>> headers)
         {
             if (headers == null)
             {
@@ -114,10 +134,26 @@ namespace IdentityServer4.Contrib.HttpClientService
 
             HeadersClear();
 
-            foreach (var kv in headers)
+            HeadersAdd(headers);
+
+            return this;
+        }
+
+        /// <summary>
+        /// Clears all headers and sets new
+        /// </summary>
+        /// <param name="headers">A <see cref="Dictionary{TKey, TValue}"/> where value is a <see cref="List{TString}"/> with the key representing the name of the header, and the values representing the values of the header.</param>
+        /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
+        [Obsolete("HeadersSet will be removed in version 3.0.0. Please combine 'HeadersClear()' and 'HeadersSet(Dictionary<string, string>)' to get the same result.")]
+        public HttpClientService HeadersSet(Dictionary<string, string> headers)
+        {
+            if (headers == null)
             {
-                this.headers.Add(kv.Key, kv.Value);
+                throw new ArgumentNullException(nameof(headers));
             }
+            HeadersClear();
+
+            HeadersAdd(headers);
 
             return this;
         }

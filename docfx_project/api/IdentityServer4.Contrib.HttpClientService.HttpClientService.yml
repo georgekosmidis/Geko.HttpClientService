@@ -6,6 +6,8 @@ items:
   parent: IdentityServer4.Contrib.HttpClientService
   children:
   - IdentityServer4.Contrib.HttpClientService.HttpClientService.GetTokenResponse
+  - IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})
+  - IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.Collections.Generic.Dictionary{System.String,System.String})
   - IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.String,System.Collections.Generic.List{System.String})
   - IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.String,System.String)
   - IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersClear
@@ -165,6 +167,90 @@ items:
   - Public
   fullName.vb: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.String, System.Collections.Generic.List(Of System.String))
   name.vb: HeadersAdd(String, List(Of String))
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})
+  id: HeadersAdd(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})
+  parent: IdentityServer4.Contrib.HttpClientService.HttpClientService
+  langs:
+  - csharp
+  - vb
+  name: HeadersAdd(Dictionary<String, List<String>>)
+  nameWithType: HttpClientService.HeadersAdd(Dictionary<String, List<String>>)
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.Collections.Generic.Dictionary<System.String, System.Collections.Generic.List<System.String>>)
+  type: Method
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: HeadersAdd
+    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+    startLine: 85
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService
+  summary: "\nAdds the <code data-dev-comment-type=\"paramref\" class=\"paramref\">headers</code> as the headers for the request.\n"
+  example: []
+  syntax:
+    content: public HttpClientService HeadersAdd(Dictionary<string, List<string>> headers)
+    parameters:
+    - id: headers
+      type: System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}}
+      description: A <xref href="System.Collections.Generic.Dictionary%602" data-throw-if-not-resolved="false"></xref> with the key representing the name of the header, and the value representing the value of the header.
+    return:
+      type: IdentityServer4.Contrib.HttpClientService.HttpClientService
+      description: Returns the current instance of <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
+    content.vb: Public Function HeadersAdd(headers As Dictionary(Of String, List(Of String))) As HttpClientService
+  overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd*
+  nameWithType.vb: HttpClientService.HeadersAdd(Dictionary(Of String, List(Of String)))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.Collections.Generic.Dictionary(Of System.String, System.Collections.Generic.List(Of System.String)))
+  name.vb: HeadersAdd(Dictionary(Of String, List(Of String)))
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.Collections.Generic.Dictionary{System.String,System.String})
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.Collections.Generic.Dictionary{System.String,System.String})
+  id: HeadersAdd(System.Collections.Generic.Dictionary{System.String,System.String})
+  parent: IdentityServer4.Contrib.HttpClientService.HttpClientService
+  langs:
+  - csharp
+  - vb
+  name: HeadersAdd(Dictionary<String, String>)
+  nameWithType: HttpClientService.HeadersAdd(Dictionary<String, String>)
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.Collections.Generic.Dictionary<System.String, System.String>)
+  type: Method
+  source:
+    remote:
+      path: src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+      branch: master
+      repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
+    id: HeadersAdd
+    path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
+    startLine: 105
+  assemblies:
+  - IdentityServer4.Contrib.HttpClientService
+  namespace: IdentityServer4.Contrib.HttpClientService
+  summary: "\nAdds the <code data-dev-comment-type=\"paramref\" class=\"paramref\">headers</code> as the headers for the request.\n"
+  example: []
+  syntax:
+    content: public HttpClientService HeadersAdd(Dictionary<string, string> headers)
+    parameters:
+    - id: headers
+      type: System.Collections.Generic.Dictionary{System.String,System.String}
+      description: A <xref href="System.Collections.Generic.Dictionary%602" data-throw-if-not-resolved="false"></xref> where value is a <xref href="System.Collections.Generic.List%601" data-throw-if-not-resolved="false"></xref> with the key representing the name of the header, and the values representing the values of the header.
+    return:
+      type: IdentityServer4.Contrib.HttpClientService.HttpClientService
+      description: Returns the current instance of <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
+    content.vb: Public Function HeadersAdd(headers As Dictionary(Of String, String)) As HttpClientService
+  overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd*
+  nameWithType.vb: HttpClientService.HeadersAdd(Dictionary(Of String, String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.Collections.Generic.Dictionary(Of System.String, System.String))
+  name.vb: HeadersAdd(Dictionary(Of String, String))
 - uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})
   commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})
   id: HeadersSet(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})
@@ -183,14 +269,17 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersSet
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 85
+    startLine: 126
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
-  summary: "\nClears all current headers, and sets the <code data-dev-comment-type=\"paramref\" class=\"paramref\">headers</code> as the headers for the request.\n"
+  summary: "\nClears all headers and sets new\n"
   example: []
   syntax:
-    content: public HttpClientService HeadersSet(Dictionary<string, List<string>> headers)
+    content: >-
+      [Obsolete("HeadersSet will be removed in v3. Please combine 'HeadersClear()' and 'HeadersSet(Dictionary<string, List<string>>)' to get the same result.")]
+
+      public HttpClientService HeadersSet(Dictionary<string, List<string>> headers)
     parameters:
     - id: headers
       type: System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}}
@@ -198,8 +287,17 @@ items:
     return:
       type: IdentityServer4.Contrib.HttpClientService.HttpClientService
       description: Returns the current instance of <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
-    content.vb: Public Function HeadersSet(headers As Dictionary(Of String, List(Of String))) As HttpClientService
+    content.vb: >-
+      <Obsolete("HeadersSet will be removed in v3. Please combine 'HeadersClear()' and 'HeadersSet(Dictionary<string, List<string>>)' to get the same result.")>
+
+      Public Function HeadersSet(headers As Dictionary(Of String, List(Of String))) As HttpClientService
   overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: HeadersSet will be removed in v3. Please combine 'HeadersClear()' and 'HeadersSet(Dictionary<string, List<string>>)' to get the same result.
   nameWithType.vb: HttpClientService.HeadersSet(Dictionary(Of String, List(Of String)))
   modifiers.csharp:
   - public
@@ -225,14 +323,17 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersSet
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 107
+    startLine: 146
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
-  summary: "\nClears all current headers, and sets the <code data-dev-comment-type=\"paramref\" class=\"paramref\">headers</code> as the headers for the request.\n"
+  summary: "\nClears all headers and sets new\n"
   example: []
   syntax:
-    content: public HttpClientService HeadersSet(Dictionary<string, string> headers)
+    content: >-
+      [Obsolete("HeadersSet will be removed in v3. Please combine 'HeadersClear()' and 'HeadersSet(Dictionary<string, string>)' to get the same result.")]
+
+      public HttpClientService HeadersSet(Dictionary<string, string> headers)
     parameters:
     - id: headers
       type: System.Collections.Generic.Dictionary{System.String,System.String}
@@ -240,8 +341,17 @@ items:
     return:
       type: IdentityServer4.Contrib.HttpClientService.HttpClientService
       description: Returns the current instance of <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
-    content.vb: Public Function HeadersSet(headers As Dictionary(Of String, String)) As HttpClientService
+    content.vb: >-
+      <Obsolete("HeadersSet will be removed in v3. Please combine 'HeadersClear()' and 'HeadersSet(Dictionary<string, string>)' to get the same result.")>
+
+      Public Function HeadersSet(headers As Dictionary(Of String, String)) As HttpClientService
   overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: HeadersSet will be removed in v3. Please combine 'HeadersClear()' and 'HeadersSet(Dictionary<string, string>)' to get the same result.
   nameWithType.vb: HttpClientService.HeadersSet(Dictionary(Of String, String))
   modifiers.csharp:
   - public
@@ -267,7 +377,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersClear
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 128
+    startLine: 164
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -302,7 +412,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HeadersRemove
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 139
+    startLine: 175
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -341,7 +451,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 162
+    startLine: 198
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -392,7 +502,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 201
+    startLine: 237
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -401,7 +511,6 @@ items:
   syntax:
     content: >-
       public HttpClientService SetIdentityServerOptions<TOptions>(IOptions<TOptions> options)
-
           where TOptions : class, IIdentityServerOptions, new()
     parameters:
     - id: options
@@ -440,7 +549,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 218
+    startLine: 254
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -449,7 +558,6 @@ items:
   syntax:
     content: >-
       public HttpClientService SetIdentityServerOptions<TOptions>(Action<TOptions> optionsDelegate)
-
           where TOptions : class, IIdentityServerOptions
     parameters:
     - id: optionsDelegate
@@ -487,7 +595,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SetIdentityServerOptions
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 230
+    startLine: 266
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -496,7 +604,6 @@ items:
   syntax:
     content: >-
       public HttpClientService SetIdentityServerOptions<TOptions>(TOptions options)
-
           where TOptions : class, IIdentityServerOptions
     parameters:
     - id: options
@@ -533,7 +640,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: GetTokenResponse
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 246
+    startLine: 282
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -568,7 +675,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: SendAsync
     path: ../src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs
-    startLine: 335
+    startLine: 371
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService
@@ -3557,11 +3664,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet*
-  commentId: Overload:IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet
-  name: HeadersSet
-  nameWithType: HttpClientService.HeadersSet
-  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet
 - uid: System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}}
   commentId: T:System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}}
   parent: System.Collections.Generic
@@ -3704,6 +3806,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet*
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet
+  name: HeadersSet
+  nameWithType: HttpClientService.HeadersSet
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet
 - uid: System.Net.Http.Headers.HttpHeaders
   commentId: T:System.Net.Http.Headers.HttpHeaders
   parent: System.Net.Http.Headers

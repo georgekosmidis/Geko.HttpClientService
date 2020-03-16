@@ -31,7 +31,6 @@ items:
     content: 'public class IdentityServerHttpClientSelector : IIdentityServerHttpClientSelector'
     content.vb: >-
       Public Class IdentityServerHttpClientSelector
-
           Implements IIdentityServerHttpClientSelector
   inheritance:
   - System.Object

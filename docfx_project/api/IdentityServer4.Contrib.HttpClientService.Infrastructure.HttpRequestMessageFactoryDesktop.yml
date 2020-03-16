@@ -31,7 +31,6 @@ items:
     content: 'public class HttpRequestMessageFactoryDesktop : IHttpRequestMessageFactory'
     content.vb: >-
       Public Class HttpRequestMessageFactoryDesktop
-
           Implements IHttpRequestMessageFactory
   inheritance:
   - System.Object

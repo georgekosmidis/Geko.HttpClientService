@@ -835,16 +835,30 @@
             <param name="value">The list of values of the header.</param>
             <returns>Returns the current instance of <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> for method chaining.</returns>
         </member>
+        <member name="M:IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})">
+            <summary>
+            Adds the <paramref name="headers"/> as the headers for the request.
+            </summary>
+            <param name="headers">A <see cref="T:System.Collections.Generic.Dictionary`2"/> with the key representing the name of the header, and the value representing the value of the header.</param>
+            <returns>Returns the current instance of <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> for method chaining.</returns>
+        </member>
+        <member name="M:IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.Collections.Generic.Dictionary{System.String,System.String})">
+            <summary>
+            Adds the <paramref name="headers"/> as the headers for the request.
+            </summary>
+            <param name="headers">A <see cref="T:System.Collections.Generic.Dictionary`2"/> where value is a <see cref="T:System.Collections.Generic.List`1"/> with the key representing the name of the header, and the values representing the values of the header.</param>
+            <returns>Returns the current instance of <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> for method chaining.</returns>
+        </member>
         <member name="M:IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})">
             <summary>
-            Clears all current headers, and sets the <paramref name="headers"/> as the headers for the request.
+            Clears all headers and sets new
             </summary>
             <param name="headers">A <see cref="T:System.Collections.Generic.Dictionary`2"/> with the key representing the name of the header, and the value representing the value of the header.</param>
             <returns>Returns the current instance of <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> for method chaining.</returns>
         </member>
         <member name="M:IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet(System.Collections.Generic.Dictionary{System.String,System.String})">
             <summary>
-            Clears all current headers, and sets the <paramref name="headers"/> as the headers for the request.
+            Clears all headers and sets new
             </summary>
             <param name="headers">A <see cref="T:System.Collections.Generic.Dictionary`2"/> where value is a <see cref="T:System.Collections.Generic.List`1"/> with the key representing the name of the header, and the values representing the values of the header.</param>
             <returns>Returns the current instance of <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> for method chaining.</returns>

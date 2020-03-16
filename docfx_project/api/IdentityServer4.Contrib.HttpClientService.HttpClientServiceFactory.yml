@@ -32,7 +32,6 @@ items:
     content: 'public sealed class HttpClientServiceFactory : IHttpClientServiceFactory'
     content.vb: >-
       Public NotInheritable Class HttpClientServiceFactory
-
           Implements IHttpClientServiceFactory
   inheritance:
   - System.Object

@@ -32,6 +32,8 @@
   "IdentityServer4.Contrib.HttpClientService.Extensions.ServiceCollectionExtensions.AddHttpClientService(Microsoft.Extensions.DependencyInjection.IServiceCollection)": "IdentityServer4.Contrib.HttpClientService.Extensions.ServiceCollectionExtensions.yml",
   "IdentityServer4.Contrib.HttpClientService.HttpClientService": "IdentityServer4.Contrib.HttpClientService.HttpClientService.yml",
   "IdentityServer4.Contrib.HttpClientService.HttpClientService.GetTokenResponse": "IdentityServer4.Contrib.HttpClientService.HttpClientService.yml",
+  "IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})": "IdentityServer4.Contrib.HttpClientService.HttpClientService.yml",
+  "IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.Collections.Generic.Dictionary{System.String,System.String})": "IdentityServer4.Contrib.HttpClientService.HttpClientService.yml",
   "IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.String,System.Collections.Generic.List{System.String})": "IdentityServer4.Contrib.HttpClientService.HttpClientService.yml",
   "IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.String,System.String)": "IdentityServer4.Contrib.HttpClientService.HttpClientService.yml",
   "IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersClear": "IdentityServer4.Contrib.HttpClientService.HttpClientService.yml",

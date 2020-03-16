@@ -300,6 +300,24 @@ references:
   isSpec: "True"
   fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.GetTokenResponse
   nameWithType: HttpClientService.GetTokenResponse
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})
+  name: HeadersAdd(Dictionary<String, List<String>>)
+  href: api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html#IdentityServer4_Contrib_HttpClientService_HttpClientService_HeadersAdd_System_Collections_Generic_Dictionary_System_String_System_Collections_Generic_List_System_String___
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.String}})
+  name.vb: HeadersAdd(Dictionary(Of String, List(Of String)))
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.Collections.Generic.Dictionary<System.String, System.Collections.Generic.List<System.String>>)
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.Collections.Generic.Dictionary(Of System.String, System.Collections.Generic.List(Of System.String)))
+  nameWithType: HttpClientService.HeadersAdd(Dictionary<String, List<String>>)
+  nameWithType.vb: HttpClientService.HeadersAdd(Dictionary(Of String, List(Of String)))
+- uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.Collections.Generic.Dictionary{System.String,System.String})
+  name: HeadersAdd(Dictionary<String, String>)
+  href: api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html#IdentityServer4_Contrib_HttpClientService_HttpClientService_HeadersAdd_System_Collections_Generic_Dictionary_System_String_System_String__
+  commentId: M:IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.Collections.Generic.Dictionary{System.String,System.String})
+  name.vb: HeadersAdd(Dictionary(Of String, String))
+  fullName: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.Collections.Generic.Dictionary<System.String, System.String>)
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.Collections.Generic.Dictionary(Of System.String, System.String))
+  nameWithType: HttpClientService.HeadersAdd(Dictionary<String, String>)
+  nameWithType.vb: HttpClientService.HeadersAdd(Dictionary(Of String, String))
 - uid: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersAdd(System.String,System.Collections.Generic.List{System.String})
   name: HeadersAdd(String, List<String>)
   href: api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html#IdentityServer4_Contrib_HttpClientService_HttpClientService_HeadersAdd_System_String_System_Collections_Generic_List_System_String__

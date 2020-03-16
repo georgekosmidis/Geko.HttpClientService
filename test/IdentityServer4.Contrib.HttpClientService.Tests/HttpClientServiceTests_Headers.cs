@@ -82,7 +82,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
 
             var result = await httpClientService
                 .HeadersAdd("x-test-header", "x-test-value-1")
-                .HeadersSet(new Dictionary<string, string>()
+                .HeadersAdd(new Dictionary<string, string>()
                 {
                     { "x-test-header", "x-test-value-2" }
                 })
@@ -93,8 +93,9 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
             );
 
             Assert.IsTrue(result.HttpRequestMessge.Headers.Contains("x-test-header"));
-            Assert.AreEqual(1, result.HttpRequestMessge.Headers.First(x => x.Key == "x-test-header").Value.Count());
-            Assert.AreEqual("x-test-value-2", result.HttpRequestMessge.Headers.First(x => x.Key == "x-test-header").Value.First());
+            Assert.AreEqual(2, result.HttpRequestMessge.Headers.First(x => x.Key == "x-test-header").Value.Count());
+            Assert.AreEqual("x-test-value-1", result.HttpRequestMessge.Headers.First(x => x.Key == "x-test-header").Value.First());
+            Assert.AreEqual("x-test-value-2", result.HttpRequestMessge.Headers.First(x => x.Key == "x-test-header").Value.Last());
         }
 
         [TestMethod]
@@ -104,7 +105,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Test
 
             var result = await httpClientService
                 .HeadersAdd("x-test-header", "x-test-value-1")
-                .HeadersSet(new Dictionary<string, List<string>>()
+                .HeadersAdd(new Dictionary<string, List<string>>()
                 {
                     { "x-test-header", new List<string>{ "x-test-value-2", "x-test-value-3" } }
                 })

@@ -139,7 +139,7 @@ Starting from version 2.3, the colleration id used to for logging between cascad
 
 **appsettings.json**
 
-```json
+```csharp
 "HttpClientServiceOptions": {
 	//Switches on or off the sychronization of the colleration id
 	"HeaderCollerationIdActive": true,
@@ -157,7 +157,7 @@ Starting from version 2.3, the colleration id used to for logging between cascad
     {
         //...
         services.AddHttpClientService()
-				.Configure<HttpClientServiceOptions>(Configuration.GetSection(nameof(HttpClientServiceOptions))); 
+		.Configure<HttpClientServiceOptions>(Configuration.GetSection(nameof(HttpClientServiceOptions))); 
         //...
     }
 //...

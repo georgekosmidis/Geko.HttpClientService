@@ -5,7 +5,7 @@ items:
   id: HttpRequestMessageFactory
   parent: IdentityServer4.Contrib.HttpClientService.Infrastructure
   children:
-  - IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)
+  - IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,Microsoft.Extensions.Options.IOptions{IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions})
   - IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.CreateRequestMessage
   langs:
   - csharp
@@ -21,7 +21,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: HttpRequestMessageFactory
     path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/HttpRequestMessageFactory.cs
-    startLine: 9
+    startLine: 11
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService.Infrastructure
@@ -31,6 +31,7 @@ items:
     content: 'public class HttpRequestMessageFactory : IHttpRequestMessageFactory'
     content.vb: >-
       Public Class HttpRequestMessageFactory
+
           Implements IHttpRequestMessageFactory
   inheritance:
   - System.Object
@@ -50,16 +51,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)
-  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)
-  id: '#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)'
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,Microsoft.Extensions.Options.IOptions{IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions})
+  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,Microsoft.Extensions.Options.IOptions{IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions})
+  id: '#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,Microsoft.Extensions.Options.IOptions{IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions})'
   parent: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory
   langs:
   - csharp
   - vb
-  name: HttpRequestMessageFactory(IHttpContextAccessor)
-  nameWithType: HttpRequestMessageFactory.HttpRequestMessageFactory(IHttpContextAccessor)
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.HttpRequestMessageFactory(Microsoft.AspNetCore.Http.IHttpContextAccessor)
+  name: HttpRequestMessageFactory(IHttpContextAccessor, IOptions<HttpClientServiceOptions>)
+  nameWithType: HttpRequestMessageFactory.HttpRequestMessageFactory(IHttpContextAccessor, IOptions<HttpClientServiceOptions>)
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.HttpRequestMessageFactory(Microsoft.AspNetCore.Http.IHttpContextAccessor, Microsoft.Extensions.Options.IOptions<IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions>)
   type: Constructor
   source:
     remote:
@@ -68,24 +69,30 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: .ctor
     path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/HttpRequestMessageFactory.cs
-    startLine: 17
+    startLine: 21
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService.Infrastructure
   summary: "\nConstructor of the  <xref href=\"IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory\" data-throw-if-not-resolved=\"false\"></xref>\n"
   example: []
   syntax:
-    content: public HttpRequestMessageFactory(IHttpContextAccessor httpContextAccessor)
+    content: public HttpRequestMessageFactory(IHttpContextAccessor httpContextAccessor, IOptions<HttpClientServiceOptions> options)
     parameters:
     - id: httpContextAccessor
       type: Microsoft.AspNetCore.Http.IHttpContextAccessor
       description: 'The <xref href="Microsoft.AspNetCore.Http.HttpContextAccessor" data-throw-if-not-resolved="false"></xref> object to access <xref href="Microsoft.AspNetCore.Http.HttpContext" data-throw-if-not-resolved="false"></xref>. '
-    content.vb: Public Sub New(httpContextAccessor As IHttpContextAccessor)
+    - id: options
+      type: Microsoft.Extensions.Options.IOptions{IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions}
+      description: 'The HttpClientService options to use. '
+    content.vb: Public Sub New(httpContextAccessor As IHttpContextAccessor, options As IOptions(Of HttpClientServiceOptions))
   overload: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor*
+  nameWithType.vb: HttpRequestMessageFactory.HttpRequestMessageFactory(IHttpContextAccessor, IOptions(Of HttpClientServiceOptions))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.HttpRequestMessageFactory(Microsoft.AspNetCore.Http.IHttpContextAccessor, Microsoft.Extensions.Options.IOptions(Of IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions))
+  name.vb: HttpRequestMessageFactory(IHttpContextAccessor, IOptions(Of HttpClientServiceOptions))
 - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.CreateRequestMessage
   commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.CreateRequestMessage
   id: CreateRequestMessage
@@ -104,7 +111,7 @@ items:
       repo: https://github.com/georgekosmidis/IdentityServer4.HttpClientService.git
     id: CreateRequestMessage
     path: ../src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/HttpRequestMessageFactory.cs
-    startLine: 28
+    startLine: 33
   assemblies:
   - IdentityServer4.Contrib.HttpClientService
   namespace: IdentityServer4.Contrib.HttpClientService.Infrastructure
@@ -464,12 +471,99 @@ references:
   name: IHttpContextAccessor
   nameWithType: IHttpContextAccessor
   fullName: Microsoft.AspNetCore.Http.IHttpContextAccessor
+- uid: Microsoft.Extensions.Options.IOptions{IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions}
+  commentId: T:Microsoft.Extensions.Options.IOptions{IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions}
+  parent: Microsoft.Extensions.Options
+  definition: Microsoft.Extensions.Options.IOptions`1
+  name: IOptions<HttpClientServiceOptions>
+  nameWithType: IOptions<HttpClientServiceOptions>
+  fullName: Microsoft.Extensions.Options.IOptions<IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions>
+  nameWithType.vb: IOptions(Of HttpClientServiceOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions)
+  name.vb: IOptions(Of HttpClientServiceOptions)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions
+    name: HttpClientServiceOptions
+    nameWithType: HttpClientServiceOptions
+    fullName: IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions
+    name: HttpClientServiceOptions
+    nameWithType: HttpClientServiceOptions
+    fullName: IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Microsoft.AspNetCore.Http
   commentId: N:Microsoft.AspNetCore.Http
   isExternal: true
   name: Microsoft.AspNetCore.Http
   nameWithType: Microsoft.AspNetCore.Http
   fullName: Microsoft.AspNetCore.Http
+- uid: Microsoft.Extensions.Options.IOptions`1
+  commentId: T:Microsoft.Extensions.Options.IOptions`1
+  isExternal: true
+  name: IOptions<TOptions>
+  nameWithType: IOptions<TOptions>
+  fullName: Microsoft.Extensions.Options.IOptions<TOptions>
+  nameWithType.vb: IOptions(Of TOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TOptions)
+  name.vb: IOptions(Of TOptions)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TOptions
+    nameWithType: TOptions
+    fullName: TOptions
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TOptions
+    nameWithType: TOptions
+    fullName: TOptions
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.Extensions.Options
+  commentId: N:Microsoft.Extensions.Options
+  isExternal: true
+  name: Microsoft.Extensions.Options
+  nameWithType: Microsoft.Extensions.Options
+  fullName: Microsoft.Extensions.Options
 - uid: System.Net.Http.HttpClient
   commentId: T:System.Net.Http.HttpClient
   parent: System.Net.Http

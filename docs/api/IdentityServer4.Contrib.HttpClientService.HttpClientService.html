@@ -453,7 +453,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;HeadersSet will be removed in v3. Please combine 'HeadersClear()' and 'HeadersSet(Dictionary&lt;string, List&lt;string&gt;&gt;)' to get the same result.&quot;)]
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;HeadersSet will be removed in version 3.0.0. Please combine 'HeadersClear()' and 'HeadersSet(Dictionary&lt;string, List&lt;string&gt;&gt;)' to get the same result.&quot;)]
 public HttpClientService HeadersSet(Dictionary&lt;string, List&lt;string&gt;&gt; headers)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -504,7 +504,7 @@ public HttpClientService HeadersSet(Dictionary&lt;string, List&lt;string&gt;&gt;
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Obsolete(&quot;HeadersSet will be removed in v3. Please combine 'HeadersClear()' and 'HeadersSet(Dictionary&lt;string, string&gt;)' to get the same result.&quot;)]
+    <pre><code class="lang-csharp hljs">[Obsolete(&quot;HeadersSet will be removed in version 3.0.0. Please combine 'HeadersClear()' and 'HeadersSet(Dictionary&lt;string, string&gt;)' to get the same result.&quot;)]
 public HttpClientService HeadersSet(Dictionary&lt;string, string&gt; headers)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -705,6 +705,7 @@ It should be or end with either <a class="xref" href="IdentityServer4.Contrib.Ht
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public HttpClientService SetIdentityServerOptions&lt;TOptions&gt;(TOptions options)
+
     where TOptions : class, IIdentityServerOptions</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -770,6 +771,7 @@ It should be or end with either <a class="xref" href="IdentityServer4.Contrib.Ht
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public HttpClientService SetIdentityServerOptions&lt;TOptions&gt;(IOptions&lt;TOptions&gt; options)
+
     where TOptions : class, IIdentityServerOptions, new()</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
@@ -837,6 +839,7 @@ It should be or end with either <a class="xref" href="IdentityServer4.Contrib.Ht
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public HttpClientService SetIdentityServerOptions&lt;TOptions&gt;(Action&lt;TOptions&gt; optionsDelegate)
+
     where TOptions : class, IIdentityServerOptions</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>

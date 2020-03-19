@@ -277,7 +277,7 @@ items:
   example: []
   syntax:
     content: >-
-      [Obsolete("HeadersSet will be removed in v3. Please combine 'HeadersClear()' and 'HeadersSet(Dictionary<string, List<string>>)' to get the same result.")]
+      [Obsolete("HeadersSet will be removed in version 3.0.0. Please combine 'HeadersClear()' and 'HeadersSet(Dictionary<string, List<string>>)' to get the same result.")]
 
       public HttpClientService HeadersSet(Dictionary<string, List<string>> headers)
     parameters:
@@ -288,7 +288,7 @@ items:
       type: IdentityServer4.Contrib.HttpClientService.HttpClientService
       description: Returns the current instance of <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
     content.vb: >-
-      <Obsolete("HeadersSet will be removed in v3. Please combine 'HeadersClear()' and 'HeadersSet(Dictionary<string, List<string>>)' to get the same result.")>
+      <Obsolete("HeadersSet will be removed in version 3.0.0. Please combine 'HeadersClear()' and 'HeadersSet(Dictionary<string, List<string>>)' to get the same result.")>
 
       Public Function HeadersSet(headers As Dictionary(Of String, List(Of String))) As HttpClientService
   overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet*
@@ -297,7 +297,7 @@ items:
     ctor: System.ObsoleteAttribute.#ctor(System.String)
     arguments:
     - type: System.String
-      value: HeadersSet will be removed in v3. Please combine 'HeadersClear()' and 'HeadersSet(Dictionary<string, List<string>>)' to get the same result.
+      value: HeadersSet will be removed in version 3.0.0. Please combine 'HeadersClear()' and 'HeadersSet(Dictionary<string, List<string>>)' to get the same result.
   nameWithType.vb: HttpClientService.HeadersSet(Dictionary(Of String, List(Of String)))
   modifiers.csharp:
   - public
@@ -331,7 +331,7 @@ items:
   example: []
   syntax:
     content: >-
-      [Obsolete("HeadersSet will be removed in v3. Please combine 'HeadersClear()' and 'HeadersSet(Dictionary<string, string>)' to get the same result.")]
+      [Obsolete("HeadersSet will be removed in version 3.0.0. Please combine 'HeadersClear()' and 'HeadersSet(Dictionary<string, string>)' to get the same result.")]
 
       public HttpClientService HeadersSet(Dictionary<string, string> headers)
     parameters:
@@ -342,7 +342,7 @@ items:
       type: IdentityServer4.Contrib.HttpClientService.HttpClientService
       description: Returns the current instance of <xref href="IdentityServer4.Contrib.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
     content.vb: >-
-      <Obsolete("HeadersSet will be removed in v3. Please combine 'HeadersClear()' and 'HeadersSet(Dictionary<string, string>)' to get the same result.")>
+      <Obsolete("HeadersSet will be removed in version 3.0.0. Please combine 'HeadersClear()' and 'HeadersSet(Dictionary<string, string>)' to get the same result.")>
 
       Public Function HeadersSet(headers As Dictionary(Of String, String)) As HttpClientService
   overload: IdentityServer4.Contrib.HttpClientService.HttpClientService.HeadersSet*
@@ -351,7 +351,7 @@ items:
     ctor: System.ObsoleteAttribute.#ctor(System.String)
     arguments:
     - type: System.String
-      value: HeadersSet will be removed in v3. Please combine 'HeadersClear()' and 'HeadersSet(Dictionary<string, string>)' to get the same result.
+      value: HeadersSet will be removed in version 3.0.0. Please combine 'HeadersClear()' and 'HeadersSet(Dictionary<string, string>)' to get the same result.
   nameWithType.vb: HttpClientService.HeadersSet(Dictionary(Of String, String))
   modifiers.csharp:
   - public
@@ -511,6 +511,7 @@ items:
   syntax:
     content: >-
       public HttpClientService SetIdentityServerOptions<TOptions>(IOptions<TOptions> options)
+
           where TOptions : class, IIdentityServerOptions, new()
     parameters:
     - id: options
@@ -558,6 +559,7 @@ items:
   syntax:
     content: >-
       public HttpClientService SetIdentityServerOptions<TOptions>(Action<TOptions> optionsDelegate)
+
           where TOptions : class, IIdentityServerOptions
     parameters:
     - id: optionsDelegate
@@ -604,6 +606,7 @@ items:
   syntax:
     content: >-
       public HttpClientService SetIdentityServerOptions<TOptions>(TOptions options)
+
           where TOptions : class, IIdentityServerOptions
     parameters:
     - id: options

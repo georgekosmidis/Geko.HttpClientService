@@ -5,6 +5,7 @@ items:
   id: IdentityServer4.Contrib.HttpClientService.Models
   children:
   - IdentityServer4.Contrib.HttpClientService.Models.ClientCredentialsOptions
+  - IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions
   - IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions
   - IdentityServer4.Contrib.HttpClientService.Models.PasswordOptions
   - IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1
@@ -34,6 +35,11 @@ references:
   name: PasswordOptions
   nameWithType: PasswordOptions
   fullName: IdentityServer4.Contrib.HttpClientService.Models.PasswordOptions
+- uid: IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions
+  name: HttpClientServiceOptions
+  nameWithType: HttpClientServiceOptions
+  fullName: IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions
 - uid: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1
   commentId: T:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1
   name: ResponseObject<TResponseBody>

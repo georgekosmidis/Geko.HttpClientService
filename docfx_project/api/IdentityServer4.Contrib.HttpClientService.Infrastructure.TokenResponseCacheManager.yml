@@ -33,6 +33,7 @@ items:
     content: 'public class TokenResponseCacheManager : ITokenResponseCacheManager'
     content.vb: >-
       Public Class TokenResponseCacheManager
+
           Implements ITokenResponseCacheManager
   inheritance:
   - System.Object

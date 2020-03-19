@@ -132,3 +132,33 @@ var responseObject = await _requestServiceFactory
                           //.PostAsync<TRequestBody,TResponseBody>(URL, customer of type Customer1)
                           .PostAsync<TypeContent<Customer1>,Customer2>("https://api/customers", new TypeContent(customer, Encoding.UTF8, "application/json"));
 ```
+___
+
+### Configuring the colleration id
+Starting from version 2.3, the colleration id used to for logging between cascading API calls, can be configured from appsettings using the options pattern:
+
+**appsettings.json**
+
+```json
+"HttpClientServiceOptions": {
+	//Switches on or off the sychronization of the colleration id
+	"HeaderCollerationIdActive": true,
+	//Sets the name of the header
+	"HeaderCollerationName": "X-Request-ID"
+},
+ // The values above are part of the demo offered in https://demo.identityserver.io/
+```
+
+**Startup.cs**
+
+```csharp
+//...
+    public void ConfigureServices(IServiceCollection services)
+    {
+        //...
+        services.AddHttpClientService()
+				.Configure<HttpClientServiceOptions>(Configuration.GetSection(nameof(HttpClientServiceOptions))); 
+        //...
+    }
+//...
+```

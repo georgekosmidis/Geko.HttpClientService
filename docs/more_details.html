@@ -164,6 +164,29 @@ public class ProtectedResourceService : IProtectedResourceService
                           //.PostAsync&lt;TRequestBody,TResponseBody&gt;(URL, customer of type Customer1)
                           .PostAsync&lt;TypeContent&lt;Customer1&gt;,Customer2&gt;(&quot;https://api/customers&quot;, new TypeContent(customer, Encoding.UTF8, &quot;application/json&quot;));
 </code></pre>
+<hr>
+<h3 id="configuring-the-colleration-id">Configuring the colleration id</h3>
+<p>Starting from version 2.3, the colleration id used to for logging between cascading API calls, can be configured from appsettings using the options pattern:</p>
+<p><strong>appsettings.json</strong></p>
+<pre><code class="lang-json">&quot;HttpClientServiceOptions&quot;: {
+	//Switches on or off the sychronization of the colleration id
+	&quot;HeaderCollerationIdActive&quot;: true,
+	//Sets the name of the header
+	&quot;HeaderCollerationName&quot;: &quot;X-Request-ID&quot;
+},
+ // The values above are part of the demo offered in https://demo.identityserver.io/
+</code></pre>
+<p><strong>Startup.cs</strong></p>
+<pre><code class="lang-csharp">//...
+    public void ConfigureServices(IServiceCollection services)
+    {
+        //...
+        services.AddHttpClientService()
+				.Configure&lt;HttpClientServiceOptions&gt;(Configuration.GetSection(nameof(HttpClientServiceOptions))); 
+        //...
+    }
+//...
+</code></pre>
 </article>
           </div>
           
@@ -172,7 +195,7 @@ public class ProtectedResourceService : IProtectedResourceService
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/feature/PasswordTokenRequest/docfx_project/more_details.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/docfx_project/more_details.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

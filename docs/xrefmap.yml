@@ -619,12 +619,15 @@ references:
   commentId: T:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory
   fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory
   nameWithType: HttpRequestMessageFactory
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)
-  name: HttpRequestMessageFactory(IHttpContextAccessor)
-  href: api/IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.html#IdentityServer4_Contrib_HttpClientService_Infrastructure_HttpRequestMessageFactory__ctor_Microsoft_AspNetCore_Http_IHttpContextAccessor_
-  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)
-  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.HttpRequestMessageFactory(Microsoft.AspNetCore.Http.IHttpContextAccessor)
-  nameWithType: HttpRequestMessageFactory.HttpRequestMessageFactory(IHttpContextAccessor)
+- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,Microsoft.Extensions.Options.IOptions{IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions})
+  name: HttpRequestMessageFactory(IHttpContextAccessor, IOptions<HttpClientServiceOptions>)
+  href: api/IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.html#IdentityServer4_Contrib_HttpClientService_Infrastructure_HttpRequestMessageFactory__ctor_Microsoft_AspNetCore_Http_IHttpContextAccessor_Microsoft_Extensions_Options_IOptions_IdentityServer4_Contrib_HttpClientService_Models_HttpClientServiceOptions__
+  commentId: M:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,Microsoft.Extensions.Options.IOptions{IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions})
+  name.vb: HttpRequestMessageFactory(IHttpContextAccessor, IOptions(Of HttpClientServiceOptions))
+  fullName: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.HttpRequestMessageFactory(Microsoft.AspNetCore.Http.IHttpContextAccessor, Microsoft.Extensions.Options.IOptions<IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions>)
+  fullName.vb: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.HttpRequestMessageFactory(Microsoft.AspNetCore.Http.IHttpContextAccessor, Microsoft.Extensions.Options.IOptions(Of IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions))
+  nameWithType: HttpRequestMessageFactory.HttpRequestMessageFactory(IHttpContextAccessor, IOptions<HttpClientServiceOptions>)
+  nameWithType.vb: HttpRequestMessageFactory.HttpRequestMessageFactory(IHttpContextAccessor, IOptions(Of HttpClientServiceOptions))
 - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor*
   name: HttpRequestMessageFactory
   href: api/IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.html#IdentityServer4_Contrib_HttpClientService_Infrastructure_HttpRequestMessageFactory__ctor_
@@ -1112,6 +1115,38 @@ references:
   isSpec: "True"
   fullName: IdentityServer4.Contrib.HttpClientService.Models.ClientCredentialsOptions.Scope
   nameWithType: ClientCredentialsOptions.Scope
+- uid: IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions
+  name: HttpClientServiceOptions
+  href: api/IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions.html
+  commentId: T:IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions
+  fullName: IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions
+  nameWithType: HttpClientServiceOptions
+- uid: IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationIdActive
+  name: HeaderCollerationIdActive
+  href: api/IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions.html#IdentityServer4_Contrib_HttpClientService_Models_HttpClientServiceOptions_HeaderCollerationIdActive
+  commentId: P:IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationIdActive
+  fullName: IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationIdActive
+  nameWithType: HttpClientServiceOptions.HeaderCollerationIdActive
+- uid: IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationIdActive*
+  name: HeaderCollerationIdActive
+  href: api/IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions.html#IdentityServer4_Contrib_HttpClientService_Models_HttpClientServiceOptions_HeaderCollerationIdActive_
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationIdActive
+  isSpec: "True"
+  fullName: IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationIdActive
+  nameWithType: HttpClientServiceOptions.HeaderCollerationIdActive
+- uid: IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationName
+  name: HeaderCollerationName
+  href: api/IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions.html#IdentityServer4_Contrib_HttpClientService_Models_HttpClientServiceOptions_HeaderCollerationName
+  commentId: P:IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationName
+  fullName: IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationName
+  nameWithType: HttpClientServiceOptions.HeaderCollerationName
+- uid: IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationName*
+  name: HeaderCollerationName
+  href: api/IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions.html#IdentityServer4_Contrib_HttpClientService_Models_HttpClientServiceOptions_HeaderCollerationName_
+  commentId: Overload:IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationName
+  isSpec: "True"
+  fullName: IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationName
+  nameWithType: HttpClientServiceOptions.HeaderCollerationName
 - uid: IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions
   name: IIdentityServerOptions
   href: api/IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions.html

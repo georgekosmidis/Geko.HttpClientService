@@ -66,6 +66,8 @@
   items:
   - uid: IdentityServer4.Contrib.HttpClientService.Models.ClientCredentialsOptions
     name: ClientCredentialsOptions
+  - uid: IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions
+    name: HttpClientServiceOptions
   - uid: IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions
     name: IIdentityServerOptions
   - uid: IdentityServer4.Contrib.HttpClientService.Models.PasswordOptions

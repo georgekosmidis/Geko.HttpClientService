@@ -119,19 +119,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/new/master/apiSpec/new?filename=IdentityServer4_Contrib_HttpClientService_Infrastructure_HttpRequestMessageFactory__ctor_Microsoft_AspNetCore_Http_IHttpContextAccessor_.md&amp;value=---%0Auid%3A%20IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.%23ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/new/master/apiSpec/new?filename=IdentityServer4_Contrib_HttpClientService_Infrastructure_HttpRequestMessageFactory__ctor_Microsoft_AspNetCore_Http_IHttpContextAccessor_Microsoft_Extensions_Options_IOptions_IdentityServer4_Contrib_HttpClientService_Models_HttpClientServiceOptions__.md&amp;value=---%0Auid%3A%20IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.%23ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor%2CMicrosoft.Extensions.Options.IOptions%7BIdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/HttpRequestMessageFactory.cs/#L18">View Source</a>
+    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/HttpRequestMessageFactory.cs/#L22">View Source</a>
   </span>
   <a id="IdentityServer4_Contrib_HttpClientService_Infrastructure_HttpRequestMessageFactory__ctor_" data-uid="IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor*"></a>
-  <h4 id="IdentityServer4_Contrib_HttpClientService_Infrastructure_HttpRequestMessageFactory__ctor_Microsoft_AspNetCore_Http_IHttpContextAccessor_" data-uid="IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)">HttpRequestMessageFactory(IHttpContextAccessor)</h4>
+  <h4 id="IdentityServer4_Contrib_HttpClientService_Infrastructure_HttpRequestMessageFactory__ctor_Microsoft_AspNetCore_Http_IHttpContextAccessor_Microsoft_Extensions_Options_IOptions_IdentityServer4_Contrib_HttpClientService_Models_HttpClientServiceOptions__" data-uid="IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,Microsoft.Extensions.Options.IOptions{IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions})">HttpRequestMessageFactory(IHttpContextAccessor, IOptions&lt;HttpClientServiceOptions&gt;)</h4>
   <div class="markdown level1 summary"><p>Constructor of the  <a class="xref" href="IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.html">HttpRequestMessageFactory</a></p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public HttpRequestMessageFactory(IHttpContextAccessor httpContextAccessor)</code></pre>
+    <pre><code class="lang-csharp hljs">public HttpRequestMessageFactory(IHttpContextAccessor httpContextAccessor, IOptions&lt;HttpClientServiceOptions&gt; options)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -149,6 +149,12 @@
         <td><p>The <span class="xref">Microsoft.AspNetCore.Http.HttpContextAccessor</span> object to access <span class="xref">Microsoft.AspNetCore.Http.HttpContext</span>.</p>
 </td>
       </tr>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Options.IOptions</span>&lt;<a class="xref" href="IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions.html">HttpClientServiceOptions</a>&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The HttpClientService options to use.</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <h3 id="methods">Methods
@@ -158,7 +164,7 @@
     <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/new/master/apiSpec/new?filename=IdentityServer4_Contrib_HttpClientService_Infrastructure_HttpRequestMessageFactory_CreateRequestMessage.md&amp;value=---%0Auid%3A%20IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.CreateRequestMessage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/HttpRequestMessageFactory.cs/#L29">View Source</a>
+    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/HttpRequestMessageFactory.cs/#L34">View Source</a>
   </span>
   <a id="IdentityServer4_Contrib_HttpClientService_Infrastructure_HttpRequestMessageFactory_CreateRequestMessage_" data-uid="IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.CreateRequestMessage*"></a>
   <h4 id="IdentityServer4_Contrib_HttpClientService_Infrastructure_HttpRequestMessageFactory_CreateRequestMessage" data-uid="IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.CreateRequestMessage">CreateRequestMessage()</h4>
@@ -204,7 +210,7 @@ If there is no current request or the current request does not contain a <code>X
                     <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/new/master/apiSpec/new?filename=IdentityServer4_Contrib_HttpClientService_Infrastructure_HttpRequestMessageFactory.md&amp;value=---%0Auid%3A%20IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/HttpRequestMessageFactory.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/src/IdentityServer4.Contrib.HttpClientService/Infrastructure/Core/HttpRequestMessageFactory.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

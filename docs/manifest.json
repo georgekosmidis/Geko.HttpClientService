@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html",
-          "hash": "D4hytcmb4fMLvH8vCkxXzA=="
+          "hash": "ZxcKIKdTo9n69JVT0lSMHw=="
         }
       },
       "is_incremental": false,
@@ -177,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.html",
-          "hash": "+bKQ0R1RAIhBOyTilmNmaA=="
+          "hash": "53lcSQrMP3O9FpaBswPlLw=="
         }
       },
       "is_incremental": false,
@@ -353,6 +353,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions.html",
+          "hash": "hprTlFsC3UY8O2tTMBjQDg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions.yml",
       "output": {
         ".html": {
@@ -393,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.html",
-          "hash": "m9VTtoTSTK/RJUznyX0amg=="
+          "hash": "KV/KFR5SCcdtD2Ue0hpYGA=="
         }
       },
       "is_incremental": false,
@@ -429,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "koD4lbIgLYwV+F6Dlc7UrQ=="
+          "hash": "W8P94Sa0eEDeqVt+QWqDYg=="
         }
       },
       "is_incremental": false,
@@ -480,7 +492,7 @@
           "hash": "Htfc8XpR7HlFF44bTjZbsA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -514,7 +526,7 @@
           "hash": "RLyEJPAe1CusyhNWx165sw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -523,10 +535,10 @@
       "output": {
         ".html": {
           "relative_path": "more_details.html",
-          "hash": "8S58Cma25LLDg4L252DC/Q=="
+          "hash": "vsKj37TzhLETIfRRdCvD+Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -561,14 +573,14 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 34,
-          "skipped_file_count": 20
+          "total_file_count": 35,
+          "skipped_file_count": 21
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 6,
-          "skipped_file_count": 6
+          "skipped_file_count": 5
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

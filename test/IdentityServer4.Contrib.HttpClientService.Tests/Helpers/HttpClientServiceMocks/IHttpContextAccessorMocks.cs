@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using IdentityServer4.Contrib.HttpClientService.Models;
+using Microsoft.AspNetCore.Http;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Tests.Helpers
         {
             var mockHttpContextAccessor = new Mock<IHttpContextAccessor>();
             var context = new DefaultHttpContext();
-            context.Request.Headers["X-HttpClientService"] = xHeader;
+            context.Request.Headers[new HttpClientServiceOptions().HeaderCollerationName] = xHeader;
             mockHttpContextAccessor.Setup(_ => _.HttpContext).Returns(context);
 
             return mockHttpContextAccessor.Object;

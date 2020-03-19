@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using IdentityServer4.Contrib.HttpClientService.Infrastructure;
 using IdentityServer4.Contrib.HttpClientService.Tests.Helpers;
 using System;
+using Microsoft.Extensions.Options;
+using IdentityServer4.Contrib.HttpClientService.Models;
 
 namespace IdentityServer4.Contrib.HttpClientService.Infrastructure.Tests
 {
@@ -13,69 +15,102 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure.Tests
     public class HttpRequestMessageFactoryTests
     {
         [TestMethod]
+        public void HttpRequestMessageFactory_CreateRequestMessage_ShouldNotContainXHeader()
+        {
+            var httpClientServiceOptions = new HttpClientServiceOptions
+            {
+                HeaderCollerationIdActive = false,
+                HeaderCollerationName = "X-ShouldNotBeThere"
+            };
+
+            var message = new HttpRequestMessageFactory(
+                IHttpContextAccessorMocks.Get(),
+                Options.Create(httpClientServiceOptions)
+            ).CreateRequestMessage();
+
+            Assert.AreEqual(0, message.Headers.Count());
+        }
+
+        [TestMethod]
         public void HttpRequestMessageFactory_CreateRequestMessage_ShouldReturnsClientWithXHeader()
         {
-            var request = new HttpRequestMessageFactory(
-                IHttpContextAccessorMocks.Get()
+            var httpClientServiceOptions = new HttpClientServiceOptions();
+
+            var message = new HttpRequestMessageFactory(
+                IHttpContextAccessorMocks.Get(),
+                Options.Create(httpClientServiceOptions)
             ).CreateRequestMessage();
-            
-            Assert.IsTrue(request.Headers.Contains("X-HttpClientService"));
+
+            Assert.IsTrue(message.Headers.Contains(httpClientServiceOptions.HeaderCollerationName));
         }
 
         [TestMethod]
         public void HttpRequestMessageFactory_CreateRequestMessage_ShouldAddNewXHeaderForEachRequestMessage()
         {
+            var httpClientServiceOptions = new HttpClientServiceOptions();
+
             var request = new HttpRequestMessageFactory(
-                IHttpContextAccessorMocks.Get()
+                IHttpContextAccessorMocks.Get(),
+                Options.Create(httpClientServiceOptions)
             );
 
-            var call1 = request.CreateRequestMessage().Headers.First(x => x.Key == "X-HttpClientService").Value.First();
-            var call2 = request.CreateRequestMessage().Headers.First(x => x.Key == "X-HttpClientService").Value.First();
-            
-            Assert.AreNotEqual(call1, call2);
+            var header1 = request.CreateRequestMessage().Headers.First(x => x.Key == httpClientServiceOptions.HeaderCollerationName).Value.First();
+            var header2 = request.CreateRequestMessage().Headers.First(x => x.Key == httpClientServiceOptions.HeaderCollerationName).Value.First();
+
+            Assert.AreNotEqual(header1, header2);
         }
 
         [TestMethod]
         public void HttpRequestMessageFactory_CreateRequestMessage_ShouldUseSameXHeaderForSameInsance()
         {
+            var httpClientServiceOptions = new HttpClientServiceOptions();
+
             var message = new HttpRequestMessageFactory(
-                IHttpContextAccessorMocks.Get()
+                IHttpContextAccessorMocks.Get(),
+                Options.Create(httpClientServiceOptions)
             ).CreateRequestMessage();
 
-            var call1 = message.Headers.First(x => x.Key == "X-HttpClientService").Value.First();
-            var call2 = message.Headers.First(x => x.Key == "X-HttpClientService").Value.First();
+            var header1 = message.Headers.First(x => x.Key == httpClientServiceOptions.HeaderCollerationName).Value.First();
+            var header2 = message.Headers.First(x => x.Key == httpClientServiceOptions.HeaderCollerationName).Value.First();
 
-            Assert.AreEqual(call1, call2);
+            Assert.AreEqual(header1, header2);
         }
 
         [TestMethod]
         public void HttpRequestMessageFactory_CreateRequestMessage_ShouldCopyXHeader()
         {
+            var httpClientServiceOptions = new HttpClientServiceOptions();
+
             var message = new HttpRequestMessageFactory(
-                IHttpContextAccessorMocks.Get("X-HttpClientService-previous-value")
+                IHttpContextAccessorMocks.Get("X-HttpClientService-previous-value"),
+                Options.Create(httpClientServiceOptions)
             ).CreateRequestMessage();
 
 
-            var call = message.Headers.First(x => x.Key == "X-HttpClientService").Value.First();
-            Assert.AreEqual("X-HttpClientService-previous-value", call);
+            var header = message.Headers.First(x => x.Key == httpClientServiceOptions.HeaderCollerationName).Value.First();
+            Assert.AreEqual("X-HttpClientService-previous-value", header);
         }
 
         [TestMethod]
         public void HttpRequestMessageFactory_CreateRequestMessage_ShouldCopyXHeaderIfNotEmptyString()
         {
+            var httpClientServiceOptions = new HttpClientServiceOptions();
+
             var request1 = new HttpRequestMessageFactory(
-                IHttpContextAccessorMocks.Get("  ")//2 spaces
+                IHttpContextAccessorMocks.Get("  "),//2 spaces
+                Options.Create(httpClientServiceOptions)
             );
 
             var request2 = new HttpRequestMessageFactory(
-                IHttpContextAccessorMocks.Get("")//empty
+                IHttpContextAccessorMocks.Get(""),//empty
+                Options.Create(httpClientServiceOptions)
             );
 
-            var call1 = request1.CreateRequestMessage().Headers.First(x => x.Key == "X-HttpClientService").Value.First();
-            Assert.AreNotEqual("  ", call1);
+            var header1 = request1.CreateRequestMessage().Headers.First(x => x.Key == httpClientServiceOptions.HeaderCollerationName).Value.First();
+            Assert.AreNotEqual("  ", header1);
 
-            var call2 = request2.CreateRequestMessage().Headers.First(x => x.Key == "X-HttpClientService").Value.First();
-            Assert.AreNotEqual("", call2);
+            var header2 = request2.CreateRequestMessage().Headers.First(x => x.Key == httpClientServiceOptions.HeaderCollerationName).Value.First();
+            Assert.AreNotEqual("", header2);
         }
 
         [TestMethod]
@@ -84,14 +119,17 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure.Tests
             if (Environment.ProcessorCount == 1)
                 throw new InvalidOperationException("Concurreny test with 1 processor are not possible!");
 
+            var httpClientServiceOptions = new HttpClientServiceOptions();
             var request = new HttpRequestMessageFactory(
-                IHttpContextAccessorMocks.Get()
+                IHttpContextAccessorMocks.Get(),
+                Options.Create(httpClientServiceOptions)
             );
 
-            Parallel.For(0, Environment.ProcessorCount * 2, i => {
-                var call1 = request.CreateRequestMessage().Headers.First(x => x.Key == "X-HttpClientService").Value.First();
-                var call2 = request.CreateRequestMessage().Headers.First(x => x.Key == "X-HttpClientService").Value.First();
-                Assert.AreNotEqual(call1, call2);
+            Parallel.For(0, Environment.ProcessorCount * 2, i =>
+            {
+                var header1 = request.CreateRequestMessage().Headers.First(x => x.Key == httpClientServiceOptions.HeaderCollerationName).Value.First();
+                var header2 = request.CreateRequestMessage().Headers.First(x => x.Key == httpClientServiceOptions.HeaderCollerationName).Value.First();
+                Assert.AreNotEqual(header1, header2);
             });
         }
     }

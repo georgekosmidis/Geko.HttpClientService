@@ -1,7 +1,9 @@
 ﻿using IdentityServer4.Contrib.HttpClientService.Infrastructure;
+using IdentityServer4.Contrib.HttpClientService.Models;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.Json;
 using Microsoft.Extensions.FileProviders;
+using Microsoft.Extensions.Options;
 using Moq;
 using System;
 using System.Collections.Generic;
@@ -24,7 +26,8 @@ namespace IdentityServer4.Contrib.HttpClientService.Tests.Helpers
                     IHttpClientFactoryMocks.Get(coreStatusCode, coreContent).CreateClient()
                 ),
                 new HttpRequestMessageFactory(
-                    IHttpContextAccessorMocks.Get()
+                    IHttpContextAccessorMocks.Get(),
+                    Options.Create(new HttpClientServiceOptions())
                 ),
                 new IdentityServerService(
                     new IdentityServerHttpClientSelector(
@@ -60,7 +63,8 @@ namespace IdentityServer4.Contrib.HttpClientService.Tests.Helpers
                     IHttpClientFactoryMocks.Get(coreStatusCode, coreContent).CreateClient()
                 ),
                 new HttpRequestMessageFactory(
-                    IHttpContextAccessorMocks.Get()
+                    IHttpContextAccessorMocks.Get(),
+                    Options.Create(new HttpClientServiceOptions())
                 ),
                 new IdentityServerService(
                     new IdentityServerHttpClientSelector(
@@ -96,7 +100,8 @@ namespace IdentityServer4.Contrib.HttpClientService.Tests.Helpers
                     IHttpClientFactoryMocks.Get(coreStatusCode, coreContent).CreateClient()
                 ),
                 new HttpRequestMessageFactory(
-                    IHttpContextAccessorMocks.Get()
+                    IHttpContextAccessorMocks.Get(),
+                    Options.Create(new HttpClientServiceOptions())
                 ),
                 new IdentityServerService(
                     new IdentityServerHttpClientSelector(

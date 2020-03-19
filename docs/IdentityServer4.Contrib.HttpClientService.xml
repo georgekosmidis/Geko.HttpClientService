@@ -1059,11 +1059,12 @@
             A <see cref="T:System.Net.Http.HttpRequestMessage"/> factory.
             </summary>
         </member>
-        <member name="M:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor)">
+        <member name="M:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,Microsoft.Extensions.Options.IOptions{IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions})">
             <summary>
             Constructor of the  <see cref="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory"/>
             </summary>
             <param name="httpContextAccessor">The <see cref="T:Microsoft.AspNetCore.Http.HttpContextAccessor"/> object to access <see cref="T:Microsoft.AspNetCore.Http.HttpContext"/>. </param>
+            <param name="options">The HttpClientService options to use. </param>
         </member>
         <member name="M:IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.CreateRequestMessage">
             <summary>
@@ -1404,6 +1405,21 @@
             <summary>
             The password of the user trying to get access.
             It will be hashed using SHA256 before sending it to the IdentityServer.
+            </summary>
+        </member>
+        <member name="T:IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions">
+            <summary>
+            Settings for the HttpClientService
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationIdActive">
+            <summary>
+            A boolean indicating the use or not of the colleration id for logging purposes
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationName">
+            <summary>
+            The header name of the colleraton id
             </summary>
         </member>
         <member name="T:IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1">

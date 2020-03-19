@@ -9,6 +9,7 @@ using IdentityServer4.Contrib.HttpClientService.CompleteSample.ClientCredentials
 using IdentityServer4.Contrib.HttpClientService.CompleteSample.PasswordProtectedResourceServices;
 using IdentityServer4.Contrib.HttpClientService.CompleteSample.PasswordProtectedResourceServices.Services;
 using IdentityServer4.Contrib.HttpClientService.Extensions;
+using IdentityServer4.Contrib.HttpClientService.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -48,12 +49,14 @@ namespace IdentityServer4.Contrib.HttpClientService.CompleteSample
             services.AddControllers();
 
             /********************************************************************************************/
-            //Adds the HTTP client service factory to the service collection,
-            // adds as singleton the custom services for HTTP calls,
-            // and registers configuration instances with the options that will be used for the protected resouce
+                    //Add the HTTP client service factory to the service collection,
             services.AddHttpClientService()
+                    //Configure it
+                    .Configure<HttpClientServiceOptions>(Configuration.GetSection(nameof(HttpClientServiceOptions)))
+                    //Add as singleton a custom service and configure it,
                     .AddSingleton<IClientCredentialsProtectedResourceService, ClientCredentialsProtectedResourceService>()
                     .Configure<OtherClientCredentialsOptions>(Configuration.GetSection(nameof(OtherClientCredentialsOptions)))
+                    //Add as singleton a second custom service and configure it,
                     .AddSingleton<IClientCredentials2ProtectedResourceService, ClientCredentials2ProtectedResourceService>()
                     .Configure<SomeClientCredentialsOptions>(Configuration.GetSection(nameof(SomeClientCredentialsOptions)));
 

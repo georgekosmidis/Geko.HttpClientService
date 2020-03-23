@@ -9,4 +9,8 @@
     <PackageReference Include="IdentityModel" Version="4.1.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\IdentityServer4.Contrib.HttpClientService\IdentityServer4.Contrib.HttpClientService.csproj" />
+  </ItemGroup>
+
 </Project>

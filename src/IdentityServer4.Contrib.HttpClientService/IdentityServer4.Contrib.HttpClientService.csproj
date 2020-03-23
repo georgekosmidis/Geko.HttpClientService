@@ -52,5 +52,9 @@
       <PackagePath></PackagePath>
     </None>
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\benchmark\IdentityServer4.Contrib.HttpClientService.Benchmark\IdentityServer4.Contrib.HttpClientService.Benchmark.csproj" />
+  </ItemGroup>
   
 </Project>

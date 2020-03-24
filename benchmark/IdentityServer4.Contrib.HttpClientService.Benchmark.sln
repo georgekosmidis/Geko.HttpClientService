@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer4.Contrib.HttpClientService.Benchmark", "benchmark\IdentityServer4.Contrib.HttpClientService.Benchmark\IdentityServer4.Contrib.HttpClientService.Benchmark.csproj", "{A3E0D197-4FBA-4C70-9292-7BCC1EA7F5F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer4.Contrib.HttpClientService.Benchmark", "IdentityServer4.Contrib.HttpClientService.Benchmark\IdentityServer4.Contrib.HttpClientService.Benchmark.csproj", "{A3E0D197-4FBA-4C70-9292-7BCC1EA7F5F8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer4.Contrib.HttpClientService", "src\IdentityServer4.Contrib.HttpClientService\IdentityServer4.Contrib.HttpClientService.csproj", "{BAEC8AB2-FEFE-490E-A76B-00C32A8CAD2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer4.Contrib.HttpClientService", "..\src\IdentityServer4.Contrib.HttpClientService\IdentityServer4.Contrib.HttpClientService.csproj", "{BAEC8AB2-FEFE-490E-A76B-00C32A8CAD2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

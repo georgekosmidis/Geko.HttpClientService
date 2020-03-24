@@ -6,6 +6,6 @@ A sample of 100 requests where made to the protected resource https://demo.ident
 
 
 ![Benchmarking](https://raw.githubusercontent.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/master/benchmark/benchmark_v2.3.0.png)
-*The HttpClientService is **70% to 80% faster** because of the caching that implements.*
+*The HttpClientService is **60% to 70% faster** because of the caching that implements.*
 
 > The  [IdentityServer4.Contrib.HttpClientService.Benchmark](https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/tree/master/benchmark/IdentityServer4.Contrib.HttpClientService.Benchmark) and this file need more work!

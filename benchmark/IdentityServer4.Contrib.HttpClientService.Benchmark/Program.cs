@@ -14,16 +14,16 @@ namespace IdentityServer4.Contrib.HttpClientService.Benchmark
         {
             var sw = new Stopwatch();
             var grid = new Grid(90);
-            var numberOfCalls = 100;
+            var numberOfCalls = 10;
             var httpClient = new HttpClient();
             var tasks = new List<Task>();
 
             grid.PrintRow("Avg time for " + numberOfCalls + " requests");
             grid.PrintLine();
-            grid.PrintRow("", numberOfCalls + " serial", numberOfCalls + " concurrent");
+            grid.PrintRow("", numberOfCalls + " consecutive", numberOfCalls + " concurrent");
             grid.PrintLine();
 
-            //native, serial
+            //native, consecutive
             sw.Start();
             for (var i = 0; i < numberOfCalls; i++)
             {
@@ -48,7 +48,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Benchmark
             grid.PrintRow("Native", (serial / (double)numberOfCalls).ToString("0.000ms"), (concurrent / (double)numberOfCalls).ToString("0.000ms"));
 
 
-            //httpClientService, serial
+            //httpClientService, consecutive
             sw.Start();
             for (var i = 0; i < numberOfCalls; i++)
             {
@@ -58,7 +58,7 @@ namespace IdentityServer4.Contrib.HttpClientService.Benchmark
             serial = sw.ElapsedMilliseconds;
             sw.Reset();
 
-            //httpClientService, serial
+            //httpClientService, consecutive
             tasks.Clear();
             for (var i = 0; i < numberOfCalls; i++)
             {
@@ -75,6 +75,5 @@ namespace IdentityServer4.Contrib.HttpClientService.Benchmark
 
             Console.ReadKey();
         }
-
     }
 }

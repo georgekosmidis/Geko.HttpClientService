@@ -23,8 +23,9 @@ namespace IdentityServer4.Contrib.HttpClientService.Benchmark.Implementations
 
             //all good?
             if (responseObject.HasError)
+            {
                 throw new InvalidOperationException(responseObject.Error);
-
+            }
         }
     }
 }

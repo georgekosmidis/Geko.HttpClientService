@@ -27,7 +27,9 @@ namespace IdentityServer4.Contrib.HttpClientService.Benchmark.Implementations
             var apiResponse = await httpClient.GetAsync("https://demo.identityserver.io/api/test");
 
             if (!apiResponse.IsSuccessStatusCode)
+            {
                 throw new InvalidOperationException(identityServerResponse.Error);
+            }
 
         }
     }

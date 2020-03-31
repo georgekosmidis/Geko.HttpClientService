@@ -31,7 +31,7 @@ ___
 3. [More info on how to serialize request, deserialize response](#more-info-on-how-to-serialize-request-deserialize-response)
    1. [ResponseObject](#responseobject)
    2. [TypeContent(TRequestBody, Encoding, string)](#typecontenttrequestbody-encoding-string)
-4. [Configuring the colleration id]
+4. [Configuring the colleration id](#configuring-the-colleration-id)
 5. [Contributing](#contributing)
 
 ___

@@ -57,7 +57,7 @@ Add the IdentityServer4 Access Token Request Options to your `appsettings.json` 
     "Address": "https://demo.identityserver.io/connect/token",
     "ClientId": "m2m",
     "ClientSecret": "secret",
-    "Scopes": "api"
+    "Scope": "api"
 }
  // The values above are part of the demo offered in https://demo.identityserver.io/
 ```

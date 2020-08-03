@@ -15,47 +15,47 @@ namespace IdentityServer4.Contrib.HttpClientService.Models
         /// <summary>
         /// The <see cref="HttpResponseHeaders"/>.
         /// </summary>
-        public HttpResponseHeaders Headers { get; internal set; }
+        public HttpResponseHeaders Headers { get; set; }
 
         /// <summary>
         /// The body of the response converted to <typeparamref name="TResponseBody"/>.
         /// </summary>
-        public TResponseBody BodyAsType { get; internal set; }
+        public TResponseBody BodyAsType { get; set; }
 
         /// <summary>
         /// The body of the response as <see cref="String"/>.
         /// </summary>
-        public string BodyAsString { get; internal set; }
+        public string BodyAsString { get; set; }
 
         /// <summary>
         /// The body of the response as <see cref="Stream"/>.
         /// </summary>
-        public Stream BodyAsStream { get; internal set; }
+        public Stream BodyAsStream { get; set; }
 
         /// <summary>
         /// The <see cref="HttpStatusCode"/> of the response.
         /// </summary>
-        public HttpStatusCode StatusCode { get; internal set; }        
+        public HttpStatusCode StatusCode { get; set; }        
 
         /// <summary>
         /// The entire <see cref="System.Net.Http.HttpResponseMessage"/> object.
         /// </summary>
-        public HttpResponseMessage HttpResponseMessage { get; internal set; }
+        public HttpResponseMessage HttpResponseMessage { get; set; }
 
         /// <summary>
         /// The entire <see cref="HttpRequestMessage"/> object for debugging purposes.
         /// </summary>
-        public HttpRequestMessage HttpRequestMessge { get; internal set; }
+        public HttpRequestMessage HttpRequestMessge { get; set; }
 
         /// <summary>
         /// A boolean indicating if there is an error in the current request.
         /// </summary>
-        public bool HasError { get; internal set; } = false;
+        public bool HasError { get; set; } = false;
 
         /// <summary>
         /// A description of the error, if any.
         /// </summary>
-        public string Error { get; internal set; }
+        public string Error { get; set; }
 
     }
 }

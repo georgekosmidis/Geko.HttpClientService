@@ -1,4 +1,5 @@
-﻿using System.Net.Http;
+﻿using System;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace IdentityServer4.Contrib.HttpClientService.Infrastructure
@@ -14,5 +15,11 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure
         /// <param name="httpRequestMessage">The <see cref="HttpResponseMessage"/> to be sent</param>
         /// <returns>An <see cref="HttpResponseMessage"/>.</returns>
         Task<HttpResponseMessage> SendAsync(HttpRequestMessage httpRequestMessage);
+
+        /// <summary>
+        /// Set the timeout for the next request.
+        /// </summary>
+        /// <param name="timeout">The timeout.</param>
+        void SetTimeout(TimeSpan timeout);
     }
 }

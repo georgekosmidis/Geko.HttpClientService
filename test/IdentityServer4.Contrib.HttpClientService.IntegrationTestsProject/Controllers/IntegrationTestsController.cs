@@ -47,6 +47,7 @@ namespace IdentityServer4.Contrib.HttpClientService.IntegrationTestsProject.Cont
         {
             var response = await httpClientService
                 .HeadersAdd("x-integration-test-header", header)
+                .SetTimeout(TimeSpan.FromSeconds(11))
                 .GetAsync("https://demo.identityserver.io/api/test");
            
             return Ok(response.HttpRequestMessge.Headers);

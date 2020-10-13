@@ -28,6 +28,7 @@ namespace IdentityServer4.Contrib.HttpClientService
 
         private IIdentityServerOptions identityServerOptions;
         private HttpClientServiceHeaders headers { get; }
+        private TimeSpan Timeout { get; set; } = TimeSpan.Zero;
 
         internal HttpClientService(IConfiguration configuration, ICoreHttpClient coreHttpClient, IHttpRequestMessageFactory requestMessageFactory, IIdentityServerService accessTokenService)
         {
@@ -291,6 +292,19 @@ namespace IdentityServer4.Contrib.HttpClientService
         }
         #endregion
 
+        #region Timeout
+        /// <summary>
+        /// Set the timeout of the current <see cref="HttpClientService"/>
+        /// </summary>
+        /// <param name="timeout">The timeout</param>
+        /// <returns>Returns the current instance of <see cref="HttpClientService"/> for method chaining.</returns>
+        public HttpClientService SetTimeout(TimeSpan timeout)
+        {
+            Timeout = timeout;
+            return this;
+        }
+        #endregion
+
         /// <summary>
         /// Creates and sends a request to the <paramref name="requestUri"/> using the HTTP verb 
         ///  from <paramref name="httpMethod"/> and the request body from <paramref name="requestBody"/>. 
@@ -431,6 +445,10 @@ namespace IdentityServer4.Contrib.HttpClientService
 
                 httpRequestMessage.Headers.Authorization = new AuthenticationHeaderValue("Bearer", tokenResponse.AccessToken);
             }
+
+            //set timeout
+            if (Timeout != TimeSpan.Zero)
+                _coreHttpClient.SetTimeout(Timeout);
 
             //make the call            
             var response = await _coreHttpClient.SendAsync(httpRequestMessage);

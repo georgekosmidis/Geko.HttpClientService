@@ -915,6 +915,13 @@
             </summary>
             <returns>A <see cref="T:IdentityModel.Client.TokenResponse"/></returns>
         </member>
+        <member name="M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SetTimeout(System.TimeSpan)">
+            <summary>
+            Set the timeout of the current <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/>
+            </summary>
+            <param name="timeout">The timeout</param>
+            <returns>Returns the current instance of <see cref="T:IdentityServer4.Contrib.HttpClientService.HttpClientService"/> for method chaining.</returns>
+        </member>
         <member name="M:IdentityServer4.Contrib.HttpClientService.HttpClientService.SendAsync``2(System.Uri,System.Net.Http.HttpMethod,``0)">
             <summary>
             Creates and sends a request to the <paramref name="requestUri"/> using the HTTP verb 
@@ -1042,6 +1049,12 @@
             </summary>
             <param name="httpClient">An <see cref="T:System.Net.Http.HttpClient"/> that will execute the request</param>
         </member>
+        <member name="M:IdentityServer4.Contrib.HttpClientService.Infrastructure.CoreHttpClient.SetTimeout(System.TimeSpan)">
+            <summary>
+            Set the timeout for the next request.
+            </summary>
+            <param name="timeout">The timeout.</param>
+        </member>
         <member name="M:IdentityServer4.Contrib.HttpClientService.Infrastructure.CoreHttpClient.SendAsync(System.Net.Http.HttpRequestMessage)">
             <summary>
             Sends an <see cref="T:System.Net.Http.HttpResponseMessage"/>.
@@ -1101,6 +1114,12 @@
             </summary>
             <param name="httpRequestMessage">The <see cref="T:System.Net.Http.HttpResponseMessage"/> to be sent</param>
             <returns>An <see cref="T:System.Net.Http.HttpResponseMessage"/>.</returns>
+        </member>
+        <member name="M:IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient.SetTimeout(System.TimeSpan)">
+            <summary>
+            Set the timeout for the next request.
+            </summary>
+            <param name="timeout">The timeout.</param>
         </member>
         <member name="T:IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory">
             <summary>

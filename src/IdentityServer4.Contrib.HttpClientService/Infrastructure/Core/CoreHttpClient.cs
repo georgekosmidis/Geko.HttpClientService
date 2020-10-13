@@ -11,6 +11,7 @@ using IdentityServer4.Contrib.HttpClientService.Models;
 using System.IO;
 using System.Collections.Generic;
 using Microsoft.Extensions.Configuration;
+using System.Threading;
 
 namespace IdentityServer4.Contrib.HttpClientService.Infrastructure
 {
@@ -47,9 +48,12 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure
         /// <returns>An <see cref="HttpResponseMessage"/>.</returns>
         public async Task<HttpResponseMessage> SendAsync(HttpRequestMessage httpRequestMessage)
         {
+            CancellationTokenSource cts = new CancellationTokenSource(); ;
             if (Timeout != TimeSpan.Zero)
-                _httpClient.Timeout = Timeout;
-            return await _httpClient.SendAsync(httpRequestMessage);
+            {
+                cts.CancelAfter(Timeout);
+            }
+            return await _httpClient.SendAsync(httpRequestMessage, cts.Token);
         }
 
     }

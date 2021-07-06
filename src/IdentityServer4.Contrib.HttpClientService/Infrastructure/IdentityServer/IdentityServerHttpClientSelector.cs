@@ -36,7 +36,8 @@ namespace IdentityServer4.Contrib.HttpClientService.Infrastructure
         {
             if (!_httpClients.Any(x => x.HttpClientOptionsType.IsAssignableFrom(options.GetType())))
             {
-                throw new InvalidOperationException("There is no assignable type for the options selected.");
+                throw new InvalidOperationException("There is no assignable type for the options selected. " +
+                    "Does your options inherit from either " + nameof(ClientCredentialsOptions) + " or " + nameof(PasswordOptions) + "?");
             }
 
             return _httpClients.First(x => x.HttpClientOptionsType.IsAssignableFrom(options.GetType()));

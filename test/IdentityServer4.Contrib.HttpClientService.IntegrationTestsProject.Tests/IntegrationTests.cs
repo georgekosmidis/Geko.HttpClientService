@@ -24,7 +24,7 @@ namespace IdentityServer4.Contrib.HttpClientService.FeaturesSample.Tests
         public async Task SampleController_GetTestApiResults_Concurrency_ShouldContainCorrectHeader()
         {
             if (Environment.ProcessorCount == 1)
-                throw new InvalidOperationException("Concurreny test with 1 processor are not possible!");
+                throw new InvalidOperationException("Concurrency test with 1 processor are not possible!");
 
             // Arrange
             var client = _factory.CreateClient();

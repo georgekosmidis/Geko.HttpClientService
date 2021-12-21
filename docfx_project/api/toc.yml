@@ -1,77 +1,75 @@
 ### YamlMime:TableOfContent
-- uid: IdentityServer4.Contrib.HttpClientService
-  name: IdentityServer4.Contrib.HttpClientService
+- uid: Geko.HttpClientService
+  name: Geko.HttpClientService
   items:
-  - uid: IdentityServer4.Contrib.HttpClientService.HttpClientService
+  - uid: Geko.HttpClientService.HttpClientService
     name: HttpClientService
-  - uid: IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory
+  - uid: Geko.HttpClientService.HttpClientServiceFactory
     name: HttpClientServiceFactory
-  - uid: IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory
+  - uid: Geko.HttpClientService.IHttpClientServiceFactory
     name: IHttpClientServiceFactory
-- uid: IdentityServer4.Contrib.HttpClientService.Extensions
-  name: IdentityServer4.Contrib.HttpClientService.Extensions
+- uid: Geko.HttpClientService.Extensions
+  name: Geko.HttpClientService.Extensions
   items:
-  - uid: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceDeleteExtensions
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions
     name: HttpClientServiceDeleteExtensions
-  - uid: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceGetExtensions
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions
     name: HttpClientServiceGetExtensions
-  - uid: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceHeadExtensions
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions
     name: HttpClientServiceHeadExtensions
-  - uid: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions
     name: HttpClientServicePatchExtensions
-  - uid: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions
     name: HttpClientServicePostExtensions
-  - uid: IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions
     name: HttpClientServicePutExtensions
-  - uid: IdentityServer4.Contrib.HttpClientService.Extensions.ServiceCollectionExtensions
+  - uid: Geko.HttpClientService.Extensions.ServiceCollectionExtensions
     name: ServiceCollectionExtensions
-- uid: IdentityServer4.Contrib.HttpClientService.Infrastructure
-  name: IdentityServer4.Contrib.HttpClientService.Infrastructure
+- uid: Geko.HttpClientService.Infrastructure
+  name: Geko.HttpClientService.Infrastructure
   items:
-  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ClientCredentialsHttpClient
+  - uid: Geko.HttpClientService.Infrastructure.ClientCredentialsHttpClient
     name: ClientCredentialsHttpClient
-  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.CoreHttpClient
+  - uid: Geko.HttpClientService.Infrastructure.CoreHttpClient
     name: CoreHttpClient
-  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpClientServiceHeaders
+  - uid: Geko.HttpClientService.Infrastructure.HttpClientServiceHeaders
     name: HttpClientServiceHeaders
-  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory
+  - uid: Geko.HttpClientService.Infrastructure.HttpRequestMessageFactory
     name: HttpRequestMessageFactory
-  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop
+  - uid: Geko.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop
     name: HttpRequestMessageFactoryDesktop
-  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient
+  - uid: Geko.HttpClientService.Infrastructure.ICoreHttpClient
     name: ICoreHttpClient
-  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerHttpClientSelector
+  - uid: Geko.HttpClientService.Infrastructure.IdentityServerHttpClientSelector
     name: IdentityServerHttpClientSelector
-  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService
+  - uid: Geko.HttpClientService.Infrastructure.IdentityServerService
     name: IdentityServerService
-  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+  - uid: Geko.HttpClientService.Infrastructure.IHttpRequestMessageFactory
     name: IHttpRequestMessageFactory
-  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient
+  - uid: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient
     name: IIdentityServerHttpClient
-  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector
+  - uid: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector
     name: IIdentityServerHttpClientSelector
-  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService
+  - uid: Geko.HttpClientService.Infrastructure.IIdentityServerService
     name: IIdentityServerService
-  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager
+  - uid: Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager
     name: ITokenResponseCacheManager
-  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.PasswordHttpClient
+  - uid: Geko.HttpClientService.Infrastructure.PasswordHttpClient
     name: PasswordHttpClient
-  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseCacheManager
+  - uid: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager
     name: TokenResponseCacheManager
-  - uid: IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent`1
+  - uid: Geko.HttpClientService.Infrastructure.TypeContent`1
     name: TypeContent<TRequestBody>
     name.vb: TypeContent(Of TRequestBody)
-- uid: IdentityServer4.Contrib.HttpClientService.Models
-  name: IdentityServer4.Contrib.HttpClientService.Models
+- uid: Geko.HttpClientService.Models
+  name: Geko.HttpClientService.Models
   items:
-  - uid: IdentityServer4.Contrib.HttpClientService.Models.ClientCredentialsOptions
-    name: ClientCredentialsOptions
-  - uid: IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions
+  - uid: Geko.HttpClientService.Models.
+    name: ''
+  - uid: Geko.HttpClientService.Models.HttpClientServiceOptions
     name: HttpClientServiceOptions
-  - uid: IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions
+  - uid: Geko.HttpClientService.Models.IIdentityServerOptions
     name: IIdentityServerOptions
-  - uid: IdentityServer4.Contrib.HttpClientService.Models.PasswordOptions
-    name: PasswordOptions
-  - uid: IdentityServer4.Contrib.HttpClientService.Models.ResponseObject`1
+  - uid: Geko.HttpClientService.Models.ResponseObject`1
     name: ResponseObject<TResponseBody>
     name.vb: ResponseObject(Of TResponseBody)

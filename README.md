@@ -17,7 +17,6 @@ An almost [2x times faster](https://github.com/georgekosmidis/Geko.HttpClientSer
 ## Calls can be easy as that :)
 
 ```csharp
-//
 var responseObject = await _requestServiceFactory
  //Create a instance of the service
  .CreateHttpClientService()

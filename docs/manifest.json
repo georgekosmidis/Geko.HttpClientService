@@ -1,15 +1,15 @@
 {
   "homepages": [],
-  "source_base_path": "D:/_Code/github/IdentityServer4.HttpClientService/docfx_project",
+  "source_base_path": "D:/_Code/github/System.Net.Http.HttpClientService/docfx_project",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.yml",
+      "source_relative_path": "api/Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.html",
-          "hash": "NKJ/kK0OOkqNW1mob7+M3w=="
+          "relative_path": "api/Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.html",
+          "hash": "ezdMSqPyJICJ4lch1qJDom+JRWhIlUyiGieD9tEMa6s="
         }
       },
       "is_incremental": false,
@@ -17,11 +17,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceGetExtensions.yml",
+      "source_relative_path": "api/Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceGetExtensions.html",
-          "hash": "1l6CSeaBPiVbNmBQdLkoZw=="
+          "relative_path": "api/Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.html",
+          "hash": "7/oEtJtYmQabRl6ip5Z/pQWsGOIQKcmhQaqnESd9uGc="
         }
       },
       "is_incremental": false,
@@ -29,11 +29,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceHeadExtensions.yml",
+      "source_relative_path": "api/Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServiceHeadExtensions.html",
-          "hash": "jBlX1uvxXHZDJoF92ccEKQ=="
+          "relative_path": "api/Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.html",
+          "hash": "RNvZVZSe/cx5LyaGW+T4RSNioZFC59AIIocUC44ahkQ="
         }
       },
       "is_incremental": false,
@@ -41,11 +41,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.yml",
+      "source_relative_path": "api/Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePatchExtensions.html",
-          "hash": "5ehaRUcNOFWhwXjqfsOJnA=="
+          "relative_path": "api/Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.html",
+          "hash": "qSsCy3f8UPPIoFYCNsBzCXT/PEeatGeYCwfbJWQ594g="
         }
       },
       "is_incremental": false,
@@ -53,11 +53,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions.yml",
+      "source_relative_path": "api/Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePostExtensions.html",
-          "hash": "paZ4X1uuXmzSF8z8LfnVZw=="
+          "relative_path": "api/Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.html",
+          "hash": "txJ+k4u0ohg6uprgHYIEzvFuhHq7tCVlMBkch+/7p8s="
         }
       },
       "is_incremental": false,
@@ -65,11 +65,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions.yml",
+      "source_relative_path": "api/Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.HttpClientServicePutExtensions.html",
-          "hash": "3WCRPFhwpC4GFKj8D6nqqA=="
+          "relative_path": "api/Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.html",
+          "hash": "DM8N4Hw+Csf2A5murWW7a12vK70kHRONu9kOzPkBfzo="
         }
       },
       "is_incremental": false,
@@ -77,23 +77,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.ServiceCollectionExtensions.yml",
+      "source_relative_path": "api/Geko.HttpClientService.Extensions.ServiceCollectionExtensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.ServiceCollectionExtensions.html",
-          "hash": "dHaDdJlgdEj1+qa9tNlhAA=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Extensions.html",
-          "hash": "7aOqJ1vBmq0bHToO1LqfXg=="
+          "relative_path": "api/Geko.HttpClientService.Extensions.ServiceCollectionExtensions.html",
+          "hash": "jW6mB1SEN7VZt2sky+GjG04r5Id7bQ1kQraEinhj8sY="
         }
       },
       "is_incremental": false,
@@ -101,11 +89,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.HttpClientService.yml",
+      "source_relative_path": "api/Geko.HttpClientService.Extensions.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.HttpClientService.html",
-          "hash": "ZxcKIKdTo9n69JVT0lSMHw=="
+          "relative_path": "api/Geko.HttpClientService.Extensions.html",
+          "hash": "OjCt6dnpZYnkyPFE362y7cevzzMCgqMv8uQ9ApBnY/E="
         }
       },
       "is_incremental": false,
@@ -113,11 +101,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.yml",
+      "source_relative_path": "api/Geko.HttpClientService.HttpClientService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.HttpClientServiceFactory.html",
-          "hash": "AtwzsQx6mS3TCuGbD4mxEQ=="
+          "relative_path": "api/Geko.HttpClientService.HttpClientService.html",
+          "hash": "Y2dBEBBvZpfjNa1r40cvZHwhHexigEK1ZuJiALf1/AY="
         }
       },
       "is_incremental": false,
@@ -125,11 +113,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.yml",
+      "source_relative_path": "api/Geko.HttpClientService.HttpClientServiceFactory.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.IHttpClientServiceFactory.html",
-          "hash": "YPPoW5yIbK7UXqUV09IeRA=="
+          "relative_path": "api/Geko.HttpClientService.HttpClientServiceFactory.html",
+          "hash": "Q6CPcFO24GECnfueki6g19R7lSlfw7gRijeDmzWlSi4="
         }
       },
       "is_incremental": false,
@@ -137,11 +125,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.ClientCredentialsHttpClient.yml",
+      "source_relative_path": "api/Geko.HttpClientService.IHttpClientServiceFactory.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.ClientCredentialsHttpClient.html",
-          "hash": "NdLFJcHpWJ7gFmgJVUhKJg=="
+          "relative_path": "api/Geko.HttpClientService.IHttpClientServiceFactory.html",
+          "hash": "iPAWo7W9hOmyQy7KQaOpLB0xkA/IVfPxtkRRD+S6cjE="
         }
       },
       "is_incremental": false,
@@ -149,11 +137,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.CoreHttpClient.yml",
+      "source_relative_path": "api/Geko.HttpClientService.Infrastructure.ClientCredentialsHttpClient.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.CoreHttpClient.html",
-          "hash": "O7K5Jz2/yJ45fuvWmDaFGQ=="
+          "relative_path": "api/Geko.HttpClientService.Infrastructure.ClientCredentialsHttpClient.html",
+          "hash": "StY2dU0j5wNNVFR0gaH0hPD2QPtUWmqxXwN55UkstWM="
         }
       },
       "is_incremental": false,
@@ -161,11 +149,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpClientServiceHeaders.yml",
+      "source_relative_path": "api/Geko.HttpClientService.Infrastructure.CoreHttpClient.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpClientServiceHeaders.html",
-          "hash": "eVvc87ORlPwGIxmtyZ7LPA=="
+          "relative_path": "api/Geko.HttpClientService.Infrastructure.CoreHttpClient.html",
+          "hash": "1SHgww3+mCX5ZDs1MPMhxlJInEqUvZEmjRoD+GG5jew="
         }
       },
       "is_incremental": false,
@@ -173,11 +161,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.yml",
+      "source_relative_path": "api/Geko.HttpClientService.Infrastructure.HttpClientServiceHeaders.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactory.html",
-          "hash": "53lcSQrMP3O9FpaBswPlLw=="
+          "relative_path": "api/Geko.HttpClientService.Infrastructure.HttpClientServiceHeaders.html",
+          "hash": "ns/gKBVYiTeDgMPjS2QRds59PpNT9g+sfuNa6oVmXlo="
         }
       },
       "is_incremental": false,
@@ -185,11 +173,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop.yml",
+      "source_relative_path": "api/Geko.HttpClientService.Infrastructure.HttpRequestMessageFactory.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop.html",
-          "hash": "kOkvPZBERn6wEtUlTuaLUA=="
+          "relative_path": "api/Geko.HttpClientService.Infrastructure.HttpRequestMessageFactory.html",
+          "hash": "EbCISmKjY8+YUG96mJqtIRB0nvlmGU509+aKnKehyQ4="
         }
       },
       "is_incremental": false,
@@ -197,83 +185,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient.yml",
+      "source_relative_path": "api/Geko.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.ICoreHttpClient.html",
-          "hash": "zjdHNn+7wftPcbrn0bYTVA=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.IHttpRequestMessageFactory.html",
-          "hash": "swzNn4hivLfrQD1o/tM6Cw=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClient.html",
-          "hash": "UTVw8AsR9b+yNsn2S97TdA=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector.html",
-          "hash": "hn7m2o5xHKFoeo59Vzr5Ug=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.IIdentityServerService.html",
-          "hash": "jce0GU1k6FC0P6AKdKj7bw=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.ITokenResponseCacheManager.html",
-          "hash": "Lh3vpQtU7KM2AUFoyK1eQg=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerHttpClientSelector.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerHttpClientSelector.html",
-          "hash": "QNpq9duC8An1DVqoEVQinA=="
+          "relative_path": "api/Geko.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop.html",
+          "hash": "HPpdq7cD1fL1yUqeJfrUKhAgHmk8QV+gnzThkmQvLaU="
         }
       },
       "is_incremental": false,
@@ -281,11 +197,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService.yml",
+      "source_relative_path": "api/Geko.HttpClientService.Infrastructure.ICoreHttpClient.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.IdentityServerService.html",
-          "hash": "N/QruseWcyIFfGnCcqplig=="
+          "relative_path": "api/Geko.HttpClientService.Infrastructure.ICoreHttpClient.html",
+          "hash": "JmOZWKzTpHgSzowV09OckScCH4Ab9NeIhM1xAKm5r08="
         }
       },
       "is_incremental": false,
@@ -293,11 +209,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.PasswordHttpClient.yml",
+      "source_relative_path": "api/Geko.HttpClientService.Infrastructure.IHttpRequestMessageFactory.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.PasswordHttpClient.html",
-          "hash": "zpsDHImqY8lM1Snx8ggeaA=="
+          "relative_path": "api/Geko.HttpClientService.Infrastructure.IHttpRequestMessageFactory.html",
+          "hash": "Zj3lvkAaH5mwg3H/rNU85waaulVIuFboICf8jeq/rFw="
         }
       },
       "is_incremental": false,
@@ -305,11 +221,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseCacheManager.yml",
+      "source_relative_path": "api/Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.TokenResponseCacheManager.html",
-          "hash": "SyKYcx7+RZXTO3cbhp3byQ=="
+          "relative_path": "api/Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.html",
+          "hash": "1b41QjD7g469QTRTRbcXRxbxOm1mVWzkgQt8cr/8lzk="
         }
       },
       "is_incremental": false,
@@ -317,11 +233,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent-1.yml",
+      "source_relative_path": "api/Geko.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.TypeContent-1.html",
-          "hash": "ghRQQMMnl3jALuykLfTmZA=="
+          "relative_path": "api/Geko.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector.html",
+          "hash": "yfxJheAYD+Mkq2e+n2Z6Awo+a0N3+96JvcxaMsdjO28="
         }
       },
       "is_incremental": false,
@@ -329,11 +245,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.yml",
+      "source_relative_path": "api/Geko.HttpClientService.Infrastructure.IIdentityServerService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Infrastructure.html",
-          "hash": "hS2LwuPl3nkko+DOAaC1rA=="
+          "relative_path": "api/Geko.HttpClientService.Infrastructure.IIdentityServerService.html",
+          "hash": "nIOJzhhSaQeEdDdCjWLeSfJn5bZd4lMF3WJUZxEP2JU="
         }
       },
       "is_incremental": false,
@@ -341,11 +257,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.ClientCredentialsOptions.yml",
+      "source_relative_path": "api/Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.ClientCredentialsOptions.html",
-          "hash": "lyWhSfYDBeuGwoJu8wUAHg=="
+          "relative_path": "api/Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager.html",
+          "hash": "R8g3v9XIoXEmLx5Wr6MN5NlwP6ZGSaU7e0M7Dpgcpuo="
         }
       },
       "is_incremental": false,
@@ -353,23 +269,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions.yml",
+      "source_relative_path": "api/Geko.HttpClientService.Infrastructure.IdentityServerHttpClientSelector.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.HttpClientServiceOptions.html",
-          "hash": "hprTlFsC3UY8O2tTMBjQDg=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.IIdentityServerOptions.html",
-          "hash": "BN/qzn7a+O9jPBPSRkPVJw=="
+          "relative_path": "api/Geko.HttpClientService.Infrastructure.IdentityServerHttpClientSelector.html",
+          "hash": "obwpTuKdwgUwrfN8nMthTKDcpArycUWwIrvbvvIzMYs="
         }
       },
       "is_incremental": false,
@@ -377,11 +281,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.PasswordOptions.yml",
+      "source_relative_path": "api/Geko.HttpClientService.Infrastructure.IdentityServerService.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.PasswordOptions.html",
-          "hash": "Rfw+Z808HbhwYgSJoh91DQ=="
+          "relative_path": "api/Geko.HttpClientService.Infrastructure.IdentityServerService.html",
+          "hash": "7KsxBiJFhjpDor0SonmBpKVnabFP9yf7yVn+W9dJPvA="
         }
       },
       "is_incremental": false,
@@ -389,23 +293,11 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.yml",
+      "source_relative_path": "api/Geko.HttpClientService.Infrastructure.PasswordHttpClient.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html",
-          "hash": "rreLQJFZOLkmyNgOWvUqrA=="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.Models.html",
-          "hash": "KV/KFR5SCcdtD2Ue0hpYGA=="
+          "relative_path": "api/Geko.HttpClientService.Infrastructure.PasswordHttpClient.html",
+          "hash": "auWEyOBh6PRjXilHl3uOAOQ9pyXhaoe2CdeqmkLbiAI="
         }
       },
       "is_incremental": false,
@@ -413,26 +305,110 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/IdentityServer4.Contrib.HttpClientService.yml",
+      "source_relative_path": "api/Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.yml",
       "output": {
         ".html": {
-          "relative_path": "api/IdentityServer4.Contrib.HttpClientService.html",
-          "hash": "pqyaS2nk4joNnrWt0dS6Dg=="
+          "relative_path": "api/Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.html",
+          "hash": "PEKH727UDipFfBukhb49nTWNXCYfEiqUnvH5DfOaAdM="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "api/index.md",
+      "type": "ManagedReference",
+      "source_relative_path": "api/Geko.HttpClientService.Infrastructure.TypeContent-1.yml",
       "output": {
         ".html": {
-          "relative_path": "api/index.html",
-          "hash": "87HljWjcCaWgktdRp425Ig=="
+          "relative_path": "api/Geko.HttpClientService.Infrastructure.TypeContent-1.html",
+          "hash": "S1B5GZiTo8UuonmPQSLBDNVTnBr/wNz4TGjkZFqZCZE="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Geko.HttpClientService.Infrastructure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Geko.HttpClientService.Infrastructure.html",
+          "hash": "AmBXgINJyLJtf9IcpcILc69Pz+kd6hyIdWBaAjK+qtY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Geko.HttpClientService.Models..yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Geko.HttpClientService.Models..html",
+          "hash": "SRdWxvPsa39Oo1ZDXLVR4N0jL2/x2qYDO5s0I5ZHW/U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Geko.HttpClientService.Models.HttpClientServiceOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Geko.HttpClientService.Models.HttpClientServiceOptions.html",
+          "hash": "Y2u+jXY/hBKeiMaV5tv2ig3mbSpnBBYOp+ls4HJ3mco="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Geko.HttpClientService.Models.IIdentityServerOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Geko.HttpClientService.Models.IIdentityServerOptions.html",
+          "hash": "wFTLFAgkIgxQvQ7McqR/PxrLnnsIub87/zE4A15klI8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Geko.HttpClientService.Models.ResponseObject-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Geko.HttpClientService.Models.ResponseObject-1.html",
+          "hash": "nx2tUFFFhuO7ja1DvKUcFzelAhKiZgvaFjIZ0bHWAy0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Geko.HttpClientService.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Geko.HttpClientService.Models.html",
+          "hash": "rZsaWH45HzVIPjJV15uirhcFoI4wgmmQ3Wg4naTI5v4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Geko.HttpClientService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Geko.HttpClientService.html",
+          "hash": "WEAXvxQZ2Map+vN2r1bGbfccfXupyS1rAYjgfZN5yfo="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -441,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "W8P94Sa0eEDeqVt+QWqDYg=="
+          "hash": "mBYnanILoo5POSst7OvTb8jixky8F38stvmuO/hxls0="
         }
       },
       "is_incremental": false,
@@ -453,10 +429,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "UalW1dPOY3yB4gSjvTYkAA=="
+          "hash": "89Z0Jzg+YH5Q46eZB7rMfvScr1U7VoiW68xBeVLqfB4="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -465,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "gB8AESyvNru97tzIZofEEg=="
+          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
         }
       },
       "is_incremental": false,
@@ -477,10 +453,10 @@
       "output": {
         ".html": {
           "relative_path": "contribution.html",
-          "hash": "gC3jjprM16QGw7j0dhwCCQ=="
+          "hash": "F4/jSSxjeUxveOOP7t14Sb3F7aiLqsaVuXTk99oQ1nA="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -489,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "getting_started.html",
-          "hash": "Htfc8XpR7HlFF44bTjZbsA=="
+          "hash": "wM3Vt/skX1TyuFVP18bE4iJh6vy0AM70LpXcSf48Pgo="
         }
       },
       "is_incremental": false,
@@ -518,12 +494,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "RLyEJPAe1CusyhNWx165sw=="
+          "hash": "2IwVZePL3P28UNaKazcQsmMHEFgkga0l5JQfp1wWNhc="
         }
       },
       "is_incremental": false,
@@ -535,19 +514,22 @@
       "output": {
         ".html": {
           "relative_path": "more_details.html",
-          "hash": "vsKj37TzhLETIfRRdCvD+Q=="
+          "hash": "s0CXSgpMOGWOvBuOxTDg4Q37LH6MrgXOy9FordBXdnA="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "hRf6RAtU1gqhJrLSnzdpQA=="
+          "hash": "H2+KJwurolLsQfewv6yzpsg1sv9XUqc20CXwGoD6jzg="
         }
       },
       "is_incremental": false,
@@ -557,30 +539,32 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 5,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 34,
+          "skipped_file_count": 0
+        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 35,
-          "skipped_file_count": 21
-        },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 6,
-          "skipped_file_count": 5
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
@@ -593,8 +577,8 @@
     },
     {
       "status": {
-        "can_incremental": true,
-        "details": "Can support incremental post processing.",
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0

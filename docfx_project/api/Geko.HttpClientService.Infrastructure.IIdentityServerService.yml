@@ -1,0 +1,178 @@
+### YamlMime:ManagedReference
+items:
+- uid: Geko.HttpClientService.Infrastructure.IIdentityServerService
+  commentId: T:Geko.HttpClientService.Infrastructure.IIdentityServerService
+  id: IIdentityServerService
+  parent: Geko.HttpClientService.Infrastructure
+  children:
+  - Geko.HttpClientService.Infrastructure.IIdentityServerService.GetTokenResponseAsync(Geko.HttpClientService.Models.IIdentityServerOptions)
+  langs:
+  - csharp
+  - vb
+  name: IIdentityServerService
+  nameWithType: IIdentityServerService
+  fullName: Geko.HttpClientService.Infrastructure.IIdentityServerService
+  type: Interface
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Infrastructure/IdentityServer/Interfaces/IIdentityServerService.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: IIdentityServerService
+    path: ../src/Geko.HttpClientService/Infrastructure/IdentityServer/Interfaces/IIdentityServerService.cs
+    startLine: 8
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Infrastructure
+  summary: "\nAbstraction for an access token service.\n"
+  example: []
+  syntax:
+    content: public interface IIdentityServerService
+    content.vb: Public Interface IIdentityServerService
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Geko.HttpClientService.Infrastructure.IIdentityServerService.GetTokenResponseAsync(Geko.HttpClientService.Models.IIdentityServerOptions)
+  commentId: M:Geko.HttpClientService.Infrastructure.IIdentityServerService.GetTokenResponseAsync(Geko.HttpClientService.Models.IIdentityServerOptions)
+  id: GetTokenResponseAsync(Geko.HttpClientService.Models.IIdentityServerOptions)
+  parent: Geko.HttpClientService.Infrastructure.IIdentityServerService
+  langs:
+  - csharp
+  - vb
+  name: GetTokenResponseAsync(IIdentityServerOptions)
+  nameWithType: IIdentityServerService.GetTokenResponseAsync(IIdentityServerOptions)
+  fullName: Geko.HttpClientService.Infrastructure.IIdentityServerService.GetTokenResponseAsync(Geko.HttpClientService.Models.IIdentityServerOptions)
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Infrastructure/IdentityServer/Interfaces/IIdentityServerService.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: GetTokenResponseAsync
+    path: ../src/Geko.HttpClientService/Infrastructure/IdentityServer/Interfaces/IIdentityServerService.cs
+    startLine: 15
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Infrastructure
+  summary: "\nRetrieves a <xref href=\"IdentityModel.Client.TokenResponse\" data-throw-if-not-resolved=\"false\"></xref>  from the configured Identity Server\n"
+  example: []
+  syntax:
+    content: Task<TokenResponse> GetTokenResponseAsync(IIdentityServerOptions options)
+    parameters:
+    - id: options
+      type: Geko.HttpClientService.Models.IIdentityServerOptions
+      description: The token service options
+    return:
+      type: Task{IdentityModel.Client.TokenResponse}
+      description: A <xref href="IdentityModel.Client.TokenResponse" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Function GetTokenResponseAsync(options As IIdentityServerOptions) As Task(Of TokenResponse)
+  overload: Geko.HttpClientService.Infrastructure.IIdentityServerService.GetTokenResponseAsync*
+references:
+- uid: Geko.HttpClientService.Infrastructure
+  commentId: N:Geko.HttpClientService.Infrastructure
+  name: Geko.HttpClientService.Infrastructure
+  nameWithType: Geko.HttpClientService.Infrastructure
+  fullName: Geko.HttpClientService.Infrastructure
+- uid: IdentityModel.Client.TokenResponse
+  commentId: T:IdentityModel.Client.TokenResponse
+  isExternal: true
+- uid: Geko.HttpClientService.Infrastructure.IIdentityServerService.GetTokenResponseAsync*
+  commentId: Overload:Geko.HttpClientService.Infrastructure.IIdentityServerService.GetTokenResponseAsync
+  name: GetTokenResponseAsync
+  nameWithType: IIdentityServerService.GetTokenResponseAsync
+  fullName: Geko.HttpClientService.Infrastructure.IIdentityServerService.GetTokenResponseAsync
+- uid: Geko.HttpClientService.Models.IIdentityServerOptions
+  commentId: T:Geko.HttpClientService.Models.IIdentityServerOptions
+  parent: Geko.HttpClientService.Models
+  name: IIdentityServerOptions
+  nameWithType: IIdentityServerOptions
+  fullName: Geko.HttpClientService.Models.IIdentityServerOptions
+- uid: Task{IdentityModel.Client.TokenResponse}
+  commentId: '!:Task{IdentityModel.Client.TokenResponse}'
+  definition: Task`1
+  name: Task<TokenResponse>
+  nameWithType: Task<TokenResponse>
+  fullName: Task<IdentityModel.Client.TokenResponse>
+  nameWithType.vb: Task(Of TokenResponse)
+  fullName.vb: Task(Of IdentityModel.Client.TokenResponse)
+  name.vb: Task(Of TokenResponse)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IdentityModel.Client.TokenResponse
+    name: TokenResponse
+    nameWithType: TokenResponse
+    fullName: IdentityModel.Client.TokenResponse
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IdentityModel.Client.TokenResponse
+    name: TokenResponse
+    nameWithType: TokenResponse
+    fullName: IdentityModel.Client.TokenResponse
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Models
+  commentId: N:Geko.HttpClientService.Models
+  name: Geko.HttpClientService.Models
+  nameWithType: Geko.HttpClientService.Models
+  fullName: Geko.HttpClientService.Models
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

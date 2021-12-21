@@ -1,0 +1,848 @@
+### YamlMime:ManagedReference
+items:
+- uid: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager
+  commentId: T:Geko.HttpClientService.Infrastructure.TokenResponseCacheManager
+  id: TokenResponseCacheManager
+  parent: Geko.HttpClientService.Infrastructure
+  children:
+  - Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.#ctor(Microsoft.Extensions.Caching.Memory.IMemoryCache)
+  - Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.AddOrGetExistingAsync(System.String,Func{Task{IdentityModel.Client.TokenResponse}})
+  - Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.Remove(System.String)
+  langs:
+  - csharp
+  - vb
+  name: TokenResponseCacheManager
+  nameWithType: TokenResponseCacheManager
+  fullName: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager
+  type: Class
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Infrastructure/IdentityServer/TokenResponseCacheManager.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: TokenResponseCacheManager
+    path: ../src/Geko.HttpClientService/Infrastructure/IdentityServer/TokenResponseCacheManager.cs
+    startLine: 11
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Infrastructure
+  summary: "\nCache manager for the IdentityServer4 <xref href=\"IdentityModel.Client.TokenResponse\" data-throw-if-not-resolved=\"false\"></xref>. \n"
+  remarks: "\nIt caches a successful response for the 75% of the expiration time define in the <xref href=\"IdentityModel.Client.TokenResponse\" data-throw-if-not-resolved=\"false\"></xref>. \n"
+  example: []
+  syntax:
+    content: 'public class TokenResponseCacheManager : ITokenResponseCacheManager'
+    content.vb: >-
+      Public Class TokenResponseCacheManager
+          Implements ITokenResponseCacheManager
+  inheritance:
+  - System.Object
+  implements:
+  - Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.#ctor(Microsoft.Extensions.Caching.Memory.IMemoryCache)
+  commentId: M:Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.#ctor(Microsoft.Extensions.Caching.Memory.IMemoryCache)
+  id: '#ctor(Microsoft.Extensions.Caching.Memory.IMemoryCache)'
+  parent: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager
+  langs:
+  - csharp
+  - vb
+  name: TokenResponseCacheManager(IMemoryCache)
+  nameWithType: TokenResponseCacheManager.TokenResponseCacheManager(IMemoryCache)
+  fullName: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.TokenResponseCacheManager(Microsoft.Extensions.Caching.Memory.IMemoryCache)
+  type: Constructor
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Infrastructure/IdentityServer/TokenResponseCacheManager.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: .ctor
+    path: ../src/Geko.HttpClientService/Infrastructure/IdentityServer/TokenResponseCacheManager.cs
+    startLine: 20
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Infrastructure
+  summary: "\nConstructor of the <xref href=\"Geko.HttpClientService.Infrastructure.TokenResponseCacheManager\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public TokenResponseCacheManager(IMemoryCache memoryCache)
+    parameters:
+    - id: memoryCache
+      type: Microsoft.Extensions.Caching.Memory.IMemoryCache
+      description: The in-memory cache.
+    content.vb: Public Sub New(memoryCache As IMemoryCache)
+  overload: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.AddOrGetExistingAsync(System.String,Func{Task{IdentityModel.Client.TokenResponse}})
+  commentId: M:Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.AddOrGetExistingAsync(System.String,Func{Task{IdentityModel.Client.TokenResponse}})
+  id: AddOrGetExistingAsync(System.String,Func{Task{IdentityModel.Client.TokenResponse}})
+  parent: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager
+  langs:
+  - csharp
+  - vb
+  name: AddOrGetExistingAsync(String, Func<Task<TokenResponse>>)
+  nameWithType: TokenResponseCacheManager.AddOrGetExistingAsync(String, Func<Task<TokenResponse>>)
+  fullName: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.AddOrGetExistingAsync(System.String, Func<Task<IdentityModel.Client.TokenResponse>>)
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Infrastructure/IdentityServer/TokenResponseCacheManager.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: AddOrGetExistingAsync
+    path: ../src/Geko.HttpClientService/Infrastructure/IdentityServer/TokenResponseCacheManager.cs
+    startLine: 31
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Infrastructure
+  summary: "\nAdds a new <xref href=\"IdentityModel.Client.TokenResponse\" data-throw-if-not-resolved=\"false\"></xref> in the cache by executing the <code data-dev-comment-type=\"paramref\" class=\"paramref\">call</code> parameter, or returns an existing cached response.\n"
+  example: []
+  syntax:
+    content: public async Task<TokenResponse> AddOrGetExistingAsync(string key, Func<Task<TokenResponse>> call)
+    parameters:
+    - id: key
+      type: System.String
+      description: The key of the cache entry.
+    - id: call
+      type: Func{Task{IdentityModel.Client.TokenResponse}}
+      description: The delegate the returns a <xref href="IdentityModel.Client.TokenResponse" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: Task{IdentityModel.Client.TokenResponse}
+      description: A <xref href="IdentityModel.Client.TokenResponse" data-throw-if-not-resolved="false"></xref>, either just aqcuired or from the cache
+    content.vb: Public Function AddOrGetExistingAsync(key As String, call As Func(Of Task(Of TokenResponse))) As Task(Of TokenResponse)
+  overload: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.AddOrGetExistingAsync*
+  implements:
+  - Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager.AddOrGetExistingAsync(System.String,Func{Task{IdentityModel.Client.TokenResponse}})
+  nameWithType.vb: TokenResponseCacheManager.AddOrGetExistingAsync(String, Func(Of Task(Of TokenResponse)))
+  modifiers.csharp:
+  - public
+  - async
+  modifiers.vb:
+  - Public
+  fullName.vb: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.AddOrGetExistingAsync(System.String, Func(Of Task(Of IdentityModel.Client.TokenResponse)))
+  name.vb: AddOrGetExistingAsync(String, Func(Of Task(Of TokenResponse)))
+- uid: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.Remove(System.String)
+  commentId: M:Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.Remove(System.String)
+  id: Remove(System.String)
+  parent: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager
+  langs:
+  - csharp
+  - vb
+  name: Remove(String)
+  nameWithType: TokenResponseCacheManager.Remove(String)
+  fullName: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.Remove(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Infrastructure/IdentityServer/TokenResponseCacheManager.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: Remove
+    path: ../src/Geko.HttpClientService/Infrastructure/IdentityServer/TokenResponseCacheManager.cs
+    startLine: 74
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Infrastructure
+  summary: "\nRemoves an entry from the cache\n"
+  example: []
+  syntax:
+    content: public void Remove(string key)
+    parameters:
+    - id: key
+      type: System.String
+      description: The key of the cache entry.
+    content.vb: Public Sub Remove(key As String)
+  overload: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.Remove*
+  implements:
+  - Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager.Remove(System.String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: IdentityModel.Client.TokenResponse
+  commentId: T:IdentityModel.Client.TokenResponse
+  isExternal: true
+- uid: Geko.HttpClientService.Infrastructure
+  commentId: N:Geko.HttpClientService.Infrastructure
+  name: Geko.HttpClientService.Infrastructure
+  nameWithType: Geko.HttpClientService.Infrastructure
+  fullName: Geko.HttpClientService.Infrastructure
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager
+  commentId: T:Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager
+  parent: Geko.HttpClientService.Infrastructure
+  name: ITokenResponseCacheManager
+  nameWithType: ITokenResponseCacheManager
+  fullName: Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager
+  commentId: T:Geko.HttpClientService.Infrastructure.TokenResponseCacheManager
+  name: TokenResponseCacheManager
+  nameWithType: TokenResponseCacheManager
+  fullName: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager
+- uid: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.#ctor*
+  commentId: Overload:Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.#ctor
+  name: TokenResponseCacheManager
+  nameWithType: TokenResponseCacheManager.TokenResponseCacheManager
+  fullName: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.TokenResponseCacheManager
+- uid: Microsoft.Extensions.Caching.Memory.IMemoryCache
+  commentId: T:Microsoft.Extensions.Caching.Memory.IMemoryCache
+  parent: Microsoft.Extensions.Caching.Memory
+  isExternal: true
+  name: IMemoryCache
+  nameWithType: IMemoryCache
+  fullName: Microsoft.Extensions.Caching.Memory.IMemoryCache
+- uid: Microsoft.Extensions.Caching.Memory
+  commentId: N:Microsoft.Extensions.Caching.Memory
+  isExternal: true
+  name: Microsoft.Extensions.Caching.Memory
+  nameWithType: Microsoft.Extensions.Caching.Memory
+  fullName: Microsoft.Extensions.Caching.Memory
+- uid: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.AddOrGetExistingAsync*
+  commentId: Overload:Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.AddOrGetExistingAsync
+  name: AddOrGetExistingAsync
+  nameWithType: TokenResponseCacheManager.AddOrGetExistingAsync
+  fullName: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.AddOrGetExistingAsync
+- uid: Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager.AddOrGetExistingAsync(System.String,Func{Task{IdentityModel.Client.TokenResponse}})
+  commentId: M:Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager.AddOrGetExistingAsync(System.String,Func{Task{IdentityModel.Client.TokenResponse}})
+  parent: Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager
+  isExternal: true
+  name: AddOrGetExistingAsync(String, Func<Task<TokenResponse>>)
+  nameWithType: ITokenResponseCacheManager.AddOrGetExistingAsync(String, Func<Task<TokenResponse>>)
+  fullName: Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager.AddOrGetExistingAsync(System.String, Func<Task<IdentityModel.Client.TokenResponse>>)
+  nameWithType.vb: ITokenResponseCacheManager.AddOrGetExistingAsync(String, Func(Of Task(Of TokenResponse)))
+  fullName.vb: Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager.AddOrGetExistingAsync(System.String, Func(Of Task(Of IdentityModel.Client.TokenResponse)))
+  name.vb: AddOrGetExistingAsync(String, Func(Of Task(Of TokenResponse)))
+  spec.csharp:
+  - uid: Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager.AddOrGetExistingAsync(System.String,Func{Task{IdentityModel.Client.TokenResponse}})
+    name: AddOrGetExistingAsync
+    nameWithType: ITokenResponseCacheManager.AddOrGetExistingAsync
+    fullName: Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager.AddOrGetExistingAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Func`1
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IdentityModel.Client.TokenResponse
+    name: TokenResponse
+    nameWithType: TokenResponse
+    fullName: IdentityModel.Client.TokenResponse
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager.AddOrGetExistingAsync(System.String,Func{Task{IdentityModel.Client.TokenResponse}})
+    name: AddOrGetExistingAsync
+    nameWithType: ITokenResponseCacheManager.AddOrGetExistingAsync
+    fullName: Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager.AddOrGetExistingAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Func`1
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IdentityModel.Client.TokenResponse
+    name: TokenResponse
+    nameWithType: TokenResponse
+    fullName: IdentityModel.Client.TokenResponse
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Func{Task{IdentityModel.Client.TokenResponse}}
+  commentId: '!:Func{Task{IdentityModel.Client.TokenResponse}}'
+  definition: Func`1
+  name: Func<Task<TokenResponse>>
+  nameWithType: Func<Task<TokenResponse>>
+  fullName: Func<Task<IdentityModel.Client.TokenResponse>>
+  nameWithType.vb: Func(Of Task(Of TokenResponse))
+  fullName.vb: Func(Of Task(Of IdentityModel.Client.TokenResponse))
+  name.vb: Func(Of Task(Of TokenResponse))
+  spec.csharp:
+  - uid: Func`1
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IdentityModel.Client.TokenResponse
+    name: TokenResponse
+    nameWithType: TokenResponse
+    fullName: IdentityModel.Client.TokenResponse
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`1
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IdentityModel.Client.TokenResponse
+    name: TokenResponse
+    nameWithType: TokenResponse
+    fullName: IdentityModel.Client.TokenResponse
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task{IdentityModel.Client.TokenResponse}
+  commentId: '!:Task{IdentityModel.Client.TokenResponse}'
+  definition: Task`1
+  name: Task<TokenResponse>
+  nameWithType: Task<TokenResponse>
+  fullName: Task<IdentityModel.Client.TokenResponse>
+  nameWithType.vb: Task(Of TokenResponse)
+  fullName.vb: Task(Of IdentityModel.Client.TokenResponse)
+  name.vb: Task(Of TokenResponse)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IdentityModel.Client.TokenResponse
+    name: TokenResponse
+    nameWithType: TokenResponse
+    fullName: IdentityModel.Client.TokenResponse
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IdentityModel.Client.TokenResponse
+    name: TokenResponse
+    nameWithType: TokenResponse
+    fullName: IdentityModel.Client.TokenResponse
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Func`1
+  isExternal: true
+  name: Func<>
+  nameWithType: Func<>
+  fullName: Func<>
+  nameWithType.vb: Func(Of )
+  fullName.vb: Func(Of )
+  name.vb: Func(Of )
+  spec.csharp:
+  - uid: Func`1
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`1
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.Remove*
+  commentId: Overload:Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.Remove
+  name: Remove
+  nameWithType: TokenResponseCacheManager.Remove
+  fullName: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.Remove
+- uid: Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager.Remove(System.String)
+  commentId: M:Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager.Remove(System.String)
+  parent: Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager
+  isExternal: true
+  name: Remove(String)
+  nameWithType: ITokenResponseCacheManager.Remove(String)
+  fullName: Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager.Remove(System.String)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager.Remove(System.String)
+    name: Remove
+    nameWithType: ITokenResponseCacheManager.Remove
+    fullName: Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager.Remove
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager.Remove(System.String)
+    name: Remove
+    nameWithType: ITokenResponseCacheManager.Remove
+    fullName: Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager.Remove
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

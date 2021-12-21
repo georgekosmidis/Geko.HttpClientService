@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Geko.HttpClientService.IHttpClientServiceFactory
+  commentId: T:Geko.HttpClientService.IHttpClientServiceFactory
+  id: IHttpClientServiceFactory
+  parent: Geko.HttpClientService
+  children:
+  - Geko.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService
+  langs:
+  - csharp
+  - vb
+  name: IHttpClientServiceFactory
+  nameWithType: IHttpClientServiceFactory
+  fullName: Geko.HttpClientService.IHttpClientServiceFactory
+  type: Interface
+  source:
+    remote:
+      path: src/Geko.HttpClientService/IHttpClientServiceFactory.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: IHttpClientServiceFactory
+    path: ../src/Geko.HttpClientService/IHttpClientServiceFactory.cs
+    startLine: 5
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService
+  summary: "\nAn abstraction of the factory that creates <xref href=\"Geko.HttpClientService.HttpClientService\" data-throw-if-not-resolved=\"false\"></xref> instances for a given logical name.\n"
+  example: []
+  syntax:
+    content: public interface IHttpClientServiceFactory
+    content.vb: Public Interface IHttpClientServiceFactory
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Geko.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService
+  commentId: M:Geko.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService
+  id: CreateHttpClientService
+  parent: Geko.HttpClientService.IHttpClientServiceFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateHttpClientService()
+  nameWithType: IHttpClientServiceFactory.CreateHttpClientService()
+  fullName: Geko.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService()
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/IHttpClientServiceFactory.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: CreateHttpClientService
+    path: ../src/Geko.HttpClientService/IHttpClientServiceFactory.cs
+    startLine: 11
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService
+  summary: "\nCreates new <xref href=\"Geko.HttpClientService.HttpClientService\" data-throw-if-not-resolved=\"false\"></xref> instances. \n"
+  example: []
+  syntax:
+    content: HttpClientService CreateHttpClientService()
+    return:
+      type: Geko.HttpClientService.HttpClientService
+      description: An <xref href="Geko.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Function CreateHttpClientService As HttpClientService
+  overload: Geko.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService*
+references:
+- uid: Geko.HttpClientService.HttpClientService
+  commentId: T:Geko.HttpClientService.HttpClientService
+  parent: Geko.HttpClientService
+  name: HttpClientService
+  nameWithType: HttpClientService
+  fullName: Geko.HttpClientService.HttpClientService
+- uid: Geko.HttpClientService
+  commentId: N:Geko.HttpClientService
+  name: Geko.HttpClientService
+  nameWithType: Geko.HttpClientService
+  fullName: Geko.HttpClientService
+- uid: Geko.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService*
+  commentId: Overload:Geko.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService
+  name: CreateHttpClientService
+  nameWithType: IHttpClientServiceFactory.CreateHttpClientService
+  fullName: Geko.HttpClientService.IHttpClientServiceFactory.CreateHttpClientService

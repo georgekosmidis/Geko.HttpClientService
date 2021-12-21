@@ -1,0 +1,77 @@
+### YamlMime:ManagedReference
+items:
+- uid: Geko.HttpClientService.Models
+  commentId: N:Geko.HttpClientService.Models
+  id: Geko.HttpClientService.Models
+  children:
+  - Geko.HttpClientService.Models.
+  - Geko.HttpClientService.Models.HttpClientServiceOptions
+  - Geko.HttpClientService.Models.IIdentityServerOptions
+  - Geko.HttpClientService.Models.ResponseObject`1
+  langs:
+  - csharp
+  - vb
+  name: Geko.HttpClientService.Models
+  nameWithType: Geko.HttpClientService.Models
+  fullName: Geko.HttpClientService.Models
+  type: Namespace
+  assemblies:
+  - Geko.HttpClientService
+references:
+- uid: Geko.HttpClientService.Models.IIdentityServerOptions
+  commentId: T:Geko.HttpClientService.Models.IIdentityServerOptions
+  parent: Geko.HttpClientService.Models
+  name: IIdentityServerOptions
+  nameWithType: IIdentityServerOptions
+  fullName: Geko.HttpClientService.Models.IIdentityServerOptions
+- uid: Geko.HttpClientService.Models.
+  commentId: T:Geko.HttpClientService.Models.
+  name: ''
+  nameWithType: ''
+  fullName: Geko.HttpClientService.Models.
+- uid: Geko.HttpClientService.Models.HttpClientServiceOptions
+  commentId: T:Geko.HttpClientService.Models.HttpClientServiceOptions
+  name: HttpClientServiceOptions
+  nameWithType: HttpClientServiceOptions
+  fullName: Geko.HttpClientService.Models.HttpClientServiceOptions
+- uid: Geko.HttpClientService.Models.ResponseObject`1
+  commentId: T:Geko.HttpClientService.Models.ResponseObject`1
+  name: ResponseObject<TResponseBody>
+  nameWithType: ResponseObject<TResponseBody>
+  fullName: Geko.HttpClientService.Models.ResponseObject<TResponseBody>
+  nameWithType.vb: ResponseObject(Of TResponseBody)
+  fullName.vb: Geko.HttpClientService.Models.ResponseObject(Of TResponseBody)
+  name.vb: ResponseObject(Of TResponseBody)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Models.ResponseObject`1
+    name: ResponseObject
+    nameWithType: ResponseObject
+    fullName: Geko.HttpClientService.Models.ResponseObject
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResponseBody
+    nameWithType: TResponseBody
+    fullName: TResponseBody
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Geko.HttpClientService.Models.ResponseObject`1
+    name: ResponseObject
+    nameWithType: ResponseObject
+    fullName: Geko.HttpClientService.Models.ResponseObject
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResponseBody
+    nameWithType: TResponseBody
+    fullName: TResponseBody
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Models
+  commentId: N:Geko.HttpClientService.Models
+  name: Geko.HttpClientService.Models
+  nameWithType: Geko.HttpClientService.Models
+  fullName: Geko.HttpClientService.Models

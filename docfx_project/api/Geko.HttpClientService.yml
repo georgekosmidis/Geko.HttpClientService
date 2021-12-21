@@ -1,0 +1,42 @@
+### YamlMime:ManagedReference
+items:
+- uid: Geko.HttpClientService
+  commentId: N:Geko.HttpClientService
+  id: Geko.HttpClientService
+  children:
+  - Geko.HttpClientService.HttpClientService
+  - Geko.HttpClientService.HttpClientServiceFactory
+  - Geko.HttpClientService.IHttpClientServiceFactory
+  langs:
+  - csharp
+  - vb
+  name: Geko.HttpClientService
+  nameWithType: Geko.HttpClientService
+  fullName: Geko.HttpClientService
+  type: Namespace
+  assemblies:
+  - Geko.HttpClientService
+references:
+- uid: Geko.HttpClientService.HttpClientService
+  commentId: T:Geko.HttpClientService.HttpClientService
+  parent: Geko.HttpClientService
+  name: HttpClientService
+  nameWithType: HttpClientService
+  fullName: Geko.HttpClientService.HttpClientService
+- uid: Geko.HttpClientService.HttpClientServiceFactory
+  commentId: T:Geko.HttpClientService.HttpClientServiceFactory
+  parent: Geko.HttpClientService
+  name: HttpClientServiceFactory
+  nameWithType: HttpClientServiceFactory
+  fullName: Geko.HttpClientService.HttpClientServiceFactory
+- uid: Geko.HttpClientService.IHttpClientServiceFactory
+  commentId: T:Geko.HttpClientService.IHttpClientServiceFactory
+  parent: Geko.HttpClientService
+  name: IHttpClientServiceFactory
+  nameWithType: IHttpClientServiceFactory
+  fullName: Geko.HttpClientService.IHttpClientServiceFactory
+- uid: Geko.HttpClientService
+  commentId: N:Geko.HttpClientService
+  name: Geko.HttpClientService
+  nameWithType: Geko.HttpClientService
+  fullName: Geko.HttpClientService

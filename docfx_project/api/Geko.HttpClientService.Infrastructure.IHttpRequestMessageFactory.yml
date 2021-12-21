@@ -1,0 +1,84 @@
+### YamlMime:ManagedReference
+items:
+- uid: Geko.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+  commentId: T:Geko.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+  id: IHttpRequestMessageFactory
+  parent: Geko.HttpClientService.Infrastructure
+  children:
+  - Geko.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage
+  langs:
+  - csharp
+  - vb
+  name: IHttpRequestMessageFactory
+  nameWithType: IHttpRequestMessageFactory
+  fullName: Geko.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+  type: Interface
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Infrastructure/Core/Interfaces/IHttpRequestMessageFactory.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: IHttpRequestMessageFactory
+    path: ../src/Geko.HttpClientService/Infrastructure/Core/Interfaces/IHttpRequestMessageFactory.cs
+    startLine: 5
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Infrastructure
+  summary: "\nAbstraction for an <see cref=\"!:HttpRequestMessage\"></see> factory.\n"
+  example: []
+  syntax:
+    content: public interface IHttpRequestMessageFactory
+    content.vb: Public Interface IHttpRequestMessageFactory
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Geko.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage
+  commentId: M:Geko.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage
+  id: CreateRequestMessage
+  parent: Geko.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+  langs:
+  - csharp
+  - vb
+  name: CreateRequestMessage()
+  nameWithType: IHttpRequestMessageFactory.CreateRequestMessage()
+  fullName: Geko.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage()
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Infrastructure/Core/Interfaces/IHttpRequestMessageFactory.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: CreateRequestMessage
+    path: ../src/Geko.HttpClientService/Infrastructure/Core/Interfaces/IHttpRequestMessageFactory.cs
+    startLine: 11
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Infrastructure
+  summary: "\nCreates a new instance of an <see cref=\"!:HttpRequestMessage\"></see>.\n"
+  example: []
+  syntax:
+    content: HttpRequestMessage CreateRequestMessage()
+    return:
+      type: HttpRequestMessage
+      description: An <see cref="!:HttpRequestMessage"></see> to be used by an <see cref="!:HttpClient"></see>.
+    content.vb: Function CreateRequestMessage As HttpRequestMessage
+  overload: Geko.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage*
+references:
+- uid: Geko.HttpClientService.Infrastructure
+  commentId: N:Geko.HttpClientService.Infrastructure
+  name: Geko.HttpClientService.Infrastructure
+  nameWithType: Geko.HttpClientService.Infrastructure
+  fullName: Geko.HttpClientService.Infrastructure
+- uid: Geko.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage*
+  commentId: Overload:Geko.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage
+  name: CreateRequestMessage
+  nameWithType: IHttpRequestMessageFactory.CreateRequestMessage
+  fullName: Geko.HttpClientService.Infrastructure.IHttpRequestMessageFactory.CreateRequestMessage
+- uid: HttpRequestMessage
+  isExternal: true
+  name: HttpRequestMessage
+  nameWithType: HttpRequestMessage
+  fullName: HttpRequestMessage

@@ -1,0 +1,278 @@
+### YamlMime:ManagedReference
+items:
+- uid: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient
+  commentId: T:Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient
+  id: IIdentityServerHttpClient
+  parent: Geko.HttpClientService.Infrastructure
+  children:
+  - Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.GetCacheKey(Geko.HttpClientService.Models.IIdentityServerOptions)
+  - Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.GetTokenResponseAsync(Geko.HttpClientService.Models.IIdentityServerOptions)
+  - Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.HttpClientOptionsType
+  langs:
+  - csharp
+  - vb
+  name: IIdentityServerHttpClient
+  nameWithType: IIdentityServerHttpClient
+  fullName: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient
+  type: Interface
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Infrastructure/IdentityServer/Interfaces/IIdentityServerHttpClient.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: IIdentityServerHttpClient
+    path: ../src/Geko.HttpClientService/Infrastructure/IdentityServer/Interfaces/IIdentityServerHttpClient.cs
+    startLine: 8
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Infrastructure
+  summary: "\nAbstraction for a typed <see cref=\"!:HttpClient\"></see> that will execute the request to the IdentityServer4.\n"
+  example: []
+  syntax:
+    content: public interface IIdentityServerHttpClient
+    content.vb: Public Interface IIdentityServerHttpClient
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.HttpClientOptionsType
+  commentId: P:Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.HttpClientOptionsType
+  id: HttpClientOptionsType
+  parent: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient
+  langs:
+  - csharp
+  - vb
+  name: HttpClientOptionsType
+  nameWithType: IIdentityServerHttpClient.HttpClientOptionsType
+  fullName: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.HttpClientOptionsType
+  type: Property
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Infrastructure/IdentityServer/Interfaces/IIdentityServerHttpClient.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: HttpClientOptionsType
+    path: ../src/Geko.HttpClientService/Infrastructure/IdentityServer/Interfaces/IIdentityServerHttpClient.cs
+    startLine: 13
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Infrastructure
+  summary: "\nThe type of the <xref href=\"Geko.HttpClientService.Models.IIdentityServerOptions\" data-throw-if-not-resolved=\"false\"></xref> implementation\n"
+  example: []
+  syntax:
+    content: Type HttpClientOptionsType { get; }
+    parameters: []
+    return:
+      type: Type
+    content.vb: ReadOnly Property HttpClientOptionsType As Type
+  overload: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.HttpClientOptionsType*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.GetCacheKey(Geko.HttpClientService.Models.IIdentityServerOptions)
+  commentId: M:Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.GetCacheKey(Geko.HttpClientService.Models.IIdentityServerOptions)
+  id: GetCacheKey(Geko.HttpClientService.Models.IIdentityServerOptions)
+  parent: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient
+  langs:
+  - csharp
+  - vb
+  name: GetCacheKey(IIdentityServerOptions)
+  nameWithType: IIdentityServerHttpClient.GetCacheKey(IIdentityServerOptions)
+  fullName: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.GetCacheKey(Geko.HttpClientService.Models.IIdentityServerOptions)
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Infrastructure/IdentityServer/Interfaces/IIdentityServerHttpClient.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: GetCacheKey
+    path: ../src/Geko.HttpClientService/Infrastructure/IdentityServer/Interfaces/IIdentityServerHttpClient.cs
+    startLine: 20
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Infrastructure
+  summary: "\nCreates a unique key to be used as the cache key of the Identity Server access token, by combining infomration from the access token options object.\n"
+  example: []
+  syntax:
+    content: string GetCacheKey(IIdentityServerOptions options)
+    parameters:
+    - id: options
+      type: Geko.HttpClientService.Models.IIdentityServerOptions
+      description: The token service options
+    return:
+      type: System.String
+      description: Returns a string representing a unique identifier to be used as the caching key.
+    content.vb: Function GetCacheKey(options As IIdentityServerOptions) As String
+  overload: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.GetCacheKey*
+- uid: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.GetTokenResponseAsync(Geko.HttpClientService.Models.IIdentityServerOptions)
+  commentId: M:Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.GetTokenResponseAsync(Geko.HttpClientService.Models.IIdentityServerOptions)
+  id: GetTokenResponseAsync(Geko.HttpClientService.Models.IIdentityServerOptions)
+  parent: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient
+  langs:
+  - csharp
+  - vb
+  name: GetTokenResponseAsync(IIdentityServerOptions)
+  nameWithType: IIdentityServerHttpClient.GetTokenResponseAsync(IIdentityServerOptions)
+  fullName: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.GetTokenResponseAsync(Geko.HttpClientService.Models.IIdentityServerOptions)
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Infrastructure/IdentityServer/Interfaces/IIdentityServerHttpClient.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: GetTokenResponseAsync
+    path: ../src/Geko.HttpClientService/Infrastructure/IdentityServer/Interfaces/IIdentityServerHttpClient.cs
+    startLine: 27
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Infrastructure
+  summary: "\nRetrieves a <xref href=\"IdentityModel.Client.TokenResponse\" data-throw-if-not-resolved=\"false\"></xref> from the configured by the <code data-dev-comment-type=\"paramref\" class=\"paramref\">options</code>.\n"
+  example: []
+  syntax:
+    content: Task<TokenResponse> GetTokenResponseAsync(IIdentityServerOptions options)
+    parameters:
+    - id: options
+      type: Geko.HttpClientService.Models.IIdentityServerOptions
+      description: The configuration options for the IdentityServer4.
+    return:
+      type: Task{IdentityModel.Client.TokenResponse}
+      description: A <xref href="IdentityModel.Client.TokenResponse" data-throw-if-not-resolved="false"></xref> object.
+    content.vb: Function GetTokenResponseAsync(options As IIdentityServerOptions) As Task(Of TokenResponse)
+  overload: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.GetTokenResponseAsync*
+references:
+- uid: Geko.HttpClientService.Infrastructure
+  commentId: N:Geko.HttpClientService.Infrastructure
+  name: Geko.HttpClientService.Infrastructure
+  nameWithType: Geko.HttpClientService.Infrastructure
+  fullName: Geko.HttpClientService.Infrastructure
+- uid: Geko.HttpClientService.Models.IIdentityServerOptions
+  commentId: T:Geko.HttpClientService.Models.IIdentityServerOptions
+  parent: Geko.HttpClientService.Models
+  name: IIdentityServerOptions
+  nameWithType: IIdentityServerOptions
+  fullName: Geko.HttpClientService.Models.IIdentityServerOptions
+- uid: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.HttpClientOptionsType*
+  commentId: Overload:Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.HttpClientOptionsType
+  name: HttpClientOptionsType
+  nameWithType: IIdentityServerHttpClient.HttpClientOptionsType
+  fullName: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.HttpClientOptionsType
+- uid: Type
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: Type
+- uid: Geko.HttpClientService.Models
+  commentId: N:Geko.HttpClientService.Models
+  name: Geko.HttpClientService.Models
+  nameWithType: Geko.HttpClientService.Models
+  fullName: Geko.HttpClientService.Models
+- uid: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.GetCacheKey*
+  commentId: Overload:Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.GetCacheKey
+  name: GetCacheKey
+  nameWithType: IIdentityServerHttpClient.GetCacheKey
+  fullName: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.GetCacheKey
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: IdentityModel.Client.TokenResponse
+  commentId: T:IdentityModel.Client.TokenResponse
+  isExternal: true
+- uid: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.GetTokenResponseAsync*
+  commentId: Overload:Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.GetTokenResponseAsync
+  name: GetTokenResponseAsync
+  nameWithType: IIdentityServerHttpClient.GetTokenResponseAsync
+  fullName: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.GetTokenResponseAsync
+- uid: Task{IdentityModel.Client.TokenResponse}
+  commentId: '!:Task{IdentityModel.Client.TokenResponse}'
+  definition: Task`1
+  name: Task<TokenResponse>
+  nameWithType: Task<TokenResponse>
+  fullName: Task<IdentityModel.Client.TokenResponse>
+  nameWithType.vb: Task(Of TokenResponse)
+  fullName.vb: Task(Of IdentityModel.Client.TokenResponse)
+  name.vb: Task(Of TokenResponse)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IdentityModel.Client.TokenResponse
+    name: TokenResponse
+    nameWithType: TokenResponse
+    fullName: IdentityModel.Client.TokenResponse
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IdentityModel.Client.TokenResponse
+    name: TokenResponse
+    nameWithType: TokenResponse
+    fullName: IdentityModel.Client.TokenResponse
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

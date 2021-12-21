@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [3.0.0] - 2021-12-21
+### Changes
+Project renamed to Geko.HttpClientService
+Project upgraded to .NET 6
+
 ## [2.3.0] - 2020-03-19
 ### Added
 - Options (in `appsettings.json`) for the header colleration Id. 

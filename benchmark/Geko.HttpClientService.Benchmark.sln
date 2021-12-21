@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29911.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Geko.HttpClientService.Benchmark", "Geko.HttpClientService.Benchmark\Geko.HttpClientService.Benchmark.csproj", "{A3E0D197-4FBA-4C70-9292-7BCC1EA7F5F8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Geko.HttpClientService", "..\src\Geko.HttpClientService\Geko.HttpClientService.csproj", "{BAEC8AB2-FEFE-490E-A76B-00C32A8CAD2D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3E0D197-4FBA-4C70-9292-7BCC1EA7F5F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3E0D197-4FBA-4C70-9292-7BCC1EA7F5F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3E0D197-4FBA-4C70-9292-7BCC1EA7F5F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3E0D197-4FBA-4C70-9292-7BCC1EA7F5F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAEC8AB2-FEFE-490E-A76B-00C32A8CAD2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAEC8AB2-FEFE-490E-A76B-00C32A8CAD2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAEC8AB2-FEFE-490E-A76B-00C32A8CAD2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAEC8AB2-FEFE-490E-A76B-00C32A8CAD2D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {348FACEF-B10A-45D1-AD6E-A2A39D7F7AF5}
+	EndGlobalSection
+EndGlobal

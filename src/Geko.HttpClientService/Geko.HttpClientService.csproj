@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<PackageProjectUrl>https://georgekosmidis.github.io/Geko.HttpClientService/</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/georgekosmidis/Geko.HttpClientService</RepositoryUrl>
+		<PackageTags>IdentityServer4, HttpClient, AspNet, WebApi, AspNetWebApi, IdentityModel</PackageTags>
+		<Description>An HttpClient service that makes it easy to make authenticated HTTP requests to protected by IdentityServer4 resources.</Description>
+		<Copyright>George Kosmidis</Copyright>
+		<PackageReleaseNotes></PackageReleaseNotes>
+		<Version>2.3.6</Version>
+		<PackageId />
+		<Product />
+		<Company />
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<AssemblyVersion>2.3.6.0</AssemblyVersion>
+		<FileVersion>2.3.6.0</FileVersion>
+		<Authors>George Kosmidis</Authors>
+		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<PackageIcon>logo.jpg</PackageIcon>
+		<PackageIconUrl />
+		<ImplicitUsings>true</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<DocumentationFile>..\..\docs\Geko.HttpClientService.xml</DocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Remove="Extensions\IdentityServer4OptionsExtensions.cs" />
+		<Compile Remove="HttpClientMessageHandler.cs" />
+		<Compile Remove="IHttpClientService.cs" />
+		<Compile Remove="Infrastructure\IdentityServer\IdentityServerOptionsHandler.cs" />
+		<Compile Remove="Models\AuthenticationErrorEventArgs.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="IdentityModel" Version="4.3.1" />
+		<PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
+		<PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
+		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+		<PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\..\docfx_project\images\logo.jpg" Link="logo.jpg">
+			<Pack>True</Pack>
+			<PackagePath></PackagePath>
+		</None>
+	</ItemGroup>
+
+</Project>

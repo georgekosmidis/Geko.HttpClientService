@@ -23,6 +23,6 @@ steps:
   displayName: Pack
   inputs:
     command: 'pack'
-    packagesToPack: 'src/IdentityServer4.Contrib.HttpClientService/IdentityServer4.Contrib.HttpClientService.csproj'
+    packagesToPack: 'src/Geko.HttpClientService/Geko.HttpClientService.csproj'
     configuration: 'Release'
     versioningScheme: 'off'

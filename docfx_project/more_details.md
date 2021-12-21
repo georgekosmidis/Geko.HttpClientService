@@ -4,17 +4,6 @@ The library supports multiple ways for setting up the necessary options for retr
 
 > Currently, the library only supports `ClientCredentialsTokenRequest` and `PasswordTokenRequest`.
 
-### .SetIdentityServerOptions(String)
-
-Setup IdentityServer options by defining the configuration section where you have your settings. The type of the options (`ClientCredentialsOptions` or `PasswordOptions`) will be determined based on the name of the section:
-
-```csharp
-//...
-.SetIdentityServerOptions("SomeClientCredentialsOptions")
-//...
-```
-
-Although this option is not adviced for `PasswordTokenRequest`, the section can contain the properties of either the `ClientCredentialsOptions` or `PasswordOptions` objects. Keep in mind, that if you use the `.SetIdentityServerOptions("ClientCredentialsOptions")` approach, the configuration section should either be or end with `ClientCredentialsOptions`.
 
 ### .SetIdentityServerOptions&lt;TOptions&gt;(TOptions)
 
@@ -40,7 +29,7 @@ Setup IdentityServer options by passing a `ClientCredentialsOptions` or `Passwor
 
 Setup IdentityServer options using the options pattern (read more about the options pattern in [Microsoft Docs](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options)):
 
-**Startup.cs**
+#### Startup.cs
 
 ```csharp
 //...
@@ -55,7 +44,7 @@ Setup IdentityServer options using the options pattern (read more about the opti
 //...
 ```
 
-**ProtectedResourceService.cs**
+#### ProtectedResourceService.cs
 
 ```csharp
 //...
@@ -81,6 +70,7 @@ public class ProtectedResourceService : IProtectedResourceService
 ```
 
 ### .SetIdentityServerOptions&lt;TOptions&gt;(Action&lt;TOptions&gt;)
+
 Setup IdentityServer options using a delegate:
 
 ```csharp
@@ -101,7 +91,7 @@ ___
 
 ## More info on how to serialize request, deserialize response
 
-Responses can always be deserialized to the type `TResponseBody` defined in, for example, `GetAsync<TResponseBody>`:
+Responses can always be deserialized to the type `TResponseBody` with `GetAsync<TResponseBody>`:
 
 ```csharp
 //...
@@ -116,13 +106,15 @@ Using a complex type as a request body for POST, PUT and PATCH requests is also 
 .PostAsync<RequestPoco,ResponsePoco>("https://url_that_accepts_RequestPoco_and_responds_with_ResponsePoco", requestPoco);
 //...
 ```
-> If you want to fine tune how the `requestPoco` object is sent, please use the [TypeContent(TRequestBody, Encoding, string)](#typecontenttrequestbody-encoding-string). Without using `TypeContent(...)` to explitily set media-type and encoding, the defaults will be used: 'application/json' and 'UTF-8'.
+
+> If you want to fine tune how the `requestPoco` object is sent, please use the [TypeContent(TRequestBody, Encoding, string)](#typecontenttrequestbody-encoding-string). Without using `TypeContent(...)` to explitily set media-type and encoding, the defaults will be used ('application/json' and 'UTF-8').
 
 ### ResponseObject
 
-The variable **[responseObject](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html)** contains multiple properties: from the entire `HttpResponseMessage` and `HttpRequestMessage`, to the `HttpStatusCode` and `HttpResponseHeaders`. The most *exciting* feature though, is the `TResponseBody BodyAsType` property which will contain the deserializabled complex types from JSON responses. For a complete list of all the properties, check the [ResponseObject&lt;TResponseBody&gt;](https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html) in the docs.
+The variable **[responseObject](https://georgekosmidis.github.io/Geko.HttpClientService/api/Geko.HttpClientService.Models.ResponseObject-1.html)** contains multiple properties: from the entire `HttpResponseMessage` and `HttpRequestMessage`, to the `HttpStatusCode` and `HttpResponseHeaders`. The most *exciting* feature though, is the `TResponseBody BodyAsType` property which will contain the deserializabled complex types from JSON responses. For a complete list of all the properties, check the [ResponseObject&lt;TResponseBody&gt;](https://georgekosmidis.github.io/Geko.HttpClientService/api/Geko.HttpClientService.Models.ResponseObject-1.html) in the docs.
 
 ### TypeContent(TRequestBody, Encoding, string)
+
 You can also fine tune encoding and media-type by using the `TypeContent(TRequestBody model, Encoding encoding, string mediaType)` like this:
 
 ```csharp
@@ -130,26 +122,27 @@ var responseObject = await _requestServiceFactory
                           //Create a instance of the service
                           .CreateHttpClientService()
                           //.PostAsync<TRequestBody,TResponseBody>(URL, customer of type Customer1)
-                          .PostAsync<TypeContent<Customer1>,Customer2>("https://api/customers", new TypeContent(customer, Encoding.UTF8, "application/json"));
+                          .PostAsync<TypeContent<Customer1>,ReturnedObject>("https://api/customers", new TypeContent(customer, Encoding.UTF8, "application/json"));
 ```
+
 ___
 
 ### Configuring the colleration id
-Starting from version 2.3, the colleration id used to for logging between cascading API calls, can be configured from appsettings using the options pattern:
 
-**appsettings.json**
+Starting from version 2.3, a colleration id can be used for logging between cascading API calls. It can be configured from appsettings using the options pattern:
+
+#### appsettings.json
 
 ```csharp
 "HttpClientServiceOptions": {
-	//Switches on or off the sychronization of the colleration id
-	"HeaderCollerationIdActive": true,
-	//Sets the name of the header
-	"HeaderCollerationName": "X-Request-ID"
+ //Switches on or off the sychronization of the colleration id
+ "HeaderCollerationIdActive": true,
+ //Sets the name of the header
+ "HeaderCollerationName": "X-Request-ID"
 },
- // The values above are part of the demo offered in https://demo.identityserver.io/
 ```
 
-**Startup.cs**
+#### Configuring in Startup.cs for the Header Colleration Id
 
 ```csharp
 //...
@@ -157,7 +150,7 @@ Starting from version 2.3, the colleration id used to for logging between cascad
     {
         //...
         services.AddHttpClientService()
-		.Configure<HttpClientServiceOptions>(Configuration.GetSection(nameof(HttpClientServiceOptions))); 
+  .Configure<HttpClientServiceOptions>(Configuration.GetSection(nameof(HttpClientServiceOptions))); 
         //...
     }
 //...

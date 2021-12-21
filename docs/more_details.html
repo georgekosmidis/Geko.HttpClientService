@@ -8,7 +8,7 @@
     <title>How to setup an Access Token Request </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="How to setup an Access Token Request ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="generator" content="docfx 2.58.9.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -66,13 +66,6 @@
 <blockquote>
 <p>Currently, the library only supports <code>ClientCredentialsTokenRequest</code> and <code>PasswordTokenRequest</code>.</p>
 </blockquote>
-<h3 id="setidentityserveroptionsstring">.SetIdentityServerOptions(String)</h3>
-<p>Setup IdentityServer options by defining the configuration section where you have your settings. The type of the options (<code>ClientCredentialsOptions</code> or <code>PasswordOptions</code>) will be determined based on the name of the section:</p>
-<pre><code class="lang-csharp">//...
-.SetIdentityServerOptions(&quot;SomeClientCredentialsOptions&quot;)
-//...
-</code></pre>
-<p>Although this option is not adviced for <code>PasswordTokenRequest</code>, the section can contain the properties of either the <code>ClientCredentialsOptions</code> or <code>PasswordOptions</code> objects. Keep in mind, that if you use the <code>.SetIdentityServerOptions(&quot;ClientCredentialsOptions&quot;)</code> approach, the configuration section should either be or end with <code>ClientCredentialsOptions</code>.</p>
 <h3 id="setidentityserveroptionstoptionstoptions">.SetIdentityServerOptions&lt;TOptions&gt;(TOptions)</h3>
 <p>Setup IdentityServer options by passing a <code>ClientCredentialsOptions</code> or <code>PasswordOptions</code> directly to the <code>SetIdentityServerOptions</code>:</p>
 <pre><code class="lang-csharp">//...
@@ -91,7 +84,7 @@
 </code></pre>
 <h3 id="setidentityserveroptionstoptionsioptionstoptions">.SetIdentityServerOptions&lt;TOptions&gt;(IOptions&lt;TOptions&gt;)</h3>
 <p>Setup IdentityServer options using the options pattern (read more about the options pattern in <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/options">Microsoft Docs</a>):</p>
-<p><strong>Startup.cs</strong></p>
+<h4 id="startupcs">Startup.cs</h4>
 <pre><code class="lang-csharp">//...
     public void ConfigureServices(IServiceCollection services)
     {
@@ -103,7 +96,7 @@
     }
 //...
 </code></pre>
-<p><strong>ProtectedResourceService.cs</strong></p>
+<h4 id="protectedresourceservicecs">ProtectedResourceService.cs</h4>
 <pre><code class="lang-csharp">//...
 public class ProtectedResourceService : IProtectedResourceService
 {
@@ -141,7 +134,7 @@ public class ProtectedResourceService : IProtectedResourceService
 </code></pre>
 <hr>
 <h2 id="more-info-on-how-to-serialize-request-deserialize-response">More info on how to serialize request, deserialize response</h2>
-<p>Responses can always be deserialized to the type <code>TResponseBody</code> defined in, for example, <code>GetAsync&lt;TResponseBody&gt;</code>:</p>
+<p>Responses can always be deserialized to the type <code>TResponseBody</code> with <code>GetAsync&lt;TResponseBody&gt;</code>:</p>
 <pre><code class="lang-csharp">//...
 .GetAsync&lt;ResponsePoco&gt;(&quot;https://url_that_returns_ResponsePoco_in_json&quot;);
 //...
@@ -152,37 +145,36 @@ public class ProtectedResourceService : IProtectedResourceService
 //...
 </code></pre>
 <blockquote>
-<p>If you want to fine tune how the <code>requestPoco</code> object is sent, please use the <a href="#typecontenttrequestbody-encoding-string">TypeContent(TRequestBody, Encoding, string)</a>. Without using <code>TypeContent(...)</code> to explitily set media-type and encoding, the defaults will be used: 'application/json' and 'UTF-8'.</p>
+<p>If you want to fine tune how the <code>requestPoco</code> object is sent, please use the <a href="#typecontenttrequestbody-encoding-string">TypeContent(TRequestBody, Encoding, string)</a>. Without using <code>TypeContent(...)</code> to explitily set media-type and encoding, the defaults will be used ('application/json' and 'UTF-8').</p>
 </blockquote>
 <h3 id="responseobject">ResponseObject</h3>
-<p>The variable <strong><a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html">responseObject</a></strong> contains multiple properties: from the entire <code>HttpResponseMessage</code> and <code>HttpRequestMessage</code>, to the <code>HttpStatusCode</code> and <code>HttpResponseHeaders</code>. The most <em>exciting</em> feature though, is the <code>TResponseBody BodyAsType</code> property which will contain the deserializabled complex types from JSON responses. For a complete list of all the properties, check the <a href="https://georgekosmidis.github.io/IdentityServer4.Contrib.HttpClientService/api/IdentityServer4.Contrib.HttpClientService.Models.ResponseObject-1.html">ResponseObject&lt;TResponseBody&gt;</a> in the docs.</p>
+<p>The variable <strong><a href="https://georgekosmidis.github.io/Geko.HttpClientService/api/Geko.HttpClientService.Models.ResponseObject-1.html">responseObject</a></strong> contains multiple properties: from the entire <code>HttpResponseMessage</code> and <code>HttpRequestMessage</code>, to the <code>HttpStatusCode</code> and <code>HttpResponseHeaders</code>. The most <em>exciting</em> feature though, is the <code>TResponseBody BodyAsType</code> property which will contain the deserializabled complex types from JSON responses. For a complete list of all the properties, check the <a href="https://georgekosmidis.github.io/Geko.HttpClientService/api/Geko.HttpClientService.Models.ResponseObject-1.html">ResponseObject&lt;TResponseBody&gt;</a> in the docs.</p>
 <h3 id="typecontenttrequestbody-encoding-string">TypeContent(TRequestBody, Encoding, string)</h3>
 <p>You can also fine tune encoding and media-type by using the <code>TypeContent(TRequestBody model, Encoding encoding, string mediaType)</code> like this:</p>
 <pre><code class="lang-csharp">var responseObject = await _requestServiceFactory
                           //Create a instance of the service
                           .CreateHttpClientService()
                           //.PostAsync&lt;TRequestBody,TResponseBody&gt;(URL, customer of type Customer1)
-                          .PostAsync&lt;TypeContent&lt;Customer1&gt;,Customer2&gt;(&quot;https://api/customers&quot;, new TypeContent(customer, Encoding.UTF8, &quot;application/json&quot;));
+                          .PostAsync&lt;TypeContent&lt;Customer1&gt;,ReturnedObject&gt;(&quot;https://api/customers&quot;, new TypeContent(customer, Encoding.UTF8, &quot;application/json&quot;));
 </code></pre>
 <hr>
 <h3 id="configuring-the-colleration-id">Configuring the colleration id</h3>
-<p>Starting from version 2.3, the colleration id used to for logging between cascading API calls, can be configured from appsettings using the options pattern:</p>
-<p><strong>appsettings.json</strong></p>
-<pre><code class="lang-json">&quot;HttpClientServiceOptions&quot;: {
-	//Switches on or off the sychronization of the colleration id
-	&quot;HeaderCollerationIdActive&quot;: true,
-	//Sets the name of the header
-	&quot;HeaderCollerationName&quot;: &quot;X-Request-ID&quot;
+<p>Starting from version 2.3, a colleration id can be used for logging between cascading API calls. It can be configured from appsettings using the options pattern:</p>
+<h4 id="appsettingsjson">appsettings.json</h4>
+<pre><code class="lang-csharp">&quot;HttpClientServiceOptions&quot;: {
+ //Switches on or off the sychronization of the colleration id
+ &quot;HeaderCollerationIdActive&quot;: true,
+ //Sets the name of the header
+ &quot;HeaderCollerationName&quot;: &quot;X-Request-ID&quot;
 },
- // The values above are part of the demo offered in https://demo.identityserver.io/
 </code></pre>
-<p><strong>Startup.cs</strong></p>
+<h4 id="configuring-in-startupcs-for-the-header-colleration-id">Configuring in Startup.cs for the Header Colleration Id</h4>
 <pre><code class="lang-csharp">//...
     public void ConfigureServices(IServiceCollection services)
     {
         //...
         services.AddHttpClientService()
-				.Configure&lt;HttpClientServiceOptions&gt;(Configuration.GetSection(nameof(HttpClientServiceOptions))); 
+  .Configure&lt;HttpClientServiceOptions&gt;(Configuration.GetSection(nameof(HttpClientServiceOptions))); 
         //...
     }
 //...
@@ -195,12 +187,13 @@ public class ProtectedResourceService : IProtectedResourceService
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/docfx_project/more_details.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/blob/release/3.0.0/docfx_project/more_details.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

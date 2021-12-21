@@ -8,20 +8,21 @@
 		<Description>An easy way to make HTTP requests to JSON endpoints, with IdentityServer4 integration.</Description>
 		<Copyright>George Kosmidis</Copyright>
 		<PackageReleaseNotes></PackageReleaseNotes>
-		<Version>3.0.0</Version>
+		<Version>3.0.1</Version>
 		<PackageId />
 		<Product />
 		<Company />
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<AssemblyVersion>3.0.0.0</AssemblyVersion>
-		<FileVersion>3.0.0.0</FileVersion>
+		<AssemblyVersion>3.0.1.0</AssemblyVersion>
+		<FileVersion>3.0.1.0</FileVersion>
 		<Authors>George Kosmidis</Authors>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-		<PackageIcon>logo.jpg</PackageIcon>
+		<PackageIcon>logo.png</PackageIcon>
 		<PackageIconUrl />
 		<ImplicitUsings>true</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<SignAssembly>False</SignAssembly>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -37,7 +38,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="IdentityModel" Version="4.3.1" />
+		<PackageReference Include="IdentityModel" Version="5.2.0" />
 		<PackageReference Include="Microsoft.AspNet.WebApi.Client" Version="5.2.7" />
 		<PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
 		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
@@ -51,7 +52,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<None Include="..\..\docfx_project\images\logo.jpg" Link="logo.jpg">
+		<None Include="..\..\docfx_project\images\logo.png" Link="logo.jpg">
 			<Pack>True</Pack>
 			<PackagePath></PackagePath>
 		</None>

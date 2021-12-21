@@ -1,0 +1,212 @@
+### YamlMime:ManagedReference
+items:
+- uid: Geko.HttpClientService.Infrastructure.ICoreHttpClient
+  commentId: T:Geko.HttpClientService.Infrastructure.ICoreHttpClient
+  id: ICoreHttpClient
+  parent: Geko.HttpClientService.Infrastructure
+  children:
+  - Geko.HttpClientService.Infrastructure.ICoreHttpClient.SendAsync(HttpRequestMessage)
+  - Geko.HttpClientService.Infrastructure.ICoreHttpClient.SetTimeout(TimeSpan)
+  langs:
+  - csharp
+  - vb
+  name: ICoreHttpClient
+  nameWithType: ICoreHttpClient
+  fullName: Geko.HttpClientService.Infrastructure.ICoreHttpClient
+  type: Interface
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Infrastructure/Core/Interfaces/ICoreHttpClient.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: ICoreHttpClient
+    path: ../src/Geko.HttpClientService/Infrastructure/Core/Interfaces/ICoreHttpClient.cs
+    startLine: 5
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Infrastructure
+  summary: "\nAbstraction for a typed <see cref=\"!:HttpClient\"></see>.\n"
+  example: []
+  syntax:
+    content: public interface ICoreHttpClient
+    content.vb: Public Interface ICoreHttpClient
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Geko.HttpClientService.Infrastructure.ICoreHttpClient.SendAsync(HttpRequestMessage)
+  commentId: M:Geko.HttpClientService.Infrastructure.ICoreHttpClient.SendAsync(HttpRequestMessage)
+  id: SendAsync(HttpRequestMessage)
+  parent: Geko.HttpClientService.Infrastructure.ICoreHttpClient
+  langs:
+  - csharp
+  - vb
+  name: SendAsync(HttpRequestMessage)
+  nameWithType: ICoreHttpClient.SendAsync(HttpRequestMessage)
+  fullName: Geko.HttpClientService.Infrastructure.ICoreHttpClient.SendAsync(HttpRequestMessage)
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Infrastructure/Core/Interfaces/ICoreHttpClient.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: SendAsync
+    path: ../src/Geko.HttpClientService/Infrastructure/Core/Interfaces/ICoreHttpClient.cs
+    startLine: 12
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Infrastructure
+  summary: "\nSends an <see cref=\"!:HttpResponseMessage\"></see>.\n"
+  example: []
+  syntax:
+    content: Task<HttpResponseMessage> SendAsync(HttpRequestMessage httpRequestMessage)
+    parameters:
+    - id: httpRequestMessage
+      type: HttpRequestMessage
+      description: The <see cref="!:HttpResponseMessage"></see> to be sent
+    return:
+      type: Task{HttpResponseMessage}
+      description: An <see cref="!:HttpResponseMessage"></see>.
+    content.vb: Function SendAsync(httpRequestMessage As HttpRequestMessage) As Task(Of HttpResponseMessage)
+  overload: Geko.HttpClientService.Infrastructure.ICoreHttpClient.SendAsync*
+- uid: Geko.HttpClientService.Infrastructure.ICoreHttpClient.SetTimeout(TimeSpan)
+  commentId: M:Geko.HttpClientService.Infrastructure.ICoreHttpClient.SetTimeout(TimeSpan)
+  id: SetTimeout(TimeSpan)
+  parent: Geko.HttpClientService.Infrastructure.ICoreHttpClient
+  langs:
+  - csharp
+  - vb
+  name: SetTimeout(TimeSpan)
+  nameWithType: ICoreHttpClient.SetTimeout(TimeSpan)
+  fullName: Geko.HttpClientService.Infrastructure.ICoreHttpClient.SetTimeout(TimeSpan)
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Infrastructure/Core/Interfaces/ICoreHttpClient.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: SetTimeout
+    path: ../src/Geko.HttpClientService/Infrastructure/Core/Interfaces/ICoreHttpClient.cs
+    startLine: 18
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Infrastructure
+  summary: "\nSet the timeout for the next request.\n"
+  example: []
+  syntax:
+    content: void SetTimeout(TimeSpan timeout)
+    parameters:
+    - id: timeout
+      type: TimeSpan
+      description: The timeout.
+    content.vb: Sub SetTimeout(timeout As TimeSpan)
+  overload: Geko.HttpClientService.Infrastructure.ICoreHttpClient.SetTimeout*
+references:
+- uid: Geko.HttpClientService.Infrastructure
+  commentId: N:Geko.HttpClientService.Infrastructure
+  name: Geko.HttpClientService.Infrastructure
+  nameWithType: Geko.HttpClientService.Infrastructure
+  fullName: Geko.HttpClientService.Infrastructure
+- uid: Geko.HttpClientService.Infrastructure.ICoreHttpClient.SendAsync*
+  commentId: Overload:Geko.HttpClientService.Infrastructure.ICoreHttpClient.SendAsync
+  name: SendAsync
+  nameWithType: ICoreHttpClient.SendAsync
+  fullName: Geko.HttpClientService.Infrastructure.ICoreHttpClient.SendAsync
+- uid: HttpRequestMessage
+  isExternal: true
+  name: HttpRequestMessage
+  nameWithType: HttpRequestMessage
+  fullName: HttpRequestMessage
+- uid: Task{HttpResponseMessage}
+  commentId: '!:Task{HttpResponseMessage}'
+  definition: Task`1
+  name: Task<HttpResponseMessage>
+  nameWithType: Task<HttpResponseMessage>
+  fullName: Task<HttpResponseMessage>
+  nameWithType.vb: Task(Of HttpResponseMessage)
+  fullName.vb: Task(Of HttpResponseMessage)
+  name.vb: Task(Of HttpResponseMessage)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: HttpResponseMessage
+    name: HttpResponseMessage
+    nameWithType: HttpResponseMessage
+    fullName: HttpResponseMessage
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: HttpResponseMessage
+    name: HttpResponseMessage
+    nameWithType: HttpResponseMessage
+    fullName: HttpResponseMessage
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Infrastructure.ICoreHttpClient.SetTimeout*
+  commentId: Overload:Geko.HttpClientService.Infrastructure.ICoreHttpClient.SetTimeout
+  name: SetTimeout
+  nameWithType: ICoreHttpClient.SetTimeout
+  fullName: Geko.HttpClientService.Infrastructure.ICoreHttpClient.SetTimeout
+- uid: TimeSpan
+  isExternal: true
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: TimeSpan

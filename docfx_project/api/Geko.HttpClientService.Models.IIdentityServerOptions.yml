@@ -1,0 +1,48 @@
+### YamlMime:ManagedReference
+items:
+- uid: Geko.HttpClientService.Models.IIdentityServerOptions
+  commentId: T:Geko.HttpClientService.Models.IIdentityServerOptions
+  id: IIdentityServerOptions
+  parent: Geko.HttpClientService.Models
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IIdentityServerOptions
+  nameWithType: IIdentityServerOptions
+  fullName: Geko.HttpClientService.Models.IIdentityServerOptions
+  type: Interface
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Infrastructure/IdentityServer/Interfaces/IIdentityServerOptions.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: IIdentityServerOptions
+    path: ../src/Geko.HttpClientService/Infrastructure/IdentityServer/Interfaces/IIdentityServerOptions.cs
+    startLine: 5
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Models
+  summary: "\nContract that all IdentityServer options (e.g. <xref href=\"Geko.HttpClientService.Models.ClientCredentialsOptions\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"Geko.HttpClientService.Models.PasswordOptions\" data-throw-if-not-resolved=\"false\"></xref>) must implement.\n"
+  example: []
+  syntax:
+    content: public interface IIdentityServerOptions
+    content.vb: Public Interface IIdentityServerOptions
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+references:
+- uid: Geko.HttpClientService.Models.ClientCredentialsOptions
+  commentId: T:Geko.HttpClientService.Models.ClientCredentialsOptions
+  isExternal: true
+- uid: Geko.HttpClientService.Models.PasswordOptions
+  commentId: T:Geko.HttpClientService.Models.PasswordOptions
+  isExternal: true
+- uid: Geko.HttpClientService.Models
+  commentId: N:Geko.HttpClientService.Models
+  name: Geko.HttpClientService.Models
+  nameWithType: Geko.HttpClientService.Models
+  fullName: Geko.HttpClientService.Models

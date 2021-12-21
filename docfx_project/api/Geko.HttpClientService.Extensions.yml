@@ -1,0 +1,69 @@
+### YamlMime:ManagedReference
+items:
+- uid: Geko.HttpClientService.Extensions
+  commentId: N:Geko.HttpClientService.Extensions
+  id: Geko.HttpClientService.Extensions
+  children:
+  - Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions
+  - Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions
+  - Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions
+  - Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions
+  - Geko.HttpClientService.Extensions.HttpClientServicePostExtensions
+  - Geko.HttpClientService.Extensions.HttpClientServicePutExtensions
+  - Geko.HttpClientService.Extensions.ServiceCollectionExtensions
+  langs:
+  - csharp
+  - vb
+  name: Geko.HttpClientService.Extensions
+  nameWithType: Geko.HttpClientService.Extensions
+  fullName: Geko.HttpClientService.Extensions
+  type: Namespace
+  assemblies:
+  - Geko.HttpClientService
+references:
+- uid: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions
+  commentId: T:Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions
+  parent: Geko.HttpClientService.Extensions
+  name: HttpClientServiceDeleteExtensions
+  nameWithType: HttpClientServiceDeleteExtensions
+  fullName: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions
+- uid: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions
+  commentId: T:Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions
+  parent: Geko.HttpClientService.Extensions
+  name: HttpClientServiceGetExtensions
+  nameWithType: HttpClientServiceGetExtensions
+  fullName: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions
+- uid: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions
+  commentId: T:Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions
+  parent: Geko.HttpClientService.Extensions
+  name: HttpClientServiceHeadExtensions
+  nameWithType: HttpClientServiceHeadExtensions
+  fullName: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions
+  commentId: T:Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions
+  parent: Geko.HttpClientService.Extensions
+  name: HttpClientServicePatchExtensions
+  nameWithType: HttpClientServicePatchExtensions
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions
+  commentId: T:Geko.HttpClientService.Extensions.HttpClientServicePostExtensions
+  parent: Geko.HttpClientService.Extensions
+  name: HttpClientServicePostExtensions
+  nameWithType: HttpClientServicePostExtensions
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions
+  commentId: T:Geko.HttpClientService.Extensions.HttpClientServicePutExtensions
+  parent: Geko.HttpClientService.Extensions
+  name: HttpClientServicePutExtensions
+  nameWithType: HttpClientServicePutExtensions
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions
+- uid: Geko.HttpClientService.Extensions.ServiceCollectionExtensions
+  commentId: T:Geko.HttpClientService.Extensions.ServiceCollectionExtensions
+  name: ServiceCollectionExtensions
+  nameWithType: ServiceCollectionExtensions
+  fullName: Geko.HttpClientService.Extensions.ServiceCollectionExtensions
+- uid: Geko.HttpClientService.Extensions
+  commentId: N:Geko.HttpClientService.Extensions
+  name: Geko.HttpClientService.Extensions
+  nameWithType: Geko.HttpClientService.Extensions
+  fullName: Geko.HttpClientService.Extensions

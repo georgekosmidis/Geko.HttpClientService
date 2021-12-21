@@ -1,0 +1,4229 @@
+### YamlMime:ManagedReference
+items:
+- uid: Geko.HttpClientService.HttpClientService
+  commentId: T:Geko.HttpClientService.HttpClientService
+  id: HttpClientService
+  parent: Geko.HttpClientService
+  children:
+  - Geko.HttpClientService.HttpClientService.GetTokenResponse
+  - Geko.HttpClientService.HttpClientService.HeadersAdd(Dictionary{System.String,List{System.String}})
+  - Geko.HttpClientService.HttpClientService.HeadersAdd(Dictionary{System.String,System.String})
+  - Geko.HttpClientService.HttpClientService.HeadersAdd(System.String,List{System.String})
+  - Geko.HttpClientService.HttpClientService.HeadersAdd(System.String,System.String)
+  - Geko.HttpClientService.HttpClientService.HeadersClear
+  - Geko.HttpClientService.HttpClientService.HeadersRemove(System.String)
+  - Geko.HttpClientService.HttpClientService.HeadersSet(Dictionary{System.String,List{System.String}})
+  - Geko.HttpClientService.HttpClientService.HeadersSet(Dictionary{System.String,System.String})
+  - Geko.HttpClientService.HttpClientService.SendAsync``2(Uri,HttpMethod,``0)
+  - Geko.HttpClientService.HttpClientService.SetIdentityServerOptions``1(``0)
+  - Geko.HttpClientService.HttpClientService.SetIdentityServerOptions``1(Action{``0})
+  - Geko.HttpClientService.HttpClientService.SetIdentityServerOptions``1(Microsoft.Extensions.Options.IOptions{``0})
+  - Geko.HttpClientService.HttpClientService.SetTimeout(TimeSpan)
+  langs:
+  - csharp
+  - vb
+  name: HttpClientService
+  nameWithType: HttpClientService
+  fullName: Geko.HttpClientService.HttpClientService
+  type: Class
+  source:
+    remote:
+      path: src/Geko.HttpClientService/HttpClientService.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: HttpClientService
+    path: ../src/Geko.HttpClientService/HttpClientService.cs
+    startLine: 12
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService
+  summary: "\nThe request service implemantation\n"
+  example: []
+  syntax:
+    content: public class HttpClientService
+    content.vb: Public Class HttpClientService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync``1(System.String)
+  - Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync(System.String)
+  - Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync``1(System.String)
+  - Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync(System.String)
+  - Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync``1(System.String)
+  - Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync(System.String)
+  - Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``2(System.String,{TRequestBody})
+  - Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(System.String,System.String)
+  - Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(System.String,System.String)
+  - Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(System.String,StringContent)
+  - Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(System.String,StreamContent)
+  - Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``2(System.String,{TRequestBody})
+  - Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(System.String,System.String)
+  - Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(System.String,System.String)
+  - Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(System.String,StringContent)
+  - Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(System.String,StreamContent)
+  - Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``2(System.String,{TRequestBody})
+  - Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(System.String,System.String)
+  - Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(System.String,System.String)
+  - Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(System.String,StringContent)
+  - Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(System.String,StreamContent)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Geko.HttpClientService.HttpClientService.HeadersAdd(System.String,System.String)
+  commentId: M:Geko.HttpClientService.HttpClientService.HeadersAdd(System.String,System.String)
+  id: HeadersAdd(System.String,System.String)
+  parent: Geko.HttpClientService.HttpClientService
+  langs:
+  - csharp
+  - vb
+  name: HeadersAdd(String, String)
+  nameWithType: HttpClientService.HeadersAdd(String, String)
+  fullName: Geko.HttpClientService.HttpClientService.HeadersAdd(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/HttpClientService.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: HeadersAdd
+    path: ../src/Geko.HttpClientService/HttpClientService.cs
+    startLine: 39
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService
+  summary: "\nAdds a header to the request. If a second header with the same name is added, then their values will be aggregated to one <see cref=\"!:List&lt;String>\"></see>.\n"
+  example: []
+  syntax:
+    content: public HttpClientService HeadersAdd(string name, string value)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the header.
+    - id: value
+      type: System.String
+      description: The value of the header.
+    return:
+      type: Geko.HttpClientService.HttpClientService
+      description: Returns the current instance of <xref href="Geko.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
+    content.vb: Public Function HeadersAdd(name As String, value As String) As HttpClientService
+  overload: Geko.HttpClientService.HttpClientService.HeadersAdd*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Geko.HttpClientService.HttpClientService.HeadersAdd(System.String,List{System.String})
+  commentId: M:Geko.HttpClientService.HttpClientService.HeadersAdd(System.String,List{System.String})
+  id: HeadersAdd(System.String,List{System.String})
+  parent: Geko.HttpClientService.HttpClientService
+  langs:
+  - csharp
+  - vb
+  name: HeadersAdd(String, List<String>)
+  nameWithType: HttpClientService.HeadersAdd(String, List<String>)
+  fullName: Geko.HttpClientService.HttpClientService.HeadersAdd(System.String, List<System.String>)
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/HttpClientService.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: HeadersAdd
+    path: ../src/Geko.HttpClientService/HttpClientService.cs
+    startLine: 57
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService
+  summary: "\nAdds a header to the request. If a second header with the same name is added, then their values will be aggregated to one <see cref=\"!:List&lt;TString>\"></see>.\n"
+  example: []
+  syntax:
+    content: public HttpClientService HeadersAdd(string name, List<string> value)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the header.
+    - id: value
+      type: List{System.String}
+      description: The list of values of the header.
+    return:
+      type: Geko.HttpClientService.HttpClientService
+      description: Returns the current instance of <xref href="Geko.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
+    content.vb: Public Function HeadersAdd(name As String, value As List(Of String)) As HttpClientService
+  overload: Geko.HttpClientService.HttpClientService.HeadersAdd*
+  nameWithType.vb: HttpClientService.HeadersAdd(String, List(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Geko.HttpClientService.HttpClientService.HeadersAdd(System.String, List(Of System.String))
+  name.vb: HeadersAdd(String, List(Of String))
+- uid: Geko.HttpClientService.HttpClientService.HeadersAdd(Dictionary{System.String,List{System.String}})
+  commentId: M:Geko.HttpClientService.HttpClientService.HeadersAdd(Dictionary{System.String,List{System.String}})
+  id: HeadersAdd(Dictionary{System.String,List{System.String}})
+  parent: Geko.HttpClientService.HttpClientService
+  langs:
+  - csharp
+  - vb
+  name: HeadersAdd(Dictionary<String, List<String>>)
+  nameWithType: HttpClientService.HeadersAdd(Dictionary<String, List<String>>)
+  fullName: Geko.HttpClientService.HttpClientService.HeadersAdd(Dictionary<System.String, List<System.String>>)
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/HttpClientService.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: HeadersAdd
+    path: ../src/Geko.HttpClientService/HttpClientService.cs
+    startLine: 75
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService
+  summary: "\nAdds the <code data-dev-comment-type=\"paramref\" class=\"paramref\">headers</code> as the headers for the request.\n"
+  example: []
+  syntax:
+    content: public HttpClientService HeadersAdd(Dictionary<string, List<string>> headers)
+    parameters:
+    - id: headers
+      type: Dictionary{System.String,List{System.String}}
+      description: A <see cref="!:Dictionary&lt;TKey, TValue>"></see> with the key representing the name of the header, and the value representing the value of the header.
+    return:
+      type: Geko.HttpClientService.HttpClientService
+      description: Returns the current instance of <xref href="Geko.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
+    content.vb: Public Function HeadersAdd(headers As Dictionary(Of String, List(Of String))) As HttpClientService
+  overload: Geko.HttpClientService.HttpClientService.HeadersAdd*
+  nameWithType.vb: HttpClientService.HeadersAdd(Dictionary(Of String, List(Of String)))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Geko.HttpClientService.HttpClientService.HeadersAdd(Dictionary(Of System.String, List(Of System.String)))
+  name.vb: HeadersAdd(Dictionary(Of String, List(Of String)))
+- uid: Geko.HttpClientService.HttpClientService.HeadersAdd(Dictionary{System.String,System.String})
+  commentId: M:Geko.HttpClientService.HttpClientService.HeadersAdd(Dictionary{System.String,System.String})
+  id: HeadersAdd(Dictionary{System.String,System.String})
+  parent: Geko.HttpClientService.HttpClientService
+  langs:
+  - csharp
+  - vb
+  name: HeadersAdd(Dictionary<String, String>)
+  nameWithType: HttpClientService.HeadersAdd(Dictionary<String, String>)
+  fullName: Geko.HttpClientService.HttpClientService.HeadersAdd(Dictionary<System.String, System.String>)
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/HttpClientService.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: HeadersAdd
+    path: ../src/Geko.HttpClientService/HttpClientService.cs
+    startLine: 95
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService
+  summary: "\nAdds the <code data-dev-comment-type=\"paramref\" class=\"paramref\">headers</code> as the headers for the request.\n"
+  example: []
+  syntax:
+    content: public HttpClientService HeadersAdd(Dictionary<string, string> headers)
+    parameters:
+    - id: headers
+      type: Dictionary{System.String,System.String}
+      description: A <see cref="!:Dictionary&lt;TKey, TValue>"></see> where value is a <see cref="!:List&lt;TString>"></see> with the key representing the name of the header, and the values representing the values of the header.
+    return:
+      type: Geko.HttpClientService.HttpClientService
+      description: Returns the current instance of <xref href="Geko.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
+    content.vb: Public Function HeadersAdd(headers As Dictionary(Of String, String)) As HttpClientService
+  overload: Geko.HttpClientService.HttpClientService.HeadersAdd*
+  nameWithType.vb: HttpClientService.HeadersAdd(Dictionary(Of String, String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Geko.HttpClientService.HttpClientService.HeadersAdd(Dictionary(Of System.String, System.String))
+  name.vb: HeadersAdd(Dictionary(Of String, String))
+- uid: Geko.HttpClientService.HttpClientService.HeadersSet(Dictionary{System.String,List{System.String}})
+  commentId: M:Geko.HttpClientService.HttpClientService.HeadersSet(Dictionary{System.String,List{System.String}})
+  id: HeadersSet(Dictionary{System.String,List{System.String}})
+  parent: Geko.HttpClientService.HttpClientService
+  langs:
+  - csharp
+  - vb
+  name: HeadersSet(Dictionary<String, List<String>>)
+  nameWithType: HttpClientService.HeadersSet(Dictionary<String, List<String>>)
+  fullName: Geko.HttpClientService.HttpClientService.HeadersSet(Dictionary<System.String, List<System.String>>)
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/HttpClientService.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: HeadersSet
+    path: ../src/Geko.HttpClientService/HttpClientService.cs
+    startLine: 116
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService
+  summary: "\nClears all headers and sets new\n"
+  example: []
+  syntax:
+    content: public HttpClientService HeadersSet(Dictionary<string, List<string>> headers)
+    parameters:
+    - id: headers
+      type: Dictionary{System.String,List{System.String}}
+      description: A <see cref="!:Dictionary&lt;TKey, TValue>"></see> with the key representing the name of the header, and the value representing the value of the header.
+    return:
+      type: Geko.HttpClientService.HttpClientService
+      description: Returns the current instance of <xref href="Geko.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
+    content.vb: Public Function HeadersSet(headers As Dictionary(Of String, List(Of String))) As HttpClientService
+  overload: Geko.HttpClientService.HttpClientService.HeadersSet*
+  nameWithType.vb: HttpClientService.HeadersSet(Dictionary(Of String, List(Of String)))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Geko.HttpClientService.HttpClientService.HeadersSet(Dictionary(Of System.String, List(Of System.String)))
+  name.vb: HeadersSet(Dictionary(Of String, List(Of String)))
+- uid: Geko.HttpClientService.HttpClientService.HeadersSet(Dictionary{System.String,System.String})
+  commentId: M:Geko.HttpClientService.HttpClientService.HeadersSet(Dictionary{System.String,System.String})
+  id: HeadersSet(Dictionary{System.String,System.String})
+  parent: Geko.HttpClientService.HttpClientService
+  langs:
+  - csharp
+  - vb
+  name: HeadersSet(Dictionary<String, String>)
+  nameWithType: HttpClientService.HeadersSet(Dictionary<String, String>)
+  fullName: Geko.HttpClientService.HttpClientService.HeadersSet(Dictionary<System.String, System.String>)
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/HttpClientService.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: HeadersSet
+    path: ../src/Geko.HttpClientService/HttpClientService.cs
+    startLine: 136
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService
+  summary: "\nClears all headers and sets new\n"
+  example: []
+  syntax:
+    content: public HttpClientService HeadersSet(Dictionary<string, string> headers)
+    parameters:
+    - id: headers
+      type: Dictionary{System.String,System.String}
+      description: A <see cref="!:Dictionary&lt;TKey, TValue>"></see> where value is a <see cref="!:List&lt;TString>"></see> with the key representing the name of the header, and the values representing the values of the header.
+    return:
+      type: Geko.HttpClientService.HttpClientService
+      description: Returns the current instance of <xref href="Geko.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
+    content.vb: Public Function HeadersSet(headers As Dictionary(Of String, String)) As HttpClientService
+  overload: Geko.HttpClientService.HttpClientService.HeadersSet*
+  nameWithType.vb: HttpClientService.HeadersSet(Dictionary(Of String, String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Geko.HttpClientService.HttpClientService.HeadersSet(Dictionary(Of System.String, System.String))
+  name.vb: HeadersSet(Dictionary(Of String, String))
+- uid: Geko.HttpClientService.HttpClientService.HeadersClear
+  commentId: M:Geko.HttpClientService.HttpClientService.HeadersClear
+  id: HeadersClear
+  parent: Geko.HttpClientService.HttpClientService
+  langs:
+  - csharp
+  - vb
+  name: HeadersClear()
+  nameWithType: HttpClientService.HeadersClear()
+  fullName: Geko.HttpClientService.HttpClientService.HeadersClear()
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/HttpClientService.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: HeadersClear
+    path: ../src/Geko.HttpClientService/HttpClientService.cs
+    startLine: 154
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService
+  summary: "\nClears all headers from the <xref href=\"System.Net.Http.Headers.HttpHeaders\" data-throw-if-not-resolved=\"false\"></xref> collection.\n"
+  example: []
+  syntax:
+    content: public HttpClientService HeadersClear()
+    return:
+      type: Geko.HttpClientService.HttpClientService
+      description: Returns the current instance of <xref href="Geko.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
+    content.vb: Public Function HeadersClear As HttpClientService
+  overload: Geko.HttpClientService.HttpClientService.HeadersClear*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Geko.HttpClientService.HttpClientService.HeadersRemove(System.String)
+  commentId: M:Geko.HttpClientService.HttpClientService.HeadersRemove(System.String)
+  id: HeadersRemove(System.String)
+  parent: Geko.HttpClientService.HttpClientService
+  langs:
+  - csharp
+  - vb
+  name: HeadersRemove(String)
+  nameWithType: HttpClientService.HeadersRemove(String)
+  fullName: Geko.HttpClientService.HttpClientService.HeadersRemove(System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/HttpClientService.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: HeadersRemove
+    path: ../src/Geko.HttpClientService/HttpClientService.cs
+    startLine: 165
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService
+  summary: "\nRemoves the <code data-dev-comment-type=\"paramref\" class=\"paramref\">name</code> header from the <xref href=\"System.Net.Http.Headers.HttpHeaders\" data-throw-if-not-resolved=\"false\"></xref> collection.\n"
+  example: []
+  syntax:
+    content: public HttpClientService HeadersRemove(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The header to be removed
+    return:
+      type: Geko.HttpClientService.HttpClientService
+      description: Returns the current instance of <xref href="Geko.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
+    content.vb: Public Function HeadersRemove(name As String) As HttpClientService
+  overload: Geko.HttpClientService.HttpClientService.HeadersRemove*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Geko.HttpClientService.HttpClientService.SetIdentityServerOptions``1(Microsoft.Extensions.Options.IOptions{``0})
+  commentId: M:Geko.HttpClientService.HttpClientService.SetIdentityServerOptions``1(Microsoft.Extensions.Options.IOptions{``0})
+  id: SetIdentityServerOptions``1(Microsoft.Extensions.Options.IOptions{``0})
+  parent: Geko.HttpClientService.HttpClientService
+  langs:
+  - csharp
+  - vb
+  name: SetIdentityServerOptions<TOptions>(IOptions<TOptions>)
+  nameWithType: HttpClientService.SetIdentityServerOptions<TOptions>(IOptions<TOptions>)
+  fullName: Geko.HttpClientService.HttpClientService.SetIdentityServerOptions<TOptions>(Microsoft.Extensions.Options.IOptions<TOptions>)
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/HttpClientService.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: SetIdentityServerOptions
+    path: ../src/Geko.HttpClientService/HttpClientService.cs
+    startLine: 184
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService
+  summary: "\nSets the IdentityServer4 options for retrieving an access token using client credentials.\n"
+  example: []
+  syntax:
+    content: >-
+      public HttpClientService SetIdentityServerOptions<TOptions>(IOptions<TOptions> options)
+          where TOptions : class, IIdentityServerOptions, new()
+    parameters:
+    - id: options
+      type: Microsoft.Extensions.Options.IOptions{{TOptions}}
+      description: The token service options.
+    typeParameters:
+    - id: TOptions
+      description: The type of the <code data-dev-comment-type="paramref" class="paramref">options</code>.
+    return:
+      type: Geko.HttpClientService.HttpClientService
+      description: Returns the current instance of <xref href="Geko.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
+    content.vb: Public Function SetIdentityServerOptions(Of TOptions As {Class, IIdentityServerOptions, New})(options As IOptions(Of TOptions)) As HttpClientService
+  overload: Geko.HttpClientService.HttpClientService.SetIdentityServerOptions*
+  nameWithType.vb: HttpClientService.SetIdentityServerOptions(Of TOptions)(IOptions(Of TOptions))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Geko.HttpClientService.HttpClientService.SetIdentityServerOptions(Of TOptions)(Microsoft.Extensions.Options.IOptions(Of TOptions))
+  name.vb: SetIdentityServerOptions(Of TOptions)(IOptions(Of TOptions))
+- uid: Geko.HttpClientService.HttpClientService.SetIdentityServerOptions``1(Action{``0})
+  commentId: M:Geko.HttpClientService.HttpClientService.SetIdentityServerOptions``1(Action{``0})
+  id: SetIdentityServerOptions``1(Action{``0})
+  parent: Geko.HttpClientService.HttpClientService
+  langs:
+  - csharp
+  - vb
+  name: SetIdentityServerOptions<TOptions>(Action<TOptions>)
+  nameWithType: HttpClientService.SetIdentityServerOptions<TOptions>(Action<TOptions>)
+  fullName: Geko.HttpClientService.HttpClientService.SetIdentityServerOptions<TOptions>(Action<TOptions>)
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/HttpClientService.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: SetIdentityServerOptions
+    path: ../src/Geko.HttpClientService/HttpClientService.cs
+    startLine: 201
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService
+  summary: "\nSets the IdentityServer4 options for retrieving an access token using client credentials by using a delegate.\n"
+  example: []
+  syntax:
+    content: >-
+      public HttpClientService SetIdentityServerOptions<TOptions>(Action<TOptions> optionsDelegate)
+          where TOptions : class, IIdentityServerOptions
+    parameters:
+    - id: optionsDelegate
+      type: Action{{TOptions}}
+      description: The <see cref="!:Action&lt;T>"></see> delegate.
+    typeParameters:
+    - id: TOptions
+    return:
+      type: Geko.HttpClientService.HttpClientService
+      description: Returns the current instance of <xref href="Geko.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
+    content.vb: Public Function SetIdentityServerOptions(Of TOptions As {Class, IIdentityServerOptions})(optionsDelegate As Action(Of TOptions)) As HttpClientService
+  overload: Geko.HttpClientService.HttpClientService.SetIdentityServerOptions*
+  nameWithType.vb: HttpClientService.SetIdentityServerOptions(Of TOptions)(Action(Of TOptions))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Geko.HttpClientService.HttpClientService.SetIdentityServerOptions(Of TOptions)(Action(Of TOptions))
+  name.vb: SetIdentityServerOptions(Of TOptions)(Action(Of TOptions))
+- uid: Geko.HttpClientService.HttpClientService.SetIdentityServerOptions``1(``0)
+  commentId: M:Geko.HttpClientService.HttpClientService.SetIdentityServerOptions``1(``0)
+  id: SetIdentityServerOptions``1(``0)
+  parent: Geko.HttpClientService.HttpClientService
+  langs:
+  - csharp
+  - vb
+  name: SetIdentityServerOptions<TOptions>(TOptions)
+  nameWithType: HttpClientService.SetIdentityServerOptions<TOptions>(TOptions)
+  fullName: Geko.HttpClientService.HttpClientService.SetIdentityServerOptions<TOptions>(TOptions)
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/HttpClientService.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: SetIdentityServerOptions
+    path: ../src/Geko.HttpClientService/HttpClientService.cs
+    startLine: 214
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService
+  summary: "\nSets the IdentityServer4 options by passing an object that inherits from <xref href=\"Geko.HttpClientService.Models.ClientCredentialsOptions\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: >-
+      public HttpClientService SetIdentityServerOptions<TOptions>(TOptions options)
+          where TOptions : class, IIdentityServerOptions
+    parameters:
+    - id: options
+      type: '{TOptions}'
+      description: The <xref href="Geko.HttpClientService.Models.IIdentityServerOptions" data-throw-if-not-resolved="false"></xref> that contains the options.
+    typeParameters:
+    - id: TOptions
+    return:
+      type: Geko.HttpClientService.HttpClientService
+    content.vb: Public Function SetIdentityServerOptions(Of TOptions As {Class, IIdentityServerOptions})(options As TOptions) As HttpClientService
+  overload: Geko.HttpClientService.HttpClientService.SetIdentityServerOptions*
+  nameWithType.vb: HttpClientService.SetIdentityServerOptions(Of TOptions)(TOptions)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Geko.HttpClientService.HttpClientService.SetIdentityServerOptions(Of TOptions)(TOptions)
+  name.vb: SetIdentityServerOptions(Of TOptions)(TOptions)
+- uid: Geko.HttpClientService.HttpClientService.GetTokenResponse
+  commentId: M:Geko.HttpClientService.HttpClientService.GetTokenResponse
+  id: GetTokenResponse
+  parent: Geko.HttpClientService.HttpClientService
+  langs:
+  - csharp
+  - vb
+  name: GetTokenResponse()
+  nameWithType: HttpClientService.GetTokenResponse()
+  fullName: Geko.HttpClientService.HttpClientService.GetTokenResponse()
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/HttpClientService.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: GetTokenResponse
+    path: ../src/Geko.HttpClientService/HttpClientService.cs
+    startLine: 225
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService
+  summary: "\nRetrieves the TokenResponse from the IdentityServer\n"
+  example: []
+  syntax:
+    content: public async Task<TokenResponse> GetTokenResponse()
+    return:
+      type: Task{IdentityModel.Client.TokenResponse}
+      description: A <xref href="IdentityModel.Client.TokenResponse" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Function GetTokenResponse As Task(Of TokenResponse)
+  overload: Geko.HttpClientService.HttpClientService.GetTokenResponse*
+  modifiers.csharp:
+  - public
+  - async
+  modifiers.vb:
+  - Public
+- uid: Geko.HttpClientService.HttpClientService.SetTimeout(TimeSpan)
+  commentId: M:Geko.HttpClientService.HttpClientService.SetTimeout(TimeSpan)
+  id: SetTimeout(TimeSpan)
+  parent: Geko.HttpClientService.HttpClientService
+  langs:
+  - csharp
+  - vb
+  name: SetTimeout(TimeSpan)
+  nameWithType: HttpClientService.SetTimeout(TimeSpan)
+  fullName: Geko.HttpClientService.HttpClientService.SetTimeout(TimeSpan)
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/HttpClientService.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: SetTimeout
+    path: ../src/Geko.HttpClientService/HttpClientService.cs
+    startLine: 239
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService
+  summary: "\nSet the timeout of the current <xref href=\"Geko.HttpClientService.HttpClientService\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public HttpClientService SetTimeout(TimeSpan timeout)
+    parameters:
+    - id: timeout
+      type: TimeSpan
+      description: The timeout
+    return:
+      type: Geko.HttpClientService.HttpClientService
+      description: Returns the current instance of <xref href="Geko.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> for method chaining.
+    content.vb: Public Function SetTimeout(timeout As TimeSpan) As HttpClientService
+  overload: Geko.HttpClientService.HttpClientService.SetTimeout*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Geko.HttpClientService.HttpClientService.SendAsync``2(Uri,HttpMethod,``0)
+  commentId: M:Geko.HttpClientService.HttpClientService.SendAsync``2(Uri,HttpMethod,``0)
+  id: SendAsync``2(Uri,HttpMethod,``0)
+  parent: Geko.HttpClientService.HttpClientService
+  langs:
+  - csharp
+  - vb
+  name: SendAsync<TRequestBody, TResponseBody>(Uri, HttpMethod, TRequestBody)
+  nameWithType: HttpClientService.SendAsync<TRequestBody, TResponseBody>(Uri, HttpMethod, TRequestBody)
+  fullName: Geko.HttpClientService.HttpClientService.SendAsync<TRequestBody, TResponseBody>(Uri, HttpMethod, TRequestBody)
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/HttpClientService.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: SendAsync
+    path: ../src/Geko.HttpClientService/HttpClientService.cs
+    startLine: 324
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService
+  summary: "\nCreates and sends a request to the <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestUri</code> using the HTTP verb \nfrom <code data-dev-comment-type=\"paramref\" class=\"paramref\">httpMethod</code> and the request body from <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestBody</code>. \nIf IdentityServerOptions are set (using the <xref href=\"Geko.HttpClientService.HttpClientService.SetIdentityServerOptions%60%601(%60%600)\" data-throw-if-not-resolved=\"false\"></xref> or one of the overloads), \nthen a valid access token will be fetched by the <xref href=\"Geko.HttpClientService.Infrastructure.IIdentityServerService\" data-throw-if-not-resolved=\"false\"></xref> and attached to this request. \n"
+  example: []
+  syntax:
+    content: public async Task<ResponseObject<TResponseBody>> SendAsync<TRequestBody, TResponseBody>(Uri requestUri, HttpMethod httpMethod, TRequestBody requestBody)
+    parameters:
+    - id: requestUri
+      type: Uri
+      description: The <see cref="!:Uri"></see> of the request.
+    - id: httpMethod
+      type: HttpMethod
+      description: The <see cref="!:HttpMethod"></see> of the request.
+    - id: requestBody
+      type: '{TRequestBody}'
+      description: The body of the request (available only in POST, PUT and PATCH).
+    typeParameters:
+    - id: TRequestBody
+      description: "\nThe type of the request body. The type used can be one of the following:\n<ul><li><see cref=\"!:StringContent\"></see>Use <see cref=\"!:StringContent\"></see> to define Encoding and/or ContentType for an HTTP content based on string.</li><li><see cref=\"!:StreamContent\"></see>Use <see cref=\"!:StreamContent\"></see> to provide HTTP content based on a stream.</li><li>A serializable complex typeAny serializable object that will be serialized and sent in the body of the request.</li><li>A simple typeAny other simple type that will be sent in the body of the request.</li></ul>\n"
+    - id: TResponseBody
+      description: "\nThe type of the property <xref href=\"Geko.HttpClientService.Models.ResponseObject%601.BodyAsType\" data-throw-if-not-resolved=\"false\"></xref> of the <xref href=\"Geko.HttpClientService.Models.ResponseObject%601\" data-throw-if-not-resolved=\"false\"></xref> object,\nthat will contain the body of the response deserialized or casted to type <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TResponseBody</code>. \nThe type used can be one of the following:\n<ul><li><see cref=\"!:StringContent\"></see>Use <see cref=\"!:StringContent\"></see> to define Encoding and/or ContentType for an HTTP content based on string.</li><li><see cref=\"!:StreamContent\"></see>Use <see cref=\"!:StreamContent\"></see> to provide HTTP content based on a stream.</li><li>A serializable complex typeAny serializable object to attempt to deserialize the body of the response to it.</li><li>A simple typeAny other simple type to try convert the body of the response to it.</li></ul>\n"
+    return:
+      type: Task{Geko.HttpClientService.Models.ResponseObject{{TResponseBody}}}
+      description: "\nA <xref href=\"Geko.HttpClientService.Models.ResponseObject%601\" data-throw-if-not-resolved=\"false\"></xref> containing the body of the response \nas <code>String</code> in the <xref href=\"Geko.HttpClientService.Models.ResponseObject%601.BodyAsString\" data-throw-if-not-resolved=\"false\"></xref> property,\nas <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TResponseBody</code> in the <xref href=\"Geko.HttpClientService.Models.ResponseObject%601.BodyAsType\" data-throw-if-not-resolved=\"false\"></xref> and,\nas <code>Stream</code> in the <xref href=\"Geko.HttpClientService.Models.ResponseObject%601.BodyAsStream\" data-throw-if-not-resolved=\"false\"></xref> property.\nThe <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TResponseBody</code> can be of the following:\n<ul><li><see cref=\"!:StringContent\"></see>Use <see cref=\"!:StringContent\"></see> to define Encoding and/or ContentType for an HTTP content based on string.</li><li><see cref=\"!:StreamContent\"></see>Use <see cref=\"!:StreamContent\"></see> to provide HTTP content based on a stream.</li><li>A serializable complex typeAny serializable object to attempt to deserialize the body of the response to it.</li><li>A simple typeAny other simple type to try convert the body of the response to it.</li></ul>\n"
+    content.vb: Public Function SendAsync(Of TRequestBody, TResponseBody)(requestUri As Uri, httpMethod As HttpMethod, requestBody As TRequestBody) As Task(Of ResponseObject(Of TResponseBody))
+  overload: Geko.HttpClientService.HttpClientService.SendAsync*
+  nameWithType.vb: HttpClientService.SendAsync(Of TRequestBody, TResponseBody)(Uri, HttpMethod, TRequestBody)
+  modifiers.csharp:
+  - public
+  - async
+  modifiers.vb:
+  - Public
+  fullName.vb: Geko.HttpClientService.HttpClientService.SendAsync(Of TRequestBody, TResponseBody)(Uri, HttpMethod, TRequestBody)
+  name.vb: SendAsync(Of TRequestBody, TResponseBody)(Uri, HttpMethod, TRequestBody)
+references:
+- uid: Geko.HttpClientService
+  commentId: N:Geko.HttpClientService
+  name: Geko.HttpClientService
+  nameWithType: Geko.HttpClientService
+  fullName: Geko.HttpClientService
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync``1(System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync``1(Geko.HttpClientService.HttpClientService,System.String)
+  parent: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions
+  definition: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync``1(Geko.HttpClientService.HttpClientService,System.String)
+  name: DeleteAsync<TResponseBody>(String)
+  nameWithType: HttpClientServiceDeleteExtensions.DeleteAsync<TResponseBody>(String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync<TResponseBody>(System.String)
+  nameWithType.vb: HttpClientServiceDeleteExtensions.DeleteAsync(Of TResponseBody)(String)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync(Of TResponseBody)(System.String)
+  name.vb: DeleteAsync(Of TResponseBody)(String)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync``1(System.String)
+    name: DeleteAsync<TResponseBody>
+    nameWithType: HttpClientServiceDeleteExtensions.DeleteAsync<TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync<TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync``1(System.String)
+    name: DeleteAsync(Of TResponseBody)
+    nameWithType: HttpClientServiceDeleteExtensions.DeleteAsync(Of TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync(Of TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync(System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync(Geko.HttpClientService.HttpClientService,System.String)
+  parent: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions
+  definition: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync(Geko.HttpClientService.HttpClientService,System.String)
+  name: DeleteAsync(String)
+  nameWithType: HttpClientServiceDeleteExtensions.DeleteAsync(String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync(System.String)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync(System.String)
+    name: DeleteAsync
+    nameWithType: HttpClientServiceDeleteExtensions.DeleteAsync
+    fullName: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync(System.String)
+    name: DeleteAsync
+    nameWithType: HttpClientServiceDeleteExtensions.DeleteAsync
+    fullName: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync``1(System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync``1(Geko.HttpClientService.HttpClientService,System.String)
+  parent: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions
+  definition: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync``1(Geko.HttpClientService.HttpClientService,System.String)
+  name: GetAsync<TResponseBody>(String)
+  nameWithType: HttpClientServiceGetExtensions.GetAsync<TResponseBody>(String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync<TResponseBody>(System.String)
+  nameWithType.vb: HttpClientServiceGetExtensions.GetAsync(Of TResponseBody)(String)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync(Of TResponseBody)(System.String)
+  name.vb: GetAsync(Of TResponseBody)(String)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync``1(System.String)
+    name: GetAsync<TResponseBody>
+    nameWithType: HttpClientServiceGetExtensions.GetAsync<TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync<TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync``1(System.String)
+    name: GetAsync(Of TResponseBody)
+    nameWithType: HttpClientServiceGetExtensions.GetAsync(Of TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync(Of TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync(System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync(Geko.HttpClientService.HttpClientService,System.String)
+  parent: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions
+  definition: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync(Geko.HttpClientService.HttpClientService,System.String)
+  name: GetAsync(String)
+  nameWithType: HttpClientServiceGetExtensions.GetAsync(String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync(System.String)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync(System.String)
+    name: GetAsync
+    nameWithType: HttpClientServiceGetExtensions.GetAsync
+    fullName: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync(System.String)
+    name: GetAsync
+    nameWithType: HttpClientServiceGetExtensions.GetAsync
+    fullName: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync``1(System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync``1(Geko.HttpClientService.HttpClientService,System.String)
+  parent: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions
+  definition: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync``1(Geko.HttpClientService.HttpClientService,System.String)
+  name: HeadAsync<TResponseBody>(String)
+  nameWithType: HttpClientServiceHeadExtensions.HeadAsync<TResponseBody>(String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync<TResponseBody>(System.String)
+  nameWithType.vb: HttpClientServiceHeadExtensions.HeadAsync(Of TResponseBody)(String)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync(Of TResponseBody)(System.String)
+  name.vb: HeadAsync(Of TResponseBody)(String)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync``1(System.String)
+    name: HeadAsync<TResponseBody>
+    nameWithType: HttpClientServiceHeadExtensions.HeadAsync<TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync<TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync``1(System.String)
+    name: HeadAsync(Of TResponseBody)
+    nameWithType: HttpClientServiceHeadExtensions.HeadAsync(Of TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync(Of TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync(System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync(Geko.HttpClientService.HttpClientService,System.String)
+  parent: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions
+  definition: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync(Geko.HttpClientService.HttpClientService,System.String)
+  name: HeadAsync(String)
+  nameWithType: HttpClientServiceHeadExtensions.HeadAsync(String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync(System.String)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync(System.String)
+    name: HeadAsync
+    nameWithType: HttpClientServiceHeadExtensions.HeadAsync
+    fullName: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync(System.String)
+    name: HeadAsync
+    nameWithType: HttpClientServiceHeadExtensions.HeadAsync
+    fullName: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``2(System.String,{TRequestBody})
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``2(Geko.HttpClientService.HttpClientService,System.String,``0)
+  parent: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions
+  definition: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``2(Geko.HttpClientService.HttpClientService,System.String,``0)
+  name: PatchAsync<TRequestBody, TResponseBody>(String, TRequestBody)
+  nameWithType: HttpClientServicePatchExtensions.PatchAsync<TRequestBody, TResponseBody>(String, TRequestBody)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync<TRequestBody, TResponseBody>(System.String, TRequestBody)
+  nameWithType.vb: HttpClientServicePatchExtensions.PatchAsync(Of TRequestBody, TResponseBody)(String, TRequestBody)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Of TRequestBody, TResponseBody)(System.String, TRequestBody)
+  name.vb: PatchAsync(Of TRequestBody, TResponseBody)(String, TRequestBody)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``2(System.String,``0)
+    name: PatchAsync<TRequestBody, TResponseBody>
+    nameWithType: HttpClientServicePatchExtensions.PatchAsync<TRequestBody, TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync<TRequestBody, TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TRequestBody
+    nameWithType: TRequestBody
+    fullName: TRequestBody
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``2(System.String,``0)
+    name: PatchAsync(Of TRequestBody, TResponseBody)
+    nameWithType: HttpClientServicePatchExtensions.PatchAsync(Of TRequestBody, TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Of TRequestBody, TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TRequestBody
+    nameWithType: TRequestBody
+    fullName: TRequestBody
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(System.String,System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  parent: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions
+  definition: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  name: PatchAsync(String, String)
+  nameWithType: HttpClientServicePatchExtensions.PatchAsync(String, String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(System.String, System.String)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(System.String,System.String)
+    name: PatchAsync
+    nameWithType: HttpClientServicePatchExtensions.PatchAsync
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(System.String,System.String)
+    name: PatchAsync
+    nameWithType: HttpClientServicePatchExtensions.PatchAsync
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(System.String,System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  parent: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions
+  definition: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  name: PatchAsync<TResponseBody>(String, String)
+  nameWithType: HttpClientServicePatchExtensions.PatchAsync<TResponseBody>(String, String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync<TResponseBody>(System.String, System.String)
+  nameWithType.vb: HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)(String, String)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)(System.String, System.String)
+  name.vb: PatchAsync(Of TResponseBody)(String, String)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(System.String,System.String)
+    name: PatchAsync<TResponseBody>
+    nameWithType: HttpClientServicePatchExtensions.PatchAsync<TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync<TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(System.String,System.String)
+    name: PatchAsync(Of TResponseBody)
+    nameWithType: HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(System.String,StringContent)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(Geko.HttpClientService.HttpClientService,System.String,StringContent)
+  parent: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions
+  definition: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(Geko.HttpClientService.HttpClientService,System.String,StringContent)
+  name: PatchAsync<TResponseBody>(String, StringContent)
+  nameWithType: HttpClientServicePatchExtensions.PatchAsync<TResponseBody>(String, StringContent)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync<TResponseBody>(System.String, StringContent)
+  nameWithType.vb: HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)(String, StringContent)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)(System.String, StringContent)
+  name.vb: PatchAsync(Of TResponseBody)(String, StringContent)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(System.String,StringContent)
+    name: PatchAsync<TResponseBody>
+    nameWithType: HttpClientServicePatchExtensions.PatchAsync<TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync<TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: StringContent
+    name: StringContent
+    nameWithType: StringContent
+    fullName: StringContent
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(System.String,StringContent)
+    name: PatchAsync(Of TResponseBody)
+    nameWithType: HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: StringContent
+    name: StringContent
+    nameWithType: StringContent
+    fullName: StringContent
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(System.String,StreamContent)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(Geko.HttpClientService.HttpClientService,System.String,StreamContent)
+  parent: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions
+  definition: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(Geko.HttpClientService.HttpClientService,System.String,StreamContent)
+  name: PatchAsync<TResponseBody>(String, StreamContent)
+  nameWithType: HttpClientServicePatchExtensions.PatchAsync<TResponseBody>(String, StreamContent)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync<TResponseBody>(System.String, StreamContent)
+  nameWithType.vb: HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)(String, StreamContent)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)(System.String, StreamContent)
+  name.vb: PatchAsync(Of TResponseBody)(String, StreamContent)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(System.String,StreamContent)
+    name: PatchAsync<TResponseBody>
+    nameWithType: HttpClientServicePatchExtensions.PatchAsync<TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync<TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: StreamContent
+    name: StreamContent
+    nameWithType: StreamContent
+    fullName: StreamContent
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(System.String,StreamContent)
+    name: PatchAsync(Of TResponseBody)
+    nameWithType: HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: StreamContent
+    name: StreamContent
+    nameWithType: StreamContent
+    fullName: StreamContent
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``2(System.String,{TRequestBody})
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``2(Geko.HttpClientService.HttpClientService,System.String,``0)
+  parent: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions
+  definition: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``2(Geko.HttpClientService.HttpClientService,System.String,``0)
+  name: PostAsync<TRequestBody, TResponseBody>(String, TRequestBody)
+  nameWithType: HttpClientServicePostExtensions.PostAsync<TRequestBody, TResponseBody>(String, TRequestBody)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync<TRequestBody, TResponseBody>(System.String, TRequestBody)
+  nameWithType.vb: HttpClientServicePostExtensions.PostAsync(Of TRequestBody, TResponseBody)(String, TRequestBody)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(Of TRequestBody, TResponseBody)(System.String, TRequestBody)
+  name.vb: PostAsync(Of TRequestBody, TResponseBody)(String, TRequestBody)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``2(System.String,``0)
+    name: PostAsync<TRequestBody, TResponseBody>
+    nameWithType: HttpClientServicePostExtensions.PostAsync<TRequestBody, TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync<TRequestBody, TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TRequestBody
+    nameWithType: TRequestBody
+    fullName: TRequestBody
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``2(System.String,``0)
+    name: PostAsync(Of TRequestBody, TResponseBody)
+    nameWithType: HttpClientServicePostExtensions.PostAsync(Of TRequestBody, TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(Of TRequestBody, TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TRequestBody
+    nameWithType: TRequestBody
+    fullName: TRequestBody
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(System.String,System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  parent: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions
+  definition: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  name: PostAsync(String, String)
+  nameWithType: HttpClientServicePostExtensions.PostAsync(String, String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(System.String, System.String)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(System.String,System.String)
+    name: PostAsync
+    nameWithType: HttpClientServicePostExtensions.PostAsync
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(System.String,System.String)
+    name: PostAsync
+    nameWithType: HttpClientServicePostExtensions.PostAsync
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(System.String,System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  parent: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions
+  definition: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  name: PostAsync<TResponseBody>(String, String)
+  nameWithType: HttpClientServicePostExtensions.PostAsync<TResponseBody>(String, String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync<TResponseBody>(System.String, System.String)
+  nameWithType.vb: HttpClientServicePostExtensions.PostAsync(Of TResponseBody)(String, String)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(Of TResponseBody)(System.String, System.String)
+  name.vb: PostAsync(Of TResponseBody)(String, String)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(System.String,System.String)
+    name: PostAsync<TResponseBody>
+    nameWithType: HttpClientServicePostExtensions.PostAsync<TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync<TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(System.String,System.String)
+    name: PostAsync(Of TResponseBody)
+    nameWithType: HttpClientServicePostExtensions.PostAsync(Of TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(Of TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(System.String,StringContent)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(Geko.HttpClientService.HttpClientService,System.String,StringContent)
+  parent: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions
+  definition: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(Geko.HttpClientService.HttpClientService,System.String,StringContent)
+  name: PostAsync<TResponseBody>(String, StringContent)
+  nameWithType: HttpClientServicePostExtensions.PostAsync<TResponseBody>(String, StringContent)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync<TResponseBody>(System.String, StringContent)
+  nameWithType.vb: HttpClientServicePostExtensions.PostAsync(Of TResponseBody)(String, StringContent)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(Of TResponseBody)(System.String, StringContent)
+  name.vb: PostAsync(Of TResponseBody)(String, StringContent)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(System.String,StringContent)
+    name: PostAsync<TResponseBody>
+    nameWithType: HttpClientServicePostExtensions.PostAsync<TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync<TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: StringContent
+    name: StringContent
+    nameWithType: StringContent
+    fullName: StringContent
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(System.String,StringContent)
+    name: PostAsync(Of TResponseBody)
+    nameWithType: HttpClientServicePostExtensions.PostAsync(Of TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(Of TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: StringContent
+    name: StringContent
+    nameWithType: StringContent
+    fullName: StringContent
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(System.String,StreamContent)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(Geko.HttpClientService.HttpClientService,System.String,StreamContent)
+  parent: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions
+  definition: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(Geko.HttpClientService.HttpClientService,System.String,StreamContent)
+  name: PostAsync<TResponseBody>(String, StreamContent)
+  nameWithType: HttpClientServicePostExtensions.PostAsync<TResponseBody>(String, StreamContent)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync<TResponseBody>(System.String, StreamContent)
+  nameWithType.vb: HttpClientServicePostExtensions.PostAsync(Of TResponseBody)(String, StreamContent)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(Of TResponseBody)(System.String, StreamContent)
+  name.vb: PostAsync(Of TResponseBody)(String, StreamContent)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(System.String,StreamContent)
+    name: PostAsync<TResponseBody>
+    nameWithType: HttpClientServicePostExtensions.PostAsync<TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync<TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: StreamContent
+    name: StreamContent
+    nameWithType: StreamContent
+    fullName: StreamContent
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(System.String,StreamContent)
+    name: PostAsync(Of TResponseBody)
+    nameWithType: HttpClientServicePostExtensions.PostAsync(Of TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(Of TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: StreamContent
+    name: StreamContent
+    nameWithType: StreamContent
+    fullName: StreamContent
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``2(System.String,{TRequestBody})
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``2(Geko.HttpClientService.HttpClientService,System.String,``0)
+  parent: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions
+  definition: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``2(Geko.HttpClientService.HttpClientService,System.String,``0)
+  name: PutAsync<TRequestBody, TResponseBody>(String, TRequestBody)
+  nameWithType: HttpClientServicePutExtensions.PutAsync<TRequestBody, TResponseBody>(String, TRequestBody)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync<TRequestBody, TResponseBody>(System.String, TRequestBody)
+  nameWithType.vb: HttpClientServicePutExtensions.PutAsync(Of TRequestBody, TResponseBody)(String, TRequestBody)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Of TRequestBody, TResponseBody)(System.String, TRequestBody)
+  name.vb: PutAsync(Of TRequestBody, TResponseBody)(String, TRequestBody)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``2(System.String,``0)
+    name: PutAsync<TRequestBody, TResponseBody>
+    nameWithType: HttpClientServicePutExtensions.PutAsync<TRequestBody, TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync<TRequestBody, TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TRequestBody
+    nameWithType: TRequestBody
+    fullName: TRequestBody
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``2(System.String,``0)
+    name: PutAsync(Of TRequestBody, TResponseBody)
+    nameWithType: HttpClientServicePutExtensions.PutAsync(Of TRequestBody, TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Of TRequestBody, TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TRequestBody
+    nameWithType: TRequestBody
+    fullName: TRequestBody
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(System.String,System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  parent: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions
+  definition: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  name: PutAsync(String, String)
+  nameWithType: HttpClientServicePutExtensions.PutAsync(String, String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(System.String, System.String)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(System.String,System.String)
+    name: PutAsync
+    nameWithType: HttpClientServicePutExtensions.PutAsync
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(System.String,System.String)
+    name: PutAsync
+    nameWithType: HttpClientServicePutExtensions.PutAsync
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(System.String,System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  parent: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions
+  definition: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  name: PutAsync<TResponseBody>(String, String)
+  nameWithType: HttpClientServicePutExtensions.PutAsync<TResponseBody>(String, String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync<TResponseBody>(System.String, System.String)
+  nameWithType.vb: HttpClientServicePutExtensions.PutAsync(Of TResponseBody)(String, String)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Of TResponseBody)(System.String, System.String)
+  name.vb: PutAsync(Of TResponseBody)(String, String)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(System.String,System.String)
+    name: PutAsync<TResponseBody>
+    nameWithType: HttpClientServicePutExtensions.PutAsync<TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync<TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(System.String,System.String)
+    name: PutAsync(Of TResponseBody)
+    nameWithType: HttpClientServicePutExtensions.PutAsync(Of TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Of TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(System.String,StringContent)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,StringContent)
+  parent: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions
+  definition: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,StringContent)
+  name: PutAsync<TResponseBody>(String, StringContent)
+  nameWithType: HttpClientServicePutExtensions.PutAsync<TResponseBody>(String, StringContent)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync<TResponseBody>(System.String, StringContent)
+  nameWithType.vb: HttpClientServicePutExtensions.PutAsync(Of TResponseBody)(String, StringContent)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Of TResponseBody)(System.String, StringContent)
+  name.vb: PutAsync(Of TResponseBody)(String, StringContent)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(System.String,StringContent)
+    name: PutAsync<TResponseBody>
+    nameWithType: HttpClientServicePutExtensions.PutAsync<TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync<TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: StringContent
+    name: StringContent
+    nameWithType: StringContent
+    fullName: StringContent
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(System.String,StringContent)
+    name: PutAsync(Of TResponseBody)
+    nameWithType: HttpClientServicePutExtensions.PutAsync(Of TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Of TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: StringContent
+    name: StringContent
+    nameWithType: StringContent
+    fullName: StringContent
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.HttpClientService.Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(System.String,StreamContent)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,StreamContent)
+  parent: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions
+  definition: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,StreamContent)
+  name: PutAsync<TResponseBody>(String, StreamContent)
+  nameWithType: HttpClientServicePutExtensions.PutAsync<TResponseBody>(String, StreamContent)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync<TResponseBody>(System.String, StreamContent)
+  nameWithType.vb: HttpClientServicePutExtensions.PutAsync(Of TResponseBody)(String, StreamContent)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Of TResponseBody)(System.String, StreamContent)
+  name.vb: PutAsync(Of TResponseBody)(String, StreamContent)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(System.String,StreamContent)
+    name: PutAsync<TResponseBody>
+    nameWithType: HttpClientServicePutExtensions.PutAsync<TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync<TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: StreamContent
+    name: StreamContent
+    nameWithType: StreamContent
+    fullName: StreamContent
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(System.String,StreamContent)
+    name: PutAsync(Of TResponseBody)
+    nameWithType: HttpClientServicePutExtensions.PutAsync(Of TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Of TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: StreamContent
+    name: StreamContent
+    nameWithType: StreamContent
+    fullName: StreamContent
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync``1(Geko.HttpClientService.HttpClientService,System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync``1(Geko.HttpClientService.HttpClientService,System.String)
+  isExternal: true
+  name: DeleteAsync<TResponseBody>(HttpClientService, String)
+  nameWithType: HttpClientServiceDeleteExtensions.DeleteAsync<TResponseBody>(HttpClientService, String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync<TResponseBody>(Geko.HttpClientService.HttpClientService, System.String)
+  nameWithType.vb: HttpClientServiceDeleteExtensions.DeleteAsync(Of TResponseBody)(HttpClientService, String)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync(Of TResponseBody)(Geko.HttpClientService.HttpClientService, System.String)
+  name.vb: DeleteAsync(Of TResponseBody)(HttpClientService, String)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync``1(Geko.HttpClientService.HttpClientService,System.String)
+    name: DeleteAsync<TResponseBody>
+    nameWithType: HttpClientServiceDeleteExtensions.DeleteAsync<TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync<TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync``1(Geko.HttpClientService.HttpClientService,System.String)
+    name: DeleteAsync(Of TResponseBody)
+    nameWithType: HttpClientServiceDeleteExtensions.DeleteAsync(Of TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync(Of TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions
+  commentId: T:Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions
+  parent: Geko.HttpClientService.Extensions
+  name: HttpClientServiceDeleteExtensions
+  nameWithType: HttpClientServiceDeleteExtensions
+  fullName: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions
+- uid: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync(Geko.HttpClientService.HttpClientService,System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync(Geko.HttpClientService.HttpClientService,System.String)
+  isExternal: true
+  name: DeleteAsync(HttpClientService, String)
+  nameWithType: HttpClientServiceDeleteExtensions.DeleteAsync(HttpClientService, String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync(Geko.HttpClientService.HttpClientService, System.String)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync(Geko.HttpClientService.HttpClientService,System.String)
+    name: DeleteAsync
+    nameWithType: HttpClientServiceDeleteExtensions.DeleteAsync
+    fullName: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync(Geko.HttpClientService.HttpClientService,System.String)
+    name: DeleteAsync
+    nameWithType: HttpClientServiceDeleteExtensions.DeleteAsync
+    fullName: Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.DeleteAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync``1(Geko.HttpClientService.HttpClientService,System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync``1(Geko.HttpClientService.HttpClientService,System.String)
+  isExternal: true
+  name: GetAsync<TResponseBody>(HttpClientService, String)
+  nameWithType: HttpClientServiceGetExtensions.GetAsync<TResponseBody>(HttpClientService, String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync<TResponseBody>(Geko.HttpClientService.HttpClientService, System.String)
+  nameWithType.vb: HttpClientServiceGetExtensions.GetAsync(Of TResponseBody)(HttpClientService, String)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync(Of TResponseBody)(Geko.HttpClientService.HttpClientService, System.String)
+  name.vb: GetAsync(Of TResponseBody)(HttpClientService, String)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync``1(Geko.HttpClientService.HttpClientService,System.String)
+    name: GetAsync<TResponseBody>
+    nameWithType: HttpClientServiceGetExtensions.GetAsync<TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync<TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync``1(Geko.HttpClientService.HttpClientService,System.String)
+    name: GetAsync(Of TResponseBody)
+    nameWithType: HttpClientServiceGetExtensions.GetAsync(Of TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync(Of TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions
+  commentId: T:Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions
+  parent: Geko.HttpClientService.Extensions
+  name: HttpClientServiceGetExtensions
+  nameWithType: HttpClientServiceGetExtensions
+  fullName: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions
+- uid: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync(Geko.HttpClientService.HttpClientService,System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync(Geko.HttpClientService.HttpClientService,System.String)
+  isExternal: true
+  name: GetAsync(HttpClientService, String)
+  nameWithType: HttpClientServiceGetExtensions.GetAsync(HttpClientService, String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync(Geko.HttpClientService.HttpClientService, System.String)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync(Geko.HttpClientService.HttpClientService,System.String)
+    name: GetAsync
+    nameWithType: HttpClientServiceGetExtensions.GetAsync
+    fullName: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync(Geko.HttpClientService.HttpClientService,System.String)
+    name: GetAsync
+    nameWithType: HttpClientServiceGetExtensions.GetAsync
+    fullName: Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.GetAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync``1(Geko.HttpClientService.HttpClientService,System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync``1(Geko.HttpClientService.HttpClientService,System.String)
+  isExternal: true
+  name: HeadAsync<TResponseBody>(HttpClientService, String)
+  nameWithType: HttpClientServiceHeadExtensions.HeadAsync<TResponseBody>(HttpClientService, String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync<TResponseBody>(Geko.HttpClientService.HttpClientService, System.String)
+  nameWithType.vb: HttpClientServiceHeadExtensions.HeadAsync(Of TResponseBody)(HttpClientService, String)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync(Of TResponseBody)(Geko.HttpClientService.HttpClientService, System.String)
+  name.vb: HeadAsync(Of TResponseBody)(HttpClientService, String)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync``1(Geko.HttpClientService.HttpClientService,System.String)
+    name: HeadAsync<TResponseBody>
+    nameWithType: HttpClientServiceHeadExtensions.HeadAsync<TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync<TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync``1(Geko.HttpClientService.HttpClientService,System.String)
+    name: HeadAsync(Of TResponseBody)
+    nameWithType: HttpClientServiceHeadExtensions.HeadAsync(Of TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync(Of TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions
+  commentId: T:Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions
+  parent: Geko.HttpClientService.Extensions
+  name: HttpClientServiceHeadExtensions
+  nameWithType: HttpClientServiceHeadExtensions
+  fullName: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions
+- uid: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync(Geko.HttpClientService.HttpClientService,System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync(Geko.HttpClientService.HttpClientService,System.String)
+  isExternal: true
+  name: HeadAsync(HttpClientService, String)
+  nameWithType: HttpClientServiceHeadExtensions.HeadAsync(HttpClientService, String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync(Geko.HttpClientService.HttpClientService, System.String)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync(Geko.HttpClientService.HttpClientService,System.String)
+    name: HeadAsync
+    nameWithType: HttpClientServiceHeadExtensions.HeadAsync
+    fullName: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync(Geko.HttpClientService.HttpClientService,System.String)
+    name: HeadAsync
+    nameWithType: HttpClientServiceHeadExtensions.HeadAsync
+    fullName: Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.HeadAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``2(Geko.HttpClientService.HttpClientService,System.String,``0)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``2(Geko.HttpClientService.HttpClientService,System.String,``0)
+  isExternal: true
+  name: PatchAsync<TRequestBody, TResponseBody>(HttpClientService, String, TRequestBody)
+  nameWithType: HttpClientServicePatchExtensions.PatchAsync<TRequestBody, TResponseBody>(HttpClientService, String, TRequestBody)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync<TRequestBody, TResponseBody>(Geko.HttpClientService.HttpClientService, System.String, TRequestBody)
+  nameWithType.vb: HttpClientServicePatchExtensions.PatchAsync(Of TRequestBody, TResponseBody)(HttpClientService, String, TRequestBody)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Of TRequestBody, TResponseBody)(Geko.HttpClientService.HttpClientService, System.String, TRequestBody)
+  name.vb: PatchAsync(Of TRequestBody, TResponseBody)(HttpClientService, String, TRequestBody)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``2(Geko.HttpClientService.HttpClientService,System.String,``0)
+    name: PatchAsync<TRequestBody, TResponseBody>
+    nameWithType: HttpClientServicePatchExtensions.PatchAsync<TRequestBody, TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync<TRequestBody, TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TRequestBody
+    nameWithType: TRequestBody
+    fullName: TRequestBody
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``2(Geko.HttpClientService.HttpClientService,System.String,``0)
+    name: PatchAsync(Of TRequestBody, TResponseBody)
+    nameWithType: HttpClientServicePatchExtensions.PatchAsync(Of TRequestBody, TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Of TRequestBody, TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TRequestBody
+    nameWithType: TRequestBody
+    fullName: TRequestBody
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions
+  commentId: T:Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions
+  parent: Geko.HttpClientService.Extensions
+  name: HttpClientServicePatchExtensions
+  nameWithType: HttpClientServicePatchExtensions
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  isExternal: true
+  name: PatchAsync(HttpClientService, String, String)
+  nameWithType: HttpClientServicePatchExtensions.PatchAsync(HttpClientService, String, String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Geko.HttpClientService.HttpClientService, System.String, System.String)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Geko.HttpClientService.HttpClientService,System.String,System.String)
+    name: PatchAsync
+    nameWithType: HttpClientServicePatchExtensions.PatchAsync
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Geko.HttpClientService.HttpClientService,System.String,System.String)
+    name: PatchAsync
+    nameWithType: HttpClientServicePatchExtensions.PatchAsync
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  isExternal: true
+  name: PatchAsync<TResponseBody>(HttpClientService, String, String)
+  nameWithType: HttpClientServicePatchExtensions.PatchAsync<TResponseBody>(HttpClientService, String, String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync<TResponseBody>(Geko.HttpClientService.HttpClientService, System.String, System.String)
+  nameWithType.vb: HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)(HttpClientService, String, String)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)(Geko.HttpClientService.HttpClientService, System.String, System.String)
+  name.vb: PatchAsync(Of TResponseBody)(HttpClientService, String, String)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(Geko.HttpClientService.HttpClientService,System.String,System.String)
+    name: PatchAsync<TResponseBody>
+    nameWithType: HttpClientServicePatchExtensions.PatchAsync<TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync<TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(Geko.HttpClientService.HttpClientService,System.String,System.String)
+    name: PatchAsync(Of TResponseBody)
+    nameWithType: HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(Geko.HttpClientService.HttpClientService,System.String,StringContent)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(Geko.HttpClientService.HttpClientService,System.String,StringContent)
+  isExternal: true
+  name: PatchAsync<TResponseBody>(HttpClientService, String, StringContent)
+  nameWithType: HttpClientServicePatchExtensions.PatchAsync<TResponseBody>(HttpClientService, String, StringContent)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync<TResponseBody>(Geko.HttpClientService.HttpClientService, System.String, StringContent)
+  nameWithType.vb: HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)(HttpClientService, String, StringContent)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)(Geko.HttpClientService.HttpClientService, System.String, StringContent)
+  name.vb: PatchAsync(Of TResponseBody)(HttpClientService, String, StringContent)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(Geko.HttpClientService.HttpClientService,System.String,StringContent)
+    name: PatchAsync<TResponseBody>
+    nameWithType: HttpClientServicePatchExtensions.PatchAsync<TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync<TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: StringContent
+    name: StringContent
+    nameWithType: StringContent
+    fullName: StringContent
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(Geko.HttpClientService.HttpClientService,System.String,StringContent)
+    name: PatchAsync(Of TResponseBody)
+    nameWithType: HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: StringContent
+    name: StringContent
+    nameWithType: StringContent
+    fullName: StringContent
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(Geko.HttpClientService.HttpClientService,System.String,StreamContent)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(Geko.HttpClientService.HttpClientService,System.String,StreamContent)
+  isExternal: true
+  name: PatchAsync<TResponseBody>(HttpClientService, String, StreamContent)
+  nameWithType: HttpClientServicePatchExtensions.PatchAsync<TResponseBody>(HttpClientService, String, StreamContent)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync<TResponseBody>(Geko.HttpClientService.HttpClientService, System.String, StreamContent)
+  nameWithType.vb: HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)(HttpClientService, String, StreamContent)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)(Geko.HttpClientService.HttpClientService, System.String, StreamContent)
+  name.vb: PatchAsync(Of TResponseBody)(HttpClientService, String, StreamContent)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(Geko.HttpClientService.HttpClientService,System.String,StreamContent)
+    name: PatchAsync<TResponseBody>
+    nameWithType: HttpClientServicePatchExtensions.PatchAsync<TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync<TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: StreamContent
+    name: StreamContent
+    nameWithType: StreamContent
+    fullName: StreamContent
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync``1(Geko.HttpClientService.HttpClientService,System.String,StreamContent)
+    name: PatchAsync(Of TResponseBody)
+    nameWithType: HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.PatchAsync(Of TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: StreamContent
+    name: StreamContent
+    nameWithType: StreamContent
+    fullName: StreamContent
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``2(Geko.HttpClientService.HttpClientService,System.String,``0)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``2(Geko.HttpClientService.HttpClientService,System.String,``0)
+  isExternal: true
+  name: PostAsync<TRequestBody, TResponseBody>(HttpClientService, String, TRequestBody)
+  nameWithType: HttpClientServicePostExtensions.PostAsync<TRequestBody, TResponseBody>(HttpClientService, String, TRequestBody)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync<TRequestBody, TResponseBody>(Geko.HttpClientService.HttpClientService, System.String, TRequestBody)
+  nameWithType.vb: HttpClientServicePostExtensions.PostAsync(Of TRequestBody, TResponseBody)(HttpClientService, String, TRequestBody)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(Of TRequestBody, TResponseBody)(Geko.HttpClientService.HttpClientService, System.String, TRequestBody)
+  name.vb: PostAsync(Of TRequestBody, TResponseBody)(HttpClientService, String, TRequestBody)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``2(Geko.HttpClientService.HttpClientService,System.String,``0)
+    name: PostAsync<TRequestBody, TResponseBody>
+    nameWithType: HttpClientServicePostExtensions.PostAsync<TRequestBody, TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync<TRequestBody, TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TRequestBody
+    nameWithType: TRequestBody
+    fullName: TRequestBody
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``2(Geko.HttpClientService.HttpClientService,System.String,``0)
+    name: PostAsync(Of TRequestBody, TResponseBody)
+    nameWithType: HttpClientServicePostExtensions.PostAsync(Of TRequestBody, TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(Of TRequestBody, TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TRequestBody
+    nameWithType: TRequestBody
+    fullName: TRequestBody
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions
+  commentId: T:Geko.HttpClientService.Extensions.HttpClientServicePostExtensions
+  parent: Geko.HttpClientService.Extensions
+  name: HttpClientServicePostExtensions
+  nameWithType: HttpClientServicePostExtensions
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  isExternal: true
+  name: PostAsync(HttpClientService, String, String)
+  nameWithType: HttpClientServicePostExtensions.PostAsync(HttpClientService, String, String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(Geko.HttpClientService.HttpClientService, System.String, System.String)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(Geko.HttpClientService.HttpClientService,System.String,System.String)
+    name: PostAsync
+    nameWithType: HttpClientServicePostExtensions.PostAsync
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(Geko.HttpClientService.HttpClientService,System.String,System.String)
+    name: PostAsync
+    nameWithType: HttpClientServicePostExtensions.PostAsync
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  isExternal: true
+  name: PostAsync<TResponseBody>(HttpClientService, String, String)
+  nameWithType: HttpClientServicePostExtensions.PostAsync<TResponseBody>(HttpClientService, String, String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync<TResponseBody>(Geko.HttpClientService.HttpClientService, System.String, System.String)
+  nameWithType.vb: HttpClientServicePostExtensions.PostAsync(Of TResponseBody)(HttpClientService, String, String)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(Of TResponseBody)(Geko.HttpClientService.HttpClientService, System.String, System.String)
+  name.vb: PostAsync(Of TResponseBody)(HttpClientService, String, String)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(Geko.HttpClientService.HttpClientService,System.String,System.String)
+    name: PostAsync<TResponseBody>
+    nameWithType: HttpClientServicePostExtensions.PostAsync<TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync<TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(Geko.HttpClientService.HttpClientService,System.String,System.String)
+    name: PostAsync(Of TResponseBody)
+    nameWithType: HttpClientServicePostExtensions.PostAsync(Of TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(Of TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(Geko.HttpClientService.HttpClientService,System.String,StringContent)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(Geko.HttpClientService.HttpClientService,System.String,StringContent)
+  isExternal: true
+  name: PostAsync<TResponseBody>(HttpClientService, String, StringContent)
+  nameWithType: HttpClientServicePostExtensions.PostAsync<TResponseBody>(HttpClientService, String, StringContent)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync<TResponseBody>(Geko.HttpClientService.HttpClientService, System.String, StringContent)
+  nameWithType.vb: HttpClientServicePostExtensions.PostAsync(Of TResponseBody)(HttpClientService, String, StringContent)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(Of TResponseBody)(Geko.HttpClientService.HttpClientService, System.String, StringContent)
+  name.vb: PostAsync(Of TResponseBody)(HttpClientService, String, StringContent)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(Geko.HttpClientService.HttpClientService,System.String,StringContent)
+    name: PostAsync<TResponseBody>
+    nameWithType: HttpClientServicePostExtensions.PostAsync<TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync<TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: StringContent
+    name: StringContent
+    nameWithType: StringContent
+    fullName: StringContent
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(Geko.HttpClientService.HttpClientService,System.String,StringContent)
+    name: PostAsync(Of TResponseBody)
+    nameWithType: HttpClientServicePostExtensions.PostAsync(Of TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(Of TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: StringContent
+    name: StringContent
+    nameWithType: StringContent
+    fullName: StringContent
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(Geko.HttpClientService.HttpClientService,System.String,StreamContent)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(Geko.HttpClientService.HttpClientService,System.String,StreamContent)
+  isExternal: true
+  name: PostAsync<TResponseBody>(HttpClientService, String, StreamContent)
+  nameWithType: HttpClientServicePostExtensions.PostAsync<TResponseBody>(HttpClientService, String, StreamContent)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync<TResponseBody>(Geko.HttpClientService.HttpClientService, System.String, StreamContent)
+  nameWithType.vb: HttpClientServicePostExtensions.PostAsync(Of TResponseBody)(HttpClientService, String, StreamContent)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(Of TResponseBody)(Geko.HttpClientService.HttpClientService, System.String, StreamContent)
+  name.vb: PostAsync(Of TResponseBody)(HttpClientService, String, StreamContent)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(Geko.HttpClientService.HttpClientService,System.String,StreamContent)
+    name: PostAsync<TResponseBody>
+    nameWithType: HttpClientServicePostExtensions.PostAsync<TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync<TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: StreamContent
+    name: StreamContent
+    nameWithType: StreamContent
+    fullName: StreamContent
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync``1(Geko.HttpClientService.HttpClientService,System.String,StreamContent)
+    name: PostAsync(Of TResponseBody)
+    nameWithType: HttpClientServicePostExtensions.PostAsync(Of TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.PostAsync(Of TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: StreamContent
+    name: StreamContent
+    nameWithType: StreamContent
+    fullName: StreamContent
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``2(Geko.HttpClientService.HttpClientService,System.String,``0)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``2(Geko.HttpClientService.HttpClientService,System.String,``0)
+  isExternal: true
+  name: PutAsync<TRequestBody, TResponseBody>(HttpClientService, String, TRequestBody)
+  nameWithType: HttpClientServicePutExtensions.PutAsync<TRequestBody, TResponseBody>(HttpClientService, String, TRequestBody)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync<TRequestBody, TResponseBody>(Geko.HttpClientService.HttpClientService, System.String, TRequestBody)
+  nameWithType.vb: HttpClientServicePutExtensions.PutAsync(Of TRequestBody, TResponseBody)(HttpClientService, String, TRequestBody)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Of TRequestBody, TResponseBody)(Geko.HttpClientService.HttpClientService, System.String, TRequestBody)
+  name.vb: PutAsync(Of TRequestBody, TResponseBody)(HttpClientService, String, TRequestBody)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``2(Geko.HttpClientService.HttpClientService,System.String,``0)
+    name: PutAsync<TRequestBody, TResponseBody>
+    nameWithType: HttpClientServicePutExtensions.PutAsync<TRequestBody, TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync<TRequestBody, TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TRequestBody
+    nameWithType: TRequestBody
+    fullName: TRequestBody
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``2(Geko.HttpClientService.HttpClientService,System.String,``0)
+    name: PutAsync(Of TRequestBody, TResponseBody)
+    nameWithType: HttpClientServicePutExtensions.PutAsync(Of TRequestBody, TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Of TRequestBody, TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TRequestBody
+    nameWithType: TRequestBody
+    fullName: TRequestBody
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions
+  commentId: T:Geko.HttpClientService.Extensions.HttpClientServicePutExtensions
+  parent: Geko.HttpClientService.Extensions
+  name: HttpClientServicePutExtensions
+  nameWithType: HttpClientServicePutExtensions
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  isExternal: true
+  name: PutAsync(HttpClientService, String, String)
+  nameWithType: HttpClientServicePutExtensions.PutAsync(HttpClientService, String, String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Geko.HttpClientService.HttpClientService, System.String, System.String)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Geko.HttpClientService.HttpClientService,System.String,System.String)
+    name: PutAsync
+    nameWithType: HttpClientServicePutExtensions.PutAsync
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Geko.HttpClientService.HttpClientService,System.String,System.String)
+    name: PutAsync
+    nameWithType: HttpClientServicePutExtensions.PutAsync
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  isExternal: true
+  name: PutAsync<TResponseBody>(HttpClientService, String, String)
+  nameWithType: HttpClientServicePutExtensions.PutAsync<TResponseBody>(HttpClientService, String, String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync<TResponseBody>(Geko.HttpClientService.HttpClientService, System.String, System.String)
+  nameWithType.vb: HttpClientServicePutExtensions.PutAsync(Of TResponseBody)(HttpClientService, String, String)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Of TResponseBody)(Geko.HttpClientService.HttpClientService, System.String, System.String)
+  name.vb: PutAsync(Of TResponseBody)(HttpClientService, String, String)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,System.String)
+    name: PutAsync<TResponseBody>
+    nameWithType: HttpClientServicePutExtensions.PutAsync<TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync<TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,System.String)
+    name: PutAsync(Of TResponseBody)
+    nameWithType: HttpClientServicePutExtensions.PutAsync(Of TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Of TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,StringContent)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,StringContent)
+  isExternal: true
+  name: PutAsync<TResponseBody>(HttpClientService, String, StringContent)
+  nameWithType: HttpClientServicePutExtensions.PutAsync<TResponseBody>(HttpClientService, String, StringContent)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync<TResponseBody>(Geko.HttpClientService.HttpClientService, System.String, StringContent)
+  nameWithType.vb: HttpClientServicePutExtensions.PutAsync(Of TResponseBody)(HttpClientService, String, StringContent)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Of TResponseBody)(Geko.HttpClientService.HttpClientService, System.String, StringContent)
+  name.vb: PutAsync(Of TResponseBody)(HttpClientService, String, StringContent)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,StringContent)
+    name: PutAsync<TResponseBody>
+    nameWithType: HttpClientServicePutExtensions.PutAsync<TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync<TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: StringContent
+    name: StringContent
+    nameWithType: StringContent
+    fullName: StringContent
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,StringContent)
+    name: PutAsync(Of TResponseBody)
+    nameWithType: HttpClientServicePutExtensions.PutAsync(Of TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Of TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: StringContent
+    name: StringContent
+    nameWithType: StringContent
+    fullName: StringContent
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,StreamContent)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,StreamContent)
+  isExternal: true
+  name: PutAsync<TResponseBody>(HttpClientService, String, StreamContent)
+  nameWithType: HttpClientServicePutExtensions.PutAsync<TResponseBody>(HttpClientService, String, StreamContent)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync<TResponseBody>(Geko.HttpClientService.HttpClientService, System.String, StreamContent)
+  nameWithType.vb: HttpClientServicePutExtensions.PutAsync(Of TResponseBody)(HttpClientService, String, StreamContent)
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Of TResponseBody)(Geko.HttpClientService.HttpClientService, System.String, StreamContent)
+  name.vb: PutAsync(Of TResponseBody)(HttpClientService, String, StreamContent)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,StreamContent)
+    name: PutAsync<TResponseBody>
+    nameWithType: HttpClientServicePutExtensions.PutAsync<TResponseBody>
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync<TResponseBody>
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: StreamContent
+    name: StreamContent
+    nameWithType: StreamContent
+    fullName: StreamContent
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,StreamContent)
+    name: PutAsync(Of TResponseBody)
+    nameWithType: HttpClientServicePutExtensions.PutAsync(Of TResponseBody)
+    fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Of TResponseBody)
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Geko.HttpClientService.HttpClientService
+    name: HttpClientService
+    nameWithType: HttpClientService
+    fullName: Geko.HttpClientService.HttpClientService
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: StreamContent
+    name: StreamContent
+    nameWithType: StreamContent
+    fullName: StreamContent
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Extensions
+  commentId: N:Geko.HttpClientService.Extensions
+  name: Geko.HttpClientService.Extensions
+  nameWithType: Geko.HttpClientService.Extensions
+  fullName: Geko.HttpClientService.Extensions
+- uid: Geko.HttpClientService.HttpClientService
+  commentId: T:Geko.HttpClientService.HttpClientService
+  parent: Geko.HttpClientService
+  name: HttpClientService
+  nameWithType: HttpClientService
+  fullName: Geko.HttpClientService.HttpClientService
+- uid: Geko.HttpClientService.HttpClientService.HeadersAdd*
+  commentId: Overload:Geko.HttpClientService.HttpClientService.HeadersAdd
+  name: HeadersAdd
+  nameWithType: HttpClientService.HeadersAdd
+  fullName: Geko.HttpClientService.HttpClientService.HeadersAdd
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: List{System.String}
+  commentId: '!:List{System.String}'
+  definition: List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  commentId: '!:List`1'
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dictionary{System.String,List{System.String}}
+  commentId: '!:Dictionary{System.String,List{System.String}}'
+  definition: Dictionary`2
+  name: Dictionary<String, List<String>>
+  nameWithType: Dictionary<String, List<String>>
+  fullName: Dictionary<System.String, List<System.String>>
+  nameWithType.vb: Dictionary(Of String, List(Of String))
+  fullName.vb: Dictionary(Of System.String, List(Of System.String))
+  name.vb: Dictionary(Of String, List(Of String))
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dictionary`2
+  isExternal: true
+  name: Dictionary<, >
+  nameWithType: Dictionary<, >
+  fullName: Dictionary<, >
+  nameWithType.vb: Dictionary(Of , )
+  fullName.vb: Dictionary(Of , )
+  name.vb: Dictionary(Of , )
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dictionary{System.String,System.String}
+  commentId: '!:Dictionary{System.String,System.String}'
+  definition: Dictionary`2
+  name: Dictionary<String, String>
+  nameWithType: Dictionary<String, String>
+  fullName: Dictionary<System.String, System.String>
+  nameWithType.vb: Dictionary(Of String, String)
+  fullName.vb: Dictionary(Of System.String, System.String)
+  name.vb: Dictionary(Of String, String)
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.HttpClientService.HeadersSet*
+  commentId: Overload:Geko.HttpClientService.HttpClientService.HeadersSet
+  name: HeadersSet
+  nameWithType: HttpClientService.HeadersSet
+  fullName: Geko.HttpClientService.HttpClientService.HeadersSet
+- uid: System.Net.Http.Headers.HttpHeaders
+  commentId: T:System.Net.Http.Headers.HttpHeaders
+  parent: System.Net.Http.Headers
+  isExternal: true
+  name: HttpHeaders
+  nameWithType: HttpHeaders
+  fullName: System.Net.Http.Headers.HttpHeaders
+- uid: Geko.HttpClientService.HttpClientService.HeadersClear*
+  commentId: Overload:Geko.HttpClientService.HttpClientService.HeadersClear
+  name: HeadersClear
+  nameWithType: HttpClientService.HeadersClear
+  fullName: Geko.HttpClientService.HttpClientService.HeadersClear
+- uid: System.Net.Http.Headers
+  commentId: N:System.Net.Http.Headers
+  isExternal: true
+  name: System.Net.Http.Headers
+  nameWithType: System.Net.Http.Headers
+  fullName: System.Net.Http.Headers
+- uid: Geko.HttpClientService.HttpClientService.HeadersRemove*
+  commentId: Overload:Geko.HttpClientService.HttpClientService.HeadersRemove
+  name: HeadersRemove
+  nameWithType: HttpClientService.HeadersRemove
+  fullName: Geko.HttpClientService.HttpClientService.HeadersRemove
+- uid: Geko.HttpClientService.HttpClientService.SetIdentityServerOptions*
+  commentId: Overload:Geko.HttpClientService.HttpClientService.SetIdentityServerOptions
+  name: SetIdentityServerOptions
+  nameWithType: HttpClientService.SetIdentityServerOptions
+  fullName: Geko.HttpClientService.HttpClientService.SetIdentityServerOptions
+- uid: Microsoft.Extensions.Options.IOptions{{TOptions}}
+  commentId: T:Microsoft.Extensions.Options.IOptions{``0}
+  parent: Microsoft.Extensions.Options
+  definition: Microsoft.Extensions.Options.IOptions`1
+  name: IOptions<TOptions>
+  nameWithType: IOptions<TOptions>
+  fullName: Microsoft.Extensions.Options.IOptions<TOptions>
+  nameWithType.vb: IOptions(Of TOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TOptions)
+  name.vb: IOptions(Of TOptions)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TOptions
+    nameWithType: TOptions
+    fullName: TOptions
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TOptions
+    nameWithType: TOptions
+    fullName: TOptions
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.Extensions.Options.IOptions`1
+  commentId: T:Microsoft.Extensions.Options.IOptions`1
+  isExternal: true
+  name: IOptions<TOptions>
+  nameWithType: IOptions<TOptions>
+  fullName: Microsoft.Extensions.Options.IOptions<TOptions>
+  nameWithType.vb: IOptions(Of TOptions)
+  fullName.vb: Microsoft.Extensions.Options.IOptions(Of TOptions)
+  name.vb: IOptions(Of TOptions)
+  spec.csharp:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TOptions
+    nameWithType: TOptions
+    fullName: TOptions
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Microsoft.Extensions.Options.IOptions`1
+    name: IOptions
+    nameWithType: IOptions
+    fullName: Microsoft.Extensions.Options.IOptions
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TOptions
+    nameWithType: TOptions
+    fullName: TOptions
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Microsoft.Extensions.Options
+  commentId: N:Microsoft.Extensions.Options
+  isExternal: true
+  name: Microsoft.Extensions.Options
+  nameWithType: Microsoft.Extensions.Options
+  fullName: Microsoft.Extensions.Options
+- uid: Action{{TOptions}}
+  commentId: '!:Action{``0}'
+  definition: Action`1
+  name: Action<TOptions>
+  nameWithType: Action<TOptions>
+  fullName: Action<TOptions>
+  nameWithType.vb: Action(Of TOptions)
+  fullName.vb: Action(Of TOptions)
+  name.vb: Action(Of TOptions)
+  spec.csharp:
+  - uid: Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TOptions
+    nameWithType: TOptions
+    fullName: TOptions
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TOptions
+    nameWithType: TOptions
+    fullName: TOptions
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Action`1
+  commentId: '!:Action`1'
+  isExternal: true
+  name: Action<>
+  nameWithType: Action<>
+  fullName: Action<>
+  nameWithType.vb: Action(Of )
+  fullName.vb: Action(Of )
+  name.vb: Action(Of )
+  spec.csharp:
+  - uid: Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Models.ClientCredentialsOptions
+  commentId: T:Geko.HttpClientService.Models.ClientCredentialsOptions
+  isExternal: true
+- uid: Geko.HttpClientService.Models.IIdentityServerOptions
+  commentId: T:Geko.HttpClientService.Models.IIdentityServerOptions
+  parent: Geko.HttpClientService.Models
+  name: IIdentityServerOptions
+  nameWithType: IIdentityServerOptions
+  fullName: Geko.HttpClientService.Models.IIdentityServerOptions
+- uid: '{TOptions}'
+  commentId: '!:TOptions'
+  definition: TOptions
+  name: TOptions
+  nameWithType: TOptions
+  fullName: TOptions
+- uid: Geko.HttpClientService.Models
+  commentId: N:Geko.HttpClientService.Models
+  name: Geko.HttpClientService.Models
+  nameWithType: Geko.HttpClientService.Models
+  fullName: Geko.HttpClientService.Models
+- uid: TOptions
+  commentId: '!:TOptions'
+  name: TOptions
+  nameWithType: TOptions
+  fullName: TOptions
+- uid: IdentityModel.Client.TokenResponse
+  commentId: T:IdentityModel.Client.TokenResponse
+  isExternal: true
+- uid: Geko.HttpClientService.HttpClientService.GetTokenResponse*
+  commentId: Overload:Geko.HttpClientService.HttpClientService.GetTokenResponse
+  name: GetTokenResponse
+  nameWithType: HttpClientService.GetTokenResponse
+  fullName: Geko.HttpClientService.HttpClientService.GetTokenResponse
+- uid: Task{IdentityModel.Client.TokenResponse}
+  commentId: '!:Task{IdentityModel.Client.TokenResponse}'
+  definition: Task`1
+  name: Task<TokenResponse>
+  nameWithType: Task<TokenResponse>
+  fullName: Task<IdentityModel.Client.TokenResponse>
+  nameWithType.vb: Task(Of TokenResponse)
+  fullName.vb: Task(Of IdentityModel.Client.TokenResponse)
+  name.vb: Task(Of TokenResponse)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IdentityModel.Client.TokenResponse
+    name: TokenResponse
+    nameWithType: TokenResponse
+    fullName: IdentityModel.Client.TokenResponse
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IdentityModel.Client.TokenResponse
+    name: TokenResponse
+    nameWithType: TokenResponse
+    fullName: IdentityModel.Client.TokenResponse
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.HttpClientService.SetTimeout*
+  commentId: Overload:Geko.HttpClientService.HttpClientService.SetTimeout
+  name: SetTimeout
+  nameWithType: HttpClientService.SetTimeout
+  fullName: Geko.HttpClientService.HttpClientService.SetTimeout
+- uid: TimeSpan
+  isExternal: true
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: TimeSpan
+- uid: Geko.HttpClientService.HttpClientService.SetIdentityServerOptions``1(``0)
+  commentId: M:Geko.HttpClientService.HttpClientService.SetIdentityServerOptions``1(``0)
+  isExternal: true
+- uid: Geko.HttpClientService.Infrastructure.IIdentityServerService
+  commentId: T:Geko.HttpClientService.Infrastructure.IIdentityServerService
+  parent: Geko.HttpClientService.Infrastructure
+  name: IIdentityServerService
+  nameWithType: IIdentityServerService
+  fullName: Geko.HttpClientService.Infrastructure.IIdentityServerService
+- uid: Geko.HttpClientService.Models.ResponseObject`1.BodyAsType
+  commentId: P:Geko.HttpClientService.Models.ResponseObject`1.BodyAsType
+  isExternal: true
+- uid: Geko.HttpClientService.Models.ResponseObject`1
+  commentId: T:Geko.HttpClientService.Models.ResponseObject`1
+  name: ResponseObject<TResponseBody>
+  nameWithType: ResponseObject<TResponseBody>
+  fullName: Geko.HttpClientService.Models.ResponseObject<TResponseBody>
+  nameWithType.vb: ResponseObject(Of TResponseBody)
+  fullName.vb: Geko.HttpClientService.Models.ResponseObject(Of TResponseBody)
+  name.vb: ResponseObject(Of TResponseBody)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Models.ResponseObject`1
+    name: ResponseObject
+    nameWithType: ResponseObject
+    fullName: Geko.HttpClientService.Models.ResponseObject
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResponseBody
+    nameWithType: TResponseBody
+    fullName: TResponseBody
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Geko.HttpClientService.Models.ResponseObject`1
+    name: ResponseObject
+    nameWithType: ResponseObject
+    fullName: Geko.HttpClientService.Models.ResponseObject
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResponseBody
+    nameWithType: TResponseBody
+    fullName: TResponseBody
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Models.ResponseObject`1.BodyAsString
+  commentId: P:Geko.HttpClientService.Models.ResponseObject`1.BodyAsString
+  isExternal: true
+- uid: Geko.HttpClientService.Models.ResponseObject`1.BodyAsStream
+  commentId: P:Geko.HttpClientService.Models.ResponseObject`1.BodyAsStream
+  isExternal: true
+- uid: Geko.HttpClientService.HttpClientService.SendAsync*
+  commentId: Overload:Geko.HttpClientService.HttpClientService.SendAsync
+  name: SendAsync
+  nameWithType: HttpClientService.SendAsync
+  fullName: Geko.HttpClientService.HttpClientService.SendAsync
+- uid: Uri
+  commentId: '!:Uri'
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: Uri
+- uid: HttpMethod
+  commentId: '!:HttpMethod'
+  isExternal: true
+  name: HttpMethod
+  nameWithType: HttpMethod
+  fullName: HttpMethod
+- uid: '{TRequestBody}'
+  commentId: '!:TRequestBody'
+  definition: TRequestBody
+  name: TRequestBody
+  nameWithType: TRequestBody
+  fullName: TRequestBody
+- uid: Task{Geko.HttpClientService.Models.ResponseObject{{TResponseBody}}}
+  commentId: '!:Task{Geko.HttpClientService.Models.ResponseObject{``1}}'
+  definition: Task`1
+  name: Task<ResponseObject<TResponseBody>>
+  nameWithType: Task<ResponseObject<TResponseBody>>
+  fullName: Task<Geko.HttpClientService.Models.ResponseObject<TResponseBody>>
+  nameWithType.vb: Task(Of ResponseObject(Of TResponseBody))
+  fullName.vb: Task(Of Geko.HttpClientService.Models.ResponseObject(Of TResponseBody))
+  name.vb: Task(Of ResponseObject(Of TResponseBody))
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Geko.HttpClientService.Models.ResponseObject`1
+    name: ResponseObject
+    nameWithType: ResponseObject
+    fullName: Geko.HttpClientService.Models.ResponseObject
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResponseBody
+    nameWithType: TResponseBody
+    fullName: TResponseBody
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Geko.HttpClientService.Models.ResponseObject`1
+    name: ResponseObject
+    nameWithType: ResponseObject
+    fullName: Geko.HttpClientService.Models.ResponseObject
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResponseBody
+    nameWithType: TResponseBody
+    fullName: TResponseBody
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Infrastructure
+  commentId: N:Geko.HttpClientService.Infrastructure
+  name: Geko.HttpClientService.Infrastructure
+  nameWithType: Geko.HttpClientService.Infrastructure
+  fullName: Geko.HttpClientService.Infrastructure
+- uid: TRequestBody
+  name: TRequestBody
+  nameWithType: TRequestBody
+  fullName: TRequestBody

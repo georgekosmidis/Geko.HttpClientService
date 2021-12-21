@@ -4,17 +4,17 @@
 		<TargetFramework>net6.0</TargetFramework>
 		<PackageProjectUrl>https://georgekosmidis.github.io/Geko.HttpClientService/</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/georgekosmidis/Geko.HttpClientService</RepositoryUrl>
-		<PackageTags>IdentityServer4, HttpClient, AspNet, WebApi, AspNetWebApi, IdentityModel</PackageTags>
-		<Description>An HttpClient service that makes it easy to make authenticated HTTP requests to protected by IdentityServer4 resources.</Description>
+		<PackageTags>Json, IdentityServer4, HttpClient, AspNet, WebApi, AspNetWebApi, IdentityModel</PackageTags>
+		<Description>An easy way to make HTTP requests to JSON endpoints, with IdentityServer4 integration.</Description>
 		<Copyright>George Kosmidis</Copyright>
 		<PackageReleaseNotes></PackageReleaseNotes>
-		<Version>2.3.6</Version>
+		<Version>3.0.0</Version>
 		<PackageId />
 		<Product />
 		<Company />
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<AssemblyVersion>2.3.6.0</AssemblyVersion>
-		<FileVersion>2.3.6.0</FileVersion>
+		<AssemblyVersion>3.0.0.0</AssemblyVersion>
+		<FileVersion>3.0.0.0</FileVersion>
 		<Authors>George Kosmidis</Authors>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>

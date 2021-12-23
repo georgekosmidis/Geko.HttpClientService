@@ -7,7 +7,7 @@
 - name: Contribution
   href: contribution.md  
 - name: Github Repo
-  href: https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService
+  href: https://github.com/georgekosmidis/Geko.HttpClientService
 - name: Api Documentation
   href: api/
   homepage: api/index.md

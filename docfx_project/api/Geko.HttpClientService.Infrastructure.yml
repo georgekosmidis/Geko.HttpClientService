@@ -1,0 +1,154 @@
+### YamlMime:ManagedReference
+items:
+- uid: Geko.HttpClientService.Infrastructure
+  commentId: N:Geko.HttpClientService.Infrastructure
+  id: Geko.HttpClientService.Infrastructure
+  children:
+  - Geko.HttpClientService.Infrastructure.ClientCredentialsHttpClient
+  - Geko.HttpClientService.Infrastructure.CoreHttpClient
+  - Geko.HttpClientService.Infrastructure.HttpClientServiceHeaders
+  - Geko.HttpClientService.Infrastructure.HttpRequestMessageFactory
+  - Geko.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop
+  - Geko.HttpClientService.Infrastructure.ICoreHttpClient
+  - Geko.HttpClientService.Infrastructure.IdentityServerHttpClientSelector
+  - Geko.HttpClientService.Infrastructure.IdentityServerService
+  - Geko.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+  - Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient
+  - Geko.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector
+  - Geko.HttpClientService.Infrastructure.IIdentityServerService
+  - Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager
+  - Geko.HttpClientService.Infrastructure.PasswordHttpClient
+  - Geko.HttpClientService.Infrastructure.TokenResponseCacheManager
+  - Geko.HttpClientService.Infrastructure.TypeContent`1
+  langs:
+  - csharp
+  - vb
+  name: Geko.HttpClientService.Infrastructure
+  nameWithType: Geko.HttpClientService.Infrastructure
+  fullName: Geko.HttpClientService.Infrastructure
+  type: Namespace
+  assemblies:
+  - Geko.HttpClientService
+references:
+- uid: Geko.HttpClientService.Infrastructure.CoreHttpClient
+  commentId: T:Geko.HttpClientService.Infrastructure.CoreHttpClient
+  name: CoreHttpClient
+  nameWithType: CoreHttpClient
+  fullName: Geko.HttpClientService.Infrastructure.CoreHttpClient
+- uid: Geko.HttpClientService.Infrastructure.HttpClientServiceHeaders
+  commentId: T:Geko.HttpClientService.Infrastructure.HttpClientServiceHeaders
+  name: HttpClientServiceHeaders
+  nameWithType: HttpClientServiceHeaders
+  fullName: Geko.HttpClientService.Infrastructure.HttpClientServiceHeaders
+- uid: Geko.HttpClientService.Infrastructure.HttpRequestMessageFactory
+  commentId: T:Geko.HttpClientService.Infrastructure.HttpRequestMessageFactory
+  name: HttpRequestMessageFactory
+  nameWithType: HttpRequestMessageFactory
+  fullName: Geko.HttpClientService.Infrastructure.HttpRequestMessageFactory
+- uid: Geko.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop
+  commentId: T:Geko.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop
+  name: HttpRequestMessageFactoryDesktop
+  nameWithType: HttpRequestMessageFactoryDesktop
+  fullName: Geko.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop
+- uid: Geko.HttpClientService.Infrastructure.ICoreHttpClient
+  commentId: T:Geko.HttpClientService.Infrastructure.ICoreHttpClient
+  parent: Geko.HttpClientService.Infrastructure
+  name: ICoreHttpClient
+  nameWithType: ICoreHttpClient
+  fullName: Geko.HttpClientService.Infrastructure.ICoreHttpClient
+- uid: Geko.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+  commentId: T:Geko.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+  parent: Geko.HttpClientService.Infrastructure
+  name: IHttpRequestMessageFactory
+  nameWithType: IHttpRequestMessageFactory
+  fullName: Geko.HttpClientService.Infrastructure.IHttpRequestMessageFactory
+- uid: Geko.HttpClientService.Infrastructure.TypeContent`1
+  commentId: T:Geko.HttpClientService.Infrastructure.TypeContent`1
+  name: TypeContent<TRequestBody>
+  nameWithType: TypeContent<TRequestBody>
+  fullName: Geko.HttpClientService.Infrastructure.TypeContent<TRequestBody>
+  nameWithType.vb: TypeContent(Of TRequestBody)
+  fullName.vb: Geko.HttpClientService.Infrastructure.TypeContent(Of TRequestBody)
+  name.vb: TypeContent(Of TRequestBody)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Infrastructure.TypeContent`1
+    name: TypeContent
+    nameWithType: TypeContent
+    fullName: Geko.HttpClientService.Infrastructure.TypeContent
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequestBody
+    nameWithType: TRequestBody
+    fullName: TRequestBody
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Geko.HttpClientService.Infrastructure.TypeContent`1
+    name: TypeContent
+    nameWithType: TypeContent
+    fullName: Geko.HttpClientService.Infrastructure.TypeContent
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequestBody
+    nameWithType: TRequestBody
+    fullName: TRequestBody
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Infrastructure.ClientCredentialsHttpClient
+  commentId: T:Geko.HttpClientService.Infrastructure.ClientCredentialsHttpClient
+  name: ClientCredentialsHttpClient
+  nameWithType: ClientCredentialsHttpClient
+  fullName: Geko.HttpClientService.Infrastructure.ClientCredentialsHttpClient
+- uid: Geko.HttpClientService.Infrastructure.PasswordHttpClient
+  commentId: T:Geko.HttpClientService.Infrastructure.PasswordHttpClient
+  name: PasswordHttpClient
+  nameWithType: PasswordHttpClient
+  fullName: Geko.HttpClientService.Infrastructure.PasswordHttpClient
+- uid: Geko.HttpClientService.Infrastructure.IdentityServerHttpClientSelector
+  commentId: T:Geko.HttpClientService.Infrastructure.IdentityServerHttpClientSelector
+  name: IdentityServerHttpClientSelector
+  nameWithType: IdentityServerHttpClientSelector
+  fullName: Geko.HttpClientService.Infrastructure.IdentityServerHttpClientSelector
+- uid: Geko.HttpClientService.Infrastructure.IdentityServerService
+  commentId: T:Geko.HttpClientService.Infrastructure.IdentityServerService
+  name: IdentityServerService
+  nameWithType: IdentityServerService
+  fullName: Geko.HttpClientService.Infrastructure.IdentityServerService
+- uid: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient
+  commentId: T:Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient
+  parent: Geko.HttpClientService.Infrastructure
+  name: IIdentityServerHttpClient
+  nameWithType: IIdentityServerHttpClient
+  fullName: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient
+- uid: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector
+  commentId: T:Geko.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector
+  parent: Geko.HttpClientService.Infrastructure
+  name: IIdentityServerHttpClientSelector
+  nameWithType: IIdentityServerHttpClientSelector
+  fullName: Geko.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector
+- uid: Geko.HttpClientService.Infrastructure.IIdentityServerService
+  commentId: T:Geko.HttpClientService.Infrastructure.IIdentityServerService
+  parent: Geko.HttpClientService.Infrastructure
+  name: IIdentityServerService
+  nameWithType: IIdentityServerService
+  fullName: Geko.HttpClientService.Infrastructure.IIdentityServerService
+- uid: Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager
+  commentId: T:Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager
+  parent: Geko.HttpClientService.Infrastructure
+  name: ITokenResponseCacheManager
+  nameWithType: ITokenResponseCacheManager
+  fullName: Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager
+- uid: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager
+  commentId: T:Geko.HttpClientService.Infrastructure.TokenResponseCacheManager
+  name: TokenResponseCacheManager
+  nameWithType: TokenResponseCacheManager
+  fullName: Geko.HttpClientService.Infrastructure.TokenResponseCacheManager
+- uid: Geko.HttpClientService.Infrastructure
+  commentId: N:Geko.HttpClientService.Infrastructure
+  name: Geko.HttpClientService.Infrastructure
+  nameWithType: Geko.HttpClientService.Infrastructure
+  fullName: Geko.HttpClientService.Infrastructure

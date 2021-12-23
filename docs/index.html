@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>An HttpClient service for IdentityServer4 </title>
+    <title>An easy way to make HTTP requests to JSON endpoints, with IdentityServer4 integration </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="An HttpClient service for IdentityServer4 ">
-    <meta name="generator" content="docfx 2.49.0.0">
+    <meta name="title" content="An easy way to make HTTP requests to JSON endpoints, with IdentityServer4 integration ">
+    <meta name="generator" content="docfx 2.58.9.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -60,40 +60,46 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="an-httpclient-service-for-identityserver4">An HttpClient service for IdentityServer4</h1>
+<h1 id="an-easy-way-to-make-http-requests-to-json-endpoints-with-identityserver4-integration">An easy way to make HTTP requests to JSON endpoints, with IdentityServer4 integration</h1>
 
-<p><a href="https://dev.azure.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/_build/latest?definitionId=5&amp;branchName=master"><img src="https://dev.azure.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/_apis/build/status/georgekosmidis.IdentityServer4.Contrib.HttpClientService?branchName=master" alt="Build Status"></a> <img src="https://img.shields.io/nuget/v/IdentityServer4.Contrib.HttpClientService" alt="Nuget"></p>
-<p>An HttpClient service that makes it easy to make authenticated HTTP requests to protected by IdentityServer4 resources. Complex types are automatically serialized for requests /  deserialized for responses, all with a fluent interface design:</p>
-<pre><code class="lang-csharp">var responseObject = await _requestServiceFactory
-	//Create a instance of the service
-	.CreateHttpClientService()
-	//Supports many ways of setting IdentityServer options
-	.SetIdentityServerOptions(&quot;ClientCredentialsOptions&quot;)
-	//GET and deserialize the response body to IEnumerable&lt;Customers&gt;
-	.GetAsync&lt;IEnumerable&lt;Customers&gt;&gt;(&quot;https://api/customers&quot;);
+<p><a href="https://dev.azure.com/georgekosmidis/Geko.HttpClientService/_build/latest?definitionId=5&amp;branchName=master"><img src="https://dev.azure.com/georgekosmidis/Geko.HttpClientService/_apis/build/status/georgekosmidis.Geko.HttpClientService?branchName=master" alt="Build Status"></a> <img src="https://img.shields.io/nuget/v/Geko.HttpClientService" alt="Nuget"></p>
+<p>An almost <a href="https://github.com/georgekosmidis/Geko.HttpClientService/tree/master/benchmark">2x times faster</a> fluent HTTP request service, build to simplify the communication with JSON endpoints, by automatically handling serialization / deserialization. Authenticated requests towards protected by IdentityServer4 resources are done in a simple compact way.</p>
+<h2 id="add-it-to-the-service-collection-in-startupcs">Add it to the service collection in Startup.cs</h2>
+<pre><code class="lang-csharp">  services.AddHttpClientService();
+  
+  //Or if the resources are behind an IdentityServer4
+  services.AddHttpClientService(
+          .Configure&lt;ClientCredentialsOptions&gt;(Configuration.GetSection(nameof(ClientCredentialsOptions)));
 </code></pre>
-<p><strong>Check the <a href="getting_started.html">Getting started</a> guide for more details!</strong></p>
+<h2 id="calls-can-be-easy-as-that-">Calls can be easy as that :)</h2>
+<pre><code class="lang-csharp">//
+var responseObject = await _requestServiceFactory
+ //Create a instance of the service
+ .CreateHttpClientService()
+ //GET and deserialize the response body to IEnumerable&lt;Customers&gt;
+ .GetAsync&lt;IEnumerable&lt;Customers&gt;&gt;(&quot;https://api/customers&quot;);
+</code></pre>
 <h2 id="getting-started">Getting Started</h2>
-<p>Getting started with IdentityServer4.Contrib.HttpClientService is easy; you only need three things:</p>
+<p>Getting started with Geko.HttpClientService is easy; you only need three things:</p>
 <ol>
-<li>Install the nuget package <a href="https://www.nuget.org/packages/IdentityServer4.Contrib.HttpClientService">IdentityServer4.Contrib.HttpClientService</a></li>
+<li>Install the nuget package <a href="https://www.nuget.org/packages/Geko.HttpClientService">Geko.HttpClientService</a></li>
 <li>Provide the options to request an access token in the <code>appsettings.json</code></li>
 <li>Register the service in <code>Startup.cs</code></li>
 </ol>
-<p>Read the entire <strong><a href="getting_started.html">Getting Started</a></strong> guide for a quick start. You can also take a look at the <a href="api/index.html">Documentation</a>, check the <a href="https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/tree/master/samples/IdentityServer4.Contrib.HttpClientService.FeaturesSample">features sample</a> or a more <a href="https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/tree/master/samples/IdentityServer4.Contrib.HttpClientService.CompleteSample">complete one</a>.</p>
+<p>Read the entire <strong><a href="getting_started.html">Getting Started</a></strong> guide for a quick start. You can also take a look at the <a href="api/index.md">Documentation</a>, check the <a href="https://github.com/georgekosmidis/Geko.HttpClientService/tree/master/samples/Geko.HttpClientService.FeaturesSample">features sample</a> or a more <a href="https://github.com/georgekosmidis/Geko.HttpClientService/tree/master/samples/Geko.HttpClientService.CompleteSample">complete one</a>.</p>
 <h2 id="more-details">More Details</h2>
 <p>Read the '<a href="more_details.html">More Details</a>' section for a more detailed explanation on some of the features of this library, like the <code>SetIdentityServerOptions</code> overloads, the <code>ResponseObject</code> and the <code>TypeContent(TRequestBody, Encoding, string)</code> class</p>
 <h2 id="contributing">Contributing</h2>
 <p>Feedback and contibution is more than welcome, as there are many more things to do!</p>
 <p>Just as a sample:</p>
 <ol>
-<li>Expand the <a href="https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/tree/master/samples/IdentityServer4.Contrib.HttpClientService.CompleteSample">IdentityServer4.Contrib.HttpClientService.CompleteSample</a> with more functionality.</li>
-<li>Support <code>JsonSerializerSettings</code> for <code>JsonConvert.DeserializeObject&lt;TResponseBody&gt;(apiResponse.BodyAsString)</code> in <a href="https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/blob/86262f016173bafd2c9ec4fbe70ac9eb1406042a/src/IdentityServer4.Contrib.HttpClientService/HttpClientService.cs#L300">HttpClientService</a>.</li>
+<li>Expand the <a href="https://github.com/georgekosmidis/Geko.HttpClientService/tree/master/samples/Geko.HttpClientService.CompleteSample">Geko.HttpClientService.CompleteSample</a> with more functionality.</li>
+<li>Support <code>JsonSerializerSettings</code> for <code>JsonConvert.DeserializeObject&lt;TResponseBody&gt;(apiResponse.BodyAsString)</code> in <a href="https://github.com/georgekosmidis/Geko.HttpClientService/blob/86262f016173bafd2c9ec4fbe70ac9eb1406042a/src/Geko.HttpClientService/HttpClientService.cs#L300">HttpClientService</a>.</li>
 <li>Support more than <code>ClientCredentialsOptions</code> and <code>PasswordOptions</code>.</li>
 <li>Set options for changing the x-header name</li>
 <li>Add logging.</li>
 </ol>
-<p>Many more are coming soon and all of them should be <a href="https://github.com/georgekosmidis/IdentityServer4.Contrib.HttpClientService/issues">issues</a>, so feel free to open one and let's start discussing solutions!</p>
+<p>Many more are coming soon and all of them should be <a href="https://github.com/georgekosmidis/Geko.HttpClientService/issues">issues</a>, so feel free to open one and let's start discussing solutions!</p>
 </article>
           </div>
           
@@ -102,12 +108,13 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/feature/PasswordTokenRequest/docfx_project/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/blob/release/3.0.0/docfx_project/index.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

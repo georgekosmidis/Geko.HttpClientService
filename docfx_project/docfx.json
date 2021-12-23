@@ -5,7 +5,7 @@
         {
 		  "src": "../",		
           "files": [
-            "src/IdentityServer4.Contrib.HttpClientService/IdentityServer4.Contrib.HttpClientService.csproj"
+            "src/Geko.HttpClientService/Geko.HttpClientService.csproj"
           ]
         }
       ],

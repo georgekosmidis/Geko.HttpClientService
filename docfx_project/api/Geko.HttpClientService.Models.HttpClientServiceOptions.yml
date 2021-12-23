@@ -1,0 +1,444 @@
+### YamlMime:ManagedReference
+items:
+- uid: Geko.HttpClientService.Models.HttpClientServiceOptions
+  commentId: T:Geko.HttpClientService.Models.HttpClientServiceOptions
+  id: HttpClientServiceOptions
+  parent: Geko.HttpClientService.Models
+  children:
+  - Geko.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationIdActive
+  - Geko.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationName
+  langs:
+  - csharp
+  - vb
+  name: HttpClientServiceOptions
+  nameWithType: HttpClientServiceOptions
+  fullName: Geko.HttpClientService.Models.HttpClientServiceOptions
+  type: Class
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Models/HttpClientServiceOptions.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: HttpClientServiceOptions
+    path: ../src/Geko.HttpClientService/Models/HttpClientServiceOptions.cs
+    startLine: 5
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Models
+  summary: "\nSettings for the HttpClientService\n"
+  example: []
+  syntax:
+    content: public class HttpClientServiceOptions
+    content.vb: Public Class HttpClientServiceOptions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Geko.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationIdActive
+  commentId: P:Geko.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationIdActive
+  id: HeaderCollerationIdActive
+  parent: Geko.HttpClientService.Models.HttpClientServiceOptions
+  langs:
+  - csharp
+  - vb
+  name: HeaderCollerationIdActive
+  nameWithType: HttpClientServiceOptions.HeaderCollerationIdActive
+  fullName: Geko.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationIdActive
+  type: Property
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Models/HttpClientServiceOptions.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: HeaderCollerationIdActive
+    path: ../src/Geko.HttpClientService/Models/HttpClientServiceOptions.cs
+    startLine: 10
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Models
+  summary: "\nA boolean indicating the use or not of the colleration id for logging purposes\n"
+  example: []
+  syntax:
+    content: public bool HeaderCollerationIdActive { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property HeaderCollerationIdActive As Boolean
+  overload: Geko.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationIdActive*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Geko.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationName
+  commentId: P:Geko.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationName
+  id: HeaderCollerationName
+  parent: Geko.HttpClientService.Models.HttpClientServiceOptions
+  langs:
+  - csharp
+  - vb
+  name: HeaderCollerationName
+  nameWithType: HttpClientServiceOptions.HeaderCollerationName
+  fullName: Geko.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationName
+  type: Property
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Models/HttpClientServiceOptions.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: HeaderCollerationName
+    path: ../src/Geko.HttpClientService/Models/HttpClientServiceOptions.cs
+    startLine: 15
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Models
+  summary: "\nThe header name of the colleraton id\n"
+  example: []
+  syntax:
+    content: public string HeaderCollerationName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property HeaderCollerationName As String
+  overload: Geko.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Geko.HttpClientService.Models
+  commentId: N:Geko.HttpClientService.Models
+  name: Geko.HttpClientService.Models
+  nameWithType: Geko.HttpClientService.Models
+  fullName: Geko.HttpClientService.Models
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Geko.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationIdActive*
+  commentId: Overload:Geko.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationIdActive
+  name: HeaderCollerationIdActive
+  nameWithType: HttpClientServiceOptions.HeaderCollerationIdActive
+  fullName: Geko.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationIdActive
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Geko.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationName*
+  commentId: Overload:Geko.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationName
+  name: HeaderCollerationName
+  nameWithType: HttpClientServiceOptions.HeaderCollerationName
+  fullName: Geko.HttpClientService.Models.HttpClientServiceOptions.HeaderCollerationName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

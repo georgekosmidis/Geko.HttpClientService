@@ -1,0 +1,991 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class HttpClientService
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class HttpClientService
+   ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Geko.HttpClientService.HttpClientService">
+  
+  
+  <h1 id="Geko_HttpClientService_HttpClientService" data-uid="Geko.HttpClientService.HttpClientService" class="text-break">Class HttpClientService
+  </h1>
+  <div class="markdown level0 summary"><p>The request service implemantation</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">HttpClientService</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Geko.HttpClientService.html">Geko.HttpClientService</a></h6>
+  <h6><strong>Assembly</strong>: Geko.HttpClientService.dll</h6>
+  <h5 id="Geko_HttpClientService_HttpClientService_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class HttpClientService</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/new/release/3.0.0/apiSpec/new?filename=Geko_HttpClientService_HttpClientService_GetTokenResponse.md&amp;value=---%0Auid%3A%20Geko.HttpClientService.HttpClientService.GetTokenResponse%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/blob/release/3.0.0/src/Geko.HttpClientService/HttpClientService.cs/#L226">View Source</a>
+  </span>
+  <a id="Geko_HttpClientService_HttpClientService_GetTokenResponse_" data-uid="Geko.HttpClientService.HttpClientService.GetTokenResponse*"></a>
+  <h4 id="Geko_HttpClientService_HttpClientService_GetTokenResponse" data-uid="Geko.HttpClientService.HttpClientService.GetTokenResponse">GetTokenResponse()</h4>
+  <div class="markdown level1 summary"><p>Retrieves the TokenResponse from the IdentityServer</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;TokenResponse&gt; GetTokenResponse()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<span class="xref">IdentityModel.Client.TokenResponse</span>&gt;</td>
+        <td><p>A <span class="xref">IdentityModel.Client.TokenResponse</span></p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/new/release/3.0.0/apiSpec/new?filename=Geko_HttpClientService_HttpClientService_HeadersAdd_Dictionary_System_String_List_System_String___.md&amp;value=---%0Auid%3A%20Geko.HttpClientService.HttpClientService.HeadersAdd(Dictionary%7BSystem.String%2CList%7BSystem.String%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/blob/release/3.0.0/src/Geko.HttpClientService/HttpClientService.cs/#L76">View Source</a>
+  </span>
+  <a id="Geko_HttpClientService_HttpClientService_HeadersAdd_" data-uid="Geko.HttpClientService.HttpClientService.HeadersAdd*"></a>
+  <h4 id="Geko_HttpClientService_HttpClientService_HeadersAdd_Dictionary_System_String_List_System_String___" data-uid="Geko.HttpClientService.HttpClientService.HeadersAdd(Dictionary{System.String,List{System.String}})">HeadersAdd(Dictionary&lt;String, List&lt;String&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds the <code data-dev-comment-type="paramref" class="paramref">headers</code> as the headers for the request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HttpClientService HeadersAdd(Dictionary&lt;string, List&lt;string&gt;&gt; headers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">List</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>A <see cref="!:Dictionary&lt;TKey, TValue>"></see> with the key representing the name of the header, and the value representing the value of the header.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Geko.HttpClientService.HttpClientService.html">HttpClientService</a></td>
+        <td><p>Returns the current instance of <a class="xref" href="Geko.HttpClientService.HttpClientService.html">HttpClientService</a> for method chaining.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/new/release/3.0.0/apiSpec/new?filename=Geko_HttpClientService_HttpClientService_HeadersAdd_Dictionary_System_String_System_String__.md&amp;value=---%0Auid%3A%20Geko.HttpClientService.HttpClientService.HeadersAdd(Dictionary%7BSystem.String%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/blob/release/3.0.0/src/Geko.HttpClientService/HttpClientService.cs/#L96">View Source</a>
+  </span>
+  <a id="Geko_HttpClientService_HttpClientService_HeadersAdd_" data-uid="Geko.HttpClientService.HttpClientService.HeadersAdd*"></a>
+  <h4 id="Geko_HttpClientService_HttpClientService_HeadersAdd_Dictionary_System_String_System_String__" data-uid="Geko.HttpClientService.HttpClientService.HeadersAdd(Dictionary{System.String,System.String})">HeadersAdd(Dictionary&lt;String, String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds the <code data-dev-comment-type="paramref" class="paramref">headers</code> as the headers for the request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HttpClientService HeadersAdd(Dictionary&lt;string, string&gt; headers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>A <see cref="!:Dictionary&lt;TKey, TValue>"></see> where value is a <see cref="!:List&lt;TString>"></see> with the key representing the name of the header, and the values representing the values of the header.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Geko.HttpClientService.HttpClientService.html">HttpClientService</a></td>
+        <td><p>Returns the current instance of <a class="xref" href="Geko.HttpClientService.HttpClientService.html">HttpClientService</a> for method chaining.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/new/release/3.0.0/apiSpec/new?filename=Geko_HttpClientService_HttpClientService_HeadersAdd_System_String_List_System_String__.md&amp;value=---%0Auid%3A%20Geko.HttpClientService.HttpClientService.HeadersAdd(System.String%2CList%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/blob/release/3.0.0/src/Geko.HttpClientService/HttpClientService.cs/#L58">View Source</a>
+  </span>
+  <a id="Geko_HttpClientService_HttpClientService_HeadersAdd_" data-uid="Geko.HttpClientService.HttpClientService.HeadersAdd*"></a>
+  <h4 id="Geko_HttpClientService_HttpClientService_HeadersAdd_System_String_List_System_String__" data-uid="Geko.HttpClientService.HttpClientService.HeadersAdd(System.String,List{System.String})">HeadersAdd(String, List&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Adds a header to the request. If a second header with the same name is added, then their values will be aggregated to one <see cref="!:List&lt;TString>"></see>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HttpClientService HeadersAdd(string name, List&lt;string&gt; value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the header.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The list of values of the header.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Geko.HttpClientService.HttpClientService.html">HttpClientService</a></td>
+        <td><p>Returns the current instance of <a class="xref" href="Geko.HttpClientService.HttpClientService.html">HttpClientService</a> for method chaining.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/new/release/3.0.0/apiSpec/new?filename=Geko_HttpClientService_HttpClientService_HeadersAdd_System_String_System_String_.md&amp;value=---%0Auid%3A%20Geko.HttpClientService.HttpClientService.HeadersAdd(System.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/blob/release/3.0.0/src/Geko.HttpClientService/HttpClientService.cs/#L40">View Source</a>
+  </span>
+  <a id="Geko_HttpClientService_HttpClientService_HeadersAdd_" data-uid="Geko.HttpClientService.HttpClientService.HeadersAdd*"></a>
+  <h4 id="Geko_HttpClientService_HttpClientService_HeadersAdd_System_String_System_String_" data-uid="Geko.HttpClientService.HttpClientService.HeadersAdd(System.String,System.String)">HeadersAdd(String, String)</h4>
+  <div class="markdown level1 summary"><p>Adds a header to the request. If a second header with the same name is added, then their values will be aggregated to one <see cref="!:List&lt;String>"></see>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HttpClientService HeadersAdd(string name, string value)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the header.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">value</span></td>
+        <td><p>The value of the header.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Geko.HttpClientService.HttpClientService.html">HttpClientService</a></td>
+        <td><p>Returns the current instance of <a class="xref" href="Geko.HttpClientService.HttpClientService.html">HttpClientService</a> for method chaining.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/new/release/3.0.0/apiSpec/new?filename=Geko_HttpClientService_HttpClientService_HeadersClear.md&amp;value=---%0Auid%3A%20Geko.HttpClientService.HttpClientService.HeadersClear%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/blob/release/3.0.0/src/Geko.HttpClientService/HttpClientService.cs/#L155">View Source</a>
+  </span>
+  <a id="Geko_HttpClientService_HttpClientService_HeadersClear_" data-uid="Geko.HttpClientService.HttpClientService.HeadersClear*"></a>
+  <h4 id="Geko_HttpClientService_HttpClientService_HeadersClear" data-uid="Geko.HttpClientService.HttpClientService.HeadersClear">HeadersClear()</h4>
+  <div class="markdown level1 summary"><p>Clears all headers from the <span class="xref">System.Net.Http.Headers.HttpHeaders</span> collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HttpClientService HeadersClear()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Geko.HttpClientService.HttpClientService.html">HttpClientService</a></td>
+        <td><p>Returns the current instance of <a class="xref" href="Geko.HttpClientService.HttpClientService.html">HttpClientService</a> for method chaining.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/new/release/3.0.0/apiSpec/new?filename=Geko_HttpClientService_HttpClientService_HeadersRemove_System_String_.md&amp;value=---%0Auid%3A%20Geko.HttpClientService.HttpClientService.HeadersRemove(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/blob/release/3.0.0/src/Geko.HttpClientService/HttpClientService.cs/#L166">View Source</a>
+  </span>
+  <a id="Geko_HttpClientService_HttpClientService_HeadersRemove_" data-uid="Geko.HttpClientService.HttpClientService.HeadersRemove*"></a>
+  <h4 id="Geko_HttpClientService_HttpClientService_HeadersRemove_System_String_" data-uid="Geko.HttpClientService.HttpClientService.HeadersRemove(System.String)">HeadersRemove(String)</h4>
+  <div class="markdown level1 summary"><p>Removes the <code data-dev-comment-type="paramref" class="paramref">name</code> header from the <span class="xref">System.Net.Http.Headers.HttpHeaders</span> collection.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HttpClientService HeadersRemove(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The header to be removed</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Geko.HttpClientService.HttpClientService.html">HttpClientService</a></td>
+        <td><p>Returns the current instance of <a class="xref" href="Geko.HttpClientService.HttpClientService.html">HttpClientService</a> for method chaining.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/new/release/3.0.0/apiSpec/new?filename=Geko_HttpClientService_HttpClientService_HeadersSet_Dictionary_System_String_List_System_String___.md&amp;value=---%0Auid%3A%20Geko.HttpClientService.HttpClientService.HeadersSet(Dictionary%7BSystem.String%2CList%7BSystem.String%7D%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/blob/release/3.0.0/src/Geko.HttpClientService/HttpClientService.cs/#L117">View Source</a>
+  </span>
+  <a id="Geko_HttpClientService_HttpClientService_HeadersSet_" data-uid="Geko.HttpClientService.HttpClientService.HeadersSet*"></a>
+  <h4 id="Geko_HttpClientService_HttpClientService_HeadersSet_Dictionary_System_String_List_System_String___" data-uid="Geko.HttpClientService.HttpClientService.HeadersSet(Dictionary{System.String,List{System.String}})">HeadersSet(Dictionary&lt;String, List&lt;String&gt;&gt;)</h4>
+  <div class="markdown level1 summary"><p>Clears all headers and sets new</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HttpClientService HeadersSet(Dictionary&lt;string, List&lt;string&gt;&gt; headers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">List</span>&lt;<span class="xref">System.String</span>&gt;&gt;</td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>A <see cref="!:Dictionary&lt;TKey, TValue>"></see> with the key representing the name of the header, and the value representing the value of the header.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Geko.HttpClientService.HttpClientService.html">HttpClientService</a></td>
+        <td><p>Returns the current instance of <a class="xref" href="Geko.HttpClientService.HttpClientService.html">HttpClientService</a> for method chaining.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/new/release/3.0.0/apiSpec/new?filename=Geko_HttpClientService_HttpClientService_HeadersSet_Dictionary_System_String_System_String__.md&amp;value=---%0Auid%3A%20Geko.HttpClientService.HttpClientService.HeadersSet(Dictionary%7BSystem.String%2CSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/blob/release/3.0.0/src/Geko.HttpClientService/HttpClientService.cs/#L137">View Source</a>
+  </span>
+  <a id="Geko_HttpClientService_HttpClientService_HeadersSet_" data-uid="Geko.HttpClientService.HttpClientService.HeadersSet*"></a>
+  <h4 id="Geko_HttpClientService_HttpClientService_HeadersSet_Dictionary_System_String_System_String__" data-uid="Geko.HttpClientService.HttpClientService.HeadersSet(Dictionary{System.String,System.String})">HeadersSet(Dictionary&lt;String, String&gt;)</h4>
+  <div class="markdown level1 summary"><p>Clears all headers and sets new</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HttpClientService HeadersSet(Dictionary&lt;string, string&gt; headers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Dictionary</span>&lt;<span class="xref">System.String</span>, <span class="xref">System.String</span>&gt;</td>
+        <td><span class="parametername">headers</span></td>
+        <td><p>A <see cref="!:Dictionary&lt;TKey, TValue>"></see> where value is a <see cref="!:List&lt;TString>"></see> with the key representing the name of the header, and the values representing the values of the header.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Geko.HttpClientService.HttpClientService.html">HttpClientService</a></td>
+        <td><p>Returns the current instance of <a class="xref" href="Geko.HttpClientService.HttpClientService.html">HttpClientService</a> for method chaining.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/new/release/3.0.0/apiSpec/new?filename=Geko_HttpClientService_HttpClientService_SendAsync__2_Uri_HttpMethod___0_.md&amp;value=---%0Auid%3A%20Geko.HttpClientService.HttpClientService.SendAsync%60%602(Uri%2CHttpMethod%2C%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/blob/release/3.0.0/src/Geko.HttpClientService/HttpClientService.cs/#L325">View Source</a>
+  </span>
+  <a id="Geko_HttpClientService_HttpClientService_SendAsync_" data-uid="Geko.HttpClientService.HttpClientService.SendAsync*"></a>
+  <h4 id="Geko_HttpClientService_HttpClientService_SendAsync__2_Uri_HttpMethod___0_" data-uid="Geko.HttpClientService.HttpClientService.SendAsync``2(Uri,HttpMethod,``0)">SendAsync&lt;TRequestBody, TResponseBody&gt;(Uri, HttpMethod, TRequestBody)</h4>
+  <div class="markdown level1 summary"><p>Creates and sends a request to the <code data-dev-comment-type="paramref" class="paramref">requestUri</code> using the HTTP verb
+from <code data-dev-comment-type="paramref" class="paramref">httpMethod</code> and the request body from <code data-dev-comment-type="paramref" class="paramref">requestBody</code>.
+If IdentityServerOptions are set (using the <a class="xref" href="Geko.HttpClientService.HttpClientService.html#Geko_HttpClientService_HttpClientService_SetIdentityServerOptions__1___0_">SetIdentityServerOptions&lt;TOptions&gt;(TOptions)</a> or one of the overloads),
+then a valid access token will be fetched by the <a class="xref" href="Geko.HttpClientService.Infrastructure.IIdentityServerService.html">IIdentityServerService</a> and attached to this request.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public async Task&lt;ResponseObject&lt;TResponseBody&gt;&gt; SendAsync&lt;TRequestBody, TResponseBody&gt;(Uri requestUri, HttpMethod httpMethod, TRequestBody requestBody)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Uri</span></td>
+        <td><span class="parametername">requestUri</span></td>
+        <td><p>The <see cref="!:Uri"></see> of the request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">HttpMethod</span></td>
+        <td><span class="parametername">httpMethod</span></td>
+        <td><p>The <see cref="!:HttpMethod"></see> of the request.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">TRequestBody</span></td>
+        <td><span class="parametername">requestBody</span></td>
+        <td><p>The body of the request (available only in POST, PUT and PATCH).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Task</span>&lt;<a class="xref" href="Geko.HttpClientService.Models.ResponseObject-1.html">ResponseObject</a>&lt;TResponseBody&gt;&gt;</td>
+        <td><p>A <a class="xref" href="Geko.HttpClientService.Models.ResponseObject-1.html">ResponseObject&lt;TResponseBody&gt;</a> containing the body of the response
+as <code>String</code> in the <a class="xref" href="Geko.HttpClientService.Models.ResponseObject-1.html#Geko_HttpClientService_Models_ResponseObject_1_BodyAsString">BodyAsString</a> property,
+as <code data-dev-comment-type="typeparamref" class="typeparamref">TResponseBody</code> in the <a class="xref" href="Geko.HttpClientService.Models.ResponseObject-1.html#Geko_HttpClientService_Models_ResponseObject_1_BodyAsType">BodyAsType</a> and,
+as <code>Stream</code> in the <a class="xref" href="Geko.HttpClientService.Models.ResponseObject-1.html#Geko_HttpClientService_Models_ResponseObject_1_BodyAsStream">BodyAsStream</a> property.
+The <code data-dev-comment-type="typeparamref" class="typeparamref">TResponseBody</code> can be of the following:</p>
+<ul><li><see cref="!:StringContent"></see>Use <see cref="!:StringContent"></see> to define Encoding and/or ContentType for an HTTP content based on string.</li><li><see cref="!:StreamContent"></see>Use <see cref="!:StreamContent"></see> to provide HTTP content based on a stream.</li><li>A serializable complex typeAny serializable object to attempt to deserialize the body of the response to it.</li><li>A simple typeAny other simple type to try convert the body of the response to it.</li></ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TRequestBody</span></td>
+        <td><p>The type of the request body. The type used can be one of the following:</p>
+<ul><li><see cref="!:StringContent"></see>Use <see cref="!:StringContent"></see> to define Encoding and/or ContentType for an HTTP content based on string.</li><li><see cref="!:StreamContent"></see>Use <see cref="!:StreamContent"></see> to provide HTTP content based on a stream.</li><li>A serializable complex typeAny serializable object that will be serialized and sent in the body of the request.</li><li>A simple typeAny other simple type that will be sent in the body of the request.</li></ul>
+</td>
+      </tr>
+      <tr>
+        <td><span class="parametername">TResponseBody</span></td>
+        <td><p>The type of the property <a class="xref" href="Geko.HttpClientService.Models.ResponseObject-1.html#Geko_HttpClientService_Models_ResponseObject_1_BodyAsType">BodyAsType</a> of the <a class="xref" href="Geko.HttpClientService.Models.ResponseObject-1.html">ResponseObject&lt;TResponseBody&gt;</a> object,
+that will contain the body of the response deserialized or casted to type <code data-dev-comment-type="typeparamref" class="typeparamref">TResponseBody</code>.
+The type used can be one of the following:</p>
+<ul><li><see cref="!:StringContent"></see>Use <see cref="!:StringContent"></see> to define Encoding and/or ContentType for an HTTP content based on string.</li><li><see cref="!:StreamContent"></see>Use <see cref="!:StreamContent"></see> to provide HTTP content based on a stream.</li><li>A serializable complex typeAny serializable object to attempt to deserialize the body of the response to it.</li><li>A simple typeAny other simple type to try convert the body of the response to it.</li></ul>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/new/release/3.0.0/apiSpec/new?filename=Geko_HttpClientService_HttpClientService_SetIdentityServerOptions__1___0_.md&amp;value=---%0Auid%3A%20Geko.HttpClientService.HttpClientService.SetIdentityServerOptions%60%601(%60%600)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/blob/release/3.0.0/src/Geko.HttpClientService/HttpClientService.cs/#L215">View Source</a>
+  </span>
+  <a id="Geko_HttpClientService_HttpClientService_SetIdentityServerOptions_" data-uid="Geko.HttpClientService.HttpClientService.SetIdentityServerOptions*"></a>
+  <h4 id="Geko_HttpClientService_HttpClientService_SetIdentityServerOptions__1___0_" data-uid="Geko.HttpClientService.HttpClientService.SetIdentityServerOptions``1(``0)">SetIdentityServerOptions&lt;TOptions&gt;(TOptions)</h4>
+  <div class="markdown level1 summary"><p>Sets the IdentityServer4 options by passing an object that inherits from <span class="xref">Geko.HttpClientService.Models.ClientCredentialsOptions</span></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HttpClientService SetIdentityServerOptions&lt;TOptions&gt;(TOptions options)
+    where TOptions : class, IIdentityServerOptions</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TOptions</span></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The <a class="xref" href="Geko.HttpClientService.Models.IIdentityServerOptions.html">IIdentityServerOptions</a> that contains the options.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Geko.HttpClientService.HttpClientService.html">HttpClientService</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TOptions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/new/release/3.0.0/apiSpec/new?filename=Geko_HttpClientService_HttpClientService_SetIdentityServerOptions__1_Action___0__.md&amp;value=---%0Auid%3A%20Geko.HttpClientService.HttpClientService.SetIdentityServerOptions%60%601(Action%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/blob/release/3.0.0/src/Geko.HttpClientService/HttpClientService.cs/#L202">View Source</a>
+  </span>
+  <a id="Geko_HttpClientService_HttpClientService_SetIdentityServerOptions_" data-uid="Geko.HttpClientService.HttpClientService.SetIdentityServerOptions*"></a>
+  <h4 id="Geko_HttpClientService_HttpClientService_SetIdentityServerOptions__1_Action___0__" data-uid="Geko.HttpClientService.HttpClientService.SetIdentityServerOptions``1(Action{``0})">SetIdentityServerOptions&lt;TOptions&gt;(Action&lt;TOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Sets the IdentityServer4 options for retrieving an access token using client credentials by using a delegate.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HttpClientService SetIdentityServerOptions&lt;TOptions&gt;(Action&lt;TOptions&gt; optionsDelegate)
+    where TOptions : class, IIdentityServerOptions</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span>&lt;TOptions&gt;</td>
+        <td><span class="parametername">optionsDelegate</span></td>
+        <td><p>The <see cref="!:Action&lt;T>"></see> delegate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Geko.HttpClientService.HttpClientService.html">HttpClientService</a></td>
+        <td><p>Returns the current instance of <a class="xref" href="Geko.HttpClientService.HttpClientService.html">HttpClientService</a> for method chaining.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TOptions</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/new/release/3.0.0/apiSpec/new?filename=Geko_HttpClientService_HttpClientService_SetIdentityServerOptions__1_Microsoft_Extensions_Options_IOptions___0__.md&amp;value=---%0Auid%3A%20Geko.HttpClientService.HttpClientService.SetIdentityServerOptions%60%601(Microsoft.Extensions.Options.IOptions%7B%60%600%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/blob/release/3.0.0/src/Geko.HttpClientService/HttpClientService.cs/#L185">View Source</a>
+  </span>
+  <a id="Geko_HttpClientService_HttpClientService_SetIdentityServerOptions_" data-uid="Geko.HttpClientService.HttpClientService.SetIdentityServerOptions*"></a>
+  <h4 id="Geko_HttpClientService_HttpClientService_SetIdentityServerOptions__1_Microsoft_Extensions_Options_IOptions___0__" data-uid="Geko.HttpClientService.HttpClientService.SetIdentityServerOptions``1(Microsoft.Extensions.Options.IOptions{``0})">SetIdentityServerOptions&lt;TOptions&gt;(IOptions&lt;TOptions&gt;)</h4>
+  <div class="markdown level1 summary"><p>Sets the IdentityServer4 options for retrieving an access token using client credentials.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HttpClientService SetIdentityServerOptions&lt;TOptions&gt;(IOptions&lt;TOptions&gt; options)
+    where TOptions : class, IIdentityServerOptions, new()</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Microsoft.Extensions.Options.IOptions</span>&lt;TOptions&gt;</td>
+        <td><span class="parametername">options</span></td>
+        <td><p>The token service options.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Geko.HttpClientService.HttpClientService.html">HttpClientService</a></td>
+        <td><p>Returns the current instance of <a class="xref" href="Geko.HttpClientService.HttpClientService.html">HttpClientService</a> for method chaining.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TOptions</span></td>
+        <td><p>The type of the <code data-dev-comment-type="paramref" class="paramref">options</code>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/new/release/3.0.0/apiSpec/new?filename=Geko_HttpClientService_HttpClientService_SetTimeout_TimeSpan_.md&amp;value=---%0Auid%3A%20Geko.HttpClientService.HttpClientService.SetTimeout(TimeSpan)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/blob/release/3.0.0/src/Geko.HttpClientService/HttpClientService.cs/#L240">View Source</a>
+  </span>
+  <a id="Geko_HttpClientService_HttpClientService_SetTimeout_" data-uid="Geko.HttpClientService.HttpClientService.SetTimeout*"></a>
+  <h4 id="Geko_HttpClientService_HttpClientService_SetTimeout_TimeSpan_" data-uid="Geko.HttpClientService.HttpClientService.SetTimeout(TimeSpan)">SetTimeout(TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Set the timeout of the current <a class="xref" href="Geko.HttpClientService.HttpClientService.html">HttpClientService</a></p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HttpClientService SetTimeout(TimeSpan timeout)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>The timeout</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Geko.HttpClientService.HttpClientService.html">HttpClientService</a></td>
+        <td><p>Returns the current instance of <a class="xref" href="Geko.HttpClientService.HttpClientService.html">HttpClientService</a> for method chaining.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="extensionmethods">Extension Methods</h3>
+  <div>
+      <a class="xref" href="Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.html#Geko_HttpClientService_Extensions_HttpClientServiceDeleteExtensions_DeleteAsync__1_Geko_HttpClientService_HttpClientService_System_String_">HttpClientServiceDeleteExtensions.DeleteAsync&lt;TResponseBody&gt;(HttpClientService, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.html#Geko_HttpClientService_Extensions_HttpClientServiceDeleteExtensions_DeleteAsync_Geko_HttpClientService_HttpClientService_System_String_">HttpClientServiceDeleteExtensions.DeleteAsync(HttpClientService, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.html#Geko_HttpClientService_Extensions_HttpClientServiceGetExtensions_GetAsync__1_Geko_HttpClientService_HttpClientService_System_String_">HttpClientServiceGetExtensions.GetAsync&lt;TResponseBody&gt;(HttpClientService, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.html#Geko_HttpClientService_Extensions_HttpClientServiceGetExtensions_GetAsync_Geko_HttpClientService_HttpClientService_System_String_">HttpClientServiceGetExtensions.GetAsync(HttpClientService, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.html#Geko_HttpClientService_Extensions_HttpClientServiceHeadExtensions_HeadAsync__1_Geko_HttpClientService_HttpClientService_System_String_">HttpClientServiceHeadExtensions.HeadAsync&lt;TResponseBody&gt;(HttpClientService, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.html#Geko_HttpClientService_Extensions_HttpClientServiceHeadExtensions_HeadAsync_Geko_HttpClientService_HttpClientService_System_String_">HttpClientServiceHeadExtensions.HeadAsync(HttpClientService, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.html#Geko_HttpClientService_Extensions_HttpClientServicePatchExtensions_PatchAsync__2_Geko_HttpClientService_HttpClientService_System_String___0_">HttpClientServicePatchExtensions.PatchAsync&lt;TRequestBody, TResponseBody&gt;(HttpClientService, String, TRequestBody)</a>
+  </div>
+  <div>
+      <a class="xref" href="Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.html#Geko_HttpClientService_Extensions_HttpClientServicePatchExtensions_PatchAsync_Geko_HttpClientService_HttpClientService_System_String_System_String_">HttpClientServicePatchExtensions.PatchAsync(HttpClientService, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.html#Geko_HttpClientService_Extensions_HttpClientServicePatchExtensions_PatchAsync__1_Geko_HttpClientService_HttpClientService_System_String_System_String_">HttpClientServicePatchExtensions.PatchAsync&lt;TResponseBody&gt;(HttpClientService, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.html#Geko_HttpClientService_Extensions_HttpClientServicePatchExtensions_PatchAsync__1_Geko_HttpClientService_HttpClientService_System_String_StringContent_">HttpClientServicePatchExtensions.PatchAsync&lt;TResponseBody&gt;(HttpClientService, String, StringContent)</a>
+  </div>
+  <div>
+      <a class="xref" href="Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.html#Geko_HttpClientService_Extensions_HttpClientServicePatchExtensions_PatchAsync__1_Geko_HttpClientService_HttpClientService_System_String_StreamContent_">HttpClientServicePatchExtensions.PatchAsync&lt;TResponseBody&gt;(HttpClientService, String, StreamContent)</a>
+  </div>
+  <div>
+      <a class="xref" href="Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.html#Geko_HttpClientService_Extensions_HttpClientServicePostExtensions_PostAsync__2_Geko_HttpClientService_HttpClientService_System_String___0_">HttpClientServicePostExtensions.PostAsync&lt;TRequestBody, TResponseBody&gt;(HttpClientService, String, TRequestBody)</a>
+  </div>
+  <div>
+      <a class="xref" href="Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.html#Geko_HttpClientService_Extensions_HttpClientServicePostExtensions_PostAsync_Geko_HttpClientService_HttpClientService_System_String_System_String_">HttpClientServicePostExtensions.PostAsync(HttpClientService, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.html#Geko_HttpClientService_Extensions_HttpClientServicePostExtensions_PostAsync__1_Geko_HttpClientService_HttpClientService_System_String_System_String_">HttpClientServicePostExtensions.PostAsync&lt;TResponseBody&gt;(HttpClientService, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.html#Geko_HttpClientService_Extensions_HttpClientServicePostExtensions_PostAsync__1_Geko_HttpClientService_HttpClientService_System_String_StringContent_">HttpClientServicePostExtensions.PostAsync&lt;TResponseBody&gt;(HttpClientService, String, StringContent)</a>
+  </div>
+  <div>
+      <a class="xref" href="Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.html#Geko_HttpClientService_Extensions_HttpClientServicePostExtensions_PostAsync__1_Geko_HttpClientService_HttpClientService_System_String_StreamContent_">HttpClientServicePostExtensions.PostAsync&lt;TResponseBody&gt;(HttpClientService, String, StreamContent)</a>
+  </div>
+  <div>
+      <a class="xref" href="Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.html#Geko_HttpClientService_Extensions_HttpClientServicePutExtensions_PutAsync__2_Geko_HttpClientService_HttpClientService_System_String___0_">HttpClientServicePutExtensions.PutAsync&lt;TRequestBody, TResponseBody&gt;(HttpClientService, String, TRequestBody)</a>
+  </div>
+  <div>
+      <a class="xref" href="Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.html#Geko_HttpClientService_Extensions_HttpClientServicePutExtensions_PutAsync_Geko_HttpClientService_HttpClientService_System_String_System_String_">HttpClientServicePutExtensions.PutAsync(HttpClientService, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.html#Geko_HttpClientService_Extensions_HttpClientServicePutExtensions_PutAsync__1_Geko_HttpClientService_HttpClientService_System_String_System_String_">HttpClientServicePutExtensions.PutAsync&lt;TResponseBody&gt;(HttpClientService, String, String)</a>
+  </div>
+  <div>
+      <a class="xref" href="Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.html#Geko_HttpClientService_Extensions_HttpClientServicePutExtensions_PutAsync__1_Geko_HttpClientService_HttpClientService_System_String_StringContent_">HttpClientServicePutExtensions.PutAsync&lt;TResponseBody&gt;(HttpClientService, String, StringContent)</a>
+  </div>
+  <div>
+      <a class="xref" href="Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.html#Geko_HttpClientService_Extensions_HttpClientServicePutExtensions_PutAsync__1_Geko_HttpClientService_HttpClientService_System_String_StreamContent_">HttpClientServicePutExtensions.PutAsync&lt;TResponseBody&gt;(HttpClientService, String, StreamContent)</a>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/new/release/3.0.0/apiSpec/new?filename=Geko_HttpClientService_HttpClientService.md&amp;value=---%0Auid%3A%20Geko.HttpClientService.HttpClientService%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/blob/release/3.0.0/src/Geko.HttpClientService/HttpClientService.cs/#L13" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

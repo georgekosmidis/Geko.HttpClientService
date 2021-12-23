@@ -1,0 +1,881 @@
+### YamlMime:ManagedReference
+items:
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions
+  commentId: T:Geko.HttpClientService.Extensions.HttpClientServicePutExtensions
+  id: HttpClientServicePutExtensions
+  parent: Geko.HttpClientService.Extensions
+  children:
+  - Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  - Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,StreamContent)
+  - Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,StringContent)
+  - Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  - Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``2(Geko.HttpClientService.HttpClientService,System.String,``0)
+  langs:
+  - csharp
+  - vb
+  name: HttpClientServicePutExtensions
+  nameWithType: HttpClientServicePutExtensions
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions
+  type: Class
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: HttpClientServicePutExtensions
+    path: ../src/Geko.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
+    startLine: 7
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Extensions
+  summary: "\nStatic object for <xref href=\"Geko.HttpClientService.HttpClientService\" data-throw-if-not-resolved=\"false\"></xref> extensions.\n"
+  example: []
+  syntax:
+    content: public static class HttpClientServicePutExtensions
+    content.vb: Public Module HttpClientServicePutExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``2(Geko.HttpClientService.HttpClientService,System.String,``0)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``2(Geko.HttpClientService.HttpClientService,System.String,``0)
+  id: PutAsync``2(Geko.HttpClientService.HttpClientService,System.String,``0)
+  isExtensionMethod: true
+  parent: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions
+  langs:
+  - csharp
+  - vb
+  name: PutAsync<TRequestBody, TResponseBody>(HttpClientService, String, TRequestBody)
+  nameWithType: HttpClientServicePutExtensions.PutAsync<TRequestBody, TResponseBody>(HttpClientService, String, TRequestBody)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync<TRequestBody, TResponseBody>(Geko.HttpClientService.HttpClientService, System.String, TRequestBody)
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: PutAsync
+    path: ../src/Geko.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
+    startLine: 93
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Extensions
+  summary: "\nSends a PUT request to the specified <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestUri</code> using <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestBody</code> as the body of the request\nwith <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TRequestBody</code> as the type of the <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestBody</code>.\nReturns the response wrapped in a <xref href=\"Geko.HttpClientService.Models.ResponseObject%601\" data-throw-if-not-resolved=\"false\"></xref>.\n<table><thead><tr></tr></thead><tbody><tr><td><code>String</code></td><td> in the <xref href=\"Geko.HttpClientService.Models.ResponseObject%601.BodyAsString\" data-throw-if-not-resolved=\"false\"></xref> property</td></tr><tr><td><code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TResponseBody</code></td><td> in the <xref href=\"Geko.HttpClientService.Models.ResponseObject%601.BodyAsType\" data-throw-if-not-resolved=\"false\"></xref> property</td></tr><tr><td><code>Stream</code></td><td> in the <xref href=\"Geko.HttpClientService.Models.ResponseObject%601.BodyAsStream\" data-throw-if-not-resolved=\"false\"></xref> property</td></tr></tbody></table>\n"
+  example: []
+  syntax:
+    content: public static async Task<ResponseObject<TResponseBody>> PutAsync<TRequestBody, TResponseBody>(this HttpClientService httpClientService, string requestUri, TRequestBody requestBody)
+    parameters:
+    - id: httpClientService
+      type: Geko.HttpClientService.HttpClientService
+      description: The <xref href="Geko.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> that gets extended.
+    - id: requestUri
+      type: System.String
+      description: A string representing the resource to be called.
+    - id: requestBody
+      type: '{TRequestBody}'
+      description: The body of the request.
+    typeParameters:
+    - id: TRequestBody
+      description: "\nThe type of the request body. The type used can be one of the following:\n<ul><li><see cref=\"!:StringContent\"></see>Use <see cref=\"!:StringContent\"></see> to define Encoding and/or ContentType for an HTTP content based on string.</li><li><see cref=\"!:StreamContent\"></see>Use <see cref=\"!:StreamContent\"></see> to provide HTTP content based on a stream.</li><li>A serializable complex typeAny serializable object that will be serialized and sent in the body of the request.</li><li>A simple typeAny other simple type that will be sent in the body of the request.</li></ul>\n"
+    - id: TResponseBody
+      description: "\nThe type of the property <xref href=\"Geko.HttpClientService.Models.ResponseObject%601.BodyAsType\" data-throw-if-not-resolved=\"false\"></xref> of the <xref href=\"Geko.HttpClientService.Models.ResponseObject%601\" data-throw-if-not-resolved=\"false\"></xref> object,\nthat will contain the body of the response deserialized or casted to type <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TResponseBody</code>. \nThe type used can be one of the following:\n<ul><li><see cref=\"!:StringContent\"></see>Use <see cref=\"!:StringContent\"></see> to define Encoding and/or ContentType for an HTTP content based on string.</li><li><see cref=\"!:StreamContent\"></see>Use <see cref=\"!:StreamContent\"></see> to provide HTTP content based on a stream.</li><li>A serializable complex typeAny serializable object to attempt to deserialize the body of the response to it.</li><li>A simple typeAny other simple type to try convert the body of the response to it.</li></ul>\n"
+    return:
+      type: Task{Geko.HttpClientService.Models.ResponseObject{{TResponseBody}}}
+      description: "\nA <xref href=\"Geko.HttpClientService.Models.ResponseObject%601\" data-throw-if-not-resolved=\"false\"></xref> containing the body of the response \nas <code>String</code> in the <xref href=\"Geko.HttpClientService.Models.ResponseObject%601.BodyAsString\" data-throw-if-not-resolved=\"false\"></xref> property,\nas <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TResponseBody</code> in the <xref href=\"Geko.HttpClientService.Models.ResponseObject%601.BodyAsType\" data-throw-if-not-resolved=\"false\"></xref> and,\nas <code>Stream</code> in the <xref href=\"Geko.HttpClientService.Models.ResponseObject%601.BodyAsStream\" data-throw-if-not-resolved=\"false\"></xref> property.\nThe <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TResponseBody</code> can be of the following:\n<ul><li><see cref=\"!:StringContent\"></see>Use <see cref=\"!:StringContent\"></see> to define Encoding and/or ContentType for an HTTP content based on string.</li><li><see cref=\"!:StreamContent\"></see>Use <see cref=\"!:StreamContent\"></see> to provide HTTP content based on a stream.</li><li>A serializable complex typeAny serializable object to attempt to deserialize the body of the response to it.</li><li>A simple typeAny other simple type to try convert the body of the response to it.</li></ul>\n"
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function PutAsync(Of TRequestBody, TResponseBody)(httpClientService As HttpClientService, requestUri As String, requestBody As TRequestBody) As Task(Of ResponseObject(Of TResponseBody))
+  overload: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync*
+  nameWithType.vb: HttpClientServicePutExtensions.PutAsync(Of TRequestBody, TResponseBody)(HttpClientService, String, TRequestBody)
+  modifiers.csharp:
+  - public
+  - static
+  - async
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Of TRequestBody, TResponseBody)(Geko.HttpClientService.HttpClientService, System.String, TRequestBody)
+  name.vb: PutAsync(Of TRequestBody, TResponseBody)(HttpClientService, String, TRequestBody)
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  id: PutAsync(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  isExtensionMethod: true
+  parent: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions
+  langs:
+  - csharp
+  - vb
+  name: PutAsync(HttpClientService, String, String)
+  nameWithType: HttpClientServicePutExtensions.PutAsync(HttpClientService, String, String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Geko.HttpClientService.HttpClientService, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: PutAsync
+    path: ../src/Geko.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
+    startLine: 109
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Extensions
+  summary: "\nSends a PUT request to the specified <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestUri</code> using <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestBody</code> as the body of the request.\nReturns the response in the <xref href=\"Geko.HttpClientService.Models.ResponseObject%601.BodyAsString\" data-throw-if-not-resolved=\"false\"></xref> property.\n"
+  example: []
+  syntax:
+    content: public static async Task<ResponseObject<string>> PutAsync(this HttpClientService httpClientService, string requestUri, string requestBody)
+    parameters:
+    - id: httpClientService
+      type: Geko.HttpClientService.HttpClientService
+      description: The <xref href="Geko.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> that gets extended.
+    - id: requestUri
+      type: System.String
+      description: A string representing the resource to be called.
+    - id: requestBody
+      type: System.String
+      description: The body of the request.
+    return:
+      type: Task{Geko.HttpClientService.Models.ResponseObject{System.String}}
+      description: "\nA <xref href=\"Geko.HttpClientService.Models.ResponseObject%601\" data-throw-if-not-resolved=\"false\"></xref> containing the body of the response\nas <code>String</code> in the <xref href=\"Geko.HttpClientService.Models.ResponseObject%601.BodyAsString\" data-throw-if-not-resolved=\"false\"></xref> property.\n"
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function PutAsync(httpClientService As HttpClientService, requestUri As String, requestBody As String) As Task(Of ResponseObject(Of String))
+  overload: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync*
+  modifiers.csharp:
+  - public
+  - static
+  - async
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  id: PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,System.String)
+  isExtensionMethod: true
+  parent: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions
+  langs:
+  - csharp
+  - vb
+  name: PutAsync<TResponseBody>(HttpClientService, String, String)
+  nameWithType: HttpClientServicePutExtensions.PutAsync<TResponseBody>(HttpClientService, String, String)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync<TResponseBody>(Geko.HttpClientService.HttpClientService, System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: PutAsync
+    path: ../src/Geko.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
+    startLine: 125
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Extensions
+  summary: "\nSends a PUT request to the specified <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestUri</code> using <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestBody</code> as the body of the request.\nReturns the response in the <xref href=\"Geko.HttpClientService.Models.ResponseObject%601.BodyAsString\" data-throw-if-not-resolved=\"false\"></xref> property.\n"
+  example: []
+  syntax:
+    content: public static async Task<ResponseObject<TResponseBody>> PutAsync<TResponseBody>(this HttpClientService httpClientService, string requestUri, string requestBody)
+    parameters:
+    - id: httpClientService
+      type: Geko.HttpClientService.HttpClientService
+      description: The <xref href="Geko.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> that gets extended.
+    - id: requestUri
+      type: System.String
+      description: A string representing the resource to be called.
+    - id: requestBody
+      type: System.String
+      description: The body of the request.
+    typeParameters:
+    - id: TResponseBody
+    return:
+      type: Task{Geko.HttpClientService.Models.ResponseObject{{TResponseBody}}}
+      description: "\nA <xref href=\"Geko.HttpClientService.Models.ResponseObject%601\" data-throw-if-not-resolved=\"false\"></xref> containing the body of the response\nas <code>String</code> in the <xref href=\"Geko.HttpClientService.Models.ResponseObject%601.BodyAsString\" data-throw-if-not-resolved=\"false\"></xref> property.\n"
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function PutAsync(Of TResponseBody)(httpClientService As HttpClientService, requestUri As String, requestBody As String) As Task(Of ResponseObject(Of TResponseBody))
+  overload: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync*
+  nameWithType.vb: HttpClientServicePutExtensions.PutAsync(Of TResponseBody)(HttpClientService, String, String)
+  modifiers.csharp:
+  - public
+  - static
+  - async
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Of TResponseBody)(Geko.HttpClientService.HttpClientService, System.String, System.String)
+  name.vb: PutAsync(Of TResponseBody)(HttpClientService, String, String)
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,StringContent)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,StringContent)
+  id: PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,StringContent)
+  isExtensionMethod: true
+  parent: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions
+  langs:
+  - csharp
+  - vb
+  name: PutAsync<TResponseBody>(HttpClientService, String, StringContent)
+  nameWithType: HttpClientServicePutExtensions.PutAsync<TResponseBody>(HttpClientService, String, StringContent)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync<TResponseBody>(Geko.HttpClientService.HttpClientService, System.String, StringContent)
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: PutAsync
+    path: ../src/Geko.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
+    startLine: 141
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Extensions
+  summary: "\nSends a PUT request to the specified <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestUri</code> using <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestBody</code> as the body of the request.\nReturns the response in the <xref href=\"Geko.HttpClientService.Models.ResponseObject%601.BodyAsString\" data-throw-if-not-resolved=\"false\"></xref> property.\n"
+  example: []
+  syntax:
+    content: public static async Task<ResponseObject<TResponseBody>> PutAsync<TResponseBody>(this HttpClientService httpClientService, string requestUri, StringContent requestBody)
+    parameters:
+    - id: httpClientService
+      type: Geko.HttpClientService.HttpClientService
+      description: The <xref href="Geko.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> that gets extended.
+    - id: requestUri
+      type: System.String
+      description: A string representing the resource to be called.
+    - id: requestBody
+      type: StringContent
+      description: The body of the request.
+    typeParameters:
+    - id: TResponseBody
+    return:
+      type: Task{Geko.HttpClientService.Models.ResponseObject{{TResponseBody}}}
+      description: "\nA <xref href=\"Geko.HttpClientService.Models.ResponseObject%601\" data-throw-if-not-resolved=\"false\"></xref> containing the body of the response\nas <code>String</code> in the <xref href=\"Geko.HttpClientService.Models.ResponseObject%601.BodyAsString\" data-throw-if-not-resolved=\"false\"></xref> property.\n"
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function PutAsync(Of TResponseBody)(httpClientService As HttpClientService, requestUri As String, requestBody As StringContent) As Task(Of ResponseObject(Of TResponseBody))
+  overload: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync*
+  nameWithType.vb: HttpClientServicePutExtensions.PutAsync(Of TResponseBody)(HttpClientService, String, StringContent)
+  modifiers.csharp:
+  - public
+  - static
+  - async
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Of TResponseBody)(Geko.HttpClientService.HttpClientService, System.String, StringContent)
+  name.vb: PutAsync(Of TResponseBody)(HttpClientService, String, StringContent)
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,StreamContent)
+  commentId: M:Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,StreamContent)
+  id: PutAsync``1(Geko.HttpClientService.HttpClientService,System.String,StreamContent)
+  isExtensionMethod: true
+  parent: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions
+  langs:
+  - csharp
+  - vb
+  name: PutAsync<TResponseBody>(HttpClientService, String, StreamContent)
+  nameWithType: HttpClientServicePutExtensions.PutAsync<TResponseBody>(HttpClientService, String, StreamContent)
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync<TResponseBody>(Geko.HttpClientService.HttpClientService, System.String, StreamContent)
+  type: Method
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: PutAsync
+    path: ../src/Geko.HttpClientService/Extensions/HttpClientServicePutExtensions.cs
+    startLine: 157
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Extensions
+  summary: "\nSends a PUT request to the specified <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestUri</code> using <code data-dev-comment-type=\"paramref\" class=\"paramref\">requestBody</code> as the body of the request.\nReturns the response in the <xref href=\"Geko.HttpClientService.Models.ResponseObject%601.BodyAsType\" data-throw-if-not-resolved=\"false\"></xref> property.\n"
+  example: []
+  syntax:
+    content: public static async Task<ResponseObject<TResponseBody>> PutAsync<TResponseBody>(this HttpClientService httpClientService, string requestUri, StreamContent requestBody)
+    parameters:
+    - id: httpClientService
+      type: Geko.HttpClientService.HttpClientService
+      description: The <xref href="Geko.HttpClientService.HttpClientService" data-throw-if-not-resolved="false"></xref> that gets extended.
+    - id: requestUri
+      type: System.String
+      description: A string representing the resource to be called.
+    - id: requestBody
+      type: StreamContent
+      description: The body of the request.
+    typeParameters:
+    - id: TResponseBody
+    return:
+      type: Task{Geko.HttpClientService.Models.ResponseObject{{TResponseBody}}}
+      description: "\nA <xref href=\"Geko.HttpClientService.Models.ResponseObject%601\" data-throw-if-not-resolved=\"false\"></xref> containing the body of the response\nas <code>String</code> in the <xref href=\"Geko.HttpClientService.Models.ResponseObject%601.BodyAsString\" data-throw-if-not-resolved=\"false\"></xref> property.\n"
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function PutAsync(Of TResponseBody)(httpClientService As HttpClientService, requestUri As String, requestBody As StreamContent) As Task(Of ResponseObject(Of TResponseBody))
+  overload: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync*
+  nameWithType.vb: HttpClientServicePutExtensions.PutAsync(Of TResponseBody)(HttpClientService, String, StreamContent)
+  modifiers.csharp:
+  - public
+  - static
+  - async
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync(Of TResponseBody)(Geko.HttpClientService.HttpClientService, System.String, StreamContent)
+  name.vb: PutAsync(Of TResponseBody)(HttpClientService, String, StreamContent)
+references:
+- uid: Geko.HttpClientService.HttpClientService
+  commentId: T:Geko.HttpClientService.HttpClientService
+  parent: Geko.HttpClientService
+  name: HttpClientService
+  nameWithType: HttpClientService
+  fullName: Geko.HttpClientService.HttpClientService
+- uid: Geko.HttpClientService.Extensions
+  commentId: N:Geko.HttpClientService.Extensions
+  name: Geko.HttpClientService.Extensions
+  nameWithType: Geko.HttpClientService.Extensions
+  fullName: Geko.HttpClientService.Extensions
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService
+  commentId: N:Geko.HttpClientService
+  name: Geko.HttpClientService
+  nameWithType: Geko.HttpClientService
+  fullName: Geko.HttpClientService
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Geko.HttpClientService.Models.ResponseObject`1
+  commentId: T:Geko.HttpClientService.Models.ResponseObject`1
+  name: ResponseObject<TResponseBody>
+  nameWithType: ResponseObject<TResponseBody>
+  fullName: Geko.HttpClientService.Models.ResponseObject<TResponseBody>
+  nameWithType.vb: ResponseObject(Of TResponseBody)
+  fullName.vb: Geko.HttpClientService.Models.ResponseObject(Of TResponseBody)
+  name.vb: ResponseObject(Of TResponseBody)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Models.ResponseObject`1
+    name: ResponseObject
+    nameWithType: ResponseObject
+    fullName: Geko.HttpClientService.Models.ResponseObject
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResponseBody
+    nameWithType: TResponseBody
+    fullName: TResponseBody
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Geko.HttpClientService.Models.ResponseObject`1
+    name: ResponseObject
+    nameWithType: ResponseObject
+    fullName: Geko.HttpClientService.Models.ResponseObject
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResponseBody
+    nameWithType: TResponseBody
+    fullName: TResponseBody
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Models.ResponseObject`1.BodyAsString
+  commentId: P:Geko.HttpClientService.Models.ResponseObject`1.BodyAsString
+  isExternal: true
+- uid: Geko.HttpClientService.Models.ResponseObject`1.BodyAsType
+  commentId: P:Geko.HttpClientService.Models.ResponseObject`1.BodyAsType
+  isExternal: true
+- uid: Geko.HttpClientService.Models.ResponseObject`1.BodyAsStream
+  commentId: P:Geko.HttpClientService.Models.ResponseObject`1.BodyAsStream
+  isExternal: true
+- uid: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync*
+  commentId: Overload:Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync
+  name: PutAsync
+  nameWithType: HttpClientServicePutExtensions.PutAsync
+  fullName: Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.PutAsync
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: '{TRequestBody}'
+  commentId: '!:TRequestBody'
+  definition: TRequestBody
+  name: TRequestBody
+  nameWithType: TRequestBody
+  fullName: TRequestBody
+- uid: Task{Geko.HttpClientService.Models.ResponseObject{{TResponseBody}}}
+  commentId: '!:Task{Geko.HttpClientService.Models.ResponseObject{``1}}'
+  definition: Task`1
+  name: Task<ResponseObject<TResponseBody>>
+  nameWithType: Task<ResponseObject<TResponseBody>>
+  fullName: Task<Geko.HttpClientService.Models.ResponseObject<TResponseBody>>
+  nameWithType.vb: Task(Of ResponseObject(Of TResponseBody))
+  fullName.vb: Task(Of Geko.HttpClientService.Models.ResponseObject(Of TResponseBody))
+  name.vb: Task(Of ResponseObject(Of TResponseBody))
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Geko.HttpClientService.Models.ResponseObject`1
+    name: ResponseObject
+    nameWithType: ResponseObject
+    fullName: Geko.HttpClientService.Models.ResponseObject
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResponseBody
+    nameWithType: TResponseBody
+    fullName: TResponseBody
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Geko.HttpClientService.Models.ResponseObject`1
+    name: ResponseObject
+    nameWithType: ResponseObject
+    fullName: Geko.HttpClientService.Models.ResponseObject
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResponseBody
+    nameWithType: TResponseBody
+    fullName: TResponseBody
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TRequestBody
+  name: TRequestBody
+  nameWithType: TRequestBody
+  fullName: TRequestBody
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task{Geko.HttpClientService.Models.ResponseObject{System.String}}
+  commentId: '!:Task{Geko.HttpClientService.Models.ResponseObject{System.String}}'
+  definition: Task`1
+  name: Task<ResponseObject<String>>
+  nameWithType: Task<ResponseObject<String>>
+  fullName: Task<Geko.HttpClientService.Models.ResponseObject<System.String>>
+  nameWithType.vb: Task(Of ResponseObject(Of String))
+  fullName.vb: Task(Of Geko.HttpClientService.Models.ResponseObject(Of System.String))
+  name.vb: Task(Of ResponseObject(Of String))
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Geko.HttpClientService.Models.ResponseObject`1
+    name: ResponseObject
+    nameWithType: ResponseObject
+    fullName: Geko.HttpClientService.Models.ResponseObject
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Geko.HttpClientService.Models.ResponseObject`1
+    name: ResponseObject
+    nameWithType: ResponseObject
+    fullName: Geko.HttpClientService.Models.ResponseObject
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: StringContent
+  isExternal: true
+  name: StringContent
+  nameWithType: StringContent
+  fullName: StringContent
+- uid: StreamContent
+  isExternal: true
+  name: StreamContent
+  nameWithType: StreamContent
+  fullName: StreamContent

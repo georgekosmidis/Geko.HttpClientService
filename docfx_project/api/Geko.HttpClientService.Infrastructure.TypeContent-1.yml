@@ -1,0 +1,263 @@
+### YamlMime:ManagedReference
+items:
+- uid: Geko.HttpClientService.Infrastructure.TypeContent`1
+  commentId: T:Geko.HttpClientService.Infrastructure.TypeContent`1
+  id: TypeContent`1
+  parent: Geko.HttpClientService.Infrastructure
+  children:
+  - Geko.HttpClientService.Infrastructure.TypeContent`1.#ctor(`0)
+  - Geko.HttpClientService.Infrastructure.TypeContent`1.#ctor(`0,System.Text.Encoding)
+  - Geko.HttpClientService.Infrastructure.TypeContent`1.#ctor(`0,System.Text.Encoding,System.String)
+  langs:
+  - csharp
+  - vb
+  name: TypeContent<TRequestBody>
+  nameWithType: TypeContent<TRequestBody>
+  fullName: Geko.HttpClientService.Infrastructure.TypeContent<TRequestBody>
+  type: Class
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Infrastructure/Core/TypeContent.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: TypeContent
+    path: ../src/Geko.HttpClientService/Infrastructure/Core/TypeContent.cs
+    startLine: 10
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Infrastructure
+  summary: "\nTypeContent is following the implementation of <see cref=\"!:StringContent\"></see>.\nCopied from from https://github.com/microsoft/referencesource/blob/master/System/net/System/Net/Http/StringContent.cs\n"
+  example: []
+  syntax:
+    content: 'public class TypeContent<TRequestBody> : ByteArrayContent'
+    typeParameters:
+    - id: TRequestBody
+    content.vb: >-
+      Public Class TypeContent(Of TRequestBody)
+          Inherits ByteArrayContent
+  inheritance:
+  - System.Object
+  nameWithType.vb: TypeContent(Of TRequestBody)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: Geko.HttpClientService.Infrastructure.TypeContent(Of TRequestBody)
+  name.vb: TypeContent(Of TRequestBody)
+- uid: Geko.HttpClientService.Infrastructure.TypeContent`1.#ctor(`0)
+  commentId: M:Geko.HttpClientService.Infrastructure.TypeContent`1.#ctor(`0)
+  id: '#ctor(`0)'
+  parent: Geko.HttpClientService.Infrastructure.TypeContent`1
+  langs:
+  - csharp
+  - vb
+  name: TypeContent(TRequestBody)
+  nameWithType: TypeContent<TRequestBody>.TypeContent(TRequestBody)
+  fullName: Geko.HttpClientService.Infrastructure.TypeContent<TRequestBody>.TypeContent(TRequestBody)
+  type: Constructor
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Infrastructure/Core/TypeContent.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: .ctor
+    path: ../src/Geko.HttpClientService/Infrastructure/Core/TypeContent.cs
+    startLine: 20
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Infrastructure
+  summary: "\nCreates a new instance of the <xref href=\"Geko.HttpClientService.Infrastructure.TypeContent%601\" data-throw-if-not-resolved=\"false\"></xref> class. \nDefault encoding is &quot;UTF8&quot; and media type &quot;application/json&quot;.\n"
+  example: []
+  syntax:
+    content: public TypeContent(TRequestBody model)
+    parameters:
+    - id: model
+      type: '{TRequestBody}'
+      description: The object of type <code data-dev-comment-type="typeparamref" class="typeparamref">TRequestBody</code> used to initialize the <xref href="Geko.HttpClientService.Infrastructure.TypeContent%601" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(model As TRequestBody)
+  overload: Geko.HttpClientService.Infrastructure.TypeContent`1.#ctor*
+  nameWithType.vb: TypeContent(Of TRequestBody).TypeContent(TRequestBody)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Geko.HttpClientService.Infrastructure.TypeContent(Of TRequestBody).TypeContent(TRequestBody)
+- uid: Geko.HttpClientService.Infrastructure.TypeContent`1.#ctor(`0,System.Text.Encoding)
+  commentId: M:Geko.HttpClientService.Infrastructure.TypeContent`1.#ctor(`0,System.Text.Encoding)
+  id: '#ctor(`0,System.Text.Encoding)'
+  parent: Geko.HttpClientService.Infrastructure.TypeContent`1
+  langs:
+  - csharp
+  - vb
+  name: TypeContent(TRequestBody, Encoding)
+  nameWithType: TypeContent<TRequestBody>.TypeContent(TRequestBody, Encoding)
+  fullName: Geko.HttpClientService.Infrastructure.TypeContent<TRequestBody>.TypeContent(TRequestBody, System.Text.Encoding)
+  type: Constructor
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Infrastructure/Core/TypeContent.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: .ctor
+    path: ../src/Geko.HttpClientService/Infrastructure/Core/TypeContent.cs
+    startLine: 31
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Infrastructure
+  summary: "\nCreates a new instance of the <xref href=\"Geko.HttpClientService.Infrastructure.TypeContent%601\" data-throw-if-not-resolved=\"false\"></xref> class.\nDefault media type &quot;application/json&quot;.\n"
+  example: []
+  syntax:
+    content: public TypeContent(TRequestBody model, Encoding encoding)
+    parameters:
+    - id: model
+      type: '{TRequestBody}'
+      description: The object of type <code data-dev-comment-type="typeparamref" class="typeparamref">TRequestBody</code> used to initialize the <xref href="Geko.HttpClientService.Infrastructure.TypeContent%601" data-throw-if-not-resolved="false"></xref>.
+    - id: encoding
+      type: System.Text.Encoding
+      description: The encoding to use for the json that will be added as content.
+    content.vb: Public Sub New(model As TRequestBody, encoding As Encoding)
+  overload: Geko.HttpClientService.Infrastructure.TypeContent`1.#ctor*
+  nameWithType.vb: TypeContent(Of TRequestBody).TypeContent(TRequestBody, Encoding)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Geko.HttpClientService.Infrastructure.TypeContent(Of TRequestBody).TypeContent(TRequestBody, System.Text.Encoding)
+- uid: Geko.HttpClientService.Infrastructure.TypeContent`1.#ctor(`0,System.Text.Encoding,System.String)
+  commentId: M:Geko.HttpClientService.Infrastructure.TypeContent`1.#ctor(`0,System.Text.Encoding,System.String)
+  id: '#ctor(`0,System.Text.Encoding,System.String)'
+  parent: Geko.HttpClientService.Infrastructure.TypeContent`1
+  langs:
+  - csharp
+  - vb
+  name: TypeContent(TRequestBody, Encoding, String)
+  nameWithType: TypeContent<TRequestBody>.TypeContent(TRequestBody, Encoding, String)
+  fullName: Geko.HttpClientService.Infrastructure.TypeContent<TRequestBody>.TypeContent(TRequestBody, System.Text.Encoding, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: src/Geko.HttpClientService/Infrastructure/Core/TypeContent.cs
+      branch: release/3.0.0
+      repo: https://github.com/georgekosmidis/System.Net.Http.HttpClientService.git
+    id: .ctor
+    path: ../src/Geko.HttpClientService/Infrastructure/Core/TypeContent.cs
+    startLine: 42
+  assemblies:
+  - Geko.HttpClientService
+  namespace: Geko.HttpClientService.Infrastructure
+  summary: "\nCreates a new instance of the <xref href=\"Geko.HttpClientService.Infrastructure.TypeContent%601\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public TypeContent(TRequestBody model, Encoding encoding, string mediaType = "")
+    parameters:
+    - id: model
+      type: '{TRequestBody}'
+      description: The object of type <code data-dev-comment-type="typeparamref" class="typeparamref">TRequestBody</code> used to initialize the <xref href="Geko.HttpClientService.Infrastructure.TypeContent%601" data-throw-if-not-resolved="false"></xref>.
+    - id: encoding
+      type: System.Text.Encoding
+      description: The encoding to use for the json that will be added as content.
+    - id: mediaType
+      type: System.String
+      description: The media type to use for the json that will be added as content.
+    content.vb: Public Sub New(model As TRequestBody, encoding As Encoding, mediaType As String = "")
+  overload: Geko.HttpClientService.Infrastructure.TypeContent`1.#ctor*
+  nameWithType.vb: TypeContent(Of TRequestBody).TypeContent(TRequestBody, Encoding, String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Geko.HttpClientService.Infrastructure.TypeContent(Of TRequestBody).TypeContent(TRequestBody, System.Text.Encoding, System.String)
+references:
+- uid: Geko.HttpClientService.Infrastructure
+  commentId: N:Geko.HttpClientService.Infrastructure
+  name: Geko.HttpClientService.Infrastructure
+  nameWithType: Geko.HttpClientService.Infrastructure
+  fullName: Geko.HttpClientService.Infrastructure
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Geko.HttpClientService.Infrastructure.TypeContent`1
+  commentId: T:Geko.HttpClientService.Infrastructure.TypeContent`1
+  name: TypeContent<TRequestBody>
+  nameWithType: TypeContent<TRequestBody>
+  fullName: Geko.HttpClientService.Infrastructure.TypeContent<TRequestBody>
+  nameWithType.vb: TypeContent(Of TRequestBody)
+  fullName.vb: Geko.HttpClientService.Infrastructure.TypeContent(Of TRequestBody)
+  name.vb: TypeContent(Of TRequestBody)
+  spec.csharp:
+  - uid: Geko.HttpClientService.Infrastructure.TypeContent`1
+    name: TypeContent
+    nameWithType: TypeContent
+    fullName: Geko.HttpClientService.Infrastructure.TypeContent
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequestBody
+    nameWithType: TRequestBody
+    fullName: TRequestBody
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Geko.HttpClientService.Infrastructure.TypeContent`1
+    name: TypeContent
+    nameWithType: TypeContent
+    fullName: Geko.HttpClientService.Infrastructure.TypeContent
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequestBody
+    nameWithType: TRequestBody
+    fullName: TRequestBody
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Geko.HttpClientService.Infrastructure.TypeContent`1.#ctor*
+  commentId: Overload:Geko.HttpClientService.Infrastructure.TypeContent`1.#ctor
+  name: TypeContent
+  nameWithType: TypeContent<TRequestBody>.TypeContent
+  fullName: Geko.HttpClientService.Infrastructure.TypeContent<TRequestBody>.TypeContent
+  nameWithType.vb: TypeContent(Of TRequestBody).TypeContent
+  fullName.vb: Geko.HttpClientService.Infrastructure.TypeContent(Of TRequestBody).TypeContent
+- uid: '{TRequestBody}'
+  commentId: '!:TRequestBody'
+  definition: TRequestBody
+  name: TRequestBody
+  nameWithType: TRequestBody
+  fullName: TRequestBody
+- uid: TRequestBody
+  name: TRequestBody
+  nameWithType: TRequestBody
+  fullName: TRequestBody
+- uid: System.Text.Encoding
+  commentId: T:System.Text.Encoding
+  parent: System.Text
+  isExternal: true
+  name: Encoding
+  nameWithType: Encoding
+  fullName: System.Text.Encoding
+- uid: System.Text
+  commentId: N:System.Text
+  isExternal: true
+  name: System.Text
+  nameWithType: System.Text
+  fullName: System.Text
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

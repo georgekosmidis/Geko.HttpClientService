@@ -8,7 +8,7 @@
     <title>An easy way to make HTTP requests to JSON endpoints, with IdentityServer4 integration </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="An easy way to make HTTP requests to JSON endpoints, with IdentityServer4 integration ">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="generator" content="docfx 2.49.0.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -72,8 +72,7 @@
           .Configure&lt;ClientCredentialsOptions&gt;(Configuration.GetSection(nameof(ClientCredentialsOptions)));
 </code></pre>
 <h2 id="calls-can-be-easy-as-that-">Calls can be easy as that :)</h2>
-<pre><code class="lang-csharp">//
-var responseObject = await _requestServiceFactory
+<pre><code class="lang-csharp">var responseObject = await _requestServiceFactory
  //Create a instance of the service
  .CreateHttpClientService()
  //GET and deserialize the response body to IEnumerable&lt;Customers&gt;
@@ -86,7 +85,7 @@ var responseObject = await _requestServiceFactory
 <li>Provide the options to request an access token in the <code>appsettings.json</code></li>
 <li>Register the service in <code>Startup.cs</code></li>
 </ol>
-<p>Read the entire <strong><a href="getting_started.html">Getting Started</a></strong> guide for a quick start. You can also take a look at the <a href="api/index.md">Documentation</a>, check the <a href="https://github.com/georgekosmidis/Geko.HttpClientService/tree/master/samples/Geko.HttpClientService.FeaturesSample">features sample</a> or a more <a href="https://github.com/georgekosmidis/Geko.HttpClientService/tree/master/samples/Geko.HttpClientService.CompleteSample">complete one</a>.</p>
+<p>Read the entire <strong><a href="getting_started.html">Getting Started</a></strong> guide for a quick start. You can also take a look at the <a href="api/index.html">Documentation</a>, check the <a href="https://github.com/georgekosmidis/Geko.HttpClientService/tree/master/samples/Geko.HttpClientService.FeaturesSample">features sample</a> or a more <a href="https://github.com/georgekosmidis/Geko.HttpClientService/tree/master/samples/Geko.HttpClientService.CompleteSample">complete one</a>.</p>
 <h2 id="more-details">More Details</h2>
 <p>Read the '<a href="more_details.html">More Details</a>' section for a more detailed explanation on some of the features of this library, like the <code>SetIdentityServerOptions</code> overloads, the <code>ResponseObject</code> and the <code>TypeContent(TRequestBody, Encoding, string)</code> class</p>
 <h2 id="contributing">Contributing</h2>
@@ -108,13 +107,12 @@ var responseObject = await _requestServiceFactory
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/georgekosmidis/System.Net.Http.HttpClientService/blob/release/3.0.0/docfx_project/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/georgekosmidis/IdentityServer4.HttpClientService/blob/master/docfx_project/index.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
-                <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
               </nav>
             </div>
           </div>

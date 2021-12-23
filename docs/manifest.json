@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "D:/_Code/github/System.Net.Http.HttpClientService/docfx_project",
+  "source_base_path": "D:/_Code/github/IdentityServer4.Contrib.HttpClientService/docfx_project",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Extensions.HttpClientServiceDeleteExtensions.html",
-          "hash": "ezdMSqPyJICJ4lch1qJDom+JRWhIlUyiGieD9tEMa6s="
+          "hash": "FEwfZ+VXVB8KkNq7joIenA=="
         }
       },
       "is_incremental": false,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Extensions.HttpClientServiceGetExtensions.html",
-          "hash": "7/oEtJtYmQabRl6ip5Z/pQWsGOIQKcmhQaqnESd9uGc="
+          "hash": "OsMfPTVOfB1kg4C7PVQ80A=="
         }
       },
       "is_incremental": false,
@@ -33,7 +33,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Extensions.HttpClientServiceHeadExtensions.html",
-          "hash": "RNvZVZSe/cx5LyaGW+T4RSNioZFC59AIIocUC44ahkQ="
+          "hash": "3wW1b5YQOIUmH5Adxedrow=="
         }
       },
       "is_incremental": false,
@@ -45,7 +45,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Extensions.HttpClientServicePatchExtensions.html",
-          "hash": "qSsCy3f8UPPIoFYCNsBzCXT/PEeatGeYCwfbJWQ594g="
+          "hash": "XwuqwJUqSiKv1FdhuCcsEQ=="
         }
       },
       "is_incremental": false,
@@ -57,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Extensions.HttpClientServicePostExtensions.html",
-          "hash": "txJ+k4u0ohg6uprgHYIEzvFuhHq7tCVlMBkch+/7p8s="
+          "hash": "rEpYYe5fwC5I3MP9CRH+zw=="
         }
       },
       "is_incremental": false,
@@ -69,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Extensions.HttpClientServicePutExtensions.html",
-          "hash": "DM8N4Hw+Csf2A5murWW7a12vK70kHRONu9kOzPkBfzo="
+          "hash": "4Z2SqjzGvztMCi8ZhQYAig=="
         }
       },
       "is_incremental": false,
@@ -81,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Extensions.ServiceCollectionExtensions.html",
-          "hash": "jW6mB1SEN7VZt2sky+GjG04r5Id7bQ1kQraEinhj8sY="
+          "hash": "3QRzi9Js8mUwMNT90lZz8A=="
         }
       },
       "is_incremental": false,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Extensions.html",
-          "hash": "OjCt6dnpZYnkyPFE362y7cevzzMCgqMv8uQ9ApBnY/E="
+          "hash": "uM9Wotv6VraVQ/2bKzyFzA=="
         }
       },
       "is_incremental": false,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.HttpClientService.html",
-          "hash": "Y2dBEBBvZpfjNa1r40cvZHwhHexigEK1ZuJiALf1/AY="
+          "hash": "nxXLtLwxUn6mbmSVKIGMwQ=="
         }
       },
       "is_incremental": false,
@@ -117,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.HttpClientServiceFactory.html",
-          "hash": "Q6CPcFO24GECnfueki6g19R7lSlfw7gRijeDmzWlSi4="
+          "hash": "1QPEMcqDt7NE0MA0jwzoOg=="
         }
       },
       "is_incremental": false,
@@ -129,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.IHttpClientServiceFactory.html",
-          "hash": "iPAWo7W9hOmyQy7KQaOpLB0xkA/IVfPxtkRRD+S6cjE="
+          "hash": "jt1ZSzIR8o1AkzPKwlrNeQ=="
         }
       },
       "is_incremental": false,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Infrastructure.ClientCredentialsHttpClient.html",
-          "hash": "StY2dU0j5wNNVFR0gaH0hPD2QPtUWmqxXwN55UkstWM="
+          "hash": "QC3s/WiXx8bLFDdN2bbVqQ=="
         }
       },
       "is_incremental": false,
@@ -153,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Infrastructure.CoreHttpClient.html",
-          "hash": "1SHgww3+mCX5ZDs1MPMhxlJInEqUvZEmjRoD+GG5jew="
+          "hash": "kMWWXCP4GGDzF+8fRj2FQQ=="
         }
       },
       "is_incremental": false,
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Infrastructure.HttpClientServiceHeaders.html",
-          "hash": "ns/gKBVYiTeDgMPjS2QRds59PpNT9g+sfuNa6oVmXlo="
+          "hash": "84OEGDJbbruHAYwOjDkC5g=="
         }
       },
       "is_incremental": false,
@@ -177,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Infrastructure.HttpRequestMessageFactory.html",
-          "hash": "EbCISmKjY8+YUG96mJqtIRB0nvlmGU509+aKnKehyQ4="
+          "hash": "Zcjku2ptNNEmWnfUISDANg=="
         }
       },
       "is_incremental": false,
@@ -189,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Infrastructure.HttpRequestMessageFactoryDesktop.html",
-          "hash": "HPpdq7cD1fL1yUqeJfrUKhAgHmk8QV+gnzThkmQvLaU="
+          "hash": "LULJVu8HWsmDJGJrXT62zg=="
         }
       },
       "is_incremental": false,
@@ -201,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Infrastructure.ICoreHttpClient.html",
-          "hash": "JmOZWKzTpHgSzowV09OckScCH4Ab9NeIhM1xAKm5r08="
+          "hash": "GJKuw2PXKxLQ0T9I1Lf+5A=="
         }
       },
       "is_incremental": false,
@@ -213,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Infrastructure.IHttpRequestMessageFactory.html",
-          "hash": "Zj3lvkAaH5mwg3H/rNU85waaulVIuFboICf8jeq/rFw="
+          "hash": "iba8JwruZTrqOm/Hh+oTDw=="
         }
       },
       "is_incremental": false,
@@ -225,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Infrastructure.IIdentityServerHttpClient.html",
-          "hash": "1b41QjD7g469QTRTRbcXRxbxOm1mVWzkgQt8cr/8lzk="
+          "hash": "PqcliiFY4w24eJwt8RMokQ=="
         }
       },
       "is_incremental": false,
@@ -237,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Infrastructure.IIdentityServerHttpClientSelector.html",
-          "hash": "yfxJheAYD+Mkq2e+n2Z6Awo+a0N3+96JvcxaMsdjO28="
+          "hash": "yabmVM4j33Afnv9FlqxyOg=="
         }
       },
       "is_incremental": false,
@@ -249,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Infrastructure.IIdentityServerService.html",
-          "hash": "nIOJzhhSaQeEdDdCjWLeSfJn5bZd4lMF3WJUZxEP2JU="
+          "hash": "XmPEYmCGFAbAWR72ZeXq5w=="
         }
       },
       "is_incremental": false,
@@ -261,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Infrastructure.ITokenResponseCacheManager.html",
-          "hash": "R8g3v9XIoXEmLx5Wr6MN5NlwP6ZGSaU7e0M7Dpgcpuo="
+          "hash": "6uF5WXIIMpNPHlDWay6oWg=="
         }
       },
       "is_incremental": false,
@@ -273,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Infrastructure.IdentityServerHttpClientSelector.html",
-          "hash": "obwpTuKdwgUwrfN8nMthTKDcpArycUWwIrvbvvIzMYs="
+          "hash": "kdaL/EIiA/twJslKpe7jHA=="
         }
       },
       "is_incremental": false,
@@ -285,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Infrastructure.IdentityServerService.html",
-          "hash": "7KsxBiJFhjpDor0SonmBpKVnabFP9yf7yVn+W9dJPvA="
+          "hash": "Pg5ZEWJASpr5iLmau+FbgA=="
         }
       },
       "is_incremental": false,
@@ -297,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Infrastructure.PasswordHttpClient.html",
-          "hash": "auWEyOBh6PRjXilHl3uOAOQ9pyXhaoe2CdeqmkLbiAI="
+          "hash": "gB0tA8Zj1dMD/zMuIk35ww=="
         }
       },
       "is_incremental": false,
@@ -309,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Infrastructure.TokenResponseCacheManager.html",
-          "hash": "PEKH727UDipFfBukhb49nTWNXCYfEiqUnvH5DfOaAdM="
+          "hash": "2YJKTsDVGx2Nj2YAjXTx/A=="
         }
       },
       "is_incremental": false,
@@ -321,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Infrastructure.TypeContent-1.html",
-          "hash": "S1B5GZiTo8UuonmPQSLBDNVTnBr/wNz4TGjkZFqZCZE="
+          "hash": "wuQvrzfEm3ZtD6WWBu3nng=="
         }
       },
       "is_incremental": false,
@@ -333,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Infrastructure.html",
-          "hash": "AmBXgINJyLJtf9IcpcILc69Pz+kd6hyIdWBaAjK+qtY="
+          "hash": "c4jLhHgFYgiMTy37UVhwdA=="
         }
       },
       "is_incremental": false,
@@ -345,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Models..html",
-          "hash": "SRdWxvPsa39Oo1ZDXLVR4N0jL2/x2qYDO5s0I5ZHW/U="
+          "hash": "JNC15GKtTyicD3as3Sk+Nw=="
         }
       },
       "is_incremental": false,
@@ -357,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Models.HttpClientServiceOptions.html",
-          "hash": "Y2u+jXY/hBKeiMaV5tv2ig3mbSpnBBYOp+ls4HJ3mco="
+          "hash": "D2LjyDaALaPrLg+F3JRIAw=="
         }
       },
       "is_incremental": false,
@@ -369,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Models.IIdentityServerOptions.html",
-          "hash": "wFTLFAgkIgxQvQ7McqR/PxrLnnsIub87/zE4A15klI8="
+          "hash": "/p61fesa4obrT4tIroDrjQ=="
         }
       },
       "is_incremental": false,
@@ -381,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Models.ResponseObject-1.html",
-          "hash": "nx2tUFFFhuO7ja1DvKUcFzelAhKiZgvaFjIZ0bHWAy0="
+          "hash": "uvpBjaAa6vJdtGQcLT+KyA=="
         }
       },
       "is_incremental": false,
@@ -393,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.Models.html",
-          "hash": "rZsaWH45HzVIPjJV15uirhcFoI4wgmmQ3Wg4naTI5v4="
+          "hash": "KF+TNQYLzgZCk2FiAaw0Hw=="
         }
       },
       "is_incremental": false,
@@ -405,7 +405,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Geko.HttpClientService.html",
-          "hash": "WEAXvxQZ2Map+vN2r1bGbfccfXupyS1rAYjgfZN5yfo="
+          "hash": "SsjM/ZwAIQhWUbG8v4g4Gg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "Vxat1p2wgGMmRnNABuqiZA=="
         }
       },
       "is_incremental": false,
@@ -417,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "mBYnanILoo5POSst7OvTb8jixky8F38stvmuO/hxls0="
+          "hash": "U173MEBk1alNadiHZ6FZKw=="
         }
       },
       "is_incremental": false,
@@ -429,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "89Z0Jzg+YH5Q46eZB7rMfvScr1U7VoiW68xBeVLqfB4="
+          "hash": "2PlISPqeiPvq2LIEtbJYTA=="
         }
       },
       "is_incremental": false,
@@ -441,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "BlPxk5mtl2kgfcZUgkEguqiSAR/EUyUTT4EdebwkQvs="
+          "hash": "gB8AESyvNru97tzIZofEEg=="
         }
       },
       "is_incremental": false,
@@ -453,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "contribution.html",
-          "hash": "F4/jSSxjeUxveOOP7t14Sb3F7aiLqsaVuXTk99oQ1nA="
+          "hash": "m2vwwdyV7Bm+7v/9oNpQ/g=="
         }
       },
       "is_incremental": false,
@@ -465,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "getting_started.html",
-          "hash": "wM3Vt/skX1TyuFVP18bE4iJh6vy0AM70LpXcSf48Pgo="
+          "hash": "hPbkg76DuC3LIngZmlBJsA=="
         }
       },
       "is_incremental": false,
@@ -494,15 +506,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "2IwVZePL3P28UNaKazcQsmMHEFgkga0l5JQfp1wWNhc="
+          "hash": "7RGS82i5hqpszc6bkRP3Vw=="
         }
       },
       "is_incremental": false,
@@ -514,22 +523,19 @@
       "output": {
         ".html": {
           "relative_path": "more_details.html",
-          "hash": "s0CXSgpMOGWOvBuOxTDg4Q37LH6MrgXOy9FordBXdnA="
+          "hash": "wasTs4JzSt35ivyGqhIfUg=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "H2+KJwurolLsQfewv6yzpsg1sv9XUqc20CXwGoD6jzg="
+          "hash": "3qymVUeEO5FEHrAxyZoCCg=="
         }
       },
       "is_incremental": false,
@@ -547,18 +553,6 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 5,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 34,
-          "skipped_file_count": 0
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -571,6 +565,18 @@
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 34,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 6,
           "skipped_file_count": 0
         }
       }

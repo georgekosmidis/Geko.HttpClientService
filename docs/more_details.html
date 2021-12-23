@@ -168,7 +168,7 @@ public class ProtectedResourceService : IProtectedResourceService
 <h3 id="configuring-the-colleration-id">Configuring the colleration id</h3>
 <p>Starting from version 2.3, the colleration id used to for logging between cascading API calls, can be configured from appsettings using the options pattern:</p>
 <p><strong>appsettings.json</strong></p>
-<pre><code class="lang-json">&quot;HttpClientServiceOptions&quot;: {
+<pre><code class="lang-csharp">&quot;HttpClientServiceOptions&quot;: {
 	//Switches on or off the sychronization of the colleration id
 	&quot;HeaderCollerationIdActive&quot;: true,
 	//Sets the name of the header
@@ -182,7 +182,7 @@ public class ProtectedResourceService : IProtectedResourceService
     {
         //...
         services.AddHttpClientService()
-				.Configure&lt;HttpClientServiceOptions&gt;(Configuration.GetSection(nameof(HttpClientServiceOptions))); 
+		.Configure&lt;HttpClientServiceOptions&gt;(Configuration.GetSection(nameof(HttpClientServiceOptions))); 
         //...
     }
 //...

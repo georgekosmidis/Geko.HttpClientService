@@ -7,11 +7,9 @@ namespace Geko.HttpClientService.Benchmark.Implementations;
 
 public static class HttpClientServiceImplementation
 {
-    private static HttpClientService _httpClientService = HttpClientServiceFactory.Instance.CreateHttpClientService();
-
     public static async Task Sample()
     {
-        var responseObject = await _httpClientService
+        var responseObject = await HttpClientServiceFactory.Instance.CreateHttpClientService()
             .SetIdentityServerOptions<ClientCredentialsOptions>(x =>
             {
                 x.Address = "https://demo.identityserver.io/connect/token";

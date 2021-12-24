@@ -21,15 +21,15 @@ public static class NativeImplementation
 
         if (identityServerResponse.IsError)
         {
-            throw new InvalidOperationException(identityServerResponse.Error);
+            throw new Exception(identityServerResponse.Error);
         }
 
         httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", identityServerResponse.AccessToken);
-        var apiResponse = await httpClient.GetAsync("https://demo.identityserver.io/api/test");
+        var apiResponse = await httpClient.GetAsync("https://demo.identityserver.io/api/test?" + Guid.NewGuid().ToString());
 
         if (!apiResponse.IsSuccessStatusCode)
         {
-            throw new InvalidOperationException(identityServerResponse.Error);
+            throw new Exception(identityServerResponse.Error);
         }
 
     }

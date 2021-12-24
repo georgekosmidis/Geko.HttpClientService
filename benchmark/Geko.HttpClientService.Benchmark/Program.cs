@@ -13,7 +13,7 @@ internal class Program
     {
         var sw = new Stopwatch();
         var grid = new Grid(90);
-        var numberOfCalls = 10;
+        var numberOfCalls = 20;
         var httpClient = new HttpClient();
         var tasks = new List<Task>();
 
@@ -21,30 +21,6 @@ internal class Program
         grid.PrintLine();
         grid.PrintRow("", numberOfCalls + " consecutive", numberOfCalls + " concurrent");
         grid.PrintLine();
-
-        //native, consecutive
-        sw.Start();
-        for (var i = 0; i < numberOfCalls; i++)
-        {
-            NativeImplementation.Sample(httpClient).GetAwaiter().GetResult();
-        }
-        sw.Stop();
-        var serial = sw.ElapsedMilliseconds;
-        sw.Reset();
-
-        //native, concurrent
-        tasks.Clear();
-        for (var i = 0; i < numberOfCalls; i++)
-        {
-            tasks.Add(NativeImplementation.Sample(httpClient));
-        }
-        sw.Start();
-        Task.WhenAll(tasks).GetAwaiter().GetResult();
-        sw.Stop();
-        var concurrent = sw.ElapsedMilliseconds;
-        sw.Reset();
-
-        grid.PrintRow("Native", (serial / (double)numberOfCalls).ToString("0.000ms"), (concurrent / (double)numberOfCalls).ToString("0.000ms"));
 
 
         //httpClientService, consecutive
@@ -54,7 +30,7 @@ internal class Program
             HttpClientServiceImplementation.Sample().GetAwaiter().GetResult();
         }
         sw.Stop();
-        serial = sw.ElapsedMilliseconds;
+        var serial = sw.ElapsedMilliseconds;
         sw.Reset();
 
         //httpClientService, consecutive
@@ -66,11 +42,36 @@ internal class Program
         sw.Start();
         Task.WhenAll(tasks).GetAwaiter().GetResult();
         sw.Stop();
-        concurrent = sw.ElapsedMilliseconds;
+        var concurrent = sw.ElapsedMilliseconds;
         sw.Reset();
 
         grid.PrintRow("HttpClientService", (serial / (double)numberOfCalls).ToString("0.000ms"), (concurrent / (double)numberOfCalls).ToString("0.000ms"));
         grid.PrintLine();
+
+        //native, consecutive
+        sw.Start();
+        for (var i = 0; i < numberOfCalls; i++)
+        {
+            NativeImplementation.Sample(httpClient).GetAwaiter().GetResult();
+        }
+        sw.Stop();
+        serial = sw.ElapsedMilliseconds;
+        sw.Reset();
+
+        //native, concurrent
+        tasks.Clear();
+        for (var i = 0; i < numberOfCalls; i++)
+        {
+            tasks.Add(NativeImplementation.Sample(httpClient));
+        }
+        sw.Start();
+        Task.WhenAll(tasks).GetAwaiter().GetResult();
+        sw.Stop();
+        concurrent = sw.ElapsedMilliseconds;
+        sw.Reset();
+
+        grid.PrintRow("Native", (serial / (double)numberOfCalls).ToString("0.000ms"), (concurrent / (double)numberOfCalls).ToString("0.000ms"));
+
 
         Console.ReadKey();
     }
